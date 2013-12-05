@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="{{ site.author.name }}">
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <title>{{ site.title }} - {{ page.title }}</title>
+    
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="{{ BASE_PATH }}/assets/images/Urho3D_favicon.png">
+    <link rel="apple-touch-icon" href="{{ BASE_PATH }}/assets/images/Urho3D_favicon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ BASE_PATH }}/assets/images/Urho3D_favicon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ BASE_PATH }}/assets/images/Urho3D_favicon-114x114.png">
+
+    <!-- atom & rss feed -->
+    <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ ASSET_PATH }}/css/styles.css">
+    <link rel="stylesheet" href="{{ ASSET_PATH }}/css/pygment_trac.css">
+    <link rel="stylesheet" href="{{ ASSET_PATH }}/css/webkit-scrollbar.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ ASSET_PATH }}/javascripts/webkit-scrollbar.js"></script>
+    
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="{{ HOME_PATH }}" title="{{ site.title }} Homepage"><img src="{{ BASE_PATH }}/assets/images/Urho3D_logo.jpg" alt="Urho3D_logo.jpg" height="42" width="153" /></a></h1>
+        <p>{{ site.tagline }}</p>
+        <ul>
+            <li><a href="https://github.com/{{ site.organization.name }}/{{ site.organization.project }}/zipball/master">Download Latest <strong>ZIP File</strong></a></li>
+            <li><a href="https://github.com/{{ site.organization.name }}/{{ site.organization.project }}/tarball/master">Download Latest<strong>TAR Ball</strong></a></li>
+            <li><a href="https://github.com/{{ site.organization.name }}/{{ site.organization.project }}">View On <strong>GitHub</strong></a></li>
+        </ul>
+        <p class="view">
+          <div><a href="{{ BASE_PATH }}/about.html">About<small>&nbsp;&nbsp;{{ site.title }}</small></a></div>
+          <div><a href="{{ BASE_PATH }}/documentation/index.html" target="_blank">Documentation<small>&nbsp;&nbsp;Manual and Scripting APIs</small></a></div>
+          <div><a href="https://github.com/{{ site.organization.name }}/{{ site.organization.project }}/wiki" target="_blank">Wiki<small>&nbsp;&nbsp;Guides and Tutorials</small></a></div>
+          <div><a href="http://groups.google.com/group/urho3d" target="_blank">Discussion<small>&nbsp;&nbsp;Google group / Mailing list</small></a></div>
+          <br>
+          <div><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></div>
+          <div><a href="{{ BASE_PATH }}{{ site.JB.categories_path }}">Categories</a></div>
+          <div><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}">Tags</a></div>
+        </p>
+      </header>
+      <section>
+        {{ content }}
+      </section>
+      <footer>
+        <p><small>
+          <a href="{{ BASE_PATH }}{{ site.JB.atom_path }}"><img src="{{ BASE_PATH }}/assets/images/feeds.jpg" alt="feeds.jpg" />ATOM</a>&nbsp;
+          <a href="{{ BASE_PATH }}{{ site.JB.rss_path }}"><img src="{{ BASE_PATH }}/assets/images/feeds.jpg" alt="feeds.jpg" />RSS</a>
+        </small></p>
+        <p><div>This project is maintained by <a href="https://github.com/{{ site.organization.name }}">{{ site.organization.name }}</a></div>
+        <div><a title="hits counter" href="http://statcounter.com/" target="_blank"><img src="http://c.statcounter.com/9450146/0/54b7eae5/0/" alt="hits counter" style="border:none;"></a></p></div>
+        <small>
+          <p>Code Licensed under <a href="http://www.opensource.org/licenses/mit-license.php">MIT</a></p>
+          <p><div>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></div>
+          <div>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> &mdash; Bootstrapped by <a href="http://jekyllbootstrap.com/">JB</a></div></p>
+        </small>
+      </footer>
+    </div>
+    <script src="{{ ASSET_PATH }}/javascripts/scale.fix.js"></script>
+    
+    {% include JB/analytics %}
+  </body>
+</html>
