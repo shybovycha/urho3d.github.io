@@ -59,13 +59,15 @@ Though Urho3D already contains several useful features and implements a framewor
 - Integration of additional 3rd party libraries, for example a more complete UI library, HTML rendering, or additional network protocols
 
 ## Engine development, contributions and bugfixes by
-- Lasse Öörni (loorni@gmail.com, AgentC on GameDev.net)
+- Lasse Öörni (loorni@gmail.com, AgentC at GameDev.net)
 - Wei Tjong Yao
 - Aster Jian
 - Colin Barrett
 - Erik Beran
 - Carlo Carollo
+- Pete Chown
 - Sebastian Delatorre (primitivewaste)
+- Josh Engebretson
 - Chris Friesen
 - Alex Fuller
 - Mika Heinonen
@@ -74,8 +76,10 @@ Though Urho3D already contains several useful features and implements a framewor
 - Ali Kämäräinen
 - Pete Leigh
 - Paul Noome
+- Alex Parlett
 - Vladimir Pobedinsky
 - Miika Santala
+- Joshua Tippetts
 - Steven Zhang
 - Firegorilla
 - Magic.Lixin

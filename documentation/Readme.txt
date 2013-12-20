@@ -1,1 +1,0 @@
-If ENABLE_DOCS build option is not set then use 'make doc' command or an equivalent command in IDE to re-generate Urho3D documentation before calling 'make install' or its equivalent.
