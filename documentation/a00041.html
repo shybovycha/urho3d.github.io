@@ -1277,8 +1277,8 @@ Classes</h1>
 <p>Methods:</p>
 <ul>
 <li>void SendEvent(const <a class="el" href="a00286.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
-<li>bool AddResourceDir(const String&amp;)</li>
-<li>void AddPackageFile(<a class="el" href="a00209.html" title="Stores files of a directory tree sequentially for convenient access.">PackageFile</a>@, bool = false)</li>
+<li>bool AddResourceDir(const <a class="el" href="a00286.html" title="String class.">String</a>&amp;, uint = - 1)</li>
+<li>void AddPackageFile(<a class="el" href="a00209.html" title="Stores files of a directory tree sequentially for convenient access.">PackageFile</a>@, uint = - 1)</li>
 <li>bool AddManualResource(<a class="el" href="a00241.html" title="Base class for resources.">Resource</a>@)</li>
 <li>void RemoveResourceDir(const String&amp;)</li>
 <li>void RemovePackageFile(<a class="el" href="a00209.html" title="Stores files of a directory tree sequentially for convenient access.">PackageFile</a>@, bool = true, bool = false)</li>
@@ -1310,6 +1310,8 @@ Classes</h1>
 <li>uint totalMemoryUse (readonly)</li>
 <li><a class="el" href="a00286.html" title="String class.">String</a>[]@ resourceDirs (readonly)</li>
 <li><a class="el" href="a00209.html" title="Stores files of a directory tree sequentially for convenient access.">PackageFile</a>@[]@ packageFiles (readonly)</li>
+<li>bool searchPackagesFirst (writeonly)</li>
+<li>bool seachPackagesFirst (readonly)</li>
 <li>bool autoReloadResources</li>
 </ul>
 <h3><a class="el" href="a00148.html" title="Image resource.">Image</a></h3>
@@ -6479,6 +6481,8 @@ Classes</h1>
 <li>void DrawDebugGeometry(<a class="el" href="a00106.html" title="Debug geometry rendering component. Should be added only to the root scene node.">DebugRenderer</a>@, bool)</li>
 <li>bool Build()</li>
 <li>bool Build(const BoundingBox&amp;)</li>
+<li><a class="el" href="a00311.html" title="Three-dimensional vector.">Vector3</a> FindNearestPoint()</li>
+<li><a class="el" href="a00311.html" title="Three-dimensional vector.">Vector3</a> MoveAlongSurface()</li>
 <li><a class="el" href="a00311.html" title="Three-dimensional vector.">Vector3</a>[]@ FindPath(const <a class="el" href="a00311.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="a00311.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="a00311.html" title="Three-dimensional vector.">Vector3</a>&amp; = <a class="el" href="a00311.html" title="Three-dimensional vector.">Vector3</a> ( 1.0 , 1.0 , 1.0 ))</li>
 <li><a class="el" href="a00311.html" title="Three-dimensional vector.">Vector3</a> GetRandomPoint()</li>
 <li><a class="el" href="a00311.html" title="Three-dimensional vector.">Vector3</a> GetRandomPointInCircle(const <a class="el" href="a00311.html" title="Three-dimensional vector.">Vector3</a>&amp;, float, const <a class="el" href="a00311.html" title="Three-dimensional vector.">Vector3</a>&amp; = <a class="el" href="a00311.html" title="Three-dimensional vector.">Vector3</a> ( 1.0 , 1.0 , 1.0 ))</li>

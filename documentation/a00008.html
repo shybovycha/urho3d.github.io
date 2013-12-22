@@ -2900,6 +2900,8 @@ Classes</h1>
 <li>void SetPadding(const Vector3&amp; padding)</li>
 <li>bool Build()</li>
 <li>bool Build(const BoundingBox&amp; boundingBox)</li>
+<li><a class="el" href="a00311.html" title="Three-dimensional vector.">Vector3</a> FindNearestPoint(const <a class="el" href="a00311.html" title="Three-dimensional vector.">Vector3</a>&amp; point, const <a class="el" href="a00311.html" title="Three-dimensional vector.">Vector3</a>&amp; extents = <a class="el" href="a00311.html#a402fdc96e79366f13803eb238a5623ed" title="(1,1,1) vector.">Vector3::ONE</a>)</li>
+<li><a class="el" href="a00311.html" title="Three-dimensional vector.">Vector3</a> MoveAlongSurface(const <a class="el" href="a00311.html" title="Three-dimensional vector.">Vector3</a>&amp; start, const <a class="el" href="a00311.html" title="Three-dimensional vector.">Vector3</a>&amp; end, const <a class="el" href="a00311.html" title="Three-dimensional vector.">Vector3</a>&amp; extents=<a class="el" href="a00311.html#a402fdc96e79366f13803eb238a5623ed" title="(1,1,1) vector.">Vector3::ONE</a>, int maxVisited=3)</li>
 <li>PODVector&lt;Vector3&gt; FindPath(const <a class="el" href="a00311.html" title="Three-dimensional vector.">Vector3</a>&amp; start, const <a class="el" href="a00311.html" title="Three-dimensional vector.">Vector3</a>&amp; end, const <a class="el" href="a00311.html" title="Three-dimensional vector.">Vector3</a>&amp; extents = <a class="el" href="a00311.html#a402fdc96e79366f13803eb238a5623ed" title="(1,1,1) vector.">Vector3::ONE</a>)</li>
 <li><a class="el" href="a00311.html" title="Three-dimensional vector.">Vector3</a> GetRandomPoint()</li>
 <li><a class="el" href="a00311.html" title="Three-dimensional vector.">Vector3</a> GetRandomPointInCircle(const <a class="el" href="a00311.html" title="Three-dimensional vector.">Vector3</a>&amp; center, float radius, const <a class="el" href="a00311.html" title="Three-dimensional vector.">Vector3</a>&amp; extents = <a class="el" href="a00311.html#a402fdc96e79366f13803eb238a5623ed" title="(1,1,1) vector.">Vector3::ONE</a>)</li>
@@ -3442,6 +3444,7 @@ Classes</h1>
 <li>void SetMemoryBudget(ShortStringHash type, unsigned budget)</li>
 <li>void SetMemoryBudget(const String type, unsigned budget)</li>
 <li>void SetAutoReloadResources(bool enable)</li>
+<li>void SetSearchPackagesFirst(bool value)</li>
 <li>Resource* GetResource(const String type, const String name)</li>
 <li>bool Exists(const String name) const</li>
 <li>unsigned GetMemoryBudget(ShortStringHash type) const</li>
@@ -3449,11 +3452,13 @@ Classes</h1>
 <li>unsigned GetTotalMemoryUse() const</li>
 <li><a class="el" href="a00286.html" title="String class.">String</a> GetResourceFileName(const String name) const</li>
 <li>bool GetAutoReloadResources() const</li>
+<li>bool GetSearchPackagesFirst() const</li>
 </ul>
 <p>Properties:</p>
 <ul>
 <li>unsigned totalMemoryUse (readonly)</li>
 <li>bool autoReloadResources (readonly)</li>
+<li>bool searchPackagesFirst (readonly)</li>
 </ul>
 <h3><a class="el" href="a00326.html" title="Element in an XML file.">XMLElement</a></h3>
 <p>Methods:</p>
@@ -3703,10 +3708,18 @@ Classes</h1>
 <ul>
 <li>Scene(Context* context)</li>
 <li>virtual ~Scene()</li>
+<li>bool Load(File* source)</li>
+<li>bool Save(File* dest) const</li>
+<li>bool Load(const String fileName)</li>
+<li>bool Save(const String fileName) const</li>
 <li>bool LoadXML(File* source)</li>
 <li>bool SaveXML(File* dest) const</li>
 <li>bool LoadXML(const String fileName)</li>
 <li>bool SaveXML(const String fileName) const</li>
+<li>Node* Instantiate(File* source, const <a class="el" href="a00311.html" title="Three-dimensional vector.">Vector3</a>&amp; position, const <a class="el" href="a00224.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; rotation, CreateMode mode = REPLICATED)</li>
+<li>Node* Instantiate(const <a class="el" href="a00286.html" title="String class.">String</a> fileName, const <a class="el" href="a00311.html" title="Three-dimensional vector.">Vector3</a>&amp; position, const <a class="el" href="a00224.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; rotation, CreateMode mode = REPLICATED)</li>
+<li>Node* InstantiateXML(File* source, const <a class="el" href="a00311.html" title="Three-dimensional vector.">Vector3</a>&amp; position, const <a class="el" href="a00224.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; rotation, CreateMode mode = REPLICATED)</li>
+<li>Node* InstantiateXML(const <a class="el" href="a00286.html" title="String class.">String</a> fileName, const <a class="el" href="a00311.html" title="Three-dimensional vector.">Vector3</a>&amp; position, const <a class="el" href="a00224.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; rotation, CreateMode mode = REPLICATED)</li>
 <li>bool LoadAsync(File* file)</li>
 <li>bool LoadAsyncXML(File* file)</li>
 <li>void StopAsyncLoading()</li>
