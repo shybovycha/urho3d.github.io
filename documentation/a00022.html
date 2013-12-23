@@ -68,9 +68,24 @@ Required shader permutations</h1>
 <h1><a class="anchor" id="Shaders_Writing"></a>
 Writing shaders</h1>
 <p>Shaders must be written separately for HLSL (Direct3D9) and GLSL (OpenGL). The built-in shaders try to implement the same functionality on both shader languages as closely as possible.</p>
-<p>To get started with writing your own shaders, start with studying the most basic examples possible: the Basic, Shadow &amp; Unlit shaders. Note the required include files which bring common functionality, for example Uniforms.hlsl, Samplers.hlsl &amp; Transform.hlsl for HLSL shaders. Transforming the vertex (which hides the actual skinning, instancing or billboarding process) is a slight hack which uses a combination of macros and functions: it is safest to copy the following piece of code (for HLSL) verbatim:</p>
+<p>To get started with writing your own shaders, start with studying the most basic examples possible: the Basic, Shadow &amp; Unlit shaders. Note the required include files which bring common functionality, for example Uniforms.hlsl, Samplers.hlsl &amp; Transform.hlsl for HLSL shaders. Transforming the vertex (which hides the actual skinning, instancing or billboarding process) is a slight hack which uses a combination of macros and functions: it is safest to copy the following piece of code verbatim:</p>
+<p>For HLSL: </p>
 <div class="fragment"><div class="line">float4x3 modelMatrix = iModelMatrix;</div>
 <div class="line">float3 worldPos = GetWorldPos(modelMatrix);</div>
 <div class="line">oPos = GetClipPos(worldPos);</div>
-</div><!-- fragment --><p>Note that for HLSL shaders both the vertex and the pixel shader are written into the same file, and the functions must be called VS() and PS(), while for GLSL they are put into separate .vert and .frag files, and are called main(). </p>
-</div></div><!-- contents -->
+</div><!-- fragment --><p>For GLSL: </p>
+<div class="fragment"><div class="line">mat4 modelMatrix = iModelMatrix;</div>
+<div class="line">vec3 worldPos = GetWorldPos(modelMatrix);</div>
+<div class="line">gl_Position = GetClipPos(worldPos);</div>
+</div><!-- fragment --><p>Note that for HLSL shaders both the vertex and the pixel shader are written into the same file, and the functions must be called VS() and PS(), while for GLSL they are put into separate .vert and .frag files, and are called main().</p>
+<p>The uniforms must be prefixed in a certain way so that the shader compiler and the engine understand them:</p>
+<ul>
+<li>c for uniform constants, for example cMatDiffColor. The c is stripped when referred to inside the engine, so it would be called "MatDiffColor" in eg. <a class="el" href="a00175.html#a27f2b7dd5a1ab57e0be7f9a30be657ed">SetShaderParameter()</a></li>
+<li>s for texture samplers, for example sDiffMap.</li>
+</ul>
+<p>In GLSL shaders it is important that the samplers are assigned to the correct texture units. If you are using sampler names that are not predefined in the engine like sDiffMap, just make sure there is a number somewhere in the sampler's name and it will be interpreted as the texture unit. For example the terrain shader uses texture units 0-3 in the following way:</p>
+<div class="fragment"><div class="line">uniform sampler2D sWeightMap0;</div>
+<div class="line">uniform sampler2D sDetailMap1;</div>
+<div class="line">uniform sampler2D sDetailMap2;</div>
+<div class="line">uniform sampler2D sDetailMap3;</div>
+</div><!-- fragment --> </div></div><!-- contents -->
