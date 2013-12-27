@@ -29,7 +29,7 @@ Graphics</h1>
 <li>Performing primitive rendering operations</li>
 <li>Handling lost device</li>
 </ul>
-<p>Screen resolution, fullscreen/windowed, vertical sync and hardware multisampling level are all set at once by calling <a class="el" href="a00137.html" title="Graphics subsystem. Manages the application window, rendering state and GPU resources.">Graphics</a>'s <a class="el" href="a00137.html#abb7c05865887e8d63afed749568a0600">SetMode()</a> function. There is also an experimental option of rendering to an existing window by passing its OS-specific handle to <a class="el" href="a00137.html#abb1c387ef3e39d11a19066f12c420cc6">SetExternalWindow()</a> before setting the initial screen mode.</p>
+<p>Screen resolution, fullscreen/windowed, vertical sync and hardware multisampling level are all set at once by calling <a class="el" href="a00137.html" title="Graphics subsystem. Manages the application window, rendering state and GPU resources.">Graphics</a>'s <a class="el" href="a00137.html#adc16c8a19af1584c902fe29e3d21d6eb">SetMode()</a> function. There is also an experimental option of rendering to an existing window by passing its OS-specific handle to <a class="el" href="a00137.html#abb1c387ef3e39d11a19066f12c420cc6">SetExternalWindow()</a> before setting the initial screen mode.</p>
 <p>When setting the initial screen mode, <a class="el" href="a00137.html" title="Graphics subsystem. Manages the application window, rendering state and GPU resources.">Graphics</a> does a few checks:</p>
 <ul>
 <li>For Direct3D9, the supported shader model is checked. 2 is minimum, but 3 will be used if available. SM2 can be forced by calling <a class="el" href="a00137.html#a88b8eb411b824937171647ea4d74d4c6">SetForceSM2()</a> before setting the initial screen mode.</li>

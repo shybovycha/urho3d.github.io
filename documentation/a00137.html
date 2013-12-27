@@ -82,10 +82,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#a9f1be1b0665ae339705c5e6e2c074e31">SetWindowPosition</a> (int x, int y)</td></tr>
 <tr class="memdesc:a9f1be1b0665ae339705c5e6e2c074e31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set window position. <br/></td></tr>
 <tr class="separator:a9f1be1b0665ae339705c5e6e2c074e31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb7c05865887e8d63afed749568a0600"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb7c05865887e8d63afed749568a0600"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#abb7c05865887e8d63afed749568a0600">SetMode</a> (int width, int height, bool fullscreen, bool resizable, bool vsync, bool tripleBuffer, int multiSample)</td></tr>
-<tr class="memdesc:abb7c05865887e8d63afed749568a0600"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set screen mode. Return true if successful. <br/></td></tr>
-<tr class="separator:abb7c05865887e8d63afed749568a0600"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc16c8a19af1584c902fe29e3d21d6eb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc16c8a19af1584c902fe29e3d21d6eb"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#adc16c8a19af1584c902fe29e3d21d6eb">SetMode</a> (int width, int height, bool fullscreen, bool borderless, bool resizable, bool vsync, bool tripleBuffer, int multiSample)</td></tr>
+<tr class="memdesc:adc16c8a19af1584c902fe29e3d21d6eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set screen mode. Return true if successful. <br/></td></tr>
+<tr class="separator:adc16c8a19af1584c902fe29e3d21d6eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bb1ce37325a5ef2f7ba0e3f847b425f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6bb1ce37325a5ef2f7ba0e3f847b425f"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#a6bb1ce37325a5ef2f7ba0e3f847b425f">SetMode</a> (int width, int height)</td></tr>
 <tr class="memdesc:a6bb1ce37325a5ef2f7ba0e3f847b425f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set screen resolution only. Return true if successful. <br/></td></tr>
@@ -369,6 +369,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a0013
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#a729d146effd5fc00b55f68d6f16c57b6">GetFullscreen</a> () const </td></tr>
 <tr class="memdesc:a729d146effd5fc00b55f68d6f16c57b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether window is fullscreen. <br/></td></tr>
 <tr class="separator:a729d146effd5fc00b55f68d6f16c57b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8686036cb074ddb8fce9d36ff7eed222"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8686036cb074ddb8fce9d36ff7eed222"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#a8686036cb074ddb8fce9d36ff7eed222">GetBorderless</a> () const </td></tr>
+<tr class="memdesc:a8686036cb074ddb8fce9d36ff7eed222"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether window is borderless. <br/></td></tr>
+<tr class="separator:a8686036cb074ddb8fce9d36ff7eed222"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e95f5b8e349247eb59a396950f714c2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e95f5b8e349247eb59a396950f714c2"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#a3e95f5b8e349247eb59a396950f714c2">GetResizable</a> () const </td></tr>
 <tr class="memdesc:a3e95f5b8e349247eb59a396950f714c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether window is resizable. <br/></td></tr>
@@ -636,6 +640,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#a3e4a63886b79fe7b559416836828a90f">Restore</a> ()</td></tr>
 <tr class="memdesc:a3e4a63886b79fe7b559416836828a90f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restore GPU objects and reinitialize state. Requires an open window. <br/></td></tr>
 <tr class="separator:a3e4a63886b79fe7b559416836828a90f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e9aafcf20abf8918b6ba781636ce8e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e9aafcf20abf8918b6ba781636ce8e2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#a7e9aafcf20abf8918b6ba781636ce8e2">Maximize</a> ()</td></tr>
+<tr class="memdesc:a7e9aafcf20abf8918b6ba781636ce8e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximize the <a class="el" href="a00322.html" title="Window UI element that can optionally by moved or resized.">Window</a>. <br/></td></tr>
+<tr class="separator:a7e9aafcf20abf8918b6ba781636ce8e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad96a591cc84498af11261ee7389aedae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad96a591cc84498af11261ee7389aedae"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#ad96a591cc84498af11261ee7389aedae">Minimize</a> ()</td></tr>
+<tr class="memdesc:ad96a591cc84498af11261ee7389aedae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimize the <a class="el" href="a00322.html" title="Window UI element that can optionally by moved or resized.">Window</a>. <br/></td></tr>
+<tr class="separator:ad96a591cc84498af11261ee7389aedae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33758d927c34d25bc22005430f7648cd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33758d927c34d25bc22005430f7648cd"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#a33758d927c34d25bc22005430f7648cd">CleanupRenderSurface</a> (<a class="el" href="a00238.html">RenderSurface</a> *surface)</td></tr>
 <tr class="memdesc:a33758d927c34d25bc22005430f7648cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clean up a render surface from all FBOs. <br/></td></tr>
@@ -902,6 +914,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a0013
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#a79208cc5a6f60b81629c225fc9f35130">fullscreen_</a></td></tr>
 <tr class="memdesc:a79208cc5a6f60b81629c225fc9f35130"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fullscreen flag. <br/></td></tr>
 <tr class="separator:a79208cc5a6f60b81629c225fc9f35130"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23846db279b92505706ad5a7551a1390"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23846db279b92505706ad5a7551a1390"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#a23846db279b92505706ad5a7551a1390">borderless_</a></td></tr>
+<tr class="memdesc:a23846db279b92505706ad5a7551a1390"><td class="mdescLeft">&#160;</td><td class="mdescRight">Borderless flag. <br/></td></tr>
+<tr class="separator:a23846db279b92505706ad5a7551a1390"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab630e67334b66e3c27831ecf2160ae4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab630e67334b66e3c27831ecf2160ae4"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#aab630e67334b66e3c27831ecf2160ae4">resizable_</a></td></tr>
 <tr class="memdesc:aab630e67334b66e3c27831ecf2160ae4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resizable flag. <br/></td></tr>

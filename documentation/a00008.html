@@ -910,11 +910,13 @@ Classes</h1>
 <li>void SetWindowIcon(Image* windowIcon)</li>
 <li>void SetWindowPosition(const IntVector2&amp; position)</li>
 <li>void SetWindowPosition(int x, int y)</li>
-<li>bool SetMode(int width, int height, bool fullscreen, bool resizable, bool vsync, bool tripleBuffer, int multiSample)</li>
+<li>bool SetMode(int width, int height, bool fullscreen, bool borderless, bool resizable, bool vsync, bool tripleBuffer, int multiSample)</li>
 <li>bool SetMode(int width, int height)</li>
 <li>void SetSRGB(bool enable)</li>
 <li>void SetFlushGPU(bool enable)</li>
 <li>bool ToggleFullscreen()</li>
+<li>void Maximize()</li>
+<li>void Minimize()</li>
 <li>void Close()</li>
 <li>bool TakeScreenShot(Image&amp; destImage)</li>
 <li>bool IsInitialized() const</li>
@@ -926,6 +928,7 @@ Classes</h1>
 <li>int GetMultiSample() const</li>
 <li>bool GetFullscreen() const</li>
 <li>bool GetResizable() const</li>
+<li>bool GetBorderless() const</li>
 <li>bool GetVSync() const</li>
 <li>bool GetTripleBuffer() const</li>
 <li>bool GetSRGB() const</li>
@@ -957,6 +960,7 @@ Classes</h1>
 <li>int multiSample (readonly)</li>
 <li>bool fullscreen (readonly)</li>
 <li>bool resizable (readonly)</li>
+<li>bool borderless (readonly)</li>
 <li>bool vSync (readonly)</li>
 <li>bool tripleBuffer (readonly)</li>
 <li>bool sRGB</li>
