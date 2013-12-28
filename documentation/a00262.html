@@ -69,14 +69,18 @@ Public Attributes</h2></td></tr>
 <a class="el" href="a00309.html">Vector</a>&lt; <a class="el" href="a00286.html">String</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00262.html#aea08c31e6ed946a092b1a73a3bab7ef9">requires_</a></td></tr>
 <tr class="memdesc:aea08c31e6ed946a092b1a73a3bab7ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Required defines for variation to be compiled. <br/></td></tr>
 <tr class="separator:aea08c31e6ed946a092b1a73a3bab7ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af40f54aab1ea7771ee6a6799f8f52a19"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af40f54aab1ea7771ee6a6799f8f52a19"></a>
-<a class="el" href="a00219.html">PODVector</a>&lt; unsigned &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00262.html#af40f54aab1ea7771ee6a6799f8f52a19">excludeIndices_</a></td></tr>
-<tr class="memdesc:af40f54aab1ea7771ee6a6799f8f52a19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exclude indices. <br/></td></tr>
-<tr class="separator:af40f54aab1ea7771ee6a6799f8f52a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f2792f075f60fe200bee0e1e337e02b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f2792f075f60fe200bee0e1e337e02b"></a>
-<a class="el" href="a00219.html">PODVector</a>&lt; unsigned &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00262.html#a6f2792f075f60fe200bee0e1e337e02b">includeIndices_</a></td></tr>
-<tr class="memdesc:a6f2792f075f60fe200bee0e1e337e02b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Include indices. <br/></td></tr>
-<tr class="separator:a6f2792f075f60fe200bee0e1e337e02b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6784c5bfc1853f8a46a74c2966a8e824"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6784c5bfc1853f8a46a74c2966a8e824"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00262.html#a6784c5bfc1853f8a46a74c2966a8e824">excludeBits_</a></td></tr>
+<tr class="memdesc:a6784c5bfc1853f8a46a74c2966a8e824"><td class="mdescLeft">&#160;</td><td class="mdescRight">Excluded options as a bitmask. <br/></td></tr>
+<tr class="separator:a6784c5bfc1853f8a46a74c2966a8e824"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f487fcc7397b6e81240f016bffb6b67"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f487fcc7397b6e81240f016bffb6b67"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00262.html#a0f487fcc7397b6e81240f016bffb6b67">includeBits_</a></td></tr>
+<tr class="memdesc:a0f487fcc7397b6e81240f016bffb6b67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Included options as a bitmask. <br/></td></tr>
+<tr class="separator:a0f487fcc7397b6e81240f016bffb6b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac825691a2613eabb10a9c8e8c2ca8e60"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac825691a2613eabb10a9c8e8c2ca8e60"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00262.html#ac825691a2613eabb10a9c8e8c2ca8e60">variationGroupBits_</a></td></tr>
+<tr class="memdesc:ac825691a2613eabb10a9c8e8c2ca8e60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exclude bits for variations of the same group. <br/></td></tr>
+<tr class="separator:ac825691a2613eabb10a9c8e8c2ca8e60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46c156401f3bd5e179ffbf2868ff1058"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46c156401f3bd5e179ffbf2868ff1058"></a>
 <a class="el" href="a00219.html">PODVector</a>&lt; unsigned &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00262.html#a46c156401f3bd5e179ffbf2868ff1058">requirementBits_</a></td></tr>
 <tr class="memdesc:a46c156401f3bd5e179ffbf2868ff1058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option(s) which satisfy the requirements. <br/></td></tr>
@@ -85,6 +89,10 @@ Public Attributes</h2></td></tr>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00262.html#a0b80c8e96a00d6732c3447320b9e324a">isVariation_</a></td></tr>
 <tr class="memdesc:a0b80c8e96a00d6732c3447320b9e324a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variation flag. A variation excludes all other variations, unless in a separate group. <br/></td></tr>
 <tr class="separator:a0b80c8e96a00d6732c3447320b9e324a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cbc1da04f5f69cc18cccdfa56a2e050"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7cbc1da04f5f69cc18cccdfa56a2e050"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00262.html#a7cbc1da04f5f69cc18cccdfa56a2e050">isDummySeparator_</a></td></tr>
+<tr class="memdesc:a7cbc1da04f5f69cc18cccdfa56a2e050"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dummy separator flag. <br/></td></tr>
+<tr class="separator:a7cbc1da04f5f69cc18cccdfa56a2e050"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Option definition and combination rules for constructing shader variations. </p>
