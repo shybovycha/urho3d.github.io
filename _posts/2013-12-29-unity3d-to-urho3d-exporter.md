@@ -13,4 +13,6 @@ Here's an image and a video of the work in progress.
 
 ![unity_2_urho3d.png](https://dl.dropboxusercontent.com/u/90864981/unity_2_urho3d.png)
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/m3ehQwfbjGg" frameborder="0" > </iframe>
+<div class="embed-container">
+    <iframe src="//www.youtube.com/embed/m3ehQwfbjGg" frameborder="0" > </iframe>
+</div>
