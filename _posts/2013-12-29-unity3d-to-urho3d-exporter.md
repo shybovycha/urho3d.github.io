@@ -7,7 +7,7 @@ tags: [Unity3D, exporter]
 ---
 {% include JB/setup %}
 
-Josh Engebretson of ThunderBeast Games [posted](https://groups.google.com/forum/#!topic/urho3d/QqXH-hMPxEQ) on the Urho3D group of their inhouse game engine, which combines Urho3D and cocos2d-x and imports Unity3D content.
+Josh Engebretson of ThunderBeast Games [posted](https://groups.google.com/forum/#!topic/urho3d/QqXH-hMPxEQ) on the Urho3D group of their inhouse game engine, which combines Urho3D and Cocos2d-x and imports Unity3D content.
 
 Here's an image and a video of the work in progress.
 
