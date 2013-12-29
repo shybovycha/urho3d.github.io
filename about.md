@@ -59,7 +59,7 @@ Though Urho3D already contains several useful features and implements a framewor
 - Integration of additional 3rd party libraries, for example a more complete UI library, HTML rendering, or additional network protocols
 
 ## Engine development, contributions and bugfixes by
-- Lasse Öörni (AgentC at GameDev.net)
+- Lasse Öörni (loorni@gmail.com, AgentC at GameDev.net)
 - Wei Tjong Yao
 - Aster Jian
 - Colin Barrett
