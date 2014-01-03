@@ -83,13 +83,15 @@ title: Documentation
 <li>HandleChar()
 : <a class="el" href="a00306.html#a2e50b5fe049ddb9d6646853052a9fd8d">Urho3D::UI</a>
 </li>
+<li>HandleClearSelectionOnDefocused()
+: <a class="el" href="a00169.html#a19d831853bdd193cc006c472cf59e358">Urho3D::ListView</a>
+</li>
 <li>HandleConsoleCommand()
 : <a class="el" href="a00173.html#a73feefd78ff888f9e82bb6d4ce2f1515">Urho3D::LuaScript</a>
 , <a class="el" href="a00253.html#aa05e8601165951c4da36ff958431346a">Urho3D::Script</a>
 </li>
 <li>HandleDefocused()
 : <a class="el" href="a00162.html#a59fd7a71877afbca595aeb9b6e7d8129">Urho3D::LineEdit</a>
-, <a class="el" href="a00169.html#a1ae2fc5b9b79f81406cd9d196a6adf11">Urho3D::ListView</a>
 </li>
 <li>HandleDropFile()
 : <a class="el" href="a00306.html#a61b6b9a0bf5f98fa5bdce42808e0ccc1">Urho3D::UI</a>
@@ -140,6 +142,9 @@ title: Documentation
 </li>
 <li>HandleItemClicked()
 : <a class="el" href="a00116.html#a03d4dd14c1af0da97deedcefdde09e4d">Urho3D::DropDownList</a>
+</li>
+<li>HandleItemFocusChanged()
+: <a class="el" href="a00169.html#a82ba56fa4c6755fcc50654a86d8377c2">Urho3D::ListView</a>
 </li>
 <li>HandleKeyDown()
 : <a class="el" href="a00181.html#a913c00b170c69e2d54b002adb93daddb">Urho3D::Menu</a>
@@ -214,10 +219,10 @@ title: Documentation
 , <a class="el" href="a00298.html#a1a41368a06b2a91e729feae8441721ac">Urho3D::TextureCube</a>
 </li>
 <li>HandleRenderUpdate()
-: <a class="el" href="a00236.html#adf594e7a524f6e003e8370cf23dbee13">Urho3D::Renderer</a>
+: <a class="el" href="a00064.html#a087de3d1eb52ea426b9fa6db017aa851">Urho3D::Audio</a>
+, <a class="el" href="a00236.html#adf594e7a524f6e003e8370cf23dbee13">Urho3D::Renderer</a>
 , <a class="el" href="a00191.html#a9e10514a40056835caf21a3fb9737e77">Urho3D::Network</a>
 , <a class="el" href="a00306.html#a05bd51bad1a135929174fcd7fe5fcf96">Urho3D::UI</a>
-, <a class="el" href="a00064.html#a087de3d1eb52ea426b9fa6db017aa851">Urho3D::Audio</a>
 </li>
 <li>HandleScenePostUpdate()
 : <a class="el" href="a00052.html#abe3fe1fb76d6500d50c5c58af6048a9c">Urho3D::AnimationController</a>
@@ -238,8 +243,8 @@ title: Documentation
 , <a class="el" href="a00306.html#aefd3544d155762334a00429ef8196bae">Urho3D::UI</a>
 </li>
 <li>HandleScriptEvent()
-: <a class="el" href="a00254.html#a94b58f81c5e94f53a23ff0b81db822aa">Urho3D::ScriptEventInvoker</a>
-, <a class="el" href="a00257.html#ac0fba962b1f4f55d422f98c9518f3f9a">Urho3D::ScriptInstance</a>
+: <a class="el" href="a00257.html#ac0fba962b1f4f55d422f98c9518f3f9a">Urho3D::ScriptInstance</a>
+, <a class="el" href="a00254.html#a94b58f81c5e94f53a23ff0b81db822aa">Urho3D::ScriptEventInvoker</a>
 </li>
 <li>HandleScriptFileReload()
 : <a class="el" href="a00257.html#a7feca3a5ff8de20ac773aba8a53a1656">Urho3D::ScriptInstance</a>
@@ -290,10 +295,10 @@ title: Documentation
 : <a class="el" href="a00169.html#a90c06f24f74cf3cb8dafcd280e52da5f">Urho3D::ListView</a>
 </li>
 <li>HandleUpdate()
-: <a class="el" href="a00174.html#a74cad0febb38074e51a72bf7d92b71b9">Urho3D::LuaScriptInstance</a>
-, <a class="el" href="a00248.html#ad3307d7a01b61f9b6ded6cff9a44f857">Urho3D::Scene</a>
-, <a class="el" href="a00256.html#a23a8784a61bde260ce86ec6af2cecab5">Urho3D::ScriptFile</a>
+: <a class="el" href="a00256.html#a23a8784a61bde260ce86ec6af2cecab5">Urho3D::ScriptFile</a>
 , <a class="el" href="a00104.html#ad63302d9ad726dd50224da5bc7575f3a">Urho3D::DebugHud</a>
+, <a class="el" href="a00174.html#a74cad0febb38074e51a72bf7d92b71b9">Urho3D::LuaScriptInstance</a>
+, <a class="el" href="a00248.html#ad3307d7a01b61f9b6ded6cff9a44f857">Urho3D::Scene</a>
 </li>
 <li>HandleUpdateSmoothing()
 : <a class="el" href="a00276.html#aab4734d09c12855615e3cccfa3353abb">Urho3D::SmoothedTransform</a>
@@ -324,14 +329,14 @@ title: Documentation
 , <a class="el" href="a00308.html#ae743f7537516c77dee6dd53b248680a4">Urho3D::UIElement</a>
 </li>
 <li>Hash()
-: <a class="el" href="a00141.html#af71f1ec66517f46f7c8eba65d421023d">Urho3D::HashMap&lt; T, U &gt;</a>
-, <a class="el" href="a00143.html#a36a1036549379474f5c85a4f9d39b810">Urho3D::HashSet&lt; T &gt;</a>
+: <a class="el" href="a00143.html#a36a1036549379474f5c85a4f9d39b810">Urho3D::HashSet&lt; T &gt;</a>
+, <a class="el" href="a00141.html#af71f1ec66517f46f7c8eba65d421023d">Urho3D::HashMap&lt; T, U &gt;</a>
 </li>
 <li>HashBase()
 : <a class="el" href="a00139.html#a531e375a95ac79b4ee296bb35ad1d300">Urho3D::HashBase</a>
 </li>
 <li>HashIteratorBase()
-: <a class="el" href="a00140.html#a1bce5f766c31b9e226a83712feb63379">Urho3D::HashIteratorBase</a>
+: <a class="el" href="a00140.html#a99fe34ae42596e0d12a4ca364c63ee72">Urho3D::HashIteratorBase</a>
 </li>
 <li>HashMap()
 : <a class="el" href="a00141.html#a8616056b547e1bb977b532aaa3524b51">Urho3D::HashMap&lt; T, U &gt;</a>
@@ -340,7 +345,7 @@ title: Documentation
 : <a class="el" href="a00142.html#a3b1e0b0c33101647ad23f9783a95add3">Urho3D::HashNodeBase</a>
 </li>
 <li>HashSet()
-: <a class="el" href="a00143.html#a380f658813ed48a2960a6d193b962f92">Urho3D::HashSet&lt; T &gt;</a>
+: <a class="el" href="a00143.html#ac14085275556f456f11e7c05eab7c127">Urho3D::HashSet&lt; T &gt;</a>
 </li>
 <li>HashTable()
 : <a class="el" href="a00144.html#a20b263962f4059d8255df1f8675f42db">Urho3D::HashTable&lt; T, U &gt;</a>
@@ -365,15 +370,15 @@ title: Documentation
 : <a class="el" href="a00137.html#af5043bf7851a37ec01cfe67e3ea961dc">Urho3D::Graphics</a>
 </li>
 <li>HasSubscribedToEvent()
-: <a class="el" href="a00200.html#a0adfe36d21569e2f4f5785627c87fa3d">Urho3D::Object</a>
+: <a class="el" href="a00200.html#a7e1e02093f67f7d56056c5992a6d7b1e">Urho3D::Object</a>
 </li>
 <li>HasTextureUnit()
 : <a class="el" href="a00267.html#a35ef60a6549a4b47ca96b735322f07f2">Urho3D::ShaderProgram</a>
 , <a class="el" href="a00137.html#a82cdab6dc883ff0c20461de08e74b8e3">Urho3D::Graphics</a>
 </li>
 <li>Head()
-: <a class="el" href="a00165.html#abb36c60c2635e4fe7a5458408c2fac95">Urho3D::List&lt; T &gt;</a>
-, <a class="el" href="a00143.html#a9695fe52cd3b7344b570cc0fdc58ac39">Urho3D::HashSet&lt; T &gt;</a>
+: <a class="el" href="a00143.html#a9695fe52cd3b7344b570cc0fdc58ac39">Urho3D::HashSet&lt; T &gt;</a>
+, <a class="el" href="a00165.html#abb36c60c2635e4fe7a5458408c2fac95">Urho3D::List&lt; T &gt;</a>
 , <a class="el" href="a00141.html#a8c222cc8618a2b8d4775a05e83767023">Urho3D::HashMap&lt; T, U &gt;</a>
 </li>
 <li>Height()
@@ -386,7 +391,7 @@ title: Documentation
 : <a class="el" href="a00146.html#a029b1057bc8d9d7ddfe0c1c9ac1a6986">Urho3D::HiresTimer</a>
 </li>
 <li>HitDistance()
-: <a class="el" href="a00228.html#a974bf82e2d539512fee784cf7d5da829">Urho3D::Ray</a>
+: <a class="el" href="a00228.html#abe9a0e5ed9f59abc8a6c8b212b5ec128">Urho3D::Ray</a>
 </li>
 <li>HttpRequest()
 : <a class="el" href="a00147.html#aa0dff1a396bb6487876dd20a1e3c77f1">Urho3D::HttpRequest</a>
