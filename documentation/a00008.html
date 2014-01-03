@@ -3161,6 +3161,10 @@ Classes</h1>
 <li>Model* GetModel() const</li>
 <li>unsigned GetLodLevel() const</li>
 <li><a class="el" href="a00075.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a> GetWorldBoundingBox() const</li>
+<li>void NotifyRigidBody(bool updateMass = true)</li>
+<li>void SetModelAttr(ResourceRef value)</li>
+<li><a class="el" href="a00245.html" title="Typed resource reference.">ResourceRef</a> GetModelAttr() const</li>
+<li>void ReleaseShape()</li>
 </ul>
 <p>Properties:</p>
 <ul>
@@ -3206,6 +3210,8 @@ Classes</h1>
 <li>float GetERP() const</li>
 <li>float GetCFM() const</li>
 <li>bool GetDisableCollision() const</li>
+<li>void ReleaseConstraint()</li>
+<li>void ApplyFrames()</li>
 </ul>
 <p>Properties:</p>
 <ul>
@@ -3259,7 +3265,6 @@ Classes</h1>
 <li>void SetMaxNetworkAngularVelocity(float velocity)</li>
 <li><a class="el" href="a00217.html" title="Physics raycast hit.">PhysicsRaycastResult</a> RaycastSingle(const <a class="el" href="a00228.html" title="Infinite straight line in three-dimensional space.">Ray</a>&amp; ray, float maxDistance, unsigned collisionMask = M_MAX_UNSIGNED)</li>
 <li><a class="el" href="a00217.html" title="Physics raycast hit.">PhysicsRaycastResult</a> SphereCast(const <a class="el" href="a00228.html" title="Infinite straight line in three-dimensional space.">Ray</a>&amp; ray, float radius, float maxDistance, unsigned collisionMask = M_MAX_UNSIGNED)</li>
-<li>void RemoveCachedGeometry(Model* model)</li>
 <li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> GetGravity() const</li>
 <li>int GetNumIterations() const</li>
 <li>bool GetInterpolation() const</li>
@@ -3267,6 +3272,19 @@ Classes</h1>
 <li>bool GetSplitImpulse() const</li>
 <li>int GetFps() const</li>
 <li>float GetMaxNetworkAngularVelocity() const</li>
+<li>void AddRigidBody(RigidBody* body)</li>
+<li>void RemoveRigidBody(RigidBody* body)</li>
+<li>void AddCollisionShape(CollisionShape* shape)</li>
+<li>void RemoveCollisionShape(CollisionShape* shape)</li>
+<li>void AddConstraint(Constraint* joint)</li>
+<li>void RemoveConstraint(Constraint* joint)</li>
+<li>void AddDelayedWorldTransform(const DelayedWorldTransform&amp; transform)</li>
+<li>void DrawDebugGeometry(bool depthTest)</li>
+<li>void SetDebugRenderer(DebugRenderer* debug)</li>
+<li>void SetDebugDepthTest(bool enable)</li>
+<li>void CleanupGeometryCache()</li>
+<li>void SetApplyingTransforms(bool enable)</li>
+<li>bool IsApplyingTransforms() const</li>
 </ul>
 <p>Properties:</p>
 <ul>
@@ -3347,6 +3365,12 @@ Classes</h1>
 <li>unsigned GetCollisionLayer() const</li>
 <li>unsigned GetCollisionMask() const</li>
 <li>CollisionEventMode GetCollisionEventMode() const</li>
+<li>void ApplyWorldTransform(const Vector3&amp; newWorldPosition, const Quaternion&amp; newWorldRotation)</li>
+<li>void UpdateMass()</li>
+<li>void UpdateGravity()</li>
+<li>void AddConstraint(Constraint* constraint)</li>
+<li>void RemoveConstraint(Constraint* constraint)</li>
+<li>void ReleaseBody()</li>
 </ul>
 <p>Properties:</p>
 <ul>
@@ -3540,7 +3564,7 @@ Classes</h1>
 <li>Component* GetComponent(ShortStringHash type) const</li>
 <li>Component* GetComponent(const String type) const</li>
 </ul>
-<h3><a class="el" href="a00195.html" title="Scene node that may contain components and child nodes.">Node</a> : <a class="el" href="a00260.html" title="Base class for objects with automatic serialization through attributes.">Serializable</a></h3>
+<h3><a class="el" href="a00196.html" title="Scene node that may contain components and child nodes.">Node</a> : <a class="el" href="a00260.html" title="Base class for objects with automatic serialization through attributes.">Serializable</a></h3>
 <p>Methods:</p>
 <ul>
 <li>Node(Context* context)</li>
@@ -3643,7 +3667,7 @@ Classes</h1>
 <li><em><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> WorldToLocal(const Vector4&amp; vector) const</em></li>
 <li><em>bool IsDirty() const</em></li>
 <li><em>unsigned GetNumChildren(bool recursive = false) const</em></li>
-<li><em><a class="el" href="a00195.html" title="Scene node that may contain components and child nodes.">Node</a></em> GetChild(unsigned index) const</li>
+<li><em><a class="el" href="a00196.html" title="Scene node that may contain components and child nodes.">Node</a></em> GetChild(unsigned index) const</li>
 <li>Node* GetChild(const <a class="el" href="a00288.html" title="String class.">String</a> name, bool recursive = false) const</li>
 <li>Node* GetChild(<a class="el" href="a00289.html" title="32-bit hash value for a string.">StringHash</a> nameHash, bool recursive = false) const</li>
 <li>unsigned GetNumComponents() const</li>
@@ -3684,7 +3708,7 @@ Classes</h1>
 <li>unsigned numComponents (readonly)</li>
 <li>unsigned numNetworkComponents (readonly)</li>
 </ul>
-<h3><a class="el" href="a00248.html" title="Root scene node, represents the whole scene.">Scene</a> : <a class="el" href="a00195.html" title="Scene node that may contain components and child nodes.">Node</a></h3>
+<h3><a class="el" href="a00248.html" title="Root scene node, represents the whole scene.">Scene</a> : <a class="el" href="a00196.html" title="Scene node that may contain components and child nodes.">Node</a></h3>
 <p>Methods:</p>
 <ul>
 <li>Scene(Context* context)</li>

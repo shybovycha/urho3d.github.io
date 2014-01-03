@@ -144,10 +144,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a002
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a9625022dc308a9b18750c969bbd72963">SphereCast</a> (<a class="el" href="a00217.html">PhysicsRaycastResult</a> &amp;result, const <a class="el" href="a00228.html">Ray</a> &amp;ray, float radius, float maxDistance, unsigned collisionMask=M_MAX_UNSIGNED)</td></tr>
 <tr class="memdesc:a9625022dc308a9b18750c969bbd72963"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a physics world swept sphere test and return the closest hit. <br/></td></tr>
 <tr class="separator:a9625022dc308a9b18750c969bbd72963"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9528fd5f629ab19cbbad35c7421b3a0f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9528fd5f629ab19cbbad35c7421b3a0f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a9528fd5f629ab19cbbad35c7421b3a0f">RemoveCachedGeometry</a> (<a class="el" href="a00183.html">Model</a> *model)</td></tr>
-<tr class="memdesc:a9528fd5f629ab19cbbad35c7421b3a0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalidate cached collision geometry for a model. <br/></td></tr>
-<tr class="separator:a9528fd5f629ab19cbbad35c7421b3a0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64e4c00a3af866b5e222106298474fe5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a64e4c00a3af866b5e222106298474fe5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a64e4c00a3af866b5e222106298474fe5">GetRigidBodies</a> (<a class="el" href="a00220.html">PODVector</a>&lt; <a class="el" href="a00247.html">RigidBody</a> * &gt; &amp;result, const <a class="el" href="a00282.html">Sphere</a> &amp;sphere, unsigned collisionMask=M_MAX_UNSIGNED)</td></tr>
 <tr class="memdesc:a64e4c00a3af866b5e222106298474fe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return rigid bodies by a sphere query. <br/></td></tr>
@@ -236,18 +232,11 @@ btDiscreteDynamicsWorld *&#160;</td><td class="memItemRight" valign="bottom"><a 
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#af05205d187ddeccfbed5627f3332b47c">CleanupGeometryCache</a> ()</td></tr>
 <tr class="memdesc:af05205d187ddeccfbed5627f3332b47c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clean up the geometry cache. <br/></td></tr>
 <tr class="separator:af05205d187ddeccfbed5627f3332b47c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30ba9e53d0e019050d6789f63dbb1008"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30ba9e53d0e019050d6789f63dbb1008"></a>
-<a class="el" href="a00141.html">HashMap</a>&lt; <a class="el" href="a00212.html">Pair</a>&lt; <a class="el" href="a00183.html">Model</a> <br class="typebreak"/>
-*, unsigned &gt;, <a class="el" href="a00271.html">SharedPtr</a><br class="typebreak"/>
-&lt; <a class="el" href="a00081.html">CollisionGeometryData</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a30ba9e53d0e019050d6789f63dbb1008">GetTriMeshCache</a> ()</td></tr>
-<tr class="memdesc:a30ba9e53d0e019050d6789f63dbb1008"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return trimesh collision geometry cache. <br/></td></tr>
-<tr class="separator:a30ba9e53d0e019050d6789f63dbb1008"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42384e7eadcbb5d5fb89bef5649e204f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42384e7eadcbb5d5fb89bef5649e204f"></a>
-<a class="el" href="a00141.html">HashMap</a>&lt; <a class="el" href="a00212.html">Pair</a>&lt; <a class="el" href="a00183.html">Model</a> <br class="typebreak"/>
-*, unsigned &gt;, <a class="el" href="a00271.html">SharedPtr</a><br class="typebreak"/>
-&lt; <a class="el" href="a00081.html">CollisionGeometryData</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a42384e7eadcbb5d5fb89bef5649e204f">GetConvexCache</a> ()</td></tr>
-<tr class="memdesc:a42384e7eadcbb5d5fb89bef5649e204f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return convex collision geometry cache. <br/></td></tr>
-<tr class="separator:a42384e7eadcbb5d5fb89bef5649e204f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac710da7f01b6498c06929f0a574eddbd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac710da7f01b6498c06929f0a574eddbd"></a>
+<a class="el" href="a00141.html">HashMap</a>&lt; <a class="el" href="a00288.html">String</a>, <a class="el" href="a00271.html">SharedPtr</a><br class="typebreak"/>
+&lt; <a class="el" href="a00081.html">CollisionGeometryData</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#ac710da7f01b6498c06929f0a574eddbd">GetGeometryCache</a> ()</td></tr>
+<tr class="memdesc:ac710da7f01b6498c06929f0a574eddbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the collision geometry cache. <br/></td></tr>
+<tr class="separator:ac710da7f01b6498c06929f0a574eddbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac48919689094234eed3ef03fe305cd8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac48919689094234eed3ef03fe305cd8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#aac48919689094234eed3ef03fe305cd8">SetApplyingTransforms</a> (bool enable)</td></tr>
 <tr class="memdesc:aac48919689094234eed3ef03fe305cd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set node dirtying to be disregarded. <br/></td></tr>
@@ -282,7 +271,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memdesc:aaf032dc7b7d8b2adf10fafc43a45bef8 inherit pub_methods_a00085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save as XML data. Return true if successful. <br/></td></tr>
 <tr class="separator:aaf032dc7b7d8b2adf10fafc43a45bef8 inherit pub_methods_a00085"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19e5cb822601c91cc567f8daa08bf995 inherit pub_methods_a00085"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19e5cb822601c91cc567f8daa08bf995"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00085.html#a19e5cb822601c91cc567f8daa08bf995">GetDependencyNodes</a> (<a class="el" href="a00220.html">PODVector</a>&lt; <a class="el" href="a00195.html">Node</a> * &gt; &amp;dest)</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00085.html#a19e5cb822601c91cc567f8daa08bf995">GetDependencyNodes</a> (<a class="el" href="a00220.html">PODVector</a>&lt; <a class="el" href="a00196.html">Node</a> * &gt; &amp;dest)</td></tr>
 <tr class="memdesc:a19e5cb822601c91cc567f8daa08bf995 inherit pub_methods_a00085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the depended on nodes to order network updates. <br/></td></tr>
 <tr class="separator:a19e5cb822601c91cc567f8daa08bf995 inherit pub_methods_a00085"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84cc0be4504cc2234be4056ef7ffe976 inherit pub_methods_a00085"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84cc0be4504cc2234be4056ef7ffe976"></a>
@@ -298,7 +287,7 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <tr class="memdesc:a8e41b29043755acbfd20650d22a6a3d2 inherit pub_methods_a00085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return ID. <br/></td></tr>
 <tr class="separator:a8e41b29043755acbfd20650d22a6a3d2 inherit pub_methods_a00085"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf7a7d9aea4ae4bcc527a5f0c33f3f1a inherit pub_methods_a00085"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf7a7d9aea4ae4bcc527a5f0c33f3f1a"></a>
-<a class="el" href="a00195.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00085.html#aaf7a7d9aea4ae4bcc527a5f0c33f3f1a">GetNode</a> () const </td></tr>
+<a class="el" href="a00196.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00085.html#aaf7a7d9aea4ae4bcc527a5f0c33f3f1a">GetNode</a> () const </td></tr>
 <tr class="memdesc:aaf7a7d9aea4ae4bcc527a5f0c33f3f1a inherit pub_methods_a00085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return scene node. <br/></td></tr>
 <tr class="separator:aaf7a7d9aea4ae4bcc527a5f0c33f3f1a inherit pub_methods_a00085"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a892d74a5c954e71c9f0a5f011d451b8b inherit pub_methods_a00085"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a892d74a5c954e71c9f0a5f011d451b8b"></a>
@@ -595,16 +584,16 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:aeb89a4934413cfa3b7ed7032362ef7f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb89a4934413cfa3b7ed7032362ef7f2"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#aeb89a4934413cfa3b7ed7032362ef7f2">OnNodeSet</a> (<a class="el" href="a00195.html">Node</a> *node)</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#aeb89a4934413cfa3b7ed7032362ef7f2">OnNodeSet</a> (<a class="el" href="a00196.html">Node</a> *node)</td></tr>
 <tr class="memdesc:aeb89a4934413cfa3b7ed7032362ef7f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle node being assigned. <br/></td></tr>
 <tr class="separator:aeb89a4934413cfa3b7ed7032362ef7f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_a00085"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_a00085')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="a00085.html">Urho3D::Component</a></td></tr>
 <tr class="memitem:a06ebdba9da30ea5f2599e39f7cd0e24a inherit pro_methods_a00085"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a06ebdba9da30ea5f2599e39f7cd0e24a"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00085.html#a06ebdba9da30ea5f2599e39f7cd0e24a">OnMarkedDirty</a> (<a class="el" href="a00195.html">Node</a> *node)</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00085.html#a06ebdba9da30ea5f2599e39f7cd0e24a">OnMarkedDirty</a> (<a class="el" href="a00196.html">Node</a> *node)</td></tr>
 <tr class="memdesc:a06ebdba9da30ea5f2599e39f7cd0e24a inherit pro_methods_a00085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene node transform dirtied. <br/></td></tr>
 <tr class="separator:a06ebdba9da30ea5f2599e39f7cd0e24a inherit pro_methods_a00085"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d8427933ca3aedcc7397e84176dc321 inherit pro_methods_a00085"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d8427933ca3aedcc7397e84176dc321"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00085.html#a6d8427933ca3aedcc7397e84176dc321">OnNodeSetEnabled</a> (<a class="el" href="a00195.html">Node</a> *node)</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00085.html#a6d8427933ca3aedcc7397e84176dc321">OnNodeSetEnabled</a> (<a class="el" href="a00196.html">Node</a> *node)</td></tr>
 <tr class="memdesc:a6d8427933ca3aedcc7397e84176dc321 inherit pro_methods_a00085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene node enabled status changing. <br/></td></tr>
 <tr class="separator:a6d8427933ca3aedcc7397e84176dc321 inherit pro_methods_a00085"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a871e9a8397df466d804a02786970788c inherit pro_methods_a00085"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a871e9a8397df466d804a02786970788c"></a>
@@ -612,8 +601,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a000
 <tr class="memdesc:a871e9a8397df466d804a02786970788c inherit pro_methods_a00085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set ID. Called by <a class="el" href="a00248.html" title="Root scene node, represents the whole scene.">Scene</a>. <br/></td></tr>
 <tr class="separator:a871e9a8397df466d804a02786970788c inherit pro_methods_a00085"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbd5b600c3a004defcb4eb393f855de6 inherit pro_methods_a00085"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abbd5b600c3a004defcb4eb393f855de6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00085.html#abbd5b600c3a004defcb4eb393f855de6">SetNode</a> (<a class="el" href="a00195.html">Node</a> *node)</td></tr>
-<tr class="memdesc:abbd5b600c3a004defcb4eb393f855de6 inherit pro_methods_a00085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set scene node. Called by <a class="el" href="a00195.html" title="Scene node that may contain components and child nodes.">Node</a> when creating the component. <br/></td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00085.html#abbd5b600c3a004defcb4eb393f855de6">SetNode</a> (<a class="el" href="a00196.html">Node</a> *node)</td></tr>
+<tr class="memdesc:abbd5b600c3a004defcb4eb393f855de6 inherit pro_methods_a00085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set scene node. Called by <a class="el" href="a00196.html" title="Scene node that may contain components and child nodes.">Node</a> when creating the component. <br/></td></tr>
 <tr class="separator:abbd5b600c3a004defcb4eb393f855de6 inherit pro_methods_a00085"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
@@ -625,10 +614,6 @@ Private Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#ab0ca17f00837381a0866ec5a8ddbc758">HandleSceneSubsystemUpdate</a> (<a class="el" href="a00289.html">StringHash</a> eventType, <a class="el" href="a00141.html">VariantMap</a> &amp;eventData)</td></tr>
 <tr class="memdesc:ab0ca17f00837381a0866ec5a8ddbc758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle the scene subsystem update event, step simulation here. <br/></td></tr>
 <tr class="separator:ab0ca17f00837381a0866ec5a8ddbc758"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a095cf8883d25738508536800d72e6b7c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a095cf8883d25738508536800d72e6b7c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a095cf8883d25738508536800d72e6b7c">HandleModelReloadFinished</a> (<a class="el" href="a00289.html">StringHash</a> eventType, <a class="el" href="a00141.html">VariantMap</a> &amp;eventData)</td></tr>
-<tr class="memdesc:a095cf8883d25738508536800d72e6b7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle collision model reload finished. <br/></td></tr>
-<tr class="separator:a095cf8883d25738508536800d72e6b7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94357d54aa72238c942ba3c780075dfd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a94357d54aa72238c942ba3c780075dfd"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a94357d54aa72238c942ba3c780075dfd">PreStep</a> (float timeStep)</td></tr>
 <tr class="memdesc:a94357d54aa72238c942ba3c780075dfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trigger update before each physics simulation step. <br/></td></tr>
@@ -699,18 +684,11 @@ btDiscreteDynamicsWorld *&#160;</td><td class="memItemRight" valign="bottom"><a 
 *, <a class="el" href="a00111.html">DelayedWorldTransform</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#ab7fb8c9e7cfa77fa9e29d4045d8ef8ec">delayedWorldTransforms_</a></td></tr>
 <tr class="memdesc:ab7fb8c9e7cfa77fa9e29d4045d8ef8ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delayed (parented) world transform assignments. <br/></td></tr>
 <tr class="separator:ab7fb8c9e7cfa77fa9e29d4045d8ef8ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3018b2eb112342e250bd6bb2d8520a8d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3018b2eb112342e250bd6bb2d8520a8d"></a>
-<a class="el" href="a00141.html">HashMap</a>&lt; <a class="el" href="a00212.html">Pair</a>&lt; <a class="el" href="a00183.html">Model</a> <br class="typebreak"/>
-*, unsigned &gt;, <a class="el" href="a00271.html">SharedPtr</a><br class="typebreak"/>
-&lt; <a class="el" href="a00081.html">CollisionGeometryData</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a3018b2eb112342e250bd6bb2d8520a8d">triMeshCache_</a></td></tr>
-<tr class="memdesc:a3018b2eb112342e250bd6bb2d8520a8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache for trimesh geometry data by model and LOD level. <br/></td></tr>
-<tr class="separator:a3018b2eb112342e250bd6bb2d8520a8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addfabdb371765c471162b03792b89a5a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="addfabdb371765c471162b03792b89a5a"></a>
-<a class="el" href="a00141.html">HashMap</a>&lt; <a class="el" href="a00212.html">Pair</a>&lt; <a class="el" href="a00183.html">Model</a> <br class="typebreak"/>
-*, unsigned &gt;, <a class="el" href="a00271.html">SharedPtr</a><br class="typebreak"/>
-&lt; <a class="el" href="a00081.html">CollisionGeometryData</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#addfabdb371765c471162b03792b89a5a">convexCache_</a></td></tr>
-<tr class="memdesc:addfabdb371765c471162b03792b89a5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache for convex geometry data by model and LOD level. <br/></td></tr>
-<tr class="separator:addfabdb371765c471162b03792b89a5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a115e1fcf540054cc98091561089db23c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a115e1fcf540054cc98091561089db23c"></a>
+<a class="el" href="a00141.html">HashMap</a>&lt; <a class="el" href="a00288.html">String</a>, <a class="el" href="a00271.html">SharedPtr</a><br class="typebreak"/>
+&lt; <a class="el" href="a00081.html">CollisionGeometryData</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a115e1fcf540054cc98091561089db23c">geometryCache_</a></td></tr>
+<tr class="memdesc:a115e1fcf540054cc98091561089db23c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache for collision geometry data. <br/></td></tr>
+<tr class="separator:a115e1fcf540054cc98091561089db23c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58fe7902f6d857f847c1adea036ded27"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58fe7902f6d857f847c1adea036ded27"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a58fe7902f6d857f847c1adea036ded27">fps_</a></td></tr>
 <tr class="memdesc:a58fe7902f6d857f847c1adea036ded27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulation steps per second. <br/></td></tr>
@@ -761,7 +739,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>InternalTickCallback<
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_a00085"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_a00085')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="a00085.html">Urho3D::Component</a></td></tr>
 <tr class="memitem:a1e35dfd6ec760ebafd81fabcec2ad86b inherit pro_attribs_a00085"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e35dfd6ec760ebafd81fabcec2ad86b"></a>
-<a class="el" href="a00195.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00085.html#a1e35dfd6ec760ebafd81fabcec2ad86b">node_</a></td></tr>
+<a class="el" href="a00196.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00085.html#a1e35dfd6ec760ebafd81fabcec2ad86b">node_</a></td></tr>
 <tr class="memdesc:a1e35dfd6ec760ebafd81fabcec2ad86b inherit pro_attribs_a00085"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00248.html" title="Root scene node, represents the whole scene.">Scene</a> node. <br/></td></tr>
 <tr class="separator:a1e35dfd6ec760ebafd81fabcec2ad86b inherit pro_attribs_a00085"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6192723cff1edc0cc7a96902e35f701 inherit pro_attribs_a00085"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6192723cff1edc0cc7a96902e35f701"></a>
