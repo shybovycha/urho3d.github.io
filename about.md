@@ -71,6 +71,7 @@ Though Urho3D already contains several useful features and implements a framewor
 - Chris Friesen
 - Alex Fuller
 - Mika Heinonen
+- Graham King
 - Jason Kinzer
 - Gunnar Kriik
 - Ali Kämäräinen
