@@ -2153,6 +2153,7 @@ Classes</h1>
 <li>bool OpenJoystick(unsigned index)</li>
 <li>void CloseJoystick(unsigned index)</li>
 <li>bool DetectJoysticks()</li>
+<li>void SetScreenKeyboardVisible(bool enable)</li>
 <li>bool GetKeyDown(int key) const</li>
 <li>bool GetKeyPress(int key) const</li>
 <li>bool GetMouseButtonDown(int button) const</li>
@@ -2171,6 +2172,8 @@ Classes</h1>
 <li>const <a class="el" href="a00288.html" title="String class.">String</a> GetJoystickName(unsigned index) const</li>
 <li>JoystickState* GetJoystick(unsigned index)</li>
 <li>bool GetToggleFullscreen() const</li>
+<li>bool GetScreenKeyboardSupport() const</li>
+<li>bool IsScreenKeyboardVisible() const</li>
 <li>bool IsMouseVisible() const</li>
 <li>bool HasFocus()</li>
 <li>bool IsMinimized() const</li>
@@ -2186,6 +2189,8 @@ Classes</h1>
 <li>unsigned numTouches (readonly)</li>
 <li>unsigned numJoysticks (readonly)</li>
 <li>bool toggleFullscreen (readonly)</li>
+<li>bool screenKeyboardSupport (readonly)</li>
+<li>bool screenKeyboardVisible</li>
 <li>bool mouseVisible</li>
 <li>bool focus (readonly)</li>
 <li>bool minimized (readonly)</li>
@@ -4557,6 +4562,7 @@ Classes</h1>
 <li>void SetMaxFontTextureSize(int size)</li>
 <li>void SetNonFocusedMouseWheel(bool nonFocusedMouseWheel)</li>
 <li>void SetUseSystemClipBoard(bool enable)</li>
+<li>void SetUseScreenKeyboard(bool enable)</li>
 <li>void SetUseMutableGlyphs(bool enable)</li>
 <li>void SetForceAutoHint(bool enable)</li>
 <li>UIElement* GetRoot() const</li>
@@ -4576,6 +4582,7 @@ Classes</h1>
 <li>int GetMaxFontTextureSize() const</li>
 <li>bool IsNonFocusedMouseWheel() const</li>
 <li>bool GetUseSystemClipBoard() const</li>
+<li>bool GetUseScreenKeyboard() const</li>
 <li>bool GetUseMutableGlyphs() const</li>
 <li>bool GetForceAutoHint() const</li>
 <li>bool HasModalElement() const</li>
@@ -4597,6 +4604,7 @@ Classes</h1>
 <li>int maxFontTextureSize</li>
 <li>bool nonFocusedMouseWheel</li>
 <li>bool useSystemClipBoard</li>
+<li>bool useScreenKeyboard</li>
 <li>bool useMutableGlyphs</li>
 <li>bool forceAutoHint</li>
 <li>bool modalElement (readonly)</li>
