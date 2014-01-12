@@ -82,6 +82,10 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 pugi::xml_document *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00330.html#a3475dcae5a6d39af4330d7bb73f73b87">GetDocument</a> () const </td></tr>
 <tr class="memdesc:a3475dcae5a6d39af4330d7bb73f73b87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the pugixml document. <br/></td></tr>
 <tr class="separator:a3475dcae5a6d39af4330d7bb73f73b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbf90f511e6229965fef7a10d3dc325e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adbf90f511e6229965fef7a10d3dc325e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00330.html#adbf90f511e6229965fef7a10d3dc325e">Patch</a> (<a class="el" href="a00330.html">XMLFile</a> *patchFile)</td></tr>
+<tr class="memdesc:adbf90f511e6229965fef7a10d3dc325e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Patch the <a class="el" href="a00330.html" title="XML document resource.">XMLFile</a> with another <a class="el" href="a00330.html" title="XML document resource.">XMLFile</a>. Based on RFC 5261. <br/></td></tr>
+<tr class="separator:adbf90f511e6229965fef7a10d3dc325e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_a00242"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00242')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="a00242.html">Urho3D::Resource</a></td></tr>
 <tr class="memitem:ae3e1545370dec17a283705989a1cc682 inherit pub_methods_a00242"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3e1545370dec17a283705989a1cc682"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00242.html#ae3e1545370dec17a283705989a1cc682">Resource</a> (<a class="el" href="a00095.html">Context</a> *context)</td></tr>
@@ -254,6 +258,30 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a3937f23d753a80df2602de2015708169"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3937f23d753a80df2602de2015708169"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>OBJECT</b> (<a class="el" href="a00330.html">XMLFile</a>)</td></tr>
 <tr class="separator:a3937f23d753a80df2602de2015708169"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87ae29ec295ecfd08d34ce3b5cd24136"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a87ae29ec295ecfd08d34ce3b5cd24136"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00330.html#a87ae29ec295ecfd08d34ce3b5cd24136">PatchAdd</a> (const pugi::xml_node &amp;patch, pugi::xpath_node &amp;original)</td></tr>
+<tr class="memdesc:a87ae29ec295ecfd08d34ce3b5cd24136"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an node in the Patch. <br/></td></tr>
+<tr class="separator:a87ae29ec295ecfd08d34ce3b5cd24136"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea708b6b4b13b0b9f28c8f3cc22f5c2d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea708b6b4b13b0b9f28c8f3cc22f5c2d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00330.html#aea708b6b4b13b0b9f28c8f3cc22f5c2d">PatchReplace</a> (const pugi::xml_node &amp;patch, pugi::xpath_node &amp;original)</td></tr>
+<tr class="memdesc:aea708b6b4b13b0b9f28c8f3cc22f5c2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace a node or attribute in the Patch. <br/></td></tr>
+<tr class="separator:aea708b6b4b13b0b9f28c8f3cc22f5c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdb362afc268a636475fded3072e3f3c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afdb362afc268a636475fded3072e3f3c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00330.html#afdb362afc268a636475fded3072e3f3c">PatchRemove</a> (const pugi::xpath_node &amp;original)</td></tr>
+<tr class="memdesc:afdb362afc268a636475fded3072e3f3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a node or attribute in the Patch. <br/></td></tr>
+<tr class="separator:afdb362afc268a636475fded3072e3f3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a087f03880a3f663ee50ea9bee4e902e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a087f03880a3f663ee50ea9bee4e902e4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00330.html#a087f03880a3f663ee50ea9bee4e902e4">AddNode</a> (const pugi::xml_node &amp;patch, pugi::xpath_node &amp;original)</td></tr>
+<tr class="memdesc:a087f03880a3f663ee50ea9bee4e902e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a node in the Patch. <br/></td></tr>
+<tr class="separator:a087f03880a3f663ee50ea9bee4e902e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2141024a4cfc522947a3586db84290ee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2141024a4cfc522947a3586db84290ee"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00330.html#a2141024a4cfc522947a3586db84290ee">AddAttribute</a> (const pugi::xml_node &amp;patch, pugi::xpath_node &amp;original)</td></tr>
+<tr class="memdesc:a2141024a4cfc522947a3586db84290ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an attribute in the Patch. <br/></td></tr>
+<tr class="separator:a2141024a4cfc522947a3586db84290ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd4c6601d8eb28f716c17af2a435e3eb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd4c6601d8eb28f716c17af2a435e3eb"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00330.html#afd4c6601d8eb28f716c17af2a435e3eb">CombineText</a> (const pugi::xml_node &amp;patch, pugi::xml_node original, bool prepend)</td></tr>
+<tr class="memdesc:afd4c6601d8eb28f716c17af2a435e3eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Combine two text nodes. <br/></td></tr>
+<tr class="separator:afd4c6601d8eb28f716c17af2a435e3eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
