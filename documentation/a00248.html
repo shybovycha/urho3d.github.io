@@ -64,7 +64,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a
 <tr class="separator:a269e84003cba57f8d75e40ace4e8e053"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3676edea862fd8ecd65002295c0ba0a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3676edea862fd8ecd65002295c0ba0a4"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00248.html#a3676edea862fd8ecd65002295c0ba0a4">Load</a> (<a class="el" href="a00113.html">Deserializer</a> &amp;source, bool setInstanceDefault=false)</td></tr>
-<tr class="memdesc:a3676edea862fd8ecd65002295c0ba0a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load from binary data. Return true if successful. <br/></td></tr>
+<tr class="memdesc:a3676edea862fd8ecd65002295c0ba0a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load from binary data. Removes all existing child nodes and components first. Return true if successful. <br/></td></tr>
 <tr class="separator:a3676edea862fd8ecd65002295c0ba0a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63343dbb7daf9895a684ce0f0a7d771a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a63343dbb7daf9895a684ce0f0a7d771a"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00248.html#a63343dbb7daf9895a684ce0f0a7d771a">Save</a> (<a class="el" href="a00261.html">Serializer</a> &amp;dest) const </td></tr>
@@ -72,7 +72,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="separator:a63343dbb7daf9895a684ce0f0a7d771a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6bbfff8c7c8268bd000e401a1aae784"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa6bbfff8c7c8268bd000e401a1aae784"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00248.html#aa6bbfff8c7c8268bd000e401a1aae784">LoadXML</a> (const <a class="el" href="a00329.html">XMLElement</a> &amp;source, bool setInstanceDefault=false)</td></tr>
-<tr class="memdesc:aa6bbfff8c7c8268bd000e401a1aae784"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load from XML data. Return true if successful. <br/></td></tr>
+<tr class="memdesc:aa6bbfff8c7c8268bd000e401a1aae784"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load from XML data. Removes all existing child nodes and components first. Return true if successful. <br/></td></tr>
 <tr class="separator:aa6bbfff8c7c8268bd000e401a1aae784"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a437d35bcd046ff58a4c43be951265902"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a437d35bcd046ff58a4c43be951265902"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00248.html#a437d35bcd046ff58a4c43be951265902">AddReplicationState</a> (<a class="el" href="a00199.html">NodeReplicationState</a> *state)</td></tr>
@@ -168,7 +168,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a002
 <tr class="separator:a78f8347766fb848bf2d5f1348b6714ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb2996951ef1c7e92e5b4745ec198617"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb2996951ef1c7e92e5b4745ec198617"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00248.html#abb2996951ef1c7e92e5b4745ec198617">IsAsyncLoading</a> () const </td></tr>
-<tr class="memdesc:abb2996951ef1c7e92e5b4745ec198617"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return asynchronous loading flag. <br/></td></tr>
+<tr class="memdesc:abb2996951ef1c7e92e5b4745ec198617"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether an asynchronous loading operation is in progress. <br/></td></tr>
 <tr class="separator:abb2996951ef1c7e92e5b4745ec198617"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a752062cb0edf73acda03e4848a9111"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a752062cb0edf73acda03e4848a9111"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00248.html#a4a752062cb0edf73acda03e4848a9111">GetAsyncProgress</a> () const </td></tr>
@@ -1022,9 +1022,8 @@ Private Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00248.html#ad3307d7a01b61f9b6ded6cff9a44f857">HandleUpdate</a> (<a class="el" href="a00289.html">StringHash</a> eventType, <a class="el" href="a00141.html">VariantMap</a> &amp;eventData)</td></tr>
 <tr class="memdesc:ad3307d7a01b61f9b6ded6cff9a44f857"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle the logic update event to update the scene, if active. <br/></td></tr>
 <tr class="separator:ad3307d7a01b61f9b6ded6cff9a44f857"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a625934c3af5fb17f25a09767d4c0cc6b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a625934c3af5fb17f25a09767d4c0cc6b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00248.html#a625934c3af5fb17f25a09767d4c0cc6b">UpdateAsyncLoading</a> ()</td></tr>
-<tr class="memdesc:a625934c3af5fb17f25a09767d4c0cc6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update asynchronous loading. <br/></td></tr>
+<tr class="memitem:a625934c3af5fb17f25a09767d4c0cc6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00248.html#a625934c3af5fb17f25a09767d4c0cc6b">UpdateAsyncLoading</a> ()</td></tr>
+<tr class="memdesc:a625934c3af5fb17f25a09767d4c0cc6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update asynchronous loading.  <a href="#a625934c3af5fb17f25a09767d4c0cc6b">More...</a><br/></td></tr>
 <tr class="separator:a625934c3af5fb17f25a09767d4c0cc6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a019a062421bf4e2d4f5f213245008f28"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a019a062421bf4e2d4f5f213245008f28"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00248.html#a019a062421bf4e2d4f5f213245008f28">FinishAsyncLoading</a> ()</td></tr>
@@ -1152,7 +1151,50 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Root scene node, represents the whole scene. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a625934c3af5fb17f25a09767d4c0cc6b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::Scene::UpdateAsyncLoading </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update asynchronous loading. </p>
+<dl class="todo"><dt><b><a class="el" href="a00708.html#_todo000030">Todo:</a></b></dt><dd>Works poorly in scenes where one root-level child node contains all content </dd></dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a00248_a625934c3af5fb17f25a09767d4c0cc6b_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a00248_a625934c3af5fb17f25a09767d4c0cc6b_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/travis/build/urho3d/Urho3D/Source/Engine/Scene/Scene.h</li>
 <li>/home/travis/build/urho3d/Urho3D/Source/Engine/Scene/Scene.cpp</li>
 </ul>

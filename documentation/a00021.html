@@ -65,7 +65,7 @@ Material textures</h1>
 Techniques and passes</h1>
 <p>A technique definition looks like this:</p>
 <div class="fragment"><div class="line">&lt;technique&gt;</div>
-<div class="line">    &lt;pass name=<span class="stringliteral">&quot;base|litbase|light|alpha|litalpha|prealpha|postalpha|prepass|material|deferred|depth|shadow&quot;</span> vs=<span class="stringliteral">&quot;VertexShaderName&quot;</span> ps=<span class="stringliteral">&quot;PixelShaderName&quot;</span></div>
+<div class="line">    &lt;pass name=<span class="stringliteral">&quot;base|litbase|light|alpha|litalpha|postopaque|refract|postalpha|prepass|material|deferred|depth|shadow&quot;</span> vs=<span class="stringliteral">&quot;VertexShaderName&quot;</span> ps=<span class="stringliteral">&quot;PixelShaderName&quot;</span></div>
 <div class="line">        lighting=<span class="stringliteral">&quot;unlit|pervertex|perpixel&quot;</span> alphatest=<span class="stringliteral">&quot;true|false&quot;</span> blend=<span class="stringliteral">&quot;replace|add|multiply|alpha|addalpha|premulalpha|invdestalpha&quot;</span></div>
 <div class="line">        depthtest=<span class="stringliteral">&quot;always|equal|less|lessequal|greater|greaterequal&quot;</span> depthwrite=<span class="stringliteral">&quot;true|false&quot;</span> alphamask=<span class="stringliteral">&quot;true|false&quot;</span> /&gt;</div>
 <div class="line">    &lt;pass ... /&gt;</div>
@@ -78,7 +78,8 @@ Techniques and passes</h1>
 <li>light: Renders one per-pixel light's contribution additively for an opaque object.</li>
 <li>alpha: Renders ambient light, per-vertex lights and fog for a transparent object.</li>
 <li>litalpha: Renders one per-pixel light's contribution additively for a transparent object</li>
-<li>prealpha: Custom rendering pass after opaque geometry. Can be used for example to render the skybox.</li>
+<li>postopaque: Custom rendering pass after opaque geometry. Can be used to render the skybox.</li>
+<li>refract: Custom rendering pass after postopaque pass. Can sample the viewport texture from the environment texture unit to render refractive objects.</li>
 <li>postalpha: Custom rendering pass after transparent geometry.</li>
 <li>prepass: Light pre-pass only - renders normals, specular power and depth to the G-buffer.</li>
 <li>material: Light pre-pass only - renders opaque geometry final color by combining ambient light, per-vertex lights and per-pixel light accumulation.</li>
@@ -90,5 +91,6 @@ Techniques and passes</h1>
 <p>By default draw calls within passes are sorted by render state, but transparent base and light passes, as well as the postalpha pass, are sorted by distance back to front.</p>
 <p>Note that the technique does not need to enumerate shaders used for different geometry types (non-skinned, skinned, instanced, billboard) and different per-vertex and per-pixel light combinations. Instead specific hardcoded shader variations are assumed to exist. See <a class="el" href="a00022.html">Shaders</a> for details.</p>
 <p>The optional "litbase" pass reduces draw call count by combining ambient lighting with the first per-pixel light affecting an object. However, it has intentional limitations to not require too many shader permutations: there must be no vertex lights affecting the object, and the ambient lighting can not have a gradient. In case of excessive overdraw, it is possibly better not to define it, but instead allow the base pass (which is computationally very lightweight) to run first, initializing the Z buffer for later passes.</p>
-<p>"Alphamask" is not an actual rendering state, but a hint which tells that the pixel shader will use discard based on alpha. Because this may interfere with the early-Z culling, materials without the alpha masking hint will be drawn first. </p>
+<p>"Alphamask" is not an actual rendering state, but a hint which tells that the pixel shader will use discard based on alpha. Because this may interfere with the early-Z culling, materials without the alpha masking hint will be drawn first.</p>
+<p>The refract pass requires pingponging the scene rendertarget to a texture, but this will not be performed if there is no refractive geometry to render, so there is no unnecessary cost to it. </p>
 </div></div><!-- contents -->
