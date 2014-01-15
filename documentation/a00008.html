@@ -2495,6 +2495,8 @@ Classes</h1>
 <li>void Define(const Vector3&amp; v0, const Vector3&amp; v1, const Vector3&amp; v2)</li>
 <li>void Define(const Vector3&amp; normal, const Vector3&amp; point)</li>
 <li>float Distance(const Vector3&amp; point) const</li>
+<li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> Reflect(const Vector3&amp; direction) const</li>
+<li><a class="el" href="a00178.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> ReflectionMatrix() const</li>
 </ul>
 <p>Properties:</p>
 <ul>
@@ -3550,7 +3552,7 @@ Classes</h1>
 <li>Component* GetComponent(ShortStringHash type) const</li>
 <li>Component* GetComponent(const String type) const</li>
 </ul>
-<h3><a class="el" href="a00196.html" title="Scene node that may contain components and child nodes.">Node</a> : <a class="el" href="a00260.html" title="Base class for objects with automatic serialization through attributes.">Serializable</a></h3>
+<h3><a class="el" href="a00195.html" title="Scene node that may contain components and child nodes.">Node</a> : <a class="el" href="a00260.html" title="Base class for objects with automatic serialization through attributes.">Serializable</a></h3>
 <p>Methods:</p>
 <ul>
 <li>Node(Context* context)</li>
@@ -3653,7 +3655,7 @@ Classes</h1>
 <li><em><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> WorldToLocal(const Vector4&amp; vector) const</em></li>
 <li><em>bool IsDirty() const</em></li>
 <li><em>unsigned GetNumChildren(bool recursive = false) const</em></li>
-<li><em><a class="el" href="a00196.html" title="Scene node that may contain components and child nodes.">Node</a></em> GetChild(unsigned index) const</li>
+<li><em><a class="el" href="a00195.html" title="Scene node that may contain components and child nodes.">Node</a></em> GetChild(unsigned index) const</li>
 <li>Node* GetChild(const <a class="el" href="a00288.html" title="String class.">String</a> name, bool recursive = false) const</li>
 <li>Node* GetChild(<a class="el" href="a00289.html" title="32-bit hash value for a string.">StringHash</a> nameHash, bool recursive = false) const</li>
 <li>unsigned GetNumComponents() const</li>
@@ -3694,7 +3696,7 @@ Classes</h1>
 <li>unsigned numComponents (readonly)</li>
 <li>unsigned numNetworkComponents (readonly)</li>
 </ul>
-<h3><a class="el" href="a00248.html" title="Root scene node, represents the whole scene.">Scene</a> : <a class="el" href="a00196.html" title="Scene node that may contain components and child nodes.">Node</a></h3>
+<h3><a class="el" href="a00248.html" title="Root scene node, represents the whole scene.">Scene</a> : <a class="el" href="a00195.html" title="Scene node that may contain components and child nodes.">Node</a></h3>
 <p>Methods:</p>
 <ul>
 <li>Scene(Context* context)</li>
