@@ -417,6 +417,10 @@ Classes</h1>
 <li>int y</li>
 </ul>
 <h3><a class="el" href="a00152.html" title="Two-dimensional bounding rectangle with integer values.">IntRect</a></h3>
+<p>Methods:</p>
+<ul>
+<li>Intersection IsInside(const IntVector2&amp;) const</li>
+</ul>
 <p>Properties:</p>
 <ul>
 <li>int[] data (readonly)</li>
@@ -611,6 +615,7 @@ Classes</h1>
 <li>void Clip(const Rect&amp;)</li>
 <li>void Clear()</li>
 <li>bool Equals(const Rect&amp;) const</li>
+<li>Intersection IsInside(const Vector2&amp;) const</li>
 <li><a class="el" href="a00315.html" title="Four-dimensional vector.">Vector4</a> ToVector4() const</li>
 </ul>
 <p>Properties:</p>
@@ -732,8 +737,10 @@ Classes</h1>
 <ul>
 <li>void Define(const Vector3&amp;, const Vector3&amp;, const Vector3&amp;)</li>
 <li>void Define(const Vector3&amp;, const Vector3&amp;)</li>
+<li>void Define(const Vector4&amp;)</li>
 <li>float Distance(const Vector3&amp;) const</li>
 <li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> Reflect(const Vector3&amp;) const</li>
+<li><a class="el" href="a00315.html" title="Four-dimensional vector.">Vector4</a> ToVector4() const</li>
 </ul>
 <p>Properties:</p>
 <ul>
@@ -1914,6 +1921,8 @@ Classes</h1>
 <li>bool orthographic</li>
 <li>bool autoAspectRatio</li>
 <li><a class="el" href="a00313.html" title="Two-dimensional vector.">Vector2</a> projectionOffset</li>
+<li>bool useReflection</li>
+<li><a class="el" href="a00219.html" title="Surface in three-dimensional space.">Plane</a> reflectionPlane</li>
 <li>uint viewMask</li>
 <li>uint viewOverrideFlags</li>
 <li>FillMode fillMode</li>
@@ -1925,6 +1934,7 @@ Classes</h1>
 <li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> forwardVector (readonly)</li>
 <li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> rightVector (readonly)</li>
 <li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> upVector (readonly)</li>
+<li><a class="el" href="a00178.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> effectiveWorldTransform (readonly)</li>
 </ul>
 <h3><a class="el" href="a00240.html" title="Rendertarget definition.">RenderTargetInfo</a></h3>
 <p>Properties:</p>

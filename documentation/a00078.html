@@ -30,7 +30,7 @@ title: Documentation
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="a00933.html">List of all members</a>  </div>
+<a href="a00934.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Urho3D::Camera Class Reference</div>  </div>
 </div><!--header-->
@@ -43,13 +43,13 @@ title: Documentation
 <div class="dynheader">
 Inheritance diagram for Urho3D::Camera:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00934.svg" width="166" height="350"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00935.svg" width="166" height="350"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for Urho3D::Camera:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a00935.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a00936.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -119,6 +119,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a000
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00078.html#a94aba04d500a85ec13dc09c36dde9079">SetProjectionOffset</a> (const <a class="el" href="a00313.html">Vector2</a> &amp;offset)</td></tr>
 <tr class="memdesc:a94aba04d500a85ec13dc09c36dde9079"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set projection offset. It needs to be calculated as (offset in pixels) / (viewport dimensions.) <br/></td></tr>
 <tr class="separator:a94aba04d500a85ec13dc09c36dde9079"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb499e25a5a78309ac2350fec2b67612"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb499e25a5a78309ac2350fec2b67612"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00078.html#abb499e25a5a78309ac2350fec2b67612">SetUseReflection</a> (bool enable)</td></tr>
+<tr class="memdesc:abb499e25a5a78309ac2350fec2b67612"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set reflection mode. The reflection plane is specified in world space. <br/></td></tr>
+<tr class="separator:abb499e25a5a78309ac2350fec2b67612"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85cdb440bb580692e3ae6579bf3cb3f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85cdb440bb580692e3ae6579bf3cb3f8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00078.html#a85cdb440bb580692e3ae6579bf3cb3f8">SetReflectionPlane</a> (const <a class="el" href="a00219.html">Plane</a> &amp;reflectionPlane)</td></tr>
+<tr class="memdesc:a85cdb440bb580692e3ae6579bf3cb3f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set reflection plane in world space for reflection mode. <br/></td></tr>
+<tr class="separator:a85cdb440bb580692e3ae6579bf3cb3f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45cb0bc0d42e4ad5a0ef357951f58d91"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45cb0bc0d42e4ad5a0ef357951f58d91"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00078.html#a45cb0bc0d42e4ad5a0ef357951f58d91">SetFlipVertical</a> (bool enable)</td></tr>
 <tr class="memdesc:a45cb0bc0d42e4ad5a0ef357951f58d91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set vertical flipping mode. Called internally by <a class="el" href="a00320.html" title="3D rendering view. Includes the main view(s) and any auxiliary views, but not shadow cameras...">View</a> to resolve OpenGL / Direct3D9 rendertarget sampling differences. <br/></td></tr>
@@ -233,10 +241,22 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00
 const <a class="el" href="a00313.html">Vector2</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00078.html#ad99aa4e04e38db9876aed66706b36b13">GetProjectionOffset</a> () const </td></tr>
 <tr class="memdesc:ad99aa4e04e38db9876aed66706b36b13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return projection offset. <br/></td></tr>
 <tr class="separator:ad99aa4e04e38db9876aed66706b36b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42c3be4eb72a9e4b36d58a970606ea5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42c3be4eb72a9e4b36d58a970606ea5f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00078.html#a42c3be4eb72a9e4b36d58a970606ea5f">GetUseReflection</a> () const </td></tr>
+<tr class="memdesc:a42c3be4eb72a9e4b36d58a970606ea5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether is using reflection. <br/></td></tr>
+<tr class="separator:a42c3be4eb72a9e4b36d58a970606ea5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac849624cae0348f19e6e3cd12c7432b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac849624cae0348f19e6e3cd12c7432b8"></a>
+const <a class="el" href="a00219.html">Plane</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00078.html#ac849624cae0348f19e6e3cd12c7432b8">GetReflectionPlane</a> () const </td></tr>
+<tr class="memdesc:ac849624cae0348f19e6e3cd12c7432b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the reflection plane. <br/></td></tr>
+<tr class="separator:ac849624cae0348f19e6e3cd12c7432b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c8046a13b859aacdb8afe1f9c29a91c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2c8046a13b859aacdb8afe1f9c29a91c"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00078.html#a2c8046a13b859aacdb8afe1f9c29a91c">GetFlipVertical</a> () const </td></tr>
 <tr class="memdesc:a2c8046a13b859aacdb8afe1f9c29a91c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return vertical flipping mode. <br/></td></tr>
 <tr class="separator:a2c8046a13b859aacdb8afe1f9c29a91c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a461af564a76f6018d05a2b43fd74f7ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a461af564a76f6018d05a2b43fd74f7ab"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00078.html#a461af564a76f6018d05a2b43fd74f7ab">GetReverseCulling</a> () const </td></tr>
+<tr class="memdesc:a461af564a76f6018d05a2b43fd74f7ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether to reverse culling; affected by vertical flipping and reflection. <br/></td></tr>
+<tr class="separator:a461af564a76f6018d05a2b43fd74f7ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a104321fda189ef48290d42a032362c0b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a104321fda189ef48290d42a032362c0b"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00078.html#a104321fda189ef48290d42a032362c0b">GetDistance</a> (const <a class="el" href="a00314.html">Vector3</a> &amp;worldPos) const </td></tr>
 <tr class="memdesc:a104321fda189ef48290d42a032362c0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return distance to position. In orthographic mode uses only Z coordinate. <br/></td></tr>
@@ -249,10 +269,22 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00078.html#a47e0176f632d8ae7931aeedfa5e0511d">GetLodDistance</a> (float distance, float scale, float bias) const </td></tr>
 <tr class="memdesc:a47e0176f632d8ae7931aeedfa5e0511d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a scene node's LOD scaled distance. <br/></td></tr>
 <tr class="separator:a47e0176f632d8ae7931aeedfa5e0511d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea08392686708a220a06f4b32a64d610"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea08392686708a220a06f4b32a64d610"></a>
+<a class="el" href="a00178.html">Matrix3x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00078.html#aea08392686708a220a06f4b32a64d610">GetEffectiveWorldTransform</a> () const </td></tr>
+<tr class="memdesc:aea08392686708a220a06f4b32a64d610"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get effective world transform for matrix and frustum calculations including reflection but excluding node scaling. <br/></td></tr>
+<tr class="separator:aea08392686708a220a06f4b32a64d610"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa342ca178488ff7b172b37d57d88ce8f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa342ca178488ff7b172b37d57d88ce8f"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00078.html#aa342ca178488ff7b172b37d57d88ce8f">IsProjectionValid</a> () const </td></tr>
 <tr class="memdesc:aa342ca178488ff7b172b37d57d88ce8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return if projection parameters are valid for rendering and raycasting. <br/></td></tr>
 <tr class="separator:aa342ca178488ff7b172b37d57d88ce8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad61dd52d7325a16e2131be0955c69eb4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad61dd52d7325a16e2131be0955c69eb4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00078.html#ad61dd52d7325a16e2131be0955c69eb4">SetReflectionPlaneAttr</a> (<a class="el" href="a00315.html">Vector4</a> value)</td></tr>
+<tr class="memdesc:ad61dd52d7325a16e2131be0955c69eb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set reflection plane attribute. <br/></td></tr>
+<tr class="separator:ad61dd52d7325a16e2131be0955c69eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad510668d842f36020fb1781291b52663"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad510668d842f36020fb1781291b52663"></a>
+<a class="el" href="a00315.html">Vector4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00078.html#ad510668d842f36020fb1781291b52663">GetReflectionPlaneAttr</a> () const </td></tr>
+<tr class="memdesc:ad510668d842f36020fb1781291b52663"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return reflection plane attribute. <br/></td></tr>
+<tr class="separator:ad510668d842f36020fb1781291b52663"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_a00085"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00085')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="a00085.html">Urho3D::Component</a></td></tr>
 <tr class="memitem:a8fcb1334e846b73e7825777e0ffbd2d5 inherit pub_methods_a00085"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8fcb1334e846b73e7825777e0ffbd2d5"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00085.html#a8fcb1334e846b73e7825777e0ffbd2d5">Component</a> (<a class="el" href="a00095.html">Context</a> *context)</td></tr>
@@ -697,6 +729,14 @@ FillMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <a class="el" href="a00313.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00078.html#a3195888349d72bf137f8af0926f7ebe8">projectionOffset_</a></td></tr>
 <tr class="memdesc:a3195888349d72bf137f8af0926f7ebe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Projection offset. <br/></td></tr>
 <tr class="separator:a3195888349d72bf137f8af0926f7ebe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aace08dbcdaa4371ef00a0e3793d01bc3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aace08dbcdaa4371ef00a0e3793d01bc3"></a>
+<a class="el" href="a00219.html">Plane</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00078.html#aace08dbcdaa4371ef00a0e3793d01bc3">reflectionPlane_</a></td></tr>
+<tr class="memdesc:aace08dbcdaa4371ef00a0e3793d01bc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reflection plane. <br/></td></tr>
+<tr class="separator:aace08dbcdaa4371ef00a0e3793d01bc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accf4f1b1fd18058fa64fed516963c116"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="accf4f1b1fd18058fa64fed516963c116"></a>
+<a class="el" href="a00178.html">Matrix3x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00078.html#accf4f1b1fd18058fa64fed516963c116">reflectionMatrix_</a></td></tr>
+<tr class="memdesc:accf4f1b1fd18058fa64fed516963c116"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reflection matrix calculated from the plane. <br/></td></tr>
+<tr class="separator:accf4f1b1fd18058fa64fed516963c116"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc89ffbdc54f452c257bfc710d49b4e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc89ffbdc54f452c257bfc710d49b4e4"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00078.html#adc89ffbdc54f452c257bfc710d49b4e4">autoAspectRatio_</a></td></tr>
 <tr class="memdesc:adc89ffbdc54f452c257bfc710d49b4e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Auto aspect ratio flag. <br/></td></tr>
@@ -705,6 +745,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a000
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00078.html#aba03af3574d98e875aed7e97deffedd8">flipVertical_</a></td></tr>
 <tr class="memdesc:aba03af3574d98e875aed7e97deffedd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flip vertical flag. <br/></td></tr>
 <tr class="separator:aba03af3574d98e875aed7e97deffedd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23ae06b61f79865b81f33b43402db68f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23ae06b61f79865b81f33b43402db68f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00078.html#a23ae06b61f79865b81f33b43402db68f">useReflection_</a></td></tr>
+<tr class="memdesc:a23ae06b61f79865b81f33b43402db68f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reflection mode enabled flag. <br/></td></tr>
+<tr class="separator:a23ae06b61f79865b81f33b43402db68f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>

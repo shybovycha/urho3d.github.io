@@ -794,6 +794,8 @@ Classes</h1>
 <li>void SetOrthographic(bool enable)</li>
 <li>void SetAutoAspectRatio(bool enable)</li>
 <li>void SetProjectionOffset(const Vector2&amp; offset)</li>
+<li>void SetUseReflection(bool enable)</li>
+<li>void SetReflectionPlane(const Plane&amp; reflectionPlane)</li>
 <li>float GetFarClip() const</li>
 <li>float GetNearClip() const</li>
 <li>float GetFov() const</li>
@@ -808,7 +810,6 @@ Classes</h1>
 <li>bool GetAutoAspectRatio() const</li>
 <li>const <a class="el" href="a00132.html" title="Convex constructed of 6 planes.">Frustum</a>&amp; GetFrustum() const</li>
 <li>const <a class="el" href="a00179.html" title="4x4 matrix for arbitrary linear transforms including projection.">Matrix4</a>&amp; GetProjection() const</li>
-<li><a class="el" href="a00179.html" title="4x4 matrix for arbitrary linear transforms including projection.">Matrix4</a> GetProjection(bool apiSpecific) const</li>
 <li>const <a class="el" href="a00178.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a>&amp; GetView() const</li>
 <li>void GetFrustumSize(Vector3&amp; near, Vector3&amp; far) const</li>
 <li>float GetHalfViewSize() const</li>
@@ -822,10 +823,13 @@ Classes</h1>
 <li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> GetRightVector() const</li>
 <li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> GetUpVector() const</li>
 <li>const <a class="el" href="a00313.html" title="Two-dimensional vector.">Vector2</a>&amp; GetProjectionOffset() const</li>
+<li>bool GetUseReflection() const</li>
+<li>const <a class="el" href="a00219.html" title="Surface in three-dimensional space.">Plane</a>&amp; GetReflectionPlane() const</li>
 <li>float GetDistance(const Vector3&amp; worldPos) const</li>
 <li>float GetDistanceSquared(const Vector3&amp; worldPos) const</li>
 <li>float GetLodDistance(float distance, float scale, float bias) const</li>
 <li>bool IsProjectionValid() const</li>
+<li><a class="el" href="a00178.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> GetEffectiveWorldTransform() const</li>
 </ul>
 <p>Properties:</p>
 <ul>
@@ -850,7 +854,10 @@ Classes</h1>
 <li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> rightVector (readonly)</li>
 <li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> upVector (readonly)</li>
 <li><a class="el" href="a00313.html" title="Two-dimensional vector.">Vector2</a>&amp; projectionOffset</li>
+<li>bool useReflection</li>
+<li><a class="el" href="a00219.html" title="Surface in three-dimensional space.">Plane</a>&amp; reflectionPlane</li>
 <li>bool projectionValid (readonly)</li>
+<li><a class="el" href="a00178.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> effectiveWorldTransform (readonly)</li>
 </ul>
 <h3><a class="el" href="a00106.html" title="Debug geometry rendering component. Should be added only to the root scene node.">DebugRenderer</a> : <a class="el" href="a00085.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h3>
 <p>Methods:</p>
@@ -2491,18 +2498,22 @@ Classes</h1>
 <li>Plane(const Plane&amp; plane)</li>
 <li>Plane(const Vector3&amp; v0, const Vector3&amp; v1, const Vector3&amp; v2)</li>
 <li>Plane(const Vector3&amp; normal, const Vector3&amp; point)</li>
+<li>Plane(const Vector4&amp; plane)</li>
 <li>~Plane()</li>
 <li>void Define(const Vector3&amp; v0, const Vector3&amp; v1, const Vector3&amp; v2)</li>
 <li>void Define(const Vector3&amp; normal, const Vector3&amp; point)</li>
+<li>void Define(const Vector4&amp; plane)</li>
 <li>float Distance(const Vector3&amp; point) const</li>
 <li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> Reflect(const Vector3&amp; direction) const</li>
 <li><a class="el" href="a00178.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> ReflectionMatrix() const</li>
+<li><a class="el" href="a00315.html" title="Four-dimensional vector.">Vector4</a> ToVector4() const</li>
 </ul>
 <p>Properties:</p>
 <ul>
 <li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> normal</li>
 <li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> absNormal</li>
 <li>float intercept</li>
+<li>static const <a class="el" href="a00219.html" title="Surface in three-dimensional space.">Plane</a> UP</li>
 </ul>
 <h3><a class="el" href="a00222.html" title="A convex volume built from polygon faces.">Polyhedron</a></h3>
 <p>Methods:</p>
@@ -2625,6 +2636,7 @@ Classes</h1>
 <li><a class="el" href="a00313.html" title="Two-dimensional vector.">Vector2</a> Size() const</li>
 <li><a class="el" href="a00313.html" title="Two-dimensional vector.">Vector2</a> HalfSize() const</li>
 <li>bool Equals(const Rect&amp; rhs) const</li>
+<li>Intersection IsInside(const Vector2&amp; point) const</li>
 <li><a class="el" href="a00315.html" title="Four-dimensional vector.">Vector4</a> ToVector4() const</li>
 <li><a class="el" href="a00288.html" title="String class.">String</a> ToString() const</li>
 </ul>
@@ -2649,6 +2661,7 @@ Classes</h1>
 <li><a class="el" href="a00153.html" title="Two-dimensional vector with integer values.">IntVector2</a> Size() const</li>
 <li>int Width() const</li>
 <li>int Height() const</li>
+<li>Intersection IsInside(const IntVector2&amp; point) const</li>
 </ul>
 <p>Properties:</p>
 <ul>
