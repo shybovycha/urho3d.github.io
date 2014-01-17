@@ -585,6 +585,7 @@ Classes</h1>
 <li>void SetScale(float)</li>
 <li>void SetTranslation(const Vector3&amp;)</li>
 <li><a class="el" href="a00177.html" title="3x3 matrix for rotation and scaling.">Matrix3</a> ToMatrix3() const</li>
+<li><a class="el" href="a00179.html" title="4x4 matrix for arbitrary linear transforms including projection.">Matrix4</a> ToMatrix4() const</li>
 <li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> Translation() const</li>
 <li>void Decompose(Vector3&amp;, Quaternion&amp;, Vector3&amp;) const</li>
 <li><a class="el" href="a00178.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> Inverse() const</li>
@@ -738,8 +739,14 @@ Classes</h1>
 <li>void Define(const Vector3&amp;, const Vector3&amp;, const Vector3&amp;)</li>
 <li>void Define(const Vector3&amp;, const Vector3&amp;)</li>
 <li>void Define(const Vector4&amp;)</li>
+<li>void Transform(const Matrix3&amp;)</li>
+<li>void Transform(const Matrix3x4&amp;)</li>
+<li>void Transform(const Matrix4&amp;)</li>
 <li>float Distance(const Vector3&amp;) const</li>
 <li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> Reflect(const Vector3&amp;) const</li>
+<li><a class="el" href="a00219.html" title="Surface in three-dimensional space.">Plane</a> Transformed(const Matrix3&amp;) const</li>
+<li><a class="el" href="a00219.html" title="Surface in three-dimensional space.">Plane</a> Transformed(const Matrix3x4&amp;) const</li>
+<li><a class="el" href="a00219.html" title="Surface in three-dimensional space.">Plane</a> Transformed(const Matrix4&amp;) const</li>
 <li><a class="el" href="a00315.html" title="Four-dimensional vector.">Vector4</a> ToVector4() const</li>
 </ul>
 <p>Properties:</p>
@@ -1923,6 +1930,8 @@ Classes</h1>
 <li><a class="el" href="a00313.html" title="Two-dimensional vector.">Vector2</a> projectionOffset</li>
 <li>bool useReflection</li>
 <li><a class="el" href="a00219.html" title="Surface in three-dimensional space.">Plane</a> reflectionPlane</li>
+<li>bool useClipping</li>
+<li><a class="el" href="a00219.html" title="Surface in three-dimensional space.">Plane</a> clipPlane</li>
 <li>uint viewMask</li>
 <li>uint viewOverrideFlags</li>
 <li>FillMode fillMode</li>
@@ -6931,6 +6940,7 @@ Global functions</h1>
 <li>float Atan(float)</li>
 <li>float Atan2(float, float)</li>
 <li>float Abs(float)</li>
+<li>float Sign(float)</li>
 <li>float Sqrt(float)</li>
 <li>float Pow(float, float)</li>
 <li>float Min(float, float)</li>

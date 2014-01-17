@@ -796,6 +796,8 @@ Classes</h1>
 <li>void SetProjectionOffset(const Vector2&amp; offset)</li>
 <li>void SetUseReflection(bool enable)</li>
 <li>void SetReflectionPlane(const Plane&amp; reflectionPlane)</li>
+<li>void SetUseClipping(bool enable)</li>
+<li>void SetClipPlane(const Plane&amp; clipPlane)</li>
 <li>float GetFarClip() const</li>
 <li>float GetNearClip() const</li>
 <li>float GetFov() const</li>
@@ -825,6 +827,8 @@ Classes</h1>
 <li>const <a class="el" href="a00313.html" title="Two-dimensional vector.">Vector2</a>&amp; GetProjectionOffset() const</li>
 <li>bool GetUseReflection() const</li>
 <li>const <a class="el" href="a00219.html" title="Surface in three-dimensional space.">Plane</a>&amp; GetReflectionPlane() const</li>
+<li>bool GetUseClipping() const</li>
+<li>const <a class="el" href="a00219.html" title="Surface in three-dimensional space.">Plane</a>&amp; GetClipPlane() const</li>
 <li>float GetDistance(const Vector3&amp; worldPos) const</li>
 <li>float GetDistanceSquared(const Vector3&amp; worldPos) const</li>
 <li>float GetLodDistance(float distance, float scale, float bias) const</li>
@@ -856,6 +860,8 @@ Classes</h1>
 <li><a class="el" href="a00313.html" title="Two-dimensional vector.">Vector2</a>&amp; projectionOffset</li>
 <li>bool useReflection</li>
 <li><a class="el" href="a00219.html" title="Surface in three-dimensional space.">Plane</a>&amp; reflectionPlane</li>
+<li>bool useClipping</li>
+<li><a class="el" href="a00219.html" title="Surface in three-dimensional space.">Plane</a>&amp; clipPlane</li>
 <li>bool projectionValid (readonly)</li>
 <li><a class="el" href="a00178.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> effectiveWorldTransform (readonly)</li>
 </ul>
@@ -2416,6 +2422,7 @@ Classes</h1>
 <li>void SetScale(const Vector3&amp; scale)</li>
 <li>void SetScale(float scale)</li>
 <li><a class="el" href="a00177.html" title="3x3 matrix for rotation and scaling.">Matrix3</a> ToMatrix3() const</li>
+<li><a class="el" href="a00179.html" title="4x4 matrix for arbitrary linear transforms including projection.">Matrix4</a> ToMatrix4() const</li>
 <li><a class="el" href="a00177.html" title="3x3 matrix for rotation and scaling.">Matrix3</a> RotationMatrix() const</li>
 <li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> Translation() const</li>
 <li><a class="el" href="a00225.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> Rotation() const</li>
@@ -2503,9 +2510,15 @@ Classes</h1>
 <li>void Define(const Vector3&amp; v0, const Vector3&amp; v1, const Vector3&amp; v2)</li>
 <li>void Define(const Vector3&amp; normal, const Vector3&amp; point)</li>
 <li>void Define(const Vector4&amp; plane)</li>
+<li>void Transform(const Matrix3&amp; transform)</li>
+<li>void Transform(const Matrix3x4&amp; transform)</li>
+<li>void Transform(const Matrix4&amp; transform)</li>
 <li>float Distance(const Vector3&amp; point) const</li>
 <li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> Reflect(const Vector3&amp; direction) const</li>
 <li><a class="el" href="a00178.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> ReflectionMatrix() const</li>
+<li><a class="el" href="a00219.html" title="Surface in three-dimensional space.">Plane</a> Transformed(const Matrix3&amp; transform) const</li>
+<li><a class="el" href="a00219.html" title="Surface in three-dimensional space.">Plane</a> Transformed(const Matrix3x4&amp; transform) const</li>
+<li><a class="el" href="a00219.html" title="Surface in three-dimensional space.">Plane</a> Transformed(const Matrix4&amp; transform) const</li>
 <li><a class="el" href="a00315.html" title="Four-dimensional vector.">Vector4</a> ToVector4() const</li>
 </ul>
 <p>Properties:</p>
@@ -4755,6 +4768,7 @@ Global functions</h1>
 <li>float Min(float lhs, float rhs)</li>
 <li>float Max(float lhs, float rhs)</li>
 <li>float Abs(float value)</li>
+<li>float Sign(float value)</li>
 <li>float Clamp(float value, float min, float max)</li>
 <li>bool Equals(float lhs, float rhs)</li>
 <li>float Random()</li>

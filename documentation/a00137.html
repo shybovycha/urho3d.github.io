@@ -321,6 +321,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#a11eb4f153875e95af56a4e1eaaea1d4b">SetStencilTest</a> (bool enable, CompareMode mode=CMP_ALWAYS, StencilOp pass=OP_KEEP, StencilOp fail=OP_KEEP, StencilOp zFail=OP_KEEP, unsigned stencilRef=0, unsigned compareMask=M_MAX_UNSIGNED, unsigned writeMask=M_MAX_UNSIGNED)</td></tr>
 <tr class="memdesc:a11eb4f153875e95af56a4e1eaaea1d4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set stencil test. <br/></td></tr>
 <tr class="separator:a11eb4f153875e95af56a4e1eaaea1d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb1e917030105cd3887d8c8e8a985b63"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb1e917030105cd3887d8c8e8a985b63"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#aeb1e917030105cd3887d8c8e8a985b63">SetClipPlane</a> (bool enable, const <a class="el" href="a00219.html">Plane</a> &amp;clipPlane=<a class="el" href="a00219.html#a1839b8c4cee79fb51b197991b77124fc">Plane::UP</a>, const <a class="el" href="a00178.html">Matrix3x4</a> &amp;view=<a class="el" href="a00178.html#a65b89ad9e47464af65f0aab7fe97925e">Matrix3x4::IDENTITY</a>, const <a class="el" href="a00179.html">Matrix4</a> &amp;projection=<a class="el" href="a00179.html#a86040251571d238e00bc5253673110f5">Matrix4::IDENTITY</a>)</td></tr>
+<tr class="memdesc:aeb1e917030105cd3887d8c8e8a985b63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a custom clipping plane. The plane is specified in world space, but is dependent on the view and projection matrices. <br/></td></tr>
+<tr class="separator:aeb1e917030105cd3887d8c8e8a985b63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49799474677f031f56e1ed8b5a8d528f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a49799474677f031f56e1ed8b5a8d528f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#a49799474677f031f56e1ed8b5a8d528f">SetStreamFrequency</a> (unsigned index, unsigned frequency)</td></tr>
 <tr class="memdesc:a49799474677f031f56e1ed8b5a8d528f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set vertex buffer stream frequency. No-op on OpenGL. <br/></td></tr>
@@ -596,6 +600,10 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#a93b39f7126fea9ec329d104b83830cef">GetStencilWriteMask</a> () const </td></tr>
 <tr class="memdesc:a93b39f7126fea9ec329d104b83830cef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return stencil write bitmask. <br/></td></tr>
 <tr class="separator:a93b39f7126fea9ec329d104b83830cef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7764c8d6be3eb053a9fbadb71a0ec496"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7764c8d6be3eb053a9fbadb71a0ec496"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#a7764c8d6be3eb053a9fbadb71a0ec496">GetUseClipPlane</a> () const </td></tr>
+<tr class="memdesc:a7764c8d6be3eb053a9fbadb71a0ec496"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether a custom clipping plane is in use. <br/></td></tr>
+<tr class="separator:a7764c8d6be3eb053a9fbadb71a0ec496"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2606ed7c0b264655f37975987b6699a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2606ed7c0b264655f37975987b6699a9"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#a2606ed7c0b264655f37975987b6699a9">GetStreamFrequency</a> (unsigned index) const </td></tr>
 <tr class="memdesc:a2606ed7c0b264655f37975987b6699a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return stream frequency by vertex buffer index. Always returns 0 on OpenGL. <br/></td></tr>
@@ -1159,6 +1167,10 @@ const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <a class="el" href="a00179.html">Matrix4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#a24a956f0912c7b44fb6f13cfe56551b2">tempMatrices4_</a> [NUM_TEMP_MATRICES]</td></tr>
 <tr class="memdesc:a24a956f0912c7b44fb6f13cfe56551b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temp matrices for transposing shader parameters. <br/></td></tr>
 <tr class="separator:a24a956f0912c7b44fb6f13cfe56551b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac0631f81a37c794156bc9932f561339"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac0631f81a37c794156bc9932f561339"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#aac0631f81a37c794156bc9932f561339">useClipPlane_</a></td></tr>
+<tr class="memdesc:aac0631f81a37c794156bc9932f561339"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom clip plane enable flag. <br/></td></tr>
+<tr class="separator:aac0631f81a37c794156bc9932f561339"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e1a5f7279acc7df9a0e87761355e857"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e1a5f7279acc7df9a0e87761355e857"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#a6e1a5f7279acc7df9a0e87761355e857">releasingGPUObjects_</a></td></tr>
 <tr class="memdesc:a6e1a5f7279acc7df9a0e87761355e857"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releasing GPU objects flag. <br/></td></tr>
