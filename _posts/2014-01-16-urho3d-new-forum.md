@@ -2,7 +2,7 @@
 layout: post
 title: "Urho3D new discussion forum opened"
 description: ""
-category: "showcases"
+category: announcements
 tags: [forum, discussion]
 ---
 {% include JB/setup %}
