@@ -821,9 +821,6 @@ Classes</h1>
 <li><a class="el" href="a00228.html" title="Infinite straight line in three-dimensional space.">Ray</a> GetScreenRay(float x, float y) const</li>
 <li><a class="el" href="a00313.html" title="Two-dimensional vector.">Vector2</a> WorldToScreenPoint(const Vector3&amp; worldPos) const</li>
 <li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> ScreenToWorldPoint(const Vector3&amp; screenPos) const</li>
-<li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> GetForwardVector() const</li>
-<li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> GetRightVector() const</li>
-<li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> GetUpVector() const</li>
 <li>const <a class="el" href="a00313.html" title="Two-dimensional vector.">Vector2</a>&amp; GetProjectionOffset() const</li>
 <li>bool GetUseReflection() const</li>
 <li>const <a class="el" href="a00219.html" title="Surface in three-dimensional space.">Plane</a>&amp; GetReflectionPlane() const</li>
@@ -854,9 +851,6 @@ Classes</h1>
 <li><a class="el" href="a00178.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a>&amp; view (readonly)</li>
 <li>float halfViewSize (readonly)</li>
 <li><a class="el" href="a00132.html" title="Convex constructed of 6 planes.">Frustum</a> viewSpaceFrustum (readonly)</li>
-<li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> forwardVector (readonly)</li>
-<li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> rightVector (readonly)</li>
-<li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> upVector (readonly)</li>
 <li><a class="el" href="a00313.html" title="Two-dimensional vector.">Vector2</a>&amp; projectionOffset</li>
 <li>bool useReflection</li>
 <li><a class="el" href="a00219.html" title="Surface in three-dimensional space.">Plane</a>&amp; reflectionPlane</li>
@@ -2581,6 +2575,7 @@ Classes</h1>
 <li>void FromRotationTo(const Vector3&amp; start, const Vector3&amp; end)</li>
 <li>void FromAxes(const Vector3&amp; xAxis, const Vector3&amp; yAxis, const Vector3&amp; zAxis)</li>
 <li>void FromRotationMatrix(const Matrix3&amp; matrix)</li>
+<li>void FromLookRotation(const Vector3&amp; direction, const Vector3&amp; up)</li>
 <li>void Normalize()</li>
 <li><a class="el" href="a00225.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> Normalized() const</li>
 <li><a class="el" href="a00225.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> Inverse() const</li>
@@ -2594,6 +2589,7 @@ Classes</h1>
 <li>float RollAngle() const</li>
 <li><a class="el" href="a00177.html" title="3x3 matrix for rotation and scaling.">Matrix3</a> RotationMatrix() const</li>
 <li><a class="el" href="a00225.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> Slerp(Quaternion rhs, float t) const</li>
+<li><a class="el" href="a00225.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> Nlerp(Quaternion rhs, float t, bool shortestPath) const</li>
 <li><a class="el" href="a00288.html" title="String class.">String</a> ToString() const</li>
 </ul>
 <p>Properties:</p>
@@ -3663,6 +3659,10 @@ Classes</h1>
 <li><em>void GetRotationWXYZ(float</em> <em>w = 0.0f, float</em> <em>x = 0.0f, float</em> <em>y = 0.0f, float</em> <em>z = 0.0f) const</em></li>
 <li><em><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> GetDirection() const</em></li>
 <li><em>void GetDirectionXYZ(float</em> <em>x = 0.0f, float</em> <em>y = 0.0f, float</em> <em>z = 0.0f) const</em></li>
+<li><em><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> GetUp() const</em></li>
+<li><em>void GetUpXYZ(float</em> <em>x = 0.0f, float</em> <em>y = 0.0f, float</em> <em>z = 0.0f) const</em></li>
+<li><em><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> GetRight() const</em></li>
+<li><em>void GetRightXYZ(float</em> <em>x = 0.0f, float</em> <em>y = 0.0f, float</em> <em>z = 0.0f) const</em></li>
 <li><em>const <a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a>&amp; GetScale() const</em></li>
 <li><em>void GetScaleXYZ(float</em> <em>x = 0.0f, float</em> <em>y = 0.0f, float</em> <em>z = 0.0f) const</em></li>
 <li><em><a class="el" href="a00178.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> GetTransform() const</em></li>
@@ -3673,6 +3673,10 @@ Classes</h1>
 <li><em>void GetWorldRotationWXYZ(float</em> <em>w = 0.0f, float</em> <em>x = 0.0f, float</em> <em>y = 0.0f, float</em> <em>z = 0.0f) const</em></li>
 <li><em><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> GetWorldDirection() const</em></li>
 <li><em>void GetWorldDirectionXYZ(float</em> <em>x = 0.0f, float</em> <em>y = 0.0f, float</em> <em>z = 0.0f) const</em></li>
+<li><em><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> GetWorldUp() const</em></li>
+<li><em>void GetWorldUpXYZ(float</em> <em>x = 0.0f, float</em> <em>y = 0.0f, float</em> <em>z = 0.0f) const</em></li>
+<li><em><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> GetWorldRight() const</em></li>
+<li><em>void GetWorldRightXYZ(float</em> <em>x = 0.0f, float</em> <em>y = 0.0f, float</em> <em>z = 0.0f) const</em></li>
 <li><em><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> GetWorldScale() const</em></li>
 <li><em>void GetWorldScaleXYZ(float</em> <em>x = 0.0f, float</em> <em>y = 0.0f, float</em> <em>z = 0.0f) const</em></li>
 <li><em>const <a class="el" href="a00178.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a>&amp; GetWorldTransform() const</em></li>
@@ -3712,11 +3716,15 @@ Classes</h1>
 <li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a>&amp; position</li>
 <li><a class="el" href="a00225.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; rotation</li>
 <li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> direction</li>
+<li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> up (readonly)</li>
+<li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> right (readonly)</li>
 <li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a>&amp; scale</li>
 <li><a class="el" href="a00178.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> transform (readonly)</li>
 <li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> worldPosition</li>
 <li><a class="el" href="a00225.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> worldRotation</li>
 <li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> worldDirection</li>
+<li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> worldUp (readonly)</li>
+<li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> worldRight (readonly)</li>
 <li><a class="el" href="a00314.html" title="Three-dimensional vector.">Vector3</a> worldScale</li>
 <li><a class="el" href="a00178.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a>&amp; worldTransform (readonly)</li>
 <li>bool dirty (readonly)</li>
@@ -4771,6 +4779,7 @@ Global functions</h1>
 <li>float Abs(float value)</li>
 <li>float Sign(float value)</li>
 <li>float Clamp(float value, float min, float max)</li>
+<li>float SmoothStep(float lhs, float rhs, float t)</li>
 <li>bool Equals(float lhs, float rhs)</li>
 <li>float Random()</li>
 <li>float Random(float range)</li>
