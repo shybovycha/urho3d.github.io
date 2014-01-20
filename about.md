@@ -77,6 +77,7 @@ Though Urho3D already contains several useful features and implements a framewor
 - Pete Leigh
 - Paul Noome
 - Alex Parlett
+- Jordan Patterson
 - Vladimir Pobedinsky
 - Nick Royer
 - Miika Santala
