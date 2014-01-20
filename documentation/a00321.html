@@ -285,8 +285,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a003
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a51de0741e3610b97ca16ca1f3c9fce8a">CheckViewportRead</a> (const <a class="el" href="a00238.html">RenderPathCommand</a> &amp;command)</td></tr>
 <tr class="memdesc:a51de0741e3610b97ca16ca1f3c9fce8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a command reads the rendered scene. <br/></td></tr>
 <tr class="separator:a51de0741e3610b97ca16ca1f3c9fce8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae34ebc6c877f3e56ae7c9c086f3b83dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#ae34ebc6c877f3e56ae7c9c086f3b83dc">AllocateScreenBuffers</a> ()</td></tr>
-<tr class="memdesc:ae34ebc6c877f3e56ae7c9c086f3b83dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate needed screen buffers.  <a href="#ae34ebc6c877f3e56ae7c9c086f3b83dc">More...</a><br/></td></tr>
+<tr class="memitem:ab63f94f26fc1d285cbbb627ca9784a55"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab63f94f26fc1d285cbbb627ca9784a55"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#ab63f94f26fc1d285cbbb627ca9784a55">CheckPingpong</a> (unsigned index)</td></tr>
+<tr class="memdesc:ab63f94f26fc1d285cbbb627ca9784a55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether a command should use pingponging instead of simple resolve to viewport texture. <br/></td></tr>
+<tr class="separator:ab63f94f26fc1d285cbbb627ca9784a55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae34ebc6c877f3e56ae7c9c086f3b83dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae34ebc6c877f3e56ae7c9c086f3b83dc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#ae34ebc6c877f3e56ae7c9c086f3b83dc">AllocateScreenBuffers</a> ()</td></tr>
+<tr class="memdesc:ae34ebc6c877f3e56ae7c9c086f3b83dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate needed screen buffers. <br/></td></tr>
 <tr class="separator:ae34ebc6c877f3e56ae7c9c086f3b83dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a318c3a345d914d8c3d25b71f4031b7fe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a318c3a345d914d8c3d25b71f4031b7fe"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a318c3a345d914d8c3d25b71f4031b7fe">BlitFramebuffer</a> (<a class="el" href="a00298.html">Texture2D</a> *source, <a class="el" href="a00239.html">RenderSurface</a> *destination, bool depthWrite)</td></tr>
@@ -408,7 +413,7 @@ Private Attributes</h2></td></tr>
 <tr class="memdesc:ab8f1b59d9e142350cfee27a2547a598b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00078.html" title="Camera component.">Camera</a> to use. <br/></td></tr>
 <tr class="separator:ab8f1b59d9e142350cfee27a2547a598b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa38169516bcc25fb1468afc514a22d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa38169516bcc25fb1468afc514a22d5"></a>
-<a class="el" href="a00194.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#aaa38169516bcc25fb1468afc514a22d5">cameraNode_</a></td></tr>
+<a class="el" href="a00195.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#aaa38169516bcc25fb1468afc514a22d5">cameraNode_</a></td></tr>
 <tr class="memdesc:aaa38169516bcc25fb1468afc514a22d5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00078.html" title="Camera component.">Camera</a>'s scene node. <br/></td></tr>
 <tr class="separator:aaa38169516bcc25fb1468afc514a22d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac11788e88163365d02fd4db7f6585fdb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac11788e88163365d02fd4db7f6585fdb"></a>
@@ -427,6 +432,14 @@ Private Attributes</h2></td></tr>
 <a class="el" href="a00239.html">RenderSurface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a4036aed47efa92548de2a99a2fc4706a">renderTarget_</a></td></tr>
 <tr class="memdesc:a4036aed47efa92548de2a99a2fc4706a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destination color rendertarget. <br/></td></tr>
 <tr class="separator:a4036aed47efa92548de2a99a2fc4706a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a611c7ddebd1801e96834c56d980d6c3f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a611c7ddebd1801e96834c56d980d6c3f"></a>
+<a class="el" href="a00239.html">RenderSurface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a611c7ddebd1801e96834c56d980d6c3f">substituteRenderTarget_</a></td></tr>
+<tr class="memdesc:a611c7ddebd1801e96834c56d980d6c3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Substitute rendertarget for deferred rendering. Allocated if necessary. <br/></td></tr>
+<tr class="separator:a611c7ddebd1801e96834c56d980d6c3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4f74a04b949e217426f30a41d703817"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af4f74a04b949e217426f30a41d703817"></a>
+<a class="el" href="a00298.html">Texture2D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#af4f74a04b949e217426f30a41d703817">viewportTextures_</a> [MAX_VIEWPORT_TEXTURES]</td></tr>
+<tr class="memdesc:af4f74a04b949e217426f30a41d703817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texture(s) for sampling the viewport contents. Allocated if necessary. <br/></td></tr>
+<tr class="separator:af4f74a04b949e217426f30a41d703817"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d253cfb19c6bc5b725766b54ac7682a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d253cfb19c6bc5b725766b54ac7682a"></a>
 <a class="el" href="a00239.html">RenderSurface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a0d253cfb19c6bc5b725766b54ac7682a">currentRenderTarget_</a></td></tr>
 <tr class="memdesc:a0d253cfb19c6bc5b725766b54ac7682a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00083.html" title="RGBA color.">Color</a> rendertarget active for the current renderpath command. <br/></td></tr>
@@ -447,14 +460,6 @@ Private Attributes</h2></td></tr>
 <a class="el" href="a00131.html">FrameInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a890941632aa201778e64e09c22fb227e">frame_</a></td></tr>
 <tr class="memdesc:a890941632aa201778e64e09c22fb227e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Information of the frame being rendered. <br/></td></tr>
 <tr class="separator:a890941632aa201778e64e09c22fb227e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87a8d2408e2c2359a8abd247c9cf008e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a87a8d2408e2c2359a8abd247c9cf008e"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a87a8d2408e2c2359a8abd247c9cf008e">writeBuffer_</a></td></tr>
-<tr class="memdesc:a87a8d2408e2c2359a8abd247c9cf008e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write screenbuffer index. <br/></td></tr>
-<tr class="separator:a87a8d2408e2c2359a8abd247c9cf008e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedcfe53f339b0fae7bd0199787e83a01"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aedcfe53f339b0fae7bd0199787e83a01"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#aedcfe53f339b0fae7bd0199787e83a01">readBuffer_</a></td></tr>
-<tr class="memdesc:aedcfe53f339b0fae7bd0199787e83a01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read screenbuffer index. <br/></td></tr>
-<tr class="separator:aedcfe53f339b0fae7bd0199787e83a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18eb18c49b602b53cd3fc3f47d9d90b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18eb18c49b602b53cd3fc3f47d9d90b1"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a18eb18c49b602b53cd3fc3f47d9d90b1">minZ_</a></td></tr>
 <tr class="memdesc:a18eb18c49b602b53cd3fc3f47d9d90b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum Z value of the visible scene. <br/></td></tr>
@@ -499,10 +504,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a003
 <a class="el" href="a00237.html">RenderPath</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a4db609fa2bf04ea27dc712c554bb8f67">renderPath_</a></td></tr>
 <tr class="memdesc:a4db609fa2bf04ea27dc712c554bb8f67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renderpath. <br/></td></tr>
 <tr class="separator:a4db609fa2bf04ea27dc712c554bb8f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70b2475b410a3fc619e994cea9a73dde"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70b2475b410a3fc619e994cea9a73dde"></a>
-<a class="el" href="a00220.html">PODVector</a>&lt; <a class="el" href="a00298.html">Texture2D</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a70b2475b410a3fc619e994cea9a73dde">screenBuffers_</a></td></tr>
-<tr class="memdesc:a70b2475b410a3fc619e994cea9a73dde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intermediate screen buffers used in pingpong copies and OpenGL deferred framebuffer blit. <br/></td></tr>
-<tr class="separator:a70b2475b410a3fc619e994cea9a73dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ed3bb98c98d3d17f24fc5a7246723a8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ed3bb98c98d3d17f24fc5a7246723a8"></a>
 <a class="el" href="a00313.html">Vector</a>&lt; <a class="el" href="a00220.html">PODVector</a>&lt; <a class="el" href="a00115.html">Drawable</a> * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a8ed3bb98c98d3d17f24fc5a7246723a8">tempDrawables_</a></td></tr>
 <tr class="memdesc:a8ed3bb98c98d3d17f24fc5a7246723a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Per-thread octree query results. <br/></td></tr>
@@ -621,48 +622,6 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>3D rendering view. Includes the main view(s) and any auxiliary views, but not shadow cameras. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ae34ebc6c877f3e56ae7c9c086f3b83dc"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::View::AllocateScreenBuffers </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Allocate needed screen buffers. </p>
-<dl class="todo"><dt><b><a class="el" href="a00712.html#_todo000016">Todo:</a></b></dt><dd>If the last copy is optimized away, this allocates an extra buffer unnecessarily </dd></dl>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a00321_ae34ebc6c877f3e56ae7c9c086f3b83dc_cgraph.svg" width="100%" height="582"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00321_ae34ebc6c877f3e56ae7c9c086f3b83dc_icgraph.svg" width="430" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
-</div>
-</div>
 <a class="anchor" id="a2dd8e9237f495ba4ec4a69b195988cfa"></a>
 <div class="memitem">
 <div class="memproto">
@@ -685,7 +644,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Execute render commands. </p>
-<dl class="todo"><dt><b><a class="el" href="a00712.html#_todo000015">Todo:</a></b></dt><dd>Does not copy the depth buffer </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="a00712.html#_todo000015">Todo:</a></b></dt><dd>Must use dynamic_cast because the render target could also be a cube map. That will not currently work </dd></dl>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
