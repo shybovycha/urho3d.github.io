@@ -85,6 +85,7 @@ Though Urho3D already contains several useful features and implements a framewor
 - Steven Zhang
 - Firegorilla
 - Magic.Lixin
+- Mike3D
 - amadeus_osa
 - reattiva
 - skaiware
