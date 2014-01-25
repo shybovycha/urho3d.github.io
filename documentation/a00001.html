@@ -144,7 +144,7 @@ Build options</h1>
 <tr>
 <td>-DENABLE_DOCS=1 </td><td>to build the docs when building all the targets </td></tr>
 <tr>
-<td>-DENABLE_ANGELSCRIPT=0 </td><td>to disable AngelScript scripting support </td></tr>
+<td>-DENABLE_ANGELSCRIPT=0</td><td>to disable AngelScript scripting support </td></tr>
 <tr>
 <td>-DENABLE_SSE=0 </td><td>to disable SSE instruction set </td></tr>
 <tr>
@@ -154,15 +154,15 @@ Build options</h1>
 <tr>
 <td>-DUSE_MKLINK=1 </td><td>to use mklink command to create symbolic links (Windows Vista and above only) </td></tr>
 <tr>
-<td>-DUSE_STATIC_RUNTIME=1 </td><td>to use static C/C++ runtime libraries and eliminate the need for runtime DLLs installation (VS only) </td></tr>
+<td>-DUSE_STATIC_RUNTIME=1</td><td>to use static C/C++ runtime libraries and eliminate the need for runtime DLLs installation (VS only) </td></tr>
 <tr>
-<td>-DSCP_TO_TARGET=user@target:remote-location </td><td>to automatically scp executables to target system (Raspberry Pi cross-compiling build only), SSH digital key must be setup first for this to work </td></tr>
+<td>-DSCP_TO_TARGET=&lt;v&gt; </td><td>to automatically scp executables to target system (Raspberry Pi cross-compiling build only), SSH digital key must be setup first for this to work, typical value has a pattern of usr:remote-loc </td></tr>
 <tr>
-<td>-DCMAKE_BUILD_TYPE=Release/Debug/RelWithDebInfo </td><td>to tell CMake which build configuration to be generated, default is Release (cmake_gcc.sh and cmake_eclipse.sh only) </td></tr>
+<td>-DCMAKE_BUILD_TYPE=&lt;v&gt;</td><td>to tell CMake which build configuration to be generated (Makefile generator only), possible values are Release (default), Debug, and RelWithDebInfo </td></tr>
 <tr>
-<td>-DURHO3D_LIB_TYPE=STATIC/SHARED </td><td>to specify Urho3D library type, default is STATIC </td></tr>
+<td>-DURHO3D_LIB_TYPE=&lt;v&gt; </td><td>to specify Urho3D library type, possible values are STATIC (default) and SHARED </td></tr>
 <tr>
-<td>-DANDROID_ABI=armeabi </td><td>to build armeabi native code (Android build only), default is armeabi-v7a </td></tr>
+<td>-DANDROID_ABI=&lt;v&gt; </td><td>to specify ABI for native code (Android build only), possible values are armeabi-v7a (default) and armeabi </td></tr>
 </table>
 <p>Note that build option values specified via command line are cached by CMake. The cached values will be used by CMake in the subsequent invocation. That is, the same build options are not required to be specified again and again. Once a non-default build option value is being cached, it can only be reverted back to its default value by explicitly setting it via command line. That is, simply by NOT passing the corresponding build option would not work. One way to revert all the build options to their default values is by clearing the CMake cache by calling cmake_clean.bat or cmake_clean.sh. </p>
 </div></div><!-- contents -->
