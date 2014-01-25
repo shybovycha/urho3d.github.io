@@ -95,6 +95,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 <a class="el" href="a00313.html">VariantVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00100.html#afb3ff155e86744302f94b04fe48d8024">GetShapesAttr</a> () const </td></tr>
 <tr class="memdesc:afb3ff155e86744302f94b04fe48d8024"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return shapes attribute. <br/></td></tr>
 <tr class="separator:afb3ff155e86744302f94b04fe48d8024"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae68eb5551f79e8859e661620130e4d58"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae68eb5551f79e8859e661620130e4d58"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00100.html#ae68eb5551f79e8859e661620130e4d58">ApplyOSCursorShape</a> ()</td></tr>
+<tr class="memdesc:ae68eb5551f79e8859e661620130e4d58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply pending OS cursor shape. Called by <a class="el" href="a00307.html" title="UI subsystem. Manages the graphical user interface.">UI</a>. No-op when the OS mouse pointer is not used. <br/></td></tr>
+<tr class="separator:ae68eb5551f79e8859e661620130e4d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_a00074"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00074')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="a00074.html">Urho3D::BorderImage</a></td></tr>
 <tr class="memitem:aa3de52ab9018458150ed420bf26834aa inherit pub_methods_a00074"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3de52ab9018458150ed420bf26834aa"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#aa3de52ab9018458150ed420bf26834aa">BorderImage</a> (<a class="el" href="a00095.html">Context</a> *context)</td></tr>
@@ -1096,10 +1100,6 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:af73cd810b5d14d133dfb73994322bbc1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af73cd810b5d14d133dfb73994322bbc1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00100.html#af73cd810b5d14d133dfb73994322bbc1">ApplyShape</a> ()</td></tr>
-<tr class="memdesc:af73cd810b5d14d133dfb73994322bbc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the current shape. <br/></td></tr>
-<tr class="separator:af73cd810b5d14d133dfb73994322bbc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2af19d01fffa86826a74a48114d431e7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2af19d01fffa86826a74a48114d431e7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00100.html#a2af19d01fffa86826a74a48114d431e7">HandleMouseVisibleChanged</a> (<a class="el" href="a00290.html">StringHash</a> eventType, <a class="el" href="a00141.html">VariantMap</a> &amp;eventData)</td></tr>
 <tr class="memdesc:a2af19d01fffa86826a74a48114d431e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle operating system mouse cursor visibility change event. <br/></td></tr>
@@ -1145,6 +1145,10 @@ CursorShape&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00100.html#ac68be878546e893adf4c02d53aa8185d">useSystemShapes_</a></td></tr>
 <tr class="memdesc:ac68be878546e893adf4c02d53aa8185d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use system default shapes flag. <br/></td></tr>
 <tr class="separator:ac68be878546e893adf4c02d53aa8185d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a625b36f8639782578ce66612de40b5ec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a625b36f8639782578ce66612de40b5ec"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00100.html#a625b36f8639782578ce66612de40b5ec">osShapeDirty_</a></td></tr>
+<tr class="memdesc:a625b36f8639782578ce66612de40b5ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">OS cursor shape needs update flag. <br/></td></tr>
+<tr class="separator:a625b36f8639782578ce66612de40b5ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_a00074"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_a00074')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="a00074.html">Urho3D::BorderImage</a></td></tr>
 <tr class="memitem:a69d118adf89636fb987e4d5085695138 inherit pro_attribs_a00074"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a69d118adf89636fb987e4d5085695138"></a>
 <a class="el" href="a00271.html">SharedPtr</a>&lt; <a class="el" href="a00297.html">Texture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#a69d118adf89636fb987e4d5085695138">texture_</a></td></tr>
