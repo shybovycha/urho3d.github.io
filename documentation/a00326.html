@@ -20,7 +20,7 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00326.html">WeakPtr</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00326.html">WeakArrayPtr</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -28,169 +28,161 @@ title: Documentation
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="a00809.html">List of all members</a>  </div>
+<a href="a00740.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::WeakPtr&lt; T &gt; Class Template Reference</div>  </div>
+<div class="title">Urho3D::WeakArrayPtr&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Weak pointer template class with intrusive reference counting. Does not keep the object pointed to alive.  
+<p>Weak array pointer template class. Uses non-intrusive reference counting.  
  <a href="a00326.html#details">More...</a></p>
 
-<p><code>#include &lt;Ptr.h&gt;</code></p>
+<p><code>#include &lt;ArrayPtr.h&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for Urho3D::WeakPtr&lt; T &gt;:</div>
+Collaboration diagram for Urho3D::WeakArrayPtr&lt; T &gt;:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00810.svg" width="216" height="136"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00741.svg" width="211" height="136"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae221af720caaba3b75845654e357afb9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae221af720caaba3b75845654e357afb9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#ae221af720caaba3b75845654e357afb9">WeakPtr</a> ()</td></tr>
-<tr class="memdesc:ae221af720caaba3b75845654e357afb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a null weak pointer. <br/></td></tr>
-<tr class="separator:ae221af720caaba3b75845654e357afb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f7dff2a69b1f69a9597878e4da2ccb8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8f7dff2a69b1f69a9597878e4da2ccb8"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a8f7dff2a69b1f69a9597878e4da2ccb8">WeakPtr</a> (const <a class="el" href="a00326.html">WeakPtr</a>&lt; T &gt; &amp;rhs)</td></tr>
-<tr class="memdesc:a8f7dff2a69b1f69a9597878e4da2ccb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy-construct from another weak pointer. <br/></td></tr>
-<tr class="separator:a8f7dff2a69b1f69a9597878e4da2ccb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab10686c17c02a93a3a25ab04b2e3542d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab10686c17c02a93a3a25ab04b2e3542d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#ab10686c17c02a93a3a25ab04b2e3542d">WeakPtr</a> (const <a class="el" href="a00271.html">SharedPtr</a>&lt; T &gt; &amp;rhs)</td></tr>
-<tr class="memdesc:ab10686c17c02a93a3a25ab04b2e3542d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a shared pointer. <br/></td></tr>
-<tr class="separator:ab10686c17c02a93a3a25ab04b2e3542d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a96fe9e362214d11a60daf5220c2536"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a96fe9e362214d11a60daf5220c2536"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a9a96fe9e362214d11a60daf5220c2536">WeakPtr</a> (T *ptr)</td></tr>
-<tr class="memdesc:a9a96fe9e362214d11a60daf5220c2536"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a raw pointer. <br/></td></tr>
-<tr class="separator:a9a96fe9e362214d11a60daf5220c2536"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a671d6bb1538fab9592fd60b67f06333b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a671d6bb1538fab9592fd60b67f06333b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a671d6bb1538fab9592fd60b67f06333b">~WeakPtr</a> ()</td></tr>
-<tr class="memdesc:a671d6bb1538fab9592fd60b67f06333b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. Release the weak reference to the object. <br/></td></tr>
-<tr class="separator:a671d6bb1538fab9592fd60b67f06333b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1ba677811dd1e7adba67e64529772b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1ba677811dd1e7adba67e64529772b4"></a>
-<a class="el" href="a00326.html">WeakPtr</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#aa1ba677811dd1e7adba67e64529772b4">operator=</a> (const <a class="el" href="a00271.html">SharedPtr</a>&lt; T &gt; &amp;rhs)</td></tr>
-<tr class="memdesc:aa1ba677811dd1e7adba67e64529772b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign from a shared pointer. <br/></td></tr>
-<tr class="separator:aa1ba677811dd1e7adba67e64529772b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a135f817306e4ed6364d90f5552c910"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a135f817306e4ed6364d90f5552c910"></a>
-<a class="el" href="a00326.html">WeakPtr</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a2a135f817306e4ed6364d90f5552c910">operator=</a> (const <a class="el" href="a00326.html">WeakPtr</a>&lt; T &gt; &amp;rhs)</td></tr>
-<tr class="memdesc:a2a135f817306e4ed6364d90f5552c910"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign from a weak pointer. <br/></td></tr>
-<tr class="separator:a2a135f817306e4ed6364d90f5552c910"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1fc769184923acb6ad80040f5888da6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1fc769184923acb6ad80040f5888da6"></a>
-<a class="el" href="a00326.html">WeakPtr</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#ab1fc769184923acb6ad80040f5888da6">operator=</a> (T *ptr)</td></tr>
-<tr class="memdesc:ab1fc769184923acb6ad80040f5888da6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign from a raw pointer. <br/></td></tr>
-<tr class="separator:ab1fc769184923acb6ad80040f5888da6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a06a57be496e644fbd0c62fceff9ee1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a06a57be496e644fbd0c62fceff9ee1"></a>
-<a class="el" href="a00271.html">SharedPtr</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a6a06a57be496e644fbd0c62fceff9ee1">Lock</a> () const </td></tr>
-<tr class="memdesc:a6a06a57be496e644fbd0c62fceff9ee1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert to a shared pointer. If expired, return a null shared pointer. <br/></td></tr>
-<tr class="separator:a6a06a57be496e644fbd0c62fceff9ee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c5cf4fd005f1b795a2112a034293ecd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c5cf4fd005f1b795a2112a034293ecd"></a>
-T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a0c5cf4fd005f1b795a2112a034293ecd">Get</a> () const </td></tr>
-<tr class="memdesc:a0c5cf4fd005f1b795a2112a034293ecd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return raw pointer. If expired, return null. <br/></td></tr>
-<tr class="separator:a0c5cf4fd005f1b795a2112a034293ecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af34bfe99d9bcdaecbf30327af124f90a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af34bfe99d9bcdaecbf30327af124f90a"></a>
-T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#af34bfe99d9bcdaecbf30327af124f90a">operator-&gt;</a> () const </td></tr>
-<tr class="memdesc:af34bfe99d9bcdaecbf30327af124f90a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Point to the object. <br/></td></tr>
-<tr class="separator:af34bfe99d9bcdaecbf30327af124f90a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea4d62909fc2da2b88c6380ffec19276"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea4d62909fc2da2b88c6380ffec19276"></a>
-T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#aea4d62909fc2da2b88c6380ffec19276">operator*</a> () const </td></tr>
-<tr class="memdesc:aea4d62909fc2da2b88c6380ffec19276"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dereference the object. <br/></td></tr>
-<tr class="separator:aea4d62909fc2da2b88c6380ffec19276"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3015641982da67ef5450315cfdf9d06"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3015641982da67ef5450315cfdf9d06"></a>
-T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#aa3015641982da67ef5450315cfdf9d06">operator[]</a> (const int index)</td></tr>
-<tr class="memdesc:aa3015641982da67ef5450315cfdf9d06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscript the object if applicable. <br/></td></tr>
-<tr class="separator:aa3015641982da67ef5450315cfdf9d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a820ae5baca56dc0131b2b0dea1e8d7b7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a820ae5baca56dc0131b2b0dea1e8d7b7"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a820ae5baca56dc0131b2b0dea1e8d7b7">operator==</a> (const <a class="el" href="a00326.html">WeakPtr</a>&lt; T &gt; &amp;rhs) const </td></tr>
-<tr class="memdesc:a820ae5baca56dc0131b2b0dea1e8d7b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for equality with another weak pointer. <br/></td></tr>
-<tr class="separator:a820ae5baca56dc0131b2b0dea1e8d7b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4f920aea740b86906dc05cc3b0f8751"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad4f920aea740b86906dc05cc3b0f8751"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#ad4f920aea740b86906dc05cc3b0f8751">operator!=</a> (const <a class="el" href="a00326.html">WeakPtr</a>&lt; T &gt; &amp;rhs) const </td></tr>
-<tr class="memdesc:ad4f920aea740b86906dc05cc3b0f8751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for inequality with another weak pointer. <br/></td></tr>
-<tr class="separator:ad4f920aea740b86906dc05cc3b0f8751"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac64b50a2d353590b7690314c148fba59"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac64b50a2d353590b7690314c148fba59"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#ac64b50a2d353590b7690314c148fba59">operator&lt;</a> (const <a class="el" href="a00326.html">WeakPtr</a>&lt; T &gt; &amp;rhs) const </td></tr>
-<tr class="memdesc:ac64b50a2d353590b7690314c148fba59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for less than with another weak pointer. <br/></td></tr>
-<tr class="separator:ac64b50a2d353590b7690314c148fba59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8402e3505f3e6efa3733761ecbecd285"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8402e3505f3e6efa3733761ecbecd285"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a8402e3505f3e6efa3733761ecbecd285">operator T *</a> () const </td></tr>
-<tr class="memdesc:a8402e3505f3e6efa3733761ecbecd285"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert to a raw pointer, null if the object is expired. <br/></td></tr>
-<tr class="separator:a8402e3505f3e6efa3733761ecbecd285"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a021e39518ec5197e1463335878cb00e7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a021e39518ec5197e1463335878cb00e7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a021e39518ec5197e1463335878cb00e7">Reset</a> ()</td></tr>
-<tr class="memdesc:a021e39518ec5197e1463335878cb00e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset to null and release the weak reference. <br/></td></tr>
-<tr class="separator:a021e39518ec5197e1463335878cb00e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ebadfd6bfe91988f2d1a7c71774b439"><td class="memTemplParams" colspan="2"><a class="anchor" id="a6ebadfd6bfe91988f2d1a7c71774b439"></a>
+<tr class="memitem:a0bfb81785eab9e406364c701ffa19eb1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0bfb81785eab9e406364c701ffa19eb1"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a0bfb81785eab9e406364c701ffa19eb1">WeakArrayPtr</a> ()</td></tr>
+<tr class="memdesc:a0bfb81785eab9e406364c701ffa19eb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a null weak array pointer. <br/></td></tr>
+<tr class="separator:a0bfb81785eab9e406364c701ffa19eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a665e2c3a42f13135ffdc6ac69d8d99d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a665e2c3a42f13135ffdc6ac69d8d99d7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a665e2c3a42f13135ffdc6ac69d8d99d7">WeakArrayPtr</a> (const <a class="el" href="a00326.html">WeakArrayPtr</a>&lt; T &gt; &amp;rhs)</td></tr>
+<tr class="memdesc:a665e2c3a42f13135ffdc6ac69d8d99d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy-construct from another weak array pointer. <br/></td></tr>
+<tr class="separator:a665e2c3a42f13135ffdc6ac69d8d99d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee88ede5ff7b7563c28c4e5ef655d356"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee88ede5ff7b7563c28c4e5ef655d356"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#aee88ede5ff7b7563c28c4e5ef655d356">WeakArrayPtr</a> (const <a class="el" href="a00271.html">SharedArrayPtr</a>&lt; T &gt; &amp;rhs)</td></tr>
+<tr class="memdesc:aee88ede5ff7b7563c28c4e5ef655d356"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a shared array pointer. <br/></td></tr>
+<tr class="separator:aee88ede5ff7b7563c28c4e5ef655d356"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9159eff472e438d31552724e3d6b3851"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9159eff472e438d31552724e3d6b3851"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a9159eff472e438d31552724e3d6b3851">~WeakArrayPtr</a> ()</td></tr>
+<tr class="memdesc:a9159eff472e438d31552724e3d6b3851"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. Release the weak reference to the array. <br/></td></tr>
+<tr class="separator:a9159eff472e438d31552724e3d6b3851"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02a256b21a4e4078ebdae692d250dac2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02a256b21a4e4078ebdae692d250dac2"></a>
+<a class="el" href="a00326.html">WeakArrayPtr</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a02a256b21a4e4078ebdae692d250dac2">operator=</a> (const <a class="el" href="a00271.html">SharedArrayPtr</a>&lt; T &gt; &amp;rhs)</td></tr>
+<tr class="memdesc:a02a256b21a4e4078ebdae692d250dac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign from a shared array pointer. <br/></td></tr>
+<tr class="separator:a02a256b21a4e4078ebdae692d250dac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a112decc9aad97a9cc7c8938df20a26bd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a112decc9aad97a9cc7c8938df20a26bd"></a>
+<a class="el" href="a00326.html">WeakArrayPtr</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a112decc9aad97a9cc7c8938df20a26bd">operator=</a> (const <a class="el" href="a00326.html">WeakArrayPtr</a>&lt; T &gt; &amp;rhs)</td></tr>
+<tr class="memdesc:a112decc9aad97a9cc7c8938df20a26bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign from another weak array pointer. <br/></td></tr>
+<tr class="separator:a112decc9aad97a9cc7c8938df20a26bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa540d7ebf08292b199245a3b88aafbcf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa540d7ebf08292b199245a3b88aafbcf"></a>
+<a class="el" href="a00271.html">SharedArrayPtr</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#aa540d7ebf08292b199245a3b88aafbcf">Lock</a> () const </td></tr>
+<tr class="memdesc:aa540d7ebf08292b199245a3b88aafbcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert to shared array pointer. If expired, return a null shared array pointer. <br/></td></tr>
+<tr class="separator:aa540d7ebf08292b199245a3b88aafbcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8935619f8b829250ee96a4d116846a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa8935619f8b829250ee96a4d116846a3"></a>
+T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#aa8935619f8b829250ee96a4d116846a3">Get</a> () const </td></tr>
+<tr class="memdesc:aa8935619f8b829250ee96a4d116846a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return raw pointer. If expired, return null. <br/></td></tr>
+<tr class="separator:aa8935619f8b829250ee96a4d116846a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f67f17a7807fe106421b5645355053f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f67f17a7807fe106421b5645355053f"></a>
+T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a3f67f17a7807fe106421b5645355053f">operator-&gt;</a> () const </td></tr>
+<tr class="memdesc:a3f67f17a7807fe106421b5645355053f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Point to the array. <br/></td></tr>
+<tr class="separator:a3f67f17a7807fe106421b5645355053f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b1550d1d33acb60764b4c3bc72eb2c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b1550d1d33acb60764b4c3bc72eb2c6"></a>
+T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a9b1550d1d33acb60764b4c3bc72eb2c6">operator*</a> () const </td></tr>
+<tr class="memdesc:a9b1550d1d33acb60764b4c3bc72eb2c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dereference the array. <br/></td></tr>
+<tr class="separator:a9b1550d1d33acb60764b4c3bc72eb2c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73fdd3905525c46b12709b778c74dcfd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73fdd3905525c46b12709b778c74dcfd"></a>
+T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a73fdd3905525c46b12709b778c74dcfd">operator[]</a> (const int index)</td></tr>
+<tr class="memdesc:a73fdd3905525c46b12709b778c74dcfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscript the array. <br/></td></tr>
+<tr class="separator:a73fdd3905525c46b12709b778c74dcfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48da6895b05ddc43c3d884e0782c30ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a48da6895b05ddc43c3d884e0782c30ae"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a48da6895b05ddc43c3d884e0782c30ae">operator==</a> (const <a class="el" href="a00326.html">WeakArrayPtr</a>&lt; T &gt; &amp;rhs) const </td></tr>
+<tr class="memdesc:a48da6895b05ddc43c3d884e0782c30ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for equality with another weak array pointer. <br/></td></tr>
+<tr class="separator:a48da6895b05ddc43c3d884e0782c30ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f10c851900b75f93f367184c28156e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f10c851900b75f93f367184c28156e6"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a7f10c851900b75f93f367184c28156e6">operator!=</a> (const <a class="el" href="a00326.html">WeakArrayPtr</a>&lt; T &gt; &amp;rhs) const </td></tr>
+<tr class="memdesc:a7f10c851900b75f93f367184c28156e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for inequality with another weak array pointer. <br/></td></tr>
+<tr class="separator:a7f10c851900b75f93f367184c28156e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5099260e24ac64d2ee4b4489f2c7efd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5099260e24ac64d2ee4b4489f2c7efd"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#ab5099260e24ac64d2ee4b4489f2c7efd">operator&lt;</a> (const <a class="el" href="a00326.html">WeakArrayPtr</a>&lt; T &gt; &amp;rhs) const </td></tr>
+<tr class="memdesc:ab5099260e24ac64d2ee4b4489f2c7efd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for less than with another weak array pointer. <br/></td></tr>
+<tr class="separator:ab5099260e24ac64d2ee4b4489f2c7efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a024c8216c3e0b0051619a766936db235"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a024c8216c3e0b0051619a766936db235"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a024c8216c3e0b0051619a766936db235">operator T *</a> () const </td></tr>
+<tr class="memdesc:a024c8216c3e0b0051619a766936db235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert to a raw pointer, null if array is expired. <br/></td></tr>
+<tr class="separator:a024c8216c3e0b0051619a766936db235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec4734a02477dddbc8d6e827706926b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec4734a02477dddbc8d6e827706926b2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#aec4734a02477dddbc8d6e827706926b2">Reset</a> ()</td></tr>
+<tr class="memdesc:aec4734a02477dddbc8d6e827706926b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset to null and release the weak reference. <br/></td></tr>
+<tr class="separator:aec4734a02477dddbc8d6e827706926b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1efe8c2b4ef3097900b0a1cac0e5292e"><td class="memTemplParams" colspan="2"><a class="anchor" id="a1efe8c2b4ef3097900b0a1cac0e5292e"></a>
 template&lt;class U &gt; </td></tr>
-<tr class="memitem:a6ebadfd6bfe91988f2d1a7c71774b439"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00326.html#a6ebadfd6bfe91988f2d1a7c71774b439">StaticCast</a> (const <a class="el" href="a00326.html">WeakPtr</a>&lt; U &gt; &amp;rhs)</td></tr>
-<tr class="memdesc:a6ebadfd6bfe91988f2d1a7c71774b439"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a static cast from a weak pointer of another type. <br/></td></tr>
-<tr class="separator:a6ebadfd6bfe91988f2d1a7c71774b439"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd8638f11731fa480dc17fb021cc4c09"><td class="memTemplParams" colspan="2"><a class="anchor" id="abd8638f11731fa480dc17fb021cc4c09"></a>
+<tr class="memitem:a1efe8c2b4ef3097900b0a1cac0e5292e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00326.html#a1efe8c2b4ef3097900b0a1cac0e5292e">StaticCast</a> (const <a class="el" href="a00326.html">WeakArrayPtr</a>&lt; U &gt; &amp;rhs)</td></tr>
+<tr class="memdesc:a1efe8c2b4ef3097900b0a1cac0e5292e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a static cast from a weak array pointer of another type. <br/></td></tr>
+<tr class="separator:a1efe8c2b4ef3097900b0a1cac0e5292e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaebd880a7ee712f18b8077a8eabda1da"><td class="memTemplParams" colspan="2"><a class="anchor" id="aaebd880a7ee712f18b8077a8eabda1da"></a>
 template&lt;class U &gt; </td></tr>
-<tr class="memitem:abd8638f11731fa480dc17fb021cc4c09"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00326.html#abd8638f11731fa480dc17fb021cc4c09">DynamicCast</a> (const <a class="el" href="a00326.html">WeakPtr</a>&lt; U &gt; &amp;rhs)</td></tr>
-<tr class="memdesc:abd8638f11731fa480dc17fb021cc4c09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a dynamic cast from a weak pointer of another type. <br/></td></tr>
-<tr class="separator:abd8638f11731fa480dc17fb021cc4c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fa5a56463a0725a09eeee208ab2bc6b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2fa5a56463a0725a09eeee208ab2bc6b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a2fa5a56463a0725a09eeee208ab2bc6b">Null</a> () const </td></tr>
-<tr class="memdesc:a2fa5a56463a0725a09eeee208ab2bc6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the pointer is null. <br/></td></tr>
-<tr class="separator:a2fa5a56463a0725a09eeee208ab2bc6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac945a22af2b3a9dedf9c5b5392f42dff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac945a22af2b3a9dedf9c5b5392f42dff"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#ac945a22af2b3a9dedf9c5b5392f42dff">NotNull</a> () const </td></tr>
-<tr class="memdesc:ac945a22af2b3a9dedf9c5b5392f42dff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the pointer is not null. <br/></td></tr>
-<tr class="separator:ac945a22af2b3a9dedf9c5b5392f42dff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac79f152d599960574cc1de1060ffb0f6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac79f152d599960574cc1de1060ffb0f6"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#ac79f152d599960574cc1de1060ffb0f6">Refs</a> () const </td></tr>
-<tr class="memdesc:ac79f152d599960574cc1de1060ffb0f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the object's reference count, or 0 if null pointer or if object has expired. <br/></td></tr>
-<tr class="separator:ac79f152d599960574cc1de1060ffb0f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01be1a0cc7b0a95c2039cbf909d975fe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a01be1a0cc7b0a95c2039cbf909d975fe"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a01be1a0cc7b0a95c2039cbf909d975fe">WeakRefs</a> () const </td></tr>
-<tr class="memdesc:a01be1a0cc7b0a95c2039cbf909d975fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the object's weak reference count. <br/></td></tr>
-<tr class="separator:a01be1a0cc7b0a95c2039cbf909d975fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f3707fbe1cc49ece4d5e5ea064dbab0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f3707fbe1cc49ece4d5e5ea064dbab0"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a9f3707fbe1cc49ece4d5e5ea064dbab0">Expired</a> () const </td></tr>
-<tr class="memdesc:a9f3707fbe1cc49ece4d5e5ea064dbab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the object has expired. If null pointer, always return true. <br/></td></tr>
-<tr class="separator:a9f3707fbe1cc49ece4d5e5ea064dbab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb997890c3ac3ea3bd5342cfd46bc925"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb997890c3ac3ea3bd5342cfd46bc925"></a>
-<a class="el" href="a00233.html">RefCount</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#afb997890c3ac3ea3bd5342cfd46bc925">RefCountPtr</a> () const </td></tr>
-<tr class="memdesc:afb997890c3ac3ea3bd5342cfd46bc925"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return pointer to the <a class="el" href="a00233.html" title="Reference count structure.">RefCount</a> structure. <br/></td></tr>
-<tr class="separator:afb997890c3ac3ea3bd5342cfd46bc925"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4715afdd82c630a5c192e41725b9c758"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4715afdd82c630a5c192e41725b9c758"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a4715afdd82c630a5c192e41725b9c758">ToHash</a> () const </td></tr>
-<tr class="memdesc:a4715afdd82c630a5c192e41725b9c758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hash value for <a class="el" href="a00143.html" title="Hash set template class.">HashSet</a> &amp; <a class="el" href="a00141.html" title="Hash map template class.">HashMap</a>. <br/></td></tr>
-<tr class="separator:a4715afdd82c630a5c192e41725b9c758"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaebd880a7ee712f18b8077a8eabda1da"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00326.html#aaebd880a7ee712f18b8077a8eabda1da">DynamicCast</a> (const <a class="el" href="a00326.html">WeakArrayPtr</a>&lt; U &gt; &amp;rhs)</td></tr>
+<tr class="memdesc:aaebd880a7ee712f18b8077a8eabda1da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a dynamic cast from a weak array pointer of another type. <br/></td></tr>
+<tr class="separator:aaebd880a7ee712f18b8077a8eabda1da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42d1ac02c4621a86488043f73ffc488c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42d1ac02c4621a86488043f73ffc488c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a42d1ac02c4621a86488043f73ffc488c">Null</a> () const </td></tr>
+<tr class="memdesc:a42d1ac02c4621a86488043f73ffc488c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the pointer is null. <br/></td></tr>
+<tr class="separator:a42d1ac02c4621a86488043f73ffc488c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d00c36a594cd2bbe252c9aea21d9e0e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d00c36a594cd2bbe252c9aea21d9e0e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a5d00c36a594cd2bbe252c9aea21d9e0e">NotNull</a> () const </td></tr>
+<tr class="memdesc:a5d00c36a594cd2bbe252c9aea21d9e0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the pointer is not null. <br/></td></tr>
+<tr class="separator:a5d00c36a594cd2bbe252c9aea21d9e0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb6615a1ac329821a4bb3a2e078f519d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb6615a1ac329821a4bb3a2e078f519d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#afb6615a1ac329821a4bb3a2e078f519d">Refs</a> () const </td></tr>
+<tr class="memdesc:afb6615a1ac329821a4bb3a2e078f519d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the array's reference count, or 0 if null pointer or if array has expired. <br/></td></tr>
+<tr class="separator:afb6615a1ac329821a4bb3a2e078f519d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4d952ccf66177ed336fefb030a65b4a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4d952ccf66177ed336fefb030a65b4a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#aa4d952ccf66177ed336fefb030a65b4a">WeakRefs</a> () const </td></tr>
+<tr class="memdesc:aa4d952ccf66177ed336fefb030a65b4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the array's weak reference count. <br/></td></tr>
+<tr class="separator:aa4d952ccf66177ed336fefb030a65b4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4128b4d1090993d344d0989ef486398"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac4128b4d1090993d344d0989ef486398"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#ac4128b4d1090993d344d0989ef486398">Expired</a> () const </td></tr>
+<tr class="memdesc:ac4128b4d1090993d344d0989ef486398"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the array has expired. If null pointer, always return true. <br/></td></tr>
+<tr class="separator:ac4128b4d1090993d344d0989ef486398"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36a5414ccb90c8ee5a7e8c745b12ca1b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a36a5414ccb90c8ee5a7e8c745b12ca1b"></a>
+<a class="el" href="a00234.html">RefCount</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a36a5414ccb90c8ee5a7e8c745b12ca1b">RefCountPtr</a> () const </td></tr>
+<tr class="memdesc:a36a5414ccb90c8ee5a7e8c745b12ca1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return pointer to <a class="el" href="a00234.html" title="Reference count structure.">RefCount</a> structure. <br/></td></tr>
+<tr class="separator:a36a5414ccb90c8ee5a7e8c745b12ca1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6625abf9f7dd90d16d9fd0d1566da66"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa6625abf9f7dd90d16d9fd0d1566da66"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#aa6625abf9f7dd90d16d9fd0d1566da66">ToHash</a> () const </td></tr>
+<tr class="memdesc:aa6625abf9f7dd90d16d9fd0d1566da66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hash value for <a class="el" href="a00144.html" title="Hash set template class.">HashSet</a> &amp; <a class="el" href="a00142.html" title="Hash map template class.">HashMap</a>. <br/></td></tr>
+<tr class="separator:aa6625abf9f7dd90d16d9fd0d1566da66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:acaad39ba18563702df9850035f78c3f0"><td class="memTemplParams" colspan="2"><a class="anchor" id="acaad39ba18563702df9850035f78c3f0"></a>
+<tr class="memitem:ae77a6c680d32b9224873f330a88a79fc"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae77a6c680d32b9224873f330a88a79fc"></a>
 template&lt;class U &gt; </td></tr>
-<tr class="memitem:acaad39ba18563702df9850035f78c3f0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00326.html">WeakPtr</a>&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00326.html#acaad39ba18563702df9850035f78c3f0">operator=</a> (const <a class="el" href="a00326.html">WeakPtr</a>&lt; U &gt; &amp;rhs)</td></tr>
-<tr class="memdesc:acaad39ba18563702df9850035f78c3f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prevent direct assignment from a weak pointer of different type. <br/></td></tr>
-<tr class="separator:acaad39ba18563702df9850035f78c3f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ac7ae27059f4903e4dc62b9ff13cd0c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ac7ae27059f4903e4dc62b9ff13cd0c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a9ac7ae27059f4903e4dc62b9ff13cd0c">AddRef</a> ()</td></tr>
-<tr class="memdesc:a9ac7ae27059f4903e4dc62b9ff13cd0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a weak reference to the object pointed to. <br/></td></tr>
-<tr class="separator:a9ac7ae27059f4903e4dc62b9ff13cd0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9933f3e1372623ec15c6f04896db8bbf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9933f3e1372623ec15c6f04896db8bbf"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a9933f3e1372623ec15c6f04896db8bbf">ReleaseRef</a> ()</td></tr>
-<tr class="memdesc:a9933f3e1372623ec15c6f04896db8bbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release the weak reference. Delete the Refcount structure if necessary. <br/></td></tr>
-<tr class="separator:a9933f3e1372623ec15c6f04896db8bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae77a6c680d32b9224873f330a88a79fc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00326.html">WeakArrayPtr</a>&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00326.html#ae77a6c680d32b9224873f330a88a79fc">operator=</a> (const <a class="el" href="a00326.html">WeakArrayPtr</a>&lt; U &gt; &amp;rhs)</td></tr>
+<tr class="memdesc:ae77a6c680d32b9224873f330a88a79fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prevent direct assignment from a weak array pointer of different type. <br/></td></tr>
+<tr class="separator:ae77a6c680d32b9224873f330a88a79fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe20b130cc939a55cd6dc70950bbc85a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe20b130cc939a55cd6dc70950bbc85a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#abe20b130cc939a55cd6dc70950bbc85a">AddRef</a> ()</td></tr>
+<tr class="memdesc:abe20b130cc939a55cd6dc70950bbc85a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a weak reference to the array pointed to. <br/></td></tr>
+<tr class="separator:abe20b130cc939a55cd6dc70950bbc85a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d94d407a4688394e4221cf7d253479a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d94d407a4688394e4221cf7d253479a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a2d94d407a4688394e4221cf7d253479a">ReleaseRef</a> ()</td></tr>
+<tr class="memdesc:a2d94d407a4688394e4221cf7d253479a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release the weak reference. Delete the Refcount structure if necessary. <br/></td></tr>
+<tr class="separator:a2d94d407a4688394e4221cf7d253479a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a17bd4323c63b3fad37e900cd88f41459"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a17bd4323c63b3fad37e900cd88f41459"></a>
-T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a17bd4323c63b3fad37e900cd88f41459">ptr_</a></td></tr>
-<tr class="memdesc:a17bd4323c63b3fad37e900cd88f41459"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the object. <br/></td></tr>
-<tr class="separator:a17bd4323c63b3fad37e900cd88f41459"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a961b86acbc605648a9b05927770c2dfb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a961b86acbc605648a9b05927770c2dfb"></a>
-<a class="el" href="a00233.html">RefCount</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a961b86acbc605648a9b05927770c2dfb">refCount_</a></td></tr>
-<tr class="memdesc:a961b86acbc605648a9b05927770c2dfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the <a class="el" href="a00233.html" title="Reference count structure.">RefCount</a> structure. <br/></td></tr>
-<tr class="separator:a961b86acbc605648a9b05927770c2dfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c21884bd051fcdb89d4c44c85b5b665"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c21884bd051fcdb89d4c44c85b5b665"></a>
+T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a4c21884bd051fcdb89d4c44c85b5b665">ptr_</a></td></tr>
+<tr class="memdesc:a4c21884bd051fcdb89d4c44c85b5b665"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the array. <br/></td></tr>
+<tr class="separator:a4c21884bd051fcdb89d4c44c85b5b665"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9da718dc0d7fed63f650f649dfc6abd8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9da718dc0d7fed63f650f649dfc6abd8"></a>
+<a class="el" href="a00234.html">RefCount</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a9da718dc0d7fed63f650f649dfc6abd8">refCount_</a></td></tr>
+<tr class="memdesc:a9da718dc0d7fed63f650f649dfc6abd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the <a class="el" href="a00234.html" title="Reference count structure.">RefCount</a> structure. <br/></td></tr>
+<tr class="separator:a9da718dc0d7fed63f650f649dfc6abd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class T&gt;<br/>
-class Urho3D::WeakPtr&lt; T &gt;</h3>
+class Urho3D::WeakArrayPtr&lt; T &gt;</h3>
 
-<p>Weak pointer template class with intrusive reference counting. Does not keep the object pointed to alive. </p>
+<p>Weak array pointer template class. Uses non-intrusive reference counting. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Container/Ptr.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Container/ArrayPtr.h</li>
 </ul>
 </div><!-- contents -->

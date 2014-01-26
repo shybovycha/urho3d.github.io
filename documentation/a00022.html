@@ -44,7 +44,7 @@ title: Documentation
 <div class="line">&lt;/variation&gt;</div>
 </div><!-- fragment --><p>A variation or option can "require" other defines, for example in HLSL shaders instancing requires the SM3 define which tells that we are compiling for Shader Model 3. Like defines, requires can be listed either as an attribute (if only one) or as a child element (if many.)</p>
 <p>Additionally, an option can "include" or "exclude" other options. Use this mechanism instead of variations if complex dependencies between options is required, instead of simple exclusion. Again, includes or excludes can be listed either as attributes or child elements.</p>
-<p>The final name of a shader permutation is formed by taking the shader's name, adding an underscore (if there are active variations/options) and then listing the names of all active variations/options in top-to-bottom order. For example the Basic vertex shader with vertex color and skinning active would be Basic_VColSkinned. This final name is used to request shaders from the <a class="el" href="a00236.html" title="High-level rendering subsystem. Manages drawing of 3D views.">Renderer</a> subsystem.</p>
+<p>The final name of a shader permutation is formed by taking the shader's name, adding an underscore (if there are active variations/options) and then listing the names of all active variations/options in top-to-bottom order. For example the Basic vertex shader with vertex color and skinning active would be Basic_VColSkinned. This final name is used to request shaders from the <a class="el" href="a00237.html" title="High-level rendering subsystem. Manages drawing of 3D views.">Renderer</a> subsystem.</p>
 <h1><a class="anchor" id="Shaders_Required"></a>
 Required shader permutations</h1>
 <p>When rendering scene objects, the engine expects certain shader permutations to exist for different geometry types and lighting conditions. These must appear in the specific order listed below. Use the LitSolid shader for reference.</p>
@@ -80,7 +80,7 @@ Writing shaders</h1>
 </div><!-- fragment --><p>Note that for HLSL shaders both the vertex and the pixel shader are written into the same file, and the functions must be called VS() and PS(), while for GLSL they are put into separate .vert and .frag files, and are called main().</p>
 <p>The uniforms must be prefixed in a certain way so that the shader compiler and the engine understand them:</p>
 <ul>
-<li>c for uniform constants, for example cMatDiffColor. The c is stripped when referred to inside the engine, so it would be called "MatDiffColor" in eg. <a class="el" href="a00175.html#a27f2b7dd5a1ab57e0be7f9a30be657ed">SetShaderParameter()</a></li>
+<li>c for uniform constants, for example cMatDiffColor. The c is stripped when referred to inside the engine, so it would be called "MatDiffColor" in eg. <a class="el" href="a00176.html#a27f2b7dd5a1ab57e0be7f9a30be657ed">SetShaderParameter()</a></li>
 <li>s for texture samplers, for example sDiffMap.</li>
 </ul>
 <p>In GLSL shaders it is important that the samplers are assigned to the correct texture units. If you are using sampler names that are not predefined in the engine like sDiffMap, just make sure there is a number somewhere in the sampler's name and it will be interpreted as the texture unit. For example the terrain shader uses texture units 0-3 in the following way:</p>

@@ -20,76 +20,51 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00301.html">Thread</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00301.html">TextureFrame</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="a00863.html">List of all members</a>  </div>
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="a01067.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::Thread Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">Urho3D::TextureFrame Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Operating system thread.  
+<p>Texture animation frame definition.  
  <a href="a00301.html#details">More...</a></p>
 
-<p><code>#include &lt;Thread.h&gt;</code></p>
+<p><code>#include &lt;ParticleEmitter.h&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Urho3D::Thread:</div>
+Collaboration diagram for Urho3D::TextureFrame:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00864.svg" width="531" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a01068.svg" width="232" height="344"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3f0344e25501a204632c202c3458e36d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f0344e25501a204632c202c3458e36d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a3f0344e25501a204632c202c3458e36d">Thread</a> ()</td></tr>
-<tr class="memdesc:a3f0344e25501a204632c202c3458e36d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. Does not start the thread yet. <br/></td></tr>
-<tr class="separator:a3f0344e25501a204632c202c3458e36d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad64684670b16b0e97da3a83963b28152"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad64684670b16b0e97da3a83963b28152"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#ad64684670b16b0e97da3a83963b28152">~Thread</a> ()</td></tr>
-<tr class="memdesc:ad64684670b16b0e97da3a83963b28152"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. If running, stop and wait for thread to finish. <br/></td></tr>
-<tr class="separator:ad64684670b16b0e97da3a83963b28152"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cbd298c7f15b818d7d01ea6466acd29"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4cbd298c7f15b818d7d01ea6466acd29"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a4cbd298c7f15b818d7d01ea6466acd29">ThreadFunction</a> ()=0</td></tr>
-<tr class="memdesc:a4cbd298c7f15b818d7d01ea6466acd29"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function to run in the thread. <br/></td></tr>
-<tr class="separator:a4cbd298c7f15b818d7d01ea6466acd29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fc81f2afdcb233e00f0f6405a95225f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7fc81f2afdcb233e00f0f6405a95225f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a7fc81f2afdcb233e00f0f6405a95225f">Run</a> ()</td></tr>
-<tr class="memdesc:a7fc81f2afdcb233e00f0f6405a95225f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start running the thread. Return true if successful, or false if already running or if can not create the thread. <br/></td></tr>
-<tr class="separator:a7fc81f2afdcb233e00f0f6405a95225f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8192e1dfca6363a4190d9162837cc3bd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8192e1dfca6363a4190d9162837cc3bd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a8192e1dfca6363a4190d9162837cc3bd">Stop</a> ()</td></tr>
-<tr class="memdesc:a8192e1dfca6363a4190d9162837cc3bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the running flag to false and wait for the thread to finish. <br/></td></tr>
-<tr class="separator:a8192e1dfca6363a4190d9162837cc3bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a378bc8be68c5239553d836b6a073b28c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a378bc8be68c5239553d836b6a073b28c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a378bc8be68c5239553d836b6a073b28c">SetPriority</a> (int priority)</td></tr>
-<tr class="memdesc:a378bc8be68c5239553d836b6a073b28c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set thread priority. The thread must have been started first. <br/></td></tr>
-<tr class="separator:a378bc8be68c5239553d836b6a073b28c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63134bf27472c831a7f500f554fa66dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a63134bf27472c831a7f500f554fa66dc"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a63134bf27472c831a7f500f554fa66dc">IsStarted</a> () const </td></tr>
-<tr class="memdesc:a63134bf27472c831a7f500f554fa66dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether thread exists. <br/></td></tr>
-<tr class="separator:a63134bf27472c831a7f500f554fa66dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96af72e30e803932e3900b4652520447"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a96af72e30e803932e3900b4652520447"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a96af72e30e803932e3900b4652520447">TextureFrame</a> ()</td></tr>
+<tr class="memdesc:a96af72e30e803932e3900b4652520447"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with default values. <br/></td></tr>
+<tr class="separator:a96af72e30e803932e3900b4652520447"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:a2cfb3d871653aeb2c750811e0a62f2e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2cfb3d871653aeb2c750811e0a62f2e6"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a2cfb3d871653aeb2c750811e0a62f2e6">handle_</a></td></tr>
-<tr class="memdesc:a2cfb3d871653aeb2c750811e0a62f2e6"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00301.html" title="Operating system thread.">Thread</a> handle. <br/></td></tr>
-<tr class="separator:a2cfb3d871653aeb2c750811e0a62f2e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ff80e8a4039a452f1bfedaf36e8b1d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ff80e8a4039a452f1bfedaf36e8b1d1"></a>
-volatile bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a6ff80e8a4039a452f1bfedaf36e8b1d1">shouldRun_</a></td></tr>
-<tr class="memdesc:a6ff80e8a4039a452f1bfedaf36e8b1d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Running flag. <br/></td></tr>
-<tr class="separator:a6ff80e8a4039a452f1bfedaf36e8b1d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:af2be510a9c741da4506ab3aa0cd71118"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af2be510a9c741da4506ab3aa0cd71118"></a>
+<a class="el" href="a00232.html">Rect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#af2be510a9c741da4506ab3aa0cd71118">uv_</a></td></tr>
+<tr class="memdesc:af2be510a9c741da4506ab3aa0cd71118"><td class="mdescLeft">&#160;</td><td class="mdescRight">UV coordinates. <br/></td></tr>
+<tr class="separator:af2be510a9c741da4506ab3aa0cd71118"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2d69579af25f51ae2278f97b2bee681"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2d69579af25f51ae2278f97b2bee681"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#ad2d69579af25f51ae2278f97b2bee681">time_</a></td></tr>
+<tr class="memdesc:ad2d69579af25f51ae2278f97b2bee681"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00303.html" title="Time and frame counter subsystem.">Time</a>. <br/></td></tr>
+<tr class="separator:ad2d69579af25f51ae2278f97b2bee681"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Operating system thread. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Core/Thread.h</li>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Core/Thread.cpp</li>
+<div class="textblock"><p>Texture animation frame definition. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/ParticleEmitter.h</li>
 </ul>
 </div><!-- contents -->
