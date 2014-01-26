@@ -518,6 +518,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a002
 <tr class="memitem:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_a00201"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00201.html#af8f8bd3f7e2f51ecca7199e737f53364">SendEvent</a> (<a class="el" href="a00292.html">StringHash</a> eventType, <a class="el" href="a00142.html">VariantMap</a> &amp;eventData)</td></tr>
 <tr class="memdesc:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_a00201"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send event with parameters to all subscribers.  <a href="#af8f8bd3f7e2f51ecca7199e737f53364">More...</a><br/></td></tr>
 <tr class="separator:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_a00201"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8dbe9844094c04463def7df1fa650d5 inherit pub_methods_a00201"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab8dbe9844094c04463def7df1fa650d5"></a>
+<a class="el" href="a00142.html">VariantMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00201.html#ab8dbe9844094c04463def7df1fa650d5">GetEventDataMap</a> () const </td></tr>
+<tr class="memdesc:ab8dbe9844094c04463def7df1fa650d5 inherit pub_methods_a00201"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a preallocated map for event data. Used for optimization to avoid constant re-allocation of event data maps. <br/></td></tr>
+<tr class="separator:ab8dbe9844094c04463def7df1fa650d5 inherit pub_methods_a00201"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48c407eb402e328382c2a61fb3db4441 inherit pub_methods_a00201"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a48c407eb402e328382c2a61fb3db4441"></a>
 <a class="el" href="a00096.html">Context</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00201.html#a48c407eb402e328382c2a61fb3db4441">GetContext</a> () const </td></tr>
 <tr class="memdesc:a48c407eb402e328382c2a61fb3db4441 inherit pub_methods_a00201"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return execution context. <br/></td></tr>
@@ -711,6 +715,18 @@ btDiscreteDynamicsWorld *&#160;</td><td class="memItemRight" valign="bottom"><a 
 &lt; <a class="el" href="a00082.html">CollisionGeometryData</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00220.html#addfabdb371765c471162b03792b89a5a">convexCache_</a></td></tr>
 <tr class="memdesc:addfabdb371765c471162b03792b89a5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache for convex geometry data by model and LOD level. <br/></td></tr>
 <tr class="separator:addfabdb371765c471162b03792b89a5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae90944b6c415a9e26923059155a56179"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae90944b6c415a9e26923059155a56179"></a>
+<a class="el" href="a00142.html">VariantMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00220.html#ae90944b6c415a9e26923059155a56179">physicsCollisionData_</a></td></tr>
+<tr class="memdesc:ae90944b6c415a9e26923059155a56179"><td class="mdescLeft">&#160;</td><td class="mdescRight">Preallocated event data map for physics collision events. <br/></td></tr>
+<tr class="separator:ae90944b6c415a9e26923059155a56179"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d961e2b7b6d15435900f3ca03e052e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d961e2b7b6d15435900f3ca03e052e0"></a>
+<a class="el" href="a00142.html">VariantMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00220.html#a1d961e2b7b6d15435900f3ca03e052e0">nodeCollisionData_</a></td></tr>
+<tr class="memdesc:a1d961e2b7b6d15435900f3ca03e052e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Preallocated event data map for node collision events. <br/></td></tr>
+<tr class="separator:a1d961e2b7b6d15435900f3ca03e052e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa32601e266c44247dc08404ba8c942a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa32601e266c44247dc08404ba8c942a3"></a>
+<a class="el" href="a00321.html">VectorBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00220.html#aa32601e266c44247dc08404ba8c942a3">contacts_</a></td></tr>
+<tr class="memdesc:aa32601e266c44247dc08404ba8c942a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Preallocated buffer for physics collision contact data. <br/></td></tr>
+<tr class="separator:aa32601e266c44247dc08404ba8c942a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58fe7902f6d857f847c1adea036ded27"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58fe7902f6d857f847c1adea036ded27"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00220.html#a58fe7902f6d857f847c1adea036ded27">fps_</a></td></tr>
 <tr class="memdesc:a58fe7902f6d857f847c1adea036ded27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulation steps per second. <br/></td></tr>

@@ -93,6 +93,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a000
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00096.html#a2d3644c5b930fd1d7d6dd96994a0678d">UpdateAttributeDefaultValue</a> (<a class="el" href="a00274.html">ShortStringHash</a> objectType, const char *name, const <a class="el" href="a00314.html">Variant</a> &amp;defaultValue)</td></tr>
 <tr class="memdesc:a2d3644c5b930fd1d7d6dd96994a0678d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update object attribute's default value. <br/></td></tr>
 <tr class="separator:a2d3644c5b930fd1d7d6dd96994a0678d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb628095602a49ade116c4761ab44004"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb628095602a49ade116c4761ab44004"></a>
+<a class="el" href="a00142.html">VariantMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00096.html#acb628095602a49ade116c4761ab44004">GetEventDataMap</a> ()</td></tr>
+<tr class="memdesc:acb628095602a49ade116c4761ab44004"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a preallocated map for event data. Used for optimization to avoid constant re-allocation of event data maps. <br/></td></tr>
+<tr class="separator:acb628095602a49ade116c4761ab44004"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa6d101ed389966ab476ed8c8f5f69e3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa6d101ed389966ab476ed8c8f5f69e3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00096.html#aaa6d101ed389966ab476ed8c8f5f69e3">CopyBaseAttributes</a> (<a class="el" href="a00274.html">ShortStringHash</a> baseType, <a class="el" href="a00274.html">ShortStringHash</a> derivedType)</td></tr>
 <tr class="memdesc:aaa6d101ed389966ab476ed8c8f5f69e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy base class attributes to derived class. <br/></td></tr>
@@ -294,6 +298,10 @@ Private Attributes</h2></td></tr>
 <a class="el" href="a00222.html">PODVector</a>&lt; <a class="el" href="a00201.html">Object</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00096.html#aa4864c834224ffdc76824a6b451e299c">eventSenders_</a></td></tr>
 <tr class="memdesc:aa4864c834224ffdc76824a6b451e299c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event sender stack. <br/></td></tr>
 <tr class="separator:aa4864c834224ffdc76824a6b451e299c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83b71eab2a0182c243caa698175663c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a83b71eab2a0182c243caa698175663c8"></a>
+<a class="el" href="a00222.html">PODVector</a>&lt; <a class="el" href="a00142.html">VariantMap</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00096.html#a83b71eab2a0182c243caa698175663c8">eventDataMaps_</a></td></tr>
+<tr class="memdesc:a83b71eab2a0182c243caa698175663c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event data stack. <br/></td></tr>
+<tr class="separator:a83b71eab2a0182c243caa698175663c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac10172b791c6a9a137db49e6f905b752"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac10172b791c6a9a137db49e6f905b752"></a>
 <a class="el" href="a00119.html">EventHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00096.html#ac10172b791c6a9a137db49e6f905b752">eventHandler_</a></td></tr>
 <tr class="memdesc:ac10172b791c6a9a137db49e6f905b752"><td class="mdescLeft">&#160;</td><td class="mdescRight">Active event handler. Not stored in a stack for performance reasons; is needed only in esoteric cases. <br/></td></tr>
