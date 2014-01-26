@@ -17,7 +17,7 @@ title: Documentation
 <div class="title">Materials </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="el" href="a00176.html" title="Describes how to render 3D geometries.">Material</a> and <a class="el" href="a00292.html" title="Material technique. Consists of several passes.">Technique</a> resources define how to render 3D scene geometry. On the disk, they are XML data. By default, materials exist in the Bin/CoreData/Materials &amp; Bin/Data/Materials subdirectories, and techniques exist in the Bin/CoreData/Techniques subdirectory.</p>
+<div class="textblock"><p><a class="el" href="a00176.html" title="Describes how to render 3D geometries.">Material</a> and <a class="el" href="a00293.html" title="Material technique. Consists of several passes.">Technique</a> resources define how to render 3D scene geometry. On the disk, they are XML data. By default, materials exist in the Bin/CoreData/Materials &amp; Bin/Data/Materials subdirectories, and techniques exist in the Bin/CoreData/Techniques subdirectory.</p>
 <p>A material defines the textures, shader parameters and culling mode to use, and refers to techniques. A technique defines the actual rendering passes, the shaders to use in each, and all other rendering states such as depth test, depth write, and blending.</p>
 <p>A material definition looks like this:</p>
 <div class="fragment"><div class="line">&lt;material&gt;</div>
@@ -30,7 +30,7 @@ title: Documentation
 <div class="line">    &lt;shadowcull value=<span class="stringliteral">&quot;cw|ccw|none&quot;</span> /&gt;</div>
 <div class="line">    &lt;depthbias constant=<span class="stringliteral">&quot;x&quot;</span> slopescaled=<span class="stringliteral">&quot;y&quot;</span> /&gt;</div>
 <div class="line">&lt;/material&gt;</div>
-</div><!-- fragment --><p>Technique quality levels are specified from 0 (low) to 2 (high). When rendering, the highest available technique that does not exceed the <a class="el" href="a00237.html" title="High-level rendering subsystem. Manages drawing of 3D views.">Renderer</a>'s material quality setting will be chosen, see <a class="el" href="a00237.html#aabb13682895a9c8f0cabec5ae55cb802">SetMaterialQuality()</a>. If a technique requires SM3.0-only shaders, it can be marked as such by the "sm3" attribute.</p>
+</div><!-- fragment --><p>Technique quality levels are specified from 0 (low) to 2 (high). When rendering, the highest available technique that does not exceed the <a class="el" href="a00238.html" title="High-level rendering subsystem. Manages drawing of 3D views.">Renderer</a>'s material quality setting will be chosen, see <a class="el" href="a00238.html#aabb13682895a9c8f0cabec5ae55cb802">SetMaterialQuality()</a>. If a technique requires SM3.0-only shaders, it can be marked as such by the "sm3" attribute.</p>
 <p>When a material defines several techniques for different LOD levels and quality settings, they must appear in a specific order:</p>
 <ul>
 <li>Most distant &amp; highest quality</li>
