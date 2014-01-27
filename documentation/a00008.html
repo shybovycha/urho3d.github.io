@@ -153,46 +153,6 @@ Classes</h1>
 <li>float outerAngle</li>
 <li>float rolloffFactor</li>
 </ul>
-<h3><a class="el" href="a00222.html" title="Vector template class for POD types. Does not call constructors or destructors and uses block move...">PODVector</a></h3>
-<p>Methods:</p>
-<ul>
-<li>TOLUA_TEMPLATE_BIND(T, Vector3, OctreeQueryResult, RayQueryResult, PhysicsRaycastResult)</li>
-<li>PODVector()</li>
-<li>PODVector(const PODVector&lt;T&gt;&amp; vector)</li>
-<li>~PODVector()</li>
-<li>PODVector&lt;T&gt; operator + (const T&amp; rhs) const</li>
-<li>PODVector&lt;T&gt; operator + (const PODVector&lt;T&gt;&amp; rhs) const</li>
-<li>bool operator == (const PODVector&lt;T&gt;&amp; rhs) const</li>
-<li>T&amp; operator [] (unsigned index)</li>
-<li>const T&amp; operator [] (unsigned index) const</li>
-<li>T&amp; At(unsigned index)</li>
-<li>const T&amp; At(unsigned index) const</li>
-<li>void Push(const T&amp; value)</li>
-<li>void Push(const PODVector&lt;T&gt;&amp; vector)</li>
-<li>void Pop()</li>
-<li>void Insert(unsigned pos, const T&amp; value)</li>
-<li>void Insert(unsigned pos, const PODVector&lt;T&gt;&amp; vector)</li>
-<li>void Erase(unsigned pos, unsigned length = 1)</li>
-<li>bool Remove(const T&amp; value)</li>
-<li>void Clear()</li>
-<li>void Resize(unsigned newSize)</li>
-<li>void Reserve(unsigned newCapacity)</li>
-<li>void Compact()</li>
-<li>bool Contains(const T&amp; value) const</li>
-<li>T&amp; Front()</li>
-<li>const T&amp; Front() const</li>
-<li>T&amp; Back()</li>
-<li>const T&amp; Back() const</li>
-<li>unsigned Size() const</li>
-<li>unsigned Capacity() const</li>
-<li>bool Empty() const</li>
-</ul>
-<p>Properties:</p>
-<ul>
-<li>unsigned size (readonly)</li>
-<li>unsigned capacity (readonly)</li>
-<li>bool empty (readonly)</li>
-</ul>
 <h3><a class="el" href="a00096.html" title="Urho3D execution context. Provides access to subsystems, object factories and attributes, and event receivers.">Context</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1133,11 +1093,11 @@ Classes</h1>
 <li>void Update(const FrameInfo&amp; frame)</li>
 <li>void AddManualDrawable(Drawable* drawable)</li>
 <li>void RemoveManualDrawable(Drawable* drawable)</li>
-<li>PODVector&lt;OctreeQueryResult&gt; GetDrawables(const <a class="el" href="a00319.html" title="Three-dimensional vector.">Vector3</a>&amp; point, unsigned char drawableFlags = DRAWABLE_ANY, unsigned viewMask = DEFAULT_VIEWMASK) const</li>
-<li>PODVector&lt;OctreeQueryResult&gt; GetDrawables(const <a class="el" href="a00076.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a>&amp; box, unsigned char drawableFlags = DRAWABLE_ANY, unsigned viewMask = DEFAULT_VIEWMASK) const</li>
-<li>PODVector&lt;OctreeQueryResult&gt; GetDrawables(const <a class="el" href="a00133.html" title="Convex constructed of 6 planes.">Frustum</a>&amp; frustum, unsigned char drawableFlags = DRAWABLE_ANY, unsigned viewMask = DEFAULT_VIEWMASK) const</li>
-<li>PODVector&lt;OctreeQueryResult&gt; GetDrawables(const <a class="el" href="a00284.html" title="Sphere in three-dimensional space.">Sphere</a>&amp; sphere, unsigned char drawableFlags = DRAWABLE_ANY, unsigned viewMask = DEFAULT_VIEWMASK) const</li>
-<li>PODVector&lt;RayQueryResult&gt; Raycast(const Ray&amp; ray, RayQueryLevel level, float maxDistance, unsigned char drawableFlags) const</li>
+<li>const PODVector&lt;OctreeQueryResult&gt;&amp; GetDrawables(const <a class="el" href="a00319.html" title="Three-dimensional vector.">Vector3</a>&amp; point, unsigned char drawableFlags = DRAWABLE_ANY, unsigned viewMask = DEFAULT_VIEWMASK) const</li>
+<li>const PODVector&lt;OctreeQueryResult&gt;&amp; GetDrawables(const <a class="el" href="a00076.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a>&amp; box, unsigned char drawableFlags = DRAWABLE_ANY, unsigned viewMask = DEFAULT_VIEWMASK) const</li>
+<li>const PODVector&lt;OctreeQueryResult&gt;&amp; GetDrawables(const <a class="el" href="a00133.html" title="Convex constructed of 6 planes.">Frustum</a>&amp; frustum, unsigned char drawableFlags = DRAWABLE_ANY, unsigned viewMask = DEFAULT_VIEWMASK) const</li>
+<li>const PODVector&lt;OctreeQueryResult&gt;&amp; GetDrawables(const <a class="el" href="a00284.html" title="Sphere in three-dimensional space.">Sphere</a>&amp; sphere, unsigned char drawableFlags = DRAWABLE_ANY, unsigned viewMask = DEFAULT_VIEWMASK) const</li>
+<li>const PODVector&lt;RayQueryResult&gt;&amp; Raycast(const Ray&amp; ray, RayQueryLevel level, float maxDistance, unsigned char drawableFlags) const</li>
 <li><a class="el" href="a00232.html" title="Raycast result.">RayQueryResult</a> RaycastSingle(const Ray&amp; ray, RayQueryLevel level, float maxDistance, unsigned char drawableFlags) const</li>
 <li>unsigned GetNumLevels() const</li>
 <li>void QueueUpdate(Drawable* drawable)</li>
@@ -2954,7 +2914,7 @@ Classes</h1>
 <li>bool Build(const BoundingBox&amp; boundingBox)</li>
 <li><a class="el" href="a00319.html" title="Three-dimensional vector.">Vector3</a> FindNearestPoint(const <a class="el" href="a00319.html" title="Three-dimensional vector.">Vector3</a>&amp; point, const <a class="el" href="a00319.html" title="Three-dimensional vector.">Vector3</a>&amp; extents = <a class="el" href="a00319.html#a402fdc96e79366f13803eb238a5623ed" title="(1,1,1) vector.">Vector3::ONE</a>)</li>
 <li><a class="el" href="a00319.html" title="Three-dimensional vector.">Vector3</a> MoveAlongSurface(const <a class="el" href="a00319.html" title="Three-dimensional vector.">Vector3</a>&amp; start, const <a class="el" href="a00319.html" title="Three-dimensional vector.">Vector3</a>&amp; end, const <a class="el" href="a00319.html" title="Three-dimensional vector.">Vector3</a>&amp; extents=<a class="el" href="a00319.html#a402fdc96e79366f13803eb238a5623ed" title="(1,1,1) vector.">Vector3::ONE</a>, int maxVisited=3)</li>
-<li>PODVector&lt;Vector3&gt; FindPath(const <a class="el" href="a00319.html" title="Three-dimensional vector.">Vector3</a>&amp; start, const <a class="el" href="a00319.html" title="Three-dimensional vector.">Vector3</a>&amp; end, const <a class="el" href="a00319.html" title="Three-dimensional vector.">Vector3</a>&amp; extents = <a class="el" href="a00319.html#a402fdc96e79366f13803eb238a5623ed" title="(1,1,1) vector.">Vector3::ONE</a>)</li>
+<li>const PODVector&lt;Vector3&gt;&amp; FindPath(const <a class="el" href="a00319.html" title="Three-dimensional vector.">Vector3</a>&amp; start, const <a class="el" href="a00319.html" title="Three-dimensional vector.">Vector3</a>&amp; end, const <a class="el" href="a00319.html" title="Three-dimensional vector.">Vector3</a>&amp; extents = <a class="el" href="a00319.html#a402fdc96e79366f13803eb238a5623ed" title="(1,1,1) vector.">Vector3::ONE</a>)</li>
 <li><a class="el" href="a00319.html" title="Three-dimensional vector.">Vector3</a> GetRandomPoint()</li>
 <li><a class="el" href="a00319.html" title="Three-dimensional vector.">Vector3</a> GetRandomPointInCircle(const <a class="el" href="a00319.html" title="Three-dimensional vector.">Vector3</a>&amp; center, float radius, const <a class="el" href="a00319.html" title="Three-dimensional vector.">Vector3</a>&amp; extents = <a class="el" href="a00319.html#a402fdc96e79366f13803eb238a5623ed" title="(1,1,1) vector.">Vector3::ONE</a>)</li>
 <li>float GetDistanceToWall(const <a class="el" href="a00319.html" title="Three-dimensional vector.">Vector3</a>&amp; point, float radius, const <a class="el" href="a00319.html" title="Three-dimensional vector.">Vector3</a>&amp; extents = <a class="el" href="a00319.html#a402fdc96e79366f13803eb238a5623ed" title="(1,1,1) vector.">Vector3::ONE</a>)</li>
@@ -3295,7 +3255,7 @@ Classes</h1>
 <li>void SetInternalEdge(bool enable)</li>
 <li>void SetSplitImpulse(bool enable)</li>
 <li>void SetMaxNetworkAngularVelocity(float velocity)</li>
-<li>PODVector&lt;PhysicsRaycastResult&gt; Raycast(const <a class="el" href="a00230.html" title="Infinite straight line in three-dimensional space.">Ray</a>&amp; ray, float maxDistance, unsigned collisionMask = M_MAX_UNSIGNED)</li>
+<li>const PODVector&lt;PhysicsRaycastResult&gt;&amp; Raycast(const <a class="el" href="a00230.html" title="Infinite straight line in three-dimensional space.">Ray</a>&amp; ray, float maxDistance, unsigned collisionMask = M_MAX_UNSIGNED)</li>
 <li><a class="el" href="a00219.html" title="Physics raycast hit.">PhysicsRaycastResult</a> RaycastSingle(const <a class="el" href="a00230.html" title="Infinite straight line in three-dimensional space.">Ray</a>&amp; ray, float maxDistance, unsigned collisionMask = M_MAX_UNSIGNED)</li>
 <li><a class="el" href="a00219.html" title="Physics raycast hit.">PhysicsRaycastResult</a> SphereCast(const <a class="el" href="a00230.html" title="Infinite straight line in three-dimensional space.">Ray</a>&amp; ray, float radius, float maxDistance, unsigned collisionMask = M_MAX_UNSIGNED)</li>
 <li>void DrawDebugGeometry(bool depthTest)</li>
@@ -5354,9 +5314,6 @@ Global constants</h1>
 <h1><a class="anchor" id="LuaScriptAPI_RenameTypes"></a>
 Rename types</h1>
 <ul>
-<li>PODVector&lt;PhysicsRaycastResult&gt; becomes PhysicsRaycastResultVector</li>
-<li>PODVector&lt;OctreeQueryResult&gt; becomes OctreeQueryResultVector</li>
-<li>PODVector&lt;RayQueryResult&gt; becomes RayQueryResultVector</li>
 <li>SharedPtr&lt;HttpRequest&gt; becomes HttpRequestSPtr </li>
 </ul>
 </div></div><!-- contents -->
