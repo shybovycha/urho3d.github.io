@@ -36,6 +36,7 @@ Classes</h1>
 <li>bool IsInitialized() const</li>
 <li>float GetMasterGain(SoundType type) const</li>
 <li>SoundListener* GetListener() const</li>
+<li>const PODVector&lt;SoundSource*&gt;&amp; GetSoundSources() const</li>
 <li>void AddSoundSource(SoundSource* soundSource)</li>
 <li>void RemoveSoundSource(SoundSource* soundSource)</li>
 <li>float GetSoundSourceMasterGain(SoundType type) const</li>
@@ -46,10 +47,10 @@ Classes</h1>
 <li>unsigned sampleSize (readonly)</li>
 <li>int mixRate (readonly)</li>
 <li>bool interpolation (readonly)</li>
-<li>SoundListener* listener</li>
 <li>bool stereo (readonly)</li>
 <li>bool playing (readonly)</li>
 <li>bool initialized (readonly)</li>
+<li>SoundListener* listener</li>
 </ul>
 <h3><a class="el" href="a00279.html" title="Sound resource.">Sound</a> : <a class="el" href="a00244.html" title="Base class for resources.">Resource</a></h3>
 <p>Methods:</p>
@@ -114,7 +115,6 @@ Classes</h1>
 <li>bool IsPlaying() const</li>
 <li>void PlayLockless(Sound* sound)</li>
 <li>void StopLockless()</li>
-<li>void SetPlayPositionLockless(signed char* position)</li>
 </ul>
 <p>Properties:</p>
 <ul>
