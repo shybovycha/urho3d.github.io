@@ -20,7 +20,7 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00301.html">TextureCube</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00301.html">Texture3D</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -30,79 +30,75 @@ title: Documentation
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="a01060.html">List of all members</a>  </div>
+<a href="a01064.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::TextureCube Class Reference</div>  </div>
+<div class="title">Urho3D::Texture3D Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Cube texture resource.  
+<p>3D texture resource.  
  <a href="a00301.html#details">More...</a></p>
 
-<p><code>#include &lt;OGLTextureCube.h&gt;</code></p>
+<p><code>#include &lt;OGLTexture3D.h&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Urho3D::TextureCube:</div>
+Inheritance diagram for Urho3D::Texture3D:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a01061.svg" width="326" height="350"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a01065.svg" width="326" height="350"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
-Collaboration diagram for Urho3D::TextureCube:</div>
+Collaboration diagram for Urho3D::Texture3D:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01062.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01066.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a432a9566de525f124194de381e1e6ee4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a432a9566de525f124194de381e1e6ee4"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a432a9566de525f124194de381e1e6ee4">TextureCube</a> (<a class="el" href="a00096.html">Context</a> *context)</td></tr>
-<tr class="memdesc:a432a9566de525f124194de381e1e6ee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
-<tr class="separator:a432a9566de525f124194de381e1e6ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36e297c5fe31687516150214f0a7f375"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a36e297c5fe31687516150214f0a7f375"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a36e297c5fe31687516150214f0a7f375">~TextureCube</a> ()</td></tr>
-<tr class="memdesc:a36e297c5fe31687516150214f0a7f375"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
-<tr class="separator:a36e297c5fe31687516150214f0a7f375"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a121ad7baf18803a7c8c8171ef9a8c918"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a121ad7baf18803a7c8c8171ef9a8c918"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a121ad7baf18803a7c8c8171ef9a8c918">Load</a> (<a class="el" href="a00114.html">Deserializer</a> &amp;source)</td></tr>
-<tr class="memdesc:a121ad7baf18803a7c8c8171ef9a8c918"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load resource. Return true if successful. <br/></td></tr>
-<tr class="separator:a121ad7baf18803a7c8c8171ef9a8c918"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1b20924315c645f1bccc39614bb6866"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac1b20924315c645f1bccc39614bb6866"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#ac1b20924315c645f1bccc39614bb6866">OnDeviceLost</a> ()</td></tr>
-<tr class="memdesc:ac1b20924315c645f1bccc39614bb6866"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark the GPU resource destroyed on context destruction. <br/></td></tr>
-<tr class="separator:ac1b20924315c645f1bccc39614bb6866"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a675c122bfd43821e0cd6d97da2ac6d9b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a675c122bfd43821e0cd6d97da2ac6d9b"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a675c122bfd43821e0cd6d97da2ac6d9b">OnDeviceReset</a> ()</td></tr>
-<tr class="memdesc:a675c122bfd43821e0cd6d97da2ac6d9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recreate the GPU resource and restore data if applicable. <br/></td></tr>
-<tr class="separator:a675c122bfd43821e0cd6d97da2ac6d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ebd1cc4cd15641053a9b7a0c66f78b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ebd1cc4cd15641053a9b7a0c66f78b1"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a8ebd1cc4cd15641053a9b7a0c66f78b1">Release</a> ()</td></tr>
-<tr class="memdesc:a8ebd1cc4cd15641053a9b7a0c66f78b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release the texture. <br/></td></tr>
-<tr class="separator:a8ebd1cc4cd15641053a9b7a0c66f78b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f4e86d58b9442fbf5daf2549cac373a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f4e86d58b9442fbf5daf2549cac373a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a0f4e86d58b9442fbf5daf2549cac373a">SetSize</a> (int size, unsigned format, TextureUsage usage=TEXTURE_STATIC)</td></tr>
-<tr class="memdesc:a0f4e86d58b9442fbf5daf2549cac373a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set size, format and usage. Return true if successful. <br/></td></tr>
-<tr class="separator:a0f4e86d58b9442fbf5daf2549cac373a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cc2718c0f7797374c42a54b49c484a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3cc2718c0f7797374c42a54b49c484a6"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a3cc2718c0f7797374c42a54b49c484a6">SetData</a> (CubeMapFace face, unsigned level, int x, int y, int width, int height, const void *data)</td></tr>
-<tr class="memdesc:a3cc2718c0f7797374c42a54b49c484a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set data either partially or fully on a face's mip level. Return true if successful. <br/></td></tr>
-<tr class="separator:a3cc2718c0f7797374c42a54b49c484a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaac30f5fe6edf25ab8f35ade87a41769"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaac30f5fe6edf25ab8f35ade87a41769"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#aaac30f5fe6edf25ab8f35ade87a41769">Load</a> (CubeMapFace face, <a class="el" href="a00114.html">Deserializer</a> &amp;source)</td></tr>
-<tr class="memdesc:aaac30f5fe6edf25ab8f35ade87a41769"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load one face from a stream. Return true if successful. <br/></td></tr>
-<tr class="separator:aaac30f5fe6edf25ab8f35ade87a41769"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab415702d668f4c76686082b97eff209d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab415702d668f4c76686082b97eff209d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#ab415702d668f4c76686082b97eff209d">Load</a> (CubeMapFace face, <a class="el" href="a00273.html">SharedPtr</a>&lt; <a class="el" href="a00149.html">Image</a> &gt; image, bool useAlpha=false)</td></tr>
-<tr class="memdesc:ab415702d668f4c76686082b97eff209d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load one face from an image. Return true if successful. Optionally make a single channel image alpha-only. <br/></td></tr>
-<tr class="separator:ab415702d668f4c76686082b97eff209d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34090d59ab36b8a39d122c57c03b310d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34090d59ab36b8a39d122c57c03b310d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a34090d59ab36b8a39d122c57c03b310d">GetData</a> (CubeMapFace face, unsigned level, void *dest) const </td></tr>
-<tr class="memdesc:a34090d59ab36b8a39d122c57c03b310d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get data from a face's mip level. The destination buffer must be big enough. Return true if successful. <br/></td></tr>
-<tr class="separator:a34090d59ab36b8a39d122c57c03b310d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8791f53d6ab5340fa97cf8b8bc26c1f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa8791f53d6ab5340fa97cf8b8bc26c1f"></a>
-<a class="el" href="a00241.html">RenderSurface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#aa8791f53d6ab5340fa97cf8b8bc26c1f">GetRenderSurface</a> (CubeMapFace face) const </td></tr>
-<tr class="memdesc:aa8791f53d6ab5340fa97cf8b8bc26c1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return render surface for one face. <br/></td></tr>
-<tr class="separator:aa8791f53d6ab5340fa97cf8b8bc26c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a400df1d69414a21a4d59b60be9d5f2fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a400df1d69414a21a4d59b60be9d5f2fd"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a400df1d69414a21a4d59b60be9d5f2fd">Texture3D</a> (<a class="el" href="a00096.html">Context</a> *context)</td></tr>
+<tr class="memdesc:a400df1d69414a21a4d59b60be9d5f2fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
+<tr class="separator:a400df1d69414a21a4d59b60be9d5f2fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af01c403422a68b1cc06060f2290eaa0e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af01c403422a68b1cc06060f2290eaa0e"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#af01c403422a68b1cc06060f2290eaa0e">~Texture3D</a> ()</td></tr>
+<tr class="memdesc:af01c403422a68b1cc06060f2290eaa0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
+<tr class="separator:af01c403422a68b1cc06060f2290eaa0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa19adeea25e2feacf10056d2f8a1949"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa19adeea25e2feacf10056d2f8a1949"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#aaa19adeea25e2feacf10056d2f8a1949">Load</a> (<a class="el" href="a00114.html">Deserializer</a> &amp;source)</td></tr>
+<tr class="memdesc:aaa19adeea25e2feacf10056d2f8a1949"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load resource. Return true if successful. <br/></td></tr>
+<tr class="separator:aaa19adeea25e2feacf10056d2f8a1949"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7442d5ce9c53e32f0950ac80ea0f48a7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7442d5ce9c53e32f0950ac80ea0f48a7"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a7442d5ce9c53e32f0950ac80ea0f48a7">OnDeviceLost</a> ()</td></tr>
+<tr class="memdesc:a7442d5ce9c53e32f0950ac80ea0f48a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark the GPU resource destroyed on context destruction. <br/></td></tr>
+<tr class="separator:a7442d5ce9c53e32f0950ac80ea0f48a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1064926b694d83a5617b62f3d8556edc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1064926b694d83a5617b62f3d8556edc"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a1064926b694d83a5617b62f3d8556edc">OnDeviceReset</a> ()</td></tr>
+<tr class="memdesc:a1064926b694d83a5617b62f3d8556edc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recreate the GPU resource and restore data if applicable. <br/></td></tr>
+<tr class="separator:a1064926b694d83a5617b62f3d8556edc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4821432447851c352319241337c99db6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4821432447851c352319241337c99db6"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a4821432447851c352319241337c99db6">Release</a> ()</td></tr>
+<tr class="memdesc:a4821432447851c352319241337c99db6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release the texture. <br/></td></tr>
+<tr class="separator:a4821432447851c352319241337c99db6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca029903e75e685f2c73975c51ed0627"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca029903e75e685f2c73975c51ed0627"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#aca029903e75e685f2c73975c51ed0627">SetSize</a> (int width, int height, int depth, unsigned format, TextureUsage usage=TEXTURE_STATIC)</td></tr>
+<tr class="memdesc:aca029903e75e685f2c73975c51ed0627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set size, format and usage. Zero size will follow application window size. Return true if successful. <br/></td></tr>
+<tr class="separator:aca029903e75e685f2c73975c51ed0627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b5c66551839c003ab2949fc67ca19ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b5c66551839c003ab2949fc67ca19ed"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a0b5c66551839c003ab2949fc67ca19ed">SetData</a> (unsigned level, int x, int y, int z, int width, int height, int depth, const void *data)</td></tr>
+<tr class="memdesc:a0b5c66551839c003ab2949fc67ca19ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set data either partially or fully on a mip level. Return true if successful. <br/></td></tr>
+<tr class="separator:a0b5c66551839c003ab2949fc67ca19ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d8a67cf1c75b917eb9355e34ab99280"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d8a67cf1c75b917eb9355e34ab99280"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a4d8a67cf1c75b917eb9355e34ab99280">Load</a> (<a class="el" href="a00273.html">SharedPtr</a>&lt; <a class="el" href="a00149.html">Image</a> &gt; image, bool useAlpha=false)</td></tr>
+<tr class="memdesc:a4d8a67cf1c75b917eb9355e34ab99280"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load from an image. Return true if successful. Optionally make a single channel image alpha-only. <br/></td></tr>
+<tr class="separator:a4d8a67cf1c75b917eb9355e34ab99280"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93e782b5cb014923b5c7a232e4378ae5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a93e782b5cb014923b5c7a232e4378ae5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a93e782b5cb014923b5c7a232e4378ae5">GetData</a> (unsigned level, void *dest) const </td></tr>
+<tr class="memdesc:a93e782b5cb014923b5c7a232e4378ae5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get data from a mip level. The destination buffer must be big enough. Return true if successful. <br/></td></tr>
+<tr class="separator:a93e782b5cb014923b5c7a232e4378ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18adff1836450f72a8f3ebb99b972c6d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18adff1836450f72a8f3ebb99b972c6d"></a>
+<a class="el" href="a00241.html">RenderSurface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a18adff1836450f72a8f3ebb99b972c6d">GetRenderSurface</a> () const </td></tr>
+<tr class="memdesc:a18adff1836450f72a8f3ebb99b972c6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return render surface. <br/></td></tr>
+<tr class="separator:a18adff1836450f72a8f3ebb99b972c6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_a00299"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00299')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="a00299.html">Urho3D::Texture</a></td></tr>
 <tr class="memitem:a54625f883eb353b6c57b5da7b7d8eb86 inherit pub_methods_a00299"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54625f883eb353b6c57b5da7b7d8eb86"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00299.html#a54625f883eb353b6c57b5da7b7d8eb86">Texture</a> (<a class="el" href="a00096.html">Context</a> *context)</td></tr>
@@ -176,6 +172,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a0029
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00299.html#a1620a19d49cd5a72926a74b9b7205d7b">GetHeight</a> () const </td></tr>
 <tr class="memdesc:a1620a19d49cd5a72926a74b9b7205d7b inherit pub_methods_a00299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return height. <br/></td></tr>
 <tr class="separator:a1620a19d49cd5a72926a74b9b7205d7b inherit pub_methods_a00299"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab811c7dcead0b7c9dc20dc80d023201 inherit pub_methods_a00299"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab811c7dcead0b7c9dc20dc80d023201"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00299.html#aab811c7dcead0b7c9dc20dc80d023201">GetDepth</a> () const </td></tr>
+<tr class="memdesc:aab811c7dcead0b7c9dc20dc80d023201 inherit pub_methods_a00299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return height. <br/></td></tr>
+<tr class="separator:aab811c7dcead0b7c9dc20dc80d023201 inherit pub_methods_a00299"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c6760bb91c25cb9b5387eb9cae27a50 inherit pub_methods_a00299"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c6760bb91c25cb9b5387eb9cae27a50"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00299.html#a0c6760bb91c25cb9b5387eb9cae27a50">GetParametersDirty</a> () const </td></tr>
 <tr class="memdesc:a0c6760bb91c25cb9b5387eb9cae27a50 inherit pub_methods_a00299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether parameters are dirty. <br/></td></tr>
@@ -216,6 +216,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a0029
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00299.html#a7decf574bcc3d0a59fe8bf8ad5990ddd">GetLevelHeight</a> (unsigned level) const </td></tr>
 <tr class="memdesc:a7decf574bcc3d0a59fe8bf8ad5990ddd inherit pub_methods_a00299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return mip level width, or 0 if level does not exist. <br/></td></tr>
 <tr class="separator:a7decf574bcc3d0a59fe8bf8ad5990ddd inherit pub_methods_a00299"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaca6e12d4be4a44d584ef762931c7fc1 inherit pub_methods_a00299"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaca6e12d4be4a44d584ef762931c7fc1"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00299.html#aaca6e12d4be4a44d584ef762931c7fc1">GetLevelDepth</a> (unsigned level) const </td></tr>
+<tr class="memdesc:aaca6e12d4be4a44d584ef762931c7fc1 inherit pub_methods_a00299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return mip level depth, or 0 if level does not exist. <br/></td></tr>
+<tr class="separator:aaca6e12d4be4a44d584ef762931c7fc1 inherit pub_methods_a00299"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accfd1135de135343d3a31767fa164337 inherit pub_methods_a00299"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="accfd1135de135343d3a31767fa164337"></a>
 TextureUsage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00299.html#accfd1135de135343d3a31767fa164337">GetUsage</a> () const </td></tr>
 <tr class="memdesc:accfd1135de135343d3a31767fa164337 inherit pub_methods_a00299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return texture usage type. <br/></td></tr>
@@ -224,6 +228,10 @@ TextureUsage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00299.html#a95da7c17f8e62376ab7f823f8aae47ba">GetDataSize</a> (int width, int height) const </td></tr>
 <tr class="memdesc:a95da7c17f8e62376ab7f823f8aae47ba inherit pub_methods_a00299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return data size in bytes for a rectangular region. <br/></td></tr>
 <tr class="separator:a95da7c17f8e62376ab7f823f8aae47ba inherit pub_methods_a00299"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28dc6bed5af96b0751620aee10352912 inherit pub_methods_a00299"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a28dc6bed5af96b0751620aee10352912"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00299.html#a28dc6bed5af96b0751620aee10352912">GetDataSize</a> (int width, int height, int depth) const </td></tr>
+<tr class="memdesc:a28dc6bed5af96b0751620aee10352912 inherit pub_methods_a00299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return data size in bytes for a volume region. <br/></td></tr>
+<tr class="separator:a28dc6bed5af96b0751620aee10352912 inherit pub_methods_a00299"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d39342496ce5b9d685b49d5a6333cc2 inherit pub_methods_a00299"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d39342496ce5b9d685b49d5a6333cc2"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00299.html#a1d39342496ce5b9d685b49d5a6333cc2">GetRowDataSize</a> (int width) const </td></tr>
 <tr class="memdesc:a1d39342496ce5b9d685b49d5a6333cc2 inherit pub_methods_a00299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return data size in bytes for a pixel or block row. <br/></td></tr>
@@ -233,11 +241,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a002
 <tr class="memdesc:a3dc57d4df2026810d0b13851758d2993 inherit pub_methods_a00299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load parameters. <br/></td></tr>
 <tr class="separator:a3dc57d4df2026810d0b13851758d2993 inherit pub_methods_a00299"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51b6f259e31d074b81184774f33194f8 inherit pub_methods_a00299"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a51b6f259e31d074b81184774f33194f8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00299.html#a51b6f259e31d074b81184774f33194f8">LoadParameters</a> (<a class="el" href="a00334.html">XMLFile</a> *xml)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00299.html#a51b6f259e31d074b81184774f33194f8">LoadParameters</a> (<a class="el" href="a00335.html">XMLFile</a> *xml)</td></tr>
 <tr class="memdesc:a51b6f259e31d074b81184774f33194f8 inherit pub_methods_a00299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load parameters from an XML file. <br/></td></tr>
 <tr class="separator:a51b6f259e31d074b81184774f33194f8 inherit pub_methods_a00299"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a226291869d4811ca3515755f9bf6e78e inherit pub_methods_a00299"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a226291869d4811ca3515755f9bf6e78e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00299.html#a226291869d4811ca3515755f9bf6e78e">LoadParameters</a> (const <a class="el" href="a00333.html">XMLElement</a> &amp;element)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00299.html#a226291869d4811ca3515755f9bf6e78e">LoadParameters</a> (const <a class="el" href="a00334.html">XMLElement</a> &amp;element)</td></tr>
 <tr class="memdesc:a226291869d4811ca3515755f9bf6e78e inherit pub_methods_a00299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load parameters from an XML element. <br/></td></tr>
 <tr class="separator:a226291869d4811ca3515755f9bf6e78e inherit pub_methods_a00299"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af633d70298690db00993d6c89b2f0a50 inherit pub_methods_a00299"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af633d70298690db00993d6c89b2f0a50"></a>
@@ -443,10 +451,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ab9488d8f27411de9a3b324ed1230e0c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab9488d8f27411de9a3b324ed1230e0c1"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#ab9488d8f27411de9a3b324ed1230e0c1">RegisterObject</a> (<a class="el" href="a00096.html">Context</a> *context)</td></tr>
-<tr class="memdesc:ab9488d8f27411de9a3b324ed1230e0c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register object factory. <br/></td></tr>
-<tr class="separator:ab9488d8f27411de9a3b324ed1230e0c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64f80cd598c17742f276a890dddbac46"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a64f80cd598c17742f276a890dddbac46"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a64f80cd598c17742f276a890dddbac46">RegisterObject</a> (<a class="el" href="a00096.html">Context</a> *context)</td></tr>
+<tr class="memdesc:a64f80cd598c17742f276a890dddbac46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register object factory. <br/></td></tr>
+<tr class="separator:a64f80cd598c17742f276a890dddbac46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_a00299"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_a00299')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="a00299.html">Urho3D::Texture</a></td></tr>
 <tr class="memitem:a09c2fc9bd5347131e3a0126b109d07ab inherit pub_static_methods_a00299"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a09c2fc9bd5347131e3a0126b109d07ab"></a>
 static unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00299.html#a09c2fc9bd5347131e3a0126b109d07ab">GetExternalFormat</a> (unsigned format)</td></tr>
@@ -459,10 +467,10 @@ static unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:aff864e6bd980385675b0ab61b558f72d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff864e6bd980385675b0ab61b558f72d"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#aff864e6bd980385675b0ab61b558f72d">Create</a> ()</td></tr>
-<tr class="memdesc:aff864e6bd980385675b0ab61b558f72d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create texture. <br/></td></tr>
-<tr class="separator:aff864e6bd980385675b0ab61b558f72d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add639ed6e74a20946be1ea9ed262476f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add639ed6e74a20946be1ea9ed262476f"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#add639ed6e74a20946be1ea9ed262476f">Create</a> ()</td></tr>
+<tr class="memdesc:add639ed6e74a20946be1ea9ed262476f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create texture. <br/></td></tr>
+<tr class="separator:add639ed6e74a20946be1ea9ed262476f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_a00299"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_a00299')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="a00299.html">Urho3D::Texture</a></td></tr>
 <tr class="memitem:a68a2484dfb13a279abeabace8a7cee7f inherit pro_methods_a00299"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a68a2484dfb13a279abeabace8a7cee7f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00299.html#a68a2484dfb13a279abeabace8a7cee7f">CheckTextureBudget</a> (<a class="el" href="a00274.html">ShortStringHash</a> type)</td></tr>
@@ -471,24 +479,20 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a002
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a836f5b69f5bae85e80058f8112164272"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a836f5b69f5bae85e80058f8112164272"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>OBJECT</b> (<a class="el" href="a00301.html">TextureCube</a>)</td></tr>
-<tr class="separator:a836f5b69f5bae85e80058f8112164272"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a41368a06b2a91e729feae8441721ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a41368a06b2a91e729feae8441721ac"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a1a41368a06b2a91e729feae8441721ac">HandleRenderSurfaceUpdate</a> (<a class="el" href="a00292.html">StringHash</a> eventType, <a class="el" href="a00142.html">VariantMap</a> &amp;eventData)</td></tr>
-<tr class="memdesc:a1a41368a06b2a91e729feae8441721ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle render surface update event. <br/></td></tr>
-<tr class="separator:a1a41368a06b2a91e729feae8441721ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a122ccfe8b255dd57084fb408e7abfd7a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a122ccfe8b255dd57084fb408e7abfd7a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>OBJECT</b> (<a class="el" href="a00301.html">Texture3D</a>)</td></tr>
+<tr class="separator:a122ccfe8b255dd57084fb408e7abfd7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3f11b586d517a90a7b1a5e2a683d993"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3f11b586d517a90a7b1a5e2a683d993"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#ac3f11b586d517a90a7b1a5e2a683d993">HandleRenderSurfaceUpdate</a> (<a class="el" href="a00292.html">StringHash</a> eventType, <a class="el" href="a00142.html">VariantMap</a> &amp;eventData)</td></tr>
+<tr class="memdesc:ac3f11b586d517a90a7b1a5e2a683d993"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle render surface update event. <br/></td></tr>
+<tr class="separator:ac3f11b586d517a90a7b1a5e2a683d993"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a82159bec804709ec162bfd1765efb1ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82159bec804709ec162bfd1765efb1ae"></a>
-<a class="el" href="a00273.html">SharedPtr</a>&lt; <a class="el" href="a00241.html">RenderSurface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a82159bec804709ec162bfd1765efb1ae">renderSurfaces_</a> [MAX_CUBEMAP_FACES]</td></tr>
-<tr class="memdesc:a82159bec804709ec162bfd1765efb1ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render surfaces. <br/></td></tr>
-<tr class="separator:a82159bec804709ec162bfd1765efb1ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92a629eabe7529231c9829e3713b3ac5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a92a629eabe7529231c9829e3713b3ac5"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a92a629eabe7529231c9829e3713b3ac5">faceMemoryUse_</a> [MAX_CUBEMAP_FACES]</td></tr>
-<tr class="memdesc:a92a629eabe7529231c9829e3713b3ac5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Memory use per face. <br/></td></tr>
-<tr class="separator:a92a629eabe7529231c9829e3713b3ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa37d4f4cb628e300f976570daaea25ef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa37d4f4cb628e300f976570daaea25ef"></a>
+<a class="el" href="a00273.html">SharedPtr</a>&lt; <a class="el" href="a00241.html">RenderSurface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#aa37d4f4cb628e300f976570daaea25ef">renderSurface_</a></td></tr>
+<tr class="memdesc:aa37d4f4cb628e300f976570daaea25ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render surface. <br/></td></tr>
+<tr class="separator:aa37d4f4cb628e300f976570daaea25ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -521,6 +525,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a0029
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00299.html#af5331737f6ddfd1eb9f30073c096f3cd">height_</a></td></tr>
 <tr class="memdesc:af5331737f6ddfd1eb9f30073c096f3cd inherit pro_attribs_a00299"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00299.html" title="Base class for texture resources.">Texture</a> height. <br/></td></tr>
 <tr class="separator:af5331737f6ddfd1eb9f30073c096f3cd inherit pro_attribs_a00299"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac11c0fe852ea3d3a53d7794a2b2741b5 inherit pro_attribs_a00299"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac11c0fe852ea3d3a53d7794a2b2741b5"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00299.html#ac11c0fe852ea3d3a53d7794a2b2741b5">depth_</a></td></tr>
+<tr class="memdesc:ac11c0fe852ea3d3a53d7794a2b2741b5 inherit pro_attribs_a00299"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00299.html" title="Base class for texture resources.">Texture</a> depth. <br/></td></tr>
+<tr class="separator:ac11c0fe852ea3d3a53d7794a2b2741b5 inherit pro_attribs_a00299"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b09e174b858f7dc11153ee697fc41d8 inherit pro_attribs_a00299"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b09e174b858f7dc11153ee697fc41d8"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00299.html#a2b09e174b858f7dc11153ee697fc41d8">shadowCompare_</a></td></tr>
 <tr class="memdesc:a2b09e174b858f7dc11153ee697fc41d8 inherit pro_attribs_a00299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shadow compare mode, OpenGL only. <br/></td></tr>
@@ -555,9 +563,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a002
 <tr class="separator:a871713edc0c732ee10aabe80d687a200 inherit pro_attribs_a00299"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Cube texture resource. </p>
+<div class="textblock"><p>3D texture resource. </p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/OpenGL/OGLTextureCube.h</li>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/OpenGL/OGLTextureCube.cpp</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/OpenGL/OGLTexture3D.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/OpenGL/OGLTexture3D.cpp</li>
 </ul>
 </div><!-- contents -->
