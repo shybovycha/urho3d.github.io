@@ -4700,6 +4700,477 @@ Classes</h1>
 <li>unsigned format</li>
 <li>bool autoUpdate</li>
 </ul>
+<h1><a class="anchor" id="LuaScriptAPI_Enums"></a>
+Enumerations</h1>
+<h3>SoundType</h3>
+<ul>
+<li>int SOUND_EFFECT</li>
+<li>int SOUND_AMBIENT</li>
+<li>int SOUND_VOICE</li>
+<li>int SOUND_MUSIC</li>
+<li>int SOUND_MASTER</li>
+<li>int MAX_SOUND_TYPES</li>
+</ul>
+<h3>VariantType</h3>
+<ul>
+<li>int VAR_NONE</li>
+<li>int VAR_INT</li>
+<li>int VAR_BOOL</li>
+<li>int VAR_FLOAT</li>
+<li>int VAR_VECTOR2</li>
+<li>int VAR_VECTOR3</li>
+<li>int VAR_VECTOR4</li>
+<li>int VAR_QUATERNION</li>
+<li>int VAR_COLOR</li>
+<li>int VAR_STRING</li>
+<li>int VAR_BUFFER</li>
+<li>int VAR_PTR</li>
+<li>int VAR_RESOURCEREF</li>
+<li>int VAR_RESOURCEREFLIST</li>
+<li>int VAR_VARIANTVECTOR</li>
+<li>int VAR_VARIANTMAP</li>
+<li>int VAR_INTRECT</li>
+<li>int VAR_INTVECTOR2</li>
+<li>int MAX_VAR_TYPES</li>
+</ul>
+<h3>PrimitiveType</h3>
+<ul>
+<li>int TRIANGLE_LIST</li>
+<li>int LINE_LIST</li>
+</ul>
+<h3>GeometryType</h3>
+<ul>
+<li>int GEOM_STATIC</li>
+<li>int GEOM_SKINNED</li>
+<li>int GEOM_INSTANCED</li>
+<li>int GEOM_BILLBOARD</li>
+<li>int GEOM_STATIC_NOINSTANCING</li>
+<li>int MAX_GEOMETRYTYPES</li>
+</ul>
+<h3>BlendMode</h3>
+<ul>
+<li>int BLEND_REPLACE</li>
+<li>int BLEND_ADD</li>
+<li>int BLEND_MULTIPLY</li>
+<li>int BLEND_ALPHA</li>
+<li>int BLEND_ADDALPHA</li>
+<li>int BLEND_PREMULALPHA</li>
+<li>int BLEND_INVDESTALPHA</li>
+<li>int MAX_BLENDMODES</li>
+</ul>
+<h3>CompareMode</h3>
+<ul>
+<li>int CMP_ALWAYS</li>
+<li>int CMP_EQUAL</li>
+<li>int CMP_NOTEQUAL</li>
+<li>int CMP_LESS</li>
+<li>int CMP_LESSEQUAL</li>
+<li>int CMP_GREATER</li>
+<li>int CMP_GREATEREQUAL</li>
+<li>int MAX_COMPAREMODES</li>
+</ul>
+<h3>CullMode</h3>
+<ul>
+<li>int CULL_NONE</li>
+<li>int CULL_CCW</li>
+<li>int CULL_CW</li>
+<li>int MAX_CULLMODES</li>
+</ul>
+<h3>FillMode</h3>
+<ul>
+<li>int FILL_SOLID</li>
+<li>int FILL_WIREFRAME</li>
+<li>int FILL_POINT</li>
+</ul>
+<h3>StencilOp</h3>
+<ul>
+<li>int OP_KEEP</li>
+<li>int OP_ZERO</li>
+<li>int OP_REF</li>
+<li>int OP_INCR</li>
+<li>int OP_DECR</li>
+</ul>
+<h3>LockState</h3>
+<ul>
+<li>int LOCK_NONE</li>
+<li>int LOCK_HARDWARE</li>
+<li>int LOCK_SHADOW</li>
+<li>int LOCK_SCRATCH</li>
+</ul>
+<h3>VertexElement</h3>
+<ul>
+<li>int ELEMENT_POSITION</li>
+<li>int ELEMENT_NORMAL</li>
+<li>int ELEMENT_COLOR</li>
+<li>int ELEMENT_TEXCOORD1</li>
+<li>int ELEMENT_TEXCOORD2</li>
+<li>int ELEMENT_CUBETEXCOORD1</li>
+<li>int ELEMENT_CUBETEXCOORD2</li>
+<li>int ELEMENT_TANGENT</li>
+<li>int ELEMENT_BLENDWEIGHTS</li>
+<li>int ELEMENT_BLENDINDICES</li>
+<li>int ELEMENT_INSTANCEMATRIX1</li>
+<li>int ELEMENT_INSTANCEMATRIX2</li>
+<li>int ELEMENT_INSTANCEMATRIX3</li>
+<li>int MAX_VERTEX_ELEMENTS</li>
+</ul>
+<h3>TextureFilterMode</h3>
+<ul>
+<li>int FILTER_NEAREST</li>
+<li>int FILTER_BILINEAR</li>
+<li>int FILTER_TRILINEAR</li>
+<li>int FILTER_ANISOTROPIC</li>
+<li>int FILTER_DEFAULT</li>
+<li>int MAX_FILTERMODES</li>
+</ul>
+<h3>TextureAddressMode</h3>
+<ul>
+<li>int ADDRESS_WRAP</li>
+<li>int ADDRESS_MIRROR</li>
+<li>int ADDRESS_CLAMP</li>
+<li>int ADDRESS_BORDER</li>
+<li>int MAX_ADDRESSMODES</li>
+</ul>
+<h3>TextureCoordinate</h3>
+<ul>
+<li>int COORD_U</li>
+<li>int COORD_V</li>
+<li>int COORD_W</li>
+<li>int MAX_COORDS</li>
+</ul>
+<h3>TextureUsage</h3>
+<ul>
+<li>int TEXTURE_STATIC</li>
+<li>int TEXTURE_DYNAMIC</li>
+<li>int TEXTURE_RENDERTARGET</li>
+<li>int TEXTURE_DEPTHSTENCIL</li>
+</ul>
+<h3>CubeMapFace</h3>
+<ul>
+<li>int FACE_POSITIVE_X</li>
+<li>int FACE_NEGATIVE_X</li>
+<li>int FACE_POSITIVE_Y</li>
+<li>int FACE_NEGATIVE_Y</li>
+<li>int FACE_POSITIVE_Z</li>
+<li>int FACE_NEGATIVE_Z</li>
+<li>int MAX_CUBEMAP_FACES</li>
+</ul>
+<h3>RenderSurfaceUpdateMode</h3>
+<ul>
+<li>int SURFACE_MANUALUPDATE</li>
+<li>int SURFACE_UPDATEVISIBLE</li>
+<li>int SURFACE_UPDATEALWAYS</li>
+</ul>
+<h3>ShaderType</h3>
+<ul>
+<li>int VS</li>
+<li>int PS</li>
+</ul>
+<h3>TextureUnit</h3>
+<ul>
+<li>int TU_DIFFUSE</li>
+<li>int TU_ALBEDOBUFFER</li>
+<li>int TU_NORMAL</li>
+<li>int TU_NORMALBUFFER</li>
+<li>int TU_SPECULAR</li>
+<li>int TU_EMISSIVE</li>
+<li>int TU_ENVIRONMENT</li>
+<li>int MAX_MATERIAL_TEXTURE_UNITS</li>
+<li>int TU_LIGHTRAMP</li>
+<li>int TU_LIGHTSHAPE</li>
+<li>int TU_SHADOWMAP</li>
+<li>int TU_FACESELECT</li>
+<li>int TU_INDIRECTION</li>
+<li>int TU_DEPTHBUFFER</li>
+<li>int TU_LIGHTBUFFER</li>
+<li>int TU_VOLUMEMAP</li>
+<li>int MAX_TEXTURE_UNITS</li>
+</ul>
+<h3>ShaderParameterGroup</h3>
+<ul>
+<li>int SP_FRAME</li>
+<li>int SP_CAMERA</li>
+<li>int SP_VIEWPORT</li>
+<li>int SP_ZONE</li>
+<li>int SP_LIGHT</li>
+<li>int SP_VERTEXLIGHTS</li>
+<li>int SP_MATERIAL</li>
+<li>int SP_OBJECTTRANSFORM</li>
+<li>int MAX_SHADER_PARAMETER_GROUPS</li>
+</ul>
+<h3>UpdateGeometryType</h3>
+<ul>
+<li>int UPDATE_NONE</li>
+<li>int UPDATE_MAIN_THREAD</li>
+<li>int UPDATE_WORKER_THREAD</li>
+</ul>
+<h3>LightType</h3>
+<ul>
+<li>int LIGHT_DIRECTIONAL</li>
+<li>int LIGHT_SPOT</li>
+<li>int LIGHT_POINT</li>
+</ul>
+<h3>RayQueryLevel</h3>
+<ul>
+<li>int RAY_AABB_NOSUBOBJECTS</li>
+<li>int RAY_AABB</li>
+<li>int RAY_OBB</li>
+<li>int RAY_TRIANGLE</li>
+</ul>
+<h3>EmitterType</h3>
+<ul>
+<li>int EMITTER_SPHERE</li>
+<li>int EMITTER_BOX</li>
+</ul>
+<h3>LightVSVariation</h3>
+<ul>
+<li>int LVS_DIR</li>
+<li>int LVS_SPOT</li>
+<li>int LVS_POINT</li>
+<li>int LVS_SPEC</li>
+<li>int LVS_SPOTSPEC</li>
+<li>int LVS_POINTSPEC</li>
+<li>int LVS_SHADOW</li>
+<li>int LVS_SPOTSHADOW</li>
+<li>int LVS_POINTSHADOW</li>
+<li>int LVS_DIRSPECSHADOW</li>
+<li>int LVS_SPOTSPECSHADOW</li>
+<li>int LVS_POINTSPECSHADOW</li>
+<li>int MAX_LIGHT_VS_VARIATIONS</li>
+</ul>
+<h3>VertexLightVSVariation</h3>
+<ul>
+<li>int VLVS_NOLIGHTS</li>
+<li>int VLVS_1LIGHT</li>
+<li>int VLVS_2LIGHTS</li>
+<li>int VLVS_3LIGHTS</li>
+<li>int VLVS_4LIGHTS</li>
+<li>int MAX_VERTEXLIGHT_VS_VARIATIONS</li>
+</ul>
+<h3>LightPSVariation</h3>
+<ul>
+<li>int LPS_NONE</li>
+<li>int LPS_SPOT</li>
+<li>int LPS_POINT</li>
+<li>int LPS_POINTMASK</li>
+<li>int LPS_SPEC</li>
+<li>int LPS_SPOTSPEC</li>
+<li>int LPS_POINTSPEC</li>
+<li>int LPS_POINTMASKSPEC</li>
+<li>int LPS_SHADOW</li>
+<li>int LPS_SPOTSHADOW</li>
+<li>int LPS_POINTSHADOW</li>
+<li>int LPS_POINTMASKSHADOW</li>
+<li>int LPS_SHADOWSPEC</li>
+<li>int LPS_SPOTSHADOWSPEC</li>
+<li>int LPS_POINTSHADOWSPEC</li>
+<li>int LPS_POINTMASKSHADOWSPEC</li>
+<li>int MAX_LIGHT_PS_VARIATIONS</li>
+</ul>
+<h3>DeferredLightVSVariation</h3>
+<ul>
+<li>int DLVS_NONE</li>
+<li>int DLVS_DIR</li>
+<li>int DLVS_ORTHO</li>
+<li>int DLVS_ORTHODIR</li>
+<li>int MAX_DEFERRED_LIGHT_VS_VARIATIONS</li>
+</ul>
+<h3>DeferredLightPSVariation</h3>
+<ul>
+<li>int DLPS_NONE</li>
+<li>int DLPS_SPOT</li>
+<li>int DLPS_POINT</li>
+<li>int DLPS_POINTMASK</li>
+<li>int DLPS_SPEC</li>
+<li>int DLPS_SPOTSPEC</li>
+<li>int DLPS_POINTSPEC</li>
+<li>int DLPS_POINTMASKSPEC</li>
+<li>int DLPS_SHADOW</li>
+<li>int DLPS_SPOTSHADOW</li>
+<li>int DLPS_POINTSHADOW</li>
+<li>int DLPS_POINTMASKSHADOW</li>
+<li>int DLPS_SHADOWSPEC</li>
+<li>int DLPS_SPOTSHADOWSPEC</li>
+<li>int DLPS_POINTSHADOWSPEC</li>
+<li>int DLPS_POINTMASKSHADOWSPEC</li>
+<li>int DLPS_ORTHO</li>
+<li>int DLPS_ORTHOSPOT</li>
+<li>int DLPS_ORTHOPOINT</li>
+<li>int DLPS_ORTHOPOINTMASK</li>
+<li>int DLPS_ORTHOSPEC</li>
+<li>int DLPS_ORTHOSPOTSPEC</li>
+<li>int DLPS_ORTHOPOINTSPEC</li>
+<li>int DLPS_ORTHOPOINTMASKSPEC</li>
+<li>int DLPS_ORTHOSHADOW</li>
+<li>int DLPS_ORTHOSPOTSHADOW</li>
+<li>int DLPS_ORTHOPOINTSHADOW</li>
+<li>int DLPS_ORTHOPOINTMASKSHADOW</li>
+<li>int DLPS_ORTHOSHADOWSPEC</li>
+<li>int DLPS_ORTHOSPOTSHADOWSPEC</li>
+<li>int DLPS_ORTHOPOINTSHADOWSPEC</li>
+<li>int DLPS_ORTHOPOINTMASKSHADOWSPEC</li>
+<li>int MAX_DEFERRED_LIGHT_PS_VARIATIONS</li>
+</ul>
+<h3>PassLightingMode</h3>
+<ul>
+<li>int LIGHTING_UNLIT</li>
+<li>int LIGHTING_PERVERTEX</li>
+<li>int LIGHTING_PERPIXEL</li>
+</ul>
+<h3>FileMode</h3>
+<ul>
+<li>int FILE_READ</li>
+<li>int FILE_WRITE</li>
+<li>int FILE_READWRITE</li>
+</ul>
+<h3>Intersection</h3>
+<ul>
+<li>int OUTSIDE</li>
+<li>int INTERSECTS</li>
+<li>int INSIDE</li>
+</ul>
+<h3>FrustumPlane</h3>
+<ul>
+<li>int PLANE_NEAR</li>
+<li>int PLANE_LEFT</li>
+<li>int PLANE_RIGHT</li>
+<li>int PLANE_UP</li>
+<li>int PLANE_DOWN</li>
+<li>int PLANE_FAR</li>
+</ul>
+<h3>HttpRequestState</h3>
+<ul>
+<li>int HTTP_INITIALIZING</li>
+<li>int HTTP_ERROR</li>
+<li>int HTTP_OPEN</li>
+<li>int HTTP_CLOSED</li>
+</ul>
+<h3>ShapeType</h3>
+<ul>
+<li>int SHAPE_BOX</li>
+<li>int SHAPE_SPHERE</li>
+<li>int SHAPE_STATICPLANE</li>
+<li>int SHAPE_CYLINDER</li>
+<li>int SHAPE_CAPSULE</li>
+<li>int SHAPE_CONE</li>
+<li>int SHAPE_TRIANGLEMESH</li>
+<li>int SHAPE_CONVEXHULL</li>
+<li>int SHAPE_TERRAIN</li>
+</ul>
+<h3>ConstraintType</h3>
+<ul>
+<li>int CONSTRAINT_POINT</li>
+<li>int CONSTRAINT_HINGE</li>
+<li>int CONSTRAINT_SLIDER</li>
+<li>int CONSTRAINT_CONETWIST</li>
+</ul>
+<h3>CollisionEventMode</h3>
+<ul>
+<li>int COLLISION_NEVER</li>
+<li>int COLLISION_ACTIVE</li>
+<li>int COLLISION_ALWAYS</li>
+</ul>
+<h3>CompressedFormat</h3>
+<ul>
+<li>int CF_NONE</li>
+<li>int CF_DXT1</li>
+<li>int CF_DXT3</li>
+<li>int CF_DXT5</li>
+<li>int CF_ETC1</li>
+<li>int CF_PVRTC_RGB_2BPP</li>
+<li>int CF_PVRTC_RGBA_2BPP</li>
+<li>int CF_PVRTC_RGB_4BPP</li>
+<li>int CF_PVRTC_RGBA_4BPP</li>
+</ul>
+<h3>CreateMode</h3>
+<ul>
+<li>int REPLICATED</li>
+<li>int LOCAL</li>
+</ul>
+<h3>InterpolationMode</h3>
+<ul>
+<li>int BEZIER_CURVE</li>
+</ul>
+<h3>HorizontalAlignment</h3>
+<ul>
+<li>int HA_LEFT</li>
+<li>int HA_CENTER</li>
+<li>int HA_RIGHT</li>
+</ul>
+<h3>VerticalAlignment</h3>
+<ul>
+<li>int VA_TOP</li>
+<li>int VA_CENTER</li>
+<li>int VA_BOTTOM</li>
+</ul>
+<h3>Corner</h3>
+<ul>
+<li>int C_TOPLEFT</li>
+<li>int C_TOPRIGHT</li>
+<li>int C_BOTTOMLEFT</li>
+<li>int C_BOTTOMRIGHT</li>
+<li>int MAX_UIELEMENT_CORNERS</li>
+</ul>
+<h3>Orientation</h3>
+<ul>
+<li>int O_HORIZONTAL</li>
+<li>int O_VERTICAL</li>
+</ul>
+<h3>FocusMode</h3>
+<ul>
+<li>int FM_NOTFOCUSABLE</li>
+<li>int FM_RESETFOCUS</li>
+<li>int FM_FOCUSABLE</li>
+<li>int FM_FOCUSABLE_DEFOCUSABLE</li>
+</ul>
+<h3>LayoutMode</h3>
+<ul>
+<li>int LM_FREE</li>
+<li>int LM_HORIZONTAL</li>
+<li>int LM_VERTICAL</li>
+</ul>
+<h3>TraversalMode</h3>
+<ul>
+<li>int TM_BREADTH_FIRST</li>
+<li>int TM_DEPTH_FIRST</li>
+</ul>
+<h3>CursorShape</h3>
+<ul>
+<li>int CS_NORMAL</li>
+<li>int CS_RESIZEVERTICAL</li>
+<li>int CS_RESIZEDIAGONAL_TOPRIGHT</li>
+<li>int CS_RESIZEHORIZONTAL</li>
+<li>int CS_RESIZEDIAGONAL_TOPLEFT</li>
+<li>int CS_ACCEPTDROP</li>
+<li>int CS_REJECTDROP</li>
+<li>int CS_BUSY</li>
+<li>int CS_MAX_SHAPES</li>
+</ul>
+<h3>HighlightMode</h3>
+<ul>
+<li>int HM_NEVER</li>
+<li>int HM_FOCUS</li>
+<li>int HM_ALWAYS</li>
+</ul>
+<h3>TextEffect</h3>
+<ul>
+<li>int TE_NONE</li>
+<li>int TE_SHADOW</li>
+<li>int TE_STROKE</li>
+</ul>
+<h3>WindowDragMode</h3>
+<ul>
+<li>int DRAG_NONE</li>
+<li>int DRAG_MOVE</li>
+<li>int DRAG_RESIZE_TOPLEFT</li>
+<li>int DRAG_RESIZE_TOP</li>
+<li>int DRAG_RESIZE_TOPRIGHT</li>
+<li>int DRAG_RESIZE_RIGHT</li>
+<li>int DRAG_RESIZE_BOTTOMRIGHT</li>
+<li>int DRAG_RESIZE_BOTTOM</li>
+<li>int DRAG_RESIZE_BOTTOMLEFT</li>
+<li>int DRAG_RESIZE_LEFT</li>
+</ul>
 <h1><a class="anchor" id="LuaScriptAPI_GlobalFunctions"></a>
 Global functions</h1>
 <ul>
@@ -4994,322 +5465,6 @@ Global constants</h1>
 <li>unsigned DD_SOURCE</li>
 <li>unsigned DD_TARGET</li>
 <li>unsigned DD_SOURCE_AND_TARGET</li>
-<li>int SOUND_EFFECT</li>
-<li>int SOUND_AMBIENT</li>
-<li>int SOUND_VOICE</li>
-<li>int SOUND_MUSIC</li>
-<li>int SOUND_MASTER</li>
-<li>int MAX_SOUND_TYPES</li>
-<li>int VAR_NONE</li>
-<li>int VAR_INT</li>
-<li>int VAR_BOOL</li>
-<li>int VAR_FLOAT</li>
-<li>int VAR_VECTOR2</li>
-<li>int VAR_VECTOR3</li>
-<li>int VAR_VECTOR4</li>
-<li>int VAR_QUATERNION</li>
-<li>int VAR_COLOR</li>
-<li>int VAR_STRING</li>
-<li>int VAR_BUFFER</li>
-<li>int VAR_PTR</li>
-<li>int VAR_RESOURCEREF</li>
-<li>int VAR_RESOURCEREFLIST</li>
-<li>int VAR_VARIANTVECTOR</li>
-<li>int VAR_VARIANTMAP</li>
-<li>int VAR_INTRECT</li>
-<li>int VAR_INTVECTOR2</li>
-<li>int MAX_VAR_TYPES</li>
-<li>int TRIANGLE_LIST</li>
-<li>int LINE_LIST</li>
-<li>int GEOM_STATIC</li>
-<li>int GEOM_SKINNED</li>
-<li>int GEOM_INSTANCED</li>
-<li>int GEOM_BILLBOARD</li>
-<li>int GEOM_STATIC_NOINSTANCING</li>
-<li>int MAX_GEOMETRYTYPES</li>
-<li>int BLEND_REPLACE</li>
-<li>int BLEND_ADD</li>
-<li>int BLEND_MULTIPLY</li>
-<li>int BLEND_ALPHA</li>
-<li>int BLEND_ADDALPHA</li>
-<li>int BLEND_PREMULALPHA</li>
-<li>int BLEND_INVDESTALPHA</li>
-<li>int MAX_BLENDMODES</li>
-<li>int CMP_ALWAYS</li>
-<li>int CMP_EQUAL</li>
-<li>int CMP_NOTEQUAL</li>
-<li>int CMP_LESS</li>
-<li>int CMP_LESSEQUAL</li>
-<li>int CMP_GREATER</li>
-<li>int CMP_GREATEREQUAL</li>
-<li>int MAX_COMPAREMODES</li>
-<li>int CULL_NONE</li>
-<li>int CULL_CCW</li>
-<li>int CULL_CW</li>
-<li>int MAX_CULLMODES</li>
-<li>int FILL_SOLID</li>
-<li>int FILL_WIREFRAME</li>
-<li>int FILL_POINT</li>
-<li>int OP_KEEP</li>
-<li>int OP_ZERO</li>
-<li>int OP_REF</li>
-<li>int OP_INCR</li>
-<li>int OP_DECR</li>
-<li>int LOCK_NONE</li>
-<li>int LOCK_HARDWARE</li>
-<li>int LOCK_SHADOW</li>
-<li>int LOCK_SCRATCH</li>
-<li>int ELEMENT_POSITION</li>
-<li>int ELEMENT_NORMAL</li>
-<li>int ELEMENT_COLOR</li>
-<li>int ELEMENT_TEXCOORD1</li>
-<li>int ELEMENT_TEXCOORD2</li>
-<li>int ELEMENT_CUBETEXCOORD1</li>
-<li>int ELEMENT_CUBETEXCOORD2</li>
-<li>int ELEMENT_TANGENT</li>
-<li>int ELEMENT_BLENDWEIGHTS</li>
-<li>int ELEMENT_BLENDINDICES</li>
-<li>int ELEMENT_INSTANCEMATRIX1</li>
-<li>int ELEMENT_INSTANCEMATRIX2</li>
-<li>int ELEMENT_INSTANCEMATRIX3</li>
-<li>int MAX_VERTEX_ELEMENTS</li>
-<li>int FILTER_NEAREST</li>
-<li>int FILTER_BILINEAR</li>
-<li>int FILTER_TRILINEAR</li>
-<li>int FILTER_ANISOTROPIC</li>
-<li>int FILTER_DEFAULT</li>
-<li>int MAX_FILTERMODES</li>
-<li>int ADDRESS_WRAP</li>
-<li>int ADDRESS_MIRROR</li>
-<li>int ADDRESS_CLAMP</li>
-<li>int ADDRESS_BORDER</li>
-<li>int MAX_ADDRESSMODES</li>
-<li>int COORD_U</li>
-<li>int COORD_V</li>
-<li>int COORD_W</li>
-<li>int MAX_COORDS</li>
-<li>int TEXTURE_STATIC</li>
-<li>int TEXTURE_DYNAMIC</li>
-<li>int TEXTURE_RENDERTARGET</li>
-<li>int TEXTURE_DEPTHSTENCIL</li>
-<li>int FACE_POSITIVE_X</li>
-<li>int FACE_NEGATIVE_X</li>
-<li>int FACE_POSITIVE_Y</li>
-<li>int FACE_NEGATIVE_Y</li>
-<li>int FACE_POSITIVE_Z</li>
-<li>int FACE_NEGATIVE_Z</li>
-<li>int MAX_CUBEMAP_FACES</li>
-<li>int SURFACE_MANUALUPDATE</li>
-<li>int SURFACE_UPDATEVISIBLE</li>
-<li>int SURFACE_UPDATEALWAYS</li>
-<li>int VS</li>
-<li>int PS</li>
-<li>int TU_DIFFUSE</li>
-<li>int TU_ALBEDOBUFFER</li>
-<li>int TU_NORMAL</li>
-<li>int TU_NORMALBUFFER</li>
-<li>int TU_SPECULAR</li>
-<li>int TU_EMISSIVE</li>
-<li>int TU_ENVIRONMENT</li>
-<li>int MAX_MATERIAL_TEXTURE_UNITS</li>
-<li>int TU_LIGHTRAMP</li>
-<li>int TU_LIGHTSHAPE</li>
-<li>int TU_SHADOWMAP</li>
-<li>int TU_FACESELECT</li>
-<li>int TU_INDIRECTION</li>
-<li>int TU_DEPTHBUFFER</li>
-<li>int TU_LIGHTBUFFER</li>
-<li>int TU_VOLUMEMAP</li>
-<li>int MAX_TEXTURE_UNITS</li>
-<li>int SP_FRAME</li>
-<li>int SP_CAMERA</li>
-<li>int SP_VIEWPORT</li>
-<li>int SP_ZONE</li>
-<li>int SP_LIGHT</li>
-<li>int SP_VERTEXLIGHTS</li>
-<li>int SP_MATERIAL</li>
-<li>int SP_OBJECTTRANSFORM</li>
-<li>int MAX_SHADER_PARAMETER_GROUPS</li>
-<li>int UPDATE_NONE</li>
-<li>int UPDATE_MAIN_THREAD</li>
-<li>int UPDATE_WORKER_THREAD</li>
-<li>int LIGHT_DIRECTIONAL</li>
-<li>int LIGHT_SPOT</li>
-<li>int LIGHT_POINT</li>
-<li>int RAY_AABB_NOSUBOBJECTS</li>
-<li>int RAY_AABB</li>
-<li>int RAY_OBB</li>
-<li>int RAY_TRIANGLE</li>
-<li>int EMITTER_SPHERE</li>
-<li>int EMITTER_BOX</li>
-<li>int LVS_DIR</li>
-<li>int LVS_SPOT</li>
-<li>int LVS_POINT</li>
-<li>int LVS_SPEC</li>
-<li>int LVS_SPOTSPEC</li>
-<li>int LVS_POINTSPEC</li>
-<li>int LVS_SHADOW</li>
-<li>int LVS_SPOTSHADOW</li>
-<li>int LVS_POINTSHADOW</li>
-<li>int LVS_DIRSPECSHADOW</li>
-<li>int LVS_SPOTSPECSHADOW</li>
-<li>int LVS_POINTSPECSHADOW</li>
-<li>int MAX_LIGHT_VS_VARIATIONS</li>
-<li>int VLVS_NOLIGHTS</li>
-<li>int VLVS_1LIGHT</li>
-<li>int VLVS_2LIGHTS</li>
-<li>int VLVS_3LIGHTS</li>
-<li>int VLVS_4LIGHTS</li>
-<li>int MAX_VERTEXLIGHT_VS_VARIATIONS</li>
-<li>int LPS_NONE</li>
-<li>int LPS_SPOT</li>
-<li>int LPS_POINT</li>
-<li>int LPS_POINTMASK</li>
-<li>int LPS_SPEC</li>
-<li>int LPS_SPOTSPEC</li>
-<li>int LPS_POINTSPEC</li>
-<li>int LPS_POINTMASKSPEC</li>
-<li>int LPS_SHADOW</li>
-<li>int LPS_SPOTSHADOW</li>
-<li>int LPS_POINTSHADOW</li>
-<li>int LPS_POINTMASKSHADOW</li>
-<li>int LPS_SHADOWSPEC</li>
-<li>int LPS_SPOTSHADOWSPEC</li>
-<li>int LPS_POINTSHADOWSPEC</li>
-<li>int LPS_POINTMASKSHADOWSPEC</li>
-<li>int MAX_LIGHT_PS_VARIATIONS</li>
-<li>int DLVS_NONE</li>
-<li>int DLVS_DIR</li>
-<li>int DLVS_ORTHO</li>
-<li>int DLVS_ORTHODIR</li>
-<li>int MAX_DEFERRED_LIGHT_VS_VARIATIONS</li>
-<li>int DLPS_NONE</li>
-<li>int DLPS_SPOT</li>
-<li>int DLPS_POINT</li>
-<li>int DLPS_POINTMASK</li>
-<li>int DLPS_SPEC</li>
-<li>int DLPS_SPOTSPEC</li>
-<li>int DLPS_POINTSPEC</li>
-<li>int DLPS_POINTMASKSPEC</li>
-<li>int DLPS_SHADOW</li>
-<li>int DLPS_SPOTSHADOW</li>
-<li>int DLPS_POINTSHADOW</li>
-<li>int DLPS_POINTMASKSHADOW</li>
-<li>int DLPS_SHADOWSPEC</li>
-<li>int DLPS_SPOTSHADOWSPEC</li>
-<li>int DLPS_POINTSHADOWSPEC</li>
-<li>int DLPS_POINTMASKSHADOWSPEC</li>
-<li>int DLPS_ORTHO</li>
-<li>int DLPS_ORTHOSPOT</li>
-<li>int DLPS_ORTHOPOINT</li>
-<li>int DLPS_ORTHOPOINTMASK</li>
-<li>int DLPS_ORTHOSPEC</li>
-<li>int DLPS_ORTHOSPOTSPEC</li>
-<li>int DLPS_ORTHOPOINTSPEC</li>
-<li>int DLPS_ORTHOPOINTMASKSPEC</li>
-<li>int DLPS_ORTHOSHADOW</li>
-<li>int DLPS_ORTHOSPOTSHADOW</li>
-<li>int DLPS_ORTHOPOINTSHADOW</li>
-<li>int DLPS_ORTHOPOINTMASKSHADOW</li>
-<li>int DLPS_ORTHOSHADOWSPEC</li>
-<li>int DLPS_ORTHOSPOTSHADOWSPEC</li>
-<li>int DLPS_ORTHOPOINTSHADOWSPEC</li>
-<li>int DLPS_ORTHOPOINTMASKSHADOWSPEC</li>
-<li>int MAX_DEFERRED_LIGHT_PS_VARIATIONS</li>
-<li>int LIGHTING_UNLIT</li>
-<li>int LIGHTING_PERVERTEX</li>
-<li>int LIGHTING_PERPIXEL</li>
-<li>int FILE_READ</li>
-<li>int FILE_WRITE</li>
-<li>int FILE_READWRITE</li>
-<li>int OUTSIDE</li>
-<li>int INTERSECTS</li>
-<li>int INSIDE</li>
-<li>int PLANE_NEAR</li>
-<li>int PLANE_LEFT</li>
-<li>int PLANE_RIGHT</li>
-<li>int PLANE_UP</li>
-<li>int PLANE_DOWN</li>
-<li>int PLANE_FAR</li>
-<li>int HTTP_INITIALIZING</li>
-<li>int HTTP_ERROR</li>
-<li>int HTTP_OPEN</li>
-<li>int HTTP_CLOSED</li>
-<li>int SHAPE_BOX</li>
-<li>int SHAPE_SPHERE</li>
-<li>int SHAPE_STATICPLANE</li>
-<li>int SHAPE_CYLINDER</li>
-<li>int SHAPE_CAPSULE</li>
-<li>int SHAPE_CONE</li>
-<li>int SHAPE_TRIANGLEMESH</li>
-<li>int SHAPE_CONVEXHULL</li>
-<li>int SHAPE_TERRAIN</li>
-<li>int CONSTRAINT_POINT</li>
-<li>int CONSTRAINT_HINGE</li>
-<li>int CONSTRAINT_SLIDER</li>
-<li>int CONSTRAINT_CONETWIST</li>
-<li>int COLLISION_NEVER</li>
-<li>int COLLISION_ACTIVE</li>
-<li>int COLLISION_ALWAYS</li>
-<li>int CF_NONE</li>
-<li>int CF_DXT1</li>
-<li>int CF_DXT3</li>
-<li>int CF_DXT5</li>
-<li>int CF_ETC1</li>
-<li>int CF_PVRTC_RGB_2BPP</li>
-<li>int CF_PVRTC_RGBA_2BPP</li>
-<li>int CF_PVRTC_RGB_4BPP</li>
-<li>int CF_PVRTC_RGBA_4BPP</li>
-<li>int REPLICATED</li>
-<li>int LOCAL</li>
-<li>int BEZIER_CURVE</li>
-<li>int HA_LEFT</li>
-<li>int HA_CENTER</li>
-<li>int HA_RIGHT</li>
-<li>int VA_TOP</li>
-<li>int VA_CENTER</li>
-<li>int VA_BOTTOM</li>
-<li>int C_TOPLEFT</li>
-<li>int C_TOPRIGHT</li>
-<li>int C_BOTTOMLEFT</li>
-<li>int C_BOTTOMRIGHT</li>
-<li>int MAX_UIELEMENT_CORNERS</li>
-<li>int O_HORIZONTAL</li>
-<li>int O_VERTICAL</li>
-<li>int FM_NOTFOCUSABLE</li>
-<li>int FM_RESETFOCUS</li>
-<li>int FM_FOCUSABLE</li>
-<li>int FM_FOCUSABLE_DEFOCUSABLE</li>
-<li>int LM_FREE</li>
-<li>int LM_HORIZONTAL</li>
-<li>int LM_VERTICAL</li>
-<li>int TM_BREADTH_FIRST</li>
-<li>int TM_DEPTH_FIRST</li>
-<li>int CS_NORMAL</li>
-<li>int CS_RESIZEVERTICAL</li>
-<li>int CS_RESIZEDIAGONAL_TOPRIGHT</li>
-<li>int CS_RESIZEHORIZONTAL</li>
-<li>int CS_RESIZEDIAGONAL_TOPLEFT</li>
-<li>int CS_ACCEPTDROP</li>
-<li>int CS_REJECTDROP</li>
-<li>int CS_BUSY</li>
-<li>int CS_MAX_SHAPES</li>
-<li>int HM_NEVER</li>
-<li>int HM_FOCUS</li>
-<li>int HM_ALWAYS</li>
-<li>int TE_NONE</li>
-<li>int TE_SHADOW</li>
-<li>int TE_STROKE</li>
-<li>int DRAG_NONE</li>
-<li>int DRAG_MOVE</li>
-<li>int DRAG_RESIZE_TOPLEFT</li>
-<li>int DRAG_RESIZE_TOP</li>
-<li>int DRAG_RESIZE_TOPRIGHT</li>
-<li>int DRAG_RESIZE_RIGHT</li>
-<li>int DRAG_RESIZE_BOTTOMRIGHT</li>
-<li>int DRAG_RESIZE_BOTTOM</li>
-<li>int DRAG_RESIZE_BOTTOMLEFT</li>
-<li>int DRAG_RESIZE_LEFT</li>
 </ul>
 <h1><a class="anchor" id="LuaScriptAPI_RenameTypes"></a>
 Rename types</h1>
