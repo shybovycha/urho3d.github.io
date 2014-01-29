@@ -55,7 +55,7 @@ Classes</h1>
 <h3><a class="el" href="a00279.html" title="Sound resource.">Sound</a> : <a class="el" href="a00244.html" title="Base class for resources.">Resource</a></h3>
 <p>Methods:</p>
 <ul>
-<li>Sound(Context* context)</li>
+<li>Sound()</li>
 <li>~Sound()</li>
 <li>bool LoadRaw(Deserializer&amp; source)</li>
 <li>bool LoadWav(Deserializer&amp; source)</li>
@@ -1029,7 +1029,7 @@ Classes</h1>
 <h3><a class="el" href="a00176.html" title="Describes how to render 3D geometries.">Material</a> : <a class="el" href="a00244.html" title="Base class for resources.">Resource</a></h3>
 <p>Methods:</p>
 <ul>
-<li>Material(Context* context)</li>
+<li>Material()</li>
 <li>~Material()</li>
 <li>void SetNumTechniques(unsigned num)</li>
 <li>void SetTechnique(unsigned index, Technique* tech, unsigned qualityLevel = 0, float lodDistance = 0.0f)</li>
@@ -1656,7 +1656,7 @@ Classes</h1>
 <h3><a class="el" href="a00300.html" title="2D texture resource.">Texture2D</a> : <a class="el" href="a00299.html" title="Base class for texture resources.">Texture</a></h3>
 <p>Methods:</p>
 <ul>
-<li>Texture2D(Context* context)</li>
+<li>Texture2D()</li>
 <li>~Texture2D()</li>
 <li>bool SetSize(int width, int height, unsigned format, TextureUsage usage = TEXTURE_STATIC)</li>
 <li>RenderSurface* GetRenderSurface() const</li>
@@ -1673,9 +1673,9 @@ Classes</h1>
 <h3><a class="el" href="a00327.html" title="Viewport definition either for a render surface or the backbuffer.">Viewport</a></h3>
 <p>Methods:</p>
 <ul>
-<li>Viewport(Context* context)</li>
-<li><a class="el" href="a00327.html" title="Viewport definition either for a render surface or the backbuffer.">Viewport</a>(Context* context, Scene* scene, Camera* camera, RenderPath* renderPath = 0)</li>
-<li><a class="el" href="a00327.html" title="Viewport definition either for a render surface or the backbuffer.">Viewport</a>(Context* context, Scene* scene, Camera* camera, const <a class="el" href="a00153.html" title="Two-dimensional bounding rectangle with integer values.">IntRect</a>&amp; rect, RenderPath* renderPath = 0)</li>
+<li>Viewport()</li>
+<li><a class="el" href="a00327.html" title="Viewport definition either for a render surface or the backbuffer.">Viewport</a>(Scene* scene, Camera* camera, RenderPath* renderPath = 0)</li>
+<li><a class="el" href="a00327.html" title="Viewport definition either for a render surface or the backbuffer.">Viewport</a>(Scene* scene, Camera* camera, const <a class="el" href="a00153.html" title="Two-dimensional bounding rectangle with integer values.">IntRect</a>&amp; rect, RenderPath* renderPath = 0)</li>
 <li>~Viewport()</li>
 <li>void SetScene(Scene* scene)</li>
 <li>void SetCamera(Camera* camera)</li>
@@ -1786,9 +1786,9 @@ Classes</h1>
 <h3><a class="el" href="a00122.html" title="File opened either through the filesystem or from within a package file.">File</a> : <a class="el" href="a00201.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
 <p>Methods:</p>
 <ul>
-<li>File(Context* context)</li>
-<li><a class="el" href="a00122.html" title="File opened either through the filesystem or from within a package file.">File</a>(Context* context, const <a class="el" href="a00291.html" title="String class.">String</a> fileName, FileMode mode = FILE_READ)</li>
-<li>File(Context* context, PackageFile* package, const String fileName)</li>
+<li>File()</li>
+<li><a class="el" href="a00122.html" title="File opened either through the filesystem or from within a package file.">File</a>(const <a class="el" href="a00291.html" title="String class.">String</a> fileName, FileMode mode = FILE_READ)</li>
+<li>File(PackageFile* package, const String fileName)</li>
 <li>~File()</li>
 <li>bool Open(const <a class="el" href="a00291.html" title="String class.">String</a> fileName, FileMode mode = FILE_READ)</li>
 <li>bool Open(PackageFile* package, const String fileName)</li>
@@ -1947,8 +1947,8 @@ Classes</h1>
 <h3><a class="el" href="a00212.html" title="Stores files of a directory tree sequentially for convenient access.">PackageFile</a> : <a class="el" href="a00201.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
 <p>Methods:</p>
 <ul>
-<li>PackageFile(Context* context)</li>
-<li><a class="el" href="a00212.html" title="Stores files of a directory tree sequentially for convenient access.">PackageFile</a>(Context* context, const <a class="el" href="a00291.html" title="String class.">String</a> fileName, unsigned startOffset = 0)</li>
+<li>PackageFile()</li>
+<li><a class="el" href="a00212.html" title="Stores files of a directory tree sequentially for convenient access.">PackageFile</a>(const <a class="el" href="a00291.html" title="String class.">String</a> fileName, unsigned startOffset = 0)</li>
 <li>~PackageFile()</li>
 <li>bool Open(const <a class="el" href="a00291.html" title="String class.">String</a> fileName, unsigned startOffset = 0)</li>
 <li>bool Exists(const String fileName) const</li>
@@ -3549,7 +3549,7 @@ Classes</h1>
 <h3><a class="el" href="a00197.html" title="Scene node that may contain components and child nodes.">Node</a> : <a class="el" href="a00262.html" title="Base class for objects with automatic serialization through attributes.">Serializable</a></h3>
 <p>Methods:</p>
 <ul>
-<li>Node(Context* context)</li>
+<li>Node()</li>
 <li>virtual ~Node()</li>
 <li>bool SaveXML(File* dest) const</li>
 <li>void SetName(const String name)</li>
@@ -3705,7 +3705,7 @@ Classes</h1>
 <h3><a class="el" href="a00250.html" title="Root scene node, represents the whole scene.">Scene</a> : <a class="el" href="a00197.html" title="Scene node that may contain components and child nodes.">Node</a></h3>
 <p>Methods:</p>
 <ul>
-<li>Scene(Context* context)</li>
+<li>Scene()</li>
 <li>virtual ~Scene()</li>
 <li>bool Load(File* source)</li>
 <li>bool Save(File* dest) const</li>
@@ -3796,7 +3796,7 @@ Classes</h1>
 <h3><a class="el" href="a00312.html" title="Base class for UI elements.">UIElement</a> : <a class="el" href="a00262.html" title="Base class for objects with automatic serialization through attributes.">Serializable</a></h3>
 <p>Methods:</p>
 <ul>
-<li>UIElement(Context* context)</li>
+<li>UIElement()</li>
 <li>virtual ~UIElement()</li>
 <li>virtual const <a class="el" href="a00154.html" title="Two-dimensional vector with integer values.">IntVector2</a>&amp; GetScreenPosition() const</li>
 <li>bool LoadXML(Deserializer&amp; source)</li>
@@ -3995,7 +3995,7 @@ Classes</h1>
 <h3><a class="el" href="a00075.html" title="Image UI element with optional border.">BorderImage</a> : <a class="el" href="a00312.html" title="Base class for UI elements.">UIElement</a></h3>
 <p>Methods:</p>
 <ul>
-<li>BorderImage(Context* context)</li>
+<li>BorderImage()</li>
 <li>virtual ~BorderImage()</li>
 <li>void SetTexture(Texture* texture)</li>
 <li>void SetImageRect(const IntRect&amp; rect)</li>
@@ -4027,7 +4027,7 @@ Classes</h1>
 <h3><a class="el" href="a00078.html" title="Pushbutton UI element.">Button</a> : <a class="el" href="a00075.html" title="Image UI element with optional border.">BorderImage</a></h3>
 <p>Methods:</p>
 <ul>
-<li>Button(Context* context)</li>
+<li>Button()</li>
 <li>virtual ~Button()</li>
 <li>void SetPressedOffset(const IntVector2&amp; offset)</li>
 <li>void SetPressedOffset(int x, int y)</li>
@@ -4053,7 +4053,7 @@ Classes</h1>
 <h3><a class="el" href="a00081.html" title="UI element that can be toggled between unchecked and checked state.">CheckBox</a> : <a class="el" href="a00075.html" title="Image UI element with optional border.">BorderImage</a></h3>
 <p>Methods:</p>
 <ul>
-<li>CheckBox(Context* context)</li>
+<li>CheckBox()</li>
 <li>virtual ~CheckBox()</li>
 <li>void SetChecked(bool enable)</li>
 <li>void SetCheckedOffset(const IntVector2&amp; rect)</li>
@@ -4069,7 +4069,7 @@ Classes</h1>
 <h3><a class="el" href="a00101.html" title="Mouse cursor UI element.">Cursor</a> : <a class="el" href="a00075.html" title="Image UI element with optional border.">BorderImage</a></h3>
 <p>Methods:</p>
 <ul>
-<li>Cursor(Context* context)</li>
+<li>Cursor()</li>
 <li>virtual ~Cursor()</li>
 <li>void DefineShape(CursorShape shape, Image* image, const IntRect&amp; imageRect, const IntVector2&amp; hotSpot)</li>
 <li>void SetShape(CursorShape shape)</li>
@@ -4092,7 +4092,7 @@ Classes</h1>
 <h3><a class="el" href="a00123.html" title="File selector dialog.">FileSelector</a> : <a class="el" href="a00201.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
 <p>Methods:</p>
 <ul>
-<li>FileSelector(Context* context)</li>
+<li>FileSelector()</li>
 <li>virtual ~FileSelector()</li>
 <li>void SetDefaultStyle(XMLFile* style)</li>
 <li>void SetTitle(const String text)</li>
@@ -4143,7 +4143,7 @@ Classes</h1>
 <h3><a class="el" href="a00163.html" title="Single-line text editor UI element.">LineEdit</a> : <a class="el" href="a00075.html" title="Image UI element with optional border.">BorderImage</a></h3>
 <p>Methods:</p>
 <ul>
-<li>LineEdit(Context* context)</li>
+<li>LineEdit()</li>
 <li>virtual ~LineEdit()</li>
 <li>void SetText(const String text)</li>
 <li>void SetCursorPosition(unsigned position)</li>
@@ -4180,7 +4180,7 @@ Classes</h1>
 <h3><a class="el" href="a00182.html" title="Menu UI element that optionally shows a popup.">Menu</a> : <a class="el" href="a00078.html" title="Pushbutton UI element.">Button</a></h3>
 <p>Methods:</p>
 <ul>
-<li>Menu(Context* context)</li>
+<li>Menu()</li>
 <li>virtual ~Menu()</li>
 <li>void SetPopup(UIElement* element)</li>
 <li>void SetPopupOffset(const IntVector2&amp; offset)</li>
@@ -4204,7 +4204,7 @@ Classes</h1>
 <h3><a class="el" href="a00183.html" title="Message box dialog.">MessageBox</a> : <a class="el" href="a00201.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
 <p>Methods:</p>
 <ul>
-<li><a class="el" href="a00183.html" title="Message box dialog.">MessageBox</a>(Context* context, const <a class="el" href="a00291.html" title="String class.">String</a>&amp; messageString = <a class="el" href="a00291.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>, const <a class="el" href="a00291.html" title="String class.">String</a>&amp; titleString = <a class="el" href="a00291.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>, XMLFile* layoutFile = 0, XMLFile* styleFile = 0)</li>
+<li><a class="el" href="a00183.html" title="Message box dialog.">MessageBox</a>(const <a class="el" href="a00291.html" title="String class.">String</a>&amp; messageString = <a class="el" href="a00291.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>, const <a class="el" href="a00291.html" title="String class.">String</a>&amp; titleString = <a class="el" href="a00291.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>, XMLFile* layoutFile = 0, XMLFile* styleFile = 0)</li>
 <li>virtual ~MessageBox()</li>
 <li>void SetTitle(const String&amp; text)</li>
 <li>void SetMessage(const String&amp; text)</li>
@@ -4221,7 +4221,7 @@ Classes</h1>
 <h3><a class="el" href="a00117.html" title="Menu UI element that displays a popup list view.">DropDownList</a> : <a class="el" href="a00182.html" title="Menu UI element that optionally shows a popup.">Menu</a></h3>
 <p>Methods:</p>
 <ul>
-<li>DropDownList(Context* context)</li>
+<li>DropDownList()</li>
 <li>~DropDownList()</li>
 <li>void AddItem(UIElement* item)</li>
 <li>void InsertItem(unsigned index, UIElement* item)</li>
@@ -4255,7 +4255,7 @@ Classes</h1>
 <h3><a class="el" href="a00277.html" title="Slider bar UI element.">Slider</a> : <a class="el" href="a00075.html" title="Image UI element with optional border.">BorderImage</a></h3>
 <p>Methods:</p>
 <ul>
-<li>Slider(Context* context)</li>
+<li>Slider()</li>
 <li>virtual ~Slider()</li>
 <li>void SetOrientation(Orientation orientation)</li>
 <li>void SetRange(float range)</li>
@@ -4279,7 +4279,7 @@ Classes</h1>
 <h3><a class="el" href="a00260.html" title="Scroll bar UI element with forward and back buttons.">ScrollBar</a> : <a class="el" href="a00312.html" title="Base class for UI elements.">UIElement</a></h3>
 <p>Methods:</p>
 <ul>
-<li>ScrollBar(Context* context)</li>
+<li>ScrollBar()</li>
 <li>virtual ~ScrollBar()</li>
 <li>void SetOrientation(Orientation orientation)</li>
 <li>void SetRange(float range)</li>
@@ -4314,7 +4314,7 @@ Classes</h1>
 <h3><a class="el" href="a00261.html" title="Scrollable UI element for showing a (possibly large) child element.">ScrollView</a> : <a class="el" href="a00312.html" title="Base class for UI elements.">UIElement</a></h3>
 <p>Methods:</p>
 <ul>
-<li>ScrollView(Context* context)</li>
+<li>ScrollView()</li>
 <li>virtual ~ScrollView()</li>
 <li>void SetContentElement(UIElement* element)</li>
 <li>void SetViewPosition(const IntVector2&amp; position)</li>
@@ -4347,7 +4347,7 @@ Classes</h1>
 <h3><a class="el" href="a00170.html" title="Scrollable list UI element.">ListView</a> : <a class="el" href="a00261.html" title="Scrollable UI element for showing a (possibly large) child element.">ScrollView</a></h3>
 <p>Methods:</p>
 <ul>
-<li>ListView(Context* context)</li>
+<li>ListView()</li>
 <li>virtual ~ListView()</li>
 <li>void AddItem(UIElement* item)</li>
 <li>void InsertItem(unsigned index, UIElement* item, UIElement* parentItem = 0)</li>
@@ -4398,7 +4398,7 @@ Classes</h1>
 <h3><a class="el" href="a00287.html" title="UI element which allows sub-pixel positioning and size, as well as rotation. Only other Sprites shoul...">Sprite</a> : <a class="el" href="a00312.html" title="Base class for UI elements.">UIElement</a></h3>
 <p>Methods:</p>
 <ul>
-<li>Sprite(Context* context)</li>
+<li>Sprite()</li>
 <li>virtual ~Sprite()</li>
 <li>void SetPosition(const Vector2&amp; position)</li>
 <li>void SetPosition(float x, float y)</li>
@@ -4438,7 +4438,7 @@ Classes</h1>
 <h3><a class="el" href="a00297.html" title="Text UI element.">Text</a> : <a class="el" href="a00312.html" title="Base class for UI elements.">UIElement</a></h3>
 <p>Methods:</p>
 <ul>
-<li>Text(Context* context)</li>
+<li>Text()</li>
 <li>virtual ~Text()</li>
 <li>bool SetFont(const <a class="el" href="a00291.html" title="String class.">String</a> fontName, int size = DEFAULT_FONT_SIZE)</li>
 <li>bool SetFont(Font* font, int size = DEFAULT_FONT_SIZE)</li>
@@ -4495,7 +4495,7 @@ Classes</h1>
 <h3><a class="el" href="a00298.html" title="3D text component.">Text3D</a> : <a class="el" href="a00116.html" title="Base class for visible components.">Drawable</a></h3>
 <p>Methods:</p>
 <ul>
-<li>Text3D(Context* context)</li>
+<li>Text3D()</li>
 <li>~Text3D()</li>
 <li>bool SetFont(const <a class="el" href="a00291.html" title="String class.">String</a> fontName, int size = DEFAULT_FONT_SIZE)</li>
 <li>bool SetFont(Font* font, int size = DEFAULT_FONT_SIZE)</li>
@@ -4567,7 +4567,7 @@ Classes</h1>
 <h3><a class="el" href="a00307.html" title="Tooltip UI element.">ToolTip</a> : <a class="el" href="a00312.html" title="Base class for UI elements.">UIElement</a></h3>
 <p>Methods:</p>
 <ul>
-<li>ToolTip(Context* context)</li>
+<li>ToolTip()</li>
 <li>virtual ~ToolTip()</li>
 <li>void SetDelay(float delay)</li>
 <li>float GetDelay() const</li>
@@ -4646,7 +4646,7 @@ Classes</h1>
 <h3><a class="el" href="a00330.html" title="Window UI element that can optionally by moved or resized.">Window</a> : <a class="el" href="a00075.html" title="Image UI element with optional border.">BorderImage</a></h3>
 <p>Methods:</p>
 <ul>
-<li>Window(Context* context)</li>
+<li>Window()</li>
 <li>virtual ~Window()</li>
 <li>void SetMovable(bool enable)</li>
 <li>void SetResizable(bool enable)</li>
@@ -4682,7 +4682,7 @@ Classes</h1>
 <h3><a class="el" href="a00326.html" title="UI element which renders a 3D scene.">View3D</a> : <a class="el" href="a00330.html" title="Window UI element that can optionally by moved or resized.">Window</a></h3>
 <p>Methods:</p>
 <ul>
-<li>View3D(Context* context)</li>
+<li>View3D()</li>
 <li>~View3D()</li>
 <li>void SetView(Scene* scene, Camera* camera)</li>
 <li>void SetFormat(unsigned format)</li>
