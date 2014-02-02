@@ -60,6 +60,9 @@ Classes</h1>
 <li>bool LoadRaw(Deserializer&amp; source)</li>
 <li>bool LoadWav(Deserializer&amp; source)</li>
 <li>bool LoadOggVorbis(Deserializer&amp; source)</li>
+<li>bool LoadRaw(const String fileName)</li>
+<li>bool LoadWav(const String fileName)</li>
+<li>bool LoadOggVorbis(const String fileName)</li>
 <li>void SetSize(unsigned dataSize)</li>
 <li>void SetData(const void* data, unsigned dataSize)</li>
 <li>void SetFormat(unsigned frequency, bool sixteenBit, bool stereo)</li>
@@ -158,7 +161,7 @@ Classes</h1>
 <ul>
 <li>Object* GetEventSender() const</li>
 <li>EventHandler* GetEventHandler() const</li>
-<li>const <a class="el" href="a00291.html" title="String class.">String</a> GetTypeName(ShortStringHash type) const</li>
+<li>const <a class="el" href="a00291.html" title="String class.">String</a> GetTypeName(ShortStringHash objectType) const</li>
 </ul>
 <h3><a class="el" href="a00201.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a> : <a class="el" href="a00236.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable.">RefCounted</a></h3>
 <p>Methods:</p>
@@ -3382,6 +3385,10 @@ Classes</h1>
 <h3><a class="el" href="a00244.html" title="Base class for resources.">Resource</a></h3>
 <p>Methods:</p>
 <ul>
+<li>bool Load(Deserializer&amp; source)</li>
+<li>bool Save(Serializer&amp; dest) const</li>
+<li>bool Load(const String fileName)</li>
+<li>bool Save(const String fileName) const</li>
 <li>const <a class="el" href="a00291.html" title="String class.">String</a> GetName() const</li>
 <li><a class="el" href="a00292.html" title="32-bit hash value for a string.">StringHash</a> GetNameHash() const</li>
 <li>unsigned GetMemoryUse() const</li>
@@ -3397,6 +3404,8 @@ Classes</h1>
 <ul>
 <li>Image()</li>
 <li>~Image()</li>
+<li>bool LoadColorLUT(Deserializer&amp; source)</li>
+<li>bool LoadColorLUT(const String&amp; fileName)</li>
 <li>void FlipVertical()</li>
 <li>bool SaveBMP(const String fileName)</li>
 <li>bool SavePNG(const String fileName)</li>
@@ -3404,6 +3413,7 @@ Classes</h1>
 <li>bool SaveJPG(const String fileName, int quality)</li>
 <li>int GetWidth() const</li>
 <li>int GetHeight() const</li>
+<li>int GetDepth() const</li>
 <li>unsigned GetComponents() const</li>
 <li>bool IsCompressed() const</li>
 <li>CompressedFormat GetCompressedFormat() const</li>
@@ -3414,6 +3424,7 @@ Classes</h1>
 <ul>
 <li>int width (readonly)</li>
 <li>int height (readonly)</li>
+<li>int depth (readonly)</li>
 <li>unsigned components (readonly)</li>
 <li>bool compressed (readonly)</li>
 <li>CompressedFormat compressedFormat (readonly)</li>
@@ -3521,6 +3532,9 @@ Classes</h1>
 <h3><a class="el" href="a00335.html" title="XML document resource.">XMLFile</a> : <a class="el" href="a00244.html" title="Base class for resources.">Resource</a></h3>
 <p>Methods:</p>
 <ul>
+<li>XMLFile()</li>
+<li>~XMLFile()</li>
+<li><a class="el" href="a00334.html" title="Element in an XML file.">XMLElement</a> CreateRoot(const <a class="el" href="a00291.html" title="String class.">String</a> name = <a class="el" href="a00291.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>)</li>
 <li><a class="el" href="a00334.html" title="Element in an XML file.">XMLElement</a> GetRoot(const <a class="el" href="a00291.html" title="String class.">String</a> name = <a class="el" href="a00291.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>)</li>
 <li>void Patch(XMLFile* patchFile)</li>
 <li>void Patch(XMLElement patchElement)</li>
