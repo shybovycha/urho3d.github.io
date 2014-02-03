@@ -5173,22 +5173,10 @@ Enumerations</h1>
 <h1><a class="anchor" id="LuaScriptAPI_GlobalFunctions"></a>
 Global functions</h1>
 <ul>
+<li>Audio* GetAudio()</li>
 <li>Context* GetContext()</li>
 <li>Object* GetEventSender()</li>
 <li>EventHandler* GetEventHandler() const</li>
-<li>Audio* GetAudio()</li>
-<li>Console* GetConsole()</li>
-<li>DebugHud* GetDebugHud()</li>
-<li>Engine* GetEngine()</li>
-<li>FileSystem* GetFileSystem()</li>
-<li>Graphics* GetGraphics()</li>
-<li>Input* GetInput()</li>
-<li>Log* GetLog()</li>
-<li>Network* GetNetwork()</li>
-<li>Renderer* GetRenderer()</li>
-<li>ResourceCache* GetCache()</li>
-<li>Time* GetTime()</li>
-<li>UI* GetUI()</li>
 <li>void ErrorDialog(const String title, const String message)</li>
 <li>void ErrorExit(const <a class="el" href="a00291.html" title="String class.">String</a> message = <a class="el" href="a00291.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>, int exitCode = EXIT_FAILURE)</li>
 <li>void OpenConsoleWindow()</li>
@@ -5216,6 +5204,12 @@ Global functions</h1>
 <li>bool IsDigit(unsigned ch)</li>
 <li>unsigned ToUpper(unsigned ch)</li>
 <li>unsigned ToLower(unsigned ch)</li>
+<li>Time* GetTime()</li>
+<li>Console* GetConsole()</li>
+<li>DebugHud* GetDebugHud()</li>
+<li>Engine* GetEngine()</li>
+<li>Graphics* GetGraphics()</li>
+<li>Renderer* GetRenderer()</li>
 <li><a class="el" href="a00291.html" title="String class.">String</a> GetPath(const String fullPath)</li>
 <li><a class="el" href="a00291.html" title="String class.">String</a> GetFileName(const String fullPath)</li>
 <li><a class="el" href="a00291.html" title="String class.">String</a> GetExtension(const <a class="el" href="a00291.html" title="String class.">String</a> fullPath, bool lowercaseExtension = true)</li>
@@ -5227,6 +5221,9 @@ Global functions</h1>
 <li><a class="el" href="a00291.html" title="String class.">String</a> GetInternalPath(const String pathName)</li>
 <li><a class="el" href="a00291.html" title="String class.">String</a> GetNativePath(const String pathName)</li>
 <li>bool IsAbsolutePath(const String pathName)</li>
+<li><a class="el" href="a00125.html" title="Subsystem for file and directory operations and access control.">FileSystem</a> * GetFileSystem()</li>
+<li>Log* GetLog()</li>
+<li>Input* GetInput()</li>
 <li>void SendEvent(const String eventName, VariantMap&amp; eventData)</li>
 <li>void SubscribeToEvent(const String eventName, const String functionName)</li>
 <li>void UnsubscribeFromEvent(const String eventName)</li>
@@ -5250,15 +5247,23 @@ Global functions</h1>
 <li>void SetRandomSeed(unsigned seed)</li>
 <li>unsigned GetRandomSeed()</li>
 <li>int Rand()</li>
+<li>Network* GetNetwork()</li>
+<li>ResourceCache* GetCache()</li>
+<li>UI* GetUI()</li>
 </ul>
 <h1><a class="anchor" id="LuaScriptAPI_GlobalConstants"></a>
 Global constants</h1>
 <ul>
+<li>tolua_readonly tolua_property__get_set Audio* audio</li>
+<li>tolua_readonly tolua_property__get_set Time* time</li>
+<li>tolua_readonly tolua_property__get_set Console* console</li>
 <li>unsigned DEBUGHUD_SHOW_NONE</li>
 <li>unsigned DEBUGHUD_SHOW_STATS</li>
 <li>unsigned DEBUGHUD_SHOW_MODE</li>
 <li>unsigned DEBUGHUD_SHOW_PROFILER</li>
 <li>unsigned DEBUGHUD_SHOW_ALL</li>
+<li>tolua_readonly tolua_property__get_set DebugHud* debugHud</li>
+<li>tolua_readonly tolua_property__get_set Engine* engine</li>
 <li>int QUALITY_LOW</li>
 <li>int QUALITY_MEDIUM</li>
 <li>int QUALITY_HIGH</li>
@@ -5287,16 +5292,21 @@ Global constants</h1>
 <li>unsigned VO_LOW_MATERIAL_QUALITY</li>
 <li>unsigned VO_DISABLE_SHADOWS</li>
 <li>unsigned VO_DISABLE_OCCLUSION</li>
+<li>tolua_readonly tolua_property__get_set Graphics* graphics</li>
 <li>int SHADOW_MIN_PIXELS</li>
 <li>int INSTANCING_BUFFER_DEFAULT_SIZE</li>
+<li>tolua_readonly tolua_property__get_set Renderer* renderer</li>
 <li>unsigned SCAN_FILES</li>
 <li>unsigned SCAN_DIRS</li>
 <li>unsigned SCAN_HIDDEN</li>
+<li>tolua_readonly tolua_property__get_set FileSystem* fileSystem</li>
 <li>int LOG_DEBUG</li>
 <li>int LOG_INFO</li>
 <li>int LOG_WARNING</li>
 <li>int LOG_ERROR</li>
 <li>int LOG_NONE</li>
+<li>tolua_readonly tolua_property__get_set Log* log</li>
+<li>tolua_readonly tolua_property__get_set Input* input</li>
 <li>int MOUSEB_LEFT</li>
 <li>int MOUSEB_MIDDLE</li>
 <li>int MOUSEB_RIGHT</li>
@@ -5456,6 +5466,8 @@ Global constants</h1>
 <li>float M_RADTODEG</li>
 <li>unsigned NUM_FRUSTUM_PLANES</li>
 <li>unsigned NUM_FRUSTUM_VERTICES</li>
+<li>tolua_readonly tolua_property__get_set Network* network</li>
+<li>tolua_readonly tolua_property__get_set ResourceCache* cache</li>
 <li>unsigned FIRST_REPLICATED_ID</li>
 <li>unsigned LAST_REPLICATED_ID</li>
 <li>unsigned FIRST_LOCAL_ID</li>
@@ -5464,6 +5476,7 @@ Global constants</h1>
 <li>unsigned DD_SOURCE</li>
 <li>unsigned DD_TARGET</li>
 <li>unsigned DD_SOURCE_AND_TARGET</li>
+<li>tolua_readonly tolua_property__get_set UI* ui</li>
 </ul>
 <h1><a class="anchor" id="LuaScriptAPI_RenameTypes"></a>
 Rename types</h1>
