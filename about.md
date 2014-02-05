@@ -82,6 +82,7 @@ Though Urho3D already contains several useful features and implements a framewor
 - Nick Royer
 - Miika Santala
 - Joshua Tippetts
+- Daniel Wiberg
 - Steven Zhang
 - Firegorilla
 - Magic.Lixin
