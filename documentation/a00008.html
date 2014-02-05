@@ -3404,13 +3404,23 @@ Classes</h1>
 <ul>
 <li>Image()</li>
 <li>~Image()</li>
+<li>bool SetSize(int width, int height, unsigned components)</li>
+<li>bool SetSize(int width, int height, int depth, unsigned components)</li>
+<li>void SetPixel(int x, int y, const Color&amp; color)</li>
+<li>void SetPixel(int x, int y, int z, const Color&amp; color)</li>
 <li>bool LoadColorLUT(Deserializer&amp; source)</li>
 <li>bool LoadColorLUT(const String fileName)</li>
 <li>void FlipVertical()</li>
-<li>bool SaveBMP(const String fileName)</li>
-<li>bool SavePNG(const String fileName)</li>
-<li>bool SaveTGA(const String fileName)</li>
-<li>bool SaveJPG(const String fileName, int quality)</li>
+<li>bool Resize(int width, int height)</li>
+<li>void Clear(const Color&amp; color)</li>
+<li>bool SaveBMP(const String fileName) const</li>
+<li>bool SavePNG(const String fileName) const</li>
+<li>bool SaveTGA(const String fileName) const</li>
+<li>bool SaveJPG(const String fileName, int quality) const</li>
+<li><a class="el" href="a00084.html" title="RGBA color.">Color</a> GetPixel(int x, int y) const</li>
+<li><a class="el" href="a00084.html" title="RGBA color.">Color</a> GetPixel(int x, int y, int z) const</li>
+<li><a class="el" href="a00084.html" title="RGBA color.">Color</a> GetPixelBilinear(float x, float y) const</li>
+<li><a class="el" href="a00084.html" title="RGBA color.">Color</a> GetPixelTrilinear(float x, float y, float z) const</li>
 <li>int GetWidth() const</li>
 <li>int GetHeight() const</li>
 <li>int GetDepth() const</li>
@@ -4911,7 +4921,6 @@ Enumerations</h1>
 </ul>
 <h3>RayQueryLevel</h3>
 <ul>
-<li>int RAY_AABB_NOSUBOBJECTS</li>
 <li>int RAY_AABB</li>
 <li>int RAY_OBB</li>
 <li>int RAY_TRIANGLE</li>
@@ -5251,19 +5260,31 @@ Global functions</h1>
 <li>ResourceCache* GetCache()</li>
 <li>UI* GetUI()</li>
 </ul>
+<h1><a class="anchor" id="LuaScriptAPI_GlobalProperties"></a>
+Global properties</h1>
+<ul>
+<li>Audio* audio (readonly)</li>
+<li>Time* time (readonly)</li>
+<li>Console* console (readonly)</li>
+<li>DebugHud* debugHud (readonly)</li>
+<li>Engine* engine (readonly)</li>
+<li>Graphics* graphics (readonly)</li>
+<li>Renderer* renderer (readonly)</li>
+<li>FileSystem* fileSystem (readonly)</li>
+<li>Log* log (readonly)</li>
+<li>Input* input (readonly)</li>
+<li>Network* network (readonly)</li>
+<li>ResourceCache* cache (readonly)</li>
+<li>UI* ui (readonly)</li>
+</ul>
 <h1><a class="anchor" id="LuaScriptAPI_GlobalConstants"></a>
 Global constants</h1>
 <ul>
-<li>tolua_readonly tolua_property__get_set Audio* audio</li>
-<li>tolua_readonly tolua_property__get_set Time* time</li>
-<li>tolua_readonly tolua_property__get_set Console* console</li>
 <li>unsigned DEBUGHUD_SHOW_NONE</li>
 <li>unsigned DEBUGHUD_SHOW_STATS</li>
 <li>unsigned DEBUGHUD_SHOW_MODE</li>
 <li>unsigned DEBUGHUD_SHOW_PROFILER</li>
 <li>unsigned DEBUGHUD_SHOW_ALL</li>
-<li>tolua_readonly tolua_property__get_set DebugHud* debugHud</li>
-<li>tolua_readonly tolua_property__get_set Engine* engine</li>
 <li>int QUALITY_LOW</li>
 <li>int QUALITY_MEDIUM</li>
 <li>int QUALITY_HIGH</li>
@@ -5292,21 +5313,16 @@ Global constants</h1>
 <li>unsigned VO_LOW_MATERIAL_QUALITY</li>
 <li>unsigned VO_DISABLE_SHADOWS</li>
 <li>unsigned VO_DISABLE_OCCLUSION</li>
-<li>tolua_readonly tolua_property__get_set Graphics* graphics</li>
 <li>int SHADOW_MIN_PIXELS</li>
 <li>int INSTANCING_BUFFER_DEFAULT_SIZE</li>
-<li>tolua_readonly tolua_property__get_set Renderer* renderer</li>
 <li>unsigned SCAN_FILES</li>
 <li>unsigned SCAN_DIRS</li>
 <li>unsigned SCAN_HIDDEN</li>
-<li>tolua_readonly tolua_property__get_set FileSystem* fileSystem</li>
 <li>int LOG_DEBUG</li>
 <li>int LOG_INFO</li>
 <li>int LOG_WARNING</li>
 <li>int LOG_ERROR</li>
 <li>int LOG_NONE</li>
-<li>tolua_readonly tolua_property__get_set Log* log</li>
-<li>tolua_readonly tolua_property__get_set Input* input</li>
 <li>int MOUSEB_LEFT</li>
 <li>int MOUSEB_MIDDLE</li>
 <li>int MOUSEB_RIGHT</li>
@@ -5466,8 +5482,6 @@ Global constants</h1>
 <li>float M_RADTODEG</li>
 <li>unsigned NUM_FRUSTUM_PLANES</li>
 <li>unsigned NUM_FRUSTUM_VERTICES</li>
-<li>tolua_readonly tolua_property__get_set Network* network</li>
-<li>tolua_readonly tolua_property__get_set ResourceCache* cache</li>
 <li>unsigned FIRST_REPLICATED_ID</li>
 <li>unsigned LAST_REPLICATED_ID</li>
 <li>unsigned FIRST_LOCAL_ID</li>
@@ -5476,7 +5490,6 @@ Global constants</h1>
 <li>unsigned DD_SOURCE</li>
 <li>unsigned DD_TARGET</li>
 <li>unsigned DD_SOURCE_AND_TARGET</li>
-<li>tolua_readonly tolua_property__get_set UI* ui</li>
 </ul>
 <h1><a class="anchor" id="LuaScriptAPI_RenameTypes"></a>
 Rename types</h1>

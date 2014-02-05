@@ -67,18 +67,26 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00149.html#ad6230d109791cc6d61c1c05e081a3835">Load</a> (<a class="el" href="a00114.html">Deserializer</a> &amp;source)</td></tr>
 <tr class="memdesc:ad6230d109791cc6d61c1c05e081a3835"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load resource. Return true if successful. <br/></td></tr>
 <tr class="separator:ad6230d109791cc6d61c1c05e081a3835"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade25ad35471ecde3b919412f2601e371"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade25ad35471ecde3b919412f2601e371"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00149.html#ade25ad35471ecde3b919412f2601e371">SetSize</a> (int width, int height, unsigned components)</td></tr>
-<tr class="memdesc:ade25ad35471ecde3b919412f2601e371"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set 2D size and number of color components. <br/></td></tr>
-<tr class="separator:ade25ad35471ecde3b919412f2601e371"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fc342657efea09b99a9a182522e03e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2fc342657efea09b99a9a182522e03e2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00149.html#a2fc342657efea09b99a9a182522e03e2">SetSize</a> (int width, int height, int depth, unsigned components)</td></tr>
-<tr class="memdesc:a2fc342657efea09b99a9a182522e03e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set 3D size and number of color components. <br/></td></tr>
-<tr class="separator:a2fc342657efea09b99a9a182522e03e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a409d2c88160a9e4f3e95004d2108df56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a409d2c88160a9e4f3e95004d2108df56"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00149.html#a409d2c88160a9e4f3e95004d2108df56">SetSize</a> (int width, int height, unsigned components)</td></tr>
+<tr class="memdesc:a409d2c88160a9e4f3e95004d2108df56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set 2D size and number of color components. Old image data will be destroyed and new data is undefined. Return true if successful. <br/></td></tr>
+<tr class="separator:a409d2c88160a9e4f3e95004d2108df56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ca643f471164c1cce80e1127995a009"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ca643f471164c1cce80e1127995a009"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00149.html#a6ca643f471164c1cce80e1127995a009">SetSize</a> (int width, int height, int depth, unsigned components)</td></tr>
+<tr class="memdesc:a6ca643f471164c1cce80e1127995a009"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set 3D size and number of color components. Old image data will be destroyed and new data is undefined. Return true if successful. <br/></td></tr>
+<tr class="separator:a6ca643f471164c1cce80e1127995a009"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00fb8676bd4c841927d7c417285d1877"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a00fb8676bd4c841927d7c417285d1877"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00149.html#a00fb8676bd4c841927d7c417285d1877">SetData</a> (const unsigned char *pixelData)</td></tr>
-<tr class="memdesc:a00fb8676bd4c841927d7c417285d1877"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set data. <br/></td></tr>
+<tr class="memdesc:a00fb8676bd4c841927d7c417285d1877"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set new image data. <br/></td></tr>
 <tr class="separator:a00fb8676bd4c841927d7c417285d1877"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10dd31278cec82fbf8a6fa3c29da2ff6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a10dd31278cec82fbf8a6fa3c29da2ff6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00149.html#a10dd31278cec82fbf8a6fa3c29da2ff6">SetPixel</a> (int x, int y, const <a class="el" href="a00084.html">Color</a> &amp;color)</td></tr>
+<tr class="memdesc:a10dd31278cec82fbf8a6fa3c29da2ff6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a 2D pixel. <br/></td></tr>
+<tr class="separator:a10dd31278cec82fbf8a6fa3c29da2ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af84412137d5531a8326970bebdfcb249"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af84412137d5531a8326970bebdfcb249"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00149.html#af84412137d5531a8326970bebdfcb249">SetPixel</a> (int x, int y, int z, const <a class="el" href="a00084.html">Color</a> &amp;color)</td></tr>
+<tr class="memdesc:af84412137d5531a8326970bebdfcb249"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a 3D pixel. <br/></td></tr>
+<tr class="separator:af84412137d5531a8326970bebdfcb249"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a666b3cb0b35d066504d8a102923fd44d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a666b3cb0b35d066504d8a102923fd44d"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00149.html#a666b3cb0b35d066504d8a102923fd44d">LoadColorLUT</a> (<a class="el" href="a00114.html">Deserializer</a> &amp;source)</td></tr>
 <tr class="memdesc:a666b3cb0b35d066504d8a102923fd44d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load as color LUT. Return true if successful. <br/></td></tr>
@@ -87,22 +95,45 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00149.html#a4592c74500a693489f16d3dc43059c1d">FlipVertical</a> ()</td></tr>
 <tr class="memdesc:a4592c74500a693489f16d3dc43059c1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flip image vertically. <br/></td></tr>
 <tr class="separator:a4592c74500a693489f16d3dc43059c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaaa6aa47baefb8fec054afb781169d08"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaaa6aa47baefb8fec054afb781169d08"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00149.html#aaaa6aa47baefb8fec054afb781169d08">SaveBMP</a> (const <a class="el" href="a00291.html">String</a> &amp;fileName)</td></tr>
-<tr class="memdesc:aaaa6aa47baefb8fec054afb781169d08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save in BMP format. Return true if successful. <br/></td></tr>
-<tr class="separator:aaaa6aa47baefb8fec054afb781169d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec598c56642beffb3cc345878e1af32f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec598c56642beffb3cc345878e1af32f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00149.html#aec598c56642beffb3cc345878e1af32f">SavePNG</a> (const <a class="el" href="a00291.html">String</a> &amp;fileName)</td></tr>
-<tr class="memdesc:aec598c56642beffb3cc345878e1af32f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save in PNG format. Return true if successful. <br/></td></tr>
-<tr class="separator:aec598c56642beffb3cc345878e1af32f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbd5e65ab2b4eddb879171019f61da7c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afbd5e65ab2b4eddb879171019f61da7c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00149.html#afbd5e65ab2b4eddb879171019f61da7c">SaveTGA</a> (const <a class="el" href="a00291.html">String</a> &amp;fileName)</td></tr>
-<tr class="memdesc:afbd5e65ab2b4eddb879171019f61da7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save in TGA format. Return true if successful. <br/></td></tr>
-<tr class="separator:afbd5e65ab2b4eddb879171019f61da7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ea37cfe7c8eb5a84ca291867d7d560e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ea37cfe7c8eb5a84ca291867d7d560e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00149.html#a7ea37cfe7c8eb5a84ca291867d7d560e">SaveJPG</a> (const <a class="el" href="a00291.html">String</a> &amp;fileName, int quality)</td></tr>
-<tr class="memdesc:a7ea37cfe7c8eb5a84ca291867d7d560e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save in JPG format with compression quality. Return true if successful. <br/></td></tr>
-<tr class="separator:a7ea37cfe7c8eb5a84ca291867d7d560e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5be924efa3bb0f85f2d812d0149aedda"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00149.html#a5be924efa3bb0f85f2d812d0149aedda">Resize</a> (int width, int height)</td></tr>
+<tr class="memdesc:a5be924efa3bb0f85f2d812d0149aedda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize image by bilinear resampling. Return true if successful.  <a href="#a5be924efa3bb0f85f2d812d0149aedda">More...</a><br/></td></tr>
+<tr class="separator:a5be924efa3bb0f85f2d812d0149aedda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6eb21b8e9c805de370f7b39785074667"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6eb21b8e9c805de370f7b39785074667"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00149.html#a6eb21b8e9c805de370f7b39785074667">Clear</a> (const <a class="el" href="a00084.html">Color</a> &amp;color)</td></tr>
+<tr class="memdesc:a6eb21b8e9c805de370f7b39785074667"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the image with a color. <br/></td></tr>
+<tr class="separator:a6eb21b8e9c805de370f7b39785074667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37ab6a158359eabbaae45c309d5b874f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37ab6a158359eabbaae45c309d5b874f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00149.html#a37ab6a158359eabbaae45c309d5b874f">SaveBMP</a> (const <a class="el" href="a00291.html">String</a> &amp;fileName) const </td></tr>
+<tr class="memdesc:a37ab6a158359eabbaae45c309d5b874f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save in BMP format. Return true if successful. <br/></td></tr>
+<tr class="separator:a37ab6a158359eabbaae45c309d5b874f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1476ae40efdaada5829dbf11005b0bb0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1476ae40efdaada5829dbf11005b0bb0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00149.html#a1476ae40efdaada5829dbf11005b0bb0">SavePNG</a> (const <a class="el" href="a00291.html">String</a> &amp;fileName) const </td></tr>
+<tr class="memdesc:a1476ae40efdaada5829dbf11005b0bb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save in PNG format. Return true if successful. <br/></td></tr>
+<tr class="separator:a1476ae40efdaada5829dbf11005b0bb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61fa7d53dca44b1949ef42fbed822b49"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61fa7d53dca44b1949ef42fbed822b49"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00149.html#a61fa7d53dca44b1949ef42fbed822b49">SaveTGA</a> (const <a class="el" href="a00291.html">String</a> &amp;fileName) const </td></tr>
+<tr class="memdesc:a61fa7d53dca44b1949ef42fbed822b49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save in TGA format. Return true if successful. <br/></td></tr>
+<tr class="separator:a61fa7d53dca44b1949ef42fbed822b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dcc835d6a8e6a838ba388d6f952e885"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6dcc835d6a8e6a838ba388d6f952e885"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00149.html#a6dcc835d6a8e6a838ba388d6f952e885">SaveJPG</a> (const <a class="el" href="a00291.html">String</a> &amp;fileName, int quality) const </td></tr>
+<tr class="memdesc:a6dcc835d6a8e6a838ba388d6f952e885"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save in JPG format with compression quality. Return true if successful. <br/></td></tr>
+<tr class="separator:a6dcc835d6a8e6a838ba388d6f952e885"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a737c991eba0911bafa9f04ded078a40c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a737c991eba0911bafa9f04ded078a40c"></a>
+<a class="el" href="a00084.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00149.html#a737c991eba0911bafa9f04ded078a40c">GetPixel</a> (int x, int y) const </td></tr>
+<tr class="memdesc:a737c991eba0911bafa9f04ded078a40c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a 2D pixel color. <br/></td></tr>
+<tr class="separator:a737c991eba0911bafa9f04ded078a40c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11915f130f3b3d6972400c617824b605"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11915f130f3b3d6972400c617824b605"></a>
+<a class="el" href="a00084.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00149.html#a11915f130f3b3d6972400c617824b605">GetPixel</a> (int x, int y, int z) const </td></tr>
+<tr class="memdesc:a11915f130f3b3d6972400c617824b605"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a 3D pixel color. <br/></td></tr>
+<tr class="separator:a11915f130f3b3d6972400c617824b605"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89168348ae1383e7b4a302cb4fa6dcb5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a89168348ae1383e7b4a302cb4fa6dcb5"></a>
+<a class="el" href="a00084.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00149.html#a89168348ae1383e7b4a302cb4fa6dcb5">GetPixelBilinear</a> (float x, float y) const </td></tr>
+<tr class="memdesc:a89168348ae1383e7b4a302cb4fa6dcb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a bilinearly interpolated 2D pixel color. X and Y have the range 0-1. <br/></td></tr>
+<tr class="separator:a89168348ae1383e7b4a302cb4fa6dcb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33ad3b31e96b30b34d47157e6e611d41"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33ad3b31e96b30b34d47157e6e611d41"></a>
+<a class="el" href="a00084.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00149.html#a33ad3b31e96b30b34d47157e6e611d41">GetPixelTrilinear</a> (float x, float y, float z) const </td></tr>
+<tr class="memdesc:a33ad3b31e96b30b34d47157e6e611d41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a trilinearly interpolated 3D pixel color. X, Y and Z have the range 0-1. <br/></td></tr>
+<tr class="separator:a33ad3b31e96b30b34d47157e6e611d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0b6f8c7f5a9375be03394a27c784e94"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0b6f8c7f5a9375be03394a27c784e94"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00149.html#ac0b6f8c7f5a9375be03394a27c784e94">GetWidth</a> () const </td></tr>
 <tr class="memdesc:ac0b6f8c7f5a9375be03394a27c784e94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return width. <br/></td></tr>
@@ -380,7 +411,45 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Image resource. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a5be924efa3bb0f85f2d812d0149aedda"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Urho3D::Image::Resize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resize image by bilinear resampling. Return true if successful. </p>
+<dl class="todo"><dt><b><a class="el" href="a00721.html#_todo000028">Todo:</a></b></dt><dd>Reducing image size does not sample all needed pixels </dd></dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a00149_a5be924efa3bb0f85f2d812d0149aedda_cgraph.svg" width="100%" height="450"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/travis/build/urho3d/Urho3D/Source/Engine/Resource/Image.h</li>
 <li>/home/travis/build/urho3d/Urho3D/Source/Engine/Resource/Image.cpp</li>
 </ul>

@@ -2069,15 +2069,25 @@ Classes</h1>
 <h3><a class="el" href="a00149.html" title="Image resource.">Image</a></h3>
 <p>Methods:</p>
 <ul>
+<li>void Clear(const Color&amp;)</li>
 <li>void FlipVertical()</li>
+<li><a class="el" href="a00084.html" title="RGBA color.">Color</a> GetPixel(int, int) const</li>
+<li><a class="el" href="a00084.html" title="RGBA color.">Color</a> GetPixel(int, int, int) const</li>
+<li><a class="el" href="a00084.html" title="RGBA color.">Color</a> GetPixelBilinear(float, float) const</li>
+<li><a class="el" href="a00084.html" title="RGBA color.">Color</a> GetPixelTrilinear(float, float, float) const</li>
 <li>bool Load(<a class="el" href="a00122.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
 <li>bool LoadColorLUT(<a class="el" href="a00122.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>void Resize(int, int)</li>
 <li>bool Save(<a class="el" href="a00122.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
-<li>void SaveBMP(const String&amp;)</li>
-<li>void SaveJPG(const String&amp;, int)</li>
-<li>void SavePNG(const String&amp;)</li>
-<li>void SaveTGA(const String&amp;)</li>
+<li>void SaveBMP(const String&amp;) const</li>
+<li>void SaveJPG(const String&amp;, int) const</li>
+<li>void SavePNG(const String&amp;) const</li>
+<li>void SaveTGA(const String&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00291.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
+<li>void SetPixel(int, int, const Color&amp;)</li>
+<li>void SetPixel(int, int, int, const Color&amp;)</li>
+<li>bool SetSize(int, int, int, uint)</li>
+<li>bool SetSize(int, int, uint)</li>
 </ul>
 <p>Properties:</p>
 <ul>
@@ -2085,6 +2095,7 @@ Classes</h1>
 <li><a class="el" href="a00291.html" title="String class.">String</a> category (readonly)</li>
 <li>uint components (readonly)</li>
 <li>bool compressed (readonly)</li>
+<li>int depth (readonly)</li>
 <li>int height (readonly)</li>
 <li>uint memoryUse (readonly)</li>
 <li><a class="el" href="a00291.html" title="String class.">String</a> name</li>
@@ -6894,7 +6905,6 @@ Enumerations</h1>
 </ul>
 <h3>RayQueryLevel</h3>
 <ul>
-<li>RAY_AABB_NOSUBOBJECTS</li>
 <li>RAY_AABB</li>
 <li>RAY_OBB</li>
 <li>RAY_TRIANGLE</li>

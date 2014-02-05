@@ -64,6 +64,10 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00073.html#a83551ece1ea826de016b9ef3b2e690d4">~BillboardSet</a> ()</td></tr>
 <tr class="memdesc:a83551ece1ea826de016b9ef3b2e690d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
 <tr class="separator:a83551ece1ea826de016b9ef3b2e690d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa79742ed179565ee98274b87a7089338"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa79742ed179565ee98274b87a7089338"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00073.html#aa79742ed179565ee98274b87a7089338">ProcessRayQuery</a> (const <a class="el" href="a00231.html">RayOctreeQuery</a> &amp;query, <a class="el" href="a00222.html">PODVector</a>&lt; <a class="el" href="a00232.html">RayQueryResult</a> &gt; &amp;results)</td></tr>
+<tr class="memdesc:aa79742ed179565ee98274b87a7089338"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process octree raycast. May be called from a worker thread. <br/></td></tr>
+<tr class="separator:aa79742ed179565ee98274b87a7089338"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3ab2bb3bcd266f4852491ac8d245ece"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3ab2bb3bcd266f4852491ac8d245ece"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00073.html#ae3ab2bb3bcd266f4852491ac8d245ece">UpdateBatches</a> (const <a class="el" href="a00132.html">FrameInfo</a> &amp;frame)</td></tr>
 <tr class="memdesc:ae3ab2bb3bcd266f4852491ac8d245ece"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate distance and prepare batches for rendering. May be called from worker thread(s), possibly re-entrantly. <br/></td></tr>
@@ -181,10 +185,6 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00116.html#aed7ed31779ebd2d0fc3b45166703ae62">OnSetEnabled</a> ()</td></tr>
 <tr class="memdesc:aed7ed31779ebd2d0fc3b45166703ae62 inherit pub_methods_a00116"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle enabled/disabled state change. <br/></td></tr>
 <tr class="separator:aed7ed31779ebd2d0fc3b45166703ae62 inherit pub_methods_a00116"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4a905d66bbec042db227f9b9d791cca inherit pub_methods_a00116"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4a905d66bbec042db227f9b9d791cca"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00116.html#ab4a905d66bbec042db227f9b9d791cca">ProcessRayQuery</a> (const <a class="el" href="a00231.html">RayOctreeQuery</a> &amp;query, <a class="el" href="a00222.html">PODVector</a>&lt; <a class="el" href="a00232.html">RayQueryResult</a> &gt; &amp;results)</td></tr>
-<tr class="memdesc:ab4a905d66bbec042db227f9b9d791cca inherit pub_methods_a00116"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process octree raycast. May be called from a worker thread. <br/></td></tr>
-<tr class="separator:ab4a905d66bbec042db227f9b9d791cca inherit pub_methods_a00116"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae865f6d21de70fd7bc95a7207d694b88 inherit pub_methods_a00116"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae865f6d21de70fd7bc95a7207d694b88"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00116.html#ae865f6d21de70fd7bc95a7207d694b88">Update</a> (const <a class="el" href="a00132.html">FrameInfo</a> &amp;frame)</td></tr>
 <tr class="memdesc:ae865f6d21de70fd7bc95a7207d694b88 inherit pub_methods_a00116"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update before octree reinsertion. Is called from a worker thread. <br/></td></tr>

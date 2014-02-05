@@ -46,6 +46,8 @@ title: Documentation
 <dd>Implement properly, if possible  </dd>
 <dt><a class="anchor" id="_todo000026"></a>Member <a class="el" href="a00148.html#a119d79e4e4dfb87db35fc9d5d4be762b">Urho3D::HttpRequest::ThreadFunction</a>  ()</dt>
 <dd>SSL mode will not actually work unless Civetweb's SSL mode is initialized with an external SSL DLL  </dd>
+<dt><a class="anchor" id="_todo000028"></a>Member <a class="el" href="a00149.html#a5be924efa3bb0f85f2d812d0149aedda">Urho3D::Image::Resize</a>  (int width, int height)</dt>
+<dd>Reducing image size does not sample all needed pixels  </dd>
 <dt><a class="anchor" id="_todo000016"></a>Member <a class="el" href="a00151.html#a0131572cfae7e4fc8d150c6efae41f72">Urho3D::Input::ResetState</a>  ()</dt>
 <dd>Check if this is necessary  </dd>
 <dt><a class="anchor" id="_todo000006"></a>Member <a class="el" href="a00160.html#aef8217582cbb754b7323dc5b70d47c67">Urho3D::Light::GetDirLightTransform</a>  (Camera *camera, bool getNearQuad=false)</dt>
@@ -64,17 +66,17 @@ title: Documentation
 <dd>Allow to specify maximum shadow maps per resolution, as smaller shadow maps take less memory  </dd>
 <dt><a class="anchor" id="_todo000010"></a>Member <a class="el" href="a00238.html#a993f63f35d27a9ea6df861962018f354">Urho3D::Renderer::Update</a>  (float timeStep)</dt>
 <dd>May result in incorrect debug geometry culling if the same scene is drawn from multiple viewports  </dd>
-<dt><a class="anchor" id="_todo000028"></a>Member <a class="el" href="a00250.html#a625934c3af5fb17f25a09767d4c0cc6b">Urho3D::Scene::UpdateAsyncLoading</a>  ()</dt>
+<dt><a class="anchor" id="_todo000029"></a>Member <a class="el" href="a00250.html#a625934c3af5fb17f25a09767d4c0cc6b">Urho3D::Scene::UpdateAsyncLoading</a>  ()</dt>
 <dd>Works poorly in scenes where one root-level child node contains all content  </dd>
-<dt><a class="anchor" id="_todo000029"></a>Member <a class="el" href="a00255.html#a7063ccf0fcfbb9adafe8fc5d73bb1b78">Urho3D::Script::DumpAPI</a>  (DumpMode mode=DOXYGEN)</dt>
+<dt><a class="anchor" id="_todo000030"></a>Member <a class="el" href="a00255.html#a7063ccf0fcfbb9adafe8fc5d73bb1b78">Urho3D::Script::DumpAPI</a>  (DumpMode mode=DOXYGEN)</dt>
 <dd>Find a cleaner way to do this instead of hardcoding  </dd>
-<dt><a class="anchor" id="_todo000030"></a>Member <a class="el" href="a00255.html#a5a3d0019b68f3e928ebd8ca72bfb80d4">Urho3D::Script::OutputAPIRow</a>  (DumpMode mode, const String &amp;row, bool removeReference=false, String separator=";")</dt>
+<dt><a class="anchor" id="_todo000031"></a>Member <a class="el" href="a00255.html#a5a3d0019b68f3e928ebd8ca72bfb80d4">Urho3D::Script::OutputAPIRow</a>  (DumpMode mode, const String &amp;row, bool removeReference=false, String separator=";")</dt>
 <dd>We need C++11 &lt;regex&gt; in String class to handle REGEX whole-word replacement correctly. Can't do that since we still support VS2008.  </dd>
 <dt><a class="anchor" id="_todo000009"></a>Member <a class="el" href="a00264.html#acc4367189d07a859389074227ba7a292">Urho3D::Shader::Load</a>  (Deserializer &amp;source)</dt>
 <dd>Should also update defines  </dd>
 <dt><a class="anchor" id="_todo000013"></a>Member <a class="el" href="a00268.html#a5133f1e414161c5ed6e0a2939bfc0f5b">Urho3D::ShaderParser::BuildCombination</a>  (const String &amp;name)</dt>
 <dd>Hack fix for options like Alpha &amp; AlphaMask appearing in that order. Not a 100% general fix  </dd>
-<dt><a class="anchor" id="_todo000031"></a>Member <a class="el" href="a00287.html#a0330f3057cc51c09cb5f6e97497646e6">Urho3D::Sprite::IsWithinScissor</a>  (const IntRect &amp;currentScissor)</dt>
+<dt><a class="anchor" id="_todo000032"></a>Member <a class="el" href="a00287.html#a0330f3057cc51c09cb5f6e97497646e6">Urho3D::Sprite::IsWithinScissor</a>  (const IntRect &amp;currentScissor)</dt>
 <dd>Implement properly, for now just checks visibility flag  </dd>
 <dt><a class="anchor" id="_todo000014"></a>Member <a class="el" href="a00295.html#a700824d66feab6400aa4f93c667fb76c">Urho3D::Terrain::GetHeight</a>  (const Vector3 &amp;worldPosition) const </dt>
 <dd>This assumes that the terrain scene node is upright  </dd>
