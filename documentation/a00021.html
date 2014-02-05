@@ -17,11 +17,11 @@ title: Documentation
 <div class="title">Materials </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="el" href="a00176.html" title="Describes how to render 3D geometries.">Material</a> and <a class="el" href="a00293.html" title="Material technique. Consists of several passes.">Technique</a> resources define how to render 3D scene geometry. On the disk, they are XML data. By default, materials exist in the Bin/CoreData/Materials &amp; Bin/Data/Materials subdirectories, and techniques exist in the Bin/CoreData/Techniques subdirectory.</p>
-<p>A material defines the textures, shader parameters and culling mode to use, and refers to techniques. A technique defines the actual rendering passes, the shaders to use in each, and all other rendering states such as depth test, depth write, and blending.</p>
+<div class="textblock"><p><a class="el" href="a00176.html" title="Describes how to render 3D geometries.">Material</a> and <a class="el" href="a00290.html" title="Material technique. Consists of several passes.">Technique</a> resources define how to render 3D scene geometry. On the disk, they are XML data. Default and example materials exist in the Bin/CoreData/Materials &amp; Bin/Data/Materials subdirectories, and techniques exist in the Bin/CoreData/Techniques subdirectory.</p>
+<p>A material defines the textures, shader parameters and culling mode to use, and refers to one or several techniques. A technique defines the actual rendering passes, the shaders to use in each, and all other rendering states such as depth test, depth write, and blending.</p>
 <p>A material definition looks like this:</p>
 <div class="fragment"><div class="line">&lt;material&gt;</div>
-<div class="line">    &lt;technique name=<span class="stringliteral">&quot;TechniqueName&quot;</span> quality=<span class="stringliteral">&quot;q&quot;</span> loddistance=<span class="stringliteral">&quot;d&quot;</span> sm3=<span class="stringliteral">&quot;true|false&quot;</span> /&gt;</div>
+<div class="line">    &lt;technique name=<span class="stringliteral">&quot;TechniqueName&quot;</span> quality=<span class="stringliteral">&quot;q&quot;</span> loddistance=<span class="stringliteral">&quot;d&quot;</span> /&gt;</div>
 <div class="line">    &lt;texture unit=<span class="stringliteral">&quot;diffuse|normal|specular|emissive|environment&quot;</span> name=<span class="stringliteral">&quot;TextureName&quot;</span> /&gt;</div>
 <div class="line">    &lt;texture ... /&gt;</div>
 <div class="line">    &lt;parameter name=<span class="stringliteral">&quot;name&quot;</span> value=<span class="stringliteral">&quot;x y z w&quot;</span> /&gt;</div>
@@ -30,8 +30,8 @@ title: Documentation
 <div class="line">    &lt;shadowcull value=<span class="stringliteral">&quot;cw|ccw|none&quot;</span> /&gt;</div>
 <div class="line">    &lt;depthbias constant=<span class="stringliteral">&quot;x&quot;</span> slopescaled=<span class="stringliteral">&quot;y&quot;</span> /&gt;</div>
 <div class="line">&lt;/material&gt;</div>
-</div><!-- fragment --><p>Technique quality levels are specified from 0 (low) to 2 (high). When rendering, the highest available technique that does not exceed the <a class="el" href="a00238.html" title="High-level rendering subsystem. Manages drawing of 3D views.">Renderer</a>'s material quality setting will be chosen, see <a class="el" href="a00238.html#aabb13682895a9c8f0cabec5ae55cb802">SetMaterialQuality()</a>. If a technique requires SM3.0-only shaders, it can be marked as such by the "sm3" attribute.</p>
-<p>When a material defines several techniques for different LOD levels and quality settings, they must appear in a specific order:</p>
+</div><!-- fragment --><p>Several techniques can be defined for different quality levels and LOD distances. Technique quality levels are specified from 0 (low) to 2 (high). When rendering, the highest available technique that does not exceed the <a class="el" href="a00238.html" title="High-level rendering subsystem. Manages drawing of 3D views.">Renderer</a>'s material quality setting will be chosen, see <a class="el" href="a00238.html#aabb13682895a9c8f0cabec5ae55cb802">SetMaterialQuality()</a>. It is also possible for a technique to require Shader Model 3, in this case it will be skipped on SM2 hardware.</p>
+<p>The techniques for different LOD levels and quality settings must appear in a specific order:</p>
 <ul>
 <li>Most distant &amp; highest quality</li>
 <li>...</li>
@@ -39,7 +39,7 @@ title: Documentation
 <li>Second most distant &amp; highest quality</li>
 <li>...</li>
 </ul>
-<p>Material shader parameters can be floats or vectors up to 4 components. Matrix parameters are not supported. Note that a built-in ElapsedTime shader parameter is available for implementing material animation effects; it measures the time elapsed in scene updates in seconds.</p>
+<p>Material shader parameters can be floats or vectors up to 4 components. Matrix parameters are not supported. A built-in ElapsedTime shader parameter is available for implementing material animation effects; it measures the time elapsed in scene updates in seconds.</p>
 <p>Default culling mode is counterclockwise. The shadowcull element specifies the culling mode to use in the shadow pass. Note that material's depth bias settings do not apply in the shadow pass; during shadow rendering the light's depth bias is used instead.</p>
 <h1><a class="anchor" id="Materials_Textures"></a>
 Material textures</h1>
@@ -64,14 +64,22 @@ Material textures</h1>
 <h1><a class="anchor" id="Materials_Techniques"></a>
 Techniques and passes</h1>
 <p>A technique definition looks like this:</p>
-<div class="fragment"><div class="line">&lt;technique&gt;</div>
-<div class="line">    &lt;pass name=<span class="stringliteral">&quot;base|litbase|light|alpha|litalpha|postopaque|refract|postalpha|prepass|material|deferred|depth|shadow&quot;</span> vs=<span class="stringliteral">&quot;VertexShaderName&quot;</span> ps=<span class="stringliteral">&quot;PixelShaderName&quot;</span></div>
-<div class="line">        lighting=<span class="stringliteral">&quot;unlit|pervertex|perpixel&quot;</span> alphatest=<span class="stringliteral">&quot;true|false&quot;</span> blend=<span class="stringliteral">&quot;replace|add|multiply|alpha|addalpha|premulalpha|invdestalpha&quot;</span></div>
-<div class="line">        depthtest=<span class="stringliteral">&quot;always|equal|less|lessequal|greater|greaterequal&quot;</span> depthwrite=<span class="stringliteral">&quot;true|false&quot;</span> alphamask=<span class="stringliteral">&quot;true|false&quot;</span> /&gt;</div>
+<div class="fragment"><div class="line">&lt;technique vs=<span class="stringliteral">&quot;VertexShaderName&quot;</span> ps=<span class="stringliteral">&quot;PixelShaderName&quot;</span> vsdefines=<span class="stringliteral">&quot;DEFINE1 DEFINE2&quot;</span> psdefines=<span class="stringliteral">&quot;DEFINE3 DEFINE4&quot;</span> sm3=<span class="stringliteral">&quot;false|true&quot;</span> &gt;</div>
+<div class="line">    &lt;pass name=<span class="stringliteral">&quot;base|litbase|light|alpha|litalpha|postopaque|refract|postalpha|prepass|material|deferred|depth|shadow&quot;</span></div>
+<div class="line">        vs=<span class="stringliteral">&quot;VertexShaderName&quot;</span> ps=<span class="stringliteral">&quot;PixelShaderName&quot;</span> vsdefines=<span class="stringliteral">&quot;DEFINE1 DEFINE2&quot;</span> psdefines=<span class="stringliteral">&quot;DEFINE3 DEFINE4&quot;</span></div>
+<div class="line">        lighting=<span class="stringliteral">&quot;unlit|pervertex|perpixel&quot;</span></div>
+<div class="line">        blend=<span class="stringliteral">&quot;replace|add|multiply|alpha|addalpha|premulalpha|invdestalpha&quot;</span> </div>
+<div class="line">        depthtest=<span class="stringliteral">&quot;always|equal|less|lessequal|greater|greaterequal&quot;</span></div>
+<div class="line">        depthwrite=<span class="stringliteral">&quot;true|false&quot;</span> </div>
+<div class="line">        alphamask=<span class="stringliteral">&quot;true|false&quot;</span> /&gt;</div>
 <div class="line">    &lt;pass ... /&gt;</div>
 <div class="line">    &lt;pass ... /&gt;</div>
 <div class="line">&lt;/technique&gt;</div>
-</div><!-- fragment --><p>The purposes of the different passes are:</p>
+</div><!-- fragment --><p>The sm3 attribute in the technique root element allows the technique to specify it requires Shader Model 3 hardware. Omitting it is same as specifying false (works on both SM2 &amp; 3.)</p>
+<p>Shaders are referred to by giving the name of a shader without path and file extension. For example "Basic" or "LitSolid". The engine will add the correct path and file extension (Shaders/HLSL/LitSolid.hlsl for Direct3D9, and Shaders/GLSL/LitSolid.glsl for OpenGL) automatically. The same shader source file contains both the vertex and pixel shader. In addition, compilation defines can be specified, which are passed to the shader compiler. For example the define "DIFFMAP" typically enables diffuse mapping in the pixel shader.</p>
+<p>Shaders and their compilation defines can be specified on both the technique and pass level. If a pass does not override the default shaders specified on the technique level, it still can specify additional compilation defines to be used. However, if a pass overrides the shaders, then the technique-level defines are not used.</p>
+<p>The technique definition does not need to enumerate shaders used for different geometry types (non-skinned, skinned, instanced, billboard) and different per-vertex and per-pixel light combinations. Instead the engine will add certain hardcoded compilation defines for these. See <a class="el" href="a00022.html">Shaders</a> for details.</p>
+<p>The purposes of the different passes are:</p>
 <ul>
 <li>base: Renders ambient light, per-vertex lights and fog for an opaque object.</li>
 <li>litbase: Renders the first per-pixel light, ambient light and fog for an opaque object. This is an optional pass for optimization.</li>
@@ -87,9 +95,7 @@ Techniques and passes</h1>
 <li>depth: Renders linear depth to a rendertarget for post-processing effects.</li>
 <li>shadow: Renders to a hardware shadow map (depth only) for shadow map generation.</li>
 </ul>
-<p>More custom passes can be defined and referred to in the <a class="el" href="a00023.html">render path definition</a>. For the built-in passes listed above, the lighting shader combinations to load (unlit, per-vertex or per-pixel) are recognized automatically, but for custom passes they need to be explicitly specified. The default is unlit.</p>
-<p>By default draw calls within passes are sorted by render state, but transparent base and light passes, as well as the postalpha pass, are sorted by distance back to front.</p>
-<p>Note that the technique does not need to enumerate shaders used for different geometry types (non-skinned, skinned, instanced, billboard) and different per-vertex and per-pixel light combinations. Instead specific hardcoded shader variations are assumed to exist. See <a class="el" href="a00022.html">Shaders</a> for details.</p>
+<p>More custom passes can be defined and referred to in the <a class="el" href="a00023.html">render path definition</a>. For the built-in passes listed above, the lighting shader permutations to load (unlit, per-vertex or per-pixel) are recognized automatically, but for custom passes they need to be explicitly specified. The default is unlit.</p>
 <p>The optional "litbase" pass reduces draw call count by combining ambient lighting with the first per-pixel light affecting an object. However, it has intentional limitations to not require too many shader permutations: there must be no vertex lights affecting the object, and the ambient lighting can not have a gradient. In case of excessive overdraw, it is possibly better not to define it, but instead allow the base pass (which is computationally very lightweight) to run first, initializing the Z buffer for later passes.</p>
 <p>"Alphamask" is not an actual rendering state, but a hint which tells that the pixel shader will use discard based on alpha. Because this may interfere with the early-Z culling, materials without the alpha masking hint will be drawn first.</p>
 <p>The refract pass requires pingponging the scene rendertarget to a texture, but this will not be performed if there is no refractive geometry to render, so there is no unnecessary cost to it. </p>
