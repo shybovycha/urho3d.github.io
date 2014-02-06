@@ -1045,6 +1045,7 @@ Classes</h1>
 <li>void SetDepthBias(const BiasParameters&amp; parameters)</li>
 <li>void RemoveShaderParameter(const String name)</li>
 <li>void ReleaseShaders()</li>
+<li>Material* Clone(const <a class="el" href="a00288.html" title="String class.">String</a> cloneName = <a class="el" href="a00288.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>) const</li>
 <li>void SortTechniques()</li>
 <li>void MarkForAuxView(unsigned frameNumber)</li>
 <li>unsigned GetNumTechniques() const</li>
@@ -3077,16 +3078,6 @@ Classes</h1>
 <li>unsigned availableSize (readonly)</li>
 <li>bool open (readonly)</li>
 </ul>
-<h3><a class="el" href="a00270.html" title="Shared pointer template class with intrusive reference counting.">SharedPtr</a></h3>
-<p>Methods:</p>
-<ul>
-<li>TOLUA_TEMPLATE_BIND(T, HttpRequest)</li>
-<li>SharedPtr()</li>
-<li>~SharedPtr()</li>
-<li>bool Null() const</li>
-<li>bool NotNull() const</li>
-<li>T* Get() const</li>
-</ul>
 <h3><a class="el" href="a00192.html" title="Network subsystem. Manages client-server communications using the UDP protocol.">Network</a></h3>
 <p>Methods:</p>
 <ul>
@@ -3108,7 +3099,7 @@ Classes</h1>
 <li>void UnregisterRemoteEvent(const String eventType)</li>
 <li>void UnregisterAllRemoteEvents()</li>
 <li>void SetPackageCacheDir(const String path)</li>
-<li>SharedPtr&lt;HttpRequest&gt; MakeHttpRequest(const <a class="el" href="a00288.html" title="String class.">String</a> url, const <a class="el" href="a00288.html" title="String class.">String</a> verb = <a class="el" href="a00288.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>, const Vector&lt;String&gt;&amp; headers = Vector&lt;String&gt;(), const <a class="el" href="a00288.html" title="String class.">String</a> postData = <a class="el" href="a00288.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>)</li>
+<li>HttpRequest* MakeHttpRequest(const <a class="el" href="a00288.html" title="String class.">String</a> url, const <a class="el" href="a00288.html" title="String class.">String</a> verb = <a class="el" href="a00288.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>, const Vector&lt;String&gt;&amp; headers = Vector&lt;String&gt;(), const <a class="el" href="a00288.html" title="String class.">String</a> postData = <a class="el" href="a00288.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>)</li>
 <li>int GetUpdateFps() const</li>
 <li>Connection* GetServerConnection() const</li>
 <li>bool IsServerRunning() const</li>
@@ -5493,7 +5484,4 @@ Global constants</h1>
 </ul>
 <h1><a class="anchor" id="LuaScriptAPI_RenameTypes"></a>
 Rename types</h1>
-<ul>
-<li>SharedPtr&lt;HttpRequest&gt; becomes HttpRequestSPtr </li>
-</ul>
 </div></div><!-- contents -->
