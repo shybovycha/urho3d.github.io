@@ -88,6 +88,7 @@ Though Urho3D already contains several useful features and implements a framewor
 - Magic.Lixin
 - Mike3D
 - amadeus_osa
+- mightyCelu
 - reattiva
 - skaiware
 
