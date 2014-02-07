@@ -262,10 +262,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a003
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a6763218b236464bca5d9c32f482d96af">UpdateGeometries</a> ()</td></tr>
 <tr class="memdesc:a6763218b236464bca5d9c32f482d96af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update geometries and sort batches. <br/></td></tr>
 <tr class="separator:a6763218b236464bca5d9c32f482d96af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e6839531b083f926977ae9fdc2f3a30"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e6839531b083f926977ae9fdc2f3a30"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a1e6839531b083f926977ae9fdc2f3a30">GetLitBatches</a> (<a class="el" href="a00116.html">Drawable</a> *drawable, <a class="el" href="a00161.html">LightBatchQueue</a> &amp;lightQueue, <a class="el" href="a00070.html">BatchQueue</a> *alphaQueue, bool useLitBase)</td></tr>
-<tr class="memdesc:a1e6839531b083f926977ae9fdc2f3a30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get pixel lit batches for a certain light and drawable. <br/></td></tr>
-<tr class="separator:a1e6839531b083f926977ae9fdc2f3a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3058e178d918937136a38d4db2230537"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3058e178d918937136a38d4db2230537"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a3058e178d918937136a38d4db2230537">GetLitBatches</a> (<a class="el" href="a00116.html">Drawable</a> *drawable, <a class="el" href="a00161.html">LightBatchQueue</a> &amp;lightQueue, <a class="el" href="a00070.html">BatchQueue</a> *alphaQueue)</td></tr>
+<tr class="memdesc:a3058e178d918937136a38d4db2230537"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get pixel lit batches for a certain light and drawable. <br/></td></tr>
+<tr class="separator:a3058e178d918937136a38d4db2230537"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2dd8e9237f495ba4ec4a69b195988cfa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2dd8e9237f495ba4ec4a69b195988cfa"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a2dd8e9237f495ba4ec4a69b195988cfa">ExecuteRenderPathCommands</a> ()</td></tr>
 <tr class="memdesc:a2dd8e9237f495ba4ec4a69b195988cfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute render commands. <br/></td></tr>
@@ -513,6 +513,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a003
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a4d1cc9f2f3a796c21ea7e52b2035ed44">deferredAmbient_</a></td></tr>
 <tr class="memdesc:a4d1cc9f2f3a796c21ea7e52b2035ed44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deferred ambient pass flag. This means that the destination rendertarget is being written to at the same time as albedo/normal/depth buffers, and needs to be RGBA on OpenGL. <br/></td></tr>
 <tr class="separator:a4d1cc9f2f3a796c21ea7e52b2035ed44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40fc820202fb088e795b257c6f182089"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a40fc820202fb088e795b257c6f182089"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a40fc820202fb088e795b257c6f182089">useLitBase_</a></td></tr>
+<tr class="memdesc:a40fc820202fb088e795b257c6f182089"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forward light base pass optimization flag. If in use, combine the base pass and first light for all opaque objects. <br/></td></tr>
+<tr class="separator:a40fc820202fb088e795b257c6f182089"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4db609fa2bf04ea27dc712c554bb8f67"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4db609fa2bf04ea27dc712c554bb8f67"></a>
 <a class="el" href="a00239.html">RenderPath</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00322.html#a4db609fa2bf04ea27dc712c554bb8f67">renderPath_</a></td></tr>
 <tr class="memdesc:a4db609fa2bf04ea27dc712c554bb8f67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renderpath. <br/></td></tr>
