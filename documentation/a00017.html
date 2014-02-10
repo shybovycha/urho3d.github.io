@@ -86,5 +86,5 @@ Object allocation &amp; Lua garbage collection</h1>
 <div class="fragment"><div class="line">local text = Text:<span class="keyword">new</span>()</div>
 </div><!-- fragment --><p> When using this form the object will not collected by Lua, so it is safe to pass into C++ object hierarchies. Otherwise, to prevent memory leaks it needs to be deleted manually by calling the delete function on it: </p>
 <div class="fragment"><div class="line">text:<span class="keyword">delete</span>()</div>
-</div><!-- fragment --><p>When you call the <a class="el" href="a00246.html#a21a4cb02435d1721c18ddc25f34a7231">GetFile()</a> function of <a class="el" href="a00246.html" title="Resource cache subsystem. Loads resources on demand and stores them for later access.">ResourceCache</a> from Lua, the file you receive must also be manually deleted like described above once you are done with it. </p>
+</div><!-- fragment --><p>When you call the <a class="el" href="a00246.html#a892167e531b42162c3a3608cdebc3a21">GetFile()</a> function of <a class="el" href="a00246.html" title="Resource cache subsystem. Loads resources on demand and stores them for later access.">ResourceCache</a> from Lua, the file you receive must also be manually deleted like described above once you are done with it. </p>
 </div></div><!-- contents -->
