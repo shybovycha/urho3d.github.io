@@ -66,6 +66,10 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00330.html#adb9eb0a5dfe85dd84b872de320b85a0c">CreateThreads</a> (unsigned numThreads)</td></tr>
 <tr class="memdesc:adb9eb0a5dfe85dd84b872de320b85a0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create worker threads. Can only be called once. <br/></td></tr>
 <tr class="separator:adb9eb0a5dfe85dd84b872de320b85a0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26ea6fa2a1b133946b7b2025c4c8fbdc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26ea6fa2a1b133946b7b2025c4c8fbdc"></a>
+<a class="el" href="a00271.html">SharedPtr</a>&lt; <a class="el" href="a00329.html">WorkItem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00330.html#a26ea6fa2a1b133946b7b2025c4c8fbdc">GetFreeItem</a> ()</td></tr>
+<tr class="memdesc:a26ea6fa2a1b133946b7b2025c4c8fbdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get next free <a class="el" href="a00329.html" title="Work queue item.">WorkItem</a> Ptr. <br/></td></tr>
+<tr class="separator:a26ea6fa2a1b133946b7b2025c4c8fbdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a582329d5f6712ee3963315a82e95b40e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a582329d5f6712ee3963315a82e95b40e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00330.html#a582329d5f6712ee3963315a82e95b40e">AddWorkItem</a> (<a class="el" href="a00271.html">SharedPtr</a>&lt; <a class="el" href="a00329.html">WorkItem</a> &gt; item)</td></tr>
 <tr class="memdesc:a582329d5f6712ee3963315a82e95b40e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a work item and resume worker threads. <br/></td></tr>
@@ -234,6 +238,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a003
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00330.html#a1dde4f90d3a1b041bce128a172f4afe5">PurgeCompleted</a> ()</td></tr>
 <tr class="memdesc:a1dde4f90d3a1b041bce128a172f4afe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Purge completed work items and send completion events as necessary. <br/></td></tr>
 <tr class="separator:a1dde4f90d3a1b041bce128a172f4afe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ab2c89afff9530e6e5f1767fb7d7d21"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ab2c89afff9530e6e5f1767fb7d7d21"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00330.html#a2ab2c89afff9530e6e5f1767fb7d7d21">PurgePool</a> ()</td></tr>
+<tr class="memdesc:a2ab2c89afff9530e6e5f1767fb7d7d21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Purge the pool to reduce allocation where its unneeded. <br/></td></tr>
+<tr class="separator:a2ab2c89afff9530e6e5f1767fb7d7d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa30c10bef2ab469916043c7d4d089a00"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa30c10bef2ab469916043c7d4d089a00"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00330.html#aa30c10bef2ab469916043c7d4d089a00">HandleBeginFrame</a> (<a class="el" href="a00290.html">StringHash</a> eventType, <a class="el" href="a00143.html">VariantMap</a> &amp;eventData)</td></tr>
 <tr class="memdesc:aa30c10bef2ab469916043c7d4d089a00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle frame start event. Purge completed work from the main thread queue, and perform work if no threads at all. <br/></td></tr>
@@ -245,6 +253,11 @@ Private Attributes</h2></td></tr>
 <a class="el" href="a00315.html">Vector</a>&lt; <a class="el" href="a00271.html">SharedPtr</a>&lt; WorkerThread &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00330.html#a88cdd900f13ba0b6b308e19fa8cbec74">threads_</a></td></tr>
 <tr class="memdesc:a88cdd900f13ba0b6b308e19fa8cbec74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Worker threads. <br/></td></tr>
 <tr class="separator:a88cdd900f13ba0b6b308e19fa8cbec74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e21437da2a7bd51b44a5156ac7cd9ec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e21437da2a7bd51b44a5156ac7cd9ec"></a>
+<a class="el" href="a00143.html">HashMap</a>&lt; <a class="el" href="a00271.html">SharedPtr</a>&lt; <a class="el" href="a00329.html">WorkItem</a> &gt;<br class="typebreak"/>
+, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00330.html#a5e21437da2a7bd51b44a5156ac7cd9ec">itemPool_</a></td></tr>
+<tr class="memdesc:a5e21437da2a7bd51b44a5156ac7cd9ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Work item pool for reuse to cut down on allocation. The bool is a flag for item pooling and whether it is available or not. <br/></td></tr>
+<tr class="separator:a5e21437da2a7bd51b44a5156ac7cd9ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c112a722d438baf85afe183cd7ebfb1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c112a722d438baf85afe183cd7ebfb1"></a>
 <a class="el" href="a00167.html">List</a>&lt; <a class="el" href="a00271.html">SharedPtr</a>&lt; <a class="el" href="a00329.html">WorkItem</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00330.html#a7c112a722d438baf85afe183cd7ebfb1">workItems_</a></td></tr>
 <tr class="memdesc:a7c112a722d438baf85afe183cd7ebfb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Work item collection. Accessed only by the main thread. <br/></td></tr>
