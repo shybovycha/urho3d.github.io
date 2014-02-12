@@ -23,5 +23,13 @@ title: Documentation
 <pre class="fragment">void WorkFunction(const WorkItem* item, unsigned threadIndex)
 </pre><p>The thread index ranges from 0 to n, where 0 represents the main thread and n is the number of worker threads created. Its function is to aid in splitting work into per-thread data structures that need no locking. The work item also contains three void pointers: start, end and aux, which can be used to describe a range of sub-work items, and an auxiliary data structure, which may for example be the object that originally queued the work.</p>
 <p>Multithreading is so far not exposed to scripts, and is currently used only in a limited manner: to speed up the preparation of rendering views, including lit object and shadow caster queries, occlusion tests and particle system, animation and skinning updates. Raycasts into the <a class="el" href="a00207.html" title="Octree component. Should be added only to the root scene node">Octree</a> are also threaded, but physics raycasts are not.</p>
-<p>Note that as the <a class="el" href="a00226.html" title="Hierarchical performance profiler subsystem.">Profiler</a> currently manages only a single hierarchy tree, profiling blocks may only appear in main thread code, not in the work functions. </p>
+<p>When making your own work functions, observe that the following things are (at least currently) unsafe and will result in undefined behavior and crashes, if done outside the main thread:</p>
+<ul>
+<li>Sending events</li>
+<li>Using profiler blocks</li>
+<li>Modifying scene or <a class="el" href="a00308.html" title="UI subsystem. Manages the graphical user interface.">UI</a> content</li>
+<li>Modifying GPU resources</li>
+<li>Requesting resources from <a class="el" href="a00246.html" title="Resource cache subsystem. Loads resources on demand and stores them for later access.">ResourceCache</a></li>
+<li>Executing script functions </li>
+</ul>
 </div></div><!-- contents -->
