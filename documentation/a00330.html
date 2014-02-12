@@ -68,7 +68,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a003
 <tr class="separator:adb9eb0a5dfe85dd84b872de320b85a0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26ea6fa2a1b133946b7b2025c4c8fbdc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26ea6fa2a1b133946b7b2025c4c8fbdc"></a>
 <a class="el" href="a00271.html">SharedPtr</a>&lt; <a class="el" href="a00329.html">WorkItem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00330.html#a26ea6fa2a1b133946b7b2025c4c8fbdc">GetFreeItem</a> ()</td></tr>
-<tr class="memdesc:a26ea6fa2a1b133946b7b2025c4c8fbdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get next free <a class="el" href="a00329.html" title="Work queue item.">WorkItem</a> Ptr. <br/></td></tr>
+<tr class="memdesc:a26ea6fa2a1b133946b7b2025c4c8fbdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get pointer to an usable <a class="el" href="a00329.html" title="Work queue item.">WorkItem</a> from the item pool. Allocate one if no more free items. <br/></td></tr>
 <tr class="separator:a26ea6fa2a1b133946b7b2025c4c8fbdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a582329d5f6712ee3963315a82e95b40e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a582329d5f6712ee3963315a82e95b40e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00330.html#a582329d5f6712ee3963315a82e95b40e">AddWorkItem</a> (<a class="el" href="a00271.html">SharedPtr</a>&lt; <a class="el" href="a00329.html">WorkItem</a> &gt; item)</td></tr>
@@ -242,10 +242,10 @@ Private Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00330.html#a0ea072d691b47601ced28c6b26923c8c">ProcessItems</a> (unsigned threadIndex)</td></tr>
 <tr class="memdesc:a0ea072d691b47601ced28c6b26923c8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process work items until shut down. Called by the worker threads. <br/></td></tr>
 <tr class="separator:a0ea072d691b47601ced28c6b26923c8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1dde4f90d3a1b041bce128a172f4afe5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1dde4f90d3a1b041bce128a172f4afe5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00330.html#a1dde4f90d3a1b041bce128a172f4afe5">PurgeCompleted</a> ()</td></tr>
-<tr class="memdesc:a1dde4f90d3a1b041bce128a172f4afe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Purge completed work items and send completion events as necessary. <br/></td></tr>
-<tr class="separator:a1dde4f90d3a1b041bce128a172f4afe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2276d78d6e136224d48c02a18019c8c4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2276d78d6e136224d48c02a18019c8c4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00330.html#a2276d78d6e136224d48c02a18019c8c4">PurgeCompleted</a> (unsigned priority)</td></tr>
+<tr class="memdesc:a2276d78d6e136224d48c02a18019c8c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Purge completed work items which have at least the specified priority, and send completion events as necessary. <br/></td></tr>
+<tr class="separator:a2276d78d6e136224d48c02a18019c8c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ab2c89afff9530e6e5f1767fb7d7d21"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ab2c89afff9530e6e5f1767fb7d7d21"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00330.html#a2ab2c89afff9530e6e5f1767fb7d7d21">PurgePool</a> ()</td></tr>
 <tr class="memdesc:a2ab2c89afff9530e6e5f1767fb7d7d21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Purge the pool to reduce allocation where its unneeded. <br/></td></tr>
@@ -293,6 +293,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a003
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00330.html#a1c1ecce51ec02c42f4c1bed751f0ebdf">tolerance_</a></td></tr>
 <tr class="memdesc:a1c1ecce51ec02c42f4c1bed751f0ebdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tolerance for the shared pool before it begins to deallocate. <br/></td></tr>
 <tr class="separator:a1c1ecce51ec02c42f4c1bed751f0ebdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb4b2c98286ed52c652340cb29d6e65c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb4b2c98286ed52c652340cb29d6e65c"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00330.html#aeb4b2c98286ed52c652340cb29d6e65c">lastSize_</a></td></tr>
+<tr class="memdesc:aeb4b2c98286ed52c652340cb29d6e65c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last size of the shared pool. <br/></td></tr>
+<tr class="separator:aeb4b2c98286ed52c652340cb29d6e65c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
