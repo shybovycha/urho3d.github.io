@@ -87,17 +87,17 @@ Classes</h1>
 </ul>
 <p>Properties:</p>
 <ul>
-<li><a class="el" href="a00290.html" title="32-bit hash value for a string.">StringHash</a> hash</li>
-<li>float speed</li>
-<li>float targetWeight</li>
-<li>float fadeTime</li>
-<li>float autoFadeTime</li>
-<li>float setTimeTtl</li>
-<li>float setWeightTtl</li>
-<li>short setTime</li>
-<li>char setWeight</li>
-<li>char setTimeRev</li>
-<li>char setWeightRev</li>
+<li><a class="el" href="a00290.html" title="32-bit hash value for a string.">StringHash</a> hash_</li>
+<li>float speed_</li>
+<li>float targetWeight_</li>
+<li>float fadeTime_</li>
+<li>float autoFadeTime_</li>
+<li>float setTimeTtl_</li>
+<li>float setWeightTtl_</li>
+<li>short setTime_</li>
+<li>char setWeight_</li>
+<li>char setTimeRev_</li>
+<li>char setWeightRev_</li>
 </ul>
 <h3><a class="el" href="a00053.html" title="Component that drives an AnimatedModel&#39;s animations.">AnimationController</a> : <a class="el" href="a00087.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h3>
 <p>Methods:</p>
@@ -897,7 +897,7 @@ Classes</h1>
 <h3><a class="el" href="a00115.html" title="Abstract stream for reading.">Deserializer</a></h3>
 <p>Methods:</p>
 <ul>
-<li><a class="el" href="a00320.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a> DeserializerRead(unsigned size)</li>
+<li><a class="el" href="a00320.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a> Read(unsigned size)</li>
 <li>unsigned Seek(unsigned position)</li>
 <li>const <a class="el" href="a00289.html" title="String class.">String</a> GetName() const</li>
 <li>unsigned GetChecksum()</li>
@@ -1040,7 +1040,7 @@ Classes</h1>
 <li>void SetResizePopup(bool enable)</li>
 <li>unsigned GetNumItems() const</li>
 <li>UIElement* GetItem(unsigned index) const</li>
-<li>const PODVector&lt;UIElement*&gt;&amp; DropDownListGetItems() const</li>
+<li>const PODVector&lt;UIElement*&gt;&amp; GetItems() const</li>
 <li>unsigned GetSelection() const</li>
 <li>UIElement* GetSelectedItem() const</li>
 <li>ListView* GetListView() const</li>
@@ -1112,7 +1112,7 @@ Classes</h1>
 <li>bool IsOpen() const</li>
 <li>void* GetHandle() const</li>
 <li>bool IsPackaged() const</li>
-<li><a class="el" href="a00320.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a> DeserializerRead(unsigned size)</li>
+<li><a class="el" href="a00320.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a> Read(unsigned size)</li>
 <li>unsigned Seek(unsigned position)</li>
 <li>const <a class="el" href="a00289.html" title="String class.">String</a> GetName() const</li>
 <li>unsigned GetChecksum()</li>
@@ -1152,7 +1152,7 @@ Classes</h1>
 <li>unsigned ReadVLE()</li>
 <li>unsigned ReadNetID()</li>
 <li><a class="el" href="a00289.html" title="String class.">String</a> ReadLine()</li>
-<li>unsigned SerializerWrite(const VectorBuffer&amp; buffer)</li>
+<li>unsigned Write(const VectorBuffer&amp; buffer)</li>
 <li>bool WriteInt(int value)</li>
 <li>bool WriteShort(short value)</li>
 <li>bool WriteByte(char value)</li>
@@ -1176,7 +1176,7 @@ Classes</h1>
 <li>bool WriteFileID(const String value)</li>
 <li>bool WriteStringHash(const StringHash&amp; value)</li>
 <li>bool WriteShortStringHash(const ShortStringHash&amp; value)</li>
-<li>bool SerializerWriteBuffer(const VectorBuffer&amp; buffer)</li>
+<li>bool WriteBuffer(const VectorBuffer&amp; buffer)</li>
 <li>bool WriteResourceRef(const ResourceRef&amp; value)</li>
 <li>bool WriteResourceRefList(const ResourceRefList&amp; value)</li>
 <li>bool WriteVariant(const Variant&amp; value)</li>
@@ -1271,7 +1271,7 @@ Classes</h1>
 <li>unsigned GetLastModifiedTime(const String fileName) const</li>
 <li>bool FileExists(const String fileName) const</li>
 <li>bool DirExists(const String pathName) const</li>
-<li>const Vector&lt;String&gt;&amp; FileSystemScanDir(const String pathName, const String filter, unsigned flags, bool recursive) const</li>
+<li>const Vector&lt;String&gt;&amp; ScanDir(const String pathName, const String filter, unsigned flags, bool recursive) const</li>
 <li><a class="el" href="a00289.html" title="String class.">String</a> GetProgramDir() const</li>
 <li><a class="el" href="a00289.html" title="String class.">String</a> GetUserDocumentsDir() const</li>
 </ul>
@@ -1424,7 +1424,7 @@ Classes</h1>
 <li>void SetPixel(int x, int y, const Color&amp; color)</li>
 <li>void SetPixel(int x, int y, int z, const Color&amp; color)</li>
 <li>bool LoadColorLUT(Deserializer&amp; source)</li>
-<li>bool ImageLoadColorLUT(const String fileName)</li>
+<li>bool LoadColorLUT(const String fileName)</li>
 <li>void FlipVertical()</li>
 <li>bool Resize(int width, int height)</li>
 <li>void Clear(const Color&amp; color)</li>
@@ -1690,12 +1690,12 @@ Classes</h1>
 <li>void ToggleExpand(unsigned index, bool recursive = false)</li>
 <li>unsigned GetNumItems() const</li>
 <li>UIElement* GetItem(unsigned index) const</li>
-<li>const PODVector&lt;UIElement*&gt;&amp; ListViewGetItems() const</li>
+<li>const PODVector&lt;UIElement*&gt;&amp; GetItems() const</li>
 <li>unsigned FindItem(UIElement* item) const</li>
 <li>unsigned GetSelection() const</li>
 <li>const <a class="el" href="a00223.html">PODVector&lt;unsigned&gt;</a>&amp; GetSelections() const</li>
 <li>UIElement* GetSelectedItem() const</li>
-<li>const PODVector&lt;UIElement*&gt;&amp; ListViewGetSelectedItems() const</li>
+<li>const PODVector&lt;UIElement*&gt;&amp; GetSelectedItems() const</li>
 <li>bool IsSelected(unsigned index) const</li>
 <li>bool IsExpanded(unsigned index) const</li>
 <li>HighlightMode GetHighlightMode() const</li>
@@ -1743,12 +1743,12 @@ Classes</h1>
 <li>bool CreateObject(const String scriptFileName, const String scriptObjectType)</li>
 <li>void SetScriptFileName(const String scriptFileName)</li>
 <li>void SetScriptObjectType(const String scriptObjectType)</li>
-<li>void ScriptSubscribeToEvent(const String eventName, const String functionName)</li>
-<li>void ScriptUnsubscribeFromEvent(const String eventName)</li>
-<li>void ScriptUnsubscribeFromAllEvents()</li>
-<li>void ScriptSubscribeToEvent(void* sender, const String eventName, const String functionName)</li>
-<li>void ScriptUnsubscribeFromEvent(void* sender, const String eventName)</li>
-<li>void ScriptUnsubscribeFromEvents(void* sender)</li>
+<li>void SubscribeToEvent(const String eventName, const String functionName)</li>
+<li>void UnsubscribeFromEvent(const String eventName)</li>
+<li>void UnsubscribeFromAllEvents()</li>
+<li>void SubscribeToEvent(void* sender, const String eventName, const String functionName)</li>
+<li>void UnsubscribeFromEvent(void* sender, const String eventName)</li>
+<li>void UnsubscribeFromEvents(void* sender)</li>
 <li>const <a class="el" href="a00289.html" title="String class.">String</a> GetScriptFileName() const</li>
 <li>const <a class="el" href="a00289.html" title="String class.">String</a> GetScriptObjectType() const</li>
 </ul>
@@ -1773,7 +1773,7 @@ Classes</h1>
 <li>void SetDepthBias(const BiasParameters&amp; parameters)</li>
 <li>void RemoveShaderParameter(const String name)</li>
 <li>void ReleaseShaders()</li>
-<li>Material* MaterialClone(const <a class="el" href="a00289.html" title="String class.">String</a> cloneName = <a class="el" href="a00289.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>) const</li>
+<li>Material* Clone(const <a class="el" href="a00289.html" title="String class.">String</a> cloneName = <a class="el" href="a00289.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>) const</li>
 <li>void SortTechniques()</li>
 <li>void MarkForAuxView(unsigned frameNumber)</li>
 <li>unsigned GetNumTechniques() const</li>
@@ -2034,8 +2034,8 @@ Classes</h1>
 <li><a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a> FindNearestPoint(const Vector3&amp; point, const Vector3&amp; extents)</li>
 <li><a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a> MoveAlongSurface(const Vector3&amp; start, const Vector3&amp; end)</li>
 <li><a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a> MoveAlongSurface(const <a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a>&amp; start, const <a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a>&amp; end, const <a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a>&amp; extents, int maxVisited = 3)</li>
-<li>const PODVector&lt;Vector3&gt;&amp; NavigationMeshFindPath(const Vector3&amp; start, const Vector3&amp; end)</li>
-<li>const PODVector&lt;Vector3&gt;&amp; NavigationMeshFindPath(const Vector3&amp; start, const Vector3&amp; end, const Vector3&amp; extents)</li>
+<li>const PODVector&lt;Vector3&gt;&amp; FindPath(const Vector3&amp; start, const Vector3&amp; end)</li>
+<li>const PODVector&lt;Vector3&gt;&amp; FindPath(const Vector3&amp; start, const Vector3&amp; end, const Vector3&amp; extents)</li>
 <li><a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a> GetRandomPoint()</li>
 <li><a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a> GetRandomPointInCircle(const Vector3&amp; center, float radius)</li>
 <li><a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a> GetRandomPointInCircle(const Vector3&amp; center, float radius, const Vector3&amp; extents)</li>
@@ -2112,8 +2112,8 @@ Classes</h1>
 <li>void UnregisterRemoteEvent(const String eventType)</li>
 <li>void UnregisterAllRemoteEvents()</li>
 <li>void SetPackageCacheDir(const String path)</li>
-<li>HttpRequest* NetworkMakeHttpRequest(const <a class="el" href="a00289.html" title="String class.">String</a> url, const <a class="el" href="a00289.html" title="String class.">String</a> verb = <a class="el" href="a00289.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>)</li>
-<li>HttpRequest* NetworkMakeHttpRequest(const <a class="el" href="a00289.html" title="String class.">String</a> url, const <a class="el" href="a00289.html" title="String class.">String</a> verb, const Vector&lt;String&gt;&amp; headers, const <a class="el" href="a00289.html" title="String class.">String</a> postData = <a class="el" href="a00289.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>)</li>
+<li>HttpRequest* MakeHttpRequest(const <a class="el" href="a00289.html" title="String class.">String</a> url, const <a class="el" href="a00289.html" title="String class.">String</a> verb = <a class="el" href="a00289.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>)</li>
+<li>HttpRequest* MakeHttpRequest(const <a class="el" href="a00289.html" title="String class.">String</a> url, const <a class="el" href="a00289.html" title="String class.">String</a> verb, const Vector&lt;String&gt;&amp; headers, const <a class="el" href="a00289.html" title="String class.">String</a> postData = <a class="el" href="a00289.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>)</li>
 <li>int GetUpdateFps() const</li>
 <li>Connection* GetServerConnection() const</li>
 <li>bool IsServerRunning() const</li>
@@ -2152,47 +2152,47 @@ Classes</h1>
 <ul>
 <li>* Node()</li>
 <li>~Node()</li>
-<li>bool NodeSaveXML(File* dest) const</li>
+<li>bool SaveXML(File* dest) const</li>
 <li>void SetName(const String name)</li>
 <li>void SetPosition(const Vector3&amp; position)</li>
-<li>void NodeSetPositionXYZ(float x, float y, float z)</li>
+<li>void SetPositionXYZ(float x, float y, float z)</li>
 <li>void SetRotation(const Quaternion&amp; rotation)</li>
-<li>void NodeSetRotationXYZ(float x, float y, float z)</li>
+<li>void SetRotationXYZ(float x, float y, float z)</li>
 <li>void SetDirection(const Vector3&amp; direction)</li>
-<li>void NodeSetDirectionXYZ(float x, float y, float z)</li>
+<li>void SetDirectionXYZ(float x, float y, float z)</li>
 <li>void SetScale(float scale)</li>
 <li>void SetScale(const Vector3&amp; scale)</li>
-<li>void NodeSetScaleXYZ(float x, float y, float z)</li>
+<li>void SetScaleXYZ(float x, float y, float z)</li>
 <li>void SetTransform(const Vector3&amp; position, const Quaternion&amp; rotation)</li>
 <li>void SetTransform(const Vector3&amp; position, const Quaternion&amp; rotation, float scale)</li>
 <li>void SetTransform(const Vector3&amp; position, const Quaternion&amp; rotation, const Vector3&amp; scale)</li>
 <li>void SetWorldPosition(const Vector3&amp; position)</li>
-<li>void NodeSetWorldPositionXYZ(float x, float y, float z)</li>
+<li>void SetWorldPositionXYZ(float x, float y, float z)</li>
 <li>void SetWorldRotation(const Quaternion&amp; rotation)</li>
-<li>void NodeSetWorldRotationXYZ(float x, float y, float z)</li>
+<li>void SetWorldRotationXYZ(float x, float y, float z)</li>
 <li>void SetWorldDirection(const Vector3&amp; direction)</li>
-<li>void NodeSetWorldDirectionXYZ(float x, float y, float z)</li>
+<li>void SetWorldDirectionXYZ(float x, float y, float z)</li>
 <li>void SetWorldScale(float scale)</li>
 <li>void SetWorldScale(const Vector3&amp; scale)</li>
-<li>void NodeSetWorldScaleXYZ(float x, float y, float z)</li>
+<li>void SetWorldScaleXYZ(float x, float y, float z)</li>
 <li>void SetWorldTransform(const Vector3&amp; position, const Quaternion&amp; rotation)</li>
 <li>void SetWorldTransform(const Vector3&amp; position, const Quaternion&amp; rotation, float scale)</li>
 <li>void SetWorldTransform(const Vector3&amp; position, const Quaternion&amp; rotation, const Vector3&amp; scale)</li>
 <li>void Translate(const Vector3&amp; delta)</li>
-<li>void NodeTranslateXYZ(float x, float y, float z)</li>
+<li>void TranslateXYZ(float x, float y, float z)</li>
 <li>void TranslateRelative(const Vector3&amp; delta)</li>
-<li>void NodeTranslateRelativeXYZ(float x, float y, float z)</li>
+<li>void TranslateRelativeXYZ(float x, float y, float z)</li>
 <li>void Rotate(const <a class="el" href="a00228.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; delta, bool fixedAxis = false)</li>
-<li>void NodeRotateXYZ(float x, float y, float z, bool fixedAxis = false)</li>
+<li>void RotateXYZ(float x, float y, float z, bool fixedAxis = false)</li>
 <li>void Pitch(float angle, bool fixedAxis = false)</li>
 <li>void Yaw(float angle, bool fixedAxis = false)</li>
 <li>void Roll(float angle, bool fixedAxis = false)</li>
 <li>void LookAt(const Vector3&amp; target)</li>
 <li>void LookAt(const Vector3&amp; target, const Vector3&amp; upAxis)</li>
-<li>void NodeLookAtXYZ(float x, float y, float z, float upX = 0.0f, float upY = 1.0f, float upZ = 0.0f)</li>
+<li>void LookAtXYZ(float x, float y, float z, float upX = 0.0f, float upY = 1.0f, float upZ = 0.0f)</li>
 <li>void Scale(float scale)</li>
 <li>void Scale(const Vector3&amp; scale)</li>
-<li>void NodeScaleXYZ(float x, float y, float z)</li>
+<li>void ScaleXYZ(float x, float y, float z)</li>
 <li>void SetEnabled(bool enable)</li>
 <li>void SetEnabled(bool enable, bool recursive)</li>
 <li>void SetOwner(Connection* owner)</li>
@@ -2226,32 +2226,32 @@ Classes</h1>
 <li>bool IsEnabled() const</li>
 <li>Connection* GetOwner() const</li>
 <li>const <a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a>&amp; GetPosition() const</li>
-<li>void NodeGetPositionXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
+<li>void GetPositionXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
 <li>const <a class="el" href="a00228.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; GetRotation() const</li>
-<li>void NodeGetRotationXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
-<li>void NodeGetRotationWXYZ(float w = 0.0f, float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
+<li>void GetRotationXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
+<li>void GetRotationWXYZ(float w = 0.0f, float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
 <li><a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a> GetDirection() const</li>
-<li>void NodeGetDirectionXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
+<li>void GetDirectionXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
 <li><a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a> GetUp() const</li>
-<li>void NodeGetUpXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
+<li>void GetUpXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
 <li><a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a> GetRight() const</li>
-<li>void NodeGetRightXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
+<li>void GetRightXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
 <li>const <a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a>&amp; GetScale() const</li>
-<li>void NodeGetScaleXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
+<li>void GetScaleXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
 <li><a class="el" href="a00180.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> GetTransform() const</li>
 <li><a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a> GetWorldPosition() const</li>
-<li>void NodeGetWorldPositionXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
+<li>void GetWorldPositionXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
 <li><a class="el" href="a00228.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> GetWorldRotation() const</li>
-<li>void NodeGetWorldRotationXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
-<li>void NodeGetWorldRotationWXYZ(float w = 0.0f, float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
+<li>void GetWorldRotationXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
+<li>void GetWorldRotationWXYZ(float w = 0.0f, float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
 <li><a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a> GetWorldDirection() const</li>
-<li>void NodeGetWorldDirectionXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
+<li>void GetWorldDirectionXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
 <li><a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a> GetWorldUp() const</li>
-<li>void NodeGetWorldUpXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
+<li>void GetWorldUpXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
 <li><a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a> GetWorldRight() const</li>
-<li>void NodeGetWorldRightXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
+<li>void GetWorldRightXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
 <li><a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a> GetWorldScale() const</li>
-<li>void NodeGetWorldScaleXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
+<li>void GetWorldScaleXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
 <li>const <a class="el" href="a00180.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a>&amp; GetWorldTransform() const</li>
 <li><a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a> LocalToWorld(const Vector3&amp; position) const</li>
 <li><a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a> LocalToWorld(const Vector4&amp; vector) const</li>
@@ -2311,7 +2311,7 @@ Classes</h1>
 <li><a class="el" href="a00272.html" title="16-bit hash value for a string.">ShortStringHash</a> GetBaseType() const</li>
 <li>const <a class="el" href="a00289.html" title="String class.">String</a> GetTypeName() const</li>
 <li>const <a class="el" href="a00289.html" title="String class.">String</a> GetCategory() const</li>
-<li>void ObjectSendEvent(const <a class="el" href="a00289.html" title="String class.">String</a> eventName, VariantMap* eventData = 0)</li>
+<li>void SendEvent(const <a class="el" href="a00289.html" title="String class.">String</a> eventName, VariantMap* eventData = 0)</li>
 </ul>
 <p>Properties:</p>
 <ul>
@@ -2327,12 +2327,12 @@ Classes</h1>
 <li>void Update(const FrameInfo&amp; frame)</li>
 <li>void AddManualDrawable(Drawable* drawable)</li>
 <li>void RemoveManualDrawable(Drawable* drawable)</li>
-<li>const PODVector&lt;OctreeQueryResult&gt;&amp; OctreeGetDrawablesPoint(const <a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a>&amp; point, char drawableFlags = DRAWABLE_ANY, unsigned viewMask = DEFAULT_VIEWMASK) const</li>
-<li>const PODVector&lt;OctreeQueryResult&gt;&amp; OctreeGetDrawablesBoundingBox(const <a class="el" href="a00076.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a>&amp; box, char drawableFlags = DRAWABLE_ANY, unsigned viewMask = DEFAULT_VIEWMASK) const</li>
-<li>const PODVector&lt;OctreeQueryResult&gt;&amp; OctreeGetDrawablesFrustum(const <a class="el" href="a00134.html" title="Convex constructed of 6 planes.">Frustum</a>&amp; frustum, char drawableFlags = DRAWABLE_ANY, unsigned viewMask = DEFAULT_VIEWMASK) const</li>
-<li>const PODVector&lt;OctreeQueryResult&gt;&amp; OctreeGetDrawablesSphere(const <a class="el" href="a00282.html" title="Sphere in three-dimensional space.">Sphere</a>&amp; sphere, char drawableFlags = DRAWABLE_ANY, unsigned viewMask = DEFAULT_VIEWMASK) const</li>
-<li>const PODVector&lt;RayQueryResult&gt;&amp; OctreeRaycast(const Ray&amp; ray, RayQueryLevel level, float maxDistance, char drawableFlags) const</li>
-<li><a class="el" href="a00233.html" title="Raycast result.">RayQueryResult</a> OctreeRaycastSingle(const Ray&amp; ray, RayQueryLevel level, float maxDistance, char drawableFlags) const</li>
+<li>const PODVector&lt;OctreeQueryResult&gt;&amp; GetDrawables(const <a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a>&amp; point, char drawableFlags = DRAWABLE_ANY, unsigned viewMask = DEFAULT_VIEWMASK) const</li>
+<li>const PODVector&lt;OctreeQueryResult&gt;&amp; GetDrawables(const <a class="el" href="a00076.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a>&amp; box, char drawableFlags = DRAWABLE_ANY, unsigned viewMask = DEFAULT_VIEWMASK) const</li>
+<li>const PODVector&lt;OctreeQueryResult&gt;&amp; GetDrawables(const <a class="el" href="a00134.html" title="Convex constructed of 6 planes.">Frustum</a>&amp; frustum, char drawableFlags = DRAWABLE_ANY, unsigned viewMask = DEFAULT_VIEWMASK) const</li>
+<li>const PODVector&lt;OctreeQueryResult&gt;&amp; GetDrawables(const <a class="el" href="a00282.html" title="Sphere in three-dimensional space.">Sphere</a>&amp; sphere, char drawableFlags = DRAWABLE_ANY, unsigned viewMask = DEFAULT_VIEWMASK) const</li>
+<li>const PODVector&lt;RayQueryResult&gt;&amp; Raycast(const Ray&amp; ray, RayQueryLevel level, float maxDistance, char drawableFlags) const</li>
+<li><a class="el" href="a00233.html" title="Raycast result.">RayQueryResult</a> RaycastSingle(const Ray&amp; ray, RayQueryLevel level, float maxDistance, char drawableFlags) const</li>
 <li>unsigned GetNumLevels() const</li>
 <li>void QueueUpdate(Drawable* drawable)</li>
 <li>void DrawDebugGeometry(bool depthTest)</li>
@@ -2530,9 +2530,9 @@ Classes</h1>
 <li>void SetInternalEdge(bool enable)</li>
 <li>void SetSplitImpulse(bool enable)</li>
 <li>void SetMaxNetworkAngularVelocity(float velocity)</li>
-<li>const PODVector&lt;PhysicsRaycastResult&gt;&amp; PhysicsWorldRaycast(const <a class="el" href="a00231.html" title="Infinite straight line in three-dimensional space.">Ray</a>&amp; ray, float maxDistance, unsigned collisionMask = M_MAX_UNSIGNED)</li>
-<li><a class="el" href="a00220.html" title="Physics raycast hit.">PhysicsRaycastResult</a> PhysicsWorldRaycastSingle(const <a class="el" href="a00231.html" title="Infinite straight line in three-dimensional space.">Ray</a>&amp; ray, float maxDistance, unsigned collisionMask = M_MAX_UNSIGNED)</li>
-<li><a class="el" href="a00220.html" title="Physics raycast hit.">PhysicsRaycastResult</a> PhysicsWorldSphereCast(const <a class="el" href="a00231.html" title="Infinite straight line in three-dimensional space.">Ray</a>&amp; ray, float radius, float maxDistance, unsigned collisionMask = M_MAX_UNSIGNED)</li>
+<li>const PODVector&lt;PhysicsRaycastResult&gt;&amp; Raycast(const <a class="el" href="a00231.html" title="Infinite straight line in three-dimensional space.">Ray</a>&amp; ray, float maxDistance, unsigned collisionMask = M_MAX_UNSIGNED)</li>
+<li><a class="el" href="a00220.html" title="Physics raycast hit.">PhysicsRaycastResult</a> RaycastSingle(const <a class="el" href="a00231.html" title="Infinite straight line in three-dimensional space.">Ray</a>&amp; ray, float maxDistance, unsigned collisionMask = M_MAX_UNSIGNED)</li>
+<li><a class="el" href="a00220.html" title="Physics raycast hit.">PhysicsRaycastResult</a> SphereCast(const <a class="el" href="a00231.html" title="Infinite straight line in three-dimensional space.">Ray</a>&amp; ray, float radius, float maxDistance, unsigned collisionMask = M_MAX_UNSIGNED)</li>
 <li>void DrawDebugGeometry(bool depthTest)</li>
 <li>void RemoveCachedGeometry(Model* model)</li>
 <li><a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a> GetGravity() const</li>
@@ -2747,7 +2747,7 @@ Classes</h1>
 <h3><a class="el" href="a00240.html" title="Rendering path definition.">RenderPath</a></h3>
 <p>Methods:</p>
 <ul>
-<li>RenderPath* RenderPathClone()</li>
+<li>RenderPath* Clone()</li>
 <li>bool Load(XMLFile* file)</li>
 <li>bool Append(XMLFile* file)</li>
 <li>void SetEnabled(const String tag, bool active)</li>
@@ -2903,8 +2903,8 @@ Classes</h1>
 <ul>
 <li>bool Load(Deserializer&amp; source)</li>
 <li>bool Save(Serializer&amp; dest) const</li>
-<li>bool ResourceLoad(const String fileName)</li>
-<li>bool ResourceSave(const String fileName) const</li>
+<li>bool Load(const String fileName)</li>
+<li>bool Save(const String fileName) const</li>
 <li>const <a class="el" href="a00289.html" title="String class.">String</a> GetName() const</li>
 <li><a class="el" href="a00290.html" title="32-bit hash value for a string.">StringHash</a> GetNameHash() const</li>
 <li>unsigned GetMemoryUse() const</li>
@@ -2924,7 +2924,7 @@ Classes</h1>
 <li>void SetMemoryBudget(const String type, unsigned budget)</li>
 <li>void SetAutoReloadResources(bool enable)</li>
 <li>void SetSearchPackagesFirst(bool value)</li>
-<li>File* ResourceCacheGetFile(const String name)</li>
+<li>File* GetFile(const String name)</li>
 <li>Resource* GetResource(const <a class="el" href="a00289.html" title="String class.">String</a> type, const <a class="el" href="a00289.html" title="String class.">String</a> name, bool SendEventOnFailure = true)</li>
 <li>bool Exists(const String name) const</li>
 <li>unsigned GetMemoryBudget(ShortStringHash type) const</li>
@@ -3073,18 +3073,18 @@ Classes</h1>
 <ul>
 <li>* Scene()</li>
 <li>~Scene()</li>
-<li>bool SceneLoad(File* source)</li>
-<li>bool SceneSave(File* dest) const</li>
-<li>bool SceneLoad(const String fileName)</li>
-<li>bool SceneSave(const String fileName) const</li>
-<li>bool SceneLoadXML(File* source)</li>
-<li>bool SceneSaveXML(File* dest) const</li>
-<li>bool SceneLoadXML(const String fileName)</li>
-<li>bool SceneSaveXML(const String fileName) const</li>
-<li>Node* SceneInstantiate(File* source, const <a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a>&amp; position, const <a class="el" href="a00228.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; rotation, CreateMode mode = REPLICATED)</li>
-<li>Node* SceneInstantiate(const <a class="el" href="a00289.html" title="String class.">String</a> fileName, const <a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a>&amp; position, const <a class="el" href="a00228.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; rotation, CreateMode mode = REPLICATED)</li>
-<li>Node* SceneInstantiateXML(File* source, const <a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a>&amp; position, const <a class="el" href="a00228.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; rotation, CreateMode mode = REPLICATED)</li>
-<li>Node* SceneInstantiateXML(const <a class="el" href="a00289.html" title="String class.">String</a> fileName, const <a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a>&amp; position, const <a class="el" href="a00228.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; rotation, CreateMode mode = REPLICATED)</li>
+<li>bool Load(File* source)</li>
+<li>bool Save(File* dest) const</li>
+<li>bool Load(const String fileName)</li>
+<li>bool Save(const String fileName) const</li>
+<li>bool LoadXML(File* source)</li>
+<li>bool SaveXML(File* dest) const</li>
+<li>bool LoadXML(const String fileName)</li>
+<li>bool SaveXML(const String fileName) const</li>
+<li>Node* Instantiate(File* source, const <a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a>&amp; position, const <a class="el" href="a00228.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; rotation, CreateMode mode = REPLICATED)</li>
+<li>Node* Instantiate(const <a class="el" href="a00289.html" title="String class.">String</a> fileName, const <a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a>&amp; position, const <a class="el" href="a00228.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; rotation, CreateMode mode = REPLICATED)</li>
+<li>Node* InstantiateXML(File* source, const <a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a>&amp; position, const <a class="el" href="a00228.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; rotation, CreateMode mode = REPLICATED)</li>
+<li>Node* InstantiateXML(const <a class="el" href="a00289.html" title="String class.">String</a> fileName, const <a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a>&amp; position, const <a class="el" href="a00228.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; rotation, CreateMode mode = REPLICATED)</li>
 <li>bool LoadAsync(File* file)</li>
 <li>bool LoadAsyncXML(File* file)</li>
 <li>void StopAsyncLoading()</li>
@@ -3218,7 +3218,7 @@ Classes</h1>
 <h3><a class="el" href="a00264.html" title="Abstract stream for writing.">Serializer</a></h3>
 <p>Methods:</p>
 <ul>
-<li>unsigned SerializerWrite(const VectorBuffer&amp; buffer)</li>
+<li>unsigned Write(const VectorBuffer&amp; buffer)</li>
 <li>bool WriteInt(int value)</li>
 <li>bool WriteShort(short value)</li>
 <li>bool WriteByte(char value)</li>
@@ -3242,7 +3242,7 @@ Classes</h1>
 <li>bool WriteFileID(const String value)</li>
 <li>bool WriteStringHash(const StringHash&amp; value)</li>
 <li>bool WriteShortStringHash(const ShortStringHash&amp; value)</li>
-<li>bool SerializerWriteBuffer(const VectorBuffer&amp; buffer)</li>
+<li>bool WriteBuffer(const VectorBuffer&amp; buffer)</li>
 <li>bool WriteResourceRef(const ResourceRef&amp; value)</li>
 <li>bool WriteResourceRefList(const ResourceRefList&amp; value)</li>
 <li>bool WriteVariant(const Variant&amp; value)</li>
@@ -3319,9 +3319,9 @@ Classes</h1>
 <li>bool LoadRaw(Deserializer&amp; source)</li>
 <li>bool LoadWav(Deserializer&amp; source)</li>
 <li>bool LoadOggVorbis(Deserializer&amp; source)</li>
-<li>bool SoundLoadRaw(const String fileName)</li>
-<li>bool SoundLoadWav(const String fileName)</li>
-<li>bool SoundLoadOggVorbis(const String fileName)</li>
+<li>bool LoadRaw(const String fileName)</li>
+<li>bool LoadWav(const String fileName)</li>
+<li>bool LoadOggVorbis(const String fileName)</li>
 <li>void SetSize(unsigned dataSize)</li>
 <li>void SetData(const void* data, unsigned dataSize)</li>
 <li>void SetFormat(unsigned frequency, bool sixteenBit, bool stereo)</li>
@@ -3857,7 +3857,7 @@ Classes</h1>
 <li>* Texture2D()</li>
 <li>~Texture2D()</li>
 <li>bool SetSize(int width, int height, unsigned format, TextureUsage usage = TEXTURE_STATIC)</li>
-<li>bool Texture2DLoad(Image* image, bool useAlpha = false)</li>
+<li>bool Load(Image* image, bool useAlpha = false)</li>
 <li>RenderSurface* GetRenderSurface() const</li>
 </ul>
 <p>Properties:</p>
@@ -3993,8 +3993,8 @@ Classes</h1>
 <li>const <a class="el" href="a00155.html" title="Two-dimensional vector with integer values.">IntVector2</a>&amp; GetScreenPosition() const</li>
 <li>bool LoadXML(Deserializer&amp; source)</li>
 <li>bool SaveXML(Serializer&amp; dest) const</li>
-<li>bool UIElementLoadXML(const String fileName)</li>
-<li>bool UIElementSaveXML(const String fileName) const</li>
+<li>bool LoadXML(const String fileName)</li>
+<li>bool SaveXML(const String fileName) const</li>
 <li>bool FilterAttributes(XMLElement&amp; dest) const</li>
 <li>void SetName(const String name)</li>
 <li>void SetPosition(const IntVector2&amp; position)</li>
@@ -4125,7 +4125,7 @@ Classes</h1>
 <li>int GetIndentWidth() const</li>
 <li>void SetChildOffset(const IntVector2&amp; offset)</li>
 <li>void SetHovering(bool enable)</li>
-<li>const <a class="el" href="a00085.html" title="RGBA color.">Color</a>&amp; GetColorAttr() const</li>
+<li>const <a class="el" href="a00085.html" title="RGBA color.">Color</a>&amp; GetColor() const</li>
 <li>TraversalMode GetTraversalMode() const</li>
 <li>bool IsElementEventSender() const</li>
 <li>UIElement* GetElementEventSender() const</li>
@@ -4151,7 +4151,7 @@ Classes</h1>
 <li>HorizontalAlignment horizontalAlignment</li>
 <li>VerticalAlignment verticalAlignment</li>
 <li><a class="el" href="a00154.html" title="Two-dimensional bounding rectangle with integer values.">IntRect</a> clipBorder</li>
-<li><a class="el" href="a00085.html" title="RGBA color.">Color</a>&amp; colorAttr</li>
+<li><a class="el" href="a00085.html" title="RGBA color.">Color</a>&amp; color</li>
 <li>int priority</li>
 <li>float opacity</li>
 <li>float derivedOpacity (readonly)</li>
@@ -4231,23 +4231,23 @@ Classes</h1>
 <li>bool operator==(const IntVector2&amp; rhs) const</li>
 <li>bool operator==(const StringHash&amp; rhs) const</li>
 <li>bool operator==(const ShortStringHash&amp; rhs) const</li>
-<li>void VariantSetInt(int value)</li>
-<li>void VariantSetUint(unsigned value)</li>
-<li>void VariantSetStringHash(const StringHash&amp; value)</li>
-<li>void VariantSetShortStringHash(const ShortStringHash&amp; value)</li>
-<li>void VariantSetBool(bool value)</li>
-<li>void VariantSetFloat(float value)</li>
-<li>void VariantSetVector2(const Vector2&amp; value)</li>
-<li>void VariantSetVector3(const Vector3&amp; value)</li>
-<li>void VariantSetVector4(const Vector4&amp; value)</li>
-<li>void VariantSetQuaternion(const Quaternion&amp; value)</li>
-<li>void VariantSetColor(const Color&amp; value)</li>
-<li>void VariantSetString(const String value)</li>
-<li>void VariantSetBuffer(const VectorBuffer&amp; value)</li>
-<li>void VariantSetResourceRef(const ResourceRef&amp; value)</li>
-<li>void VariantSetResourceRefList(const ResourceRefList&amp; value)</li>
-<li>void VariantSetIntRect(const IntRect&amp; value)</li>
-<li>void VariantSetIntVector2(const IntVector2&amp; value)</li>
+<li>void SetInt(int value)</li>
+<li>void SetUint(unsigned value)</li>
+<li>void SetStringHash(const StringHash&amp; value)</li>
+<li>void SetShortStringHash(const ShortStringHash&amp; value)</li>
+<li>void SetBool(bool value)</li>
+<li>void SetFloat(float value)</li>
+<li>void SetVector2(const Vector2&amp; value)</li>
+<li>void SetVector3(const Vector3&amp; value)</li>
+<li>void SetVector4(const Vector4&amp; value)</li>
+<li>void SetQuaternion(const Quaternion&amp; value)</li>
+<li>void SetColor(const Color&amp; value)</li>
+<li>void SetString(const String value)</li>
+<li>void SetBuffer(const VectorBuffer&amp; value)</li>
+<li>void SetResourceRef(const ResourceRef&amp; value)</li>
+<li>void SetResourceRefList(const ResourceRefList&amp; value)</li>
+<li>void SetIntRect(const IntRect&amp; value)</li>
+<li>void SetIntVector2(const IntVector2&amp; value)</li>
 <li>int GetInt() const</li>
 <li>int GetUInt() const</li>
 <li><a class="el" href="a00290.html" title="32-bit hash value for a string.">StringHash</a> GetStringHash()</li>
@@ -4260,7 +4260,7 @@ Classes</h1>
 <li>const <a class="el" href="a00228.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; GetQuaternion() const</li>
 <li>const <a class="el" href="a00085.html" title="RGBA color.">Color</a>&amp; GetColor() const</li>
 <li>const <a class="el" href="a00289.html" title="String class.">String</a> GetString() const</li>
-<li><a class="el" href="a00320.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a> VariantGetBuffer() const</li>
+<li><a class="el" href="a00320.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a> GetBuffer() const</li>
 <li>const <a class="el" href="a00248.html" title="Typed resource reference.">ResourceRef</a>&amp; GetResourceRef() const</li>
 <li>const <a class="el" href="a00249.html" title="List of typed resource references.">ResourceRefList</a>&amp; GetResourceRefList() const</li>
 <li>const <a class="el" href="a00154.html" title="Two-dimensional bounding rectangle with integer values.">IntRect</a>&amp; GetIntRect() const</li>
@@ -4283,42 +4283,42 @@ Classes</h1>
 <ul>
 <li>* VariantMap()</li>
 <li>~VariantMap()</li>
-<li>void VariantMapSetInt(const String key, int value)</li>
-<li>void VariantMapSetUInt(const String key, unsigned value)</li>
-<li>void VariantMapSetStringHash(const String key, const StringHash&amp; value)</li>
-<li>void VariantMapSetShortStringHash(const String key, const ShortStringHash&amp; value)</li>
-<li>void VariantMapSetBool(const String key, bool value)</li>
-<li>void VariantMapSetFloat(const String key, float value)</li>
-<li>void VariantMapSetVector2(const String key, const Vector2 value)</li>
-<li>void VariantMapSetVector3(const String key, const Vector3 value)</li>
-<li>void VariantMapSetVector4(const String key, const Vector4 value)</li>
-<li>void VariantMapSetQuaternion(const String key, const Quaternion value)</li>
-<li>void VariantMapSetColor(const String key, const Color value)</li>
-<li>void VariantMapSetString(const String key, const String value)</li>
-<li>void VariantMapSetBuffer(const String key, const VectorBuffer&amp; value)</li>
-<li>void VariantMapSetResourceRef(const String key, const ResourceRef value)</li>
-<li>void VariantMapSetResourceRefList(const String key, const ResourceRefList value)</li>
-<li>void VariantMapSetIntRect(const String key, const IntRect value)</li>
-<li>void VariantMapSetIntVector2(const String key, const IntVector2 value)</li>
-<li>void VariantMapSetPtr(const String key, void* value)</li>
-<li>int VariantMapGetInt(const String key)</li>
-<li>int VariantMapGetUInt(const String key)</li>
-<li><a class="el" href="a00290.html" title="32-bit hash value for a string.">StringHash</a> VariantMapGetStringHash(const String key)</li>
-<li><a class="el" href="a00272.html" title="16-bit hash value for a string.">ShortStringHash</a> VariantMapGetShortStringHash(const String key)</li>
-<li>bool VariantMapGetBool(const String key)</li>
-<li>float VariantMapGetFloat(const String key)</li>
-<li>const <a class="el" href="a00316.html" title="Two-dimensional vector.">Vector2</a>&amp; VariantMapGetVector2(const String key)</li>
-<li>const <a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a>&amp; VariantMapGetVector3(const String key)</li>
-<li>const <a class="el" href="a00318.html" title="Four-dimensional vector.">Vector4</a>&amp; VariantMapGetVector4(const String key)</li>
-<li>const <a class="el" href="a00228.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; VariantMapGetQuaternion(const String key)</li>
-<li>const <a class="el" href="a00085.html" title="RGBA color.">Color</a>&amp; VariantMapGetColor(const String key)</li>
-<li>const <a class="el" href="a00289.html" title="String class.">String</a> VariantMapGetString(const String key)</li>
-<li><a class="el" href="a00320.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a> VariantMapGetBuffer(const String key)</li>
-<li>const <a class="el" href="a00248.html" title="Typed resource reference.">ResourceRef</a>&amp; VariantMapGetResourceRef(const String key)</li>
-<li>const <a class="el" href="a00249.html" title="List of typed resource references.">ResourceRefList</a>&amp; VariantMapGetResourceRefList(const String key)</li>
-<li>const <a class="el" href="a00154.html" title="Two-dimensional bounding rectangle with integer values.">IntRect</a>&amp; VariantMapGetIntRect(const String key)</li>
-<li>const <a class="el" href="a00155.html" title="Two-dimensional vector with integer values.">IntVector2</a>&amp; VariantMapGetIntVector2(const String key)</li>
-<li>const void* VariantMapGetPtr(const String type, const String key)</li>
+<li>void SetInt(const String key, int value)</li>
+<li>void SetUInt(const String key, unsigned value)</li>
+<li>void SetStringHash(const String key, const StringHash&amp; value)</li>
+<li>void SetShortStringHash(const String key, const ShortStringHash&amp; value)</li>
+<li>void SetBool(const String key, bool value)</li>
+<li>void SetFloat(const String key, float value)</li>
+<li>void SetVector2(const String key, const Vector2 value)</li>
+<li>void SetVector3(const String key, const Vector3 value)</li>
+<li>void SetVector4(const String key, const Vector4 value)</li>
+<li>void SetQuaternion(const String key, const Quaternion value)</li>
+<li>void SetColor(const String key, const Color value)</li>
+<li>void SetString(const String key, const String value)</li>
+<li>void SetBuffer(const String key, const VectorBuffer&amp; value)</li>
+<li>void SetResourceRef(const String key, const ResourceRef value)</li>
+<li>void SetResourceRefList(const String key, const ResourceRefList value)</li>
+<li>void SetIntRect(const String key, const IntRect value)</li>
+<li>void SetIntVector2(const String key, const IntVector2 value)</li>
+<li>void SetPtr(const String key, void* value)</li>
+<li>int GetInt(const String key)</li>
+<li>int GetUInt(const String key)</li>
+<li><a class="el" href="a00290.html" title="32-bit hash value for a string.">StringHash</a> GetStringHash(const String key)</li>
+<li><a class="el" href="a00272.html" title="16-bit hash value for a string.">ShortStringHash</a> GetShortStringHash(const String key)</li>
+<li>bool GetBool(const String key)</li>
+<li>float GetFloat(const String key)</li>
+<li>const <a class="el" href="a00316.html" title="Two-dimensional vector.">Vector2</a>&amp; GetVector2(const String key)</li>
+<li>const <a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a>&amp; GetVector3(const String key)</li>
+<li>const <a class="el" href="a00318.html" title="Four-dimensional vector.">Vector4</a>&amp; GetVector4(const String key)</li>
+<li>const <a class="el" href="a00228.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; GetQuaternion(const String key)</li>
+<li>const <a class="el" href="a00085.html" title="RGBA color.">Color</a>&amp; GetColor(const String key)</li>
+<li>const <a class="el" href="a00289.html" title="String class.">String</a> GetString(const String key)</li>
+<li><a class="el" href="a00320.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a> GetBuffer(const String key)</li>
+<li>const <a class="el" href="a00248.html" title="Typed resource reference.">ResourceRef</a>&amp; GetResourceRef(const String key)</li>
+<li>const <a class="el" href="a00249.html" title="List of typed resource references.">ResourceRefList</a>&amp; GetResourceRefList(const String key)</li>
+<li>const <a class="el" href="a00154.html" title="Two-dimensional bounding rectangle with integer values.">IntRect</a>&amp; GetIntRect(const String key)</li>
+<li>const <a class="el" href="a00155.html" title="Two-dimensional vector with integer values.">IntVector2</a>&amp; GetIntVector2(const String key)</li>
+<li>const void* GetPtr(const String type, const String key)</li>
 </ul>
 <h3><a class="el" href="a00316.html" title="Two-dimensional vector.">Vector2</a></h3>
 <p>Methods:</p>
@@ -4446,7 +4446,7 @@ Classes</h1>
 <li>void Resize(unsigned size)</li>
 <li>const void* GetData() const</li>
 <li>void* GetModifiableData()</li>
-<li><a class="el" href="a00320.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a> DeserializerRead(unsigned size)</li>
+<li><a class="el" href="a00320.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a> Read(unsigned size)</li>
 <li>unsigned Seek(unsigned position)</li>
 <li>const <a class="el" href="a00289.html" title="String class.">String</a> GetName() const</li>
 <li>unsigned GetChecksum()</li>
@@ -4486,7 +4486,7 @@ Classes</h1>
 <li>unsigned ReadVLE()</li>
 <li>unsigned ReadNetID()</li>
 <li><a class="el" href="a00289.html" title="String class.">String</a> ReadLine()</li>
-<li>unsigned SerializerWrite(const VectorBuffer&amp; buffer)</li>
+<li>unsigned Write(const VectorBuffer&amp; buffer)</li>
 <li>bool WriteInt(int value)</li>
 <li>bool WriteShort(short value)</li>
 <li>bool WriteByte(char value)</li>
@@ -4510,7 +4510,7 @@ Classes</h1>
 <li>bool WriteFileID(const String value)</li>
 <li>bool WriteStringHash(const StringHash&amp; value)</li>
 <li>bool WriteShortStringHash(const ShortStringHash&amp; value)</li>
-<li>bool SerializerWriteBuffer(const VectorBuffer&amp; buffer)</li>
+<li>bool WriteBuffer(const VectorBuffer&amp; buffer)</li>
 <li>bool WriteResourceRef(const ResourceRef&amp; value)</li>
 <li>bool WriteResourceRefList(const ResourceRefList&amp; value)</li>
 <li>bool WriteVariant(const Variant&amp; value)</li>
@@ -5257,10 +5257,10 @@ Global functions</h1>
 <li>int Rand()</li>
 <li>float RandStandardNormal()</li>
 <li>float Random(float range)</li>
-<li>int Random(int range)</li>
-<li>int Random(int min, int max)</li>
-<li>float Random()</li>
 <li>float Random(float min, float max)</li>
+<li>float Random()</li>
+<li>int RandomInt(int min, int max)</li>
+<li>int RandomInt(int range)</li>
 <li>float RandomNormal(float meanValue, float variance)</li>
 <li><a class="el" href="a00289.html" title="String class.">String</a> RemoveTrailingSlash(const String pathName)</li>
 <li><a class="el" href="a00289.html" title="String class.">String</a> ReplaceExtension(const String fullPath, const String newExtension)</li>
