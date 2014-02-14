@@ -83,7 +83,9 @@ Classes</h1>
 <h3><a class="el" href="a00052.html" title="Control data for an animation.">AnimationControl</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* AnimationControl()</li>
+<li>AnimationControl() (GC)</li>
+<li>AnimationControl* new()</li>
+<li>void delete()</li>
 </ul>
 <p>Properties:</p>
 <ul>
@@ -144,9 +146,11 @@ Classes</h1>
 <h3><a class="el" href="a00055.html" title="Animation instance.">AnimationState</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* AnimationState(AnimatedModel* model, Animation* animation)</li>
-<li>* AnimationState(Node* node, Animation* animation)</li>
-<li>~AnimationState()</li>
+<li>AnimationState(AnimatedModel* model, Animation* animation) (GC)</li>
+<li>AnimationState* new(AnimatedModel* model, Animation* animation)</li>
+<li>AnimationState(Node* node, Animation* animation) (GC)</li>
+<li>AnimationState* new(Node* node, Animation* animation)</li>
+<li>void delete()</li>
 <li>void SetStartBone(Bone* bone)</li>
 <li>void SetLooped(bool looped)</li>
 <li>void SetWeight(float weight)</li>
@@ -218,8 +222,11 @@ Classes</h1>
 <h3><a class="el" href="a00071.html" title="Shadow depth bias parameters.">BiasParameters</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* BiasParameters()</li>
-<li>* BiasParameters(float constantBias, float slopeScaledBias)</li>
+<li>BiasParameters() (GC)</li>
+<li>BiasParameters* new()</li>
+<li>BiasParameters(float constantBias, float slopeScaledBias) (GC)</li>
+<li>BiasParameters* new(float constantBias, float slopeScaledBias)</li>
+<li>void delete()</li>
 </ul>
 <h3><a class="el" href="a00072.html" title="One billboard in the billboard set.">Billboard</a></h3>
 <p>Properties:</p>
@@ -265,7 +272,9 @@ Classes</h1>
 <h3><a class="el" href="a00074.html" title="Bone in a skeleton.">Bone</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Bone()</li>
+<li>Bone() (GC)</li>
+<li>Bone* new()</li>
+<li>void delete()</li>
 </ul>
 <p>Properties:</p>
 <ul>
@@ -285,8 +294,9 @@ Classes</h1>
 <h3><a class="el" href="a00075.html" title="Image UI element with optional border.">BorderImage</a> : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* BorderImage()</li>
-<li>~BorderImage()</li>
+<li>BorderImage() (GC)</li>
+<li>BorderImage* new()</li>
+<li>void delete()</li>
 <li>void SetTexture(Texture* texture)</li>
 <li>void SetImageRect(const IntRect&amp; rect)</li>
 <li>void SetFullImageRect()</li>
@@ -314,15 +324,23 @@ Classes</h1>
 <h3><a class="el" href="a00076.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* BoundingBox()</li>
-<li>* BoundingBox(const BoundingBox&amp; box)</li>
-<li>* BoundingBox(const Rect&amp; rect)</li>
-<li>* BoundingBox(const Vector3&amp; min, const Vector3&amp; max)</li>
-<li>* BoundingBox(float min, float max)</li>
-<li>* BoundingBox(const Frustum&amp; frustum)</li>
-<li>* BoundingBox(const Polyhedron&amp; poly)</li>
-<li>* BoundingBox(const Sphere&amp; sphere)</li>
-<li>~BoundingBox()</li>
+<li>BoundingBox() (GC)</li>
+<li>BoundingBox* new()</li>
+<li>BoundingBox(const BoundingBox&amp; box) (GC)</li>
+<li>BoundingBox* new(const BoundingBox&amp; box)</li>
+<li>BoundingBox(const Rect&amp; rect) (GC)</li>
+<li>BoundingBox* new(const Rect&amp; rect)</li>
+<li>BoundingBox(const Vector3&amp; min, const Vector3&amp; max) (GC)</li>
+<li>BoundingBox* new(const Vector3&amp; min, const Vector3&amp; max)</li>
+<li>BoundingBox(float min, float max) (GC)</li>
+<li>BoundingBox* new(float min, float max)</li>
+<li>BoundingBox(const Frustum&amp; frustum) (GC)</li>
+<li>BoundingBox* new(const Frustum&amp; frustum)</li>
+<li>BoundingBox(const Polyhedron&amp; poly) (GC)</li>
+<li>BoundingBox* new(const Polyhedron&amp; poly)</li>
+<li>BoundingBox(const Sphere&amp; sphere) (GC)</li>
+<li>BoundingBox* new(const Sphere&amp; sphere)</li>
+<li>void delete()</li>
 <li>bool operator==(const BoundingBox&amp; rhs) const</li>
 <li>void Define(const BoundingBox&amp; box)</li>
 <li>void Define(const Rect&amp; rect)</li>
@@ -366,8 +384,9 @@ Classes</h1>
 <h3><a class="el" href="a00078.html" title="Pushbutton UI element.">Button</a> : <a class="el" href="a00075.html" title="Image UI element with optional border.">BorderImage</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Button()</li>
-<li>~Button()</li>
+<li>Button() (GC)</li>
+<li>Button* new()</li>
+<li>void delete()</li>
 <li>void SetPressedOffset(const IntVector2&amp; offset)</li>
 <li>void SetPressedOffset(int x, int y)</li>
 <li>void SetPressedChildOffset(const IntVector2&amp; offset)</li>
@@ -474,14 +493,18 @@ Classes</h1>
 <h3><a class="el" href="a00080.html" title="Cascaded shadow map parameters.">CascadeParameters</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* CascadeParameters()</li>
-<li>* <a class="el" href="a00080.html" title="Cascaded shadow map parameters.">CascadeParameters</a>(float split1, float split2, float split3, float split4, float fadeStart, float biasAutoAdjust = 1.0f)</li>
+<li>CascadeParameters() (GC)</li>
+<li>CascadeParameters* new()</li>
+<li><a class="el" href="a00080.html" title="Cascaded shadow map parameters.">CascadeParameters</a>(float split1, float split2, float split3, float split4, float fadeStart, float biasAutoAdjust = 1.0f) (GC)</li>
+<li>CascadeParameters* new(float split1, float split2, float split3, float split4, float fadeStart, float biasAutoAdjust = 1.0f)</li>
+<li>void delete()</li>
 </ul>
 <h3><a class="el" href="a00082.html" title="UI element that can be toggled between unchecked and checked state.">CheckBox</a> : <a class="el" href="a00075.html" title="Image UI element with optional border.">BorderImage</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* CheckBox()</li>
-<li>~CheckBox()</li>
+<li>CheckBox() (GC)</li>
+<li>CheckBox* new()</li>
+<li>void delete()</li>
 <li>void SetChecked(bool enable)</li>
 <li>void SetCheckedOffset(const IntVector2&amp; rect)</li>
 <li>void SetCheckedOffset(int x, int y)</li>
@@ -557,12 +580,17 @@ Classes</h1>
 <h3><a class="el" href="a00085.html" title="RGBA color.">Color</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Color()</li>
-<li>* Color(const Color&amp; color)</li>
-<li>* Color(const Color&amp; color, float a)</li>
-<li>* Color(float r, float g, float b)</li>
-<li>* Color(float r, float g, float b, float a)</li>
-<li>~Color()</li>
+<li>Color() (GC)</li>
+<li>Color* new()</li>
+<li>Color(const Color&amp; color) (GC)</li>
+<li>Color* new(const Color&amp; color)</li>
+<li>Color(const Color&amp; color, float a) (GC)</li>
+<li>Color* new(const Color&amp; color, float a)</li>
+<li>Color(float r, float g, float b) (GC)</li>
+<li>Color* new(float r, float g, float b)</li>
+<li>Color(float r, float g, float b, float a) (GC)</li>
+<li>Color* new(float r, float g, float b, float a)</li>
+<li>void delete()</li>
 <li>bool operator==(const Color&amp; rhs) const</li>
 <li><a class="el" href="a00085.html" title="RGBA color.">Color</a> operator*(float rhs) const</li>
 <li><a class="el" href="a00085.html" title="RGBA color.">Color</a> operator+(const Color&amp; rhs)</li>
@@ -610,9 +638,13 @@ Classes</h1>
 <h3><a class="el" href="a00086.html" title="Color animation frame definition.">ColorFrame</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* ColorFrame()</li>
-<li>* ColorFrame(const Color&amp; color)</li>
-<li>* ColorFrame(const Color&amp; color, float time)</li>
+<li>ColorFrame() (GC)</li>
+<li>ColorFrame* new()</li>
+<li>ColorFrame(const Color&amp; color) (GC)</li>
+<li>ColorFrame* new(const Color&amp; color)</li>
+<li>ColorFrame(const Color&amp; color, float time) (GC)</li>
+<li>ColorFrame* new(const Color&amp; color, float time)</li>
+<li>void delete()</li>
 <li><a class="el" href="a00085.html" title="RGBA color.">Color</a> Interpolate(const ColorFrame&amp; next, float time)</li>
 </ul>
 <p>Properties:</p>
@@ -780,7 +812,9 @@ Classes</h1>
 <h3><a class="el" href="a00098.html" title="Controls sent over the network.">Controls</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Controls()</li>
+<li>Controls() (GC)</li>
+<li>Controls* new()</li>
+<li>void delete()</li>
 <li>void Reset()</li>
 <li>void Set(unsigned buttons, bool down = true)</li>
 <li>bool IsDown(unsigned button) const</li>
@@ -796,8 +830,9 @@ Classes</h1>
 <h3><a class="el" href="a00102.html" title="Mouse cursor UI element.">Cursor</a> : <a class="el" href="a00075.html" title="Image UI element with optional border.">BorderImage</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Cursor()</li>
-<li>~Cursor()</li>
+<li>Cursor() (GC)</li>
+<li>Cursor* new()</li>
+<li>void delete()</li>
 <li>void DefineShape(CursorShape shape, Image* image, const IntRect&amp; imageRect, const IntVector2&amp; hotSpot)</li>
 <li>void SetShape(CursorShape shape)</li>
 <li>void SetUseSystemShapes(bool enable)</li>
@@ -1028,8 +1063,9 @@ Classes</h1>
 <h3><a class="el" href="a00118.html" title="Menu UI element that displays a popup list view.">DropDownList</a> : <a class="el" href="a00183.html" title="Menu UI element that optionally shows a popup.">Menu</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* DropDownList()</li>
-<li>~DropDownList()</li>
+<li>DropDownList() (GC)</li>
+<li>DropDownList* new()</li>
+<li>void delete()</li>
 <li>void AddItem(UIElement* item)</li>
 <li>void InsertItem(unsigned index, UIElement* item)</li>
 <li>void RemoveItem(UIElement* item)</li>
@@ -1099,10 +1135,13 @@ Classes</h1>
 <h3><a class="el" href="a00123.html" title="File opened either through the filesystem or from within a package file.">File</a> : <a class="el" href="a00202.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* File()</li>
-<li>* <a class="el" href="a00123.html" title="File opened either through the filesystem or from within a package file.">File</a>(const <a class="el" href="a00289.html" title="String class.">String</a> fileName, FileMode mode = FILE_READ)</li>
-<li>* File(PackageFile* package, const String fileName)</li>
-<li>~File()</li>
+<li>File() (GC)</li>
+<li>File* new()</li>
+<li><a class="el" href="a00123.html" title="File opened either through the filesystem or from within a package file.">File</a>(const <a class="el" href="a00289.html" title="String class.">String</a> fileName, FileMode mode = FILE_READ) (GC)</li>
+<li>File* new(const <a class="el" href="a00289.html" title="String class.">String</a> fileName, FileMode mode = FILE_READ)</li>
+<li>File(PackageFile* package, const String fileName) (GC)</li>
+<li>File* new(PackageFile* package, const String fileName)</li>
+<li>void delete()</li>
 <li>bool Open(const <a class="el" href="a00289.html" title="String class.">String</a> fileName, FileMode mode = FILE_READ)</li>
 <li>bool Open(PackageFile* package, const String fileName)</li>
 <li>void Close()</li>
@@ -1201,8 +1240,9 @@ Classes</h1>
 <h3><a class="el" href="a00124.html" title="File selector dialog.">FileSelector</a> : <a class="el" href="a00202.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* FileSelector()</li>
-<li>~FileSelector()</li>
+<li>FileSelector() (GC)</li>
+<li>FileSelector* new()</li>
+<li>void delete()</li>
 <li>void SetDefaultStyle(XMLFile* style)</li>
 <li>void SetTitle(const String text)</li>
 <li>void SetButtonTexts(const String okText, const String cancelText)</li>
@@ -1286,16 +1326,21 @@ Classes</h1>
 <h3><a class="el" href="a00128.html" title="Shadow map focusing parameters.">FocusParameters</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* FocusParameters()</li>
-<li>* FocusParameters(bool focus, bool nonUniform, bool autoSize, float quantize, float minView)</li>
+<li>FocusParameters() (GC)</li>
+<li>FocusParameters* new()</li>
+<li>FocusParameters(bool focus, bool nonUniform, bool autoSize, float quantize, float minView) (GC)</li>
+<li>FocusParameters* new(bool focus, bool nonUniform, bool autoSize, float quantize, float minView)</li>
+<li>void delete()</li>
 </ul>
 <h3><a class="el" href="a00129.html" title="Font resource.">Font</a> : <a class="el" href="a00245.html" title="Base class for resources.">Resource</a></h3>
 <h3><a class="el" href="a00134.html" title="Convex constructed of 6 planes.">Frustum</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Frustum()</li>
-<li>* Frustum(const Frustum&amp; frustum)</li>
-<li>~Frustum()</li>
+<li>Frustum() (GC)</li>
+<li>Frustum* new()</li>
+<li>Frustum(const Frustum&amp; frustum) (GC)</li>
+<li>Frustum* new(const Frustum&amp; frustum)</li>
+<li>void delete()</li>
 <li>void Define(float fov, float aspectRatio, float zoom, float nearZ, float farZ)</li>
 <li>void Define(float fov, float aspectRatio, float zoom, float nearZ, float farZ, const Matrix3x4&amp; transform)</li>
 <li>void Define(const Vector3&amp; near, const Vector3&amp; far)</li>
@@ -1417,8 +1462,9 @@ Classes</h1>
 <h3><a class="el" href="a00150.html" title="Image resource.">Image</a> : <a class="el" href="a00245.html" title="Base class for resources.">Resource</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Image()</li>
-<li>~Image()</li>
+<li>Image() (GC)</li>
+<li>Image* new()</li>
+<li>void delete()</li>
 <li>bool SetSize(int width, int height, unsigned components)</li>
 <li>bool SetSize(int width, int height, int depth, unsigned components)</li>
 <li>void SetPixel(int x, int y, const Color&amp; color)</li>
@@ -1508,9 +1554,11 @@ Classes</h1>
 <h3><a class="el" href="a00154.html" title="Two-dimensional bounding rectangle with integer values.">IntRect</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* IntRect()</li>
-<li>* IntRect(int left, int top, int right, int bottom)</li>
-<li>~IntRect()</li>
+<li>IntRect() (GC)</li>
+<li>IntRect* new()</li>
+<li>IntRect(int left, int top, int right, int bottom) (GC)</li>
+<li>IntRect* new(int left, int top, int right, int bottom)</li>
+<li>void delete()</li>
 <li>bool operator==(const IntRect&amp; rhs) const</li>
 <li><a class="el" href="a00155.html" title="Two-dimensional vector with integer values.">IntVector2</a> Size() const</li>
 <li>int Width() const</li>
@@ -1531,10 +1579,13 @@ Classes</h1>
 <h3><a class="el" href="a00155.html" title="Two-dimensional vector with integer values.">IntVector2</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* IntVector2()</li>
-<li>* IntVector2(int x, int y)</li>
-<li>* IntVector2(const IntVector2&amp; rhs)</li>
-<li>~IntVector2()</li>
+<li>IntVector2() (GC)</li>
+<li>IntVector2* new()</li>
+<li>IntVector2(int x, int y) (GC)</li>
+<li>IntVector2* new(int x, int y)</li>
+<li>IntVector2(const IntVector2&amp; rhs) (GC)</li>
+<li>IntVector2* new(const IntVector2&amp; rhs)</li>
+<li>void delete()</li>
 <li>bool operator==(const IntVector2&amp; rhs) const</li>
 <li><a class="el" href="a00155.html" title="Two-dimensional vector with integer values.">IntVector2</a> operator+(const IntVector2&amp; rhs) const</li>
 <li><a class="el" href="a00155.html" title="Two-dimensional vector with integer values.">IntVector2</a> operator-() const</li>
@@ -1630,8 +1681,9 @@ Classes</h1>
 <h3><a class="el" href="a00164.html" title="Single-line text editor UI element.">LineEdit</a> : <a class="el" href="a00075.html" title="Image UI element with optional border.">BorderImage</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* LineEdit()</li>
-<li>~LineEdit()</li>
+<li>LineEdit() (GC)</li>
+<li>LineEdit* new()</li>
+<li>void delete()</li>
 <li>void SetText(const String text)</li>
 <li>void SetCursorPosition(unsigned position)</li>
 <li>void SetCursorBlinkRate(float rate)</li>
@@ -1667,8 +1719,9 @@ Classes</h1>
 <h3><a class="el" href="a00171.html" title="Scrollable list UI element.">ListView</a> : <a class="el" href="a00262.html" title="Scrollable UI element for showing a (possibly large) child element.">ScrollView</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* ListView()</li>
-<li>~ListView()</li>
+<li>ListView() (GC)</li>
+<li>ListView* new()</li>
+<li>void delete()</li>
 <li>void AddItem(UIElement* item)</li>
 <li>void InsertItem(unsigned index, UIElement* item, UIElement* parentItem = 0)</li>
 <li>void RemoveItem(UIElement* item, unsigned index = 0)</li>
@@ -1760,8 +1813,9 @@ Classes</h1>
 <h3><a class="el" href="a00177.html" title="Describes how to render 3D geometries.">Material</a> : <a class="el" href="a00245.html" title="Base class for resources.">Resource</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Material()</li>
-<li>~Material()</li>
+<li>Material() (GC)</li>
+<li>Material* new()</li>
+<li>void delete()</li>
 <li>void SetNumTechniques(unsigned num)</li>
 <li>void SetTechnique(unsigned index, Technique* tech, unsigned qualityLevel = 0, float lodDistance = 0.0f)</li>
 <li>void SetShaderParameter(const String name, const Variant&amp; value)</li>
@@ -1799,10 +1853,13 @@ Classes</h1>
 <h3><a class="el" href="a00179.html" title="3x3 matrix for rotation and scaling.">Matrix3</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Matrix3()</li>
-<li>* Matrix3(const Matrix3&amp; matrix)</li>
-<li>* Matrix3(float v00, float v01, float v02, float v10, float v11, float v12, float v20, float v21, float v22)</li>
-<li>~Matrix3()</li>
+<li>Matrix3() (GC)</li>
+<li>Matrix3* new()</li>
+<li>Matrix3(const Matrix3&amp; matrix) (GC)</li>
+<li>Matrix3* new(const Matrix3&amp; matrix)</li>
+<li>Matrix3(float v00, float v01, float v02, float v10, float v11, float v12, float v20, float v21, float v22) (GC)</li>
+<li>Matrix3* new(float v00, float v01, float v02, float v10, float v11, float v12, float v20, float v21, float v22)</li>
+<li>void delete()</li>
 <li>bool operator==(const Matrix3&amp; rhs) const</li>
 <li><a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a> operator*(const Vector3&amp; rhs) const</li>
 <li><a class="el" href="a00179.html" title="3x3 matrix for rotation and scaling.">Matrix3</a> operator+(const Matrix3&amp; rhs) const</li>
@@ -1834,13 +1891,21 @@ Classes</h1>
 <h3><a class="el" href="a00180.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Matrix3x4()</li>
-<li>* Matrix3x4(const Matrix3x4&amp; matrix)</li>
-<li>* Matrix3x4(const Matrix3&amp; matrix)</li>
-<li>* Matrix3x4(const Matrix4&amp; matrix)</li>
-<li>* Matrix3x4(float v00, float v01, float v02, float v03, float v10, float v11, float v12, float v13, float v20, float v21, float v22, float v23)</li>
-<li>* Matrix3x4(const Vector3&amp; translation, const Quaternion&amp; rotation, float scale)</li>
-<li>* Matrix3x4(const Vector3&amp; translation, const Quaternion&amp; rotation, const Vector3&amp; scale)</li>
+<li>Matrix3x4() (GC)</li>
+<li>Matrix3x4* new()</li>
+<li>Matrix3x4(const Matrix3x4&amp; matrix) (GC)</li>
+<li>Matrix3x4* new(const Matrix3x4&amp; matrix)</li>
+<li>Matrix3x4(const Matrix3&amp; matrix) (GC)</li>
+<li>Matrix3x4* new(const Matrix3&amp; matrix)</li>
+<li>Matrix3x4(const Matrix4&amp; matrix) (GC)</li>
+<li>Matrix3x4* new(const Matrix4&amp; matrix)</li>
+<li>Matrix3x4(float v00, float v01, float v02, float v03, float v10, float v11, float v12, float v13, float v20, float v21, float v22, float v23) (GC)</li>
+<li>Matrix3x4* new(float v00, float v01, float v02, float v03, float v10, float v11, float v12, float v13, float v20, float v21, float v22, float v23)</li>
+<li>Matrix3x4(const Vector3&amp; translation, const Quaternion&amp; rotation, float scale) (GC)</li>
+<li>Matrix3x4* new(const Vector3&amp; translation, const Quaternion&amp; rotation, float scale)</li>
+<li>Matrix3x4(const Vector3&amp; translation, const Quaternion&amp; rotation, const Vector3&amp; scale) (GC)</li>
+<li>Matrix3x4* new(const Vector3&amp; translation, const Quaternion&amp; rotation, const Vector3&amp; scale)</li>
+<li>void delete()</li>
 <li>bool operator==(const Matrix3x4&amp; rhs) const</li>
 <li><a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a> operator*(const Vector3&amp; rhs) const</li>
 <li><a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a> operator*(const Vector4&amp; rhs) const</li>
@@ -1883,11 +1948,15 @@ Classes</h1>
 <h3><a class="el" href="a00181.html" title="4x4 matrix for arbitrary linear transforms including projection.">Matrix4</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Matrix4()</li>
-<li>* Matrix4(const Matrix4&amp; matrix)</li>
-<li>* Matrix4(const Matrix3&amp; matrix)</li>
-<li>* Matrix4(float v00, float v01, float v02, float v03, float v10, float v11, float v12, float v13, float v20, float v21, float v22, float v23, float v30, float v31, float v32, float v33)</li>
-<li>~Matrix4()</li>
+<li>Matrix4() (GC)</li>
+<li>Matrix4* new()</li>
+<li>Matrix4(const Matrix4&amp; matrix) (GC)</li>
+<li>Matrix4* new(const Matrix4&amp; matrix)</li>
+<li>Matrix4(const Matrix3&amp; matrix) (GC)</li>
+<li>Matrix4* new(const Matrix3&amp; matrix)</li>
+<li>Matrix4(float v00, float v01, float v02, float v03, float v10, float v11, float v12, float v13, float v20, float v21, float v22, float v23, float v30, float v31, float v32, float v33) (GC)</li>
+<li>Matrix4* new(float v00, float v01, float v02, float v03, float v10, float v11, float v12, float v13, float v20, float v21, float v22, float v23, float v30, float v31, float v32, float v33)</li>
+<li>void delete()</li>
 <li>bool operator==(const Matrix4&amp; rhs) const</li>
 <li><a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a> operator*(const Vector3&amp; rhs) const</li>
 <li><a class="el" href="a00318.html" title="Four-dimensional vector.">Vector4</a> operator*(const Vector4&amp; rhs) const</li>
@@ -1933,8 +2002,9 @@ Classes</h1>
 <h3><a class="el" href="a00183.html" title="Menu UI element that optionally shows a popup.">Menu</a> : <a class="el" href="a00078.html" title="Pushbutton UI element.">Button</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Menu()</li>
-<li>~Menu()</li>
+<li>Menu() (GC)</li>
+<li>Menu* new()</li>
+<li>void delete()</li>
 <li>void SetPopup(UIElement* element)</li>
 <li>void SetPopupOffset(const IntVector2&amp; offset)</li>
 <li>void SetPopupOffset(int x, int y)</li>
@@ -1957,8 +2027,9 @@ Classes</h1>
 <h3><a class="el" href="a00184.html" title="Message box dialog.">MessageBox</a> : <a class="el" href="a00202.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* <a class="el" href="a00184.html" title="Message box dialog.">MessageBox</a>(const <a class="el" href="a00289.html" title="String class.">String</a> messageString = <a class="el" href="a00289.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>, const <a class="el" href="a00289.html" title="String class.">String</a> titleString = <a class="el" href="a00289.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>, XMLFile* layoutFile = 0, XMLFile* styleFile = 0)</li>
-<li>~MessageBox()</li>
+<li><a class="el" href="a00184.html" title="Message box dialog.">MessageBox</a>(const <a class="el" href="a00289.html" title="String class.">String</a> messageString = <a class="el" href="a00289.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>, const <a class="el" href="a00289.html" title="String class.">String</a> titleString = <a class="el" href="a00289.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>, XMLFile* layoutFile = 0, XMLFile* styleFile = 0) (GC)</li>
+<li>MessageBox* new(const <a class="el" href="a00289.html" title="String class.">String</a> messageString = <a class="el" href="a00289.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>, const <a class="el" href="a00289.html" title="String class.">String</a> titleString = <a class="el" href="a00289.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>, XMLFile* layoutFile = 0, XMLFile* styleFile = 0)</li>
+<li>void delete()</li>
 <li>void SetTitle(const String text)</li>
 <li>void SetMessage(const String text)</li>
 <li>const <a class="el" href="a00289.html" title="String class.">String</a> GetTitle() const</li>
@@ -2150,8 +2221,9 @@ Classes</h1>
 <h3><a class="el" href="a00198.html" title="Scene node that may contain components and child nodes.">Node</a> : <a class="el" href="a00263.html" title="Base class for objects with automatic serialization through attributes.">Serializable</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Node()</li>
-<li>~Node()</li>
+<li>Node() (GC)</li>
+<li>Node* new()</li>
+<li>void delete()</li>
 <li>bool SaveXML(File* dest) const</li>
 <li>void SetName(const String name)</li>
 <li>void SetPosition(const Vector3&amp; position)</li>
@@ -2344,7 +2416,9 @@ Classes</h1>
 <h3><a class="el" href="a00209.html" title="General octree query result. Used for Lua bindings only.">OctreeQueryResult</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* OctreeQueryResult()</li>
+<li>OctreeQueryResult() (GC)</li>
+<li>OctreeQueryResult* new()</li>
+<li>void delete()</li>
 </ul>
 <p>Properties:</p>
 <ul>
@@ -2377,9 +2451,11 @@ Classes</h1>
 <h3><a class="el" href="a00213.html" title="Stores files of a directory tree sequentially for convenient access.">PackageFile</a> : <a class="el" href="a00202.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* PackageFile()</li>
-<li>* <a class="el" href="a00213.html" title="Stores files of a directory tree sequentially for convenient access.">PackageFile</a>(const <a class="el" href="a00289.html" title="String class.">String</a> fileName, unsigned startOffset = 0)</li>
-<li>~PackageFile()</li>
+<li>PackageFile() (GC)</li>
+<li>PackageFile* new()</li>
+<li><a class="el" href="a00213.html" title="Stores files of a directory tree sequentially for convenient access.">PackageFile</a>(const <a class="el" href="a00289.html" title="String class.">String</a> fileName, unsigned startOffset = 0) (GC)</li>
+<li>PackageFile* new(const <a class="el" href="a00289.html" title="String class.">String</a> fileName, unsigned startOffset = 0)</li>
+<li>void delete()</li>
 <li>bool Open(const <a class="el" href="a00289.html" title="String class.">String</a> fileName, unsigned startOffset = 0)</li>
 <li>bool Exists(const String fileName) const</li>
 <li>const PackageEntry* GetEntry(const String fileName) const</li>
@@ -2509,7 +2585,9 @@ Classes</h1>
 <h3><a class="el" href="a00220.html" title="Physics raycast hit.">PhysicsRaycastResult</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* PhysicsRaycastResult()</li>
+<li>PhysicsRaycastResult() (GC)</li>
+<li>PhysicsRaycastResult* new()</li>
+<li>void delete()</li>
 </ul>
 <p>Properties:</p>
 <ul>
@@ -2557,12 +2635,17 @@ Classes</h1>
 <h3><a class="el" href="a00222.html" title="Surface in three-dimensional space.">Plane</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Plane()</li>
-<li>* Plane(const Plane&amp; plane)</li>
-<li>* Plane(const Vector3&amp; v0, const Vector3&amp; v1, const Vector3&amp; v2)</li>
-<li>* Plane(const Vector3&amp; normal, const Vector3&amp; point)</li>
-<li>* Plane(const Vector4&amp; plane)</li>
-<li>~Plane()</li>
+<li>Plane() (GC)</li>
+<li>Plane* new()</li>
+<li>Plane(const Plane&amp; plane) (GC)</li>
+<li>Plane* new(const Plane&amp; plane)</li>
+<li>Plane(const Vector3&amp; v0, const Vector3&amp; v1, const Vector3&amp; v2) (GC)</li>
+<li>Plane* new(const Vector3&amp; v0, const Vector3&amp; v1, const Vector3&amp; v2)</li>
+<li>Plane(const Vector3&amp; normal, const Vector3&amp; point) (GC)</li>
+<li>Plane* new(const Vector3&amp; normal, const Vector3&amp; point)</li>
+<li>Plane(const Vector4&amp; plane) (GC)</li>
+<li>Plane* new(const Vector4&amp; plane)</li>
+<li>void delete()</li>
 <li>void Define(const Vector3&amp; v0, const Vector3&amp; v1, const Vector3&amp; v2)</li>
 <li>void Define(const Vector3&amp; normal, const Vector3&amp; point)</li>
 <li>void Define(const Vector4&amp; plane)</li>
@@ -2587,11 +2670,15 @@ Classes</h1>
 <h3><a class="el" href="a00225.html" title="A convex volume built from polygon faces.">Polyhedron</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Polyhedron()</li>
-<li>* Polyhedron(const Polyhedron&amp; polyhedron)</li>
-<li>* Polyhedron(const BoundingBox&amp; box)</li>
-<li>* Polyhedron(const Frustum&amp; frustum)</li>
-<li>~Polyhedron()</li>
+<li>Polyhedron() (GC)</li>
+<li>Polyhedron* new()</li>
+<li>Polyhedron(const Polyhedron&amp; polyhedron) (GC)</li>
+<li>Polyhedron* new(const Polyhedron&amp; polyhedron)</li>
+<li>Polyhedron(const BoundingBox&amp; box) (GC)</li>
+<li>Polyhedron* new(const BoundingBox&amp; box)</li>
+<li>Polyhedron(const Frustum&amp; frustum) (GC)</li>
+<li>Polyhedron* new(const Frustum&amp; frustum)</li>
+<li>void delete()</li>
 <li>void Define(const BoundingBox&amp; box)</li>
 <li>void Define(const Frustum&amp; frustum)</li>
 <li>void AddFace(const Vector3&amp; v0, const Vector3&amp; v1, const Vector3&amp; v2)</li>
@@ -2613,15 +2700,23 @@ Classes</h1>
 <h3><a class="el" href="a00228.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Quaternion()</li>
-<li>* Quaternion(const Quaternion&amp; quat)</li>
-<li>* Quaternion(float w, float x, float y, float z)</li>
-<li>* Quaternion(float angle, const Vector3&amp; axis)</li>
-<li>* Quaternion(float x, float y, float z)</li>
-<li>* Quaternion(const Vector3&amp; start, const Vector3&amp; end)</li>
-<li>* Quaternion(const Vector3&amp; xAxis, const Vector3&amp; yAxis, const Vector3&amp; zAxis)</li>
-<li>* Quaternion(const Matrix3&amp; matrix)</li>
-<li>~Quaternion()</li>
+<li>Quaternion() (GC)</li>
+<li>Quaternion* new()</li>
+<li>Quaternion(const Quaternion&amp; quat) (GC)</li>
+<li>Quaternion* new(const Quaternion&amp; quat)</li>
+<li>Quaternion(float w, float x, float y, float z) (GC)</li>
+<li>Quaternion* new(float w, float x, float y, float z)</li>
+<li>Quaternion(float angle, const Vector3&amp; axis) (GC)</li>
+<li>Quaternion* new(float angle, const Vector3&amp; axis)</li>
+<li>Quaternion(float x, float y, float z) (GC)</li>
+<li>Quaternion* new(float x, float y, float z)</li>
+<li>Quaternion(const Vector3&amp; start, const Vector3&amp; end) (GC)</li>
+<li>Quaternion* new(const Vector3&amp; start, const Vector3&amp; end)</li>
+<li>Quaternion(const Vector3&amp; xAxis, const Vector3&amp; yAxis, const Vector3&amp; zAxis) (GC)</li>
+<li>Quaternion* new(const Vector3&amp; xAxis, const Vector3&amp; yAxis, const Vector3&amp; zAxis)</li>
+<li>Quaternion(const Matrix3&amp; matrix) (GC)</li>
+<li>Quaternion* new(const Matrix3&amp; matrix)</li>
+<li>void delete()</li>
 <li>bool operator==(const Quaternion&amp; rhs) const</li>
 <li><a class="el" href="a00228.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> operator*(float rhs) const</li>
 <li><a class="el" href="a00228.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> operator-() const</li>
@@ -2665,10 +2760,13 @@ Classes</h1>
 <h3><a class="el" href="a00231.html" title="Infinite straight line in three-dimensional space.">Ray</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Ray()</li>
-<li>* Ray(const Vector3&amp; origin, const Vector3&amp; direction)</li>
-<li>* Ray(const Ray&amp; ray)</li>
-<li>~Ray()</li>
+<li>Ray() (GC)</li>
+<li>Ray* new()</li>
+<li>Ray(const Vector3&amp; origin, const Vector3&amp; direction) (GC)</li>
+<li>Ray* new(const Vector3&amp; origin, const Vector3&amp; direction)</li>
+<li>Ray(const Ray&amp; ray) (GC)</li>
+<li>Ray* new(const Ray&amp; ray)</li>
+<li>void delete()</li>
 <li>bool operator==(const Ray&amp; rhs) const</li>
 <li>void Define(const Vector3&amp; origin, const Vector3&amp; direction)</li>
 <li><a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a> Project(const Vector3&amp; point) const</li>
@@ -2689,7 +2787,9 @@ Classes</h1>
 <h3><a class="el" href="a00233.html" title="Raycast result.">RayQueryResult</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* RayQueryResult()</li>
+<li>RayQueryResult() (GC)</li>
+<li>RayQueryResult* new()</li>
+<li>void delete()</li>
 </ul>
 <p>Properties:</p>
 <ul>
@@ -2703,12 +2803,17 @@ Classes</h1>
 <h3><a class="el" href="a00234.html" title="Two-dimensional bounding rectangle.">Rect</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Rect()</li>
-<li>* Rect(const Rect&amp; rect)</li>
-<li>* Rect(const Vector2&amp; min, const Vector2&amp; max)</li>
-<li>* Rect(float left, float top, float right, float bottom)</li>
-<li>* Rect(const Vector4&amp; vector)</li>
-<li>~Rect()</li>
+<li>Rect() (GC)</li>
+<li>Rect* new()</li>
+<li>Rect(const Rect&amp; rect) (GC)</li>
+<li>Rect* new(const Rect&amp; rect)</li>
+<li>Rect(const Vector2&amp; min, const Vector2&amp; max) (GC)</li>
+<li>Rect* new(const Vector2&amp; min, const Vector2&amp; max)</li>
+<li>Rect(float left, float top, float right, float bottom) (GC)</li>
+<li>Rect* new(float left, float top, float right, float bottom)</li>
+<li>Rect(const Vector4&amp; vector) (GC)</li>
+<li>Rect* new(const Vector4&amp; vector)</li>
+<li>void delete()</li>
 <li>bool operator==(const Rect&amp; rhs) const</li>
 <li>void Define(const Rect&amp; rect)</li>
 <li>void Define(const Vector2&amp; min, const Vector2&amp; max)</li>
@@ -2770,8 +2875,9 @@ Classes</h1>
 <h3><a class="el" href="a00242.html" title="Color or depth-stencil surface that can be rendered into.">RenderSurface</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* RenderSurface(Texture* parentTexture)</li>
-<li>~RenderSurface()</li>
+<li>RenderSurface(Texture* parentTexture) (GC)</li>
+<li>RenderSurface* new(Texture* parentTexture)</li>
+<li>void delete()</li>
 <li>void SetNumViewports(unsigned num)</li>
 <li>void SetViewport(unsigned index, Viewport* viewport)</li>
 <li>void SetUpdateMode(RenderSurfaceUpdateMode mode)</li>
@@ -2946,10 +3052,15 @@ Classes</h1>
 <h3><a class="el" href="a00248.html" title="Typed resource reference.">ResourceRef</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* ResourceRef()</li>
-<li>* ResourceRef(ShortStringHash type)</li>
-<li>* ResourceRef(ShortStringHash type, String name)</li>
-<li>* ResourceRef(const ResourceRef&amp; rhs)</li>
+<li>ResourceRef() (GC)</li>
+<li>ResourceRef* new()</li>
+<li>ResourceRef(ShortStringHash type) (GC)</li>
+<li>ResourceRef* new(ShortStringHash type)</li>
+<li>ResourceRef(ShortStringHash type, String name) (GC)</li>
+<li>ResourceRef* new(ShortStringHash type, String name)</li>
+<li>ResourceRef(const ResourceRef&amp; rhs) (GC)</li>
+<li>ResourceRef* new(const ResourceRef&amp; rhs)</li>
+<li>void delete()</li>
 <li>bool operator==(const ResourceRef&amp; rhs) const</li>
 </ul>
 <p>Properties:</p>
@@ -2960,8 +3071,11 @@ Classes</h1>
 <h3><a class="el" href="a00249.html" title="List of typed resource references.">ResourceRefList</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* ResourceRefList()</li>
-<li>* ResourceRefList(ShortStringHash type)</li>
+<li>ResourceRefList() (GC)</li>
+<li>ResourceRefList* new()</li>
+<li>ResourceRefList(ShortStringHash type) (GC)</li>
+<li>ResourceRefList* new(ShortStringHash type)</li>
+<li>void delete()</li>
 <li>bool operator==(const ResourceRefList&amp; rhs) const</li>
 </ul>
 <p>Properties:</p>
@@ -3071,8 +3185,9 @@ Classes</h1>
 <h3><a class="el" href="a00251.html" title="Root scene node, represents the whole scene.">Scene</a> : <a class="el" href="a00198.html" title="Scene node that may contain components and child nodes.">Node</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Scene()</li>
-<li>~Scene()</li>
+<li>Scene() (GC)</li>
+<li>Scene* new()</li>
+<li>void delete()</li>
 <li>bool Load(File* source)</li>
 <li>bool Save(File* dest) const</li>
 <li>bool Load(const String fileName)</li>
@@ -3141,8 +3256,9 @@ Classes</h1>
 <h3><a class="el" href="a00261.html" title="Scroll bar UI element with forward and back buttons.">ScrollBar</a> : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* ScrollBar()</li>
-<li>~ScrollBar()</li>
+<li>ScrollBar() (GC)</li>
+<li>ScrollBar* new()</li>
+<li>void delete()</li>
 <li>void SetOrientation(Orientation orientation)</li>
 <li>void SetRange(float range)</li>
 <li>void SetValue(float value)</li>
@@ -3176,8 +3292,9 @@ Classes</h1>
 <h3><a class="el" href="a00262.html" title="Scrollable UI element for showing a (possibly large) child element.">ScrollView</a> : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* ScrollView()</li>
-<li>~ScrollView()</li>
+<li>ScrollView() (GC)</li>
+<li>ScrollView* new()</li>
+<li>void delete()</li>
 <li>void SetContentElement(UIElement* element)</li>
 <li>void SetViewPosition(const IntVector2&amp; position)</li>
 <li>void SetViewPosition(int x, int y)</li>
@@ -3256,12 +3373,17 @@ Classes</h1>
 <h3><a class="el" href="a00272.html" title="16-bit hash value for a string.">ShortStringHash</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* ShortStringHash()</li>
-<li>* ShortStringHash(const ShortStringHash&amp; rhs)</li>
-<li>* ShortStringHash(const StringHash&amp; rhs)</li>
-<li>* ShortStringHash(short value)</li>
-<li>* ShortStringHash(const String str)</li>
-<li>~ShortStringHash()</li>
+<li>ShortStringHash() (GC)</li>
+<li>ShortStringHash* new()</li>
+<li>ShortStringHash(const ShortStringHash&amp; rhs) (GC)</li>
+<li>ShortStringHash* new(const ShortStringHash&amp; rhs)</li>
+<li>ShortStringHash(const StringHash&amp; rhs) (GC)</li>
+<li>ShortStringHash* new(const StringHash&amp; rhs)</li>
+<li>ShortStringHash(short value) (GC)</li>
+<li>ShortStringHash* new(short value)</li>
+<li>ShortStringHash(const String str) (GC)</li>
+<li>ShortStringHash* new(const String str)</li>
+<li>void delete()</li>
 <li><a class="el" href="a00272.html" title="16-bit hash value for a string.">ShortStringHash</a> operator+(const ShortStringHash&amp; rhs) const</li>
 <li>bool operator==(const ShortStringHash&amp; rhs) const</li>
 <li>bool operator&lt;(const ShortStringHash&amp; rhs) const</li>
@@ -3290,8 +3412,9 @@ Classes</h1>
 <h3><a class="el" href="a00275.html" title="Slider bar UI element.">Slider</a> : <a class="el" href="a00075.html" title="Image UI element with optional border.">BorderImage</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Slider()</li>
-<li>~Slider()</li>
+<li>Slider() (GC)</li>
+<li>Slider* new()</li>
+<li>void delete()</li>
 <li>void SetOrientation(Orientation orientation)</li>
 <li>void SetRange(float range)</li>
 <li>void SetValue(float value)</li>
@@ -3314,8 +3437,9 @@ Classes</h1>
 <h3><a class="el" href="a00277.html" title="Sound resource.">Sound</a> : <a class="el" href="a00245.html" title="Base class for resources.">Resource</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Sound()</li>
-<li>~Sound()</li>
+<li>Sound() (GC)</li>
+<li>Sound* new()</li>
+<li>void delete()</li>
 <li>bool LoadRaw(Deserializer&amp; source)</li>
 <li>bool LoadWav(Deserializer&amp; source)</li>
 <li>bool LoadOggVorbis(Deserializer&amp; source)</li>
@@ -3417,13 +3541,19 @@ Classes</h1>
 <h3><a class="el" href="a00282.html" title="Sphere in three-dimensional space.">Sphere</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Sphere()</li>
-<li>* Sphere(const Sphere&amp; sphere)</li>
-<li>* Sphere(const Vector3&amp; center, float radius)</li>
-<li>* Sphere(const BoundingBox&amp; box)</li>
-<li>* Sphere(const Frustum&amp; frustum)</li>
-<li>* Sphere(const Polyhedron&amp; poly)</li>
-<li>~Sphere()</li>
+<li>Sphere() (GC)</li>
+<li>Sphere* new()</li>
+<li>Sphere(const Sphere&amp; sphere) (GC)</li>
+<li>Sphere* new(const Sphere&amp; sphere)</li>
+<li>Sphere(const Vector3&amp; center, float radius) (GC)</li>
+<li>Sphere* new(const Vector3&amp; center, float radius)</li>
+<li>Sphere(const BoundingBox&amp; box) (GC)</li>
+<li>Sphere* new(const BoundingBox&amp; box)</li>
+<li>Sphere(const Frustum&amp; frustum) (GC)</li>
+<li>Sphere* new(const Frustum&amp; frustum)</li>
+<li>Sphere(const Polyhedron&amp; poly) (GC)</li>
+<li>Sphere* new(const Polyhedron&amp; poly)</li>
+<li>void delete()</li>
 <li>bool operator==(const Sphere&amp; rhs) const</li>
 <li>void Define(const Sphere&amp; sphere)</li>
 <li>void Define(const Vector3&amp; center, float radius)</li>
@@ -3473,8 +3603,9 @@ Classes</h1>
 <h3><a class="el" href="a00285.html" title="UI element which allows sub-pixel positioning and size, as well as rotation. Only other Sprites shoul...">Sprite</a> : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Sprite()</li>
-<li>~Sprite()</li>
+<li>Sprite() (GC)</li>
+<li>Sprite* new()</li>
+<li>void delete()</li>
 <li>void SetPosition(const Vector2&amp; position)</li>
 <li>void SetPosition(float x, float y)</li>
 <li>void SetHotSpot(const IntVector2&amp; hotSpot)</li>
@@ -3552,11 +3683,15 @@ Classes</h1>
 <h3><a class="el" href="a00290.html" title="32-bit hash value for a string.">StringHash</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* StringHash()</li>
-<li>* StringHash(const StringHash&amp; rhs)</li>
-<li>* StringHash(unsigned value)</li>
-<li>* StringHash(const String str)</li>
-<li>~StringHash()</li>
+<li>StringHash() (GC)</li>
+<li>StringHash* new()</li>
+<li>StringHash(const StringHash&amp; rhs) (GC)</li>
+<li>StringHash* new(const StringHash&amp; rhs)</li>
+<li>StringHash(unsigned value) (GC)</li>
+<li>StringHash* new(unsigned value)</li>
+<li>StringHash(const String str) (GC)</li>
+<li>StringHash* new(const String str)</li>
+<li>void delete()</li>
 <li><a class="el" href="a00290.html" title="32-bit hash value for a string.">StringHash</a> operator+(const StringHash&amp; rhs) const</li>
 <li>bool operator==(const StringHash&amp; rhs) const</li>
 <li>bool operator&lt;(const StringHash&amp; rhs) const</li>
@@ -3690,8 +3825,9 @@ Classes</h1>
 <h3><a class="el" href="a00295.html" title="Text UI element.">Text</a> : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Text()</li>
-<li>~Text()</li>
+<li>Text() (GC)</li>
+<li>Text* new()</li>
+<li>void delete()</li>
 <li>bool SetFont(const <a class="el" href="a00289.html" title="String class.">String</a> fontName, int size = DEFAULT_FONT_SIZE)</li>
 <li>bool SetFont(Font* font, int size = DEFAULT_FONT_SIZE)</li>
 <li>void SetText(const String text)</li>
@@ -3746,8 +3882,9 @@ Classes</h1>
 <h3><a class="el" href="a00296.html" title="3D text component.">Text3D</a> : <a class="el" href="a00117.html" title="Base class for visible components.">Drawable</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Text3D()</li>
-<li>~Text3D()</li>
+<li>Text3D() (GC)</li>
+<li>Text3D* new()</li>
+<li>void delete()</li>
 <li>bool SetFont(const <a class="el" href="a00289.html" title="String class.">String</a> fontName, int size = DEFAULT_FONT_SIZE)</li>
 <li>bool SetFont(Font* font, int size = DEFAULT_FONT_SIZE)</li>
 <li>void SetMaterial(Material* material)</li>
@@ -3854,8 +3991,9 @@ Classes</h1>
 <h3><a class="el" href="a00298.html" title="2D texture resource.">Texture2D</a> : <a class="el" href="a00297.html" title="Base class for texture resources.">Texture</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Texture2D()</li>
-<li>~Texture2D()</li>
+<li>Texture2D() (GC)</li>
+<li>Texture2D* new()</li>
+<li>void delete()</li>
 <li>bool SetSize(int width, int height, unsigned format, TextureUsage usage = TEXTURE_STATIC)</li>
 <li>bool Load(Image* image, bool useAlpha = false)</li>
 <li>RenderSurface* GetRenderSurface() const</li>
@@ -3872,7 +4010,9 @@ Classes</h1>
 <h3><a class="el" href="a00301.html" title="Texture animation frame definition.">TextureFrame</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* TextureFrame()</li>
+<li>TextureFrame() (GC)</li>
+<li>TextureFrame* new()</li>
+<li>void delete()</li>
 </ul>
 <p>Properties:</p>
 <ul>
@@ -3900,8 +4040,9 @@ Classes</h1>
 <h3><a class="el" href="a00305.html" title="Tooltip UI element.">ToolTip</a> : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* ToolTip()</li>
-<li>~ToolTip()</li>
+<li>ToolTip() (GC)</li>
+<li>ToolTip* new()</li>
+<li>void delete()</li>
 <li>void SetDelay(float delay)</li>
 <li>float GetDelay() const</li>
 </ul>
@@ -3988,8 +4129,9 @@ Classes</h1>
 <h3><a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> : <a class="el" href="a00263.html" title="Base class for objects with automatic serialization through attributes.">Serializable</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* UIElement()</li>
-<li>~UIElement()</li>
+<li>UIElement() (GC)</li>
+<li>UIElement* new()</li>
+<li>void delete()</li>
 <li>const <a class="el" href="a00155.html" title="Two-dimensional vector with integer values.">IntVector2</a>&amp; GetScreenPosition() const</li>
 <li>bool LoadXML(Deserializer&amp; source)</li>
 <li>bool SaveXML(Serializer&amp; dest) const</li>
@@ -4190,29 +4332,51 @@ Classes</h1>
 <h3><a class="el" href="a00313.html" title="Variable that supports a fixed set of types.">Variant</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Variant()</li>
-<li>* Variant(int value)</li>
-<li>* Variant(unsigned value)</li>
-<li>* Variant(const StringHash&amp; value)</li>
-<li>* Variant(const ShortStringHash&amp; value)</li>
-<li>* Variant(bool value)</li>
-<li>* Variant(float value)</li>
-<li>* Variant(const Vector2&amp; value)</li>
-<li>* Variant(const Vector3&amp; value)</li>
-<li>* Variant(const Vector4&amp; value)</li>
-<li>* Variant(const Quaternion&amp; value)</li>
-<li>* Variant(const Color&amp; value)</li>
-<li>* Variant(const String value)</li>
-<li>* Variant(const char* value)</li>
-<li>* Variant(const ResourceRef&amp; value)</li>
-<li>* Variant(const ResourceRefList&amp; value)</li>
-<li>* Variant(const IntRect&amp; value)</li>
-<li>* Variant(const IntVector2&amp; value)</li>
-<li>* Variant(const String type, const String value)</li>
-<li>* Variant(VariantType type, const String value)</li>
-<li>* Variant(VariantType type, const char* value)</li>
-<li>* Variant(const Variant&amp; value)</li>
-<li>~Variant()</li>
+<li>Variant() (GC)</li>
+<li>Variant* new()</li>
+<li>Variant(int value) (GC)</li>
+<li>Variant* new(int value)</li>
+<li>Variant(unsigned value) (GC)</li>
+<li>Variant* new(unsigned value)</li>
+<li>Variant(const StringHash&amp; value) (GC)</li>
+<li>Variant* new(const StringHash&amp; value)</li>
+<li>Variant(const ShortStringHash&amp; value) (GC)</li>
+<li>Variant* new(const ShortStringHash&amp; value)</li>
+<li>Variant(bool value) (GC)</li>
+<li>Variant* new(bool value)</li>
+<li>Variant(float value) (GC)</li>
+<li>Variant* new(float value)</li>
+<li>Variant(const Vector2&amp; value) (GC)</li>
+<li>Variant* new(const Vector2&amp; value)</li>
+<li>Variant(const Vector3&amp; value) (GC)</li>
+<li>Variant* new(const Vector3&amp; value)</li>
+<li>Variant(const Vector4&amp; value) (GC)</li>
+<li>Variant* new(const Vector4&amp; value)</li>
+<li>Variant(const Quaternion&amp; value) (GC)</li>
+<li>Variant* new(const Quaternion&amp; value)</li>
+<li>Variant(const Color&amp; value) (GC)</li>
+<li>Variant* new(const Color&amp; value)</li>
+<li>Variant(const String value) (GC)</li>
+<li>Variant* new(const String value)</li>
+<li>Variant(const char* value) (GC)</li>
+<li>Variant* new(const char* value)</li>
+<li>Variant(const ResourceRef&amp; value) (GC)</li>
+<li>Variant* new(const ResourceRef&amp; value)</li>
+<li>Variant(const ResourceRefList&amp; value) (GC)</li>
+<li>Variant* new(const ResourceRefList&amp; value)</li>
+<li>Variant(const IntRect&amp; value) (GC)</li>
+<li>Variant* new(const IntRect&amp; value)</li>
+<li>Variant(const IntVector2&amp; value) (GC)</li>
+<li>Variant* new(const IntVector2&amp; value)</li>
+<li>Variant(const String type, const String value) (GC)</li>
+<li>Variant* new(const String type, const String value)</li>
+<li>Variant(VariantType type, const String value) (GC)</li>
+<li>Variant* new(VariantType type, const String value)</li>
+<li>Variant(VariantType type, const char* value) (GC)</li>
+<li>Variant* new(VariantType type, const char* value)</li>
+<li>Variant(const Variant&amp; value) (GC)</li>
+<li>Variant* new(const Variant&amp; value)</li>
+<li>void delete()</li>
 <li>void Clear()</li>
 <li>bool operator==(const Variant&amp; rhs) const</li>
 <li>bool operator==(int rhs) const</li>
@@ -4281,8 +4445,9 @@ Classes</h1>
 <h3>VariantMap</h3>
 <p>Methods:</p>
 <ul>
-<li>* VariantMap()</li>
-<li>~VariantMap()</li>
+<li>VariantMap() (GC)</li>
+<li>VariantMap* new()</li>
+<li>void delete()</li>
 <li>void SetInt(const String key, int value)</li>
 <li>void SetUInt(const String key, unsigned value)</li>
 <li>void SetStringHash(const String key, const StringHash&amp; value)</li>
@@ -4323,10 +4488,13 @@ Classes</h1>
 <h3><a class="el" href="a00316.html" title="Two-dimensional vector.">Vector2</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Vector2()</li>
-<li>* Vector2(const Vector2&amp; vector)</li>
-<li>* Vector2(float x, float y)</li>
-<li>~Vector2()</li>
+<li>Vector2() (GC)</li>
+<li>Vector2* new()</li>
+<li>Vector2(const Vector2&amp; vector) (GC)</li>
+<li>Vector2* new(const Vector2&amp; vector)</li>
+<li>Vector2(float x, float y) (GC)</li>
+<li>Vector2* new(float x, float y)</li>
+<li>void delete()</li>
 <li>bool operator==(const Vector2&amp; rhs) const</li>
 <li><a class="el" href="a00316.html" title="Two-dimensional vector.">Vector2</a> operator+(const Vector2&amp; rhs) const</li>
 <li><a class="el" href="a00316.html" title="Two-dimensional vector.">Vector2</a> operator-() const</li>
@@ -4361,11 +4529,15 @@ Classes</h1>
 <h3><a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Vector3()</li>
-<li>* Vector3(const Vector3&amp; vector)</li>
-<li>* Vector3(const Vector2&amp; vector, float z)</li>
-<li>* Vector3(float x, float y, float z)</li>
-<li>~Vector3()</li>
+<li>Vector3() (GC)</li>
+<li>Vector3* new()</li>
+<li>Vector3(const Vector3&amp; vector) (GC)</li>
+<li>Vector3* new(const Vector3&amp; vector)</li>
+<li>Vector3(const Vector2&amp; vector, float z) (GC)</li>
+<li>Vector3* new(const Vector2&amp; vector, float z)</li>
+<li>Vector3(float x, float y, float z) (GC)</li>
+<li>Vector3* new(float x, float y, float z)</li>
+<li>void delete()</li>
 <li>bool operator==(const Vector3&amp; rhs) const</li>
 <li><a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a> operator+(const Vector3&amp; rhs) const</li>
 <li><a class="el" href="a00317.html" title="Three-dimensional vector.">Vector3</a> operator-() const</li>
@@ -4405,11 +4577,15 @@ Classes</h1>
 <h3><a class="el" href="a00318.html" title="Four-dimensional vector.">Vector4</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Vector4()</li>
-<li>* Vector4(const Vector4&amp; vector)</li>
-<li>* Vector4(const Vector3&amp; vector, float w)</li>
-<li>* Vector4(float x, float y, float z, float w)</li>
-<li>~Vector4()</li>
+<li>Vector4() (GC)</li>
+<li>Vector4* new()</li>
+<li>Vector4(const Vector4&amp; vector) (GC)</li>
+<li>Vector4* new(const Vector4&amp; vector)</li>
+<li>Vector4(const Vector3&amp; vector, float w) (GC)</li>
+<li>Vector4* new(const Vector3&amp; vector, float w)</li>
+<li>Vector4(float x, float y, float z, float w) (GC)</li>
+<li>Vector4* new(float x, float y, float z, float w)</li>
+<li>void delete()</li>
 <li>bool operator==(const Vector4&amp; rhs) const</li>
 <li><a class="el" href="a00318.html" title="Four-dimensional vector.">Vector4</a> operator+(const Vector4&amp; rhs) const</li>
 <li><a class="el" href="a00318.html" title="Four-dimensional vector.">Vector4</a> operator-() const</li>
@@ -4438,9 +4614,11 @@ Classes</h1>
 <h3><a class="el" href="a00320.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* VectorBuffer()</li>
-<li>* VectorBuffer(Deserializer&amp; source, unsigned size)</li>
-<li>~VectorBuffer()</li>
+<li>VectorBuffer() (GC)</li>
+<li>VectorBuffer* new()</li>
+<li>VectorBuffer(Deserializer&amp; source, unsigned size) (GC)</li>
+<li>VectorBuffer* new(Deserializer&amp; source, unsigned size)</li>
+<li>void delete()</li>
 <li>void SetData(Deserializer&amp; source, unsigned size)</li>
 <li>void Clear()</li>
 <li>void Resize(unsigned size)</li>
@@ -4532,8 +4710,9 @@ Classes</h1>
 <h3><a class="el" href="a00324.html" title="UI element which renders a 3D scene.">View3D</a> : <a class="el" href="a00328.html" title="Window UI element that can optionally by moved or resized.">Window</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* View3D()</li>
-<li>~View3D()</li>
+<li>View3D() (GC)</li>
+<li>View3D* new()</li>
+<li>void delete()</li>
 <li>void SetView(Scene* scene, Camera* camera)</li>
 <li>void SetFormat(unsigned format)</li>
 <li>void SetAutoUpdate(bool enable)</li>
@@ -4554,10 +4733,13 @@ Classes</h1>
 <h3><a class="el" href="a00325.html" title="Viewport definition either for a render surface or the backbuffer.">Viewport</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Viewport()</li>
-<li>* <a class="el" href="a00325.html" title="Viewport definition either for a render surface or the backbuffer.">Viewport</a>(Scene* scene, Camera* camera, RenderPath* renderPath = 0)</li>
-<li>* <a class="el" href="a00325.html" title="Viewport definition either for a render surface or the backbuffer.">Viewport</a>(Scene* scene, Camera* camera, const <a class="el" href="a00154.html" title="Two-dimensional bounding rectangle with integer values.">IntRect</a>&amp; rect, RenderPath* renderPath = 0)</li>
-<li>~Viewport()</li>
+<li>Viewport() (GC)</li>
+<li>Viewport* new()</li>
+<li><a class="el" href="a00325.html" title="Viewport definition either for a render surface or the backbuffer.">Viewport</a>(Scene* scene, Camera* camera, RenderPath* renderPath = 0) (GC)</li>
+<li>Viewport* new(Scene* scene, Camera* camera, RenderPath* renderPath = 0)</li>
+<li><a class="el" href="a00325.html" title="Viewport definition either for a render surface or the backbuffer.">Viewport</a>(Scene* scene, Camera* camera, const <a class="el" href="a00154.html" title="Two-dimensional bounding rectangle with integer values.">IntRect</a>&amp; rect, RenderPath* renderPath = 0) (GC)</li>
+<li>Viewport* new(Scene* scene, Camera* camera, const <a class="el" href="a00154.html" title="Two-dimensional bounding rectangle with integer values.">IntRect</a>&amp; rect, RenderPath* renderPath = 0)</li>
+<li>void delete()</li>
 <li>void SetScene(Scene* scene)</li>
 <li>void SetCamera(Camera* camera)</li>
 <li>void SetRect(const IntRect&amp; rect)</li>
@@ -4578,8 +4760,9 @@ Classes</h1>
 <h3><a class="el" href="a00328.html" title="Window UI element that can optionally by moved or resized.">Window</a> : <a class="el" href="a00075.html" title="Image UI element with optional border.">BorderImage</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* Window()</li>
-<li>~Window()</li>
+<li>Window() (GC)</li>
+<li>Window* new()</li>
+<li>void delete()</li>
 <li>void SetMovable(bool enable)</li>
 <li>void SetResizable(bool enable)</li>
 <li>void SetFixedWidthResizing(bool enable)</li>
@@ -4685,8 +4868,9 @@ Classes</h1>
 <h3><a class="el" href="a00333.html" title="XML document resource.">XMLFile</a> : <a class="el" href="a00245.html" title="Base class for resources.">Resource</a></h3>
 <p>Methods:</p>
 <ul>
-<li>* XMLFile()</li>
-<li>~XMLFile()</li>
+<li>XMLFile() (GC)</li>
+<li>XMLFile* new()</li>
+<li>void delete()</li>
 <li><a class="el" href="a00332.html" title="Element in an XML file.">XMLElement</a> CreateRoot(const <a class="el" href="a00289.html" title="String class.">String</a> name = <a class="el" href="a00289.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>)</li>
 <li><a class="el" href="a00332.html" title="Element in an XML file.">XMLElement</a> GetRoot(const <a class="el" href="a00289.html" title="String class.">String</a> name = <a class="el" href="a00289.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>)</li>
 <li>void Patch(XMLFile* patchFile)</li>
@@ -5295,17 +5479,17 @@ Global functions</h1>
 Global properties</h1>
 <ul>
 <li>Audio* audio (readonly)</li>
-<li>Time* time (readonly)</li>
+<li>ResourceCache* cache (readonly)</li>
 <li>Console* console (readonly)</li>
 <li>DebugHud* debugHud (readonly)</li>
 <li>Engine* engine (readonly)</li>
-<li>Graphics* graphics (readonly)</li>
-<li>Renderer* renderer (readonly)</li>
-<li>Input* input (readonly)</li>
 <li>FileSystem* fileSystem (readonly)</li>
+<li>Graphics* graphics (readonly)</li>
+<li>Input* input (readonly)</li>
 <li>Log* log (readonly)</li>
 <li>Network* network (readonly)</li>
-<li>ResourceCache* cache (readonly)</li>
+<li>Renderer* renderer (readonly)</li>
+<li>Time* time (readonly)</li>
 <li>UI* ui (readonly)</li>
 </ul>
 <h1><a class="anchor" id="LuaScriptAPI_GlobalConstants"></a>
