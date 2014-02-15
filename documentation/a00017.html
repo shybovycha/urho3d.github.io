@@ -59,7 +59,7 @@ Event handling</h1>
 <div class="line">    local timeStep = eventData:GetFloat(&quot;TimeStep&quot;)</div>
 <div class="line">    ...</div>
 <div class="line">end</div>
-</div><!-- fragment --><p>When subscribing a script object to receive an event, use the form self:SubscribeToEvent instead. The function to use as the handler is given as "ClassName:FunctionName". For example subscribing to the NodeCollision physics event, and getting the participating other scene node and the contact point <a class="el" href="a00320.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a> in the handler function:</p>
+</div><!-- fragment --><p>When subscribing a script object to receive an event, use the form self:SubscribeToEvent instead. The function to use as the handler is given as "ClassName:FunctionName". For example subscribing to the NodeCollision physics event, and getting the participating other scene node and the contact point <a class="el" href="a00320.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a> in the handler function. Note that in Lua retrieving an object pointer from a VariantMap requires the object type as the first parameter:</p>
 <div class="fragment"><div class="line">CollisionDetector = ScriptObject()</div>
 <div class="line"></div>
 <div class="line">function CollisionDetector:Start()</div>
@@ -86,5 +86,5 @@ Object allocation &amp; Lua garbage collection</h1>
 <div class="fragment"><div class="line">local text = Text:<span class="keyword">new</span>()</div>
 </div><!-- fragment --><p> When using this form the object will not collected by Lua, so it is safe to pass into C++ object hierarchies. Otherwise, to prevent memory leaks it needs to be deleted manually by calling the delete function on it: </p>
 <div class="fragment"><div class="line">text:<span class="keyword">delete</span>()</div>
-</div><!-- fragment --><p>When you call the <a class="el" href="a00246.html#a892167e531b42162c3a3608cdebc3a21">GetFile()</a> function of <a class="el" href="a00246.html" title="Resource cache subsystem. Loads resources on demand and stores them for later access.">ResourceCache</a> from Lua, the file you receive must also be manually deleted like described above once you are done with it. </p>
+</div><!-- fragment --><p>When you call the <a class="el" href="a00246.html#a7a8fddc0e1561115c557850f6751f76b">GetFile()</a> function of <a class="el" href="a00246.html" title="Resource cache subsystem. Loads resources on demand and stores them for later access.">ResourceCache</a> from Lua, the file you receive must also be manually deleted like described above once you are done with it. </p>
 </div></div><!-- contents -->

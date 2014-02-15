@@ -64,8 +64,8 @@ Reading collision events</h1>
 <p>An example of reading collision event and contact point data in script, from NinjaSnowWar game object collision handling code:</p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> HandleNodeCollision(StringHash eventType, VariantMap&amp; eventData)</div>
 <div class="line">{</div>
-<div class="line">    Node@ otherNode = eventData[<span class="stringliteral">&quot;OtherNode&quot;</span>].GetNode();</div>
-<div class="line">    RigidBody@ otherBody = eventData[<span class="stringliteral">&quot;OtherBody&quot;</span>].GetRigidBody();</div>
+<div class="line">    Node@ otherNode = eventData[<span class="stringliteral">&quot;OtherNode&quot;</span>].GetPtr();</div>
+<div class="line">    RigidBody@ otherBody = eventData[<span class="stringliteral">&quot;OtherBody&quot;</span>].GetPtr();</div>
 <div class="line">    VectorBuffer contacts = eventData[<span class="stringliteral">&quot;Contacts&quot;</span>].GetBuffer();</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">while</span> (!contacts.eof)</div>
