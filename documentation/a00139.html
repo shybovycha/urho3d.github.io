@@ -333,6 +333,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00139.html#a88b8eb411b824937171647ea4d74d4c6">SetForceSM2</a> (bool enable)</td></tr>
 <tr class="memdesc:a88b8eb411b824937171647ea4d74d4c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set force <a class="el" href="a00265.html" title="Shader resource consisting of several shader variations.">Shader</a> <a class="el" href="a00185.html" title="3D model resource.">Model</a> 2 flag. No-op on OpenGL. <br/></td></tr>
 <tr class="separator:a88b8eb411b824937171647ea4d74d4c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2664f84fe14e6cc7ccd750470427af32"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2664f84fe14e6cc7ccd750470427af32"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00139.html#a2664f84fe14e6cc7ccd750470427af32">BeginDumpShaders</a> (const <a class="el" href="a00289.html">String</a> &amp;fileName)</td></tr>
+<tr class="memdesc:a2664f84fe14e6cc7ccd750470427af32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin dumping shader variation names to a file for precaching. <br/></td></tr>
+<tr class="separator:a2664f84fe14e6cc7ccd750470427af32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bc0261c882ff0c3bc8fc5f2871eb54c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8bc0261c882ff0c3bc8fc5f2871eb54c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00139.html#a8bc0261c882ff0c3bc8fc5f2871eb54c">EndDumpShaders</a> ()</td></tr>
+<tr class="memdesc:a8bc0261c882ff0c3bc8fc5f2871eb54c"><td class="mdescLeft">&#160;</td><td class="mdescRight">End dumping shader variations names. <br/></td></tr>
+<tr class="separator:a8bc0261c882ff0c3bc8fc5f2871eb54c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7a91acbf613629e3b95f600b10e6c2a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7a91acbf613629e3b95f600b10e6c2a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00139.html#ab7a91acbf613629e3b95f600b10e6c2a">PrecacheShaders</a> (<a class="el" href="a00115.html">Deserializer</a> &amp;source)</td></tr>
+<tr class="memdesc:ab7a91acbf613629e3b95f600b10e6c2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Precache shader variations from a file containing rows of shader names, generated with <a class="el" href="a00139.html#a2664f84fe14e6cc7ccd750470427af32" title="Begin dumping shader variation names to a file for precaching.">BeginDumpShaders()</a>. <br/></td></tr>
+<tr class="separator:ab7a91acbf613629e3b95f600b10e6c2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a758baad907187292abf52b2ba89c6723"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a758baad907187292abf52b2ba89c6723"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00139.html#a758baad907187292abf52b2ba89c6723">IsInitialized</a> () const </td></tr>
 <tr class="memdesc:a758baad907187292abf52b2ba89c6723"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether rendering initialized. <br/></td></tr>
@@ -468,9 +480,17 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00139.html#afb63409fad57945e46f468cd4c236c85">GetFormat</a> (CompressedFormat format) const </td></tr>
 <tr class="memdesc:afb63409fad57945e46f468cd4c236c85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hardware format for a compressed image format, or 0 if unsupported. <br/></td></tr>
 <tr class="separator:afb63409fad57945e46f468cd4c236c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad58413102b75b7916510245a9db175e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad58413102b75b7916510245a9db175e"></a>
+<a class="el" href="a00268.html">ShaderVariation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00139.html#aad58413102b75b7916510245a9db175e">GetShader</a> (ShaderType type, const <a class="el" href="a00289.html">String</a> &amp;name, const <a class="el" href="a00289.html">String</a> &amp;defines=<a class="el" href="a00289.html#ac4b764c2af370a120fb9e3470329c96e">String::EMPTY</a>) const </td></tr>
+<tr class="memdesc:aad58413102b75b7916510245a9db175e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a shader variation by name and defines. <br/></td></tr>
+<tr class="separator:aad58413102b75b7916510245a9db175e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa723d26e2a21700a6a2e2f3f9958b039"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa723d26e2a21700a6a2e2f3f9958b039"></a>
+<a class="el" href="a00268.html">ShaderVariation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00139.html#aa723d26e2a21700a6a2e2f3f9958b039">GetShader</a> (ShaderType type, const char *name, const char *defines) const </td></tr>
+<tr class="memdesc:aa723d26e2a21700a6a2e2f3f9958b039"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a shader variation by name and defines. <br/></td></tr>
+<tr class="separator:aa723d26e2a21700a6a2e2f3f9958b039"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d534f4e74a7fa9b73c4c5f808a5c6ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d534f4e74a7fa9b73c4c5f808a5c6ea"></a>
 <a class="el" href="a00321.html">VertexBuffer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00139.html#a7d534f4e74a7fa9b73c4c5f808a5c6ea">GetVertexBuffer</a> (unsigned index) const </td></tr>
-<tr class="memdesc:a7d534f4e74a7fa9b73c4c5f808a5c6ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return vertex buffer by index. <br/></td></tr>
+<tr class="memdesc:a7d534f4e74a7fa9b73c4c5f808a5c6ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return current vertex buffer by index. <br/></td></tr>
 <tr class="separator:a7d534f4e74a7fa9b73c4c5f808a5c6ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a5769728f3748b4a50e05e411dadae8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a5769728f3748b4a50e05e411dadae8"></a>
 <a class="el" href="a00151.html">IndexBuffer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00139.html#a1a5769728f3748b4a50e05e411dadae8">GetIndexBuffer</a> () const </td></tr>
@@ -1171,6 +1191,30 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00139.html#a6e1a5f7279acc7df9a0e87761355e857">releasingGPUObjects_</a></td></tr>
 <tr class="memdesc:a6e1a5f7279acc7df9a0e87761355e857"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releasing GPU objects flag. <br/></td></tr>
 <tr class="separator:a6e1a5f7279acc7df9a0e87761355e857"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d43fd1d9b5e81fb0d63a4080b15b9fc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d43fd1d9b5e81fb0d63a4080b15b9fc"></a>
+<a class="el" href="a00289.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00139.html#a5d43fd1d9b5e81fb0d63a4080b15b9fc">shaderPath_</a></td></tr>
+<tr class="memdesc:a5d43fd1d9b5e81fb0d63a4080b15b9fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base directory for shaders. <br/></td></tr>
+<tr class="separator:a5d43fd1d9b5e81fb0d63a4080b15b9fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ec1d00e1f49714c9fa3d395db44b0b5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ec1d00e1f49714c9fa3d395db44b0b5"></a>
+<a class="el" href="a00289.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00139.html#a7ec1d00e1f49714c9fa3d395db44b0b5">shaderExtension_</a></td></tr>
+<tr class="memdesc:a7ec1d00e1f49714c9fa3d395db44b0b5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00123.html" title="File opened either through the filesystem or from within a package file.">File</a> extension for shaders. <br/></td></tr>
+<tr class="separator:a7ec1d00e1f49714c9fa3d395db44b0b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ab26f7fc1bdf0e44ddcf36cb563ee7f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ab26f7fc1bdf0e44ddcf36cb563ee7f"></a>
+<a class="el" href="a00327.html">WeakPtr</a>&lt; <a class="el" href="a00265.html">Shader</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00139.html#a6ab26f7fc1bdf0e44ddcf36cb563ee7f">lastShader_</a></td></tr>
+<tr class="memdesc:a6ab26f7fc1bdf0e44ddcf36cb563ee7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last used shader in shader variation query. <br/></td></tr>
+<tr class="separator:a6ab26f7fc1bdf0e44ddcf36cb563ee7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7762a3f1b3be65da13102a03b20b51f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7762a3f1b3be65da13102a03b20b51f"></a>
+<a class="el" href="a00289.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00139.html#af7762a3f1b3be65da13102a03b20b51f">lastShaderName_</a></td></tr>
+<tr class="memdesc:af7762a3f1b3be65da13102a03b20b51f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last used shader name in shader variation query. <br/></td></tr>
+<tr class="separator:af7762a3f1b3be65da13102a03b20b51f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98f8dca650dec2d2e0e6a91bff261065"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98f8dca650dec2d2e0e6a91bff261065"></a>
+<a class="el" href="a00271.html">SharedPtr</a>&lt; <a class="el" href="a00123.html">File</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00139.html#a98f8dca650dec2d2e0e6a91bff261065">shaderDumpFile_</a></td></tr>
+<tr class="memdesc:a98f8dca650dec2d2e0e6a91bff261065"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00123.html" title="File opened either through the filesystem or from within a package file.">File</a> shader variations are dumped into. Null if dumping not active. <br/></td></tr>
+<tr class="separator:a98f8dca650dec2d2e0e6a91bff261065"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a201833168ded35ffb0fb8de990c6dd6e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a201833168ded35ffb0fb8de990c6dd6e"></a>
+<a class="el" href="a00145.html">HashSet</a>&lt; <a class="el" href="a00289.html">String</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00139.html#a201833168ded35ffb0fb8de990c6dd6e">usedShaders_</a></td></tr>
+<tr class="memdesc:a201833168ded35ffb0fb8de990c6dd6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hash set for detecting already dumped variations. <br/></td></tr>
+<tr class="separator:a201833168ded35ffb0fb8de990c6dd6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
