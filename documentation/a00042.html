@@ -14,86 +14,652 @@ title: Documentation
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">Credits </div>  </div>
+<div class="title">Event list </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Urho3D development, contributions and bugfixes by:</p>
+<div class="textblock"><h2>Core events</h2>
+<h3>BeginFrame</h3>
 <ul>
-<li>Lasse &Ouml;&ouml;rni (<a href="#" onclick="location.href='mai'+'lto:'+'loo'+'rn'+'i@g'+'ma'+'il.'+'co'+'m'; return false;">loorn<span style="display: none;">.nosp@m.</span>i@gm<span style="display: none;">.nosp@m.</span>ail.c<span style="display: none;">.nosp@m.</span>om</a>, AgentC at GameDev.net)</li>
-<li>Wei Tjong Yao</li>
-<li>Aster Jian</li>
-<li>Colin Barrett</li>
-<li>Erik Beran</li>
-<li>Carlo Carollo</li>
-<li>Pete Chown</li>
-<li>Sebastian Delatorre (primitivewaste)</li>
-<li>Josh Engebretson</li>
-<li>Chris Friesen</li>
-<li>Alex Fuller</li>
-<li>Mika Heinonen</li>
-<li>Graham King</li>
-<li>Jason Kinzer</li>
-<li>Gunnar Kriik</li>
-<li>Ali K&auml;m&auml;r&auml;inen</li>
-<li>Pete Leigh</li>
-<li>Paul Noome</li>
-<li>Alex Parlett</li>
-<li>Jordan Patterson</li>
-<li>Vladimir Pobedinsky</li>
-<li>Nick Royer</li>
-<li>Miika Santala</li>
-<li>Joshua Tippetts</li>
-<li>Daniel Wiberg</li>
-<li>Steven Zhang</li>
-<li>Firegorilla</li>
-<li>Magic.Lixin</li>
-<li>Mike3D</li>
-<li>OvermindDL1</li>
-<li>amadeus_osa</li>
-<li>mightyCelu</li>
-<li>reattiva</li>
-<li>skaiware</li>
+<li>FrameNumber : unsigned</li>
+<li>TimeStep : float</li>
 </ul>
-<p>Urho3D is greatly inspired by OGRE (<a href="http://www.ogre3d.org/">http://www.ogre3d.org/</a>) and Horde3D (<a href="http://www.horde3d.org/">http://www.horde3d.org/</a>). Additional inspiration &amp; research used:</p>
+<h3>Update</h3>
 <ul>
-<li>Rectangle packing by Jukka Jyl&auml;nki (clb) (<a href="http://clb.demon.fi/projects/rectangle-bin-packing/">http://clb.demon.fi/projects/rectangle-bin-packing/</a>)</li>
-<li>Tangent generation from Terathon (<a href="http://www.terathon.com/code/tangent.html">http://www.terathon.com/code/tangent.html</a>)</li>
-<li>Fast, Minimum Storage Ray/Triangle Intersection by M&ouml;ller &amp; Trumbore (<a href="http://www.graphics.cornell.edu/pubs/1997/MT97.pdf">http://www.graphics.cornell.edu/pubs/1997/MT97.pdf</a>)</li>
-<li>Linear-Speed Vertex Cache Optimisation by Tom Forsyth (<a href="http://home.comcast.net/~tom_forsyth/papers/fast_vert_cache_opt.html">http://home.comcast.net/~tom_forsyth/papers/fast_vert_cache_opt.html</a>)</li>
-<li>Software rasterization of triangles based on Chris Hecker's Perspective Texture Mapping series in the Game Developer magazine (<a href="http://chrishecker.com/Miscellaneous_Technical_Articles">http://chrishecker.com/Miscellaneous_Technical_Articles</a>)</li>
-<li>Networked Physics by Glenn Fiedler (<a href="http://gafferongames.com/game-physics/networked-physics/">http://gafferongames.com/game-physics/networked-physics/</a>)</li>
-<li>Euler Angle Formulas by David Eberly (<a href="http://www.geometrictools.com/Documentation/EulerAngles.pdf">http://www.geometrictools.com/Documentation/EulerAngles.pdf</a>)</li>
-<li>Red Black Trees by Julienne Walker (<a href="http://eternallyconfuzzled.com/tuts/datastructures/jsw_tut_rbtree.aspx">http://eternallyconfuzzled.com/tuts/datastructures/jsw_tut_rbtree.aspx</a>)</li>
-<li>Comparison of several sorting algorithms by Juha Nieminen (<a href="http://warp.povusers.org/SortComparison/">http://warp.povusers.org/SortComparison/</a>)</li>
-<li>NVIDIA FXAA II for Consoles by Timothy Lottes (<a href="http://timothylottes.blogspot.com/2011/04/nvidia-fxaa-ii-for-console.html">http://timothylottes.blogspot.com/2011/04/nvidia-fxaa-ii-for-console.html</a>)</li>
+<li>TimeStep : float</li>
 </ul>
-<p>Urho3D uses the following third-party libraries:</p>
+<h3>PostUpdate</h3>
 <ul>
-<li>AngelScript 2.28.1 (<a href="http://www.angelcode.com/angelscript/">http://www.angelcode.com/angelscript/</a>)</li>
-<li>Bullet 2.82 (<a href="http://www.bulletphysics.org/">http://www.bulletphysics.org/</a>)</li>
-<li>Civetweb (<a href="http://sourceforge.net/projects/civetweb/">http://sourceforge.net/projects/civetweb/</a>)</li>
-<li>FreeType 2.5.0 (<a href="http://www.freetype.org/">http://www.freetype.org/</a>)</li>
-<li>GLEW 1.9.0 (<a href="http://glew.sourceforge.net/">http://glew.sourceforge.net/</a>)</li>
-<li>jo_jpeg 1.52 (<a href="http://www.jonolick.com/uploads/7/9/2/1/7921194/jo_jpeg.cpp">http://www.jonolick.com/uploads/7/9/2/1/7921194/jo_jpeg.cpp</a>)</li>
-<li>kNet (<a href="https://github.com/juj/kNet">https://github.com/juj/kNet</a>)</li>
-<li>libcpuid 0.2.0 (<a href="http://libcpuid.sourceforge.net/">http://libcpuid.sourceforge.net/</a>)</li>
-<li>Lua 5.1 (<a href="http://www.lua.org">http://www.lua.org</a>)</li>
-<li>LuaJIT 2.0.2 (<a href="http://www.luajit.org">http://www.luajit.org</a>)</li>
-<li>LZ4 (<a href="http://code.google.com/p/lz4/">http://code.google.com/p/lz4/</a>)</li>
-<li>MojoShader (<a href="http://icculus.org/mojoshader/">http://icculus.org/mojoshader/</a>)</li>
-<li>Open Asset Import Library (<a href="http://assimp.sourceforge.net/">http://assimp.sourceforge.net/</a>)</li>
-<li>pugixml 1.0 (<a href="http://pugixml.org/">http://pugixml.org/</a>)</li>
-<li>Recast/Detour (<a href="http://code.google.com/p/recastnavigation/">http://code.google.com/p/recastnavigation/</a>)</li>
-<li>SDL 2.0.1 (<a href="http://www.libsdl.org/">http://www.libsdl.org/</a>)</li>
-<li>StanHull (<a href="http://codesuppository.blogspot.com/2006/03/john-ratcliffs-code-suppository-blog.html">http://codesuppository.blogspot.com/2006/03/john-ratcliffs-code-suppository-blog.html</a>)</li>
-<li>stb_image 1.29 (<a href="http://nothings.org/">http://nothings.org/</a>)</li>
-<li>stb_vorbis 0.99996 (<a href="http://nothings.org/">http://nothings.org/</a>)</li>
-<li>tolua++ 1.0.93 (<a href="http://www.codenix.com/~tolua">http://www.codenix.com/~tolua</a>)</li>
+<li>TimeStep : float</li>
 </ul>
-<p>DXT / ETC1 / PVRTC decompression code based on the Squish library and the Oolong Engine.<br/>
- Jack and mushroom models from the realXtend project. (<a href="http://www.realxtend.org">http://www.realxtend.org</a>)<br/>
- Ninja model and terrain, water, smoke, flare and status bar textures from OGRE.<br/>
- BlueHighway font from Larabie Fonts.<br/>
- Anonymous Pro font by Mark Simonson.<br/>
- NinjaSnowWar sounds by Veli-Pekka T&auml;til&auml;. </p>
+<h3>RenderUpdate</h3>
+<ul>
+<li>TimeStep : float</li>
+</ul>
+<h3>PostRenderUpdate</h3>
+<ul>
+<li>TimeStep : float</li>
+</ul>
+<h3>EndFrame</h3>
+<h2>Engine events</h2>
+<h3>ConsoleCommand</h3>
+<ul>
+<li>Command : <a class="el" href="a00289.html" title="String class.">String</a></li>
+</ul>
+<h2>Drawable events</h2>
+<h3>BoneHierarchyCreated</h3>
+<ul>
+<li>Node : <a class="el" href="a00198.html" title="Scene node that may contain components and child nodes.">Node</a> pointer</li>
+</ul>
+<h3>AnimationTrigger</h3>
+<ul>
+<li>Node : <a class="el" href="a00198.html" title="Scene node that may contain components and child nodes.">Node</a> pointer</li>
+<li>Name : <a class="el" href="a00289.html" title="String class.">String</a></li>
+<li>Time : Float</li>
+<li>Data : User-defined data type</li>
+</ul>
+<h3>TerrainCreated</h3>
+<ul>
+<li>Node : <a class="el" href="a00198.html" title="Scene node that may contain components and child nodes.">Node</a> pointer</li>
+</ul>
+<h2>Graphics events</h2>
+<h3>WindowMessage</h3>
+<ul>
+<li>Window : int</li>
+<li>Msg : int</li>
+<li>WParam : int</li>
+<li>LParam : int</li>
+<li>Handled : bool</li>
+</ul>
+<h3>ScreenMode</h3>
+<ul>
+<li>Width : int</li>
+<li>Height : int</li>
+<li>Fullscreen : bool</li>
+<li>Resizable : bool</li>
+<li>Borderless : bool</li>
+</ul>
+<h3>GraphicsFeatures</h3>
+<h3>RenderSurfaceUpdate</h3>
+<h3>BeginRendering</h3>
+<h3>EndRendering</h3>
+<h3>BeginViewUpdate</h3>
+<ul>
+<li>Texture : <a class="el" href="a00297.html" title="Base class for texture resources.">Texture</a> pointer</li>
+<li>Surface : <a class="el" href="a00242.html" title="Color or depth-stencil surface that can be rendered into.">RenderSurface</a> pointer</li>
+<li>Scene : <a class="el" href="a00251.html" title="Root scene node, represents the whole scene.">Scene</a> pointer</li>
+<li>Camera : <a class="el" href="a00079.html" title="Camera component.">Camera</a> pointer</li>
+</ul>
+<h3>EndViewUpdate</h3>
+<ul>
+<li>Texture : <a class="el" href="a00297.html" title="Base class for texture resources.">Texture</a> pointer</li>
+<li>Surface : <a class="el" href="a00242.html" title="Color or depth-stencil surface that can be rendered into.">RenderSurface</a> pointer</li>
+<li>Scene : <a class="el" href="a00251.html" title="Root scene node, represents the whole scene.">Scene</a> pointer</li>
+<li>Camera : <a class="el" href="a00079.html" title="Camera component.">Camera</a> pointer</li>
+</ul>
+<h3>BeginViewRender</h3>
+<ul>
+<li>Texture : <a class="el" href="a00297.html" title="Base class for texture resources.">Texture</a> pointer</li>
+<li>Surface : <a class="el" href="a00242.html" title="Color or depth-stencil surface that can be rendered into.">RenderSurface</a> pointer</li>
+<li>Scene : <a class="el" href="a00251.html" title="Root scene node, represents the whole scene.">Scene</a> pointer</li>
+<li>Camera : <a class="el" href="a00079.html" title="Camera component.">Camera</a> pointer</li>
+</ul>
+<h3>EndViewRender</h3>
+<ul>
+<li>Texture : <a class="el" href="a00297.html" title="Base class for texture resources.">Texture</a> pointer</li>
+<li>Surface : <a class="el" href="a00242.html" title="Color or depth-stencil surface that can be rendered into.">RenderSurface</a> pointer</li>
+<li>Scene : <a class="el" href="a00251.html" title="Root scene node, represents the whole scene.">Scene</a> pointer</li>
+<li>Camera : <a class="el" href="a00079.html" title="Camera component.">Camera</a> pointer</li>
+</ul>
+<h2>IO events</h2>
+<h3>LogMessage</h3>
+<ul>
+<li>Message : <a class="el" href="a00289.html" title="String class.">String</a></li>
+<li>Level : int</li>
+</ul>
+<h2>Input events</h2>
+<h3>MouseButtonDown</h3>
+<ul>
+<li>Button : int</li>
+<li>Buttons : int</li>
+<li>Qualifiers : int</li>
+</ul>
+<h3>MouseButtonUp</h3>
+<ul>
+<li>Button : int</li>
+<li>Buttons : int</li>
+<li>Qualifiers : int</li>
+</ul>
+<h3>MouseMove</h3>
+<ul>
+<li>X : int (only when mouse visible)</li>
+<li>Y : int (only when mouse visible)</li>
+<li>DX : int</li>
+<li>DY : int</li>
+<li>Buttons : int</li>
+<li>Qualifiers : int</li>
+</ul>
+<h3>MouseWheel</h3>
+<ul>
+<li>Wheel : int</li>
+<li>Buttons : int</li>
+<li>Qualifiers : int</li>
+</ul>
+<h3>KeyDown</h3>
+<ul>
+<li>Key : int</li>
+<li>Buttons : int</li>
+<li>Qualifiers : int</li>
+<li>Repeat : bool</li>
+<li>Raw : uint</li>
+</ul>
+<h3>KeyUp</h3>
+<ul>
+<li>Key : int</li>
+<li>Buttons : int</li>
+<li>Qualifiers : int</li>
+<li>Raw : uint</li>
+</ul>
+<h3>Char</h3>
+<ul>
+<li>Char : int</li>
+<li>Buttons : int</li>
+<li>Qualifiers : int</li>
+</ul>
+<h3>TouchBegin</h3>
+<ul>
+<li>TouchID : int</li>
+<li>X : int</li>
+<li>Y : int</li>
+<li>Pressure : float</li>
+</ul>
+<h3>TouchEnd</h3>
+<ul>
+<li>TouchID : int</li>
+<li>X : int</li>
+<li>Y : int</li>
+</ul>
+<h3>TouchMove</h3>
+<ul>
+<li>TouchID : int</li>
+<li>X : int</li>
+<li>Y : int</li>
+<li>DX : int</li>
+<li>DY : int</li>
+<li>Pressure : float</li>
+</ul>
+<h3>JoystickButtonDown</h3>
+<ul>
+<li>Joystick : int</li>
+<li>Button : int</li>
+</ul>
+<h3>JoystickButtonUp</h3>
+<ul>
+<li>Joystick : int</li>
+<li>Button : int</li>
+</ul>
+<h3>JoystickAxisMove</h3>
+<ul>
+<li>Joystick : int</li>
+<li>Button : int</li>
+<li>Position : float</li>
+</ul>
+<h3>JoystickHatMove</h3>
+<ul>
+<li>Joystick : int</li>
+<li>Button : int</li>
+<li>Position : int</li>
+</ul>
+<h3>ControllerButtonDown</h3>
+<ul>
+<li>Joystick : int</li>
+<li>Button : int</li>
+</ul>
+<h3>ControllerButtonUp</h3>
+<ul>
+<li>Joystick : int</li>
+<li>Button : int</li>
+</ul>
+<h3>ControllerAxisMove</h3>
+<ul>
+<li>Joystick : int</li>
+<li>Button : int</li>
+<li>Position : float</li>
+</ul>
+<h3>DropFile</h3>
+<ul>
+<li>FileName : <a class="el" href="a00289.html" title="String class.">String</a></li>
+</ul>
+<h3>InputFocus</h3>
+<ul>
+<li>Focus : bool</li>
+<li>Minimized : bool</li>
+</ul>
+<h3>MouseVisibleChanged</h3>
+<ul>
+<li>Visible : bool</li>
+</ul>
+<h3>ExitRequested</h3>
+<h2>Network events</h2>
+<h3>ServerConnected</h3>
+<h3>ServerDisconnected</h3>
+<h3>ConnectFailed</h3>
+<h3>ClientConnected</h3>
+<ul>
+<li>Connection : <a class="el" href="a00091.html" title="Connection to a remote network host.">Connection</a> pointer</li>
+</ul>
+<h3>ClientDisconnected</h3>
+<ul>
+<li>Connection : <a class="el" href="a00091.html" title="Connection to a remote network host.">Connection</a> pointer</li>
+</ul>
+<h3>ClientIdentity</h3>
+<ul>
+<li>Connection : <a class="el" href="a00091.html" title="Connection to a remote network host.">Connection</a> pointer</li>
+<li>Allow : bool</li>
+</ul>
+<h3>ClientSceneLoaded</h3>
+<ul>
+<li>Connection : <a class="el" href="a00091.html" title="Connection to a remote network host.">Connection</a> pointer</li>
+</ul>
+<h3>NetworkMessage</h3>
+<ul>
+<li>Connection : <a class="el" href="a00091.html" title="Connection to a remote network host.">Connection</a> pointer</li>
+<li>MessageID : int</li>
+<li>Data : Buffer</li>
+</ul>
+<h3>NetworkUpdate</h3>
+<h3>NetworkUpdateSent</h3>
+<h3>NetworkSceneLoadFailed</h3>
+<ul>
+<li>Connection : <a class="el" href="a00091.html" title="Connection to a remote network host.">Connection</a> pointer</li>
+</ul>
+<h3>RemoteEventData</h3>
+<ul>
+<li>Connection : <a class="el" href="a00091.html" title="Connection to a remote network host.">Connection</a> pointer</li>
+</ul>
+<h2>Physics events</h2>
+<h3>PhysicsPreStep</h3>
+<ul>
+<li>World : <a class="el" href="a00221.html" title="Physics simulation world component. Should be added only to the root scene node.">PhysicsWorld</a> pointer</li>
+<li>TimeStep : float</li>
+</ul>
+<h3>PhysicsPostStep</h3>
+<ul>
+<li>World : <a class="el" href="a00221.html" title="Physics simulation world component. Should be added only to the root scene node.">PhysicsWorld</a> pointer</li>
+<li>TimeStep : float</li>
+</ul>
+<h3>PhysicsCollisionStart</h3>
+<ul>
+<li>World : <a class="el" href="a00221.html" title="Physics simulation world component. Should be added only to the root scene node.">PhysicsWorld</a> pointer</li>
+<li>NodeA : <a class="el" href="a00198.html" title="Scene node that may contain components and child nodes.">Node</a> pointer</li>
+<li>NodeB : <a class="el" href="a00198.html" title="Scene node that may contain components and child nodes.">Node</a> pointer</li>
+<li>BodyA : <a class="el" href="a00250.html" title="Physics rigid body component.">RigidBody</a> pointer</li>
+<li>BodyB : <a class="el" href="a00250.html" title="Physics rigid body component.">RigidBody</a> pointer</li>
+<li>Phantom : bool</li>
+</ul>
+<h3>PhysicsCollision</h3>
+<ul>
+<li>World : <a class="el" href="a00221.html" title="Physics simulation world component. Should be added only to the root scene node.">PhysicsWorld</a> pointer</li>
+<li>NodeA : <a class="el" href="a00198.html" title="Scene node that may contain components and child nodes.">Node</a> pointer</li>
+<li>NodeB : <a class="el" href="a00198.html" title="Scene node that may contain components and child nodes.">Node</a> pointer</li>
+<li>BodyA : <a class="el" href="a00250.html" title="Physics rigid body component.">RigidBody</a> pointer</li>
+<li>BodyB : <a class="el" href="a00250.html" title="Physics rigid body component.">RigidBody</a> pointer</li>
+<li>Phantom : bool</li>
+</ul>
+<h3>PhysicsCollisionEnd</h3>
+<ul>
+<li>World : <a class="el" href="a00221.html" title="Physics simulation world component. Should be added only to the root scene node.">PhysicsWorld</a> pointer</li>
+<li>NodeA : <a class="el" href="a00198.html" title="Scene node that may contain components and child nodes.">Node</a> pointer</li>
+<li>NodeB : <a class="el" href="a00198.html" title="Scene node that may contain components and child nodes.">Node</a> pointer</li>
+<li>BodyA : <a class="el" href="a00250.html" title="Physics rigid body component.">RigidBody</a> pointer</li>
+<li>BodyB : <a class="el" href="a00250.html" title="Physics rigid body component.">RigidBody</a> pointer</li>
+<li>Phantom : bool</li>
+</ul>
+<h3>NodeCollisionStart</h3>
+<ul>
+<li>Body : <a class="el" href="a00250.html" title="Physics rigid body component.">RigidBody</a> pointer</li>
+<li>OtherNode : <a class="el" href="a00198.html" title="Scene node that may contain components and child nodes.">Node</a> pointer</li>
+<li>OtherBody : <a class="el" href="a00250.html" title="Physics rigid body component.">RigidBody</a> pointer</li>
+<li>Phantom : bool</li>
+</ul>
+<h3>NodeCollision</h3>
+<ul>
+<li>Body : <a class="el" href="a00250.html" title="Physics rigid body component.">RigidBody</a> pointer</li>
+<li>OtherNode : <a class="el" href="a00198.html" title="Scene node that may contain components and child nodes.">Node</a> pointer</li>
+<li>OtherBody : <a class="el" href="a00250.html" title="Physics rigid body component.">RigidBody</a> pointer</li>
+<li>Phantom : bool</li>
+</ul>
+<h3>NodeCollisionEnd</h3>
+<ul>
+<li>Body : <a class="el" href="a00250.html" title="Physics rigid body component.">RigidBody</a> pointer</li>
+<li>OtherNode : <a class="el" href="a00198.html" title="Scene node that may contain components and child nodes.">Node</a> pointer</li>
+<li>OtherBody : <a class="el" href="a00250.html" title="Physics rigid body component.">RigidBody</a> pointer</li>
+<li>Phantom : bool</li>
+</ul>
+<h2>Resource events</h2>
+<h3>ReloadStarted</h3>
+<h3>ReloadFinished</h3>
+<h3>ReloadFailed</h3>
+<h3>LoadFailed</h3>
+<ul>
+<li>ResourceName : <a class="el" href="a00289.html" title="String class.">String</a></li>
+</ul>
+<h3>ResourceNotFound</h3>
+<ul>
+<li>ResourceName : <a class="el" href="a00289.html" title="String class.">String</a></li>
+</ul>
+<h3>UnknownResourceType</h3>
+<ul>
+<li>ResourceType : <a class="el" href="a00272.html" title="16-bit hash value for a string.">ShortStringHash</a></li>
+</ul>
+<h2>Scene events</h2>
+<h3>SceneUpdate</h3>
+<ul>
+<li>Scene : <a class="el" href="a00251.html" title="Root scene node, represents the whole scene.">Scene</a> pointer</li>
+<li>TimeStep : float</li>
+</ul>
+<h3>SceneSubsystemUpdate</h3>
+<ul>
+<li>Scene : <a class="el" href="a00251.html" title="Root scene node, represents the whole scene.">Scene</a> pointer</li>
+<li>TimeStep : float</li>
+</ul>
+<h3>UpdateSmoothing</h3>
+<ul>
+<li>Constant : float</li>
+<li>SquaredSnapThreshold : float</li>
+</ul>
+<h3>SceneDrawableUpdateFinished</h3>
+<ul>
+<li>Scene : <a class="el" href="a00251.html" title="Root scene node, represents the whole scene.">Scene</a> pointer</li>
+<li>TimeStep : float</li>
+</ul>
+<h3>TargetPositionChanged</h3>
+<h3>TargetRotationChanged</h3>
+<h3>ScenePostUpdate</h3>
+<ul>
+<li>Scene : <a class="el" href="a00251.html" title="Root scene node, represents the whole scene.">Scene</a> pointer</li>
+<li>TimeStep : float</li>
+</ul>
+<h3>AsyncLoadProgress</h3>
+<ul>
+<li>Scene : <a class="el" href="a00251.html" title="Root scene node, represents the whole scene.">Scene</a> pointer</li>
+<li>Progress : float</li>
+<li>LoadedNodes : int</li>
+<li>TotalNodes : int</li>
+</ul>
+<h3>AsyncLoadFinished</h3>
+<ul>
+<li>Scene : <a class="el" href="a00251.html" title="Root scene node, represents the whole scene.">Scene</a> pointer</li>
+</ul>
+<h3>NodeAdded</h3>
+<ul>
+<li>Scene : <a class="el" href="a00251.html" title="Root scene node, represents the whole scene.">Scene</a> pointer</li>
+<li>Parent : <a class="el" href="a00198.html" title="Scene node that may contain components and child nodes.">Node</a> pointer</li>
+<li>Node : <a class="el" href="a00198.html" title="Scene node that may contain components and child nodes.">Node</a> pointer</li>
+</ul>
+<h3>NodeRemoved</h3>
+<ul>
+<li>Scene : <a class="el" href="a00251.html" title="Root scene node, represents the whole scene.">Scene</a> pointer</li>
+<li>Parent : <a class="el" href="a00198.html" title="Scene node that may contain components and child nodes.">Node</a> pointer</li>
+<li>Node : <a class="el" href="a00198.html" title="Scene node that may contain components and child nodes.">Node</a> pointer</li>
+</ul>
+<h3>ComponentAdded</h3>
+<ul>
+<li>Scene : <a class="el" href="a00251.html" title="Root scene node, represents the whole scene.">Scene</a> pointer</li>
+<li>Node : <a class="el" href="a00198.html" title="Scene node that may contain components and child nodes.">Node</a> pointer</li>
+<li>Component : <a class="el" href="a00087.html" title="Base class for components. Components can be created to scene nodes.">Component</a> pointer</li>
+</ul>
+<h3>ComponentRemoved</h3>
+<ul>
+<li>Scene : <a class="el" href="a00251.html" title="Root scene node, represents the whole scene.">Scene</a> pointer</li>
+<li>Node : <a class="el" href="a00198.html" title="Scene node that may contain components and child nodes.">Node</a> pointer</li>
+<li>Component : <a class="el" href="a00087.html" title="Base class for components. Components can be created to scene nodes.">Component</a> pointer</li>
+</ul>
+<h3>NodeNameChanged</h3>
+<ul>
+<li>Scene : <a class="el" href="a00251.html" title="Root scene node, represents the whole scene.">Scene</a> pointer</li>
+<li>Node : <a class="el" href="a00198.html" title="Scene node that may contain components and child nodes.">Node</a> pointer</li>
+</ul>
+<h3>NodeEnabledChanged</h3>
+<ul>
+<li>Scene : <a class="el" href="a00251.html" title="Root scene node, represents the whole scene.">Scene</a> pointer</li>
+<li>Node : <a class="el" href="a00198.html" title="Scene node that may contain components and child nodes.">Node</a> pointer</li>
+</ul>
+<h3>ComponentEnabledChanged</h3>
+<ul>
+<li>Scene : <a class="el" href="a00251.html" title="Root scene node, represents the whole scene.">Scene</a> pointer</li>
+<li>Node : <a class="el" href="a00198.html" title="Scene node that may contain components and child nodes.">Node</a> pointer</li>
+<li>Component : <a class="el" href="a00087.html" title="Base class for components. Components can be created to scene nodes.">Component</a> pointer</li>
+</ul>
+<h3>TemporaryChanged</h3>
+<ul>
+<li>Serializable : <a class="el" href="a00263.html" title="Base class for objects with automatic serialization through attributes.">Serializable</a> pointer</li>
+</ul>
+<h2>UI events</h2>
+<h3>UIMouseClick</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>X : int</li>
+<li>Y : int</li>
+<li>Button : int</li>
+<li>Buttons : int</li>
+<li>Qualifiers : int</li>
+</ul>
+<h3>UIMouseClickEnd</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>BeginElement : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>X : int</li>
+<li>Y : int</li>
+<li>Button : int</li>
+<li>Buttons : int</li>
+<li>Qualifiers : int</li>
+</ul>
+<h3>UIMouseDoubleClick</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>X : int</li>
+<li>Y : int</li>
+<li>Button : int</li>
+<li>Buttons : int</li>
+<li>Qualifiers : int</li>
+</ul>
+<h3>DragDropTest</h3>
+<ul>
+<li>Source : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>Target : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>Accept : bool</li>
+</ul>
+<h3>DragDropFinish</h3>
+<ul>
+<li>Source : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>Target : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>Accept : bool</li>
+</ul>
+<h3>FocusChanged</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>ClickedElement : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+</ul>
+<h3>NameChanged</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+</ul>
+<h3>Resized</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>Width : int</li>
+<li>Height : int</li>
+</ul>
+<h3>Positioned</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>X : int</li>
+<li>Y : int</li>
+</ul>
+<h3>VisibleChanged</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>Visible : bool</li>
+</ul>
+<h3>Focused</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>ByKey : bool</li>
+</ul>
+<h3>Defocused</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+</ul>
+<h3>LayoutUpdated</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+</ul>
+<h3>Pressed</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+</ul>
+<h3>Released</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+</ul>
+<h3>Toggled</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>State : bool</li>
+</ul>
+<h3>SliderChanged</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>Value : float</li>
+</ul>
+<h3>SliderPaged</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>Offset : int</li>
+<li>Pressed : bool</li>
+</ul>
+<h3>ScrollBarChanged</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>Value : float</li>
+</ul>
+<h3>ViewChanged</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>X : int</li>
+<li>Y : int</li>
+</ul>
+<h3>ModalChanged</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>Modal : bool</li>
+</ul>
+<h3>TextChanged</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>Text : <a class="el" href="a00289.html" title="String class.">String</a></li>
+</ul>
+<h3>TextFinished</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>Text : <a class="el" href="a00289.html" title="String class.">String</a></li>
+</ul>
+<h3>MenuSelected</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+</ul>
+<h3>ItemSelected</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>Selection : int</li>
+</ul>
+<h3>ItemDeselected</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>Selection : int</li>
+</ul>
+<h3>SelectionChanged</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+</ul>
+<h3>ItemClicked</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>Item : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>Selection : int</li>
+<li>Button : int</li>
+<li>Buttons : int</li>
+<li>Qualifiers : int</li>
+</ul>
+<h3>ItemDoubleClicked</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>Item : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>Selection : int</li>
+<li>Button : int</li>
+<li>Buttons : int</li>
+<li>Qualifiers : int</li>
+</ul>
+<h3>UnhandledKey</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>Key : int</li>
+<li>Buttons : int</li>
+<li>Qualifiers : int</li>
+</ul>
+<h3>FileSelected</h3>
+<ul>
+<li>FileName : <a class="el" href="a00289.html" title="String class.">String</a></li>
+<li>Filter : <a class="el" href="a00289.html" title="String class.">String</a></li>
+<li>Ok : bool</li>
+</ul>
+<h3>MessageACK</h3>
+<ul>
+<li>Ok : bool</li>
+</ul>
+<h3>ElementAdded</h3>
+<ul>
+<li>Root : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>Parent : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+</ul>
+<h3>ElementRemoved</h3>
+<ul>
+<li>Root : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>Parent : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+</ul>
+<h3>DragBegin</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>X : int</li>
+<li>Y : int</li>
+<li>ElementX : int</li>
+<li>ElementY : int</li>
+</ul>
+<h3>DragMove</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>X : int</li>
+<li>Y : int</li>
+<li>ElementX : int</li>
+<li>ElementY : int</li>
+</ul>
+<h3>DragEnd</h3>
+<ul>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>X : int</li>
+<li>Y : int</li>
+<li>ElementX : int</li>
+<li>ElementY : int</li>
+</ul>
+<h3>UIDropFile</h3>
+<ul>
+<li>FileName : <a class="el" href="a00289.html" title="String class.">String</a></li>
+<li>Element : <a class="el" href="a00310.html" title="Base class for UI elements.">UIElement</a> pointer</li>
+<li>X : int</li>
+<li>Y : int</li>
+<li>ElementX : int (only if element is non-null)</li>
+<li>ElementY : int (only if element is non-null) </li>
+</ul>
 </div></div><!-- contents -->

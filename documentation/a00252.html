@@ -20,62 +20,59 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00252.html">SceneReplicationState</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00252.html">ScenePassInfo</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01314.html">List of all members</a>  </div>
+<a href="a01118.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::SceneReplicationState Struct Reference</div>  </div>
+<div class="title">Urho3D::ScenePassInfo Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Per-user scene network replication state.  
+<p><a class="el" href="a00251.html" title="Root scene node, represents the whole scene.">Scene</a> render pass info.  
  <a href="a00252.html#details">More...</a></p>
 
-<p><code>#include &lt;ReplicationState.h&gt;</code></p>
+<p><code>#include &lt;View.h&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Urho3D::SceneReplicationState:</div>
+Collaboration diagram for Urho3D::ScenePassInfo:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a01315.svg" width="198" height="136"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for Urho3D::SceneReplicationState:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01316.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01119.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a086ab9d30dec1e22fac1092fef171f5a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a086ab9d30dec1e22fac1092fef171f5a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Clear</b> ()</td></tr>
-<tr class="separator:a086ab9d30dec1e22fac1092fef171f5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a34e9573e2f4e838831e8f33f3c12834c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34e9573e2f4e838831e8f33f3c12834c"></a>
-<a class="el" href="a00142.html">HashMap</a>&lt; unsigned, <br class="typebreak"/>
-<a class="el" href="a00200.html">NodeReplicationState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00252.html#a34e9573e2f4e838831e8f33f3c12834c">nodeStates_</a></td></tr>
-<tr class="memdesc:a34e9573e2f4e838831e8f33f3c12834c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nodes by ID. <br/></td></tr>
-<tr class="separator:a34e9573e2f4e838831e8f33f3c12834c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfea5210f71d22c9ce1308d297da8646"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adfea5210f71d22c9ce1308d297da8646"></a>
-<a class="el" href="a00144.html">HashSet</a>&lt; unsigned &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00252.html#adfea5210f71d22c9ce1308d297da8646">dirtyNodes_</a></td></tr>
-<tr class="memdesc:adfea5210f71d22c9ce1308d297da8646"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dirty node IDs. <br/></td></tr>
-<tr class="separator:adfea5210f71d22c9ce1308d297da8646"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_a00243"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a00243')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="a00243.html">Urho3D::ReplicationState</a></td></tr>
-<tr class="memitem:a1b0371a8418b54342ffdd20319e9acd7 inherit pub_attribs_a00243"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b0371a8418b54342ffdd20319e9acd7"></a>
-<a class="el" href="a00090.html">Connection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00243.html#a1b0371a8418b54342ffdd20319e9acd7">connection_</a></td></tr>
-<tr class="memdesc:a1b0371a8418b54342ffdd20319e9acd7 inherit pub_attribs_a00243"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parent network connection. <br/></td></tr>
-<tr class="separator:a1b0371a8418b54342ffdd20319e9acd7 inherit pub_attribs_a00243"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd29c1dd34db841c59e67463db473f79"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd29c1dd34db841c59e67463db473f79"></a>
+<a class="el" href="a00290.html">StringHash</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00252.html#abd29c1dd34db841c59e67463db473f79">pass_</a></td></tr>
+<tr class="memdesc:abd29c1dd34db841c59e67463db473f79"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00218.html" title="Material rendering pass, which defines shaders and render state.">Pass</a> name hash. <br/></td></tr>
+<tr class="separator:abd29c1dd34db841c59e67463db473f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3aa4a91b238cdd0fe653ff516c48e459"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3aa4a91b238cdd0fe653ff516c48e459"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00252.html#a3aa4a91b238cdd0fe653ff516c48e459">allowInstancing_</a></td></tr>
+<tr class="memdesc:a3aa4a91b238cdd0fe653ff516c48e459"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow instancing flag. <br/></td></tr>
+<tr class="separator:a3aa4a91b238cdd0fe653ff516c48e459"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5df46d124f49358e8b4cbdec5e0434c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5df46d124f49358e8b4cbdec5e0434c1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00252.html#a5df46d124f49358e8b4cbdec5e0434c1">markToStencil_</a></td></tr>
+<tr class="memdesc:a5df46d124f49358e8b4cbdec5e0434c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark to stencil flag. <br/></td></tr>
+<tr class="separator:a5df46d124f49358e8b4cbdec5e0434c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab26545095e8ba9f9bbaf793d37d55664"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab26545095e8ba9f9bbaf793d37d55664"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00252.html#ab26545095e8ba9f9bbaf793d37d55664">useScissor_</a></td></tr>
+<tr class="memdesc:ab26545095e8ba9f9bbaf793d37d55664"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00161.html" title="Light component.">Light</a> scissor optimization flag. <br/></td></tr>
+<tr class="separator:ab26545095e8ba9f9bbaf793d37d55664"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24feafebbf30130ef73679d68ca1998c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a24feafebbf30130ef73679d68ca1998c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00252.html#a24feafebbf30130ef73679d68ca1998c">vertexLights_</a></td></tr>
+<tr class="memdesc:a24feafebbf30130ef73679d68ca1998c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex light flag. <br/></td></tr>
+<tr class="separator:a24feafebbf30130ef73679d68ca1998c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af336204680c8ee281198ef18aad216cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af336204680c8ee281198ef18aad216cb"></a>
+<a class="el" href="a00070.html">BatchQueue</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00252.html#af336204680c8ee281198ef18aad216cb">batchQueue_</a></td></tr>
+<tr class="memdesc:af336204680c8ee281198ef18aad216cb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00067.html" title="Queued 3D geometry draw call.">Batch</a> queue. <br/></td></tr>
+<tr class="separator:af336204680c8ee281198ef18aad216cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Per-user scene network replication state. </p>
+<div class="textblock"><p><a class="el" href="a00251.html" title="Root scene node, represents the whole scene.">Scene</a> render pass info. </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Scene/ReplicationState.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/View.h</li>
 </ul>
 </div><!-- contents -->
