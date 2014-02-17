@@ -31,7 +31,7 @@ Light pre-pass rendering</h1>
 <li>DS: Hardware depth and lightmask (D3DFMT_D24S8)</li>
 </ul>
 <p>After the G-buffer is complete, light volumes (spot and point lights) or fullscreen quads (directional lights) will be rendered to a light accumulation buffer to calculate the diffuse and specular light at each opaque pixel. Specular light is stored as intensity only. Stencil compare (AND operation) with the 8 low bits of the light's lightmask will be used for light culling. Similarly to forward rendering, shadow maps will be updated before each light as necessary.</p>
-<p>Finally the opaque objects are re-rendered during the material pass, which combines ambient and vertex lighting with per-pixel lighting from the light accumulation buffer. After this rendering proceeds to the pre-alpha pass, transparent object rendering pass, and the post-alpha pass, just like forward rendering.</p>
+<p>Finally the opaque objects are re-rendered during the material pass, which combines ambient and vertex lighting with per-pixel lighting from the light accumulation buffer. After this rendering proceeds to the post-opaque and refract passes, transparent object rendering pass, and the post-alpha pass, just like forward rendering.</p>
 <h1><a class="anchor" id="RenderingModes_Deferred"></a>
 Deferred rendering</h1>
 <p>Deferred rendering needs to render each opaque object only once to the G-buffer, but this rendering pass is much heavier than in light pre-pass rendering, as also ambient, emissive and diffuse albedo information is output at the same time. The G-buffer is the following:</p>
@@ -42,7 +42,7 @@ Deferred rendering</h1>
 <li>RT3: Linear depth (D3DFMT_R32F)</li>
 <li>DS: Hardware depth and lightmask (D3DFMT_D24S8)</li>
 </ul>
-<p>After the G-buffer has been rendered, light volumes will be rendered into the final rendertarget to accumulate per-pixel lighting. As the material albedo is available, all lighting calculations are final and output both the diffuse and specular color at the same time. After light accumulation rendering proceeds to pre-alpha, transparent, and post-alpha passes, as in other rendering modes.</p>
+<p>After the G-buffer has been rendered, light volumes will be rendered into the final rendertarget to accumulate per-pixel lighting. As the material albedo is available, all lighting calculations are final and output both the diffuse and specular color at the same time. After light accumulation rendering proceeds to post-opaque, refract, transparent, and post-alpha passes, as in other rendering modes.</p>
 <h1><a class="anchor" id="RenderingModes_Comparision"></a>
 Advantages and disadvantages</h1>
 <p>Whether using forward or deferred rendering modes is more advantageous depends on the scene and lighting complexity.</p>

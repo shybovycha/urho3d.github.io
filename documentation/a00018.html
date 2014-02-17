@@ -58,9 +58,10 @@ Renderer</h1>
 <li>Opaque geometry ambient pass, or G-buffer pass in deferred rendering modes.</li>
 <li>Opaque geometry per-pixel lighting passes. For shadow casting lights, the shadow map is rendered first.</li>
 <li>(Light pre-pass only) Opaque geometry material pass, which renders the objects with accumulated per-pixel lighting.</li>
-<li>Pre-alpha rendering pass for custom render ordering such as the skybox.</li>
-<li>Transparent geometry rendering pass. Transparent, alpha-blended objects are sorted according to distance and rendered back-to-front to ensure correct blending.</li>
-<li>Post-alpha rendering pass.</li>
+<li>Post-opaque pass for custom render ordering such as the skybox.</li>
+<li>Refractive geometry pass.</li>
+<li>Transparent geometry pass. Transparent, alpha-blended objects are sorted according to distance and rendered back-to-front to ensure correct blending.</li>
+<li>Post-alpha pass, can be used for 3D overlays that should appear on top of everything else.</li>
 </ul>
 <h1><a class="anchor" id="Rendering_Drawable"></a>
 Rendering components</h1>

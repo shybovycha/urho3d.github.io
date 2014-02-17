@@ -50,7 +50,7 @@ title: Documentation
 <div class="line">        &lt;texture unit=<span class="stringliteral">&quot;unit&quot;</span> name=<span class="stringliteral">&quot;viewport|RTName|TextureName&quot;</span> /&gt;</div>
 <div class="line">    &lt;/command&gt;</div>
 <div class="line">&lt;/renderpath&gt;</div>
-</div><!-- fragment --><p>Note the special "lineardepth" format available for rendertargets. This is intended for storing scene depth in deferred rendering. It will be D3DFMT_R32F on Direct3D9, but RGBA on OpenGL, due to the limitation of all color buffers having to be the same format. The file Samplers.frag in Bin/CoreData/Shaders/GLSL provides functions to encode and decode linear depth to RGB.</p>
+</div><!-- fragment --><p>Note the special "lineardepth" format available for rendertargets. This is intended for storing scene depth in deferred rendering. It will be D3DFMT_R32F on Direct3D9, but RGBA on OpenGL, due to the limitation of all color buffers having to be the same format. The shader include file Samplers.glsl in Bin/CoreData/Shaders/GLSL provides functions to encode and decode linear depth to RGB.</p>
 <h1><a class="anchor" id="RenderPaths_ForwardLighting"></a>
 Forward lighting special considerations</h1>
 <p>Otherwise fully customized scene render passes can be specified, but there are a few things to remember related to forward lighting:</p>
