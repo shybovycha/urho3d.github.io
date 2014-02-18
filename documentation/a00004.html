@@ -42,8 +42,8 @@ From Urho3D project root tree</h1>
 <div class="line"><span class="preprocessor"># Set CMake modules search path</span></div>
 <div class="line"><span class="preprocessor"></span><span class="keyword">set</span> (CMAKE_MODULE_PATH $ENV{URHO3D_HOME}/Source/CMake/Modules CACHE PATH <span class="stringliteral">&quot;Path to Urho3D-specific CMake modules&quot;</span>)</div>
 <div class="line"></div>
-<div class="line"># Include Urho3D cmake module</div>
-<div class="line">include (Urho3D-CMake-magic)</div>
+<div class="line"># Include Urho3D Cmake common module</div>
+<div class="line">include (Urho3D-CMake-common)</div>
 <div class="line"></div>
 <div class="line"><span class="preprocessor"># Find Urho3D library</span></div>
 <div class="line"><span class="preprocessor"></span>find_package (Urho3D REQUIRED)</div>
@@ -57,8 +57,8 @@ From Urho3D project root tree</h1>
 <div class="line"></div>
 <div class="line"><span class="preprocessor"># Setup target with resource copying</span></div>
 <div class="line"><span class="preprocessor">setup_main_executable ()</span></div>
-</div><!-- fragment --><p>The CMAKE_MODULE_PATH is setup so that CMake can find the Urho3D-specific CMake modules provided by Urho3D project inside your own project. The Urho3D-CMake-magic.cmake is the module where all the reusable commands and macros are defined. It also gives your project cross-platform build capability similar to Urho3D project.</p>
-<p>When both Urho3D static and shared library are built and available in the Urho3D project's library output directory, the FindUrho3D.cmake module has precedence to first select static library type over over shared library type. However, you can use URHO3D_LIB_TYPE build option to explicitly specify which Urho3D library type to be selected. When linking statically against Urho3D static library, Urho3D-CMake-magic.cmake module automatically set "URHO3D_STATIC_DEFINE" compiler define for your project. This compiler define is crucial for static linking, especially on MSVC.</p>
+</div><!-- fragment --><p>The CMAKE_MODULE_PATH is setup so that CMake can find the Urho3D-specific CMake modules provided by Urho3D project inside your own project. The Urho3D-CMake-common.cmake is the module where all the reusable commands and macros are defined. It also gives your project cross-platform build capability similar to Urho3D project.</p>
+<p>When both Urho3D static and shared library are built and available in the Urho3D project's library output directory, the FindUrho3D.cmake module has precedence to first select static library type over over shared library type. However, you can use URHO3D_LIB_TYPE build option to explicitly specify which Urho3D library type to be selected. When linking statically against Urho3D static library, Urho3D-CMake-common.cmake module automatically set "URHO3D_STATIC_DEFINE" compiler define for your project. This compiler define is crucial for static linking, especially on MSVC.</p>
 <p>The define_source_files() and setup_main_executable() are Urho3D-specific macros. The define_source_file() macro is a shorthand to glob all the source files in the current source directory. It is equivalent to these commands:</p>
 <div class="fragment"><div class="line">file (GLOB CPP_FILES *.cpp)</div>
 <div class="line">file (GLOB H_FILES *.h)</div>
