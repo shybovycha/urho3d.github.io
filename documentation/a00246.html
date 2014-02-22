@@ -115,8 +115,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a002
 <tr class="separator:a7a6fe7cf013ecdb26389d03238158c4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6607638a54d3051d14226cfd2873a1d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6607638a54d3051d14226cfd2873a1d3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00246.html#a6607638a54d3051d14226cfd2873a1d3">SetAutoReloadResources</a> (bool enable)</td></tr>
-<tr class="memdesc:a6607638a54d3051d14226cfd2873a1d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable automatic reloading of resources as files are modified. <br/></td></tr>
+<tr class="memdesc:a6607638a54d3051d14226cfd2873a1d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable automatic reloading of resources as files are modified. Default false. <br/></td></tr>
 <tr class="separator:a6607638a54d3051d14226cfd2873a1d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73f74689d1714ebdca92913da3f4ce39"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73f74689d1714ebdca92913da3f4ce39"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00246.html#a73f74689d1714ebdca92913da3f4ce39">SetReturnFailedResources</a> (bool enable)</td></tr>
+<tr class="memdesc:a73f74689d1714ebdca92913da3f4ce39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable returning resources that failed to load. Default false. This may be useful in editing to not lose resource ref attributes. <br/></td></tr>
+<tr class="separator:a73f74689d1714ebdca92913da3f4ce39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa04ba54e17fbc01455c76bb1a5720b62"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa04ba54e17fbc01455c76bb1a5720b62"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00246.html#aa04ba54e17fbc01455c76bb1a5720b62">SetSearchPackagesFirst</a> (bool value)</td></tr>
 <tr class="memdesc:aa04ba54e17fbc01455c76bb1a5720b62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define whether when getting resources should check package files or directories first. True for packages, false for directories. <br/></td></tr>
@@ -127,11 +131,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a002
 <tr class="separator:a7a8fddc0e1561115c557850f6751f76b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86e4e2d374cd56109534566c1050a274"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86e4e2d374cd56109534566c1050a274"></a>
 <a class="el" href="a00245.html">Resource</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00246.html#a86e4e2d374cd56109534566c1050a274">GetResource</a> (<a class="el" href="a00273.html">ShortStringHash</a> type, const <a class="el" href="a00290.html">String</a> &amp;name, bool sendEventOnFailure=true)</td></tr>
-<tr class="memdesc:a86e4e2d374cd56109534566c1050a274"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a resource by type and name. Load if not loaded yet. Return null if fails. <br/></td></tr>
+<tr class="memdesc:a86e4e2d374cd56109534566c1050a274"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a resource by type and name. Load if not loaded yet. Return null if not found or if fails, unless SetReturnFailedResources(true) has been called. <br/></td></tr>
 <tr class="separator:a86e4e2d374cd56109534566c1050a274"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae603a8b99ab4d9c59553487f2e6c3d2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae603a8b99ab4d9c59553487f2e6c3d2"></a>
 <a class="el" href="a00245.html">Resource</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00246.html#aae603a8b99ab4d9c59553487f2e6c3d2">GetResource</a> (<a class="el" href="a00273.html">ShortStringHash</a> type, const char *name, bool sendEventOnFailure=true)</td></tr>
-<tr class="memdesc:aae603a8b99ab4d9c59553487f2e6c3d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a resource by type and name. Load if not loaded yet. Return null if fails. <br/></td></tr>
+<tr class="memdesc:aae603a8b99ab4d9c59553487f2e6c3d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a resource by type and name. Load if not loaded yet. Return null if not found or if fails, unless SetReturnFailedResources(true) has been called. <br/></td></tr>
 <tr class="separator:aae603a8b99ab4d9c59553487f2e6c3d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cf686df59d2afe4f0fb00dd1f3c3081"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8cf686df59d2afe4f0fb00dd1f3c3081"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00246.html#a8cf686df59d2afe4f0fb00dd1f3c3081">GetResources</a> (<a class="el" href="a00223.html">PODVector</a>&lt; <a class="el" href="a00245.html">Resource</a> * &gt; &amp;result, <a class="el" href="a00273.html">ShortStringHash</a> type) const </td></tr>
@@ -190,6 +194,10 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00246.html#ad96ae0c109637a616269a5024d3dabff">GetAutoReloadResources</a> () const </td></tr>
 <tr class="memdesc:ad96ae0c109637a616269a5024d3dabff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether automatic resource reloading is enabled. <br/></td></tr>
 <tr class="separator:ad96ae0c109637a616269a5024d3dabff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97ee7fc6354cab6c15e2bdf8e7b124f6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97ee7fc6354cab6c15e2bdf8e7b124f6"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00246.html#a97ee7fc6354cab6c15e2bdf8e7b124f6">GetReturnFailedResources</a> () const </td></tr>
+<tr class="memdesc:a97ee7fc6354cab6c15e2bdf8e7b124f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether resources that failed to load are returned. <br/></td></tr>
+<tr class="separator:a97ee7fc6354cab6c15e2bdf8e7b124f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3405f8898730fb51f7bbfc8966866033"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3405f8898730fb51f7bbfc8966866033"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00246.html#a3405f8898730fb51f7bbfc8966866033">GetSearchPackagesFirst</a> () const </td></tr>
 <tr class="memdesc:a3405f8898730fb51f7bbfc8966866033"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define whether when getting resources should check package files or directories first. <br/></td></tr>
@@ -407,6 +415,10 @@ Private Attributes</h2></td></tr>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00246.html#a6dfcdd45c58adcb85922ba36000d97b5">autoReloadResources_</a></td></tr>
 <tr class="memdesc:a6dfcdd45c58adcb85922ba36000d97b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Automatic resource reloading flag. <br/></td></tr>
 <tr class="separator:a6dfcdd45c58adcb85922ba36000d97b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1396e2b0a006c67c61cbc47a529fddba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1396e2b0a006c67c61cbc47a529fddba"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00246.html#a1396e2b0a006c67c61cbc47a529fddba">returnFailedResources_</a></td></tr>
+<tr class="memdesc:a1396e2b0a006c67c61cbc47a529fddba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return failed resources flag. <br/></td></tr>
+<tr class="separator:a1396e2b0a006c67c61cbc47a529fddba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bf69cbb17aa18a4b17a3c28f41b3580"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5bf69cbb17aa18a4b17a3c28f41b3580"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00246.html#a5bf69cbb17aa18a4b17a3c28f41b3580">searchPackagesFirst_</a></td></tr>
 <tr class="memdesc:a5bf69cbb17aa18a4b17a3c28f41b3580"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search priority flag. <br/></td></tr>
