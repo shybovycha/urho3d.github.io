@@ -66,14 +66,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a000
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00070.html#a6bc6684690a05ae7181c5c134c339251">SetTransforms</a> (void *lockedData, unsigned &amp;freeIndex)</td></tr>
 <tr class="memdesc:a6bc6684690a05ae7181c5c134c339251"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pre-set instance transforms of all groups. The vertex buffer must be big enough to hold all transforms. <br/></td></tr>
 <tr class="separator:a6bc6684690a05ae7181c5c134c339251"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a298ef8a6c458580667fbd125a3743a9c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a298ef8a6c458580667fbd125a3743a9c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00070.html#a298ef8a6c458580667fbd125a3743a9c">Draw</a> (<a class="el" href="a00324.html">View</a> *view, bool useScissor=false, bool markToStencil=false) const </td></tr>
-<tr class="memdesc:a298ef8a6c458580667fbd125a3743a9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw. <br/></td></tr>
-<tr class="separator:a298ef8a6c458580667fbd125a3743a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28183ed7d8a5ea20961c67265610f6ef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a28183ed7d8a5ea20961c67265610f6ef"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00070.html#a28183ed7d8a5ea20961c67265610f6ef">Draw</a> (<a class="el" href="a00161.html">Light</a> *light, <a class="el" href="a00324.html">View</a> *view) const </td></tr>
-<tr class="memdesc:a28183ed7d8a5ea20961c67265610f6ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw with forward light optimizations. <br/></td></tr>
-<tr class="separator:a28183ed7d8a5ea20961c67265610f6ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56393239c732365ee4be6a247800758b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a56393239c732365ee4be6a247800758b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00070.html#a56393239c732365ee4be6a247800758b">Draw</a> (<a class="el" href="a00324.html">View</a> *view, bool markToStencil=false, bool usingLightOptimization=false) const </td></tr>
+<tr class="memdesc:a56393239c732365ee4be6a247800758b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw. <br/></td></tr>
+<tr class="separator:a56393239c732365ee4be6a247800758b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43da6d8cee00834c67f731ee2ae2e319"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43da6d8cee00834c67f731ee2ae2e319"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00070.html#a43da6d8cee00834c67f731ee2ae2e319">GetNumInstances</a> () const </td></tr>
 <tr class="memdesc:a43da6d8cee00834c67f731ee2ae2e319"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the combined amount of instances. <br/></td></tr>
@@ -85,11 +81,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a000
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a24e0d583a0febbe088dee747a1184790"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a24e0d583a0febbe088dee747a1184790"></a>
-<a class="el" href="a00143.html">HashMap</a>&lt; <a class="el" href="a00069.html">BatchGroupKey</a>, <br class="typebreak"/>
-<a class="el" href="a00068.html">BatchGroup</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00070.html#a24e0d583a0febbe088dee747a1184790">baseBatchGroups_</a></td></tr>
-<tr class="memdesc:a24e0d583a0febbe088dee747a1184790"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instanced draw calls with base flag. <br/></td></tr>
-<tr class="separator:a24e0d583a0febbe088dee747a1184790"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff54ffa287473625b2abdd15ee1a8812"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff54ffa287473625b2abdd15ee1a8812"></a>
 <a class="el" href="a00143.html">HashMap</a>&lt; <a class="el" href="a00069.html">BatchGroupKey</a>, <br class="typebreak"/>
 <a class="el" href="a00068.html">BatchGroup</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00070.html#aff54ffa287473625b2abdd15ee1a8812">batchGroups_</a></td></tr>
@@ -113,18 +104,10 @@ unsigned short &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class=
 <a class="el" href="a00223.html">PODVector</a>&lt; <a class="el" href="a00067.html">Batch</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00070.html#a9f99a16a48ff749112ef7f5c5986c8b0">batches_</a></td></tr>
 <tr class="memdesc:a9f99a16a48ff749112ef7f5c5986c8b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsorted non-instanced draw calls. <br/></td></tr>
 <tr class="separator:a9f99a16a48ff749112ef7f5c5986c8b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a740feaa4df4fce831414707d66d4e49c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a740feaa4df4fce831414707d66d4e49c"></a>
-<a class="el" href="a00223.html">PODVector</a>&lt; <a class="el" href="a00067.html">Batch</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00070.html#a740feaa4df4fce831414707d66d4e49c">sortedBaseBatches_</a></td></tr>
-<tr class="memdesc:a740feaa4df4fce831414707d66d4e49c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sorted non-instanced draw calls with base flag. <br/></td></tr>
-<tr class="separator:a740feaa4df4fce831414707d66d4e49c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37f2f99f0cf49fbc209d718082a5b072"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37f2f99f0cf49fbc209d718082a5b072"></a>
 <a class="el" href="a00223.html">PODVector</a>&lt; <a class="el" href="a00067.html">Batch</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00070.html#a37f2f99f0cf49fbc209d718082a5b072">sortedBatches_</a></td></tr>
 <tr class="memdesc:a37f2f99f0cf49fbc209d718082a5b072"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sorted non-instanced draw calls. <br/></td></tr>
 <tr class="separator:a37f2f99f0cf49fbc209d718082a5b072"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75c96eb7313d7a06b574d7b1ae314a1d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a75c96eb7313d7a06b574d7b1ae314a1d"></a>
-<a class="el" href="a00223.html">PODVector</a>&lt; <a class="el" href="a00068.html">BatchGroup</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00070.html#a75c96eb7313d7a06b574d7b1ae314a1d">sortedBaseBatchGroups_</a></td></tr>
-<tr class="memdesc:a75c96eb7313d7a06b574d7b1ae314a1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sorted instanced draw calls with base flag. <br/></td></tr>
-<tr class="separator:a75c96eb7313d7a06b574d7b1ae314a1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79a0f0be4241010df805cfbf28b7f4fa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a79a0f0be4241010df805cfbf28b7f4fa"></a>
 <a class="el" href="a00223.html">PODVector</a>&lt; <a class="el" href="a00068.html">BatchGroup</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00070.html#a79a0f0be4241010df805cfbf28b7f4fa">sortedBatchGroups_</a></td></tr>
 <tr class="memdesc:a79a0f0be4241010df805cfbf28b7f4fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sorted instanced draw calls. <br/></td></tr>
