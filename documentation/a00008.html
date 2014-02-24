@@ -1010,31 +1010,12 @@ Classes</h1>
 <li>bool GetCastShadows() const</li>
 <li>bool IsOccluder() const</li>
 <li>bool IsOccludee() const</li>
-<li>void SetZone(Zone* zone, bool temporary = false)</li>
-<li>void SetSortValue(float value)</li>
-<li>void SetMinMaxZ(float minZ, float maxZ)</li>
-<li>void MarkInView(const <a class="el" href="a00133.html" title="Rendering frame update parameters.">FrameInfo</a>&amp; frame, bool mainView = true)</li>
-<li>void ClearLights()</li>
-<li>void AddLight(Light* light)</li>
-<li>void AddVertexLight(Light* light)</li>
-<li>void LimitLights()</li>
-<li>void LimitVertexLights()</li>
-<li>void SetBasePass(unsigned batchIndex)</li>
-<li>Octant* GetOctant() const</li>
+<li>bool IsInView() const</li>
+<li>bool IsInView(Camera* tolua_var_1) const</li>
 <li>Zone* GetZone() const</li>
-<li>Zone* GetLastZone() const</li>
-<li>bool IsZoneDirty() const</li>
-<li>float GetDistance() const</li>
-<li>float GetLodDistance() const</li>
-<li>float GetSortValue() const</li>
-<li>bool HasBasePass(unsigned batchIndex) const</li>
-<li>Light* GetFirstLight() const</li>
-<li>float GetMinZ() const</li>
-<li>float GetMaxZ() const</li>
 </ul>
 <p>Properties:</p>
 <ul>
-<li>bool inView (readonly)</li>
 <li><a class="el" href="a00076.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a>&amp; worldBoundingBox (readonly)</li>
 <li>char drawableFlags (readonly)</li>
 <li>float drawDistance</li>
@@ -1048,16 +1029,8 @@ Classes</h1>
 <li>bool castShadows</li>
 <li>bool occluder</li>
 <li>bool occludee</li>
-<li>Octant* octant (readonly)</li>
-<li>Zone* zone</li>
-<li>Zone* lastZone (readonly)</li>
-<li>bool zoneDirty (readonly)</li>
-<li>float distance (readonly)</li>
-<li>float lodDistance (readonly)</li>
-<li>float sortValue</li>
-<li>Light* firstLight (readonly)</li>
-<li>float minZ (readonly)</li>
-<li>float maxZ (readonly)</li>
+<li>bool inView (readonly)</li>
+<li>Zone* zone (readonly)</li>
 </ul>
 <h3><a class="el" href="a00118.html" title="Menu UI element that displays a popup list view.">DropDownList</a> : <a class="el" href="a00183.html" title="Menu UI element that optionally shows a popup.">Menu</a></h3>
 <p>Methods:</p>
@@ -5324,12 +5297,6 @@ Enumerations</h1>
 <ul>
 <li>int TM_BREADTH_FIRST</li>
 <li>int TM_DEPTH_FIRST</li>
-</ul>
-<h3>UpdateGeometryType</h3>
-<ul>
-<li>int UPDATE_NONE</li>
-<li>int UPDATE_MAIN_THREAD</li>
-<li>int UPDATE_WORKER_THREAD</li>
 </ul>
 <h3>VariantType</h3>
 <ul>
