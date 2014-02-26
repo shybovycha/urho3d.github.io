@@ -63,7 +63,7 @@ Though Urho3D already contains several useful features and implements a framewor
 - Aster Jian
 - Colin Barrett
 - Erik Beran
-- Danny B.
+- Danny Boisvert
 - Carlo Carollo
 - Pete Chown
 - Sebastian Delatorre (primitivewaste)
