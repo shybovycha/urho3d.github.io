@@ -20,55 +20,73 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00209.html">OctreeQueryResult</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00209.html">OctreeQuery</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01024.html">List of all members</a>  </div>
+<a href="a01028.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::OctreeQueryResult Struct Reference</div>  </div>
+<div class="title">Urho3D::OctreeQuery Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>General octree query result. Used for Lua bindings only.  
+<p>Base class for octree queries.  
  <a href="a00209.html#details">More...</a></p>
 
 <p><code>#include &lt;OctreeQuery.h&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for Urho3D::OctreeQueryResult:</div>
+Inheritance diagram for Urho3D::OctreeQuery:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01025.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01032.svg" width="100%" height="468"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for Urho3D::OctreeQuery:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a01033.svg" width="179" height="235"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab33889b5672b2e62ef00dd4e072836b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab33889b5672b2e62ef00dd4e072836b0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00209.html#ab33889b5672b2e62ef00dd4e072836b0">OctreeQueryResult</a> ()</td></tr>
-<tr class="memdesc:ab33889b5672b2e62ef00dd4e072836b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with defaults. <br/></td></tr>
-<tr class="separator:ab33889b5672b2e62ef00dd4e072836b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35f2d539cadef92f70e32ceddc6c44ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a35f2d539cadef92f70e32ceddc6c44ba"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00209.html#a35f2d539cadef92f70e32ceddc6c44ba">operator!=</a> (const <a class="el" href="a00209.html">OctreeQueryResult</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:a35f2d539cadef92f70e32ceddc6c44ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for inequality, added to prevent GCC from complaining. <br/></td></tr>
-<tr class="separator:a35f2d539cadef92f70e32ceddc6c44ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a263ee40b401403b8a2ab69cb0526dbb4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a263ee40b401403b8a2ab69cb0526dbb4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00209.html#a263ee40b401403b8a2ab69cb0526dbb4">OctreeQuery</a> (<a class="el" href="a00227.html">PODVector</a>&lt; <a class="el" href="a00117.html">Drawable</a> * &gt; &amp;result, unsigned char drawableFlags, unsigned viewMask)</td></tr>
+<tr class="memdesc:a263ee40b401403b8a2ab69cb0526dbb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with query parameters. <br/></td></tr>
+<tr class="separator:a263ee40b401403b8a2ab69cb0526dbb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0862c34a9759d51f96cc0d715e5815e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab0862c34a9759d51f96cc0d715e5815e"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00209.html#ab0862c34a9759d51f96cc0d715e5815e">~OctreeQuery</a> ()</td></tr>
+<tr class="memdesc:ab0862c34a9759d51f96cc0d715e5815e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
+<tr class="separator:ab0862c34a9759d51f96cc0d715e5815e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45d0a7fc737a9568275e275f38a7d2da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45d0a7fc737a9568275e275f38a7d2da"></a>
+virtual Intersection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00209.html#a45d0a7fc737a9568275e275f38a7d2da">TestOctant</a> (const <a class="el" href="a00076.html">BoundingBox</a> &amp;box, bool inside)=0</td></tr>
+<tr class="memdesc:a45d0a7fc737a9568275e275f38a7d2da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intersection test for an octant. <br/></td></tr>
+<tr class="separator:a45d0a7fc737a9568275e275f38a7d2da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5963c8409ce72b85bd9377b773d40c73"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5963c8409ce72b85bd9377b773d40c73"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00209.html#a5963c8409ce72b85bd9377b773d40c73">TestDrawables</a> (<a class="el" href="a00117.html">Drawable</a> **start, <a class="el" href="a00117.html">Drawable</a> **end, bool inside)=0</td></tr>
+<tr class="memdesc:a5963c8409ce72b85bd9377b773d40c73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intersection test for drawables. <br/></td></tr>
+<tr class="separator:a5963c8409ce72b85bd9377b773d40c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a1cef682d453f97408a5d9df36ce98595"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1cef682d453f97408a5d9df36ce98595"></a>
-<a class="el" href="a00117.html">Drawable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00209.html#a1cef682d453f97408a5d9df36ce98595">drawable_</a></td></tr>
-<tr class="memdesc:a1cef682d453f97408a5d9df36ce98595"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00117.html" title="Base class for visible components.">Drawable</a>. <br/></td></tr>
-<tr class="separator:a1cef682d453f97408a5d9df36ce98595"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a916a794ad1d77dc728155f60c2f1eefe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a916a794ad1d77dc728155f60c2f1eefe"></a>
-<a class="el" href="a00196.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00209.html#a916a794ad1d77dc728155f60c2f1eefe">node_</a></td></tr>
-<tr class="memdesc:a916a794ad1d77dc728155f60c2f1eefe"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00251.html" title="Root scene node, represents the whole scene.">Scene</a> node. <br/></td></tr>
-<tr class="separator:a916a794ad1d77dc728155f60c2f1eefe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa57c45fc937d6f1336f788361e82fdeb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa57c45fc937d6f1336f788361e82fdeb"></a>
+<a class="el" href="a00227.html">PODVector</a>&lt; <a class="el" href="a00117.html">Drawable</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00209.html#aa57c45fc937d6f1336f788361e82fdeb">result_</a></td></tr>
+<tr class="memdesc:aa57c45fc937d6f1336f788361e82fdeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result vector reference. <br/></td></tr>
+<tr class="separator:aa57c45fc937d6f1336f788361e82fdeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a3608064b9da6320a62b2c0db7b32e3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a3608064b9da6320a62b2c0db7b32e3"></a>
+unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00209.html#a4a3608064b9da6320a62b2c0db7b32e3">drawableFlags_</a></td></tr>
+<tr class="memdesc:a4a3608064b9da6320a62b2c0db7b32e3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00117.html" title="Base class for visible components.">Drawable</a> flags to include. <br/></td></tr>
+<tr class="separator:a4a3608064b9da6320a62b2c0db7b32e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e6e7966103b4a5482ea36829027e2cd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e6e7966103b4a5482ea36829027e2cd"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00209.html#a8e6e7966103b4a5482ea36829027e2cd">viewMask_</a></td></tr>
+<tr class="memdesc:a8e6e7966103b4a5482ea36829027e2cd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00117.html" title="Base class for visible components.">Drawable</a> layers to include. <br/></td></tr>
+<tr class="separator:a8e6e7966103b4a5482ea36829027e2cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>General octree query result. Used for Lua bindings only. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<div class="textblock"><p>Base class for octree queries. </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/OctreeQuery.h</li>
 </ul>
 </div><!-- contents -->
