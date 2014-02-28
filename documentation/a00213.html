@@ -20,41 +20,55 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00213.html">PackageEntry</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00213.html">OctreeQueryResult</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01183.html">List of all members</a>  </div>
+<a href="a01053.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::PackageEntry Struct Reference</div>  </div>
+<div class="title">Urho3D::OctreeQueryResult Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>File entry within the package file.  
+<p>General octree query result. Used for Lua bindings only.  
  <a href="a00213.html#details">More...</a></p>
 
-<p><code>#include &lt;PackageFile.h&gt;</code></p>
+<p><code>#include &lt;OctreeQuery.h&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Urho3D::OctreeQueryResult:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01054.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ab33889b5672b2e62ef00dd4e072836b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab33889b5672b2e62ef00dd4e072836b0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00213.html#ab33889b5672b2e62ef00dd4e072836b0">OctreeQueryResult</a> ()</td></tr>
+<tr class="memdesc:ab33889b5672b2e62ef00dd4e072836b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with defaults. <br/></td></tr>
+<tr class="separator:ab33889b5672b2e62ef00dd4e072836b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35f2d539cadef92f70e32ceddc6c44ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a35f2d539cadef92f70e32ceddc6c44ba"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00213.html#a35f2d539cadef92f70e32ceddc6c44ba">operator!=</a> (const <a class="el" href="a00213.html">OctreeQueryResult</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:a35f2d539cadef92f70e32ceddc6c44ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for inequality, added to prevent GCC from complaining. <br/></td></tr>
+<tr class="separator:a35f2d539cadef92f70e32ceddc6c44ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:aebdc01ffe647e9ff7e0b246d60ff3ce5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aebdc01ffe647e9ff7e0b246d60ff3ce5"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00213.html#aebdc01ffe647e9ff7e0b246d60ff3ce5">offset_</a></td></tr>
-<tr class="memdesc:aebdc01ffe647e9ff7e0b246d60ff3ce5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset from the beginning. <br/></td></tr>
-<tr class="separator:aebdc01ffe647e9ff7e0b246d60ff3ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7f7f1f2fe2d8a32c40e7fea095edf1a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7f7f1f2fe2d8a32c40e7fea095edf1a"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00213.html#ae7f7f1f2fe2d8a32c40e7fea095edf1a">size_</a></td></tr>
-<tr class="memdesc:ae7f7f1f2fe2d8a32c40e7fea095edf1a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00124.html" title="File opened either through the filesystem or from within a package file.">File</a> size. <br/></td></tr>
-<tr class="separator:ae7f7f1f2fe2d8a32c40e7fea095edf1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc3fe731c4eae884defb611e67b49ca2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc3fe731c4eae884defb611e67b49ca2"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00213.html#afc3fe731c4eae884defb611e67b49ca2">checksum_</a></td></tr>
-<tr class="memdesc:afc3fe731c4eae884defb611e67b49ca2"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00124.html" title="File opened either through the filesystem or from within a package file.">File</a> checksum. <br/></td></tr>
-<tr class="separator:afc3fe731c4eae884defb611e67b49ca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cef682d453f97408a5d9df36ce98595"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1cef682d453f97408a5d9df36ce98595"></a>
+<a class="el" href="a00119.html">Drawable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00213.html#a1cef682d453f97408a5d9df36ce98595">drawable_</a></td></tr>
+<tr class="memdesc:a1cef682d453f97408a5d9df36ce98595"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00119.html" title="Base class for visible components.">Drawable</a>. <br/></td></tr>
+<tr class="separator:a1cef682d453f97408a5d9df36ce98595"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a916a794ad1d77dc728155f60c2f1eefe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a916a794ad1d77dc728155f60c2f1eefe"></a>
+<a class="el" href="a00200.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00213.html#a916a794ad1d77dc728155f60c2f1eefe">node_</a></td></tr>
+<tr class="memdesc:a916a794ad1d77dc728155f60c2f1eefe"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00258.html" title="Root scene node, represents the whole scene.">Scene</a> node. <br/></td></tr>
+<tr class="separator:a916a794ad1d77dc728155f60c2f1eefe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>File entry within the package file. </p>
+<div class="textblock"><p>General octree query result. Used for Lua bindings only. </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/IO/PackageFile.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/OctreeQuery.h</li>
 </ul>
 </div><!-- contents -->

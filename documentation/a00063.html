@@ -20,78 +20,55 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00063.html">AttributeAccessorImpl</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00063.html">AsyncProgress</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01356.html">List of all members</a>  </div>
+<a href="a01353.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::AttributeAccessorImpl&lt; T, U &gt; Class Template Reference</div>  </div>
+<div class="title">Urho3D::AsyncProgress Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Template implementation of the attribute accessor invoke helper class.  
+<p>Asynchronous loading progress of a scene.  
  <a href="a00063.html#details">More...</a></p>
 
-<p><code>#include &lt;Serializable.h&gt;</code></p>
+<p><code>#include &lt;Scene.h&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Urho3D::AttributeAccessorImpl&lt; T, U &gt;:</div>
+Collaboration diagram for Urho3D::AsyncProgress:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a01357.svg" width="203" height="214"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for Urho3D::AttributeAccessorImpl&lt; T, U &gt;:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a01358.svg" width="203" height="315"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01354.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a451f240dd7640029278fb4aaf9faa19c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a451f240dd7640029278fb4aaf9faa19c"></a>
-typedef U(T::*&#160;</td><td class="memItemRight" valign="bottom"><b>GetFunctionPtr</b> )() const </td></tr>
-<tr class="separator:a451f240dd7640029278fb4aaf9faa19c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4cb6604811d86a5296cd63552d1b808"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4cb6604811d86a5296cd63552d1b808"></a>
-typedef void(T::*&#160;</td><td class="memItemRight" valign="bottom"><b>SetFunctionPtr</b> )(U)</td></tr>
-<tr class="separator:aa4cb6604811d86a5296cd63552d1b808"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a7c960d587b8dd442c67d2a19a733b4ff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c960d587b8dd442c67d2a19a733b4ff"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00063.html#a7c960d587b8dd442c67d2a19a733b4ff">AttributeAccessorImpl</a> (GetFunctionPtr getFunction, SetFunctionPtr setFunction)</td></tr>
-<tr class="memdesc:a7c960d587b8dd442c67d2a19a733b4ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with function pointers. <br/></td></tr>
-<tr class="separator:a7c960d587b8dd442c67d2a19a733b4ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c5da4d15b0926f447a7350a9317c590"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c5da4d15b0926f447a7350a9317c590"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00063.html#a5c5da4d15b0926f447a7350a9317c590">Get</a> (const <a class="el" href="a00267.html">Serializable</a> *ptr, <a class="el" href="a00321.html">Variant</a> &amp;dest) const </td></tr>
-<tr class="memdesc:a5c5da4d15b0926f447a7350a9317c590"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke getter function. <br/></td></tr>
-<tr class="separator:a5c5da4d15b0926f447a7350a9317c590"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a946eafaca92de017e281db282272d6c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a946eafaca92de017e281db282272d6c1"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00063.html#a946eafaca92de017e281db282272d6c1">Set</a> (<a class="el" href="a00267.html">Serializable</a> *ptr, const <a class="el" href="a00321.html">Variant</a> &amp;value)</td></tr>
-<tr class="memdesc:a946eafaca92de017e281db282272d6c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke setter function. <br/></td></tr>
-<tr class="separator:a946eafaca92de017e281db282272d6c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a66251881fe875080cf8fa8136ce57f8e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66251881fe875080cf8fa8136ce57f8e"></a>
-GetFunctionPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00063.html#a66251881fe875080cf8fa8136ce57f8e">getFunction_</a></td></tr>
-<tr class="memdesc:a66251881fe875080cf8fa8136ce57f8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class-specific pointer to getter function. <br/></td></tr>
-<tr class="separator:a66251881fe875080cf8fa8136ce57f8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a956019ddb323a792a7447f1f36a4f519"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a956019ddb323a792a7447f1f36a4f519"></a>
-SetFunctionPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00063.html#a956019ddb323a792a7447f1f36a4f519">setFunction_</a></td></tr>
-<tr class="memdesc:a956019ddb323a792a7447f1f36a4f519"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class-specific pointer to setter function. <br/></td></tr>
-<tr class="separator:a956019ddb323a792a7447f1f36a4f519"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acade45aa9dcf1b86e0756b66ee7747ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acade45aa9dcf1b86e0756b66ee7747ba"></a>
+<a class="el" href="a00279.html">SharedPtr</a>&lt; <a class="el" href="a00126.html">File</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00063.html#acade45aa9dcf1b86e0756b66ee7747ba">file_</a></td></tr>
+<tr class="memdesc:acade45aa9dcf1b86e0756b66ee7747ba"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00126.html" title="File opened either through the filesystem or from within a package file.">File</a> for binary mode. <br/></td></tr>
+<tr class="separator:acade45aa9dcf1b86e0756b66ee7747ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3f5b1ac12ff8f53c2b1ef7dec7850a7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab3f5b1ac12ff8f53c2b1ef7dec7850a7"></a>
+<a class="el" href="a00279.html">SharedPtr</a>&lt; <a class="el" href="a00345.html">XMLFile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00063.html#ab3f5b1ac12ff8f53c2b1ef7dec7850a7">xmlFile_</a></td></tr>
+<tr class="memdesc:ab3f5b1ac12ff8f53c2b1ef7dec7850a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">XML file for XML mode. <br/></td></tr>
+<tr class="separator:ab3f5b1ac12ff8f53c2b1ef7dec7850a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7169ea22da4ded3e7793e41f5c511ec1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7169ea22da4ded3e7793e41f5c511ec1"></a>
+<a class="el" href="a00344.html">XMLElement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00063.html#a7169ea22da4ded3e7793e41f5c511ec1">xmlElement_</a></td></tr>
+<tr class="memdesc:a7169ea22da4ded3e7793e41f5c511ec1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current XML element for XML mode. <br/></td></tr>
+<tr class="separator:a7169ea22da4ded3e7793e41f5c511ec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1039f5090bf35168547a465ece8a1ca0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1039f5090bf35168547a465ece8a1ca0"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00063.html#a1039f5090bf35168547a465ece8a1ca0">loadedNodes_</a></td></tr>
+<tr class="memdesc:a1039f5090bf35168547a465ece8a1ca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loaded root-level nodes. <br/></td></tr>
+<tr class="separator:a1039f5090bf35168547a465ece8a1ca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa28e554a161e5f1664c18e32f870ec61"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa28e554a161e5f1664c18e32f870ec61"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00063.html#aa28e554a161e5f1664c18e32f870ec61">totalNodes_</a></td></tr>
+<tr class="memdesc:aa28e554a161e5f1664c18e32f870ec61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total root-level nodes. <br/></td></tr>
+<tr class="separator:aa28e554a161e5f1664c18e32f870ec61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;class T, class U&gt;<br/>
-class Urho3D::AttributeAccessorImpl&lt; T, U &gt;</h3>
-
-<p>Template implementation of the attribute accessor invoke helper class. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Scene/Serializable.h</li>
+<div class="textblock"><p>Asynchronous loading progress of a scene. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Scene/Scene.h</li>
 </ul>
 </div><!-- contents -->

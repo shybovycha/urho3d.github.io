@@ -17,21 +17,21 @@ title: Documentation
 <div class="title">Differences between Direct3D9 and OpenGL </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>These differences need to be observed when using the low-level rendering functionality directly. The high-level rendering architecture, including the <a class="el" href="a00243.html" title="High-level rendering subsystem. Manages drawing of 3D views.">Renderer</a> and <a class="el" href="a00316.html" title="UI subsystem. Manages the graphical user interface.">UI</a> subsystems and the <a class="el" href="a00117.html" title="Base class for visible components.">Drawable</a> subclasses already handle most of them transparently to the user.</p>
+<div class="textblock"><p>These differences need to be observed when using the low-level rendering functionality directly. The high-level rendering architecture, including the <a class="el" href="a00246.html" title="High-level rendering subsystem. Manages drawing of 3D views.">Renderer</a> and <a class="el" href="a00319.html" title="UI subsystem. Manages the graphical user interface.">UI</a> subsystems and the <a class="el" href="a00119.html" title="Base class for visible components.">Drawable</a> subclasses already handle most of them transparently to the user.</p>
 <ul>
-<li>The post-projection depth range is (0,1) for Direct3D9 and (-1,1) for OpenGL. The <a class="el" href="a00079.html" title="Camera component.">Camera</a> can be queried either for an API-specific or API-independent (Direct3D9 convention) projection matrix.</li>
+<li>The post-projection depth range is (0,1) for Direct3D9 and (-1,1) for OpenGL. The <a class="el" href="a00081.html" title="Camera component.">Camera</a> can be queried either for an API-specific or API-independent (Direct3D9 convention) projection matrix.</li>
 </ul>
 <ul>
 <li>To render with 1:1 texel-to-pixel mapping, on Direct3D9 UV coordinates have to be shifted a half-pixel to the right and down, or alternatively vertex positions can be shifted a half-pixel left and up.</li>
 </ul>
 <ul>
-<li>On Direct3D9 the depth-stencil surface can be equal or larger in size than the color rendertarget. On OpenGL the sizes must always match. Furthermore, OpenGL can not use the backbuffer depth-stencil surface when rendering to a texture. To overcome these limitations, <a class="el" href="a00140.html" title="Graphics subsystem. Manages the application window, rendering state and GPU resources.">Graphics</a> will create correctly sized depth-stencil surfaces on demand whenever a texture is set as a color rendertarget, and a null depth-stencil is specified.</li>
+<li>On Direct3D9 the depth-stencil surface can be equal or larger in size than the color rendertarget. On OpenGL the sizes must always match. Furthermore, OpenGL can not use the backbuffer depth-stencil surface when rendering to a texture. To overcome these limitations, <a class="el" href="a00142.html" title="Graphics subsystem. Manages the application window, rendering state and GPU resources.">Graphics</a> will create correctly sized depth-stencil surfaces on demand whenever a texture is set as a color rendertarget, and a null depth-stencil is specified.</li>
 </ul>
 <ul>
 <li>On Direct3D9 the viewport will be reset to full size when the first color rendertarget is changed. On OpenGL this does not happen. To ensure correct operation on both APIs, always use this sequence: first set the rendertargets, then the depth-stencil surface and finally the viewport.</li>
 </ul>
 <ul>
-<li>On OpenGL modifying a texture will cause it to be momentarily set on the first texture unit. If another texture was set there, the assignment will be lost. <a class="el" href="a00140.html" title="Graphics subsystem. Manages the application window, rendering state and GPU resources.">Graphics</a> performs a check to not assign textures redundantly, so it is safe and recommended to always set all needed textures before rendering.</li>
+<li>On OpenGL modifying a texture will cause it to be momentarily set on the first texture unit. If another texture was set there, the assignment will be lost. <a class="el" href="a00142.html" title="Graphics subsystem. Manages the application window, rendering state and GPU resources.">Graphics</a> performs a check to not assign textures redundantly, so it is safe and recommended to always set all needed textures before rendering.</li>
 </ul>
 <ul>
 <li>Modifying an index buffer on OpenGL will similarly cause the existing index buffer assignment to be lost. Therefore, always set the vertex and index buffers before rendering.</li>

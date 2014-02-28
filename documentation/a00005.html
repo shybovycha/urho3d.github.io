@@ -21,10 +21,10 @@ title: Documentation
 <ul>
 <li>Container. Provides STL replacement classes and shared pointers.</li>
 <li>Math. Provides vector, quaternion &amp; matrix types and geometric shapes used in intersection tests.</li>
-<li>Core. Provides the execution <a class="el" href="a00097.html" title="Urho3D execution context. Provides access to subsystems, object factories and attributes, and event receivers.">Context</a>, the base class <a class="el" href="a00203.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a> for typed objects, object factories, event handling, threading and profiling.</li>
+<li>Core. Provides the execution <a class="el" href="a00099.html" title="Urho3D execution context. Provides access to subsystems, object factories and attributes, and event receivers.">Context</a>, the base class <a class="el" href="a00206.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a> for typed objects, object factories, event handling, threading and profiling.</li>
 <li>IO. Provides file system access, stream input/output and logging.</li>
-<li>Resource. Provides the <a class="el" href="a00250.html" title="Resource cache subsystem. Loads resources on demand and stores them for later access.">ResourceCache</a> and the base resource types, including XML documents.</li>
-<li>Scene. Provides <a class="el" href="a00197.html" title="Scene node that may contain components and child nodes.">Node</a> and <a class="el" href="a00087.html" title="Base class for components. Components can be created to scene nodes.">Component</a> classes, from which Urho3D scenes are built.</li>
+<li>Resource. Provides the <a class="el" href="a00253.html" title="Resource cache subsystem. Loads resources on demand and stores them for later access.">ResourceCache</a> and the base resource types, including XML documents.</li>
+<li>Scene. Provides <a class="el" href="a00200.html" title="Scene node that may contain components and child nodes.">Node</a> and <a class="el" href="a00089.html" title="Base class for components. Components can be created to scene nodes.">Component</a> classes, from which Urho3D scenes are built.</li>
 <li>Graphics. Provides application window handling and 3D rendering capabilities.</li>
 <li>Input. Provides input device access in both polled and event-based mode.</li>
 <li>Network. Provides client-server networking functionality.</li>
@@ -33,11 +33,11 @@ title: Documentation
 <li>Physics. Provides physics simulation.</li>
 <li>Navigation. Provides navigation mesh generation and pathfinding.</li>
 <li>Script. Provides scripting support using the AngelScript language.</li>
-<li>Engine. Instantiates the subsystems from the modules above (except <a class="el" href="a00260.html" title="Scripting subsystem. Allows execution of AngelScript.">Script</a>, which needs to be instantiated by the application) and manages the main loop iteration.</li>
+<li>Engine. Instantiates the subsystems from the modules above (except <a class="el" href="a00263.html" title="Scripting subsystem. Allows execution of AngelScript.">Script</a>, which needs to be instantiated by the application) and manages the main loop iteration.</li>
 </ul>
 <h1><a class="anchor" id="Structure_Context"></a>
 Execution context</h1>
-<p>The heart of Urho3D is the <a class="el" href="a00097.html" title="Urho3D execution context. Provides access to subsystems, object factories and attributes, and event receivers.">Context</a> object, which must always be created as the first in a Urho3D application, and deleted last. All "important" objects that derive from the <a class="el" href="a00203.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a> base class, such as scene nodes, resources like textures and models, and the subsystems themselves require Context pointer in their constructor. This avoids both the singleton pattern for subsystems, or having to pass around several objects into constructors.</p>
+<p>The heart of Urho3D is the <a class="el" href="a00099.html" title="Urho3D execution context. Provides access to subsystems, object factories and attributes, and event receivers.">Context</a> object, which must always be created as the first in a Urho3D application, and deleted last. All "important" objects that derive from the <a class="el" href="a00206.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a> base class, such as scene nodes, resources like textures and models, and the subsystems themselves require Context pointer in their constructor. This avoids both the singleton pattern for subsystems, or having to pass around several objects into constructors.</p>
 <p>The Context provides the following functionality (described in detail on their own pages):</p>
 <ul>
 <li>Registering and accessing <a class="el" href="a00011.html">subsystems</a></li>

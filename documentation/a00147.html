@@ -20,85 +20,61 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00147.html">HashTable</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00147.html">HashNodeBase</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="a00802.html">List of all members</a>  </div>
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="a00776.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::HashTable&lt; T, U &gt; Class Template Reference</div>  </div>
+<div class="title">Urho3D::HashNodeBase Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Hash table with fixed bucket count. Does not support iteration. Should only be used when performance is critical, as <a class="el" href="a00144.html" title="Hash map template class.">HashMap</a> is much more user-friendly.  
+<p>Hash set/map node base class.  
  <a href="a00147.html#details">More...</a></p>
 
-<p><code>#include &lt;HashTable.h&gt;</code></p>
+<p><code>#include &lt;HashBase.h&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for Urho3D::HashTable&lt; T, U &gt;:</div>
+Inheritance diagram for Urho3D::HashNodeBase:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00803.svg" width="486" height="270"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00777.svg" width="355" height="136"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for Urho3D::HashNodeBase:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00778.svg" width="255" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00200.html">Node</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hash table node.  <a href="a00200.html#details">More...</a><br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a20b263962f4059d8255df1f8675f42db"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20b263962f4059d8255df1f8675f42db"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00147.html#a20b263962f4059d8255df1f8675f42db">HashTable</a> ()</td></tr>
-<tr class="memdesc:a20b263962f4059d8255df1f8675f42db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct empty. <br/></td></tr>
-<tr class="separator:a20b263962f4059d8255df1f8675f42db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adae78c2b4122840dcb84cb5072c05670"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adae78c2b4122840dcb84cb5072c05670"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00147.html#adae78c2b4122840dcb84cb5072c05670">~HashTable</a> ()</td></tr>
-<tr class="memdesc:adae78c2b4122840dcb84cb5072c05670"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
-<tr class="separator:adae78c2b4122840dcb84cb5072c05670"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a138c0087db5bd9b619846e567e02af6c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a138c0087db5bd9b619846e567e02af6c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00147.html#a138c0087db5bd9b619846e567e02af6c">Insert</a> (unsigned hash, const T &amp;value)</td></tr>
-<tr class="memdesc:a138c0087db5bd9b619846e567e02af6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert by hash value. If value with same hash already exists, it is replaced. <br/></td></tr>
-<tr class="separator:a138c0087db5bd9b619846e567e02af6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a896eb133917f137f39786997a8fe0786"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a896eb133917f137f39786997a8fe0786"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00147.html#a896eb133917f137f39786997a8fe0786">Erase</a> (unsigned hash)</td></tr>
-<tr class="memdesc:a896eb133917f137f39786997a8fe0786"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove by hash value. Return true if was found and removed. <br/></td></tr>
-<tr class="separator:a896eb133917f137f39786997a8fe0786"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad42e0a41481fe63041f53504577a81b6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad42e0a41481fe63041f53504577a81b6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00147.html#ad42e0a41481fe63041f53504577a81b6">Clear</a> ()</td></tr>
-<tr class="memdesc:ad42e0a41481fe63041f53504577a81b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all values. <br/></td></tr>
-<tr class="separator:ad42e0a41481fe63041f53504577a81b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bfc5f792d9edb7732561af252222e14"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5bfc5f792d9edb7732561af252222e14"></a>
-T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00147.html#a5bfc5f792d9edb7732561af252222e14">Find</a> (unsigned hash) const </td></tr>
-<tr class="memdesc:a5bfc5f792d9edb7732561af252222e14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find by hash value. Return pointer if was found or null if not found. <br/></td></tr>
-<tr class="separator:a5bfc5f792d9edb7732561af252222e14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0803906c984c9c6e618a474121bde129"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0803906c984c9c6e618a474121bde129"></a>
-<a class="el" href="a00227.html">PODVector</a>&lt; T * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00147.html#a0803906c984c9c6e618a474121bde129">Values</a> () const </td></tr>
-<tr class="memdesc:a0803906c984c9c6e618a474121bde129"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return pointers to all values. <br/></td></tr>
-<tr class="separator:a0803906c984c9c6e618a474121bde129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b1e0b0c33101647ad23f9783a95add3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b1e0b0c33101647ad23f9783a95add3"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00147.html#a3b1e0b0c33101647ad23f9783a95add3">HashNodeBase</a> ()</td></tr>
+<tr class="memdesc:a3b1e0b0c33101647ad23f9783a95add3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
+<tr class="separator:a3b1e0b0c33101647ad23f9783a95add3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:afcc63584be6b0b17ca89d0053fd621ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afcc63584be6b0b17ca89d0053fd621ad"></a>
-<a class="el" href="a00048.html">AllocatorBlock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00147.html#afcc63584be6b0b17ca89d0053fd621ad">allocator_</a></td></tr>
-<tr class="memdesc:afcc63584be6b0b17ca89d0053fd621ad"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00047.html" title="Allocator template class. Allocates objects of a specific class.">Allocator</a>. <br/></td></tr>
-<tr class="separator:afcc63584be6b0b17ca89d0053fd621ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c3feb00a984325db05714c5791df1c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9c3feb00a984325db05714c5791df1c6"></a>
-<a class="el" href="a00200.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00147.html#a9c3feb00a984325db05714c5791df1c6">ptrs_</a> [U]</td></tr>
-<tr class="memdesc:a9c3feb00a984325db05714c5791df1c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bucket pointers, fixed size. <br/></td></tr>
-<tr class="separator:a9c3feb00a984325db05714c5791df1c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a1464f7a630346bcf0eb601b9019074d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1464f7a630346bcf0eb601b9019074d7"></a>
+<a class="el" href="a00147.html">HashNodeBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00147.html#a1464f7a630346bcf0eb601b9019074d7">down_</a></td></tr>
+<tr class="memdesc:a1464f7a630346bcf0eb601b9019074d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Next node in the bucket. <br/></td></tr>
+<tr class="separator:a1464f7a630346bcf0eb601b9019074d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac00cef720e06c3638a987888aacaa5b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac00cef720e06c3638a987888aacaa5b2"></a>
+<a class="el" href="a00147.html">HashNodeBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00147.html#ac00cef720e06c3638a987888aacaa5b2">prev_</a></td></tr>
+<tr class="memdesc:ac00cef720e06c3638a987888aacaa5b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Previous node. <br/></td></tr>
+<tr class="separator:ac00cef720e06c3638a987888aacaa5b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c8e2efd5e71f9a1a6480287eaa1b45c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c8e2efd5e71f9a1a6480287eaa1b45c"></a>
+<a class="el" href="a00147.html">HashNodeBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00147.html#a6c8e2efd5e71f9a1a6480287eaa1b45c">next_</a></td></tr>
+<tr class="memdesc:a6c8e2efd5e71f9a1a6480287eaa1b45c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Next node. <br/></td></tr>
+<tr class="separator:a6c8e2efd5e71f9a1a6480287eaa1b45c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;class T, unsigned U&gt;<br/>
-class Urho3D::HashTable&lt; T, U &gt;</h3>
-
-<p>Hash table with fixed bucket count. Does not support iteration. Should only be used when performance is critical, as <a class="el" href="a00144.html" title="Hash map template class.">HashMap</a> is much more user-friendly. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Container/HashTable.h</li>
+<div class="textblock"><p>Hash set/map node base class. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Container/HashBase.h</li>
 </ul>
 </div><!-- contents -->
