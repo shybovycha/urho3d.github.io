@@ -20,51 +20,63 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00226.html">PerThreadSceneResult</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00226.html">PhysicsRaycastResult</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01155.html">List of all members</a>  </div>
+<a href="a01300.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::PerThreadSceneResult Struct Reference</div>  </div>
+<div class="title">Urho3D::PhysicsRaycastResult Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Per-thread geometry, light and scene range collection structure.  
+<p>Physics raycast hit.  
  <a href="a00226.html#details">More...</a></p>
 
-<p><code>#include &lt;View.h&gt;</code></p>
+<p><code>#include &lt;PhysicsWorld.h&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for Urho3D::PerThreadSceneResult:</div>
+Collaboration diagram for Urho3D::PhysicsRaycastResult:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a01156.svg" width="360" height="235"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01301.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a7b62602d7c839cf3d43761458bfae9bf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b62602d7c839cf3d43761458bfae9bf"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00226.html#a7b62602d7c839cf3d43761458bfae9bf">PhysicsRaycastResult</a> ()</td></tr>
+<tr class="memdesc:a7b62602d7c839cf3d43761458bfae9bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with defaults. <br/></td></tr>
+<tr class="separator:a7b62602d7c839cf3d43761458bfae9bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68788e4c23baa68d2b85441e9d276437"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a68788e4c23baa68d2b85441e9d276437"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00226.html#a68788e4c23baa68d2b85441e9d276437">operator!=</a> (const <a class="el" href="a00226.html">PhysicsRaycastResult</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:a68788e4c23baa68d2b85441e9d276437"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for inequality, added to prevent GCC from complaining. <br/></td></tr>
+<tr class="separator:a68788e4c23baa68d2b85441e9d276437"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:afe760bcff5a2f1ce829dfd0d4a135f6c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe760bcff5a2f1ce829dfd0d4a135f6c"></a>
-<a class="el" href="a00230.html">PODVector</a>&lt; <a class="el" href="a00119.html">Drawable</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00226.html#afe760bcff5a2f1ce829dfd0d4a135f6c">geometries_</a></td></tr>
-<tr class="memdesc:afe760bcff5a2f1ce829dfd0d4a135f6c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00139.html" title="Defines one or more vertex buffers, an index buffer and a draw range.">Geometry</a> objects. <br/></td></tr>
-<tr class="separator:afe760bcff5a2f1ce829dfd0d4a135f6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abea6dcb067003698cf1dce1392803512"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abea6dcb067003698cf1dce1392803512"></a>
-<a class="el" href="a00230.html">PODVector</a>&lt; <a class="el" href="a00165.html">Light</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00226.html#abea6dcb067003698cf1dce1392803512">lights_</a></td></tr>
-<tr class="memdesc:abea6dcb067003698cf1dce1392803512"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lights. <br/></td></tr>
-<tr class="separator:abea6dcb067003698cf1dce1392803512"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9aff827eddb60fbfe4247211e3bda73"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa9aff827eddb60fbfe4247211e3bda73"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00226.html#aa9aff827eddb60fbfe4247211e3bda73">minZ_</a></td></tr>
-<tr class="memdesc:aa9aff827eddb60fbfe4247211e3bda73"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00258.html" title="Root scene node, represents the whole scene.">Scene</a> minimum Z value. <br/></td></tr>
-<tr class="separator:aa9aff827eddb60fbfe4247211e3bda73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3218346e5489961a266138d5b28f9451"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3218346e5489961a266138d5b28f9451"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00226.html#a3218346e5489961a266138d5b28f9451">maxZ_</a></td></tr>
-<tr class="memdesc:a3218346e5489961a266138d5b28f9451"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00258.html" title="Root scene node, represents the whole scene.">Scene</a> maximum Z value. <br/></td></tr>
-<tr class="separator:a3218346e5489961a266138d5b28f9451"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac546be78168a69e04a3cb4328c893108"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac546be78168a69e04a3cb4328c893108"></a>
+<a class="el" href="a00327.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00226.html#ac546be78168a69e04a3cb4328c893108">position_</a></td></tr>
+<tr class="memdesc:ac546be78168a69e04a3cb4328c893108"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hit worldspace position. <br/></td></tr>
+<tr class="separator:ac546be78168a69e04a3cb4328c893108"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37c126b5444e0e8bc1e063c719ca86b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37c126b5444e0e8bc1e063c719ca86b9"></a>
+<a class="el" href="a00327.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00226.html#a37c126b5444e0e8bc1e063c719ca86b9">normal_</a></td></tr>
+<tr class="memdesc:a37c126b5444e0e8bc1e063c719ca86b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hit worldspace normal. <br/></td></tr>
+<tr class="separator:a37c126b5444e0e8bc1e063c719ca86b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcc01ca7bf8007086c033b4f25884a80"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abcc01ca7bf8007086c033b4f25884a80"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00226.html#abcc01ca7bf8007086c033b4f25884a80">distance_</a></td></tr>
+<tr class="memdesc:abcc01ca7bf8007086c033b4f25884a80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hit distance from ray origin. <br/></td></tr>
+<tr class="separator:abcc01ca7bf8007086c033b4f25884a80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4d67be66ed31f1607a7c118a3547d7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4d67be66ed31f1607a7c118a3547d7d"></a>
+<a class="el" href="a00256.html">RigidBody</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00226.html#ab4d67be66ed31f1607a7c118a3547d7d">body_</a></td></tr>
+<tr class="memdesc:ab4d67be66ed31f1607a7c118a3547d7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rigid body that was hit. <br/></td></tr>
+<tr class="separator:ab4d67be66ed31f1607a7c118a3547d7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Per-thread geometry, light and scene range collection structure. </p>
+<div class="textblock"><p>Physics raycast hit. </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/View.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Physics/PhysicsWorld.h</li>
 </ul>
 </div><!-- contents -->
