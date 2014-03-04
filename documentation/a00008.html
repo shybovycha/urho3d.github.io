@@ -1816,6 +1816,16 @@ Classes</h1>
 <li>bool timeStamp</li>
 <li>bool quiet</li>
 </ul>
+<h3><a class="el" href="a00178.html" title="Lua script subsystem.">LuaScript</a></h3>
+<p>Methods:</p>
+<ul>
+<li>void SetExecuteConsoleCommands(bool enable)</li>
+<li>bool GetExecuteConsoleCommands()</li>
+</ul>
+<p>Properties:</p>
+<ul>
+<li>bool executeConsoleCommands</li>
+</ul>
 <h3><a class="el" href="a00179.html" title="Lua script object component.">LuaScriptInstance</a> : <a class="el" href="a00089.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h3>
 <p>Methods:</p>
 <ul>
@@ -5516,6 +5526,7 @@ Global functions</h1>
 <li>Input* GetInput()</li>
 <li><a class="el" href="a00299.html" title="String class.">String</a> GetInternalPath(const String pathName)</li>
 <li>Log* GetLog()</li>
+<li>LuaScript* GetLuaScript()</li>
 <li><a class="el" href="a00299.html" title="String class.">String</a> GetNativePath(const String pathName)</li>
 <li>Network* GetNetwork()</li>
 <li>unsigned GetNumLogicalCPUs()</li>
@@ -5537,9 +5548,9 @@ Global functions</h1>
 <li>void PrintLine(const <a class="el" href="a00299.html" title="String class.">String</a> str, bool error = false)</li>
 <li>int Rand()</li>
 <li>float RandStandardNormal()</li>
+<li>float Random(float range)</li>
 <li>float Random()</li>
 <li>float Random(float min, float max)</li>
-<li>float Random(float range)</li>
 <li>int RandomInt(int range)</li>
 <li>int RandomInt(int min, int max)</li>
 <li>float RandomNormal(float meanValue, float variance)</li>
@@ -5568,8 +5579,8 @@ Global functions</h1>
 <li><a class="el" href="a00327.html" title="Three-dimensional vector.">Vector3</a> ToVector3(const String source)</li>
 <li><a class="el" href="a00328.html" title="Four-dimensional vector.">Vector4</a> ToVector4(const <a class="el" href="a00299.html" title="String class.">String</a> source, bool allowMissingCoords = false)</li>
 <li>void UnsubscribeFromAllEvents()</li>
-<li>void UnsubscribeFromEvent(void* sender, const <a class="el" href="a00299.html" title="String class.">String</a> eventName, const <a class="el" href="a00299.html" title="String class.">String</a> functionName = <a class="el" href="a00299.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>)</li>
 <li>void UnsubscribeFromEvent(const <a class="el" href="a00299.html" title="String class.">String</a> eventName, const <a class="el" href="a00299.html" title="String class.">String</a> functionName = <a class="el" href="a00299.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>)</li>
+<li>void UnsubscribeFromEvent(void* sender, const <a class="el" href="a00299.html" title="String class.">String</a> eventName, const <a class="el" href="a00299.html" title="String class.">String</a> functionName = <a class="el" href="a00299.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>)</li>
 <li>void UnsubscribeFromEvents(void* sender)</li>
 </ul>
 <h1><a class="anchor" id="LuaScriptAPI_GlobalProperties"></a>
@@ -5584,6 +5595,7 @@ Global properties</h1>
 <li>Graphics* graphics (readonly)</li>
 <li>Input* input (readonly)</li>
 <li>Log* log (readonly)</li>
+<li>LuaScript* luaScript (readonly)</li>
 <li>Network* network (readonly)</li>
 <li>Renderer* renderer (readonly)</li>
 <li>Time* time (readonly)</li>
