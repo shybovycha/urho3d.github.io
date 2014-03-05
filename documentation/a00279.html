@@ -20,127 +20,161 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00279.html">ShortStringHash</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00279.html">SharedPtr</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="a01240.html">List of all members</a>  </div>
+<a href="a00840.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::ShortStringHash Class Reference</div>  </div>
+<div class="title">Urho3D::SharedPtr&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>16-bit hash value for a string.  
+<p>Shared pointer template class with intrusive reference counting.  
  <a href="a00279.html#details">More...</a></p>
 
-<p><code>#include &lt;StringHash.h&gt;</code></p>
+<p><code>#include &lt;Ptr.h&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for Urho3D::ShortStringHash:</div>
+Collaboration diagram for Urho3D::SharedPtr&lt; T &gt;:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a01241.svg" width="260" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00841.svg" width="190" height="136"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aee975ff72d7c7a61208163e53a847f0e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee975ff72d7c7a61208163e53a847f0e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#aee975ff72d7c7a61208163e53a847f0e">ShortStringHash</a> ()</td></tr>
-<tr class="memdesc:aee975ff72d7c7a61208163e53a847f0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with zero hash value. <br/></td></tr>
-<tr class="separator:aee975ff72d7c7a61208163e53a847f0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea59aa0983af845b718873e2486ef287"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea59aa0983af845b718873e2486ef287"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#aea59aa0983af845b718873e2486ef287">ShortStringHash</a> (const <a class="el" href="a00279.html">ShortStringHash</a> &amp;rhs)</td></tr>
-<tr class="memdesc:aea59aa0983af845b718873e2486ef287"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy-construct from another hash value. <br/></td></tr>
-<tr class="separator:aea59aa0983af845b718873e2486ef287"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac760b83641248c0bbd5aa7b68e64fef0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac760b83641248c0bbd5aa7b68e64fef0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#ac760b83641248c0bbd5aa7b68e64fef0">ShortStringHash</a> (const <a class="el" href="a00300.html">StringHash</a> &amp;rhs)</td></tr>
-<tr class="memdesc:ac760b83641248c0bbd5aa7b68e64fef0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy-construct from another 32-bit hash value (ignore the high bits.) <br/></td></tr>
-<tr class="separator:ac760b83641248c0bbd5aa7b68e64fef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba30d1e9000b908aa42cc1d1c279975e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba30d1e9000b908aa42cc1d1c279975e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#aba30d1e9000b908aa42cc1d1c279975e">ShortStringHash</a> (unsigned short value)</td></tr>
-<tr class="memdesc:aba30d1e9000b908aa42cc1d1c279975e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with an initial value. <br/></td></tr>
-<tr class="separator:aba30d1e9000b908aa42cc1d1c279975e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6c128f5eb32474f7d31844d79f869d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6c128f5eb32474f7d31844d79f869d5"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#ac6c128f5eb32474f7d31844d79f869d5">ShortStringHash</a> (const char *str)</td></tr>
-<tr class="memdesc:ac6c128f5eb32474f7d31844d79f869d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a C string case-insensitively. <br/></td></tr>
-<tr class="separator:ac6c128f5eb32474f7d31844d79f869d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae524f868834ea15ed53df537891ef8c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae524f868834ea15ed53df537891ef8c3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#ae524f868834ea15ed53df537891ef8c3">ShortStringHash</a> (const <a class="el" href="a00299.html">String</a> &amp;str)</td></tr>
-<tr class="memdesc:ae524f868834ea15ed53df537891ef8c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a string case-insensitively. <br/></td></tr>
-<tr class="separator:ae524f868834ea15ed53df537891ef8c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d54a8660ceb5ebf3c15795b4675282f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d54a8660ceb5ebf3c15795b4675282f"></a>
-<a class="el" href="a00279.html">ShortStringHash</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#a8d54a8660ceb5ebf3c15795b4675282f">operator=</a> (const <a class="el" href="a00279.html">ShortStringHash</a> &amp;rhs)</td></tr>
-<tr class="memdesc:a8d54a8660ceb5ebf3c15795b4675282f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign from another hash. <br/></td></tr>
-<tr class="separator:a8d54a8660ceb5ebf3c15795b4675282f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4141f81e05ddc88b732719b2a20756b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af4141f81e05ddc88b732719b2a20756b"></a>
-<a class="el" href="a00279.html">ShortStringHash</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#af4141f81e05ddc88b732719b2a20756b">operator+</a> (const <a class="el" href="a00279.html">ShortStringHash</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:af4141f81e05ddc88b732719b2a20756b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a hash. <br/></td></tr>
-<tr class="separator:af4141f81e05ddc88b732719b2a20756b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c6f5d84775406ffdbffab32dd943387"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c6f5d84775406ffdbffab32dd943387"></a>
-<a class="el" href="a00279.html">ShortStringHash</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator+=</b> (const <a class="el" href="a00279.html">ShortStringHash</a> &amp;rhs)</td></tr>
-<tr class="separator:a4c6f5d84775406ffdbffab32dd943387"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43ad7ed5ca592b3936c50b8bab458f0c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43ad7ed5ca592b3936c50b8bab458f0c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#a43ad7ed5ca592b3936c50b8bab458f0c">operator==</a> (const <a class="el" href="a00279.html">ShortStringHash</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:a43ad7ed5ca592b3936c50b8bab458f0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for equality with another hash. <br/></td></tr>
-<tr class="separator:a43ad7ed5ca592b3936c50b8bab458f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ce02b833a96ae5cdc3593ba9c45c92c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ce02b833a96ae5cdc3593ba9c45c92c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#a4ce02b833a96ae5cdc3593ba9c45c92c">operator!=</a> (const <a class="el" href="a00279.html">ShortStringHash</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:a4ce02b833a96ae5cdc3593ba9c45c92c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for inequality with another hash. <br/></td></tr>
-<tr class="separator:a4ce02b833a96ae5cdc3593ba9c45c92c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a2932de8aa37ce45bb83c60c11b6738"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5a2932de8aa37ce45bb83c60c11b6738"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#a5a2932de8aa37ce45bb83c60c11b6738">operator&lt;</a> (const <a class="el" href="a00279.html">ShortStringHash</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:a5a2932de8aa37ce45bb83c60c11b6738"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if less than another hash. <br/></td></tr>
-<tr class="separator:a5a2932de8aa37ce45bb83c60c11b6738"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b39c958844e8a6df74dda06a45ec1de"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b39c958844e8a6df74dda06a45ec1de"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#a9b39c958844e8a6df74dda06a45ec1de">operator&gt;</a> (const <a class="el" href="a00279.html">ShortStringHash</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:a9b39c958844e8a6df74dda06a45ec1de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if greater than another hash. <br/></td></tr>
-<tr class="separator:a9b39c958844e8a6df74dda06a45ec1de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedde0533b04c83bb29383359bc622a9d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aedde0533b04c83bb29383359bc622a9d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#aedde0533b04c83bb29383359bc622a9d">operator bool</a> () const </td></tr>
-<tr class="memdesc:aedde0533b04c83bb29383359bc622a9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if nonzero hash value. <br/></td></tr>
-<tr class="separator:aedde0533b04c83bb29383359bc622a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acaa2789e9d666a5ea12c004a6676d916"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acaa2789e9d666a5ea12c004a6676d916"></a>
-unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#acaa2789e9d666a5ea12c004a6676d916">Value</a> () const </td></tr>
-<tr class="memdesc:acaa2789e9d666a5ea12c004a6676d916"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hash value. <br/></td></tr>
-<tr class="separator:acaa2789e9d666a5ea12c004a6676d916"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a373e608bd9ffc2085924d1998af013a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a373e608bd9ffc2085924d1998af013a6"></a>
-<a class="el" href="a00299.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#a373e608bd9ffc2085924d1998af013a6">ToString</a> () const </td></tr>
-<tr class="memdesc:a373e608bd9ffc2085924d1998af013a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return as string. <br/></td></tr>
-<tr class="separator:a373e608bd9ffc2085924d1998af013a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d812dfe8bebe26e22ca3e0d8467e1a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d812dfe8bebe26e22ca3e0d8467e1a5"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#a7d812dfe8bebe26e22ca3e0d8467e1a5">ToHash</a> () const </td></tr>
-<tr class="memdesc:a7d812dfe8bebe26e22ca3e0d8467e1a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hash value for <a class="el" href="a00148.html" title="Hash set template class.">HashSet</a> &amp; <a class="el" href="a00146.html" title="Hash map template class.">HashMap</a>. <br/></td></tr>
-<tr class="separator:a7d812dfe8bebe26e22ca3e0d8467e1a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c9f8682b768ad18aa33e61c397ef949"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c9f8682b768ad18aa33e61c397ef949"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#a6c9f8682b768ad18aa33e61c397ef949">SharedPtr</a> ()</td></tr>
+<tr class="memdesc:a6c9f8682b768ad18aa33e61c397ef949"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a null shared pointer. <br/></td></tr>
+<tr class="separator:a6c9f8682b768ad18aa33e61c397ef949"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4413c67fb81094c9147b86a7d6aaa135"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4413c67fb81094c9147b86a7d6aaa135"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#a4413c67fb81094c9147b86a7d6aaa135">SharedPtr</a> (const <a class="el" href="a00279.html">SharedPtr</a>&lt; T &gt; &amp;rhs)</td></tr>
+<tr class="memdesc:a4413c67fb81094c9147b86a7d6aaa135"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy-construct from another shared pointer. <br/></td></tr>
+<tr class="separator:a4413c67fb81094c9147b86a7d6aaa135"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d57405a5fb0ac1aa0ddb1aaee5275a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d57405a5fb0ac1aa0ddb1aaee5275a9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#a1d57405a5fb0ac1aa0ddb1aaee5275a9">SharedPtr</a> (T *ptr)</td></tr>
+<tr class="memdesc:a1d57405a5fb0ac1aa0ddb1aaee5275a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a raw pointer. <br/></td></tr>
+<tr class="separator:a1d57405a5fb0ac1aa0ddb1aaee5275a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8bdda8aa792b9222dd41b0cd3b72633"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa8bdda8aa792b9222dd41b0cd3b72633"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#aa8bdda8aa792b9222dd41b0cd3b72633">~SharedPtr</a> ()</td></tr>
+<tr class="memdesc:aa8bdda8aa792b9222dd41b0cd3b72633"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. Release the object reference. <br/></td></tr>
+<tr class="separator:aa8bdda8aa792b9222dd41b0cd3b72633"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a248e1f0dee594908363567225cafdab0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a248e1f0dee594908363567225cafdab0"></a>
+<a class="el" href="a00279.html">SharedPtr</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#a248e1f0dee594908363567225cafdab0">operator=</a> (const <a class="el" href="a00279.html">SharedPtr</a>&lt; T &gt; &amp;rhs)</td></tr>
+<tr class="memdesc:a248e1f0dee594908363567225cafdab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign from another shared pointer. <br/></td></tr>
+<tr class="separator:a248e1f0dee594908363567225cafdab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0d05913df97604e2177cc2abce38e63"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0d05913df97604e2177cc2abce38e63"></a>
+<a class="el" href="a00279.html">SharedPtr</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#af0d05913df97604e2177cc2abce38e63">operator=</a> (T *ptr)</td></tr>
+<tr class="memdesc:af0d05913df97604e2177cc2abce38e63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign from a raw pointer. <br/></td></tr>
+<tr class="separator:af0d05913df97604e2177cc2abce38e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a729cc964813983fae6b8f0a09b4661a8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a729cc964813983fae6b8f0a09b4661a8"></a>
+T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#a729cc964813983fae6b8f0a09b4661a8">operator-&gt;</a> () const </td></tr>
+<tr class="memdesc:a729cc964813983fae6b8f0a09b4661a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Point to the object. <br/></td></tr>
+<tr class="separator:a729cc964813983fae6b8f0a09b4661a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03fc03062cf0cd2470720ac6a90c4619"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a03fc03062cf0cd2470720ac6a90c4619"></a>
+T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#a03fc03062cf0cd2470720ac6a90c4619">operator*</a> () const </td></tr>
+<tr class="memdesc:a03fc03062cf0cd2470720ac6a90c4619"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dereference the object. <br/></td></tr>
+<tr class="separator:a03fc03062cf0cd2470720ac6a90c4619"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9ca58818619c39790ecd6982473d377"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae9ca58818619c39790ecd6982473d377"></a>
+T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#ae9ca58818619c39790ecd6982473d377">operator[]</a> (const int index)</td></tr>
+<tr class="memdesc:ae9ca58818619c39790ecd6982473d377"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscript the object if applicable. <br/></td></tr>
+<tr class="separator:ae9ca58818619c39790ecd6982473d377"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43def46a093453179e6924acb7cf6869"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43def46a093453179e6924acb7cf6869"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#a43def46a093453179e6924acb7cf6869">operator&lt;</a> (const <a class="el" href="a00279.html">SharedPtr</a>&lt; T &gt; &amp;rhs) const </td></tr>
+<tr class="memdesc:a43def46a093453179e6924acb7cf6869"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for less than with another shared pointer. <br/></td></tr>
+<tr class="separator:a43def46a093453179e6924acb7cf6869"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a688238ab1458d09a7e7aab5638849cd4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a688238ab1458d09a7e7aab5638849cd4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#a688238ab1458d09a7e7aab5638849cd4">operator==</a> (const <a class="el" href="a00279.html">SharedPtr</a>&lt; T &gt; &amp;rhs) const </td></tr>
+<tr class="memdesc:a688238ab1458d09a7e7aab5638849cd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for equality with another shared pointer. <br/></td></tr>
+<tr class="separator:a688238ab1458d09a7e7aab5638849cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f060e471485d993ccda007d2cd2b6e9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f060e471485d993ccda007d2cd2b6e9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#a6f060e471485d993ccda007d2cd2b6e9">operator!=</a> (const <a class="el" href="a00279.html">SharedPtr</a>&lt; T &gt; &amp;rhs) const </td></tr>
+<tr class="memdesc:a6f060e471485d993ccda007d2cd2b6e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for inequality with another shared pointer. <br/></td></tr>
+<tr class="separator:a6f060e471485d993ccda007d2cd2b6e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a597ab775214c454b1df2837b9cee89"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a597ab775214c454b1df2837b9cee89"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#a6a597ab775214c454b1df2837b9cee89">operator T *</a> () const </td></tr>
+<tr class="memdesc:a6a597ab775214c454b1df2837b9cee89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert to a raw pointer. <br/></td></tr>
+<tr class="separator:a6a597ab775214c454b1df2837b9cee89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a921bd6b5a659b42c9f660a083640eb8f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a921bd6b5a659b42c9f660a083640eb8f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#a921bd6b5a659b42c9f660a083640eb8f">Reset</a> ()</td></tr>
+<tr class="memdesc:a921bd6b5a659b42c9f660a083640eb8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset to null and release the object reference. <br/></td></tr>
+<tr class="separator:a921bd6b5a659b42c9f660a083640eb8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae34143bf7ef722f5c960381818cb33b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae34143bf7ef722f5c960381818cb33b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#aae34143bf7ef722f5c960381818cb33b">Detach</a> ()</td></tr>
+<tr class="memdesc:aae34143bf7ef722f5c960381818cb33b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detach without destroying the object even if the refcount goes zero. To be used for scripting language interoperation. <br/></td></tr>
+<tr class="separator:aae34143bf7ef722f5c960381818cb33b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a8fc6e464f33d15fe07373e5d0a95bf"><td class="memTemplParams" colspan="2"><a class="anchor" id="a8a8fc6e464f33d15fe07373e5d0a95bf"></a>
+template&lt;class U &gt; </td></tr>
+<tr class="memitem:a8a8fc6e464f33d15fe07373e5d0a95bf"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00279.html#a8a8fc6e464f33d15fe07373e5d0a95bf">StaticCast</a> (const <a class="el" href="a00279.html">SharedPtr</a>&lt; U &gt; &amp;rhs)</td></tr>
+<tr class="memdesc:a8a8fc6e464f33d15fe07373e5d0a95bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a static cast from a shared pointer of another type. <br/></td></tr>
+<tr class="separator:a8a8fc6e464f33d15fe07373e5d0a95bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0450e90e9b2f0fbc6f46d5ed277074d"><td class="memTemplParams" colspan="2"><a class="anchor" id="af0450e90e9b2f0fbc6f46d5ed277074d"></a>
+template&lt;class U &gt; </td></tr>
+<tr class="memitem:af0450e90e9b2f0fbc6f46d5ed277074d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00279.html#af0450e90e9b2f0fbc6f46d5ed277074d">DynamicCast</a> (const <a class="el" href="a00279.html">SharedPtr</a>&lt; U &gt; &amp;rhs)</td></tr>
+<tr class="memdesc:af0450e90e9b2f0fbc6f46d5ed277074d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a dynamic cast from a shared pointer of another type. <br/></td></tr>
+<tr class="separator:af0450e90e9b2f0fbc6f46d5ed277074d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b679d8427d58536d98cf225c1a749c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b679d8427d58536d98cf225c1a749c8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#a4b679d8427d58536d98cf225c1a749c8">Null</a> () const </td></tr>
+<tr class="memdesc:a4b679d8427d58536d98cf225c1a749c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the pointer is null. <br/></td></tr>
+<tr class="separator:a4b679d8427d58536d98cf225c1a749c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1959d3b27767b26907d2104d8c727b96"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1959d3b27767b26907d2104d8c727b96"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#a1959d3b27767b26907d2104d8c727b96">NotNull</a> () const </td></tr>
+<tr class="memdesc:a1959d3b27767b26907d2104d8c727b96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the pointer is not null. <br/></td></tr>
+<tr class="separator:a1959d3b27767b26907d2104d8c727b96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af678a3ad5a0a89268acc8d4bc187dbb7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af678a3ad5a0a89268acc8d4bc187dbb7"></a>
+T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#af678a3ad5a0a89268acc8d4bc187dbb7">Get</a> () const </td></tr>
+<tr class="memdesc:af678a3ad5a0a89268acc8d4bc187dbb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the raw pointer. <br/></td></tr>
+<tr class="separator:af678a3ad5a0a89268acc8d4bc187dbb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d864c4c635211c228dae777ab196122"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d864c4c635211c228dae777ab196122"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#a9d864c4c635211c228dae777ab196122">Refs</a> () const </td></tr>
+<tr class="memdesc:a9d864c4c635211c228dae777ab196122"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the object's reference count, or 0 if the pointer is null. <br/></td></tr>
+<tr class="separator:a9d864c4c635211c228dae777ab196122"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc1a4f1196bf690ca97d68aede28ae70"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc1a4f1196bf690ca97d68aede28ae70"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#afc1a4f1196bf690ca97d68aede28ae70">WeakRefs</a> () const </td></tr>
+<tr class="memdesc:afc1a4f1196bf690ca97d68aede28ae70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the object's weak reference count, or 0 if the pointer is null. <br/></td></tr>
+<tr class="separator:afc1a4f1196bf690ca97d68aede28ae70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1edac90184e5cc52eedc5edfb5cf9e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac1edac90184e5cc52eedc5edfb5cf9e6"></a>
+<a class="el" href="a00243.html">RefCount</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#ac1edac90184e5cc52eedc5edfb5cf9e6">RefCountPtr</a> () const </td></tr>
+<tr class="memdesc:ac1edac90184e5cc52eedc5edfb5cf9e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return pointer to the <a class="el" href="a00243.html" title="Reference count structure.">RefCount</a> structure. <br/></td></tr>
+<tr class="separator:ac1edac90184e5cc52eedc5edfb5cf9e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad67144cd67eef1fec1a5406a26990e1b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad67144cd67eef1fec1a5406a26990e1b"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#ad67144cd67eef1fec1a5406a26990e1b">ToHash</a> () const </td></tr>
+<tr class="memdesc:ad67144cd67eef1fec1a5406a26990e1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hash value for <a class="el" href="a00149.html" title="Hash set template class.">HashSet</a> &amp; <a class="el" href="a00147.html" title="Hash map template class.">HashMap</a>. <br/></td></tr>
+<tr class="separator:ad67144cd67eef1fec1a5406a26990e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ad163c8445ee4755f7d98662acd1651a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad163c8445ee4755f7d98662acd1651a5"></a>
-static unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#ad163c8445ee4755f7d98662acd1651a5">Calculate</a> (const char *str)</td></tr>
-<tr class="memdesc:ad163c8445ee4755f7d98662acd1651a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate hash value case-insensitively from a C string. <br/></td></tr>
-<tr class="separator:ad163c8445ee4755f7d98662acd1651a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:ae71d8c74ea52c0c9d4e0df9c73843887"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae71d8c74ea52c0c9d4e0df9c73843887"></a>
-static const <a class="el" href="a00279.html">ShortStringHash</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#ae71d8c74ea52c0c9d4e0df9c73843887">ZERO</a></td></tr>
-<tr class="memdesc:ae71d8c74ea52c0c9d4e0df9c73843887"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zero hash. <br/></td></tr>
-<tr class="separator:ae71d8c74ea52c0c9d4e0df9c73843887"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a0c1804ebbe483b03f4f5719112b2fdc9"><td class="memTemplParams" colspan="2"><a class="anchor" id="a0c1804ebbe483b03f4f5719112b2fdc9"></a>
+template&lt;class U &gt; </td></tr>
+<tr class="memitem:a0c1804ebbe483b03f4f5719112b2fdc9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00279.html">SharedPtr</a>&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00279.html#a0c1804ebbe483b03f4f5719112b2fdc9">operator=</a> (const <a class="el" href="a00279.html">SharedPtr</a>&lt; U &gt; &amp;rhs)</td></tr>
+<tr class="memdesc:a0c1804ebbe483b03f4f5719112b2fdc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prevent direct assignment from a shared pointer of another type. <br/></td></tr>
+<tr class="separator:a0c1804ebbe483b03f4f5719112b2fdc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a683e31619a9da48d9c7bce818baff684"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a683e31619a9da48d9c7bce818baff684"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#a683e31619a9da48d9c7bce818baff684">AddRef</a> ()</td></tr>
+<tr class="memdesc:a683e31619a9da48d9c7bce818baff684"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a reference to the object pointed to. <br/></td></tr>
+<tr class="separator:a683e31619a9da48d9c7bce818baff684"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab21183868376fa382855891ba0ef0a2f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab21183868376fa382855891ba0ef0a2f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#ab21183868376fa382855891ba0ef0a2f">ReleaseRef</a> ()</td></tr>
+<tr class="memdesc:ab21183868376fa382855891ba0ef0a2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release the object reference and delete it if necessary. <br/></td></tr>
+<tr class="separator:ab21183868376fa382855891ba0ef0a2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a5c99ca9fecb2854ca2a3972d08c78178"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c99ca9fecb2854ca2a3972d08c78178"></a>
-unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#a5c99ca9fecb2854ca2a3972d08c78178">value_</a></td></tr>
-<tr class="memdesc:a5c99ca9fecb2854ca2a3972d08c78178"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hash value. <br/></td></tr>
-<tr class="separator:a5c99ca9fecb2854ca2a3972d08c78178"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af781fb290f5c98b6083b28afa7d7537d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af781fb290f5c98b6083b28afa7d7537d"></a>
+T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00279.html#af781fb290f5c98b6083b28afa7d7537d">ptr_</a></td></tr>
+<tr class="memdesc:af781fb290f5c98b6083b28afa7d7537d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the object. <br/></td></tr>
+<tr class="separator:af781fb290f5c98b6083b28afa7d7537d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>16-bit hash value for a string. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Math/StringHash.h</li>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Math/StringHash.cpp</li>
+<div class="textblock"><h3>template&lt;class T&gt;<br/>
+class Urho3D::SharedPtr&lt; T &gt;</h3>
+
+<p>Shared pointer template class with intrusive reference counting. </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Container/Ptr.h</li>
 </ul>
 </div><!-- contents -->

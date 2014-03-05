@@ -20,90 +20,49 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00243.html">RefCounted</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00243.html">RefCount</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="a00844.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::RefCounted Class Reference</div>  </div>
+<div class="title">Urho3D::RefCount Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Base class for intrusively reference-counted objects. These are noncopyable and non-assignable.  
+<p>Reference count structure.  
  <a href="a00243.html#details">More...</a></p>
 
 <p><code>#include &lt;RefCounted.h&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for Urho3D::RefCounted:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a00848.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for Urho3D::RefCounted:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00849.svg" width="163" height="136"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aad6e2ac9e97ca71b28c47248a9aad9b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad6e2ac9e97ca71b28c47248a9aad9b9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00243.html#aad6e2ac9e97ca71b28c47248a9aad9b9">RefCounted</a> ()</td></tr>
-<tr class="memdesc:aad6e2ac9e97ca71b28c47248a9aad9b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. Allocate the reference count structure and set an initial self weak reference. <br/></td></tr>
-<tr class="separator:aad6e2ac9e97ca71b28c47248a9aad9b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1f332b55c08fd702f2c7ebb18e42a90"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1f332b55c08fd702f2c7ebb18e42a90"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00243.html#aa1f332b55c08fd702f2c7ebb18e42a90">~RefCounted</a> ()</td></tr>
-<tr class="memdesc:aa1f332b55c08fd702f2c7ebb18e42a90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. Mark as expired and also delete the reference count structure if no outside weak references exist. <br/></td></tr>
-<tr class="separator:aa1f332b55c08fd702f2c7ebb18e42a90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d857f439bb5a7935199a8e4fdb8f2c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d857f439bb5a7935199a8e4fdb8f2c8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00243.html#a0d857f439bb5a7935199a8e4fdb8f2c8">AddRef</a> ()</td></tr>
-<tr class="memdesc:a0d857f439bb5a7935199a8e4fdb8f2c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment reference count. Can also be called outside of a <a class="el" href="a00278.html" title="Shared pointer template class with intrusive reference counting.">SharedPtr</a> for traditional reference counting. <br/></td></tr>
-<tr class="separator:a0d857f439bb5a7935199a8e4fdb8f2c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59e95fecbcbc560f81f0bdd52306cc1d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59e95fecbcbc560f81f0bdd52306cc1d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00243.html#a59e95fecbcbc560f81f0bdd52306cc1d">ReleaseRef</a> ()</td></tr>
-<tr class="memdesc:a59e95fecbcbc560f81f0bdd52306cc1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrement reference count and delete self if no more references. Can also be called outside of a <a class="el" href="a00278.html" title="Shared pointer template class with intrusive reference counting.">SharedPtr</a> for traditional reference counting. <br/></td></tr>
-<tr class="separator:a59e95fecbcbc560f81f0bdd52306cc1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5ac3cb7e5f64c056351e15d3a30b4ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5ac3cb7e5f64c056351e15d3a30b4ba"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00243.html#ad5ac3cb7e5f64c056351e15d3a30b4ba">Refs</a> () const </td></tr>
-<tr class="memdesc:ad5ac3cb7e5f64c056351e15d3a30b4ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return reference count. <br/></td></tr>
-<tr class="separator:ad5ac3cb7e5f64c056351e15d3a30b4ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab05087f4c487de02faed7411bbcf9df1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab05087f4c487de02faed7411bbcf9df1"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00243.html#ab05087f4c487de02faed7411bbcf9df1">WeakRefs</a> () const </td></tr>
-<tr class="memdesc:ab05087f4c487de02faed7411bbcf9df1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return weak reference count. <br/></td></tr>
-<tr class="separator:ab05087f4c487de02faed7411bbcf9df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0eb5281d7e6cfd7e729ae0d07ca0da92"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0eb5281d7e6cfd7e729ae0d07ca0da92"></a>
-<a class="el" href="a00242.html">RefCount</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00243.html#a0eb5281d7e6cfd7e729ae0d07ca0da92">RefCountPtr</a> ()</td></tr>
-<tr class="memdesc:a0eb5281d7e6cfd7e729ae0d07ca0da92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return pointer to the reference count structure. <br/></td></tr>
-<tr class="separator:a0eb5281d7e6cfd7e729ae0d07ca0da92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a335a53d09ab4ed1d2849b63a38983fb3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a335a53d09ab4ed1d2849b63a38983fb3"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00243.html#a335a53d09ab4ed1d2849b63a38983fb3">RefCount</a> ()</td></tr>
+<tr class="memdesc:a335a53d09ab4ed1d2849b63a38983fb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
+<tr class="separator:a335a53d09ab4ed1d2849b63a38983fb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95993f5cb65b6c17ac2cde4a31724370"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a95993f5cb65b6c17ac2cde4a31724370"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00243.html#a95993f5cb65b6c17ac2cde4a31724370">~RefCount</a> ()</td></tr>
+<tr class="memdesc:a95993f5cb65b6c17ac2cde4a31724370"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
+<tr class="separator:a95993f5cb65b6c17ac2cde4a31724370"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:af6051db5b61338d07bbf3bcdfe27c018"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af6051db5b61338d07bbf3bcdfe27c018"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00243.html#af6051db5b61338d07bbf3bcdfe27c018">RefCounted</a> (const <a class="el" href="a00243.html">RefCounted</a> &amp;rhs)</td></tr>
-<tr class="memdesc:af6051db5b61338d07bbf3bcdfe27c018"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prevent copy construction. <br/></td></tr>
-<tr class="separator:af6051db5b61338d07bbf3bcdfe27c018"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1765c1277591d31e8a789826fbeda3b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1765c1277591d31e8a789826fbeda3b1"></a>
-<a class="el" href="a00243.html">RefCounted</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00243.html#a1765c1277591d31e8a789826fbeda3b1">operator=</a> (const <a class="el" href="a00243.html">RefCounted</a> &amp;rhs)</td></tr>
-<tr class="memdesc:a1765c1277591d31e8a789826fbeda3b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prevent assignment. <br/></td></tr>
-<tr class="separator:a1765c1277591d31e8a789826fbeda3b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a30b71da1409381e23230d9a33f23d625"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30b71da1409381e23230d9a33f23d625"></a>
-<a class="el" href="a00242.html">RefCount</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00243.html#a30b71da1409381e23230d9a33f23d625">refCount_</a></td></tr>
-<tr class="memdesc:a30b71da1409381e23230d9a33f23d625"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the reference count structure. <br/></td></tr>
-<tr class="separator:a30b71da1409381e23230d9a33f23d625"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a08b3a37471704e640be73221c95c08e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08b3a37471704e640be73221c95c08e2"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00243.html#a08b3a37471704e640be73221c95c08e2">refs_</a></td></tr>
+<tr class="memdesc:a08b3a37471704e640be73221c95c08e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference count. If below zero, the object has been destroyed. <br/></td></tr>
+<tr class="separator:a08b3a37471704e640be73221c95c08e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addcd94eecde33fc782dfa156aab8fe2b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="addcd94eecde33fc782dfa156aab8fe2b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00243.html#addcd94eecde33fc782dfa156aab8fe2b">weakRefs_</a></td></tr>
+<tr class="memdesc:addcd94eecde33fc782dfa156aab8fe2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weak reference count. <br/></td></tr>
+<tr class="separator:addcd94eecde33fc782dfa156aab8fe2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Base class for intrusively reference-counted objects. These are noncopyable and non-assignable. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<div class="textblock"><p>Reference count structure. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>/home/travis/build/urho3d/Urho3D/Source/Engine/Container/RefCounted.h</li>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Container/RefCounted.cpp</li>
 </ul>
 </div><!-- contents -->
