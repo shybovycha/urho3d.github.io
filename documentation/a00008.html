@@ -1816,16 +1816,6 @@ Classes</h1>
 <li>bool timeStamp</li>
 <li>bool quiet</li>
 </ul>
-<h3><a class="el" href="a00178.html" title="Lua script subsystem.">LuaScript</a></h3>
-<p>Methods:</p>
-<ul>
-<li>void SetExecuteConsoleCommands(bool enable)</li>
-<li>bool GetExecuteConsoleCommands()</li>
-</ul>
-<p>Properties:</p>
-<ul>
-<li>bool executeConsoleCommands</li>
-</ul>
 <h3><a class="el" href="a00179.html" title="Lua script object component.">LuaScriptInstance</a> : <a class="el" href="a00089.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h3>
 <p>Methods:</p>
 <ul>
@@ -5518,6 +5508,7 @@ Global functions</h1>
 <li>Engine* GetEngine()</li>
 <li>EventHandler* GetEventHandler() const</li>
 <li>Object* GetEventSender()</li>
+<li>bool GetExecuteConsoleCommands()</li>
 <li><a class="el" href="a00299.html" title="String class.">String</a> GetExtension(const <a class="el" href="a00299.html" title="String class.">String</a> fullPath, bool lowercaseExtension = true)</li>
 <li><a class="el" href="a00299.html" title="String class.">String</a> GetFileName(const String fullPath)</li>
 <li><a class="el" href="a00299.html" title="String class.">String</a> GetFileNameAndExtension(const <a class="el" href="a00299.html" title="String class.">String</a> fullPath, bool lowercaseExtension = false)</li>
@@ -5526,7 +5517,6 @@ Global functions</h1>
 <li>Input* GetInput()</li>
 <li><a class="el" href="a00299.html" title="String class.">String</a> GetInternalPath(const String pathName)</li>
 <li>Log* GetLog()</li>
-<li>LuaScript* GetLuaScript()</li>
 <li><a class="el" href="a00299.html" title="String class.">String</a> GetNativePath(const String pathName)</li>
 <li>Network* GetNetwork()</li>
 <li>unsigned GetNumLogicalCPUs()</li>
@@ -5548,15 +5538,16 @@ Global functions</h1>
 <li>void PrintLine(const <a class="el" href="a00299.html" title="String class.">String</a> str, bool error = false)</li>
 <li>int Rand()</li>
 <li>float RandStandardNormal()</li>
-<li>float Random(float range)</li>
 <li>float Random()</li>
 <li>float Random(float min, float max)</li>
+<li>float Random(float range)</li>
 <li>int RandomInt(int range)</li>
 <li>int RandomInt(int min, int max)</li>
 <li>float RandomNormal(float meanValue, float variance)</li>
 <li><a class="el" href="a00299.html" title="String class.">String</a> RemoveTrailingSlash(const String pathName)</li>
 <li><a class="el" href="a00299.html" title="String class.">String</a> ReplaceExtension(const String fullPath, const String newExtension)</li>
 <li>void SendEvent(const String eventName, VariantMap&amp; eventData)</li>
+<li>void SetExecuteConsoleCommands(bool enable)</li>
 <li>void SetRandomSeed(unsigned seed)</li>
 <li>float Sign(float value)</li>
 <li>float SmoothStep(float lhs, float rhs, float t)</li>
@@ -5595,7 +5586,6 @@ Global properties</h1>
 <li>Graphics* graphics (readonly)</li>
 <li>Input* input (readonly)</li>
 <li>Log* log (readonly)</li>
-<li>LuaScript* luaScript (readonly)</li>
 <li>Network* network (readonly)</li>
 <li>Renderer* renderer (readonly)</li>
 <li>Time* time (readonly)</li>
