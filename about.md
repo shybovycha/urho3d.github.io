@@ -8,7 +8,7 @@ title: About
 
 ## Features
 - Direct3D9 or OpenGL rendering (Shader Model 2, OpenGL 2.0 or OpenGL ES 2.0 required as minimum)
-- HLSL or GLSL shaders + optional offline compilation of HLSL code
+- HLSL or GLSL shaders + caching of HLSL bytecode
 - Configurable rendering pipeline. Default implementations for forward, light pre-pass and deferred rendering
 - Component based scene model
 - Skeletal (with hardware skinning), vertex morph and node animation
@@ -22,6 +22,7 @@ title: About
 - Geometry, material & animation LOD
 - Software rasterized occlusion culling
 - Post-processing
+- 2D sprites and particles that integrate into the 3D scene<font color="green"><sup>new</sup></font>
 - Task-based multithreading
 - Hierarchical performance profiler
 - Scene and object load/save in binary and XML format
