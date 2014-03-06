@@ -98,7 +98,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="separator:af7def43622414f47917715bd4cba04b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab87accfdac685351fde43278dca1fa1f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab87accfdac685351fde43278dca1fa1f"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00177.html#ab87accfdac685351fde43278dca1fa1f">DelayedStart</a> ()</td></tr>
-<tr class="memdesc:ab87accfdac685351fde43278dca1fa1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called before the first update or fixed update. At this point all other components of the node should exist. <br/></td></tr>
+<tr class="memdesc:ab87accfdac685351fde43278dca1fa1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called before the first update or fixed update. At this point all other components of the node should exist. Note that if you disable both update and fixed update from the update event mask, this will never be called! <br/></td></tr>
 <tr class="separator:ab87accfdac685351fde43278dca1fa1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcf1b341a1f3d950a76f689ee4286dcc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abcf1b341a1f3d950a76f689ee4286dcc"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00177.html#abcf1b341a1f3d950a76f689ee4286dcc">Stop</a> ()</td></tr>
@@ -122,7 +122,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="separator:a9a1aea8b9587d193b8403d615833aa4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af42f3bb7f60afa886c4c6d13fe60b234"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af42f3bb7f60afa886c4c6d13fe60b234"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00177.html#af42f3bb7f60afa886c4c6d13fe60b234">SetUpdateEventMask</a> (unsigned mask)</td></tr>
-<tr class="memdesc:af42f3bb7f60afa886c4c6d13fe60b234"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set what update events should be subscribed to. Use this for optimization: by default all are in use. Note that this is not an attribute and is not saved or network-serialized, therefore it should be always called eg. in the subclass constructor. <br/></td></tr>
+<tr class="memdesc:af42f3bb7f60afa886c4c6d13fe60b234"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set what update events should be subscribed to. Use this for optimization: by default all are in use. Note that this is not an attribute and is not saved or network-serialized, therefore it should always be called eg. in the subclass constructor. <br/></td></tr>
 <tr class="separator:af42f3bb7f60afa886c4c6d13fe60b234"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4e390b604b7202edd1ddee6426ff6a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af4e390b604b7202edd1ddee6426ff6a3"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00177.html#af4e390b604b7202edd1ddee6426ff6a3">GetUpdateEventMask</a> () const </td></tr>
