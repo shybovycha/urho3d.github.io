@@ -22,6 +22,7 @@ title: About
 - Geometry, material & animation LOD
 - Software rasterized occlusion culling
 - Post-processing
+- HDR rendering<font color="green"><sup>new</sup></font>
 - 2D sprites and particles that integrate into the 3D scene<font color="green"><sup>new</sup></font>
 - Task-based multithreading
 - Hierarchical performance profiler
