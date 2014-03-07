@@ -98,7 +98,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="separator:af7def43622414f47917715bd4cba04b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab87accfdac685351fde43278dca1fa1f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab87accfdac685351fde43278dca1fa1f"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00177.html#ab87accfdac685351fde43278dca1fa1f">DelayedStart</a> ()</td></tr>
-<tr class="memdesc:ab87accfdac685351fde43278dca1fa1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called before the first update or fixed update. At this point all other components of the node should exist. Note that if you disable both update and fixed update from the update event mask, this will never be called! <br/></td></tr>
+<tr class="memdesc:ab87accfdac685351fde43278dca1fa1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called before the first update. At this point all other components of the node should exist. Will also be called if update events are not wanted; in that case the event is immediately unsubscribed afterward. <br/></td></tr>
 <tr class="separator:ab87accfdac685351fde43278dca1fa1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcf1b341a1f3d950a76f689ee4286dcc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abcf1b341a1f3d950a76f689ee4286dcc"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00177.html#abcf1b341a1f3d950a76f689ee4286dcc">Stop</a> ()</td></tr>
@@ -130,7 +130,7 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <tr class="separator:af4e390b604b7202edd1ddee6426ff6a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61e4d981b8e797abf6917b3a1ae3611b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61e4d981b8e797abf6917b3a1ae3611b"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00177.html#a61e4d981b8e797abf6917b3a1ae3611b">IsDelayedStartCalled</a> () const </td></tr>
-<tr class="memdesc:a61e4d981b8e797abf6917b3a1ae3611b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the <a class="el" href="a00177.html#ab87accfdac685351fde43278dca1fa1f" title="Called before the first update or fixed update. At this point all other components of the node should...">DelayedStart()</a> function has been called. <br/></td></tr>
+<tr class="memdesc:a61e4d981b8e797abf6917b3a1ae3611b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the <a class="el" href="a00177.html#ab87accfdac685351fde43278dca1fa1f" title="Called before the first update. At this point all other components of the node should exist...">DelayedStart()</a> function has been called. <br/></td></tr>
 <tr class="separator:a61e4d981b8e797abf6917b3a1ae3611b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7290eb9fff45aef56ae052ccc8e8b729"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7290eb9fff45aef56ae052ccc8e8b729"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00177.html#a7290eb9fff45aef56ae052ccc8e8b729">UpdateEventSubscription</a> ()</td></tr>
@@ -157,8 +157,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 Private Attributes</h2></td></tr>
 <tr class="memitem:a1b41f83a9fbbdc87bff8e957119121b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b41f83a9fbbdc87bff8e957119121b9"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00177.html#a1b41f83a9fbbdc87bff8e957119121b9">updateEventMask_</a></td></tr>
-<tr class="memdesc:a1b41f83a9fbbdc87bff8e957119121b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event subscription mask. <br/></td></tr>
+<tr class="memdesc:a1b41f83a9fbbdc87bff8e957119121b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requested event subscription mask. <br/></td></tr>
 <tr class="separator:a1b41f83a9fbbdc87bff8e957119121b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74f62f3d13de2527cd8654a66f37b6b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74f62f3d13de2527cd8654a66f37b6b0"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00177.html#a74f62f3d13de2527cd8654a66f37b6b0">currentEventMask_</a></td></tr>
+<tr class="memdesc:a74f62f3d13de2527cd8654a66f37b6b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current event subscription mask. <br/></td></tr>
+<tr class="separator:a74f62f3d13de2527cd8654a66f37b6b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affb1f1c6d9a287e4217bcbf6e9f8b442"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="affb1f1c6d9a287e4217bcbf6e9f8b442"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00177.html#affb1f1c6d9a287e4217bcbf6e9f8b442">delayedStartCalled_</a></td></tr>
 <tr class="memdesc:affb1f1c6d9a287e4217bcbf6e9f8b442"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag for delayed start. <br/></td></tr>
