@@ -120,14 +120,14 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00177.html#a9a1aea8b9587d193b8403d615833aa4a">FixedPostUpdate</a> (float timeStep)</td></tr>
 <tr class="memdesc:a9a1aea8b9587d193b8403d615833aa4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called on physics post-update, fixed timestep. <br/></td></tr>
 <tr class="separator:a9a1aea8b9587d193b8403d615833aa4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af42f3bb7f60afa886c4c6d13fe60b234"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af42f3bb7f60afa886c4c6d13fe60b234"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00177.html#af42f3bb7f60afa886c4c6d13fe60b234">SetUpdateEventMask</a> (unsigned mask)</td></tr>
-<tr class="memdesc:af42f3bb7f60afa886c4c6d13fe60b234"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set what update events should be subscribed to. Use this for optimization: by default all are in use. Note that this is not an attribute and is not saved or network-serialized, therefore it should always be called eg. in the subclass constructor. <br/></td></tr>
-<tr class="separator:af42f3bb7f60afa886c4c6d13fe60b234"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4e390b604b7202edd1ddee6426ff6a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af4e390b604b7202edd1ddee6426ff6a3"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00177.html#af4e390b604b7202edd1ddee6426ff6a3">GetUpdateEventMask</a> () const </td></tr>
-<tr class="memdesc:af4e390b604b7202edd1ddee6426ff6a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return what update events are subscribed to. <br/></td></tr>
-<tr class="separator:af4e390b604b7202edd1ddee6426ff6a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a736f44acab864066f1715c66bf586175"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a736f44acab864066f1715c66bf586175"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00177.html#a736f44acab864066f1715c66bf586175">SetUpdateEventMask</a> (unsigned char mask)</td></tr>
+<tr class="memdesc:a736f44acab864066f1715c66bf586175"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set what update events should be subscribed to. Use this for optimization: by default all are in use. Note that this is not an attribute and is not saved or network-serialized, therefore it should always be called eg. in the subclass constructor. <br/></td></tr>
+<tr class="separator:a736f44acab864066f1715c66bf586175"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8440aec06f3606241d6894c96f0aa314"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8440aec06f3606241d6894c96f0aa314"></a>
+unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00177.html#a8440aec06f3606241d6894c96f0aa314">GetUpdateEventMask</a> () const </td></tr>
+<tr class="memdesc:a8440aec06f3606241d6894c96f0aa314"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return what update events are subscribed to. <br/></td></tr>
+<tr class="separator:a8440aec06f3606241d6894c96f0aa314"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61e4d981b8e797abf6917b3a1ae3611b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61e4d981b8e797abf6917b3a1ae3611b"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00177.html#a61e4d981b8e797abf6917b3a1ae3611b">IsDelayedStartCalled</a> () const </td></tr>
 <tr class="memdesc:a61e4d981b8e797abf6917b3a1ae3611b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the <a class="el" href="a00177.html#ab87accfdac685351fde43278dca1fa1f" title="Called before the first update. At this point all other components of the node should exist...">DelayedStart()</a> function has been called. <br/></td></tr>
@@ -155,14 +155,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a1b41f83a9fbbdc87bff8e957119121b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b41f83a9fbbdc87bff8e957119121b9"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00177.html#a1b41f83a9fbbdc87bff8e957119121b9">updateEventMask_</a></td></tr>
-<tr class="memdesc:a1b41f83a9fbbdc87bff8e957119121b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requested event subscription mask. <br/></td></tr>
-<tr class="separator:a1b41f83a9fbbdc87bff8e957119121b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74f62f3d13de2527cd8654a66f37b6b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74f62f3d13de2527cd8654a66f37b6b0"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00177.html#a74f62f3d13de2527cd8654a66f37b6b0">currentEventMask_</a></td></tr>
-<tr class="memdesc:a74f62f3d13de2527cd8654a66f37b6b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current event subscription mask. <br/></td></tr>
-<tr class="separator:a74f62f3d13de2527cd8654a66f37b6b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f5d90395573cd01f155df566e631948"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f5d90395573cd01f155df566e631948"></a>
+unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00177.html#a0f5d90395573cd01f155df566e631948">updateEventMask_</a></td></tr>
+<tr class="memdesc:a0f5d90395573cd01f155df566e631948"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requested event subscription mask. <br/></td></tr>
+<tr class="separator:a0f5d90395573cd01f155df566e631948"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a08320111f7908b0105912352fd62b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a08320111f7908b0105912352fd62b9"></a>
+unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00177.html#a8a08320111f7908b0105912352fd62b9">currentEventMask_</a></td></tr>
+<tr class="memdesc:a8a08320111f7908b0105912352fd62b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current event subscription mask. <br/></td></tr>
+<tr class="separator:a8a08320111f7908b0105912352fd62b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affb1f1c6d9a287e4217bcbf6e9f8b442"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="affb1f1c6d9a287e4217bcbf6e9f8b442"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00177.html#affb1f1c6d9a287e4217bcbf6e9f8b442">delayedStartCalled_</a></td></tr>
 <tr class="memdesc:affb1f1c6d9a287e4217bcbf6e9f8b442"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag for delayed start. <br/></td></tr>
