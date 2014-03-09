@@ -23,7 +23,7 @@ title: Documentation
 <p>The other physics components are:</p>
 <ul>
 <li><a class="el" href="a00259.html" title="Physics rigid body component.">RigidBody</a>: a physics object instance. Its parameters include mass, linear/angular velocities, friction and restitution.</li>
-<li><a class="el" href="a00087.html" title="Physics collision shape component.">CollisionShape</a>: defines physics collision geometry. The supported shapes are box, sphere, cylinder, capsule, cone, triangle mesh, convex hull and heightfield terrain (requires the <a class="el" href="a00306.html" title="Heightmap terrain component.">Terrain</a> component in the same node.)</li>
+<li><a class="el" href="a00087.html" title="Physics collision shape component.">CollisionShape</a>: defines physics collision geometry. The supported shapes are box, sphere, cylinder, capsule, cone, triangle mesh, convex hull and heightfield terrain (requires the <a class="el" href="a00307.html" title="Heightmap terrain component.">Terrain</a> component in the same node.)</li>
 <li><a class="el" href="a00099.html" title="Physics constraint component. Connects two rigid bodies together, or one rigid body to a static point...">Constraint</a>: connects two RigidBodies together, or one <a class="el" href="a00259.html" title="Physics rigid body component.">RigidBody</a> to a static point in the world. Point, hinge, slider and cone twist constraints are supported.</li>
 </ul>
 <h1><a class="anchor" id="Physics_Movement"></a>
@@ -39,7 +39,7 @@ Movement and collision</h1>
 Constraint parameters</h1>
 <p>Constraint position (and rotation if relevant) need to be defined in relation to both connected bodies, see <a class="el" href="a00099.html#ad1407c23b8e6f5cef1039388d973c3fa">SetPosition()</a> and <a class="el" href="a00099.html#afd7cb84a78ab3d9baf45a192ac9042b9">SetOtherPosition()</a>. If the constraint connects a body to the static world, then the "other body position" and "other body rotation" mean the static end's transform in world space. There is also a helper function <a class="el" href="a00099.html#ae5de8e39bc413ddb0d3cf1292658bcb0">SetWorldPosition()</a> to assign the constraint to a world-space position; this sets both relative positions.</p>
 <p>Specifying the constraint's motion axis instead of rotation is provided as an alternative as it can be more intuitive, see <a class="el" href="a00099.html#a4ed9f415e1d759a99d02463a472033b4">SetAxis()</a>. However, by explicitly specifying a rotation you can be sure the constraint is oriented precisely as you want.</p>
-<p>Hinge, slider and cone twist constraints support defining limits for the motion. To be generic, these are encoded slightly unintuitively into <a class="el" href="a00329.html" title="Two-dimensional vector.">Vector2</a>'s. For a hinge constraint, the low and high limit X coordinates define the minimum and maximum angle in degrees. For example -45 to 45. For a slider constraint, the X coordinates define the maximum linear motion in world space units, and the Y coordinates define maximum angular motion in degrees. The cone twist constraint uses only the high limit to define the maximum angles (minimum angle is always -maximum) in the following manner: The X coordinate is the limit of the twist (main) axis, while Y is the limit of the swinging motion about the other axes.</p>
+<p>Hinge, slider and cone twist constraints support defining limits for the motion. To be generic, these are encoded slightly unintuitively into <a class="el" href="a00330.html" title="Two-dimensional vector.">Vector2</a>'s. For a hinge constraint, the low and high limit X coordinates define the minimum and maximum angle in degrees. For example -45 to 45. For a slider constraint, the X coordinates define the maximum linear motion in world space units, and the Y coordinates define maximum angular motion in degrees. The cone twist constraint uses only the high limit to define the maximum angles (minimum angle is always -maximum) in the following manner: The X coordinate is the limit of the twist (main) axis, while Y is the limit of the swinging motion about the other axes.</p>
 <h1><a class="anchor" id="Physics_Events"></a>
 Physics events</h1>
 <p>The physics world sends 8 types of events during its update step:</p>
@@ -54,10 +54,10 @@ Physics events</h1>
 <h1><a class="anchor" id="Physics_Collision"></a>
 Reading collision events</h1>
 <p>A new or ongoing physics collision event will report the collided scene nodes and rigid bodies, whether either of the bodies is a phantom, and the list of contact points.</p>
-<p>The contact points are encoded in a byte buffer, which can be read using the <a class="el" href="a00333.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a> or <a class="el" href="a00188.html" title="Memory area that can be read and written to as a stream.">MemoryBuffer</a> helper class. The following structure repeats for each contact:</p>
+<p>The contact points are encoded in a byte buffer, which can be read using the <a class="el" href="a00334.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a> or <a class="el" href="a00188.html" title="Memory area that can be read and written to as a stream.">MemoryBuffer</a> helper class. The following structure repeats for each contact:</p>
 <ul>
-<li>World-space position (<a class="el" href="a00330.html" title="Three-dimensional vector.">Vector3</a>)</li>
-<li>Normal vector (<a class="el" href="a00330.html" title="Three-dimensional vector.">Vector3</a>)</li>
+<li>World-space position (<a class="el" href="a00331.html" title="Three-dimensional vector.">Vector3</a>)</li>
+<li>Normal vector (<a class="el" href="a00331.html" title="Three-dimensional vector.">Vector3</a>)</li>
 <li>Distance, negative when interpenetrating (float)</li>
 <li>Impulse applied in collision (float)</li>
 </ul>

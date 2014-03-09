@@ -17,7 +17,7 @@ title: Documentation
 <div class="title">Multithreading </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Urho3D uses a task-based multithreading model. The <a class="el" href="a00344.html" title="Work queue subsystem for multithreading.">WorkQueue</a> subsystem can be supplied with tasks described by the <a class="el" href="a00343.html" title="Work queue item.">WorkItem</a> structure, by calling <a class="el" href="a00344.html#a582329d5f6712ee3963315a82e95b40e">AddWorkItem()</a>. These will be executed in background worker threads. The function <a class="el" href="a00344.html#a00cb4ea7cf4dce0e4b2c183bd952e739">Complete()</a> will complete all currently pending tasks, and execute them also in the main thread to make them finish faster.</p>
+<div class="textblock"><p>Urho3D uses a task-based multithreading model. The <a class="el" href="a00345.html" title="Work queue subsystem for multithreading.">WorkQueue</a> subsystem can be supplied with tasks described by the <a class="el" href="a00344.html" title="Work queue item.">WorkItem</a> structure, by calling <a class="el" href="a00345.html#a582329d5f6712ee3963315a82e95b40e">AddWorkItem()</a>. These will be executed in background worker threads. The function <a class="el" href="a00345.html#a00cb4ea7cf4dce0e4b2c183bd952e739">Complete()</a> will complete all currently pending tasks, and execute them also in the main thread to make them finish faster.</p>
 <p>On single-core systems no worker threads will be created, and tasks are immediately processed by the main thread instead. In the presence of more cores, a worker thread will be created for each hardware core except one which is reserved for the main thread. Hyperthreaded cores are not included, as creating worker threads also for them leads to unpredictable extra synchronization overhead.</p>
 <p>The work items include a function pointer to call, with the signature</p>
 <pre class="fragment">void WorkFunction(const WorkItem* item, unsigned threadIndex)
@@ -27,7 +27,7 @@ title: Documentation
 <ul>
 <li>Sending events</li>
 <li>Using profiler blocks</li>
-<li>Modifying scene or <a class="el" href="a00321.html" title="UI subsystem. Manages the graphical user interface.">UI</a> content</li>
+<li>Modifying scene or <a class="el" href="a00322.html" title="UI subsystem. Manages the graphical user interface.">UI</a> content</li>
 <li>Modifying GPU resources</li>
 <li>Requesting resources from <a class="el" href="a00255.html" title="Resource cache subsystem. Loads resources on demand and stores them for later access.">ResourceCache</a></li>
 <li>Executing script functions </li>

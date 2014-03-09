@@ -20,23 +20,24 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00242.html">RayQueryResult</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00140.html">FrustumOctreeQuery</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">Urho3D::RayQueryResult Member List</div>  </div>
+<div class="title">Urho3D::FrustumOctreeQuery Member List</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="a00242.html">Urho3D::RayQueryResult</a>, including all inherited members.</p>
+<p>This is the complete list of members for <a class="el" href="a00140.html">Urho3D::FrustumOctreeQuery</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a00242.html#a48ec7438ad7e3e4a4bb1a5b93582b8eb">distance_</a></td><td class="entry"><a class="el" href="a00242.html">Urho3D::RayQueryResult</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00242.html#aa6cf1605fa0dfc2017a57573afce1de8">drawable_</a></td><td class="entry"><a class="el" href="a00242.html">Urho3D::RayQueryResult</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00242.html#ae52c2e8ab4b1250cedce42fec9b2719b">node_</a></td><td class="entry"><a class="el" href="a00242.html">Urho3D::RayQueryResult</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00242.html#a94d74afd25a4aede5f5fab38b887261e">normal_</a></td><td class="entry"><a class="el" href="a00242.html">Urho3D::RayQueryResult</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00242.html#aab784e9be37560b0e319482f0004ab35">operator!=</a>(const RayQueryResult &amp;rhs) const </td><td class="entry"><a class="el" href="a00242.html">Urho3D::RayQueryResult</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a00242.html#a3639c0c1b9857cba19eccf53261019de">position_</a></td><td class="entry"><a class="el" href="a00242.html">Urho3D::RayQueryResult</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00242.html#a1b3e7a655ad248c700c891dd0fb2cbdd">RayQueryResult</a>()</td><td class="entry"><a class="el" href="a00242.html">Urho3D::RayQueryResult</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a00242.html#a7f595f6027f1cdfcdb1bc286c551ce04">subObject_</a></td><td class="entry"><a class="el" href="a00242.html">Urho3D::RayQueryResult</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00214.html#a4a3608064b9da6320a62b2c0db7b32e3">drawableFlags_</a></td><td class="entry"><a class="el" href="a00214.html">Urho3D::OctreeQuery</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="a00140.html#a96ed6e2ad30ad0c8f1a572917a6f67b3">frustum_</a></td><td class="entry"><a class="el" href="a00140.html">Urho3D::FrustumOctreeQuery</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00140.html#a0ada552c570e0bb2ec098ae11f10a16e">FrustumOctreeQuery</a>(PODVector&lt; Drawable * &gt; &amp;result, const Frustum &amp;frustum, unsigned char drawableFlags=DRAWABLE_ANY, unsigned viewMask=DEFAULT_VIEWMASK)</td><td class="entry"><a class="el" href="a00140.html">Urho3D::FrustumOctreeQuery</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="a00214.html#a263ee40b401403b8a2ab69cb0526dbb4">OctreeQuery</a>(PODVector&lt; Drawable * &gt; &amp;result, unsigned char drawableFlags, unsigned viewMask)</td><td class="entry"><a class="el" href="a00214.html">Urho3D::OctreeQuery</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00214.html#aa57c45fc937d6f1336f788361e82fdeb">result_</a></td><td class="entry"><a class="el" href="a00214.html">Urho3D::OctreeQuery</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="a00140.html#a57e8093db404c0d313c4fc96e0ed5363">TestDrawables</a>(Drawable **start, Drawable **end, bool inside)</td><td class="entry"><a class="el" href="a00140.html">Urho3D::FrustumOctreeQuery</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00140.html#add56acfcffe63c133fb4f334d3f1f74f">TestOctant</a>(const BoundingBox &amp;box, bool inside)</td><td class="entry"><a class="el" href="a00140.html">Urho3D::FrustumOctreeQuery</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="a00214.html#a8e6e7966103b4a5482ea36829027e2cd">viewMask_</a></td><td class="entry"><a class="el" href="a00214.html">Urho3D::OctreeQuery</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00214.html#ab0862c34a9759d51f96cc0d715e5815e">~OctreeQuery</a>()</td><td class="entry"><a class="el" href="a00214.html">Urho3D::OctreeQuery</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
