@@ -2779,6 +2779,7 @@ Classes</h1>
 <li>float LengthSquared() const</li>
 <li>float DotProduct(const Quaternion&amp; rhs) const</li>
 <li>bool Equals(const Quaternion&amp; rhs) const</li>
+<li>bool IsNaN() const</li>
 <li><a class="el" href="a00237.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> Conjugate() const</li>
 <li><a class="el" href="a00330.html" title="Three-dimensional vector.">Vector3</a> EulerAngles() const</li>
 <li>float YawAngle() const</li>
@@ -4606,6 +4607,7 @@ Classes</h1>
 <li><a class="el" href="a00329.html" title="Two-dimensional vector.">Vector2</a> Abs() const</li>
 <li><a class="el" href="a00329.html" title="Two-dimensional vector.">Vector2</a> Lerp(const Vector2&amp; rhs, float t) const</li>
 <li>bool Equals(const Vector2&amp; rhs) const</li>
+<li>bool IsNaN() const</li>
 <li><a class="el" href="a00329.html" title="Two-dimensional vector.">Vector2</a> Normalized() const</li>
 <li><a class="el" href="a00302.html" title="String class.">String</a> ToString() const</li>
 </ul>
@@ -4649,6 +4651,7 @@ Classes</h1>
 <li><a class="el" href="a00330.html" title="Three-dimensional vector.">Vector3</a> Abs() const</li>
 <li><a class="el" href="a00330.html" title="Three-dimensional vector.">Vector3</a> Lerp(const Vector3&amp; rhs, float t) const</li>
 <li>bool Equals(const Vector3&amp; rhs) const</li>
+<li>bool IsNaN() const</li>
 <li>float Angle(const Vector3&amp; rhs) const</li>
 <li><a class="el" href="a00330.html" title="Three-dimensional vector.">Vector3</a> Normalized() const</li>
 <li><a class="el" href="a00302.html" title="String class.">String</a> ToString() const</li>
@@ -4693,6 +4696,7 @@ Classes</h1>
 <li><a class="el" href="a00331.html" title="Four-dimensional vector.">Vector4</a> Abs() const</li>
 <li><a class="el" href="a00331.html" title="Four-dimensional vector.">Vector4</a> Lerp(const Vector4&amp; rhs, float t) const</li>
 <li>bool Equals(const Vector4&amp; rhs) const</li>
+<li>bool IsNaN() const</li>
 <li><a class="el" href="a00302.html" title="String class.">String</a> ToString() const</li>
 </ul>
 <p>Properties:</p>
@@ -5533,6 +5537,7 @@ Global functions</h1>
 <li>bool IsAbsolutePath(const String pathName)</li>
 <li>bool IsAlpha(unsigned ch)</li>
 <li>bool IsDigit(unsigned ch)</li>
+<li>bool IsNaN(float value)</li>
 <li>float Lerp(float lhs, float rhs, float t)</li>
 <li>float Max(float lhs, float rhs)</li>
 <li>float Min(float lhs, float rhs)</li>
@@ -5540,9 +5545,9 @@ Global functions</h1>
 <li>void PrintLine(const <a class="el" href="a00302.html" title="String class.">String</a> str, bool error = false)</li>
 <li>int Rand()</li>
 <li>float RandStandardNormal()</li>
+<li>float Random(float range)</li>
 <li>float Random()</li>
 <li>float Random(float min, float max)</li>
-<li>float Random(float range)</li>
 <li>int RandomInt(int range)</li>
 <li>int RandomInt(int min, int max)</li>
 <li>float RandomNormal(float meanValue, float variance)</li>
@@ -5572,8 +5577,8 @@ Global functions</h1>
 <li><a class="el" href="a00330.html" title="Three-dimensional vector.">Vector3</a> ToVector3(const String source)</li>
 <li><a class="el" href="a00331.html" title="Four-dimensional vector.">Vector4</a> ToVector4(const <a class="el" href="a00302.html" title="String class.">String</a> source, bool allowMissingCoords = false)</li>
 <li>void UnsubscribeFromAllEvents()</li>
-<li>void UnsubscribeFromEvent(const <a class="el" href="a00302.html" title="String class.">String</a> eventName, const <a class="el" href="a00302.html" title="String class.">String</a> functionName = <a class="el" href="a00302.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>)</li>
 <li>void UnsubscribeFromEvent(void* sender, const <a class="el" href="a00302.html" title="String class.">String</a> eventName, const <a class="el" href="a00302.html" title="String class.">String</a> functionName = <a class="el" href="a00302.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>)</li>
+<li>void UnsubscribeFromEvent(const <a class="el" href="a00302.html" title="String class.">String</a> eventName, const <a class="el" href="a00302.html" title="String class.">String</a> functionName = <a class="el" href="a00302.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>)</li>
 <li>void UnsubscribeFromEvents(void* sender)</li>
 </ul>
 <h1><a class="anchor" id="LuaScriptAPI_GlobalProperties"></a>
