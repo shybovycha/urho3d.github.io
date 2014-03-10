@@ -452,13 +452,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 <a class="el" href="a00351.html">Zone</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00121.html#a6a9a29bf4486cfe747d5e28cfa899de4">GetZone</a> () const </td></tr>
 <tr class="memdesc:a6a9a29bf4486cfe747d5e28cfa899de4 inherit pub_methods_a00121"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return current zone. <br/></td></tr>
 <tr class="separator:a6a9a29bf4486cfe747d5e28cfa899de4 inherit pub_methods_a00121"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec86e8d7beba10d7895e5a076d7c5d41 inherit pub_methods_a00121"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec86e8d7beba10d7895e5a076d7c5d41"></a>
-<a class="el" href="a00351.html">Zone</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00121.html#aec86e8d7beba10d7895e5a076d7c5d41">GetLastZone</a> () const </td></tr>
-<tr class="memdesc:aec86e8d7beba10d7895e5a076d7c5d41 inherit pub_methods_a00121"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return previous zone. <br/></td></tr>
-<tr class="separator:aec86e8d7beba10d7895e5a076d7c5d41 inherit pub_methods_a00121"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0057557abbbd2bba7dab0a834145b2b7 inherit pub_methods_a00121"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0057557abbbd2bba7dab0a834145b2b7"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00121.html#a0057557abbbd2bba7dab0a834145b2b7">IsZoneDirty</a> () const </td></tr>
-<tr class="memdesc:a0057557abbbd2bba7dab0a834145b2b7 inherit pub_methods_a00121"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return if zone assignment needs re-evaluation. <br/></td></tr>
+<tr class="memdesc:a0057557abbbd2bba7dab0a834145b2b7 inherit pub_methods_a00121"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether current zone is inconclusive or dirty due to the drawable moving. <br/></td></tr>
 <tr class="separator:a0057557abbbd2bba7dab0a834145b2b7 inherit pub_methods_a00121"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a185b8b60ec6a52321ce9466dfdf639d4 inherit pub_methods_a00121"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a185b8b60ec6a52321ce9466dfdf639d4"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00121.html#a185b8b60ec6a52321ce9466dfdf639d4">GetDistance</a> () const </td></tr>
@@ -861,6 +857,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00121.html#a0970ec46231bd524ec334ae90f52ac5a">OnMarkedDirty</a> (<a class="el" href="a00204.html">Node</a> *node)</td></tr>
 <tr class="memdesc:a0970ec46231bd524ec334ae90f52ac5a inherit pro_methods_a00121"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle node transform being dirtied. <br/></td></tr>
 <tr class="separator:a0970ec46231bd524ec334ae90f52ac5a inherit pro_methods_a00121"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ab23fcc436cde69fe74bfefa4ead968 inherit pro_methods_a00121"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ab23fcc436cde69fe74bfefa4ead968"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00121.html#a2ab23fcc436cde69fe74bfefa4ead968">OnRemoveFromOctree</a> ()</td></tr>
+<tr class="memdesc:a2ab23fcc436cde69fe74bfefa4ead968 inherit pro_methods_a00121"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle removal from octree. <br/></td></tr>
+<tr class="separator:a2ab23fcc436cde69fe74bfefa4ead968 inherit pro_methods_a00121"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adaacb5c93a02cfd9d662b167b0bae813 inherit pro_methods_a00121"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adaacb5c93a02cfd9d662b167b0bae813"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00121.html#adaacb5c93a02cfd9d662b167b0bae813">AddToOctree</a> ()</td></tr>
 <tr class="memdesc:adaacb5c93a02cfd9d662b167b0bae813 inherit pro_methods_a00121"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add to octree. <br/></td></tr>
@@ -1071,13 +1071,9 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <a class="el" href="a00351.html">Zone</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00121.html#af251651fa16a666b0ec11af053bf80aa">zone_</a></td></tr>
 <tr class="memdesc:af251651fa16a666b0ec11af053bf80aa inherit pro_attribs_a00121"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current zone. <br/></td></tr>
 <tr class="separator:af251651fa16a666b0ec11af053bf80aa inherit pro_attribs_a00121"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7ca493ed7fd69f47bf1c0bb104fa5fb inherit pro_attribs_a00121"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac7ca493ed7fd69f47bf1c0bb104fa5fb"></a>
-<a class="el" href="a00351.html">Zone</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00121.html#ac7ca493ed7fd69f47bf1c0bb104fa5fb">lastZone_</a></td></tr>
-<tr class="memdesc:ac7ca493ed7fd69f47bf1c0bb104fa5fb inherit pro_attribs_a00121"><td class="mdescLeft">&#160;</td><td class="mdescRight">Previous zone. <br/></td></tr>
-<tr class="separator:ac7ca493ed7fd69f47bf1c0bb104fa5fb inherit pro_attribs_a00121"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7871920deb048d9d675ad34c5874a00 inherit pro_attribs_a00121"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac7871920deb048d9d675ad34c5874a00"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00121.html#ac7871920deb048d9d675ad34c5874a00">zoneDirty_</a></td></tr>
-<tr class="memdesc:ac7871920deb048d9d675ad34c5874a00 inherit pro_attribs_a00121"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00351.html" title="Component that describes global rendering properties">Zone</a> assignment dirty flag. <br/></td></tr>
+<tr class="memdesc:ac7871920deb048d9d675ad34c5874a00 inherit pro_attribs_a00121"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00351.html" title="Component that describes global rendering properties">Zone</a> inconclusive or dirtied flag. <br/></td></tr>
 <tr class="separator:ac7871920deb048d9d675ad34c5874a00 inherit pro_attribs_a00121"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a405f8bb83f4d67e5c5f9af162175d7ec inherit pro_attribs_a00121"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a405f8bb83f4d67e5c5f9af162175d7ec"></a>
 <a class="el" href="a00150.html">HashSet</a>&lt; <a class="el" href="a00082.html">Camera</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00121.html#a405f8bb83f4d67e5c5f9af162175d7ec">viewCameras_</a></td></tr>
