@@ -1066,12 +1066,10 @@ Classes</h1>
 <h3><a class="el" href="a00122.html" title="Base class for 2D visible components.">Drawable2D</a> : <a class="el" href="a00121.html" title="Base class for visible components.">Drawable</a></h3>
 <p>Methods:</p>
 <ul>
-<li>void SetPixelsPerUnit(float pixelsPerUnit)</li>
 <li>void SetSprite(Sprite2D* sprite)</li>
 <li>void SetMaterial(Material* material)</li>
 <li>void SetBlendMode(BlendMode mode)</li>
 <li>void SetZValue(float zValue)</li>
-<li>float GetPixelsPerUnit() const</li>
 <li>Sprite2D* GetSprite() const</li>
 <li>Material* GetMaterial() const</li>
 <li>BlendMode GetBlendMode() const</li>
@@ -1079,7 +1077,6 @@ Classes</h1>
 </ul>
 <p>Properties:</p>
 <ul>
-<li>float pixelsPerUnit</li>
 <li>Sprite2D* sprite</li>
 <li>Material* material</li>
 <li>BlendMode blendMode</li>
@@ -3256,6 +3253,7 @@ Classes</h1>
 <li>void SetUpdateEnabled(bool enable)</li>
 <li>void SetTimeScale(float scale)</li>
 <li>void SetElapsedTime(float time)</li>
+<li>void SetUnitSize2D(float pixels)</li>
 <li>void SetSmoothingConstant(float constant)</li>
 <li>void SetSnapThreshold(float threshold)</li>
 <li>Node* GetNode(unsigned id) const</li>
@@ -3266,6 +3264,7 @@ Classes</h1>
 <li>unsigned GetChecksum() const</li>
 <li>float GetTimeScale() const</li>
 <li>float GetElapsedTime() const</li>
+<li>float GetUnitSize2D() const</li>
 <li>float GetSmoothingConstant() const</li>
 <li>float GetSnapThreshold() const</li>
 <li>const <a class="el" href="a00303.html" title="String class.">String</a> GetVarName(ShortStringHash hash) const</li>
@@ -3297,6 +3296,7 @@ Classes</h1>
 <li>unsigned checksum (readonly)</li>
 <li>float timeScale</li>
 <li>float elapsedTime</li>
+<li>float unitSize2D</li>
 <li>float smoothingConstant</li>
 <li>float snapThreshold</li>
 <li>bool threadedUpdate (readonly)</li>
