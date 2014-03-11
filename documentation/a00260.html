@@ -787,6 +787,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a002
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#a473c783c66c1bc0b497878bc787b1451">MarkReplicationDirty</a> ()</td></tr>
 <tr class="memdesc:a473c783c66c1bc0b497878bc787b1451 inherit pub_methods_a00204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark node dirty in scene replication states. <br/></td></tr>
 <tr class="separator:a473c783c66c1bc0b497878bc787b1451 inherit pub_methods_a00204"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6b7e8246ebdd15698b9835cdf5ec4aa inherit pub_methods_a00204"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6b7e8246ebdd15698b9835cdf5ec4aa"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#ad6b7e8246ebdd15698b9835cdf5ec4aa">MarkAllDrawable2DDirty</a> (bool markWorldBoundingBoxDirty=true)</td></tr>
+<tr class="memdesc:ad6b7e8246ebdd15698b9835cdf5ec4aa inherit pub_methods_a00204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark all <a class="el" href="a00122.html" title="Base class for 2D visible components.">Drawable2D</a> components attached to this node and its child nodes dirty. <br/></td></tr>
+<tr class="separator:ad6b7e8246ebdd15698b9835cdf5ec4aa inherit pub_methods_a00204"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80ae77a2e95cf617f51302177df08d06 inherit pub_methods_a00204"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80ae77a2e95cf617f51302177df08d06"></a>
 <a class="el" href="a00204.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#a80ae77a2e95cf617f51302177df08d06">CreateChild</a> (unsigned id, CreateMode mode)</td></tr>
 <tr class="memdesc:a80ae77a2e95cf617f51302177df08d06 inherit pub_methods_a00204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a child node with specific ID. <br/></td></tr>
@@ -1065,10 +1069,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a002
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00260.html#a7fe0a5186d3fba2185b5ea7431bb90b8">FinishSaving</a> (<a class="el" href="a00273.html">Serializer</a> *dest) const </td></tr>
 <tr class="memdesc:a7fe0a5186d3fba2185b5ea7431bb90b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finish saving. Sets the scene filename and checksum. <br/></td></tr>
 <tr class="separator:a7fe0a5186d3fba2185b5ea7431bb90b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3362a4fb2d44ca974cfe2d1deefc53f4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3362a4fb2d44ca974cfe2d1deefc53f4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00260.html#a3362a4fb2d44ca974cfe2d1deefc53f4">MarkAllDrawable2DDirty</a> (<a class="el" href="a00204.html">Node</a> *node)</td></tr>
-<tr class="memdesc:a3362a4fb2d44ca974cfe2d1deefc53f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark all <a class="el" href="a00122.html" title="Base class for 2D visible components.">Drawable2D</a> components attached to this node and its child nodes dirty. <br/></td></tr>
-<tr class="separator:a3362a4fb2d44ca974cfe2d1deefc53f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -1158,7 +1158,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00
 <tr class="separator:a6f751c7df7a64e8c0254c1790f4068cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7c0a1703e83cb99ad93bae0f18f499b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7c0a1703e83cb99ad93bae0f18f499b"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00260.html#af7c0a1703e83cb99ad93bae0f18f499b">pixelsPerUnit_</a></td></tr>
-<tr class="memdesc:af7c0a1703e83cb99ad93bae0f18f499b"><td class="mdescLeft">&#160;</td><td class="mdescRight">2D unit size representing the number of pixels per coordinate unit. <br/></td></tr>
+<tr class="memdesc:af7c0a1703e83cb99ad93bae0f18f499b"><td class="mdescLeft">&#160;</td><td class="mdescRight">2D pixels per unit. <br/></td></tr>
 <tr class="separator:af7c0a1703e83cb99ad93bae0f18f499b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a851adfcc92278b2260005138cff32988"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a851adfcc92278b2260005138cff32988"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00260.html#a851adfcc92278b2260005138cff32988">smoothingConstant_</a></td></tr>
