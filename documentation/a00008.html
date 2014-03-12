@@ -645,6 +645,7 @@ Classes</h1>
 <li>void Clip(bool clipAlpha = false)</li>
 <li>void Invert(bool invertAlpha = false)</li>
 <li><a class="el" href="a00088.html" title="RGBA color.">Color</a> Lerp(const Color&amp; rhs, float t) const</li>
+<li><a class="el" href="a00088.html" title="RGBA color.">Color</a> Abs() const</li>
 <li><a class="el" href="a00303.html" title="String class.">String</a> ToString() const</li>
 </ul>
 <p>Properties:</p>
@@ -1682,6 +1683,7 @@ Classes</h1>
 <li>Texture* GetRampTexture() const</li>
 <li>Texture* GetShapeTexture() const</li>
 <li><a class="el" href="a00139.html" title="Convex constructed of 6 planes.">Frustum</a> GetFrustum() const</li>
+<li>bool IsNegative() const</li>
 </ul>
 <p>Properties:</p>
 <ul>
@@ -1703,6 +1705,7 @@ Classes</h1>
 <li>Texture* rampTexture</li>
 <li>Texture* shapeTexture</li>
 <li><a class="el" href="a00139.html" title="Convex constructed of 6 planes.">Frustum</a> frustum (readonly)</li>
+<li>bool negative (readonly)</li>
 </ul>
 <h3><a class="el" href="a00169.html" title="Single-line text editor UI element.">LineEdit</a> : <a class="el" href="a00078.html" title="Image UI element with optional border.">BorderImage</a></h3>
 <p>Methods:</p>
@@ -5055,6 +5058,8 @@ Enumerations</h1>
 <li>int BLEND_ADDALPHA</li>
 <li>int BLEND_PREMULALPHA</li>
 <li>int BLEND_INVDESTALPHA</li>
+<li>int BLEND_SUBTRACT</li>
+<li>int BLEND_SUBTRACTALPHA</li>
 <li>int MAX_BLENDMODES</li>
 </ul>
 <h3>CollisionEventMode</h3>
