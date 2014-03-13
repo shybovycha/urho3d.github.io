@@ -20,37 +20,55 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00118.html">DepthValue</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00118.html">DelayedCall</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01034.html">List of all members</a>  </div>
+<a href="a01413.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::DepthValue Struct Reference</div>  </div>
+<div class="title">Urho3D::DelayedCall Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Occlusion hierarchy depth range.  
+<p>Delay-executed function or method call.  
  <a href="a00118.html#details">More...</a></p>
 
-<p><code>#include &lt;OcclusionBuffer.h&gt;</code></p>
+<p><code>#include &lt;ScriptEventListener.h&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Urho3D::DelayedCall:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a01414.svg" width="416" height="216"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a5347585a58cf3a4ebe16f48aee71bb58"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5347585a58cf3a4ebe16f48aee71bb58"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00118.html#a5347585a58cf3a4ebe16f48aee71bb58">min_</a></td></tr>
-<tr class="memdesc:a5347585a58cf3a4ebe16f48aee71bb58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum value. <br/></td></tr>
-<tr class="separator:a5347585a58cf3a4ebe16f48aee71bb58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeceb8de7d36abaecd64bdd448da0b8df"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeceb8de7d36abaecd64bdd448da0b8df"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00118.html#aeceb8de7d36abaecd64bdd448da0b8df">max_</a></td></tr>
-<tr class="memdesc:aeceb8de7d36abaecd64bdd448da0b8df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum value. <br/></td></tr>
-<tr class="separator:aeceb8de7d36abaecd64bdd448da0b8df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38ea48f8e32c595ec87b4b8be73269fa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38ea48f8e32c595ec87b4b8be73269fa"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00118.html#a38ea48f8e32c595ec87b4b8be73269fa">period_</a></td></tr>
+<tr class="memdesc:a38ea48f8e32c595ec87b4b8be73269fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Period for repeating calls. <br/></td></tr>
+<tr class="separator:a38ea48f8e32c595ec87b4b8be73269fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e2ca1aafb9a57a39ed4d60a009a6869"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e2ca1aafb9a57a39ed4d60a009a6869"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00118.html#a6e2ca1aafb9a57a39ed4d60a009a6869">delay_</a></td></tr>
+<tr class="memdesc:a6e2ca1aafb9a57a39ed4d60a009a6869"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delay time remaining until execution. <br/></td></tr>
+<tr class="separator:a6e2ca1aafb9a57a39ed4d60a009a6869"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab83bd0fa1a30e031dd5faebca193f71a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab83bd0fa1a30e031dd5faebca193f71a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00118.html#ab83bd0fa1a30e031dd5faebca193f71a">repeat_</a></td></tr>
+<tr class="memdesc:ab83bd0fa1a30e031dd5faebca193f71a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repeat flag. <br/></td></tr>
+<tr class="separator:ab83bd0fa1a30e031dd5faebca193f71a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab46ca8b5429cee8764348e97b4970b90"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab46ca8b5429cee8764348e97b4970b90"></a>
+<a class="el" href="a00307.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00118.html#ab46ca8b5429cee8764348e97b4970b90">declaration_</a></td></tr>
+<tr class="memdesc:ab46ca8b5429cee8764348e97b4970b90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function declaration. <br/></td></tr>
+<tr class="separator:ab46ca8b5429cee8764348e97b4970b90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5435381281fe7a7253594758b24a0d46"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5435381281fe7a7253594758b24a0d46"></a>
+<a class="el" href="a00333.html">VariantVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00118.html#a5435381281fe7a7253594758b24a0d46">parameters_</a></td></tr>
+<tr class="memdesc:a5435381281fe7a7253594758b24a0d46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameters. <br/></td></tr>
+<tr class="separator:a5435381281fe7a7253594758b24a0d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Occlusion hierarchy depth range. </p>
+<div class="textblock"><p>Delay-executed function or method call. </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/OcclusionBuffer.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Script/ScriptEventListener.h</li>
 </ul>
 </div><!-- contents -->
