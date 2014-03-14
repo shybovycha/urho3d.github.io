@@ -37,7 +37,7 @@ title: Documentation
 <li>In the script API, properties are used whenever appropriate instead of Set... and Get... functions. If the setter and getter require index parameters, the property will use array-style indexing, and its name will be in plural. For example model-&gt;SetMaterial(0, myMaterial) in C++ would become model.materials[0] = myMaterial in script.</li>
 </ul>
 <ul>
-<li>Raw pointers are used whenever possible in the classes' public API. This simplifies exposing functions &amp; classes to script, and is relatively safe, because <a class="el" href="a00285.html" title="Shared pointer template class with intrusive reference counting.">SharedPtr</a> &amp; <a class="el" href="a00346.html" title="Weak pointer template class with intrusive reference counting. Does not keep the object pointed to al...">WeakPtr</a> use intrusive reference counting.</li>
+<li>Raw pointers are used whenever possible in the classes' public API. This simplifies exposing functions &amp; classes to script, and is relatively safe, because <a class="el" href="a00286.html" title="Shared pointer template class with intrusive reference counting.">SharedPtr</a> &amp; <a class="el" href="a00347.html" title="Weak pointer template class with intrusive reference counting. Does not keep the object pointed to al...">WeakPtr</a> use intrusive reference counting.</li>
 </ul>
 <ul>
 <li>No C++ exceptions. Error return values (false / null pointer / dummy reference) are used instead. Script exceptions are used when there is no other sensible way, such as with out of bounds array access.</li>
