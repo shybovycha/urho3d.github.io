@@ -20,132 +20,131 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00244.html">Ray</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00244.html">ProfilerBlock</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01257.html">List of all members</a>  </div>
+<a href="a00923.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::Ray Class Reference</div>  </div>
+<div class="title">Urho3D::ProfilerBlock Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Infinite straight line in three-dimensional space.  
+<p>Profiling data for one block in the profiling tree.  
  <a href="a00244.html#details">More...</a></p>
 
-<p><code>#include &lt;Ray.h&gt;</code></p>
+<p><code>#include &lt;Profiler.h&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for Urho3D::Ray:</div>
+Collaboration diagram for Urho3D::ProfilerBlock:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a01258.svg" width="224" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00924.svg" width="368" height="235"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a530310fd7d8e66eb3d5f9ea188f129bb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a530310fd7d8e66eb3d5f9ea188f129bb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#a530310fd7d8e66eb3d5f9ea188f129bb">Ray</a> ()</td></tr>
-<tr class="memdesc:a530310fd7d8e66eb3d5f9ea188f129bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct undefined. <br/></td></tr>
-<tr class="separator:a530310fd7d8e66eb3d5f9ea188f129bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa74c386da4eacaacbb55c4309137a543"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa74c386da4eacaacbb55c4309137a543"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#aa74c386da4eacaacbb55c4309137a543">Ray</a> (const <a class="el" href="a00336.html">Vector3</a> &amp;origin, const <a class="el" href="a00336.html">Vector3</a> &amp;direction)</td></tr>
-<tr class="memdesc:aa74c386da4eacaacbb55c4309137a543"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from origin and direction. The direction will be normalized. <br/></td></tr>
-<tr class="separator:aa74c386da4eacaacbb55c4309137a543"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f8a3b8a7963da145951e0dbfd1b5bb9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f8a3b8a7963da145951e0dbfd1b5bb9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#a7f8a3b8a7963da145951e0dbfd1b5bb9">Ray</a> (const <a class="el" href="a00244.html">Ray</a> &amp;ray)</td></tr>
-<tr class="memdesc:a7f8a3b8a7963da145951e0dbfd1b5bb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy-construct from another ray. <br/></td></tr>
-<tr class="separator:a7f8a3b8a7963da145951e0dbfd1b5bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca7ded3b19959ed33cb5375318c0247a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca7ded3b19959ed33cb5375318c0247a"></a>
-<a class="el" href="a00244.html">Ray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#aca7ded3b19959ed33cb5375318c0247a">operator=</a> (const <a class="el" href="a00244.html">Ray</a> &amp;rhs)</td></tr>
-<tr class="memdesc:aca7ded3b19959ed33cb5375318c0247a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign from another ray. <br/></td></tr>
-<tr class="separator:aca7ded3b19959ed33cb5375318c0247a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3b4e1249c0d9304ca4abec8045d500d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3b4e1249c0d9304ca4abec8045d500d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#aa3b4e1249c0d9304ca4abec8045d500d">operator==</a> (const <a class="el" href="a00244.html">Ray</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:aa3b4e1249c0d9304ca4abec8045d500d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for equality with another ray. <br/></td></tr>
-<tr class="separator:aa3b4e1249c0d9304ca4abec8045d500d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43e1292016fb917b7bc4e4d6631349f5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43e1292016fb917b7bc4e4d6631349f5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#a43e1292016fb917b7bc4e4d6631349f5">operator!=</a> (const <a class="el" href="a00244.html">Ray</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:a43e1292016fb917b7bc4e4d6631349f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for inequality with another ray. <br/></td></tr>
-<tr class="separator:a43e1292016fb917b7bc4e4d6631349f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af567cd1a84949df6a4222e09f5c49a17"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af567cd1a84949df6a4222e09f5c49a17"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#af567cd1a84949df6a4222e09f5c49a17">Define</a> (const <a class="el" href="a00336.html">Vector3</a> &amp;origin, const <a class="el" href="a00336.html">Vector3</a> &amp;direction)</td></tr>
-<tr class="memdesc:af567cd1a84949df6a4222e09f5c49a17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define from origin and direction. The direction will be normalized. <br/></td></tr>
-<tr class="separator:af567cd1a84949df6a4222e09f5c49a17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a347ad848dec9b5bc03f036413e46ce9d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a347ad848dec9b5bc03f036413e46ce9d"></a>
-<a class="el" href="a00336.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#a347ad848dec9b5bc03f036413e46ce9d">Project</a> (const <a class="el" href="a00336.html">Vector3</a> &amp;point) const </td></tr>
-<tr class="memdesc:a347ad848dec9b5bc03f036413e46ce9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Project a point on the ray. <br/></td></tr>
-<tr class="separator:a347ad848dec9b5bc03f036413e46ce9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d2d15c771b885647e72370e1429b8f4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3d2d15c771b885647e72370e1429b8f4"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#a3d2d15c771b885647e72370e1429b8f4">Distance</a> (const <a class="el" href="a00336.html">Vector3</a> &amp;point) const </td></tr>
-<tr class="memdesc:a3d2d15c771b885647e72370e1429b8f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return distance of a point from the ray. <br/></td></tr>
-<tr class="separator:a3d2d15c771b885647e72370e1429b8f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dd8eaa6528c71e47bb4faae09bbf468"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2dd8eaa6528c71e47bb4faae09bbf468"></a>
-<a class="el" href="a00336.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#a2dd8eaa6528c71e47bb4faae09bbf468">ClosestPoint</a> (const <a class="el" href="a00244.html">Ray</a> &amp;ray) const </td></tr>
-<tr class="memdesc:a2dd8eaa6528c71e47bb4faae09bbf468"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return closest point to another ray. <br/></td></tr>
-<tr class="separator:a2dd8eaa6528c71e47bb4faae09bbf468"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac08d9b3eda57bec854f267860014a2b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac08d9b3eda57bec854f267860014a2b1"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#ac08d9b3eda57bec854f267860014a2b1">HitDistance</a> (const <a class="el" href="a00235.html">Plane</a> &amp;plane) const </td></tr>
-<tr class="memdesc:ac08d9b3eda57bec854f267860014a2b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hit distance to a plane, or infinity if no hit. <br/></td></tr>
-<tr class="separator:ac08d9b3eda57bec854f267860014a2b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e091b5f23a867eec6365085a43199e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e091b5f23a867eec6365085a43199e5"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#a0e091b5f23a867eec6365085a43199e5">HitDistance</a> (const <a class="el" href="a00079.html">BoundingBox</a> &amp;box) const </td></tr>
-<tr class="memdesc:a0e091b5f23a867eec6365085a43199e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hit distance to a bounding box, or infinity if no hit. <br/></td></tr>
-<tr class="separator:a0e091b5f23a867eec6365085a43199e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39bcb8ad2d879d8588b0ec2bff76d05b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a39bcb8ad2d879d8588b0ec2bff76d05b"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#a39bcb8ad2d879d8588b0ec2bff76d05b">HitDistance</a> (const <a class="el" href="a00142.html">Frustum</a> &amp;frustum, bool solidInside=true) const </td></tr>
-<tr class="memdesc:a39bcb8ad2d879d8588b0ec2bff76d05b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hit distance to a frustum, or infinity if no hit. If solidInside parameter is true (default) rays originating from inside return zero distance, otherwise the distance to the closest plane. <br/></td></tr>
-<tr class="separator:a39bcb8ad2d879d8588b0ec2bff76d05b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac031ab30e007afcdbbfcea7ebe4c83a7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac031ab30e007afcdbbfcea7ebe4c83a7"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#ac031ab30e007afcdbbfcea7ebe4c83a7">HitDistance</a> (const <a class="el" href="a00297.html">Sphere</a> &amp;sphere) const </td></tr>
-<tr class="memdesc:ac031ab30e007afcdbbfcea7ebe4c83a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hit distance to a sphere, or infinity if no hit. <br/></td></tr>
-<tr class="separator:ac031ab30e007afcdbbfcea7ebe4c83a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe9a0e5ed9f59abc8a6c8b212b5ec128"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe9a0e5ed9f59abc8a6c8b212b5ec128"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#abe9a0e5ed9f59abc8a6c8b212b5ec128">HitDistance</a> (const <a class="el" href="a00336.html">Vector3</a> &amp;v0, const <a class="el" href="a00336.html">Vector3</a> &amp;v1, const <a class="el" href="a00336.html">Vector3</a> &amp;v2) const </td></tr>
-<tr class="memdesc:abe9a0e5ed9f59abc8a6c8b212b5ec128"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hit distance to a triangle, or infinity if no hit. <br/></td></tr>
-<tr class="separator:abe9a0e5ed9f59abc8a6c8b212b5ec128"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a974bf82e2d539512fee784cf7d5da829"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a974bf82e2d539512fee784cf7d5da829"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#a974bf82e2d539512fee784cf7d5da829">HitDistance</a> (const <a class="el" href="a00336.html">Vector3</a> &amp;v0, const <a class="el" href="a00336.html">Vector3</a> &amp;v1, const <a class="el" href="a00336.html">Vector3</a> &amp;v2, <a class="el" href="a00336.html">Vector3</a> *outNormal) const </td></tr>
-<tr class="memdesc:a974bf82e2d539512fee784cf7d5da829"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hit distance to a triangle and out normal, or infinity if no hit. <br/></td></tr>
-<tr class="separator:a974bf82e2d539512fee784cf7d5da829"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e13ce21dbe45375535c92d0789ce3c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e13ce21dbe45375535c92d0789ce3c8"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#a8e13ce21dbe45375535c92d0789ce3c8">HitDistance</a> (const void *vertexData, unsigned vertexSize, unsigned vertexStart, unsigned vertexCount, <a class="el" href="a00336.html">Vector3</a> *outNormal=0) const </td></tr>
-<tr class="memdesc:a8e13ce21dbe45375535c92d0789ce3c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hit distance to non-indexed geometry data, or infinity if no hit. Optionally return normal. <br/></td></tr>
-<tr class="separator:a8e13ce21dbe45375535c92d0789ce3c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27a1169cf5316218a568b39d457d2a82"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a27a1169cf5316218a568b39d457d2a82"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#a27a1169cf5316218a568b39d457d2a82">HitDistance</a> (const void *vertexData, unsigned vertexSize, const void *indexData, unsigned indexSize, unsigned indexStart, unsigned indexCount, <a class="el" href="a00336.html">Vector3</a> *outNormal=0) const </td></tr>
-<tr class="memdesc:a27a1169cf5316218a568b39d457d2a82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hit distance to indexed geometry data, or infinity if no hit. <br/></td></tr>
-<tr class="separator:a27a1169cf5316218a568b39d457d2a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e86374817dc67be576742b1d4b1be2b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e86374817dc67be576742b1d4b1be2b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#a4e86374817dc67be576742b1d4b1be2b">InsideGeometry</a> (const void *vertexData, unsigned vertexSize, unsigned vertexStart, unsigned vertexCount) const </td></tr>
-<tr class="memdesc:a4e86374817dc67be576742b1d4b1be2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether ray is inside non-indexed geometry. <br/></td></tr>
-<tr class="separator:a4e86374817dc67be576742b1d4b1be2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4adfc71eded992408250a3bb4de2b081"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4adfc71eded992408250a3bb4de2b081"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#a4adfc71eded992408250a3bb4de2b081">InsideGeometry</a> (const void *vertexData, unsigned vertexSize, const void *indexData, unsigned indexSize, unsigned indexStart, unsigned indexCount) const </td></tr>
-<tr class="memdesc:a4adfc71eded992408250a3bb4de2b081"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether ray is inside indexed geometry. <br/></td></tr>
-<tr class="separator:a4adfc71eded992408250a3bb4de2b081"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53e94939c0a9be488d31b47dcf868220"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53e94939c0a9be488d31b47dcf868220"></a>
-<a class="el" href="a00244.html">Ray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#a53e94939c0a9be488d31b47dcf868220">Transformed</a> (const <a class="el" href="a00189.html">Matrix3x4</a> &amp;transform) const </td></tr>
-<tr class="memdesc:a53e94939c0a9be488d31b47dcf868220"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return transformed by a 3x4 matrix. This may result in a non-normalized direction. <br/></td></tr>
-<tr class="separator:a53e94939c0a9be488d31b47dcf868220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a516698323c0f1ce19ab6c500a81c778e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a516698323c0f1ce19ab6c500a81c778e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#a516698323c0f1ce19ab6c500a81c778e">ProfilerBlock</a> (<a class="el" href="a00244.html">ProfilerBlock</a> *parent, const char *name)</td></tr>
+<tr class="memdesc:a516698323c0f1ce19ab6c500a81c778e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with the specified parent block and name. <br/></td></tr>
+<tr class="separator:a516698323c0f1ce19ab6c500a81c778e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab36e78bd160e4de75ea098ab0d29c0ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab36e78bd160e4de75ea098ab0d29c0ac"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#ab36e78bd160e4de75ea098ab0d29c0ac">~ProfilerBlock</a> ()</td></tr>
+<tr class="memdesc:ab36e78bd160e4de75ea098ab0d29c0ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. Free the child blocks. <br/></td></tr>
+<tr class="separator:ab36e78bd160e4de75ea098ab0d29c0ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef764300901911171fe062e6b0d9ae51"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef764300901911171fe062e6b0d9ae51"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#aef764300901911171fe062e6b0d9ae51">Begin</a> ()</td></tr>
+<tr class="memdesc:aef764300901911171fe062e6b0d9ae51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin timing. <br/></td></tr>
+<tr class="separator:aef764300901911171fe062e6b0d9ae51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0efb14e2a34123af97a6c8991648a28f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0efb14e2a34123af97a6c8991648a28f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#a0efb14e2a34123af97a6c8991648a28f">End</a> ()</td></tr>
+<tr class="memdesc:a0efb14e2a34123af97a6c8991648a28f"><td class="mdescLeft">&#160;</td><td class="mdescRight">End timing. <br/></td></tr>
+<tr class="separator:a0efb14e2a34123af97a6c8991648a28f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9a4b7420b77dc301ce22ef97876c29d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa9a4b7420b77dc301ce22ef97876c29d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#aa9a4b7420b77dc301ce22ef97876c29d">EndFrame</a> ()</td></tr>
+<tr class="memdesc:aa9a4b7420b77dc301ce22ef97876c29d"><td class="mdescLeft">&#160;</td><td class="mdescRight">End profiling frame and update interval and total values. <br/></td></tr>
+<tr class="separator:aa9a4b7420b77dc301ce22ef97876c29d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accee8141ccd0aba0d99a6658268cf152"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="accee8141ccd0aba0d99a6658268cf152"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#accee8141ccd0aba0d99a6658268cf152">BeginInterval</a> ()</td></tr>
+<tr class="memdesc:accee8141ccd0aba0d99a6658268cf152"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin new profiling interval. <br/></td></tr>
+<tr class="separator:accee8141ccd0aba0d99a6658268cf152"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fc31ecdbea2a0e6b61434878239404c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3fc31ecdbea2a0e6b61434878239404c"></a>
+<a class="el" href="a00244.html">ProfilerBlock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#a3fc31ecdbea2a0e6b61434878239404c">GetChild</a> (const char *name)</td></tr>
+<tr class="memdesc:a3fc31ecdbea2a0e6b61434878239404c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return child block with the specified name. <br/></td></tr>
+<tr class="separator:a3fc31ecdbea2a0e6b61434878239404c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a27df032f7d802b4595ece1d70896d0e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a27df032f7d802b4595ece1d70896d0e5"></a>
-<a class="el" href="a00336.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#a27df032f7d802b4595ece1d70896d0e5">origin_</a></td></tr>
-<tr class="memdesc:a27df032f7d802b4595ece1d70896d0e5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00244.html" title="Infinite straight line in three-dimensional space.">Ray</a> origin. <br/></td></tr>
-<tr class="separator:a27df032f7d802b4595ece1d70896d0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d85bded5863ada8e089037714a21a78"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d85bded5863ada8e089037714a21a78"></a>
-<a class="el" href="a00336.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#a1d85bded5863ada8e089037714a21a78">direction_</a></td></tr>
-<tr class="memdesc:a1d85bded5863ada8e089037714a21a78"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00244.html" title="Infinite straight line in three-dimensional space.">Ray</a> direction. <br/></td></tr>
-<tr class="separator:a1d85bded5863ada8e089037714a21a78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54758c2737fea1a59cf6b2dcfcaeba81"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54758c2737fea1a59cf6b2dcfcaeba81"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#a54758c2737fea1a59cf6b2dcfcaeba81">name_</a></td></tr>
+<tr class="memdesc:a54758c2737fea1a59cf6b2dcfcaeba81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Block name. <br/></td></tr>
+<tr class="separator:a54758c2737fea1a59cf6b2dcfcaeba81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a630126e291b3b654e5769703b811bf74"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a630126e291b3b654e5769703b811bf74"></a>
+<a class="el" href="a00160.html">HiresTimer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#a630126e291b3b654e5769703b811bf74">timer_</a></td></tr>
+<tr class="memdesc:a630126e291b3b654e5769703b811bf74"><td class="mdescLeft">&#160;</td><td class="mdescRight">High-resolution timer for measuring the block duration. <br/></td></tr>
+<tr class="separator:a630126e291b3b654e5769703b811bf74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac12ca17f5ece5240d5f8f5240c1bc067"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac12ca17f5ece5240d5f8f5240c1bc067"></a>
+long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#ac12ca17f5ece5240d5f8f5240c1bc067">time_</a></td></tr>
+<tr class="memdesc:ac12ca17f5ece5240d5f8f5240c1bc067"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00326.html" title="Time and frame counter subsystem.">Time</a> on current frame. <br/></td></tr>
+<tr class="separator:ac12ca17f5ece5240d5f8f5240c1bc067"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc164077850e2894a16182f6a56215ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc164077850e2894a16182f6a56215ac"></a>
+long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#adc164077850e2894a16182f6a56215ac">maxTime_</a></td></tr>
+<tr class="memdesc:adc164077850e2894a16182f6a56215ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum time on current frame. <br/></td></tr>
+<tr class="separator:adc164077850e2894a16182f6a56215ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d29569cc2f428122e8848280ff502b6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d29569cc2f428122e8848280ff502b6"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#a0d29569cc2f428122e8848280ff502b6">count_</a></td></tr>
+<tr class="memdesc:a0d29569cc2f428122e8848280ff502b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls on current frame. <br/></td></tr>
+<tr class="separator:a0d29569cc2f428122e8848280ff502b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a747ab5d66ab890cdede1a34819c578bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a747ab5d66ab890cdede1a34819c578bc"></a>
+<a class="el" href="a00244.html">ProfilerBlock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#a747ab5d66ab890cdede1a34819c578bc">parent_</a></td></tr>
+<tr class="memdesc:a747ab5d66ab890cdede1a34819c578bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parent block. <br/></td></tr>
+<tr class="separator:a747ab5d66ab890cdede1a34819c578bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a474255fee7b3a2b477aa43b33125f1d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a474255fee7b3a2b477aa43b33125f1d8"></a>
+<a class="el" href="a00240.html">PODVector</a>&lt; <a class="el" href="a00244.html">ProfilerBlock</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#a474255fee7b3a2b477aa43b33125f1d8">children_</a></td></tr>
+<tr class="memdesc:a474255fee7b3a2b477aa43b33125f1d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Child blocks. <br/></td></tr>
+<tr class="separator:a474255fee7b3a2b477aa43b33125f1d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f40ae76aa9e70cfd3da0277745af588"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f40ae76aa9e70cfd3da0277745af588"></a>
+long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#a0f40ae76aa9e70cfd3da0277745af588">frameTime_</a></td></tr>
+<tr class="memdesc:a0f40ae76aa9e70cfd3da0277745af588"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00326.html" title="Time and frame counter subsystem.">Time</a> on the previous frame. <br/></td></tr>
+<tr class="separator:a0f40ae76aa9e70cfd3da0277745af588"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d36f8c52079288631105899c37e8685"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d36f8c52079288631105899c37e8685"></a>
+long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#a9d36f8c52079288631105899c37e8685">frameMaxTime_</a></td></tr>
+<tr class="memdesc:a9d36f8c52079288631105899c37e8685"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum time on the previous frame. <br/></td></tr>
+<tr class="separator:a9d36f8c52079288631105899c37e8685"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16ac68075f32348285d3f6016b00d17d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a16ac68075f32348285d3f6016b00d17d"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#a16ac68075f32348285d3f6016b00d17d">frameCount_</a></td></tr>
+<tr class="memdesc:a16ac68075f32348285d3f6016b00d17d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls on the previous frame. <br/></td></tr>
+<tr class="separator:a16ac68075f32348285d3f6016b00d17d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfb8cff1cd18d5635fb10f081314ac93"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acfb8cff1cd18d5635fb10f081314ac93"></a>
+long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#acfb8cff1cd18d5635fb10f081314ac93">intervalTime_</a></td></tr>
+<tr class="memdesc:acfb8cff1cd18d5635fb10f081314ac93"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00326.html" title="Time and frame counter subsystem.">Time</a> during current profiler interval. <br/></td></tr>
+<tr class="separator:acfb8cff1cd18d5635fb10f081314ac93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad918ab70f24f1e73377aa481be6b22b6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad918ab70f24f1e73377aa481be6b22b6"></a>
+long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#ad918ab70f24f1e73377aa481be6b22b6">intervalMaxTime_</a></td></tr>
+<tr class="memdesc:ad918ab70f24f1e73377aa481be6b22b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum time during current profiler interval. <br/></td></tr>
+<tr class="separator:ad918ab70f24f1e73377aa481be6b22b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73b2f2f762be7f4c4fab74c40f21838f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73b2f2f762be7f4c4fab74c40f21838f"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#a73b2f2f762be7f4c4fab74c40f21838f">intervalCount_</a></td></tr>
+<tr class="memdesc:a73b2f2f762be7f4c4fab74c40f21838f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls during current profiler interval. <br/></td></tr>
+<tr class="separator:a73b2f2f762be7f4c4fab74c40f21838f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd4e61b648d70890219aa73e8c35c3a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd4e61b648d70890219aa73e8c35c3a4"></a>
+long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#abd4e61b648d70890219aa73e8c35c3a4">totalTime_</a></td></tr>
+<tr class="memdesc:abd4e61b648d70890219aa73e8c35c3a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total accumulated time. <br/></td></tr>
+<tr class="separator:abd4e61b648d70890219aa73e8c35c3a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18c8f44fb4d87830ded860dcc4632b9e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18c8f44fb4d87830ded860dcc4632b9e"></a>
+long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#a18c8f44fb4d87830ded860dcc4632b9e">totalMaxTime_</a></td></tr>
+<tr class="memdesc:a18c8f44fb4d87830ded860dcc4632b9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">All-time maximum time. <br/></td></tr>
+<tr class="separator:a18c8f44fb4d87830ded860dcc4632b9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1bbe4e384aad76096209d1fea40ef01"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac1bbe4e384aad76096209d1fea40ef01"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00244.html#ac1bbe4e384aad76096209d1fea40ef01">totalCount_</a></td></tr>
+<tr class="memdesc:ac1bbe4e384aad76096209d1fea40ef01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total accumulated calls. <br/></td></tr>
+<tr class="separator:ac1bbe4e384aad76096209d1fea40ef01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Infinite straight line in three-dimensional space. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Math/Ray.h</li>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Math/Ray.cpp</li>
+<div class="textblock"><p>Profiling data for one block in the profiling tree. </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Core/Profiler.h</li>
 </ul>
 </div><!-- contents -->

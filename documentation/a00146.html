@@ -20,102 +20,124 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00146.html">GPUObject</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00146.html">Frustum</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="a01085.html">List of all members</a>  </div>
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="a01255.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::GPUObject Class Reference</div>  </div>
+<div class="title">Urho3D::Frustum Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Base class for GPU resources.  
+<p>Convex constructed of 6 planes.  
  <a href="a00146.html#details">More...</a></p>
 
-<p><code>#include &lt;OGLGPUObject.h&gt;</code></p>
+<p><code>#include &lt;Frustum.h&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Urho3D::GPUObject:</div>
+Collaboration diagram for Urho3D::Frustum:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a01086.svg" width="598" height="254"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for Urho3D::GPUObject:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01087.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a01256.svg" width="276" height="358"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a403872d965887004f1021405870ff865"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a403872d965887004f1021405870ff865"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#a403872d965887004f1021405870ff865">GPUObject</a> (<a class="el" href="a00147.html">Graphics</a> *graphics)</td></tr>
-<tr class="memdesc:a403872d965887004f1021405870ff865"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with graphics subsystem pointer. <br/></td></tr>
-<tr class="separator:a403872d965887004f1021405870ff865"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a818ceaf4f9debc5f4233f2e265d0cf42"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a818ceaf4f9debc5f4233f2e265d0cf42"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#a818ceaf4f9debc5f4233f2e265d0cf42">~GPUObject</a> ()</td></tr>
-<tr class="memdesc:a818ceaf4f9debc5f4233f2e265d0cf42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. Remove from the <a class="el" href="a00147.html" title="Graphics subsystem. Manages the application window, rendering state and GPU resources.">Graphics</a>. <br/></td></tr>
-<tr class="separator:a818ceaf4f9debc5f4233f2e265d0cf42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a054b2b9d1ac58c3dc81866bb7db6761a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a054b2b9d1ac58c3dc81866bb7db6761a"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#a054b2b9d1ac58c3dc81866bb7db6761a">OnDeviceLost</a> ()</td></tr>
-<tr class="memdesc:a054b2b9d1ac58c3dc81866bb7db6761a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark the GPU resource destroyed on context destruction. <br/></td></tr>
-<tr class="separator:a054b2b9d1ac58c3dc81866bb7db6761a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18ab28f33620594506eeb2c5fe168106"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18ab28f33620594506eeb2c5fe168106"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#a18ab28f33620594506eeb2c5fe168106">OnDeviceReset</a> ()</td></tr>
-<tr class="memdesc:a18ab28f33620594506eeb2c5fe168106"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recreate the GPU resource and restore data if applicable. <br/></td></tr>
-<tr class="separator:a18ab28f33620594506eeb2c5fe168106"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86d97d51d21841b9c057baee19a17a30"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86d97d51d21841b9c057baee19a17a30"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#a86d97d51d21841b9c057baee19a17a30">Release</a> ()</td></tr>
-<tr class="memdesc:a86d97d51d21841b9c057baee19a17a30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unconditionally release the GPU resource. <br/></td></tr>
-<tr class="separator:a86d97d51d21841b9c057baee19a17a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90de5fa07e164d6b5e95f832a0741088"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a90de5fa07e164d6b5e95f832a0741088"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#a90de5fa07e164d6b5e95f832a0741088">ClearDataLost</a> ()</td></tr>
-<tr class="memdesc:a90de5fa07e164d6b5e95f832a0741088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the data lost flag. <br/></td></tr>
-<tr class="separator:a90de5fa07e164d6b5e95f832a0741088"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada0cc0adf6cc06940102d64be88b9d4b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada0cc0adf6cc06940102d64be88b9d4b"></a>
-<a class="el" href="a00147.html">Graphics</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#ada0cc0adf6cc06940102d64be88b9d4b">GetGraphics</a> () const </td></tr>
-<tr class="memdesc:ada0cc0adf6cc06940102d64be88b9d4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the graphics subsystem. <br/></td></tr>
-<tr class="separator:ada0cc0adf6cc06940102d64be88b9d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc3aa11294b3d788965f299ca9bfb81c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc3aa11294b3d788965f299ca9bfb81c"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#acc3aa11294b3d788965f299ca9bfb81c">GetGPUObject</a> () const </td></tr>
-<tr class="memdesc:acc3aa11294b3d788965f299ca9bfb81c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the object's OpenGL handle. <br/></td></tr>
-<tr class="separator:acc3aa11294b3d788965f299ca9bfb81c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcfd2ec12501214e6f78bb0ce2fee6d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afcfd2ec12501214e6f78bb0ce2fee6d5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#afcfd2ec12501214e6f78bb0ce2fee6d5">IsDataLost</a> () const </td></tr>
-<tr class="memdesc:afcfd2ec12501214e6f78bb0ce2fee6d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether data is lost due to context loss. <br/></td></tr>
-<tr class="separator:afcfd2ec12501214e6f78bb0ce2fee6d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04fece8be486f0b627364667159d823c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04fece8be486f0b627364667159d823c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#a04fece8be486f0b627364667159d823c">HasPendingData</a> () const </td></tr>
-<tr class="memdesc:a04fece8be486f0b627364667159d823c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether has pending data assigned while context was lost. <br/></td></tr>
-<tr class="separator:a04fece8be486f0b627364667159d823c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad56dc96d7233aa8dbbe53c1da415321a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad56dc96d7233aa8dbbe53c1da415321a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#ad56dc96d7233aa8dbbe53c1da415321a">Frustum</a> ()</td></tr>
+<tr class="memdesc:ad56dc96d7233aa8dbbe53c1da415321a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct undefined. <br/></td></tr>
+<tr class="separator:ad56dc96d7233aa8dbbe53c1da415321a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11cda273088aa1005c01452aa37f3988"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11cda273088aa1005c01452aa37f3988"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#a11cda273088aa1005c01452aa37f3988">Frustum</a> (const <a class="el" href="a00146.html">Frustum</a> &amp;frustum)</td></tr>
+<tr class="memdesc:a11cda273088aa1005c01452aa37f3988"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy-construct from another frustum. <br/></td></tr>
+<tr class="separator:a11cda273088aa1005c01452aa37f3988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6adc3e6a1411604ffe26996547e773a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6adc3e6a1411604ffe26996547e773a6"></a>
+<a class="el" href="a00146.html">Frustum</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#a6adc3e6a1411604ffe26996547e773a6">operator=</a> (const <a class="el" href="a00146.html">Frustum</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a6adc3e6a1411604ffe26996547e773a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign from another frustum. <br/></td></tr>
+<tr class="separator:a6adc3e6a1411604ffe26996547e773a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3bb6685c4a3500651952fe03e6442ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3bb6685c4a3500651952fe03e6442ae"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#ae3bb6685c4a3500651952fe03e6442ae">Define</a> (float fov, float aspectRatio, float zoom, float nearZ, float farZ, const <a class="el" href="a00193.html">Matrix3x4</a> &amp;transform=<a class="el" href="a00193.html#a65b89ad9e47464af65f0aab7fe97925e">Matrix3x4::IDENTITY</a>)</td></tr>
+<tr class="memdesc:ae3bb6685c4a3500651952fe03e6442ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define with projection parameters and a transform matrix. <br/></td></tr>
+<tr class="separator:ae3bb6685c4a3500651952fe03e6442ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fcfe23df000e5b21b13388bf73c6317"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4fcfe23df000e5b21b13388bf73c6317"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#a4fcfe23df000e5b21b13388bf73c6317">Define</a> (const <a class="el" href="a00340.html">Vector3</a> &amp;near, const <a class="el" href="a00340.html">Vector3</a> &amp;far, const <a class="el" href="a00193.html">Matrix3x4</a> &amp;transform=<a class="el" href="a00193.html#a65b89ad9e47464af65f0aab7fe97925e">Matrix3x4::IDENTITY</a>)</td></tr>
+<tr class="memdesc:a4fcfe23df000e5b21b13388bf73c6317"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define with near and far dimension vectors and a transform matrix. <br/></td></tr>
+<tr class="separator:a4fcfe23df000e5b21b13388bf73c6317"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa154760635981c73c7675510183a1ad1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa154760635981c73c7675510183a1ad1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#aa154760635981c73c7675510183a1ad1">Define</a> (const <a class="el" href="a00079.html">BoundingBox</a> &amp;box, const <a class="el" href="a00193.html">Matrix3x4</a> &amp;transform=<a class="el" href="a00193.html#a65b89ad9e47464af65f0aab7fe97925e">Matrix3x4::IDENTITY</a>)</td></tr>
+<tr class="memdesc:aa154760635981c73c7675510183a1ad1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define with a bounding box and a transform matrix. <br/></td></tr>
+<tr class="separator:aa154760635981c73c7675510183a1ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca09b9b4205607926beb618374834762"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca09b9b4205607926beb618374834762"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#aca09b9b4205607926beb618374834762">DefineOrtho</a> (float orthoSize, float aspectRatio, float zoom, float nearZ, float farZ, const <a class="el" href="a00193.html">Matrix3x4</a> &amp;transform=<a class="el" href="a00193.html#a65b89ad9e47464af65f0aab7fe97925e">Matrix3x4::IDENTITY</a>)</td></tr>
+<tr class="memdesc:aca09b9b4205607926beb618374834762"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define with orthographic projection parameters and a transform matrix. <br/></td></tr>
+<tr class="separator:aca09b9b4205607926beb618374834762"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dead6563421f64027342b6467424ff5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9dead6563421f64027342b6467424ff5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#a9dead6563421f64027342b6467424ff5">Transform</a> (const <a class="el" href="a00192.html">Matrix3</a> &amp;transform)</td></tr>
+<tr class="memdesc:a9dead6563421f64027342b6467424ff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform by a 3x3 matrix. <br/></td></tr>
+<tr class="separator:a9dead6563421f64027342b6467424ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae01df4b2f60fae6e716ebf5df506426c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae01df4b2f60fae6e716ebf5df506426c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#ae01df4b2f60fae6e716ebf5df506426c">Transform</a> (const <a class="el" href="a00193.html">Matrix3x4</a> &amp;transform)</td></tr>
+<tr class="memdesc:ae01df4b2f60fae6e716ebf5df506426c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform by a 3x4 matrix. <br/></td></tr>
+<tr class="separator:ae01df4b2f60fae6e716ebf5df506426c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab17e3ded4330a24676ab8ffcfd42c3b7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab17e3ded4330a24676ab8ffcfd42c3b7"></a>
+Intersection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#ab17e3ded4330a24676ab8ffcfd42c3b7">IsInside</a> (const <a class="el" href="a00340.html">Vector3</a> &amp;point) const </td></tr>
+<tr class="memdesc:ab17e3ded4330a24676ab8ffcfd42c3b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if a point is inside or outside. <br/></td></tr>
+<tr class="separator:ab17e3ded4330a24676ab8ffcfd42c3b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a301a50ae5506bc672e396f4cefbefd79"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a301a50ae5506bc672e396f4cefbefd79"></a>
+Intersection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#a301a50ae5506bc672e396f4cefbefd79">IsInside</a> (const <a class="el" href="a00301.html">Sphere</a> &amp;sphere) const </td></tr>
+<tr class="memdesc:a301a50ae5506bc672e396f4cefbefd79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if a sphere is inside, outside or intersects. <br/></td></tr>
+<tr class="separator:a301a50ae5506bc672e396f4cefbefd79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48df64ed4b98657647b45a96e293cd97"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a48df64ed4b98657647b45a96e293cd97"></a>
+Intersection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#a48df64ed4b98657647b45a96e293cd97">IsInsideFast</a> (const <a class="el" href="a00301.html">Sphere</a> &amp;sphere) const </td></tr>
+<tr class="memdesc:a48df64ed4b98657647b45a96e293cd97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if a sphere if (partially) inside or outside. <br/></td></tr>
+<tr class="separator:a48df64ed4b98657647b45a96e293cd97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae756b6d93575d58546ec6d3baf2590ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae756b6d93575d58546ec6d3baf2590ba"></a>
+Intersection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#ae756b6d93575d58546ec6d3baf2590ba">IsInside</a> (const <a class="el" href="a00079.html">BoundingBox</a> &amp;box) const </td></tr>
+<tr class="memdesc:ae756b6d93575d58546ec6d3baf2590ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if a bounding box is inside, outside or intersects. <br/></td></tr>
+<tr class="separator:ae756b6d93575d58546ec6d3baf2590ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2339261ab11f940f481ac3cf95915867"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2339261ab11f940f481ac3cf95915867"></a>
+Intersection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#a2339261ab11f940f481ac3cf95915867">IsInsideFast</a> (const <a class="el" href="a00079.html">BoundingBox</a> &amp;box) const </td></tr>
+<tr class="memdesc:a2339261ab11f940f481ac3cf95915867"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if a bounding box is (partially) inside or outside. <br/></td></tr>
+<tr class="separator:a2339261ab11f940f481ac3cf95915867"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83ec1c0d1884707c7894a5c99851eb69"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a83ec1c0d1884707c7894a5c99851eb69"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#a83ec1c0d1884707c7894a5c99851eb69">Distance</a> (const <a class="el" href="a00340.html">Vector3</a> &amp;point) const </td></tr>
+<tr class="memdesc:a83ec1c0d1884707c7894a5c99851eb69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return distance of a point to the frustum, or 0 if inside. <br/></td></tr>
+<tr class="separator:a83ec1c0d1884707c7894a5c99851eb69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d92b5a77b61ecfe80b3e1294656c6ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d92b5a77b61ecfe80b3e1294656c6ad"></a>
+<a class="el" href="a00146.html">Frustum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#a6d92b5a77b61ecfe80b3e1294656c6ad">Transformed</a> (const <a class="el" href="a00192.html">Matrix3</a> &amp;transform) const </td></tr>
+<tr class="memdesc:a6d92b5a77b61ecfe80b3e1294656c6ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return transformed by a 3x3 matrix. <br/></td></tr>
+<tr class="separator:a6d92b5a77b61ecfe80b3e1294656c6ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a231c45c6c6c814fff5b7ffae06c47cfb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a231c45c6c6c814fff5b7ffae06c47cfb"></a>
+<a class="el" href="a00146.html">Frustum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#a231c45c6c6c814fff5b7ffae06c47cfb">Transformed</a> (const <a class="el" href="a00193.html">Matrix3x4</a> &amp;transform) const </td></tr>
+<tr class="memdesc:a231c45c6c6c814fff5b7ffae06c47cfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return transformed by a 3x4 matrix. <br/></td></tr>
+<tr class="separator:a231c45c6c6c814fff5b7ffae06c47cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51deaeeee32310d4bec6d95ab59111be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a51deaeeee32310d4bec6d95ab59111be"></a>
+<a class="el" href="a00251.html">Rect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#a51deaeeee32310d4bec6d95ab59111be">Projected</a> (const <a class="el" href="a00194.html">Matrix4</a> &amp;transform) const </td></tr>
+<tr class="memdesc:a51deaeeee32310d4bec6d95ab59111be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return projected by a 4x4 projection matrix. <br/></td></tr>
+<tr class="separator:a51deaeeee32310d4bec6d95ab59111be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07e681ce8be0bf8746b0e2630bf38582"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a07e681ce8be0bf8746b0e2630bf38582"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#a07e681ce8be0bf8746b0e2630bf38582">UpdatePlanes</a> ()</td></tr>
+<tr class="memdesc:a07e681ce8be0bf8746b0e2630bf38582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the planes. Called internally. <br/></td></tr>
+<tr class="separator:a07e681ce8be0bf8746b0e2630bf38582"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:abf1a902885d2c3bac02f3f58e0e0f037"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf1a902885d2c3bac02f3f58e0e0f037"></a>
-<a class="el" href="a00347.html">WeakPtr</a>&lt; <a class="el" href="a00147.html">Graphics</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#abf1a902885d2c3bac02f3f58e0e0f037">graphics_</a></td></tr>
-<tr class="memdesc:abf1a902885d2c3bac02f3f58e0e0f037"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00147.html" title="Graphics subsystem. Manages the application window, rendering state and GPU resources.">Graphics</a> subsystem. <br/></td></tr>
-<tr class="separator:abf1a902885d2c3bac02f3f58e0e0f037"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a601debebd01ef73fa6f40c818232330e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a601debebd01ef73fa6f40c818232330e"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#a601debebd01ef73fa6f40c818232330e">object_</a></td></tr>
-<tr class="memdesc:a601debebd01ef73fa6f40c818232330e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00211.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a> handle. <br/></td></tr>
-<tr class="separator:a601debebd01ef73fa6f40c818232330e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6c82e62ca8b1098c4157acfe517c772"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6c82e62ca8b1098c4157acfe517c772"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#ab6c82e62ca8b1098c4157acfe517c772">dataLost_</a></td></tr>
-<tr class="memdesc:ab6c82e62ca8b1098c4157acfe517c772"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data lost flag. <br/></td></tr>
-<tr class="separator:ab6c82e62ca8b1098c4157acfe517c772"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada5a50cf10c6f65deb6b273bfc1649ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada5a50cf10c6f65deb6b273bfc1649ab"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#ada5a50cf10c6f65deb6b273bfc1649ab">dataPending_</a></td></tr>
-<tr class="memdesc:ada5a50cf10c6f65deb6b273bfc1649ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data pending flag. <br/></td></tr>
-<tr class="separator:ada5a50cf10c6f65deb6b273bfc1649ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ab58d2be5045f5ebaed8ee3eb8264bb7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab58d2be5045f5ebaed8ee3eb8264bb7d"></a>
+<a class="el" href="a00239.html">Plane</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#ab58d2be5045f5ebaed8ee3eb8264bb7d">planes_</a> [NUM_FRUSTUM_PLANES]</td></tr>
+<tr class="memdesc:ab58d2be5045f5ebaed8ee3eb8264bb7d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00146.html" title="Convex constructed of 6 planes.">Frustum</a> planes. <br/></td></tr>
+<tr class="separator:ab58d2be5045f5ebaed8ee3eb8264bb7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aec29ebcd80924df428000f1fde0e3f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1aec29ebcd80924df428000f1fde0e3f"></a>
+<a class="el" href="a00340.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#a1aec29ebcd80924df428000f1fde0e3f">vertices_</a> [NUM_FRUSTUM_VERTICES]</td></tr>
+<tr class="memdesc:a1aec29ebcd80924df428000f1fde0e3f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00146.html" title="Convex constructed of 6 planes.">Frustum</a> vertices. <br/></td></tr>
+<tr class="separator:a1aec29ebcd80924df428000f1fde0e3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Base class for GPU resources. </p>
+<div class="textblock"><p>Convex constructed of 6 planes. </p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/OpenGL/OGLGPUObject.h</li>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/OpenGL/OGLGPUObject.cpp</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Math/Frustum.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Math/Frustum.cpp</li>
 </ul>
 </div><!-- contents -->
