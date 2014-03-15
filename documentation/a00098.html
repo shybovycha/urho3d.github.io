@@ -34,7 +34,7 @@ title: Documentation
 </div><!--header-->
 <div class="contents">
 
-<p>Console window with log history and AngelScript prompt.  
+<p>Console window with log history and command line prompt.  
  <a href="a00098.html#details">More...</a></p>
 
 <p><code>#include &lt;Console.h&gt;</code></p>
@@ -73,6 +73,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a000
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00098.html#a62a7add1a0c2dab1f2b0ed01691fed27">Toggle</a> ()</td></tr>
 <tr class="memdesc:a62a7add1a0c2dab1f2b0ed01691fed27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggle visibility. <br/></td></tr>
 <tr class="separator:a62a7add1a0c2dab1f2b0ed01691fed27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a7662a654ecdff173220fb9d058c100"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a7662a654ecdff173220fb9d058c100"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00098.html#a8a7662a654ecdff173220fb9d058c100">SetAutoVisibleOnError</a> (bool enable)</td></tr>
+<tr class="memdesc:a8a7662a654ecdff173220fb9d058c100"><td class="mdescLeft">&#160;</td><td class="mdescRight">Automatically set console to visible when receiving an error log message. <br/></td></tr>
+<tr class="separator:a8a7662a654ecdff173220fb9d058c100"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b523b3fbdff6cc3da360dc128be09fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b523b3fbdff6cc3da360dc128be09fd"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00098.html#a6b523b3fbdff6cc3da360dc128be09fd">SetNumRows</a> (unsigned rows)</td></tr>
 <tr class="memdesc:a6b523b3fbdff6cc3da360dc128be09fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set number of displayed rows. <br/></td></tr>
@@ -101,6 +105,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a000
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00098.html#ada9c8fd7f15834433d872faf4c88f968">IsVisible</a> () const </td></tr>
 <tr class="memdesc:ada9c8fd7f15834433d872faf4c88f968"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether is visible. <br/></td></tr>
 <tr class="separator:ada9c8fd7f15834433d872faf4c88f968"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac434b5b023700c602de4eb55bc5eba51"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac434b5b023700c602de4eb55bc5eba51"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00098.html#ac434b5b023700c602de4eb55bc5eba51">IsAutoVisibleOnError</a> () const </td></tr>
+<tr class="memdesc:ac434b5b023700c602de4eb55bc5eba51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true when console is set to automatically visible when receiving an error log message. <br/></td></tr>
+<tr class="separator:ac434b5b023700c602de4eb55bc5eba51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadf998cdb99b653111f44a7ab5fab07b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aadf998cdb99b653111f44a7ab5fab07b"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00098.html#aadf998cdb99b653111f44a7ab5fab07b">GetNumRows</a> () const </td></tr>
 <tr class="memdesc:aadf998cdb99b653111f44a7ab5fab07b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of displayed rows. <br/></td></tr>
@@ -276,6 +284,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a000
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:a1ddc837f6bae69dcbc5e6128b1f7d0f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ddc837f6bae69dcbc5e6128b1f7d0f7"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00098.html#a1ddc837f6bae69dcbc5e6128b1f7d0f7">autoVisibleOnError_</a></td></tr>
+<tr class="memdesc:a1ddc837f6bae69dcbc5e6128b1f7d0f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Auto visible on error flag. <br/></td></tr>
+<tr class="separator:a1ddc837f6bae69dcbc5e6128b1f7d0f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a33d46a512c7547fd6669e0929fe7c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a33d46a512c7547fd6669e0929fe7c3"></a>
 <a class="el" href="a00286.html">SharedPtr</a>&lt; <a class="el" href="a00078.html">BorderImage</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00098.html#a7a33d46a512c7547fd6669e0929fe7c3">background_</a></td></tr>
 <tr class="memdesc:a7a33d46a512c7547fd6669e0929fe7c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Background. <br/></td></tr>
@@ -322,7 +334,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a3a7df857ddaa8c3e218c3645152dc23d inherit pro_attribs_a00211"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Console window with log history and AngelScript prompt. </p>
+<div class="textblock"><p>Console window with log history and command line prompt. </p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/travis/build/urho3d/Urho3D/Source/Engine/Engine/Console.h</li>
 <li>/home/travis/build/urho3d/Urho3D/Source/Engine/Engine/Console.cpp</li>

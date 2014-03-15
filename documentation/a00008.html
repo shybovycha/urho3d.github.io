@@ -820,12 +820,13 @@ Classes</h1>
 <li><a class="el" href="a00308.html" title="String class.">String</a> downloadName (readonly)</li>
 <li>float downloadProgress (readonly)</li>
 </ul>
-<h3><a class="el" href="a00098.html" title="Console window with log history and AngelScript prompt.">Console</a> : <a class="el" href="a00211.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
+<h3><a class="el" href="a00098.html" title="Console window with log history and command line prompt.">Console</a> : <a class="el" href="a00211.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
 <p>Methods:</p>
 <ul>
 <li>void SetDefaultStyle(XMLFile* style)</li>
 <li>void SetVisible(bool enable)</li>
 <li>void Toggle()</li>
+<li>void SetAutoVisibleOnError(bool enable)</li>
 <li>void SetNumRows(unsigned rows)</li>
 <li>void SetNumHistoryRows(unsigned rows)</li>
 <li>void UpdateElements()</li>
@@ -833,6 +834,7 @@ Classes</h1>
 <li>BorderImage* GetBackground() const</li>
 <li>LineEdit* GetLineEdit() const</li>
 <li>bool IsVisible() const</li>
+<li>bool IsAutoVisibleOnError() const</li>
 <li>unsigned GetNumRows() const</li>
 <li>unsigned GetNumHistoryRows() const</li>
 <li>unsigned GetHistoryPosition() const</li>
@@ -844,6 +846,7 @@ Classes</h1>
 <li>BorderImage* background (readonly)</li>
 <li>LineEdit* lineEdit (readonly)</li>
 <li>bool visible</li>
+<li>bool autoVisibleOnError</li>
 <li>unsigned numRows</li>
 <li>unsigned numHistoryRows</li>
 <li>unsigned historyPosition (readonly)</li>
