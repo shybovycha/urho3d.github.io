@@ -23,9 +23,9 @@ title: Documentation
 <li><a class="el" href="a00082.html" title="Pushbutton UI element.">Button</a>: a pushbutton</li>
 <li><a class="el" href="a00086.html" title="UI element that can be toggled between unchecked and checked state.">CheckBox</a>: a button that can be toggled on/off</li>
 <li><a class="el" href="a00112.html" title="Mouse cursor UI element.">Cursor</a>: a mouse cursor</li>
-<li><a class="el" href="a00131.html" title="Menu UI element that displays a popup list view.">DropDownList</a>: shows a vertical list of items (optionally scrollable) as a popup</li>
-<li><a class="el" href="a00177.html" title="Single-line text editor UI element.">LineEdit</a>: a single-line text editor</li>
-<li><a class="el" href="a00184.html" title="Scrollable list UI element.">ListView</a>: shows a scrollable vertical list of items</li>
+<li><a class="el" href="a00130.html" title="Menu UI element that displays a popup list view.">DropDownList</a>: shows a vertical list of items (optionally scrollable) as a popup</li>
+<li><a class="el" href="a00176.html" title="Single-line text editor UI element.">LineEdit</a>: a single-line text editor</li>
+<li><a class="el" href="a00183.html" title="Scrollable list UI element.">ListView</a>: shows a scrollable vertical list of items</li>
 <li><a class="el" href="a00197.html" title="Menu UI element that optionally shows a popup.">Menu</a>: a button which can show a popup element</li>
 <li><a class="el" href="a00281.html" title="Scroll bar UI element with forward and back buttons.">ScrollBar</a>: a slider with back and forward buttons</li>
 <li><a class="el" href="a00282.html" title="Scrollable UI element for showing a (possibly large) child element.">ScrollView</a>: a scrollable view of child elements</li>
@@ -39,7 +39,7 @@ title: Documentation
 </ul>
 <p>The root UI element can be queried from the <a class="el" href="a00333.html" title="UI subsystem. Manages the graphical user interface.">UI</a> subsystem. It is an empty canvas (<a class="el" href="a00335.html" title="Base class for UI elements.">UIElement</a>) as large as the application window, into which other elements can be added.</p>
 <p>Elements are added into each other similarly as scene nodes, using the <a class="el" href="a00335.html#a76a4d4fc652ea858d46846ac2739ee98">AddChild()</a> and <a class="el" href="a00335.html#a9ccf68e4882157d8fc2489ea9b10a658">RemoveChild()</a> functions. Each UI element has also a <a class="el" href="a00335.html#a18cc52d320a11084881c887ea9db9727">user variables</a> VariantMap for storing custom data.</p>
-<p>To allow the elements react to mouse input, either a mouse cursor element must be defined using <a class="el" href="a00333.html#ab7d94a2bf8f5fa20722957f0b0f8d716">SetCursor()</a> or the operating system mouse cursor must be set visible from the <a class="el" href="a00165.html" title="Input subsystem. Converts operating system window messages to input state and events.">Input</a> subsystem.</p>
+<p>To allow the elements react to mouse input, either a mouse cursor element must be defined using <a class="el" href="a00333.html#ab7d94a2bf8f5fa20722957f0b0f8d716">SetCursor()</a> or the operating system mouse cursor must be set visible from the <a class="el" href="a00164.html" title="Input subsystem. Converts operating system window messages to input state and events.">Input</a> subsystem.</p>
 <h1><a class="anchor" id="UI_Textures"></a>
 UI textures</h1>
 <p>The <a class="el" href="a00079.html" title="Image UI element with optional border.">BorderImage</a> and elements deriving from it specify a texture and an absolute pixel rect within it to use for rendering; see <a class="el" href="a00079.html#a6d362a60f796ef51fa4238e12e4f7bcd">SetTexture()</a> and <a class="el" href="a00079.html#a6b690e13125601d6e4b4fca5b4761035">SetImageRect()</a>. The texture is modulated with the element's color. To allow for more versatile scaling the element can be divided into 9 sub-quads or patches by specifying the width of each of its borders, see <a class="el" href="a00079.html#abc6fbb9e672e706975d3ab46c9b4cc8f">SetBorder()</a>. Setting zero borders (the default) causes the element to be drawn as one quad.</p>
@@ -66,7 +66,7 @@ Defining UI elements in XML</h1>
 <div class="line">        ...customize the vertical scroll bar attributes here...</div>
 <div class="line">    &lt;/element&gt;</div>
 <div class="line">&lt;/element&gt;</div>
-</div><!-- fragment --><p>3) The popup element shown by <a class="el" href="a00197.html" title="Menu UI element that optionally shows a popup.">Menu</a> and <a class="el" href="a00131.html" title="Menu UI element that displays a popup list view.">DropDownList</a> is not an actual child element. In XML serialization, it is nevertheless stored as a child element, but is marked with the attribute popup="true".</p>
+</div><!-- fragment --><p>3) The popup element shown by <a class="el" href="a00197.html" title="Menu UI element that optionally shows a popup.">Menu</a> and <a class="el" href="a00130.html" title="Menu UI element that displays a popup list view.">DropDownList</a> is not an actual child element. In XML serialization, it is nevertheless stored as a child element, but is marked with the attribute popup="true".</p>
 <h1><a class="anchor" id="UI_Layouts"></a>
 UI element layout</h1>
 <p>By default UI elements operate in a "free" layout mode, where child elements' positions can be specified relative to any of the parent element corners, but they are not automatically positioned or resized.</p>

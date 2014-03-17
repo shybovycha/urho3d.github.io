@@ -17,7 +17,7 @@ title: Documentation
 <div class="title">Scripting </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>To enable AngelScript scripting support, the <a class="el" href="a00276.html" title="Scripting subsystem. Allows execution of AngelScript.">Script</a> subsystem needs to be created and registered after initializing the <a class="el" href="a00132.html" title="Urho3D engine. Creates the other subsystems.">Engine</a>. This is accomplished by the following code, seen eg. in Tools/Urho3DPlayer/Urho3DPlayer.cpp:</p>
+<div class="textblock"><p>To enable AngelScript scripting support, the <a class="el" href="a00276.html" title="Scripting subsystem. Allows execution of AngelScript.">Script</a> subsystem needs to be created and registered after initializing the <a class="el" href="a00131.html" title="Urho3D engine. Creates the other subsystems.">Engine</a>. This is accomplished by the following code, seen eg. in Tools/Urho3DPlayer/Urho3DPlayer.cpp:</p>
 <div class="fragment"><div class="line">context_-&gt;RegisterSubsystem(<span class="keyword">new</span> Script(context_));</div>
 </div><!-- fragment --><p>There are three ways the AngelScript language can be interacted with in Urho3D:</p>
 <h1><a class="anchor" id="Scripting_Immediate"></a>
@@ -157,7 +157,7 @@ AngelScript modifications</h1>
 <div class="fragment"><div class="line">WeakHandle rigidBodyWeak = node.CreateComponent(<span class="stringliteral">&quot;RigidBody&quot;</span>);</div>
 <div class="line">RigidBody@ rigidBodyShared = rigidBodyWeak.Get(); <span class="comment">// Is null if expired</span></div>
 </div><!-- fragment --><ul>
-<li>Object handle assignment can be done without the @ symbol if the object in question does not support value assignment. All exposed Urho3D C++ classes that derive from <a class="el" href="a00256.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable.">RefCounted</a> never support value assignment. For example, when assigning the <a class="el" href="a00199.html" title="3D model resource.">Model</a> and <a class="el" href="a00191.html" title="Describes how to render 3D geometries.">Material</a> of a <a class="el" href="a00310.html" title="Static model component.">StaticModel</a> component:</li>
+<li>Object handle assignment can be done without the @ symbol if the object in question does not support value assignment. All exposed Urho3D C++ classes that derive from <a class="el" href="a00256.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable.">RefCounted</a> never support value assignment. For example, when assigning the <a class="el" href="a00199.html" title="3D model resource.">Model</a> and <a class="el" href="a00190.html" title="Describes how to render 3D geometries.">Material</a> of a <a class="el" href="a00310.html" title="Static model component.">StaticModel</a> component:</li>
 </ul>
 <div class="fragment"><div class="line"><span class="keywordtype">object</span>.model = cache.GetResource(<span class="stringliteral">&quot;Model&quot;</span>, <span class="stringliteral">&quot;Models/Mushroom.mdl&quot;</span>);</div>
 <div class="line"><span class="keywordtype">object</span>.material = cache.GetResource(<span class="stringliteral">&quot;Material&quot;</span>, <span class="stringliteral">&quot;Materials/Mushroom.xml&quot;</span>);</div>

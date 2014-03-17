@@ -20,7 +20,7 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00164.html">IndexBuffer</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00164.html">Input</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -28,103 +28,191 @@ title: Documentation
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="a01111.html">List of all members</a>  </div>
+<a href="a01210.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::IndexBuffer Class Reference</div>  </div>
+<div class="title">Urho3D::Input Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Hardware index buffer.  
+<p>Input subsystem. Converts operating system window messages to input state and events.  
  <a href="a00164.html#details">More...</a></p>
 
-<p><code>#include &lt;OGLIndexBuffer.h&gt;</code></p>
+<p><code>#include &lt;Input.h&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Urho3D::IndexBuffer:</div>
+Inheritance diagram for Urho3D::Input:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a01112.svg" width="318" height="195"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a01211.svg" width="163" height="195"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
-Collaboration diagram for Urho3D::IndexBuffer:</div>
+Collaboration diagram for Urho3D::Input:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01113.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01212.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a545acc6671a52cb2359b4342a1e0f6ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a545acc6671a52cb2359b4342a1e0f6ae"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a545acc6671a52cb2359b4342a1e0f6ae">IndexBuffer</a> (<a class="el" href="a00107.html">Context</a> *context)</td></tr>
-<tr class="memdesc:a545acc6671a52cb2359b4342a1e0f6ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
-<tr class="separator:a545acc6671a52cb2359b4342a1e0f6ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f590b47a002d73784c6bd1290bf4ff1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f590b47a002d73784c6bd1290bf4ff1"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a3f590b47a002d73784c6bd1290bf4ff1">~IndexBuffer</a> ()</td></tr>
-<tr class="memdesc:a3f590b47a002d73784c6bd1290bf4ff1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
-<tr class="separator:a3f590b47a002d73784c6bd1290bf4ff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07a89937a97f0202677f92b52038e544"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a07a89937a97f0202677f92b52038e544"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a07a89937a97f0202677f92b52038e544">OnDeviceReset</a> ()</td></tr>
-<tr class="memdesc:a07a89937a97f0202677f92b52038e544"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recreate the GPU resource and restore data if applicable. <br/></td></tr>
-<tr class="separator:a07a89937a97f0202677f92b52038e544"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac814b7873df8ee1aafa25a3c4d837c5e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac814b7873df8ee1aafa25a3c4d837c5e"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#ac814b7873df8ee1aafa25a3c4d837c5e">Release</a> ()</td></tr>
-<tr class="memdesc:ac814b7873df8ee1aafa25a3c4d837c5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release the buffer. <br/></td></tr>
-<tr class="separator:ac814b7873df8ee1aafa25a3c4d837c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a842d2d57d5ebe98fa42e53065708682a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a842d2d57d5ebe98fa42e53065708682a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a842d2d57d5ebe98fa42e53065708682a">SetShadowed</a> (bool enable)</td></tr>
-<tr class="memdesc:a842d2d57d5ebe98fa42e53065708682a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable shadowing in CPU memory. Shadowing is forced on if the graphics subsystem does not exist. <br/></td></tr>
-<tr class="separator:a842d2d57d5ebe98fa42e53065708682a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acad3ececff56c39f52703e514b730364"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acad3ececff56c39f52703e514b730364"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#acad3ececff56c39f52703e514b730364">SetSize</a> (unsigned indexCount, bool largeIndices, bool dynamic=false)</td></tr>
-<tr class="memdesc:acad3ececff56c39f52703e514b730364"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set buffer size and dynamic mode. Previous data will be lost. <br/></td></tr>
-<tr class="separator:acad3ececff56c39f52703e514b730364"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21f9b30d2a72457f6cd33e769e5b59cd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a21f9b30d2a72457f6cd33e769e5b59cd"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a21f9b30d2a72457f6cd33e769e5b59cd">SetData</a> (const void *data)</td></tr>
-<tr class="memdesc:a21f9b30d2a72457f6cd33e769e5b59cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set all data in the buffer. <br/></td></tr>
-<tr class="separator:a21f9b30d2a72457f6cd33e769e5b59cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b4939821435c61218cfd58a06211484"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b4939821435c61218cfd58a06211484"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a6b4939821435c61218cfd58a06211484">SetDataRange</a> (const void *data, unsigned start, unsigned count, bool discard=false)</td></tr>
-<tr class="memdesc:a6b4939821435c61218cfd58a06211484"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a data range in the buffer. Optionally discard data outside the range. <br/></td></tr>
-<tr class="separator:a6b4939821435c61218cfd58a06211484"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cacf2d0dc23baa812de318bb40cfe5d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4cacf2d0dc23baa812de318bb40cfe5d"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a4cacf2d0dc23baa812de318bb40cfe5d">Lock</a> (unsigned start, unsigned count, bool discard=false)</td></tr>
-<tr class="memdesc:a4cacf2d0dc23baa812de318bb40cfe5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock the buffer for write-only editing. Return data pointer if successful. Optionally discard data outside the range. <br/></td></tr>
-<tr class="separator:a4cacf2d0dc23baa812de318bb40cfe5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd80b2ed1d3e4f9243712f3370a59469"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd80b2ed1d3e4f9243712f3370a59469"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#abd80b2ed1d3e4f9243712f3370a59469">Unlock</a> ()</td></tr>
-<tr class="memdesc:abd80b2ed1d3e4f9243712f3370a59469"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unlock the buffer and apply changes to the GPU buffer. <br/></td></tr>
-<tr class="separator:abd80b2ed1d3e4f9243712f3370a59469"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a8ebc775ade81657c26dbaf97466a18"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a8ebc775ade81657c26dbaf97466a18"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a4a8ebc775ade81657c26dbaf97466a18">IsShadowed</a> () const </td></tr>
-<tr class="memdesc:a4a8ebc775ade81657c26dbaf97466a18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether CPU memory shadowing is enabled. <br/></td></tr>
-<tr class="separator:a4a8ebc775ade81657c26dbaf97466a18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a6f0abf60670faacd7eab377589e9c2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a6f0abf60670faacd7eab377589e9c2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a2a6f0abf60670faacd7eab377589e9c2">IsDynamic</a> () const </td></tr>
-<tr class="memdesc:a2a6f0abf60670faacd7eab377589e9c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether is dynamic. <br/></td></tr>
-<tr class="separator:a2a6f0abf60670faacd7eab377589e9c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c36fd974c3b7ea76f20b6d9e6a58144"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c36fd974c3b7ea76f20b6d9e6a58144"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a3c36fd974c3b7ea76f20b6d9e6a58144">IsLocked</a> () const </td></tr>
-<tr class="memdesc:a3c36fd974c3b7ea76f20b6d9e6a58144"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether is currently locked. <br/></td></tr>
-<tr class="separator:a3c36fd974c3b7ea76f20b6d9e6a58144"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e0567aad15625284a0f5e9abb848ac4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e0567aad15625284a0f5e9abb848ac4"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a1e0567aad15625284a0f5e9abb848ac4">GetIndexCount</a> () const </td></tr>
-<tr class="memdesc:a1e0567aad15625284a0f5e9abb848ac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of indices. <br/></td></tr>
-<tr class="separator:a1e0567aad15625284a0f5e9abb848ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32539d2e5bdea46613a42215dcd6aef8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a32539d2e5bdea46613a42215dcd6aef8"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a32539d2e5bdea46613a42215dcd6aef8">GetIndexSize</a> () const </td></tr>
-<tr class="memdesc:a32539d2e5bdea46613a42215dcd6aef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return index size. <br/></td></tr>
-<tr class="separator:a32539d2e5bdea46613a42215dcd6aef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5aa0d6a4d89ca4f3d79deedc7286042f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5aa0d6a4d89ca4f3d79deedc7286042f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a5aa0d6a4d89ca4f3d79deedc7286042f">GetUsedVertexRange</a> (unsigned start, unsigned count, unsigned &amp;minVertex, unsigned &amp;vertexCount)</td></tr>
-<tr class="memdesc:a5aa0d6a4d89ca4f3d79deedc7286042f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return used vertex range from index range. Only supported for shadowed buffers. <br/></td></tr>
-<tr class="separator:a5aa0d6a4d89ca4f3d79deedc7286042f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5e1d72f1f20b723428196905e3f15ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af5e1d72f1f20b723428196905e3f15ac"></a>
-unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#af5e1d72f1f20b723428196905e3f15ac">GetShadowData</a> () const </td></tr>
-<tr class="memdesc:af5e1d72f1f20b723428196905e3f15ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return CPU memory shadow data. <br/></td></tr>
-<tr class="separator:af5e1d72f1f20b723428196905e3f15ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5defef4a6e35ad4a6c9036ebe2d60981"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5defef4a6e35ad4a6c9036ebe2d60981"></a>
-<a class="el" href="a00291.html">SharedArrayPtr</a>&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a5defef4a6e35ad4a6c9036ebe2d60981">GetShadowDataShared</a> () const </td></tr>
-<tr class="memdesc:a5defef4a6e35ad4a6c9036ebe2d60981"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return shared array pointer to the CPU memory shadow data. <br/></td></tr>
-<tr class="separator:a5defef4a6e35ad4a6c9036ebe2d60981"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48199becd3824e420e4bce2ed6a03c12"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a48199becd3824e420e4bce2ed6a03c12"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a48199becd3824e420e4bce2ed6a03c12">Input</a> (<a class="el" href="a00107.html">Context</a> *context)</td></tr>
+<tr class="memdesc:a48199becd3824e420e4bce2ed6a03c12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
+<tr class="separator:a48199becd3824e420e4bce2ed6a03c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a9ac935471e36792aa6d37b1d98fa2c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a9ac935471e36792aa6d37b1d98fa2c"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a8a9ac935471e36792aa6d37b1d98fa2c">~Input</a> ()</td></tr>
+<tr class="memdesc:a8a9ac935471e36792aa6d37b1d98fa2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
+<tr class="separator:a8a9ac935471e36792aa6d37b1d98fa2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4cd4fe34682b2d90183f181718c6125"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4cd4fe34682b2d90183f181718c6125"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#ab4cd4fe34682b2d90183f181718c6125">Update</a> ()</td></tr>
+<tr class="memdesc:ab4cd4fe34682b2d90183f181718c6125"><td class="mdescLeft">&#160;</td><td class="mdescRight">Poll for window messages. Called by <a class="el" href="a00164.html#a147c4675aa679dbf4d9702b3d3d6b921" title="Handle frame start event.">HandleBeginFrame()</a>. <br/></td></tr>
+<tr class="separator:ab4cd4fe34682b2d90183f181718c6125"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1744c2eeeb52d1722d3c16e208c051c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1744c2eeeb52d1722d3c16e208c051c1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a1744c2eeeb52d1722d3c16e208c051c1">SetToggleFullscreen</a> (bool enable)</td></tr>
+<tr class="memdesc:a1744c2eeeb52d1722d3c16e208c051c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether ALT-ENTER fullscreen toggle is enabled. <br/></td></tr>
+<tr class="separator:a1744c2eeeb52d1722d3c16e208c051c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a8edc8ee7876348bfa4e95f9d901805"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5a8edc8ee7876348bfa4e95f9d901805"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a5a8edc8ee7876348bfa4e95f9d901805">SetMouseVisible</a> (bool enable)</td></tr>
+<tr class="memdesc:a5a8edc8ee7876348bfa4e95f9d901805"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether the operating system mouse cursor is visible. When not visible (default), is kept centered to prevent leaving the window. <br/></td></tr>
+<tr class="separator:a5a8edc8ee7876348bfa4e95f9d901805"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abba6aa20e1958a0bf3b22a11810260a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abba6aa20e1958a0bf3b22a11810260a4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#abba6aa20e1958a0bf3b22a11810260a4">OpenJoystick</a> (unsigned index)</td></tr>
+<tr class="memdesc:abba6aa20e1958a0bf3b22a11810260a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a joystick. Return true if successful. <br/></td></tr>
+<tr class="separator:abba6aa20e1958a0bf3b22a11810260a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad999d398eb8221b347de9669eea5390b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad999d398eb8221b347de9669eea5390b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#ad999d398eb8221b347de9669eea5390b">CloseJoystick</a> (unsigned index)</td></tr>
+<tr class="memdesc:ad999d398eb8221b347de9669eea5390b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close a joystick. <br/></td></tr>
+<tr class="separator:ad999d398eb8221b347de9669eea5390b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7f01e33cc110c8d3fadc91050ec9554"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa7f01e33cc110c8d3fadc91050ec9554"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#aa7f01e33cc110c8d3fadc91050ec9554">DetectJoysticks</a> ()</td></tr>
+<tr class="memdesc:aa7f01e33cc110c8d3fadc91050ec9554"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redetect joysticks. Return true if successful. <br/></td></tr>
+<tr class="separator:aa7f01e33cc110c8d3fadc91050ec9554"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a8e1073c5e29bac46a0183a803d6df4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a8e1073c5e29bac46a0183a803d6df4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a9a8e1073c5e29bac46a0183a803d6df4">SetScreenKeyboardVisible</a> (bool enable)</td></tr>
+<tr class="memdesc:a9a8e1073c5e29bac46a0183a803d6df4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show or hide on-screen keyboard on platforms that support it. When shown, keypresses from it are delivered as key events. <br/></td></tr>
+<tr class="separator:a9a8e1073c5e29bac46a0183a803d6df4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1617c4173474e952a76c0786f6ef761a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1617c4173474e952a76c0786f6ef761a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a1617c4173474e952a76c0786f6ef761a">GetKeyFromName</a> (const <a class="el" href="a00314.html">String</a> &amp;name) const </td></tr>
+<tr class="memdesc:a1617c4173474e952a76c0786f6ef761a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return keycode from key name. <br/></td></tr>
+<tr class="separator:a1617c4173474e952a76c0786f6ef761a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31aa62d65a2049d8d186942fce84dc25"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31aa62d65a2049d8d186942fce84dc25"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a31aa62d65a2049d8d186942fce84dc25">GetKeyFromScancode</a> (int scancode) const </td></tr>
+<tr class="memdesc:a31aa62d65a2049d8d186942fce84dc25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return keycode from scancode. <br/></td></tr>
+<tr class="separator:a31aa62d65a2049d8d186942fce84dc25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a747e4a29b52a9a7e37d22cfa5ac7b4ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a747e4a29b52a9a7e37d22cfa5ac7b4ca"></a>
+<a class="el" href="a00314.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a747e4a29b52a9a7e37d22cfa5ac7b4ca">GetKeyName</a> (int key) const </td></tr>
+<tr class="memdesc:a747e4a29b52a9a7e37d22cfa5ac7b4ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return name of key from keycode. <br/></td></tr>
+<tr class="separator:a747e4a29b52a9a7e37d22cfa5ac7b4ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a134afd8d2c37aa338f1f2114c119718b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a134afd8d2c37aa338f1f2114c119718b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a134afd8d2c37aa338f1f2114c119718b">GetScancodeFromKey</a> (int key) const </td></tr>
+<tr class="memdesc:a134afd8d2c37aa338f1f2114c119718b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return scancode from keycode. <br/></td></tr>
+<tr class="separator:a134afd8d2c37aa338f1f2114c119718b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a2e74fdc42d25c798336a01a7134047"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a2e74fdc42d25c798336a01a7134047"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a1a2e74fdc42d25c798336a01a7134047">GetScancodeFromName</a> (const <a class="el" href="a00314.html">String</a> &amp;name) const </td></tr>
+<tr class="memdesc:a1a2e74fdc42d25c798336a01a7134047"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return scancode from key name. <br/></td></tr>
+<tr class="separator:a1a2e74fdc42d25c798336a01a7134047"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0787f4c05609edd8add304e87ccd8487"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0787f4c05609edd8add304e87ccd8487"></a>
+<a class="el" href="a00314.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a0787f4c05609edd8add304e87ccd8487">GetScancodeName</a> (int scancode) const </td></tr>
+<tr class="memdesc:a0787f4c05609edd8add304e87ccd8487"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return name of key from scancode. <br/></td></tr>
+<tr class="separator:a0787f4c05609edd8add304e87ccd8487"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8995ff227b84083c0b1a9050bb211357"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8995ff227b84083c0b1a9050bb211357"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a8995ff227b84083c0b1a9050bb211357">GetKeyDown</a> (int key) const </td></tr>
+<tr class="memdesc:a8995ff227b84083c0b1a9050bb211357"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a key is held down. <br/></td></tr>
+<tr class="separator:a8995ff227b84083c0b1a9050bb211357"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81672eb3d3a9fd640a552169f4e1883e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a81672eb3d3a9fd640a552169f4e1883e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a81672eb3d3a9fd640a552169f4e1883e">GetKeyPress</a> (int key) const </td></tr>
+<tr class="memdesc:a81672eb3d3a9fd640a552169f4e1883e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a key has been pressed on this frame. <br/></td></tr>
+<tr class="separator:a81672eb3d3a9fd640a552169f4e1883e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e12e3cb913761213260a3834ca72c2c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e12e3cb913761213260a3834ca72c2c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a9e12e3cb913761213260a3834ca72c2c">GetScancodeDown</a> (int scancode) const </td></tr>
+<tr class="memdesc:a9e12e3cb913761213260a3834ca72c2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a key is held down by scancode. <br/></td></tr>
+<tr class="separator:a9e12e3cb913761213260a3834ca72c2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa679ad234440f984ed55145f81139094"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa679ad234440f984ed55145f81139094"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#aa679ad234440f984ed55145f81139094">GetScancodePress</a> (int scanode) const </td></tr>
+<tr class="memdesc:aa679ad234440f984ed55145f81139094"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a key has been pressed on this frame by scancode. <br/></td></tr>
+<tr class="separator:aa679ad234440f984ed55145f81139094"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa086b042b00127bc840719c7ddcdf33f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa086b042b00127bc840719c7ddcdf33f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#aa086b042b00127bc840719c7ddcdf33f">GetMouseButtonDown</a> (int button) const </td></tr>
+<tr class="memdesc:aa086b042b00127bc840719c7ddcdf33f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a mouse button is held down. <br/></td></tr>
+<tr class="separator:aa086b042b00127bc840719c7ddcdf33f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a663bad42c0fe6b58452c5ebba35c72ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a663bad42c0fe6b58452c5ebba35c72ae"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a663bad42c0fe6b58452c5ebba35c72ae">GetMouseButtonPress</a> (int button) const </td></tr>
+<tr class="memdesc:a663bad42c0fe6b58452c5ebba35c72ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a mouse button has been pressed on this frame. <br/></td></tr>
+<tr class="separator:a663bad42c0fe6b58452c5ebba35c72ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e9e717f2dd16b24d8afe81027687ef8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e9e717f2dd16b24d8afe81027687ef8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a4e9e717f2dd16b24d8afe81027687ef8">GetQualifierDown</a> (int qualifier) const </td></tr>
+<tr class="memdesc:a4e9e717f2dd16b24d8afe81027687ef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a qualifier key is held down. <br/></td></tr>
+<tr class="separator:a4e9e717f2dd16b24d8afe81027687ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2c0ef61242b63279f136859dc19713e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae2c0ef61242b63279f136859dc19713e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#ae2c0ef61242b63279f136859dc19713e">GetQualifierPress</a> (int qualifier) const </td></tr>
+<tr class="memdesc:ae2c0ef61242b63279f136859dc19713e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a qualifier key has been pressed on this frame. <br/></td></tr>
+<tr class="separator:ae2c0ef61242b63279f136859dc19713e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acecabdaba17f8aaa9477b720311dccf4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acecabdaba17f8aaa9477b720311dccf4"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#acecabdaba17f8aaa9477b720311dccf4">GetQualifiers</a> () const </td></tr>
+<tr class="memdesc:acecabdaba17f8aaa9477b720311dccf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the currently held down qualifiers. <br/></td></tr>
+<tr class="separator:acecabdaba17f8aaa9477b720311dccf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1f70542be73799aaf80057a33d5a011"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1f70542be73799aaf80057a33d5a011"></a>
+<a class="el" href="a00167.html">IntVector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#af1f70542be73799aaf80057a33d5a011">GetMousePosition</a> () const </td></tr>
+<tr class="memdesc:af1f70542be73799aaf80057a33d5a011"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return mouse position within window. Should only be used with a visible mouse cursor. <br/></td></tr>
+<tr class="separator:af1f70542be73799aaf80057a33d5a011"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfa92f94aff38abd7963630f2b315237"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abfa92f94aff38abd7963630f2b315237"></a>
+const <a class="el" href="a00167.html">IntVector2</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#abfa92f94aff38abd7963630f2b315237">GetMouseMove</a> () const </td></tr>
+<tr class="memdesc:abfa92f94aff38abd7963630f2b315237"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return mouse movement since last frame. <br/></td></tr>
+<tr class="separator:abfa92f94aff38abd7963630f2b315237"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af048bd38ba9f214da85f1819c9775ac4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af048bd38ba9f214da85f1819c9775ac4"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#af048bd38ba9f214da85f1819c9775ac4">GetMouseMoveX</a> () const </td></tr>
+<tr class="memdesc:af048bd38ba9f214da85f1819c9775ac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return horizontal mouse movement since last frame. <br/></td></tr>
+<tr class="separator:af048bd38ba9f214da85f1819c9775ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32b2abe9f6b758762b4546613865fa41"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a32b2abe9f6b758762b4546613865fa41"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a32b2abe9f6b758762b4546613865fa41">GetMouseMoveY</a> () const </td></tr>
+<tr class="memdesc:a32b2abe9f6b758762b4546613865fa41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return vertical mouse movement since last frame. <br/></td></tr>
+<tr class="separator:a32b2abe9f6b758762b4546613865fa41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafcf091f5d3484c99b1743043446fdac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aafcf091f5d3484c99b1743043446fdac"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#aafcf091f5d3484c99b1743043446fdac">GetMouseMoveWheel</a> () const </td></tr>
+<tr class="memdesc:aafcf091f5d3484c99b1743043446fdac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return mouse wheel movement since last frame. <br/></td></tr>
+<tr class="separator:aafcf091f5d3484c99b1743043446fdac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a686a8455da0fe54401490095ee4530f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a686a8455da0fe54401490095ee4530f1"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a686a8455da0fe54401490095ee4530f1">GetNumTouches</a> () const </td></tr>
+<tr class="memdesc:a686a8455da0fe54401490095ee4530f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of active finger touches. <br/></td></tr>
+<tr class="separator:a686a8455da0fe54401490095ee4530f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6608bb7c777f17e38eeb58b8659c1804"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6608bb7c777f17e38eeb58b8659c1804"></a>
+<a class="el" href="a00331.html">TouchState</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a6608bb7c777f17e38eeb58b8659c1804">GetTouch</a> (unsigned index) const </td></tr>
+<tr class="memdesc:a6608bb7c777f17e38eeb58b8659c1804"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return active finger touch by index. <br/></td></tr>
+<tr class="separator:a6608bb7c777f17e38eeb58b8659c1804"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a830c24c772338fd28cb6890fada118c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a830c24c772338fd28cb6890fada118c6"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a830c24c772338fd28cb6890fada118c6">GetNumJoysticks</a> () const </td></tr>
+<tr class="memdesc:a830c24c772338fd28cb6890fada118c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of connected joysticks. <br/></td></tr>
+<tr class="separator:a830c24c772338fd28cb6890fada118c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13deec7382634c503d8ae1d666ad292d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a13deec7382634c503d8ae1d666ad292d"></a>
+const <a class="el" href="a00314.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a13deec7382634c503d8ae1d666ad292d">GetJoystickName</a> (unsigned index) const </td></tr>
+<tr class="memdesc:a13deec7382634c503d8ae1d666ad292d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return joystick name by index. <br/></td></tr>
+<tr class="separator:a13deec7382634c503d8ae1d666ad292d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61a4fd7c7fa9550c33792943b2825c2b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61a4fd7c7fa9550c33792943b2825c2b"></a>
+<a class="el" href="a00171.html">JoystickState</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a61a4fd7c7fa9550c33792943b2825c2b">GetJoystick</a> (unsigned index)</td></tr>
+<tr class="memdesc:a61a4fd7c7fa9550c33792943b2825c2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return joystick state by index. Automatically open if not opened yet. <br/></td></tr>
+<tr class="separator:a61a4fd7c7fa9550c33792943b2825c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b7a0095e55064043191478c05823f1d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b7a0095e55064043191478c05823f1d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a7b7a0095e55064043191478c05823f1d">GetToggleFullscreen</a> () const </td></tr>
+<tr class="memdesc:a7b7a0095e55064043191478c05823f1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether fullscreen toggle is enabled. <br/></td></tr>
+<tr class="separator:a7b7a0095e55064043191478c05823f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89ac59edd643d2a64a58e521cd6b4f62"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a89ac59edd643d2a64a58e521cd6b4f62"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a89ac59edd643d2a64a58e521cd6b4f62">GetScreenKeyboardSupport</a> () const </td></tr>
+<tr class="memdesc:a89ac59edd643d2a64a58e521cd6b4f62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether on-screen keyboard is supported. <br/></td></tr>
+<tr class="separator:a89ac59edd643d2a64a58e521cd6b4f62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfa1cb5c6fb0633bb4255e290eff81e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adfa1cb5c6fb0633bb4255e290eff81e0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#adfa1cb5c6fb0633bb4255e290eff81e0">IsScreenKeyboardVisible</a> () const </td></tr>
+<tr class="memdesc:adfa1cb5c6fb0633bb4255e290eff81e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether on-screen keyboard is being shown. <br/></td></tr>
+<tr class="separator:adfa1cb5c6fb0633bb4255e290eff81e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f0539b21d6930bbc220e9ef18d2578b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f0539b21d6930bbc220e9ef18d2578b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a6f0539b21d6930bbc220e9ef18d2578b">IsMouseVisible</a> () const </td></tr>
+<tr class="memdesc:a6f0539b21d6930bbc220e9ef18d2578b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the operating system mouse cursor is visible. <br/></td></tr>
+<tr class="separator:a6f0539b21d6930bbc220e9ef18d2578b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11e086f4e8be5b26f26a949bcf118297"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11e086f4e8be5b26f26a949bcf118297"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a11e086f4e8be5b26f26a949bcf118297">HasFocus</a> ()</td></tr>
+<tr class="memdesc:a11e086f4e8be5b26f26a949bcf118297"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether application window has input focus. <br/></td></tr>
+<tr class="separator:a11e086f4e8be5b26f26a949bcf118297"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2337fae47d3d50ced8f60528c0129b13"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2337fae47d3d50ced8f60528c0129b13"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a2337fae47d3d50ced8f60528c0129b13">IsMinimized</a> () const </td></tr>
+<tr class="memdesc:a2337fae47d3d50ced8f60528c0129b13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether application window is minimized. <br/></td></tr>
+<tr class="separator:a2337fae47d3d50ced8f60528c0129b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_a00216"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00216')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="a00216.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_a00216"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a95a6cd1c5c12a458fda4b38f873a334d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00216.html#a95a6cd1c5c12a458fda4b38f873a334d">Object</a> (<a class="el" href="a00107.html">Context</a> *context)</td></tr>
@@ -147,15 +235,15 @@ virtual const <a class="el" href="a00314.html">String</a> &amp;&#160;</td><td cl
 <tr class="memdesc:a2e095e012835897947ccaf26fdf4b81f inherit pub_methods_a00216"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return type name. <br/></td></tr>
 <tr class="separator:a2e095e012835897947ccaf26fdf4b81f inherit pub_methods_a00216"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_a00216"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0ce1699ce5bd9d4033e5800bbb8c15b"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00216.html#ad0ce1699ce5bd9d4033e5800bbb8c15b">OnEvent</a> (<a class="el" href="a00216.html">Object</a> *sender, <a class="el" href="a00315.html">StringHash</a> eventType, <a class="el" href="a00156.html">VariantMap</a> &amp;eventData)</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00216.html#ad0ce1699ce5bd9d4033e5800bbb8c15b">OnEvent</a> (<a class="el" href="a00216.html">Object</a> *sender, <a class="el" href="a00315.html">StringHash</a> eventType, <a class="el" href="a00155.html">VariantMap</a> &amp;eventData)</td></tr>
 <tr class="memdesc:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_a00216"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle event. <br/></td></tr>
 <tr class="separator:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_a00216"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d9d061f4cf32f5fd5531e11a72834b6 inherit pub_methods_a00216"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d9d061f4cf32f5fd5531e11a72834b6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00216.html#a7d9d061f4cf32f5fd5531e11a72834b6">SubscribeToEvent</a> (<a class="el" href="a00315.html">StringHash</a> eventType, <a class="el" href="a00133.html">EventHandler</a> *handler)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00216.html#a7d9d061f4cf32f5fd5531e11a72834b6">SubscribeToEvent</a> (<a class="el" href="a00315.html">StringHash</a> eventType, <a class="el" href="a00132.html">EventHandler</a> *handler)</td></tr>
 <tr class="memdesc:a7d9d061f4cf32f5fd5531e11a72834b6 inherit pub_methods_a00216"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribe to an event that can be sent by any sender. <br/></td></tr>
 <tr class="separator:a7d9d061f4cf32f5fd5531e11a72834b6 inherit pub_methods_a00216"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9ea95ee6f24e7fbeede16ba149dbc2d inherit pub_methods_a00216"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9ea95ee6f24e7fbeede16ba149dbc2d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00216.html#ac9ea95ee6f24e7fbeede16ba149dbc2d">SubscribeToEvent</a> (<a class="el" href="a00216.html">Object</a> *sender, <a class="el" href="a00315.html">StringHash</a> eventType, <a class="el" href="a00133.html">EventHandler</a> *handler)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00216.html#ac9ea95ee6f24e7fbeede16ba149dbc2d">SubscribeToEvent</a> (<a class="el" href="a00216.html">Object</a> *sender, <a class="el" href="a00315.html">StringHash</a> eventType, <a class="el" href="a00132.html">EventHandler</a> *handler)</td></tr>
 <tr class="memdesc:ac9ea95ee6f24e7fbeede16ba149dbc2d inherit pub_methods_a00216"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribe to a specific sender's event. <br/></td></tr>
 <tr class="separator:ac9ea95ee6f24e7fbeede16ba149dbc2d inherit pub_methods_a00216"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a153b96c4397e045b2ca2b2d5471d097c inherit pub_methods_a00216"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a153b96c4397e045b2ca2b2d5471d097c"></a>
@@ -182,11 +270,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a002
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00216.html#a32020dbf77c196b9777eca479e8abb36">SendEvent</a> (<a class="el" href="a00315.html">StringHash</a> eventType)</td></tr>
 <tr class="memdesc:a32020dbf77c196b9777eca479e8abb36 inherit pub_methods_a00216"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send event to all subscribers. <br/></td></tr>
 <tr class="separator:a32020dbf77c196b9777eca479e8abb36 inherit pub_methods_a00216"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_a00216"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00216.html#af8f8bd3f7e2f51ecca7199e737f53364">SendEvent</a> (<a class="el" href="a00315.html">StringHash</a> eventType, <a class="el" href="a00156.html">VariantMap</a> &amp;eventData)</td></tr>
+<tr class="memitem:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_a00216"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00216.html#af8f8bd3f7e2f51ecca7199e737f53364">SendEvent</a> (<a class="el" href="a00315.html">StringHash</a> eventType, <a class="el" href="a00155.html">VariantMap</a> &amp;eventData)</td></tr>
 <tr class="memdesc:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_a00216"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send event with parameters to all subscribers.  <a href="#af8f8bd3f7e2f51ecca7199e737f53364">More...</a><br/></td></tr>
 <tr class="separator:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_a00216"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8dbe9844094c04463def7df1fa650d5 inherit pub_methods_a00216"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab8dbe9844094c04463def7df1fa650d5"></a>
-<a class="el" href="a00156.html">VariantMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00216.html#ab8dbe9844094c04463def7df1fa650d5">GetEventDataMap</a> () const </td></tr>
+<a class="el" href="a00155.html">VariantMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00216.html#ab8dbe9844094c04463def7df1fa650d5">GetEventDataMap</a> () const </td></tr>
 <tr class="memdesc:ab8dbe9844094c04463def7df1fa650d5 inherit pub_methods_a00216"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a preallocated map for event data. Used for optimization to avoid constant re-allocation of event data maps. <br/></td></tr>
 <tr class="separator:ab8dbe9844094c04463def7df1fa650d5 inherit pub_methods_a00216"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48c407eb402e328382c2a61fb3db4441 inherit pub_methods_a00216"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a48c407eb402e328382c2a61fb3db4441"></a>
@@ -202,7 +290,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a002
 <tr class="memdesc:af77f10214e90fb621d2ee797a18f8974 inherit pub_methods_a00216"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return active event sender. Null outside event handling. <br/></td></tr>
 <tr class="separator:af77f10214e90fb621d2ee797a18f8974 inherit pub_methods_a00216"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d2f34a4ab171e3f9efb2fb90fe64493 inherit pub_methods_a00216"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d2f34a4ab171e3f9efb2fb90fe64493"></a>
-<a class="el" href="a00133.html">EventHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00216.html#a8d2f34a4ab171e3f9efb2fb90fe64493">GetEventHandler</a> () const </td></tr>
+<a class="el" href="a00132.html">EventHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00216.html#a8d2f34a4ab171e3f9efb2fb90fe64493">GetEventHandler</a> () const </td></tr>
 <tr class="memdesc:a8d2f34a4ab171e3f9efb2fb90fe64493 inherit pub_methods_a00216"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return active event handler. Null outside event handling. <br/></td></tr>
 <tr class="separator:a8d2f34a4ab171e3f9efb2fb90fe64493 inherit pub_methods_a00216"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e1e02093f67f7d56056c5992a6d7b1e inherit pub_methods_a00216"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e1e02093f67f7d56056c5992a6d7b1e"></a>
@@ -255,92 +343,154 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a0025
 <a class="el" href="a00255.html">RefCount</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00256.html#a0eb5281d7e6cfd7e729ae0d07ca0da92">RefCountPtr</a> ()</td></tr>
 <tr class="memdesc:a0eb5281d7e6cfd7e729ae0d07ca0da92 inherit pub_methods_a00256"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return pointer to the reference count structure. <br/></td></tr>
 <tr class="separator:a0eb5281d7e6cfd7e729ae0d07ca0da92 inherit pub_methods_a00256"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_a00151"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00151')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="a00151.html">Urho3D::GPUObject</a></td></tr>
-<tr class="memitem:a403872d965887004f1021405870ff865 inherit pub_methods_a00151"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a403872d965887004f1021405870ff865"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00151.html#a403872d965887004f1021405870ff865">GPUObject</a> (<a class="el" href="a00152.html">Graphics</a> *graphics)</td></tr>
-<tr class="memdesc:a403872d965887004f1021405870ff865 inherit pub_methods_a00151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with graphics subsystem pointer. <br/></td></tr>
-<tr class="separator:a403872d965887004f1021405870ff865 inherit pub_methods_a00151"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a818ceaf4f9debc5f4233f2e265d0cf42 inherit pub_methods_a00151"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a818ceaf4f9debc5f4233f2e265d0cf42"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00151.html#a818ceaf4f9debc5f4233f2e265d0cf42">~GPUObject</a> ()</td></tr>
-<tr class="memdesc:a818ceaf4f9debc5f4233f2e265d0cf42 inherit pub_methods_a00151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. Remove from the <a class="el" href="a00152.html" title="Graphics subsystem. Manages the application window, rendering state and GPU resources.">Graphics</a>. <br/></td></tr>
-<tr class="separator:a818ceaf4f9debc5f4233f2e265d0cf42 inherit pub_methods_a00151"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a054b2b9d1ac58c3dc81866bb7db6761a inherit pub_methods_a00151"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a054b2b9d1ac58c3dc81866bb7db6761a"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00151.html#a054b2b9d1ac58c3dc81866bb7db6761a">OnDeviceLost</a> ()</td></tr>
-<tr class="memdesc:a054b2b9d1ac58c3dc81866bb7db6761a inherit pub_methods_a00151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark the GPU resource destroyed on context destruction. <br/></td></tr>
-<tr class="separator:a054b2b9d1ac58c3dc81866bb7db6761a inherit pub_methods_a00151"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90de5fa07e164d6b5e95f832a0741088 inherit pub_methods_a00151"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a90de5fa07e164d6b5e95f832a0741088"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00151.html#a90de5fa07e164d6b5e95f832a0741088">ClearDataLost</a> ()</td></tr>
-<tr class="memdesc:a90de5fa07e164d6b5e95f832a0741088 inherit pub_methods_a00151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the data lost flag. <br/></td></tr>
-<tr class="separator:a90de5fa07e164d6b5e95f832a0741088 inherit pub_methods_a00151"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada0cc0adf6cc06940102d64be88b9d4b inherit pub_methods_a00151"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada0cc0adf6cc06940102d64be88b9d4b"></a>
-<a class="el" href="a00152.html">Graphics</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00151.html#ada0cc0adf6cc06940102d64be88b9d4b">GetGraphics</a> () const </td></tr>
-<tr class="memdesc:ada0cc0adf6cc06940102d64be88b9d4b inherit pub_methods_a00151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the graphics subsystem. <br/></td></tr>
-<tr class="separator:ada0cc0adf6cc06940102d64be88b9d4b inherit pub_methods_a00151"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc3aa11294b3d788965f299ca9bfb81c inherit pub_methods_a00151"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc3aa11294b3d788965f299ca9bfb81c"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00151.html#acc3aa11294b3d788965f299ca9bfb81c">GetGPUObject</a> () const </td></tr>
-<tr class="memdesc:acc3aa11294b3d788965f299ca9bfb81c inherit pub_methods_a00151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the object's OpenGL handle. <br/></td></tr>
-<tr class="separator:acc3aa11294b3d788965f299ca9bfb81c inherit pub_methods_a00151"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcfd2ec12501214e6f78bb0ce2fee6d5 inherit pub_methods_a00151"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afcfd2ec12501214e6f78bb0ce2fee6d5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00151.html#afcfd2ec12501214e6f78bb0ce2fee6d5">IsDataLost</a> () const </td></tr>
-<tr class="memdesc:afcfd2ec12501214e6f78bb0ce2fee6d5 inherit pub_methods_a00151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether data is lost due to context loss. <br/></td></tr>
-<tr class="separator:afcfd2ec12501214e6f78bb0ce2fee6d5 inherit pub_methods_a00151"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04fece8be486f0b627364667159d823c inherit pub_methods_a00151"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04fece8be486f0b627364667159d823c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00151.html#a04fece8be486f0b627364667159d823c">HasPendingData</a> () const </td></tr>
-<tr class="memdesc:a04fece8be486f0b627364667159d823c inherit pub_methods_a00151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether has pending data assigned while context was lost. <br/></td></tr>
-<tr class="separator:a04fece8be486f0b627364667159d823c inherit pub_methods_a00151"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:adf931f8501fee9c5eaca2fb98266fa4d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf931f8501fee9c5eaca2fb98266fa4d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>OBJECT</b> (<a class="el" href="a00164.html">IndexBuffer</a>)</td></tr>
-<tr class="separator:adf931f8501fee9c5eaca2fb98266fa4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae31e230aad30bec9beb7483f80f5d9a8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae31e230aad30bec9beb7483f80f5d9a8"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#ae31e230aad30bec9beb7483f80f5d9a8">Create</a> ()</td></tr>
-<tr class="memdesc:ae31e230aad30bec9beb7483f80f5d9a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create buffer. <br/></td></tr>
-<tr class="separator:ae31e230aad30bec9beb7483f80f5d9a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9c048ad7c84bcda500b7265591ffc4b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9c048ad7c84bcda500b7265591ffc4b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#ac9c048ad7c84bcda500b7265591ffc4b">UpdateToGPU</a> ()</td></tr>
-<tr class="memdesc:ac9c048ad7c84bcda500b7265591ffc4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the shadow data to the GPU buffer. <br/></td></tr>
-<tr class="separator:ac9c048ad7c84bcda500b7265591ffc4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f37baf52efaa013f1dd2838798abe97"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f37baf52efaa013f1dd2838798abe97"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>OBJECT</b> (<a class="el" href="a00164.html">Input</a>)</td></tr>
+<tr class="separator:a2f37baf52efaa013f1dd2838798abe97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b19913a84b72c17a1079b821ec18564"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b19913a84b72c17a1079b821ec18564"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a2b19913a84b72c17a1079b821ec18564">Initialize</a> ()</td></tr>
+<tr class="memdesc:a2b19913a84b72c17a1079b821ec18564"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize when screen mode initially set. <br/></td></tr>
+<tr class="separator:a2b19913a84b72c17a1079b821ec18564"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dae5f18e6d8b3e93e4346d44746845e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7dae5f18e6d8b3e93e4346d44746845e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a7dae5f18e6d8b3e93e4346d44746845e">ResetJoysticks</a> ()</td></tr>
+<tr class="memdesc:a7dae5f18e6d8b3e93e4346d44746845e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup internal joystick structures. <br/></td></tr>
+<tr class="separator:a7dae5f18e6d8b3e93e4346d44746845e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31ac853b836e1c4bb1106a984aefd1f6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31ac853b836e1c4bb1106a984aefd1f6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a31ac853b836e1c4bb1106a984aefd1f6">GainFocus</a> ()</td></tr>
+<tr class="memdesc:a31ac853b836e1c4bb1106a984aefd1f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare input state for application gaining input focus. <br/></td></tr>
+<tr class="separator:a31ac853b836e1c4bb1106a984aefd1f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac35fd7d54a42a16634d28a227d4e7581"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac35fd7d54a42a16634d28a227d4e7581"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#ac35fd7d54a42a16634d28a227d4e7581">LoseFocus</a> ()</td></tr>
+<tr class="memdesc:ac35fd7d54a42a16634d28a227d4e7581"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare input state for application losing input focus. <br/></td></tr>
+<tr class="separator:ac35fd7d54a42a16634d28a227d4e7581"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0131572cfae7e4fc8d150c6efae41f72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a0131572cfae7e4fc8d150c6efae41f72">ResetState</a> ()</td></tr>
+<tr class="memdesc:a0131572cfae7e4fc8d150c6efae41f72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear input state.  <a href="#a0131572cfae7e4fc8d150c6efae41f72">More...</a><br/></td></tr>
+<tr class="separator:a0131572cfae7e4fc8d150c6efae41f72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62f0700878de37c1964cc3f057287718"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62f0700878de37c1964cc3f057287718"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a62f0700878de37c1964cc3f057287718">SendInputFocusEvent</a> ()</td></tr>
+<tr class="memdesc:a62f0700878de37c1964cc3f057287718"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send an input focus or window minimization change event. <br/></td></tr>
+<tr class="separator:a62f0700878de37c1964cc3f057287718"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a243227daecf2b0e920fa51b916f67c89"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a243227daecf2b0e920fa51b916f67c89"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a243227daecf2b0e920fa51b916f67c89">SetMouseButton</a> (int button, bool newState)</td></tr>
+<tr class="memdesc:a243227daecf2b0e920fa51b916f67c89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle a mouse button change. <br/></td></tr>
+<tr class="separator:a243227daecf2b0e920fa51b916f67c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af03f06e386546e52648aeb4bc021c5d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af03f06e386546e52648aeb4bc021c5d9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#af03f06e386546e52648aeb4bc021c5d9">SetKey</a> (int key, int scancode, unsigned raw, bool newState)</td></tr>
+<tr class="memdesc:af03f06e386546e52648aeb4bc021c5d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle a key change. <br/></td></tr>
+<tr class="separator:af03f06e386546e52648aeb4bc021c5d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa0aedea65a9dc6459b993a344b742ec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa0aedea65a9dc6459b993a344b742ec"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#afa0aedea65a9dc6459b993a344b742ec">SetMouseWheel</a> (int delta)</td></tr>
+<tr class="memdesc:afa0aedea65a9dc6459b993a344b742ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle mousewheel change. <br/></td></tr>
+<tr class="separator:afa0aedea65a9dc6459b993a344b742ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb9cfe10463876f946380c2c4b23505a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb9cfe10463876f946380c2c4b23505a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#adb9cfe10463876f946380c2c4b23505a">SetMousePosition</a> (const <a class="el" href="a00167.html">IntVector2</a> &amp;position)</td></tr>
+<tr class="memdesc:adb9cfe10463876f946380c2c4b23505a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal function to set the mouse cursor position. <br/></td></tr>
+<tr class="separator:adb9cfe10463876f946380c2c4b23505a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0a172bd8f0568c96db9ceb0b46ed0e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0a172bd8f0568c96db9ceb0b46ed0e5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#ac0a172bd8f0568c96db9ceb0b46ed0e5">HandleScreenMode</a> (<a class="el" href="a00315.html">StringHash</a> eventType, <a class="el" href="a00155.html">VariantMap</a> &amp;eventData)</td></tr>
+<tr class="memdesc:ac0a172bd8f0568c96db9ceb0b46ed0e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle screen mode event. <br/></td></tr>
+<tr class="separator:ac0a172bd8f0568c96db9ceb0b46ed0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a147c4675aa679dbf4d9702b3d3d6b921"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a147c4675aa679dbf4d9702b3d3d6b921"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a147c4675aa679dbf4d9702b3d3d6b921">HandleBeginFrame</a> (<a class="el" href="a00315.html">StringHash</a> eventType, <a class="el" href="a00155.html">VariantMap</a> &amp;eventData)</td></tr>
+<tr class="memdesc:a147c4675aa679dbf4d9702b3d3d6b921"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle frame start event. <br/></td></tr>
+<tr class="separator:a147c4675aa679dbf4d9702b3d3d6b921"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dc8699608ba629964e3c702e629be92"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6dc8699608ba629964e3c702e629be92"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a6dc8699608ba629964e3c702e629be92">HandleSDLEvent</a> (void *sdlEvent)</td></tr>
+<tr class="memdesc:a6dc8699608ba629964e3c702e629be92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle SDL event. <br/></td></tr>
+<tr class="separator:a6dc8699608ba629964e3c702e629be92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a2660613d3a3d2a6fd338c8545c82a332"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2660613d3a3d2a6fd338c8545c82a332"></a>
-<a class="el" href="a00291.html">SharedArrayPtr</a>&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a2660613d3a3d2a6fd338c8545c82a332">shadowData_</a></td></tr>
-<tr class="memdesc:a2660613d3a3d2a6fd338c8545c82a332"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shadow data. <br/></td></tr>
-<tr class="separator:a2660613d3a3d2a6fd338c8545c82a332"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a198fe3590a089cd09043c4a2ab6eb25c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a198fe3590a089cd09043c4a2ab6eb25c"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a198fe3590a089cd09043c4a2ab6eb25c">indexCount_</a></td></tr>
-<tr class="memdesc:a198fe3590a089cd09043c4a2ab6eb25c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of indices. <br/></td></tr>
-<tr class="separator:a198fe3590a089cd09043c4a2ab6eb25c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05130917f4e71f58100209bb2118f48f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05130917f4e71f58100209bb2118f48f"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a05130917f4e71f58100209bb2118f48f">indexSize_</a></td></tr>
-<tr class="memdesc:a05130917f4e71f58100209bb2118f48f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index size. <br/></td></tr>
-<tr class="separator:a05130917f4e71f58100209bb2118f48f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50a25d9e185145253805d2325d770022"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50a25d9e185145253805d2325d770022"></a>
-LockState&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a50a25d9e185145253805d2325d770022">lockState_</a></td></tr>
-<tr class="memdesc:a50a25d9e185145253805d2325d770022"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer locking state. <br/></td></tr>
-<tr class="separator:a50a25d9e185145253805d2325d770022"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa516b7e6f6320450682874661c47c081"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa516b7e6f6320450682874661c47c081"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#aa516b7e6f6320450682874661c47c081">lockStart_</a></td></tr>
-<tr class="memdesc:aa516b7e6f6320450682874661c47c081"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock start vertex. <br/></td></tr>
-<tr class="separator:aa516b7e6f6320450682874661c47c081"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0a5eb08203a9213923b213dc1710dcf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa0a5eb08203a9213923b213dc1710dcf"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#aa0a5eb08203a9213923b213dc1710dcf">lockCount_</a></td></tr>
-<tr class="memdesc:aa0a5eb08203a9213923b213dc1710dcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock number of vertices. <br/></td></tr>
-<tr class="separator:aa0a5eb08203a9213923b213dc1710dcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5724e033659363ae18fba96aa22f6c92"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5724e033659363ae18fba96aa22f6c92"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a5724e033659363ae18fba96aa22f6c92">lockScratchData_</a></td></tr>
-<tr class="memdesc:a5724e033659363ae18fba96aa22f6c92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scratch buffer for fallback locking. <br/></td></tr>
-<tr class="separator:a5724e033659363ae18fba96aa22f6c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef8b59930c586632de24c26ebcd68acf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef8b59930c586632de24c26ebcd68acf"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#aef8b59930c586632de24c26ebcd68acf">shadowed_</a></td></tr>
-<tr class="memdesc:aef8b59930c586632de24c26ebcd68acf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shadowed flag. <br/></td></tr>
-<tr class="separator:aef8b59930c586632de24c26ebcd68acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b727e3a9a2fd7d0a14a398fef765782"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b727e3a9a2fd7d0a14a398fef765782"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a7b727e3a9a2fd7d0a14a398fef765782">dynamic_</a></td></tr>
-<tr class="memdesc:a7b727e3a9a2fd7d0a14a398fef765782"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dynamic flag. <br/></td></tr>
-<tr class="separator:a7b727e3a9a2fd7d0a14a398fef765782"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb42df4c122d9e03f58e8bddf3f94de8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb42df4c122d9e03f58e8bddf3f94de8"></a>
+<a class="el" href="a00353.html">WeakPtr</a>&lt; <a class="el" href="a00151.html">Graphics</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#adb42df4c122d9e03f58e8bddf3f94de8">graphics_</a></td></tr>
+<tr class="memdesc:adb42df4c122d9e03f58e8bddf3f94de8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00151.html" title="Graphics subsystem. Manages the application window, rendering state and GPU resources.">Graphics</a> subsystem. <br/></td></tr>
+<tr class="separator:adb42df4c122d9e03f58e8bddf3f94de8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38744d7de087bb941bbc9717eb25b4d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38744d7de087bb941bbc9717eb25b4d7"></a>
+<a class="el" href="a00157.html">HashSet</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a38744d7de087bb941bbc9717eb25b4d7">keyDown_</a></td></tr>
+<tr class="memdesc:a38744d7de087bb941bbc9717eb25b4d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key down state. <br/></td></tr>
+<tr class="separator:a38744d7de087bb941bbc9717eb25b4d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7952006c328269b0cf931eeb55c1d96"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac7952006c328269b0cf931eeb55c1d96"></a>
+<a class="el" href="a00157.html">HashSet</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#ac7952006c328269b0cf931eeb55c1d96">keyPress_</a></td></tr>
+<tr class="memdesc:ac7952006c328269b0cf931eeb55c1d96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key pressed state. <br/></td></tr>
+<tr class="separator:ac7952006c328269b0cf931eeb55c1d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0adb069f845d8ee69a3074733599714c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0adb069f845d8ee69a3074733599714c"></a>
+<a class="el" href="a00157.html">HashSet</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a0adb069f845d8ee69a3074733599714c">scancodeDown_</a></td></tr>
+<tr class="memdesc:a0adb069f845d8ee69a3074733599714c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key down state by scancode. <br/></td></tr>
+<tr class="separator:a0adb069f845d8ee69a3074733599714c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2c6f3f647581a68adb0e3c55afa8660"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae2c6f3f647581a68adb0e3c55afa8660"></a>
+<a class="el" href="a00157.html">HashSet</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#ae2c6f3f647581a68adb0e3c55afa8660">scancodePress_</a></td></tr>
+<tr class="memdesc:ae2c6f3f647581a68adb0e3c55afa8660"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key pressed state by scancode. <br/></td></tr>
+<tr class="separator:ae2c6f3f647581a68adb0e3c55afa8660"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4086d7000999d4a1fd8697cea8e49653"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4086d7000999d4a1fd8697cea8e49653"></a>
+<a class="el" href="a00155.html">HashMap</a>&lt; int, <a class="el" href="a00331.html">TouchState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a4086d7000999d4a1fd8697cea8e49653">touches_</a></td></tr>
+<tr class="memdesc:a4086d7000999d4a1fd8697cea8e49653"><td class="mdescLeft">&#160;</td><td class="mdescRight">Active finger touches. <br/></td></tr>
+<tr class="separator:a4086d7000999d4a1fd8697cea8e49653"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5972050012f6676cd6cce4c867775a5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5972050012f6676cd6cce4c867775a5f"></a>
+<a class="el" href="a00314.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a5972050012f6676cd6cce4c867775a5f">textInput_</a></td></tr>
+<tr class="memdesc:a5972050012f6676cd6cce4c867775a5f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00314.html" title="String class.">String</a> for text input. <br/></td></tr>
+<tr class="separator:a5972050012f6676cd6cce4c867775a5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4fc1df7c186df9c62e74a6f80a83fff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4fc1df7c186df9c62e74a6f80a83fff"></a>
+<a class="el" href="a00340.html">Vector</a>&lt; <a class="el" href="a00171.html">JoystickState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#aa4fc1df7c186df9c62e74a6f80a83fff">joysticks_</a></td></tr>
+<tr class="memdesc:aa4fc1df7c186df9c62e74a6f80a83fff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opened joysticks. <br/></td></tr>
+<tr class="separator:aa4fc1df7c186df9c62e74a6f80a83fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2837b89c30744898c03b6a24bd6e540f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2837b89c30744898c03b6a24bd6e540f"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a2837b89c30744898c03b6a24bd6e540f">mouseButtonDown_</a></td></tr>
+<tr class="memdesc:a2837b89c30744898c03b6a24bd6e540f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mouse buttons' down state. <br/></td></tr>
+<tr class="separator:a2837b89c30744898c03b6a24bd6e540f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22bb60b1aa0d4e67620935cba2dcceab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a22bb60b1aa0d4e67620935cba2dcceab"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a22bb60b1aa0d4e67620935cba2dcceab">mouseButtonPress_</a></td></tr>
+<tr class="memdesc:a22bb60b1aa0d4e67620935cba2dcceab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mouse buttons' pressed state. <br/></td></tr>
+<tr class="separator:a22bb60b1aa0d4e67620935cba2dcceab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74ac83580a39936226a6e4dad7357e29"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74ac83580a39936226a6e4dad7357e29"></a>
+<a class="el" href="a00167.html">IntVector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a74ac83580a39936226a6e4dad7357e29">lastMousePosition_</a></td></tr>
+<tr class="memdesc:a74ac83580a39936226a6e4dad7357e29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last mouse position for calculating movement. <br/></td></tr>
+<tr class="separator:a74ac83580a39936226a6e4dad7357e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a429e409c5e99d1e7e4fb4aa5bcde7c2f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a429e409c5e99d1e7e4fb4aa5bcde7c2f"></a>
+<a class="el" href="a00167.html">IntVector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a429e409c5e99d1e7e4fb4aa5bcde7c2f">mouseMove_</a></td></tr>
+<tr class="memdesc:a429e409c5e99d1e7e4fb4aa5bcde7c2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mouse movement since last frame. <br/></td></tr>
+<tr class="separator:a429e409c5e99d1e7e4fb4aa5bcde7c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f0e70c49c6620390193d3228b561731"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f0e70c49c6620390193d3228b561731"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a5f0e70c49c6620390193d3228b561731">mouseMoveWheel_</a></td></tr>
+<tr class="memdesc:a5f0e70c49c6620390193d3228b561731"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mouse wheel movement since last frame. <br/></td></tr>
+<tr class="separator:a5f0e70c49c6620390193d3228b561731"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad27ac3a8fe8b785e09b3e0340299dc88"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad27ac3a8fe8b785e09b3e0340299dc88"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#ad27ac3a8fe8b785e09b3e0340299dc88">windowID_</a></td></tr>
+<tr class="memdesc:ad27ac3a8fe8b785e09b3e0340299dc88"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDL window ID. <br/></td></tr>
+<tr class="separator:ad27ac3a8fe8b785e09b3e0340299dc88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b31c4e2892e90c13c63e98f496db6dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b31c4e2892e90c13c63e98f496db6dc"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a5b31c4e2892e90c13c63e98f496db6dc">toggleFullscreen_</a></td></tr>
+<tr class="memdesc:a5b31c4e2892e90c13c63e98f496db6dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fullscreen toggle flag. <br/></td></tr>
+<tr class="separator:a5b31c4e2892e90c13c63e98f496db6dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec5cacf96172d922e8c148aac61b6cce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec5cacf96172d922e8c148aac61b6cce"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#aec5cacf96172d922e8c148aac61b6cce">mouseVisible_</a></td></tr>
+<tr class="memdesc:aec5cacf96172d922e8c148aac61b6cce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operating system mouse cursor visible flag. <br/></td></tr>
+<tr class="separator:aec5cacf96172d922e8c148aac61b6cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a471e35b5ce1544455116fe4d0e3da753"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a471e35b5ce1544455116fe4d0e3da753"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a471e35b5ce1544455116fe4d0e3da753">inputFocus_</a></td></tr>
+<tr class="memdesc:a471e35b5ce1544455116fe4d0e3da753"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00164.html" title="Input subsystem. Converts operating system window messages to input state and events.">Input</a> focus flag. <br/></td></tr>
+<tr class="separator:a471e35b5ce1544455116fe4d0e3da753"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedd4856999490f53fd03f5c3c5ba4048"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aedd4856999490f53fd03f5c3c5ba4048"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#aedd4856999490f53fd03f5c3c5ba4048">minimized_</a></td></tr>
+<tr class="memdesc:aedd4856999490f53fd03f5c3c5ba4048"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimized flag. <br/></td></tr>
+<tr class="separator:aedd4856999490f53fd03f5c3c5ba4048"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8598413351f5b5ae933a79ecf2c6c97"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8598413351f5b5ae933a79ecf2c6c97"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#ae8598413351f5b5ae933a79ecf2c6c97">focusedThisFrame_</a></td></tr>
+<tr class="memdesc:ae8598413351f5b5ae933a79ecf2c6c97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gained focus on this frame flag. <br/></td></tr>
+<tr class="separator:ae8598413351f5b5ae933a79ecf2c6c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac07b8dc69b67cd7c9e7d9f83cdb475ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac07b8dc69b67cd7c9e7d9f83cdb475ea"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#ac07b8dc69b67cd7c9e7d9f83cdb475ea">suppressNextMouseMove_</a></td></tr>
+<tr class="memdesc:ac07b8dc69b67cd7c9e7d9f83cdb475ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Next mouse move suppress flag. <br/></td></tr>
+<tr class="separator:ac07b8dc69b67cd7c9e7d9f83cdb475ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74ad807d1f7b3312cd0117843f519205"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74ad807d1f7b3312cd0117843f519205"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a74ad807d1f7b3312cd0117843f519205">initialized_</a></td></tr>
+<tr class="memdesc:a74ad807d1f7b3312cd0117843f519205"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialized flag. <br/></td></tr>
+<tr class="separator:a74ad807d1f7b3312cd0117843f519205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a321fcf53928ac90adef33f55d6f97ec2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a321fcf53928ac90adef33f55d6f97ec2"></a>
+<a class="el" href="a00155.html">HashMap</a>&lt; int, unsigned &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a321fcf53928ac90adef33f55d6f97ec2">joystickIDMap_</a></td></tr>
+<tr class="memdesc:a321fcf53928ac90adef33f55d6f97ec2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map SDL joystick ID to internal index. <br/></td></tr>
+<tr class="separator:a321fcf53928ac90adef33f55d6f97ec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -349,28 +499,54 @@ Additional Inherited Members</h2></td></tr>
 <a class="el" href="a00107.html">Context</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00216.html#a3a7df857ddaa8c3e218c3645152dc23d">context_</a></td></tr>
 <tr class="memdesc:a3a7df857ddaa8c3e218c3645152dc23d inherit pro_attribs_a00216"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execution context. <br/></td></tr>
 <tr class="separator:a3a7df857ddaa8c3e218c3645152dc23d inherit pro_attribs_a00216"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_a00151"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_a00151')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="a00151.html">Urho3D::GPUObject</a></td></tr>
-<tr class="memitem:abf1a902885d2c3bac02f3f58e0e0f037 inherit pro_attribs_a00151"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf1a902885d2c3bac02f3f58e0e0f037"></a>
-<a class="el" href="a00353.html">WeakPtr</a>&lt; <a class="el" href="a00152.html">Graphics</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00151.html#abf1a902885d2c3bac02f3f58e0e0f037">graphics_</a></td></tr>
-<tr class="memdesc:abf1a902885d2c3bac02f3f58e0e0f037 inherit pro_attribs_a00151"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00152.html" title="Graphics subsystem. Manages the application window, rendering state and GPU resources.">Graphics</a> subsystem. <br/></td></tr>
-<tr class="separator:abf1a902885d2c3bac02f3f58e0e0f037 inherit pro_attribs_a00151"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a601debebd01ef73fa6f40c818232330e inherit pro_attribs_a00151"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a601debebd01ef73fa6f40c818232330e"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00151.html#a601debebd01ef73fa6f40c818232330e">object_</a></td></tr>
-<tr class="memdesc:a601debebd01ef73fa6f40c818232330e inherit pro_attribs_a00151"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00216.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a> handle. <br/></td></tr>
-<tr class="separator:a601debebd01ef73fa6f40c818232330e inherit pro_attribs_a00151"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6c82e62ca8b1098c4157acfe517c772 inherit pro_attribs_a00151"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6c82e62ca8b1098c4157acfe517c772"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00151.html#ab6c82e62ca8b1098c4157acfe517c772">dataLost_</a></td></tr>
-<tr class="memdesc:ab6c82e62ca8b1098c4157acfe517c772 inherit pro_attribs_a00151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data lost flag. <br/></td></tr>
-<tr class="separator:ab6c82e62ca8b1098c4157acfe517c772 inherit pro_attribs_a00151"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada5a50cf10c6f65deb6b273bfc1649ab inherit pro_attribs_a00151"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada5a50cf10c6f65deb6b273bfc1649ab"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00151.html#ada5a50cf10c6f65deb6b273bfc1649ab">dataPending_</a></td></tr>
-<tr class="memdesc:ada5a50cf10c6f65deb6b273bfc1649ab inherit pro_attribs_a00151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data pending flag. <br/></td></tr>
-<tr class="separator:ada5a50cf10c6f65deb6b273bfc1649ab inherit pro_attribs_a00151"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Hardware index buffer. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/OpenGL/OGLIndexBuffer.h</li>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/OpenGL/OGLIndexBuffer.cpp</li>
+<div class="textblock"><p>Input subsystem. Converts operating system window messages to input state and events. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a0131572cfae7e4fc8d150c6efae41f72"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::Input::ResetState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clear input state. </p>
+<dl class="todo"><dt><b><a class="el" href="a00784.html#_todo000015">Todo:</a></b></dt><dd>Check if this is necessary </dd></dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a00164_a0131572cfae7e4fc8d150c6efae41f72_cgraph.svg" width="100%" height="448"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a00164_a0131572cfae7e4fc8d150c6efae41f72_icgraph.svg" width="100%" height="447"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Input/Input.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Input/Input.cpp</li>
 </ul>
 </div><!-- contents -->
