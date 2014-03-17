@@ -20,24 +20,38 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00325.html">Thread</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00305.html">Spline</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">Urho3D::Thread Member List</div>  </div>
+<div class="title">Urho3D::Spline Member List</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="a00325.html">Urho3D::Thread</a>, including all inherited members.</p>
+<p>This is the complete list of members for <a class="el" href="a00305.html">Urho3D::Spline</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a00325.html#a2cfb3d871653aeb2c750811e0a62f2e6">handle_</a></td><td class="entry"><a class="el" href="a00325.html">Urho3D::Thread</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a00325.html#a63134bf27472c831a7f500f554fa66dc">IsStarted</a>() const </td><td class="entry"><a class="el" href="a00325.html">Urho3D::Thread</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00325.html#a7fc81f2afdcb233e00f0f6405a95225f">Run</a>()</td><td class="entry"><a class="el" href="a00325.html">Urho3D::Thread</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00325.html#a378bc8be68c5239553d836b6a073b28c">SetPriority</a>(int priority)</td><td class="entry"><a class="el" href="a00325.html">Urho3D::Thread</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00325.html#a6ff80e8a4039a452f1bfedaf36e8b1d1">shouldRun_</a></td><td class="entry"><a class="el" href="a00325.html">Urho3D::Thread</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a00325.html#a8192e1dfca6363a4190d9162837cc3bd">Stop</a>()</td><td class="entry"><a class="el" href="a00325.html">Urho3D::Thread</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00325.html#a3f0344e25501a204632c202c3458e36d">Thread</a>()</td><td class="entry"><a class="el" href="a00325.html">Urho3D::Thread</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00325.html#a4cbd298c7f15b818d7d01ea6466acd29">ThreadFunction</a>()=0</td><td class="entry"><a class="el" href="a00325.html">Urho3D::Thread</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00325.html#ad64684670b16b0e97da3a83963b28152">~Thread</a>()</td><td class="entry"><a class="el" href="a00325.html">Urho3D::Thread</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00305.html#aa77a744c301a9c7475d635d00b4df2e7">AddKnot</a>(const Variant &amp;knot)</td><td class="entry"><a class="el" href="a00305.html">Urho3D::Spline</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="a00305.html#aa7be487029e035f59f9acc214414a8a3">AddKnot</a>(const Variant &amp;knot, unsigned index)</td><td class="entry"><a class="el" href="a00305.html">Urho3D::Spline</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00305.html#a8efd8706f6896bf30783ede383993fcb">BezierInterpolation</a>(const Vector&lt; Variant &gt; &amp;knots, float t) const </td><td class="entry"><a class="el" href="a00305.html">Urho3D::Spline</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="a00305.html#a0b405174354c875bd7d0623385626f67">Clear</a>()</td><td class="entry"><a class="el" href="a00305.html">Urho3D::Spline</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00305.html#ae72846e35cb7f8967e7021f98a2807da">GetInterpolationMode</a>() const </td><td class="entry"><a class="el" href="a00305.html">Urho3D::Spline</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="a00305.html#a569bf2f9c5906ddc49527094794b3f12">GetKnot</a>(unsigned index) const </td><td class="entry"><a class="el" href="a00305.html">Urho3D::Spline</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00305.html#a5c2f80a42a367960b386ed7465d2560c">GetKnots</a>() const </td><td class="entry"><a class="el" href="a00305.html">Urho3D::Spline</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="a00305.html#a797a4db283284031153a6dd1b6a9ded9">GetPoint</a>(float f) const </td><td class="entry"><a class="el" href="a00305.html">Urho3D::Spline</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00305.html#a42093a07b9949bcd1c402621e1dad080">interpolationMode_</a></td><td class="entry"><a class="el" href="a00305.html">Urho3D::Spline</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="a00305.html#a6cdddea8ecb5db6129aeccb11ddfb72f">knots_</a></td><td class="entry"><a class="el" href="a00305.html">Urho3D::Spline</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00305.html#abbd24ee371b597f045b6974172c08d18">LinearInterpolation</a>(const Variant &amp;lhs, const Variant &amp;rhs, float t) const </td><td class="entry"><a class="el" href="a00305.html">Urho3D::Spline</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="a00305.html#a28f3f34d158e4acd514a92ab7b328f0a">operator!=</a>(const Spline &amp;rhs) const </td><td class="entry"><a class="el" href="a00305.html">Urho3D::Spline</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00305.html#a57318bc693071d27e73720792bc18040">operator=</a>(const Spline &amp;rhs)</td><td class="entry"><a class="el" href="a00305.html">Urho3D::Spline</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="a00305.html#a0d8aa3ead2efb35e2fb0f6c09225de53">operator==</a>(const Spline &amp;rhs) const </td><td class="entry"><a class="el" href="a00305.html">Urho3D::Spline</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00305.html#aba4c008df1cac89a3b9b876184e6ad0a">RemoveKnot</a>()</td><td class="entry"><a class="el" href="a00305.html">Urho3D::Spline</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="a00305.html#afcdb84d33afd31139089a98079afe19d">RemoveKnot</a>(unsigned index)</td><td class="entry"><a class="el" href="a00305.html">Urho3D::Spline</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00305.html#a54065e0455f38df16ca0e4d965bc978a">SetInterpolationMode</a>(InterpolationMode interpolationMode)</td><td class="entry"><a class="el" href="a00305.html">Urho3D::Spline</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="a00305.html#ad5a5477e8dd8bd471c6a00e508cfc399">SetKnot</a>(const Variant &amp;knot, unsigned index)</td><td class="entry"><a class="el" href="a00305.html">Urho3D::Spline</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00305.html#a46456817e28e5850767742369d157778">SetKnots</a>(const Vector&lt; Variant &gt; &amp;knots)</td><td class="entry"><a class="el" href="a00305.html">Urho3D::Spline</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="a00305.html#ac53bf81997466016d00ed1e94500c4ea">Spline</a>()</td><td class="entry"><a class="el" href="a00305.html">Urho3D::Spline</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00305.html#ad6713729fcc73642aa7ad7e7433e18c0">Spline</a>(InterpolationMode mode)</td><td class="entry"><a class="el" href="a00305.html">Urho3D::Spline</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="a00305.html#aa1e1a1469b2e32c5216961a2c95b5b80">Spline</a>(const Vector&lt; Variant &gt; &amp;knots, InterpolationMode mode=BEZIER_CURVE)</td><td class="entry"><a class="el" href="a00305.html">Urho3D::Spline</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00305.html#a08d2835e6c28d8fecfef91f6d4da63bf">Spline</a>(const Spline &amp;rhs)</td><td class="entry"><a class="el" href="a00305.html">Urho3D::Spline</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->

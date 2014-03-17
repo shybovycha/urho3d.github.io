@@ -14,17 +14,160 @@ title: Documentation
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">External Links </div>  </div>
+<div class="title">History </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Related projects:</p>
+<div class="textblock"><p>V1.31</p>
 <ul>
-<li>Blender to Urho3D mesh exporter (<a href="https://github.com/reattiva/Urho3D-Blender">https://github.com/reattiva/Urho3D-Blender</a>)</li>
+<li>Extensive build system improvements, especially for using Urho3D as a library in an external project.</li>
+<li>LuaJIT support.</li>
+<li>Improved Lua bindings, Lua coroutine support, automatic loading of compiled Lua scripts (.luc) if they exist.</li>
+<li>HDR rendering, 3D textures, height fog and several new post process shaders.</li>
+<li>Shader refactoring. Need for XML shader descriptions &amp; ShaderCompiler tool removed.</li>
+<li>Reflection / refraction rendering support.</li>
+<li>2D drawable components: StaticSprite2D, AnimatedSprite2D, ParticleEmitter2D.</li>
+<li>ToolTip &amp; MessageBox UI elements. UI logic improvements.</li>
+<li>Optimized text rendering + dynamic population of font textures for improved batching.</li>
+<li>AngelScript DelayedExecute for free functions, and event handling for any script object, not just ScriptInstances</li>
+<li>Editor: added grid, toolbar, camera view presets, camera orbit, mouse wheel zoom, multiple viewports and orthographic camera.</li>
+<li>Borderless window mode, possibility to change application icon.</li>
+<li>SDL GameController support, raw key codes support.</li>
+<li>Optimized shadow rendering on mobile devices. Low quality mode avoids dependent texture reads.</li>
+<li>HttpRequest class runs in a background thread to avoid blocking.</li>
+<li>Compressed package file support using the LZ4 library.</li>
+<li>Cone parameters in SoundSource3D for directional attenuation.</li>
+<li>Variant GetPtr() safety refactoring. Uses WeakPtr's to store RefCounted subclasses. Use GetVoidPtr() to store unsafe arbitrary pointers.</li>
+<li>Improved work queue completion events. Work items are now RefCounted to allow persisting them as necessary.</li>
+<li>Allow to disable automatic execution of AngelScript &amp; Lua from the engine console.</li>
+<li>Added shader variations, for example ambient occlusion texture and better emissive color support.</li>
+<li>Added examples.</li>
+<li>Update SDL to 2.0.1</li>
+<li>Update AngelScript to 2.28.1.</li>
+<li>Update FreeType to 2.5.0.</li>
+<li>Fix partial texture updates, both Direct3D9 &amp; OpenGL.</li>
+<li>Fix long-standing audio click bug.</li>
+<li>Fix kinematic rigidbodies to apply impulses correctly to dynamic bodies.</li>
+<li>Plus many more improvements and bugfixes.</li>
 </ul>
+<p>V1.3</p>
 <ul>
-<li>Urho3D Launcher (<a href="https://github.com/Hgdavidy/Urho3D_Launcher_Tools">https://github.com/Hgdavidy/Urho3D_Launcher_Tools</a>)</li>
+<li>Lua scripting support.</li>
+<li>Optional build as a single external library, static or dynamic.</li>
+<li>Raspberry Pi support.</li>
+<li>64-bit build support.</li>
+<li>HTTP client using the Civetweb library.</li>
+<li>Enhanced CMake build scripts. Android build also uses CMake. Use out-of-source build on platform that supports it.</li>
+<li>Rendering performance optimizations, optional StaticModelGroup component for culling and lighting several objects as one unit.</li>
+<li>A set of sample applications implemented in C++, AngelScript and Lua.</li>
+<li>Automatic node/component handle member variable serialization for AngelScript script objects.</li>
+<li>New UI theme.</li>
+<li>Shadow &amp; stroke effects in Text &amp; Text3D.</li>
+<li>Boolean shader uniforms.</li>
+<li>Quick menu in the editor.</li>
+<li>Material editor and preview in the editor.</li>
+<li>Editable attributes for particle emitters.</li>
+<li>Components are grouped into categories in the editor.</li>
+<li>Update SDL to stable 2.0.0 release.</li>
+<li>Several other improvements and bugfixes.</li>
 </ul>
+<p>V1.23</p>
 <ul>
-<li>Urho3D libRocket Integration (<a href="https://github.com/realrunner/urho3d-librocket">https://github.com/realrunner/urho3d-librocket</a>) </li>
+<li>UI layout editing in the editor.</li>
+<li>Undo/redo in the editor.</li>
+<li>Recast/Detour library integration for navigation mesh generation and pathfinding.</li>
+<li>Open Asset Import Library update, enables FBX file support.</li>
+<li>"Is Enabled" attribute in scene nodes and components for an uniform mechanism to temporarily disable unneeded audiovisual, physics or logic objects.</li>
+<li>Script object public variables editing and serialization.</li>
+<li>New components: Text3D and Sprite.</li>
+<li>UI library functionality improvements.</li>
+<li>sRGB texture and framebuffer support.</li>
+<li>Switched to GLEW library for OpenGL extension handling.</li>
+<li>Vegetation and lightmapping example shaders.</li>
+<li>Engine configuration through a parameter map.</li>
+<li>Lots of refactoring, code cleanup and bugfixes.</li>
+</ul>
+<p>V1.22</p>
+<ul>
+<li>Configurable render path replaces hardcoded forward/prepass/deferred modes. Render path system also used for postprocessing now.</li>
+<li>Threaded task priorities; long-running tasks (more than one frame) can coexist with the time-critical tasks.</li>
+<li>Possibility to use also RGB normal maps.</li>
+<li>CustomGeometry component, which allows geometry to be defined similarly to OpenGL immediate mode.</li>
+<li>Elapsed time shader parameter for material animation.</li>
+<li>Cubic environment mapping example shaders.</li>
+<li>Separate physics collision start &amp; end events.</li>
+<li>Visual Studio 2012, Eclipse &amp; Xcode build support.</li>
+<li>Many bugfixes, including iOS 6 orientation &amp; shadow mapping bugfixes, and skinning on some Android devices.</li>
+</ul>
+<p>V1.21</p>
+<ul>
+<li>Bugfixes and code cleanup.</li>
+<li>External window support (experimental.)</li>
+<li>UI elements refactored to use attributes for serialization.</li>
+<li>Animation state editing and animation trigger events.</li>
+<li>Scene update time scale can be modified.</li>
+<li>Improved the delayed method call system.</li>
+</ul>
+<p>V1.2</p>
+<ul>
+<li>Android and iOS support.</li>
+<li>Decal rendering.</li>
+<li>Terrain rendering.</li>
+<li>Joystick input support.</li>
+<li>Use SDL library for windowing and input on all platforms.</li>
+<li>KTX and PVR image loading (for ETC1 &amp; PVRTC compressed textures.)</li>
+<li>Removed need for shader preprocessing; reorganized shaders to be more friendly to base custom shaders on.</li>
+<li>Inbuilt geometry shapes in the editor.</li>
+</ul>
+<p>V1.16</p>
+<ul>
+<li>Switched to Bullet physics library.</li>
+<li>More physics constraint types.</li>
+<li>Rendering and networking performance optimizations.</li>
+<li>Use Squish library to implement software DXT decompression when not supported in hardware.</li>
+</ul>
+<p>V1.15</p>
+<ul>
+<li>New deferred rendering pipeline.</li>
+<li>Unicode support.</li>
+<li>Live resource reloading in the editor (Windows only so far.)</li>
+<li>More accurate frame timing.</li>
+<li>Bugfixes to physics jittering and FBO performance issue on Linux.</li>
+</ul>
+<p>V1.14</p>
+<ul>
+<li>Object (partial scene) load/save.</li>
+<li>Post-processing.</li>
+<li>Switched to pugixml library, scene load/save optimizations.</li>
+<li>Bugfixes to rendertexture views and component attributes.</li>
+</ul>
+<p>V1.13</p>
+<ul>
+<li>Task-based multithreading.</li>
+<li>Vertex lighting option.</li>
+<li>Forward and light pre-pass rendering pipelines.</li>
+</ul>
+<p>V1.12</p>
+<ul>
+<li>Manipulator gizmo and multi-editing in the editor.</li>
+<li>Switched to forward rendering exclusively, which is optimized to do more work in the vertex shader.</li>
+<li>Zone system refactoring. Objects check the zone they belong to for per-zone light masking, ambient light and fog settings.</li>
+<li>Scripting API fixes and improvements.</li>
+</ul>
+<p>V1.11</p>
+<ul>
+<li>Bugfixes and performance optimizations.</li>
+<li>Added GraphicsTest example from V1.0 (now called TestSceneOld.)</li>
+<li>Added fallback mode, which is used if multiple render targets or hardware shadow maps are not available.</li>
+</ul>
+<p>V1.1</p>
+<ul>
+<li>Object and scene model refactoring.</li>
+<li>Automatic serialization of scene objects via attributes.</li>
+<li>Added OpenGL and cross-platform support.</li>
+<li>Switched to kNet library for networking.</li>
+</ul>
+<p>V1.0</p>
+<ul>
+<li>Original release. </li>
 </ul>
 </div></div><!-- contents -->

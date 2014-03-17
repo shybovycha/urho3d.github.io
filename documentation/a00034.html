@@ -14,20 +14,65 @@ title: Documentation
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">Serialization </div>  </div>
+<div class="title">Urho2D </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Classes that derive from <a class="el" href="a00281.html" title="Base class for objects with automatic serialization through attributes.">Serializable</a> can perform automatic serialization to binary or XML format by defining <a class="el" href="a00067.html">attributes</a>. Attributes are stored to the <a class="el" href="a00106.html" title="Urho3D execution context. Provides access to subsystems, object factories and attributes, and event receivers.">Context</a> per class. Scene load/save and network replication are both implemented by having the <a class="el" href="a00213.html" title="Scene node that may contain components and child nodes.">Node</a> and <a class="el" href="a00096.html" title="Base class for components. Components can be created to scene nodes.">Component</a> classes derive from <a class="el" href="a00281.html" title="Base class for objects with automatic serialization through attributes.">Serializable</a>.</p>
-<p>The supported attribute types are all those supported by <a class="el" href="a00336.html" title="Variable that supports a fixed set of types.">Variant</a>, excluding pointers. Attributes can either define a direct memory offset into the object, or setter &amp; getter functions. Zero-based enumerations are also supported, so that the enum values can be stored as text into XML files instead of just numbers. For editing, the attributes also have human-readable names.</p>
-<p>To implement side effects to attributes, for example that a <a class="el" href="a00213.html" title="Scene node that may contain components and child nodes.">Node</a> needs to dirty its world transform whenever the local transform changes, the default attribute access functions in <a class="el" href="a00281.html" title="Base class for objects with automatic serialization through attributes.">Serializable</a> can be overridden. See <a class="el" href="a00281.html#a3785d97ef92557bab8239688af94ac5e">OnSetAttribute()</a> and <a class="el" href="a00281.html#a938ff9d35938771da3843f3fa129ed21">OnGetAttribute()</a>.</p>
-<p>Each attribute can have a combination of the following flags:</p>
+<div class="textblock"><p>In order to make 2D Game in Urho3D, Urho2D is provided. Urho2D include 2D graphics and 2D physics. The classes provide are:</p>
 <ul>
-<li>AM_FILE: Is used for file serialization (load/save.)</li>
-<li>AM_NET: Is used for network replication.</li>
-<li>AM_LATESTDATA: Frequently changing data for network replication, where only the latest values matter. Used for motion and animation.</li>
-<li>AM_NOEDIT: Is an internal attribute and is not to be shown for editing.</li>
-<li>AM_NODEID: Is a node ID and may need rewriting when instantiating scene content.</li>
-<li>AM_COMPONENTID: Is a component ID and may need rewriting when instantiating scene content.</li>
+<li><a class="el" href="a00308.html" title="Sprite.">Sprite2D</a>: a sprite is defined with texture and texture rectangle and hot spot.</li>
+<li><a class="el" href="a00309.html" title="Sprite sheet.">SpriteSheet2D</a>: a sprite sheet(texture atlas) include some sprites in it.</li>
+<li><a class="el" href="a00313.html" title="Static sprite component.">StaticSprite2D</a>: a drawable component to display a sprite.</li>
+<li><a class="el" href="a00055.html" title="2D animation.">Animation2D</a>: two-demensional animation with some frames, a frame include duration and a sprite.</li>
+<li><a class="el" href="a00053.html" title="Animated sprite component.">AnimatedSprite2D</a> : a drawable component to display an animation.</li>
+<li><a class="el" href="a00234.html" title="2D particle emitter component.">ParticleModel2D</a>: two-demensional particle model file.</li>
+<li><a class="el" href="a00233.html" title="2D particle emitter component.">ParticleEmitter2D</a>: a two-dimensional particle effect.</li>
+<li><a class="el" href="a00240.html" title="2D physics simulation world component. Should be added only to the root scene node.">PhysicsWorld2D</a>: implements two-dimensional physics simulation. Two-demensional physics components such as <a class="el" href="a00270.html" title="2D rigid body component.">RigidBody2D</a> or <a class="el" href="a00094.html" title="2D collision shape component.">CollisionShape2D</a> can not function properly without this.</li>
+<li><a class="el" href="a00270.html" title="2D rigid body component.">RigidBody2D</a>: a two-demensional physics object instance.</li>
+<li><a class="el" href="a00094.html" title="2D collision shape component.">CollisionShape2D</a>: defines two-dimensional physics collision geometry.</li>
+<li><a class="el" href="a00087.html" title="2D box collision component.">CollisionBox2D</a>: defines two-dimensional physics collision box.</li>
+<li><a class="el" href="a00089.html" title="2D circle collision component.">CollisionCircle2D</a>: defines two-dimensional physics collision circle.</li>
+<li><a class="el" href="a00090.html" title="2D edge collision component.">CollisionEdge2D</a>: defines two-dimensional physics collision edge.</li>
+<li><a class="el" href="a00088.html" title="2D chain collision component.">CollisionChain2D</a>: defines two-dimensional physics collision chain.</li>
+<li><a class="el" href="a00092.html" title="2D polygon collision component.">CollisionPolygon2D</a>: defines two-dimensional physics collision polygon.</li>
 </ul>
-<p>The default flags are AM_FILE and AM_NET. Note that it is legal to define neither AM_FILE or AM_NET, meaning the attribute has only run-time significance (perhaps for editing.) </p>
-</div></div><!-- contents -->
+<p>In order to use Urho2D, it is need set camera to 2D mode first, it can be done with following code:</p>
+<p>C++: </p>
+<div class="fragment"><div class="line"><span class="comment">// Create camera node</span></div>
+<div class="line">Node* cameraNode = scene_-&gt;CreateChild(<span class="stringliteral">&quot;Camera&quot;</span>);</div>
+<div class="line"><span class="comment">// Set camera node&#39;s position</span></div>
+<div class="line">cameraNode-&gt;SetPosition(Vector3(0.0f, 0.0f, -10.0f));</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Create camera</span></div>
+<div class="line">Camera* camera = cameraNode-&gt;CreateComponent&lt;Camera&gt;();</div>
+<div class="line"><span class="comment">// Set camera orthographic</span></div>
+<div class="line">camera-&gt;SetOrthographic(<span class="keyword">true</span>);</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Set camera ortho size (the value of PIXEL_SIZE is 0.01)</span></div>
+<div class="line">camera-&gt;SetOrthoSize(Vector2(graphics.width, graphics.height) * PIXEL_SIZE);</div>
+</div><!-- fragment --><p>AngelScript: </p>
+<div class="fragment"><div class="line"><span class="comment">// Create camera node</span></div>
+<div class="line">Node@ cameraNode = scene_.CreateChild(<span class="stringliteral">&quot;Camera&quot;</span>);</div>
+<div class="line"><span class="comment">// Set camera node&#39;s position</span></div>
+<div class="line">cameraNode.SetPosition(Vector3(0.0f, 0.0f, -10.0f));</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Create camera</span></div>
+<div class="line">Camera@ camera = cameraNode.CreateComponent(<span class="stringliteral">&quot;Camera&quot;</span>);</div>
+<div class="line"><span class="comment">// Set camera orthographic</span></div>
+<div class="line">camera.orthographic = <span class="keyword">true</span>;</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Set camera ortho size (the value of PIXEL_SIZE is 0.01)</span></div>
+<div class="line">camera.SetOrthoSize(Vector2(graphics.width, graphics.height) * PIXEL_SIZE);</div>
+</div><!-- fragment --><p>Lua: </p>
+<div class="fragment"><div class="line">-- Create camera node</div>
+<div class="line">cameraNode = scene_:CreateChild(<span class="stringliteral">&quot;Camera&quot;</span>)</div>
+<div class="line">-- Set camera node<span class="stringliteral">&#39;s position</span></div>
+<div class="line"><span class="stringliteral">cameraNode.position = Vector3(0.0, 0.0, -10.0)</span></div>
+<div class="line"><span class="stringliteral"></span></div>
+<div class="line"><span class="stringliteral">-- Create camera</span></div>
+<div class="line"><span class="stringliteral">local camera = cameraNode:CreateComponent(&quot;Camera&quot;)</span></div>
+<div class="line"><span class="stringliteral">-- Set camera orthographic</span></div>
+<div class="line"><span class="stringliteral">camera.orthographic = true</span></div>
+<div class="line"><span class="stringliteral"></span></div>
+<div class="line"><span class="stringliteral">-- Set camera ortho size (the value of PIXEL_SIZE is 0.01)</span></div>
+<div class="line"><span class="stringliteral">camera:SetOrthoSize(Vector2(graphics.width, graphics.height) * PIXEL_SIZE)</span></div>
+</div><!-- fragment --> </div></div><!-- contents -->
