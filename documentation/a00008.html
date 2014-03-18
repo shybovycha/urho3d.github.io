@@ -948,6 +948,65 @@ Classes</h1>
 <li>float CFM</li>
 <li>bool disableCollision</li>
 </ul>
+<h3><a class="el" href="a00107.html" title="2D physics constraint component.">Constraint2D</a> : <a class="el" href="a00097.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h3>
+<p>Methods:</p>
+<ul>
+<li>void SetOtherBody(RigidBody2D* body)</li>
+<li>void SetCollideConnected(bool collideConnected)</li>
+<li>RigidBody2D* GetOwnerBody() const</li>
+<li>RigidBody2D* GetOtherBody() const</li>
+<li>bool GetCollideConnected() const</li>
+</ul>
+<p>Properties:</p>
+<ul>
+<li>RigidBody2D* ownerBody (readonly)</li>
+<li>RigidBody2D* otherBody</li>
+<li>bool collideConnected</li>
+</ul>
+<h3><a class="el" href="a00108.html" title="2D revolute constraint component.">ConstraintRevolute2D</a> : <a class="el" href="a00107.html" title="2D physics constraint component.">Constraint2D</a></h3>
+<p>Methods:</p>
+<ul>
+<li>void SetAnchorPoint(const Vector2&amp; anchor)</li>
+<li>void SetEnableLimit(bool enableLimit)</li>
+<li>void SetLowerAngle(float lowerAngle)</li>
+<li>void SetUpperAngle(float upperAngle)</li>
+<li>void SetEnableMotor(bool enableMotor)</li>
+<li>void SetMotorSpeed(float motorSpeed)</li>
+<li>void SetMaxMotorTorque(float maxMotorTorque)</li>
+<li>const <a class="el" href="a00344.html" title="Two-dimensional vector.">Vector2</a>&amp; GetAnchorPoint() const</li>
+<li>bool GetEnableLimit() const</li>
+<li>float GetLowerAngle() const</li>
+<li>float GetUpperAngle() const</li>
+<li>bool GetEnableMotor() const</li>
+<li>float GetMotorSpeed() const</li>
+<li>float GetMaxMotorTorque() const</li>
+</ul>
+<p>Properties:</p>
+<ul>
+<li><a class="el" href="a00344.html" title="Two-dimensional vector.">Vector2</a>&amp; anchorPoint</li>
+<li>bool enableLimit</li>
+<li>float lowerAngle</li>
+<li>float upperAngle</li>
+<li>bool enableMotor</li>
+<li>float motorSpeed</li>
+<li>float maxMotorTorque</li>
+</ul>
+<h3><a class="el" href="a00109.html" title="2D rope constraint component.">ConstraintRope2D</a> : <a class="el" href="a00107.html" title="2D physics constraint component.">Constraint2D</a></h3>
+<p>Methods:</p>
+<ul>
+<li>void SetOwnerBodyAnchor(const Vector2&amp; anchor)</li>
+<li>void SetOtherBodyAnchor(const Vector2&amp; anchor)</li>
+<li>void SetMaxLength(float maxLength)</li>
+<li>const <a class="el" href="a00344.html" title="Two-dimensional vector.">Vector2</a>&amp; GetOwnerBodyAnchor() const</li>
+<li>const <a class="el" href="a00344.html" title="Two-dimensional vector.">Vector2</a>&amp; GetOtherBodyAnchor() const</li>
+<li>float GetMaxLength() const</li>
+</ul>
+<p>Properties:</p>
+<ul>
+<li><a class="el" href="a00344.html" title="Two-dimensional vector.">Vector2</a>&amp; ownerBodyAnchor</li>
+<li><a class="el" href="a00344.html" title="Two-dimensional vector.">Vector2</a>&amp; otherBodyAnchor</li>
+<li>float maxLength</li>
+</ul>
 <h3><a class="el" href="a00110.html" title="Urho3D execution context. Provides access to subsystems, object factories and attributes, and event receivers.">Context</a></h3>
 <p>Methods:</p>
 <ul>

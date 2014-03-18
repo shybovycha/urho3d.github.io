@@ -1519,6 +1519,133 @@ Classes</h1>
 <li>int weakRefs // readonly</li>
 <li><a class="el" href="a00345.html" title="Three-dimensional vector.">Vector3</a> worldPosition</li>
 </ul>
+<h3><a class="el" href="a00107.html" title="2D physics constraint component.">Constraint2D</a></h3>
+<p>Methods:</p>
+<ul>
+<li>void ApplyAttributes()</li>
+<li>void DrawDebugGeometry(<a class="el" href="a00121.html" title="Debug geometry rendering component. Should be added only to the root scene node.">DebugRenderer</a>@, bool)</li>
+<li><a class="el" href="a00341.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttribute(const String&amp;) const</li>
+<li><a class="el" href="a00341.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
+<li>bool Load(<a class="el" href="a00138.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool LoadXML(const <a class="el" href="a00361.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
+<li>void MarkNetworkUpdate() const</li>
+<li>void Remove()</li>
+<li>void RemoveInstanceDefault()</li>
+<li>void ResetToDefault()</li>
+<li>bool Save(<a class="el" href="a00138.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool SaveXML(XMLElement&amp;) const</li>
+<li>void SendEvent(const <a class="el" href="a00317.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
+<li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
+</ul>
+<p>Properties:</p>
+<ul>
+<li><a class="el" href="a00341.html" title="Variable that supports a fixed set of types.">Variant</a>[] attributeDefaults // readonly</li>
+<li><a class="el" href="a00068.html" title="Description of an automatically serializable variable.">AttributeInfo</a>[] attributeInfos // readonly</li>
+<li><a class="el" href="a00341.html" title="Variable that supports a fixed set of types.">Variant</a>[] attributes</li>
+<li><a class="el" href="a00296.html" title="16-bit hash value for a string.">ShortStringHash</a> baseType // readonly</li>
+<li><a class="el" href="a00317.html" title="String class.">String</a> category // readonly</li>
+<li>bool collideConnected</li>
+<li>bool enabled</li>
+<li>bool enabledEffective // readonly</li>
+<li>uint id // readonly</li>
+<li><a class="el" href="a00214.html" title="Scene node that may contain components and child nodes.">Node</a>@ node // readonly</li>
+<li>uint numAttributes // readonly</li>
+<li><a class="el" href="a00273.html" title="2D rigid body component.">RigidBody2D</a>@ otherBody</li>
+<li><a class="el" href="a00273.html" title="2D rigid body component.">RigidBody2D</a>@ ownerBody // readonly</li>
+<li>int refs // readonly</li>
+<li>bool temporary</li>
+<li><a class="el" href="a00296.html" title="16-bit hash value for a string.">ShortStringHash</a> type // readonly</li>
+<li><a class="el" href="a00317.html" title="String class.">String</a> typeName // readonly</li>
+<li>int weakRefs // readonly</li>
+</ul>
+<h3><a class="el" href="a00108.html" title="2D revolute constraint component.">ConstraintRevolute2D</a></h3>
+<p>Methods:</p>
+<ul>
+<li>void ApplyAttributes()</li>
+<li>void DrawDebugGeometry(<a class="el" href="a00121.html" title="Debug geometry rendering component. Should be added only to the root scene node.">DebugRenderer</a>@, bool)</li>
+<li><a class="el" href="a00341.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttribute(const String&amp;) const</li>
+<li><a class="el" href="a00341.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
+<li>bool Load(<a class="el" href="a00138.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool LoadXML(const <a class="el" href="a00361.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
+<li>void MarkNetworkUpdate() const</li>
+<li>void Remove()</li>
+<li>void RemoveInstanceDefault()</li>
+<li>void ResetToDefault()</li>
+<li>bool Save(<a class="el" href="a00138.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool SaveXML(XMLElement&amp;) const</li>
+<li>void SendEvent(const <a class="el" href="a00317.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
+<li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
+</ul>
+<p>Properties:</p>
+<ul>
+<li><a class="el" href="a00344.html" title="Two-dimensional vector.">Vector2</a> anchorPoint</li>
+<li><a class="el" href="a00341.html" title="Variable that supports a fixed set of types.">Variant</a>[] attributeDefaults // readonly</li>
+<li><a class="el" href="a00068.html" title="Description of an automatically serializable variable.">AttributeInfo</a>[] attributeInfos // readonly</li>
+<li><a class="el" href="a00341.html" title="Variable that supports a fixed set of types.">Variant</a>[] attributes</li>
+<li><a class="el" href="a00296.html" title="16-bit hash value for a string.">ShortStringHash</a> baseType // readonly</li>
+<li><a class="el" href="a00317.html" title="String class.">String</a> category // readonly</li>
+<li>bool collideConnected</li>
+<li>bool enableLimit</li>
+<li>bool enableMotor</li>
+<li>bool enabled</li>
+<li>bool enabledEffective // readonly</li>
+<li>uint id // readonly</li>
+<li>float lowerAngle</li>
+<li>float maxMotorTorque</li>
+<li>float motorSpeed</li>
+<li><a class="el" href="a00214.html" title="Scene node that may contain components and child nodes.">Node</a>@ node // readonly</li>
+<li>uint numAttributes // readonly</li>
+<li><a class="el" href="a00273.html" title="2D rigid body component.">RigidBody2D</a>@ otherBody</li>
+<li><a class="el" href="a00273.html" title="2D rigid body component.">RigidBody2D</a>@ ownerBody // readonly</li>
+<li>int refs // readonly</li>
+<li>bool temporary</li>
+<li><a class="el" href="a00296.html" title="16-bit hash value for a string.">ShortStringHash</a> type // readonly</li>
+<li><a class="el" href="a00317.html" title="String class.">String</a> typeName // readonly</li>
+<li>float upperAngle</li>
+<li>int weakRefs // readonly</li>
+</ul>
+<h3><a class="el" href="a00109.html" title="2D rope constraint component.">ConstraintRope2D</a></h3>
+<p>Methods:</p>
+<ul>
+<li>void ApplyAttributes()</li>
+<li>void DrawDebugGeometry(<a class="el" href="a00121.html" title="Debug geometry rendering component. Should be added only to the root scene node.">DebugRenderer</a>@, bool)</li>
+<li><a class="el" href="a00341.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttribute(const String&amp;) const</li>
+<li><a class="el" href="a00341.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
+<li>bool Load(<a class="el" href="a00138.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool LoadXML(const <a class="el" href="a00361.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
+<li>void MarkNetworkUpdate() const</li>
+<li>void Remove()</li>
+<li>void RemoveInstanceDefault()</li>
+<li>void ResetToDefault()</li>
+<li>bool Save(<a class="el" href="a00138.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool SaveXML(XMLElement&amp;) const</li>
+<li>void SendEvent(const <a class="el" href="a00317.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
+<li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
+</ul>
+<p>Properties:</p>
+<ul>
+<li><a class="el" href="a00341.html" title="Variable that supports a fixed set of types.">Variant</a>[] attributeDefaults // readonly</li>
+<li><a class="el" href="a00068.html" title="Description of an automatically serializable variable.">AttributeInfo</a>[] attributeInfos // readonly</li>
+<li><a class="el" href="a00341.html" title="Variable that supports a fixed set of types.">Variant</a>[] attributes</li>
+<li><a class="el" href="a00296.html" title="16-bit hash value for a string.">ShortStringHash</a> baseType // readonly</li>
+<li><a class="el" href="a00317.html" title="String class.">String</a> category // readonly</li>
+<li>bool collideConnected</li>
+<li>bool enabled</li>
+<li>bool enabledEffective // readonly</li>
+<li>uint id // readonly</li>
+<li>float maxLength</li>
+<li><a class="el" href="a00214.html" title="Scene node that may contain components and child nodes.">Node</a>@ node // readonly</li>
+<li>uint numAttributes // readonly</li>
+<li><a class="el" href="a00273.html" title="2D rigid body component.">RigidBody2D</a>@ otherBody</li>
+<li><a class="el" href="a00344.html" title="Two-dimensional vector.">Vector2</a> otherBodyAnchor</li>
+<li><a class="el" href="a00273.html" title="2D rigid body component.">RigidBody2D</a>@ ownerBody // readonly</li>
+<li><a class="el" href="a00344.html" title="Two-dimensional vector.">Vector2</a> ownerBodyAnchor</li>
+<li>int refs // readonly</li>
+<li>bool temporary</li>
+<li><a class="el" href="a00296.html" title="16-bit hash value for a string.">ShortStringHash</a> type // readonly</li>
+<li><a class="el" href="a00317.html" title="String class.">String</a> typeName // readonly</li>
+<li>int weakRefs // readonly</li>
+</ul>
 <h3><a class="el" href="a00111.html" title="Controls sent over the network.">Controls</a></h3>
 <p>Methods:</p>
 <ul>
