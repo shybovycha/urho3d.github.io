@@ -20,69 +20,51 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00127.html">DirtyBits</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00127.html">DelayedWorldTransform</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01380.html">List of all members</a>  </div>
+<a href="a01352.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::DirtyBits Struct Reference</div>  </div>
+<div class="title">Urho3D::DelayedWorldTransform Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Dirty attribute bits structure for network replication.  
+<p>Delayed world transform assignment for parented rigidbodies.  
  <a href="a00127.html#details">More...</a></p>
 
-<p><code>#include &lt;ReplicationState.h&gt;</code></p>
+<p><code>#include &lt;PhysicsWorld.h&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Urho3D::DelayedWorldTransform:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01353.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a89bc27d15462472cf922afdd25a904a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a89bc27d15462472cf922afdd25a904a1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00127.html#a89bc27d15462472cf922afdd25a904a1">DirtyBits</a> ()</td></tr>
-<tr class="memdesc:a89bc27d15462472cf922afdd25a904a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct empty. <br/></td></tr>
-<tr class="separator:a89bc27d15462472cf922afdd25a904a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66b4665f9a8f253a6dc88e09923bafcc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66b4665f9a8f253a6dc88e09923bafcc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00127.html#a66b4665f9a8f253a6dc88e09923bafcc">DirtyBits</a> (const <a class="el" href="a00127.html">DirtyBits</a> &amp;bits)</td></tr>
-<tr class="memdesc:a66b4665f9a8f253a6dc88e09923bafcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy-construct. <br/></td></tr>
-<tr class="separator:a66b4665f9a8f253a6dc88e09923bafcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a509f74263c5685cff050753d92c6e628"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a509f74263c5685cff050753d92c6e628"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00127.html#a509f74263c5685cff050753d92c6e628">Set</a> (unsigned index)</td></tr>
-<tr class="memdesc:a509f74263c5685cff050753d92c6e628"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a bit. <br/></td></tr>
-<tr class="separator:a509f74263c5685cff050753d92c6e628"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae320907d114f7a8ff508edab430f2e48"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae320907d114f7a8ff508edab430f2e48"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00127.html#ae320907d114f7a8ff508edab430f2e48">Clear</a> (unsigned index)</td></tr>
-<tr class="memdesc:ae320907d114f7a8ff508edab430f2e48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear a bit. <br/></td></tr>
-<tr class="separator:ae320907d114f7a8ff508edab430f2e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6d85404aa69f51b163a2b04dc29958d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6d85404aa69f51b163a2b04dc29958d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00127.html#ad6d85404aa69f51b163a2b04dc29958d">ClearAll</a> ()</td></tr>
-<tr class="memdesc:ad6d85404aa69f51b163a2b04dc29958d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all bits. <br/></td></tr>
-<tr class="separator:ad6d85404aa69f51b163a2b04dc29958d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a654b45f45805801a6cecdce84859b35d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a654b45f45805801a6cecdce84859b35d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00127.html#a654b45f45805801a6cecdce84859b35d">IsSet</a> (unsigned index) const </td></tr>
-<tr class="memdesc:a654b45f45805801a6cecdce84859b35d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return if bit is set. <br/></td></tr>
-<tr class="separator:a654b45f45805801a6cecdce84859b35d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc14ff7750bf5e7205a265716dc42e17"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc14ff7750bf5e7205a265716dc42e17"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00127.html#afc14ff7750bf5e7205a265716dc42e17">Count</a> () const </td></tr>
-<tr class="memdesc:afc14ff7750bf5e7205a265716dc42e17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of set bits. <br/></td></tr>
-<tr class="separator:afc14ff7750bf5e7205a265716dc42e17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ab3a6fb68c4506b7366cb5acfec83caf8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab3a6fb68c4506b7366cb5acfec83caf8"></a>
-unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00127.html#ab3a6fb68c4506b7366cb5acfec83caf8">data_</a> [MAX_NETWORK_ATTRIBUTES/8]</td></tr>
-<tr class="memdesc:ab3a6fb68c4506b7366cb5acfec83caf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bit data. <br/></td></tr>
-<tr class="separator:ab3a6fb68c4506b7366cb5acfec83caf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b74dc62da90462bda2cfbb4a2a5654f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b74dc62da90462bda2cfbb4a2a5654f"></a>
-unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00127.html#a0b74dc62da90462bda2cfbb4a2a5654f">count_</a></td></tr>
-<tr class="memdesc:a0b74dc62da90462bda2cfbb4a2a5654f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of set bits. <br/></td></tr>
-<tr class="separator:a0b74dc62da90462bda2cfbb4a2a5654f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab09836c962c84f1894292afe55602af1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab09836c962c84f1894292afe55602af1"></a>
+<a class="el" href="a00272.html">RigidBody</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00127.html#ab09836c962c84f1894292afe55602af1">rigidBody_</a></td></tr>
+<tr class="memdesc:ab09836c962c84f1894292afe55602af1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rigid body. <br/></td></tr>
+<tr class="separator:ab09836c962c84f1894292afe55602af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0131b2d35075c061ff2062eada5f804b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0131b2d35075c061ff2062eada5f804b"></a>
+<a class="el" href="a00272.html">RigidBody</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00127.html#a0131b2d35075c061ff2062eada5f804b">parentRigidBody_</a></td></tr>
+<tr class="memdesc:a0131b2d35075c061ff2062eada5f804b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parent rigid body. <br/></td></tr>
+<tr class="separator:a0131b2d35075c061ff2062eada5f804b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a812ef515b451f8a029e086aeed2b9580"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a812ef515b451f8a029e086aeed2b9580"></a>
+<a class="el" href="a00345.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00127.html#a812ef515b451f8a029e086aeed2b9580">worldPosition_</a></td></tr>
+<tr class="memdesc:a812ef515b451f8a029e086aeed2b9580"><td class="mdescLeft">&#160;</td><td class="mdescRight">New world position. <br/></td></tr>
+<tr class="separator:a812ef515b451f8a029e086aeed2b9580"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad49b084e556469f0b2e3ac52cd37c8ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad49b084e556469f0b2e3ac52cd37c8ca"></a>
+<a class="el" href="a00250.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00127.html#ad49b084e556469f0b2e3ac52cd37c8ca">worldRotation_</a></td></tr>
+<tr class="memdesc:ad49b084e556469f0b2e3ac52cd37c8ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">New world rotation. <br/></td></tr>
+<tr class="separator:ad49b084e556469f0b2e3ac52cd37c8ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Dirty attribute bits structure for network replication. </p>
+<div class="textblock"><p>Delayed world transform assignment for parented rigidbodies. </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Scene/ReplicationState.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Physics/PhysicsWorld.h</li>
 </ul>
 </div><!-- contents -->

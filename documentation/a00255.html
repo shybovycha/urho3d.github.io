@@ -20,49 +20,71 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00255.html">RefCount</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00255.html">RayQueryResult</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a00880.html">List of all members</a>  </div>
+<a href="a01104.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::RefCount Struct Reference</div>  </div>
+<div class="title">Urho3D::RayQueryResult Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Reference count structure.  
+<p>Raycast result.  
  <a href="a00255.html#details">More...</a></p>
 
-<p><code>#include &lt;RefCounted.h&gt;</code></p>
+<p><code>#include &lt;OctreeQuery.h&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Urho3D::RayQueryResult:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01105.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a335a53d09ab4ed1d2849b63a38983fb3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a335a53d09ab4ed1d2849b63a38983fb3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00255.html#a335a53d09ab4ed1d2849b63a38983fb3">RefCount</a> ()</td></tr>
-<tr class="memdesc:a335a53d09ab4ed1d2849b63a38983fb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
-<tr class="separator:a335a53d09ab4ed1d2849b63a38983fb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95993f5cb65b6c17ac2cde4a31724370"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a95993f5cb65b6c17ac2cde4a31724370"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00255.html#a95993f5cb65b6c17ac2cde4a31724370">~RefCount</a> ()</td></tr>
-<tr class="memdesc:a95993f5cb65b6c17ac2cde4a31724370"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
-<tr class="separator:a95993f5cb65b6c17ac2cde4a31724370"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b3e7a655ad248c700c891dd0fb2cbdd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b3e7a655ad248c700c891dd0fb2cbdd"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00255.html#a1b3e7a655ad248c700c891dd0fb2cbdd">RayQueryResult</a> ()</td></tr>
+<tr class="memdesc:a1b3e7a655ad248c700c891dd0fb2cbdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with defaults. <br/></td></tr>
+<tr class="separator:a1b3e7a655ad248c700c891dd0fb2cbdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab784e9be37560b0e319482f0004ab35"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab784e9be37560b0e319482f0004ab35"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00255.html#aab784e9be37560b0e319482f0004ab35">operator!=</a> (const <a class="el" href="a00255.html">RayQueryResult</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:aab784e9be37560b0e319482f0004ab35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for inequality, added to prevent GCC from complaining. <br/></td></tr>
+<tr class="separator:aab784e9be37560b0e319482f0004ab35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a08b3a37471704e640be73221c95c08e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08b3a37471704e640be73221c95c08e2"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00255.html#a08b3a37471704e640be73221c95c08e2">refs_</a></td></tr>
-<tr class="memdesc:a08b3a37471704e640be73221c95c08e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference count. If below zero, the object has been destroyed. <br/></td></tr>
-<tr class="separator:a08b3a37471704e640be73221c95c08e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addcd94eecde33fc782dfa156aab8fe2b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="addcd94eecde33fc782dfa156aab8fe2b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00255.html#addcd94eecde33fc782dfa156aab8fe2b">weakRefs_</a></td></tr>
-<tr class="memdesc:addcd94eecde33fc782dfa156aab8fe2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weak reference count. <br/></td></tr>
-<tr class="separator:addcd94eecde33fc782dfa156aab8fe2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3639c0c1b9857cba19eccf53261019de"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3639c0c1b9857cba19eccf53261019de"></a>
+<a class="el" href="a00345.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00255.html#a3639c0c1b9857cba19eccf53261019de">position_</a></td></tr>
+<tr class="memdesc:a3639c0c1b9857cba19eccf53261019de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hit position in world space. <br/></td></tr>
+<tr class="separator:a3639c0c1b9857cba19eccf53261019de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94d74afd25a4aede5f5fab38b887261e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a94d74afd25a4aede5f5fab38b887261e"></a>
+<a class="el" href="a00345.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00255.html#a94d74afd25a4aede5f5fab38b887261e">normal_</a></td></tr>
+<tr class="memdesc:a94d74afd25a4aede5f5fab38b887261e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hit normal in world space. Negation of ray direction if per-triangle data not available. <br/></td></tr>
+<tr class="separator:a94d74afd25a4aede5f5fab38b887261e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48ec7438ad7e3e4a4bb1a5b93582b8eb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a48ec7438ad7e3e4a4bb1a5b93582b8eb"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00255.html#a48ec7438ad7e3e4a4bb1a5b93582b8eb">distance_</a></td></tr>
+<tr class="memdesc:a48ec7438ad7e3e4a4bb1a5b93582b8eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distance from ray origin. <br/></td></tr>
+<tr class="separator:a48ec7438ad7e3e4a4bb1a5b93582b8eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6cf1605fa0dfc2017a57573afce1de8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa6cf1605fa0dfc2017a57573afce1de8"></a>
+<a class="el" href="a00131.html">Drawable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00255.html#aa6cf1605fa0dfc2017a57573afce1de8">drawable_</a></td></tr>
+<tr class="memdesc:aa6cf1605fa0dfc2017a57573afce1de8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00131.html" title="Base class for visible components.">Drawable</a>. <br/></td></tr>
+<tr class="separator:aa6cf1605fa0dfc2017a57573afce1de8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae52c2e8ab4b1250cedce42fec9b2719b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae52c2e8ab4b1250cedce42fec9b2719b"></a>
+<a class="el" href="a00214.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00255.html#ae52c2e8ab4b1250cedce42fec9b2719b">node_</a></td></tr>
+<tr class="memdesc:ae52c2e8ab4b1250cedce42fec9b2719b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00274.html" title="Root scene node, represents the whole scene.">Scene</a> node. <br/></td></tr>
+<tr class="separator:ae52c2e8ab4b1250cedce42fec9b2719b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f595f6027f1cdfcdb1bc286c551ce04"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f595f6027f1cdfcdb1bc286c551ce04"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00255.html#a7f595f6027f1cdfcdb1bc286c551ce04">subObject_</a></td></tr>
+<tr class="memdesc:a7f595f6027f1cdfcdb1bc286c551ce04"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00131.html" title="Base class for visible components.">Drawable</a> specific subobject if applicable. <br/></td></tr>
+<tr class="separator:a7f595f6027f1cdfcdb1bc286c551ce04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Reference count structure. </p>
+<div class="textblock"><p>Raycast result. </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Container/RefCounted.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/OctreeQuery.h</li>
 </ul>
 </div><!-- contents -->

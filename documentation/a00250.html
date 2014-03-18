@@ -20,132 +20,236 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00250.html">Ray</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00250.html">Quaternion</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01271.html">List of all members</a>  </div>
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="a01278.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::Ray Class Reference</div>  </div>
+<div class="title">Urho3D::Quaternion Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Infinite straight line in three-dimensional space.  
+<p>Rotation represented as a four-dimensional normalized vector.  
  <a href="a00250.html#details">More...</a></p>
 
-<p><code>#include &lt;Ray.h&gt;</code></p>
+<p><code>#include &lt;Quaternion.h&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for Urho3D::Ray:</div>
+Collaboration diagram for Urho3D::Quaternion:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a01272.svg" width="224" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a01279.svg" width="244" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a530310fd7d8e66eb3d5f9ea188f129bb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a530310fd7d8e66eb3d5f9ea188f129bb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a530310fd7d8e66eb3d5f9ea188f129bb">Ray</a> ()</td></tr>
-<tr class="memdesc:a530310fd7d8e66eb3d5f9ea188f129bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct undefined. <br/></td></tr>
-<tr class="separator:a530310fd7d8e66eb3d5f9ea188f129bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa74c386da4eacaacbb55c4309137a543"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa74c386da4eacaacbb55c4309137a543"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#aa74c386da4eacaacbb55c4309137a543">Ray</a> (const <a class="el" href="a00342.html">Vector3</a> &amp;origin, const <a class="el" href="a00342.html">Vector3</a> &amp;direction)</td></tr>
-<tr class="memdesc:aa74c386da4eacaacbb55c4309137a543"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from origin and direction. The direction will be normalized. <br/></td></tr>
-<tr class="separator:aa74c386da4eacaacbb55c4309137a543"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f8a3b8a7963da145951e0dbfd1b5bb9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f8a3b8a7963da145951e0dbfd1b5bb9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a7f8a3b8a7963da145951e0dbfd1b5bb9">Ray</a> (const <a class="el" href="a00250.html">Ray</a> &amp;ray)</td></tr>
-<tr class="memdesc:a7f8a3b8a7963da145951e0dbfd1b5bb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy-construct from another ray. <br/></td></tr>
-<tr class="separator:a7f8a3b8a7963da145951e0dbfd1b5bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca7ded3b19959ed33cb5375318c0247a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca7ded3b19959ed33cb5375318c0247a"></a>
-<a class="el" href="a00250.html">Ray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#aca7ded3b19959ed33cb5375318c0247a">operator=</a> (const <a class="el" href="a00250.html">Ray</a> &amp;rhs)</td></tr>
-<tr class="memdesc:aca7ded3b19959ed33cb5375318c0247a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign from another ray. <br/></td></tr>
-<tr class="separator:aca7ded3b19959ed33cb5375318c0247a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3b4e1249c0d9304ca4abec8045d500d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3b4e1249c0d9304ca4abec8045d500d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#aa3b4e1249c0d9304ca4abec8045d500d">operator==</a> (const <a class="el" href="a00250.html">Ray</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:aa3b4e1249c0d9304ca4abec8045d500d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for equality with another ray. <br/></td></tr>
-<tr class="separator:aa3b4e1249c0d9304ca4abec8045d500d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43e1292016fb917b7bc4e4d6631349f5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43e1292016fb917b7bc4e4d6631349f5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a43e1292016fb917b7bc4e4d6631349f5">operator!=</a> (const <a class="el" href="a00250.html">Ray</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:a43e1292016fb917b7bc4e4d6631349f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for inequality with another ray. <br/></td></tr>
-<tr class="separator:a43e1292016fb917b7bc4e4d6631349f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af567cd1a84949df6a4222e09f5c49a17"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af567cd1a84949df6a4222e09f5c49a17"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#af567cd1a84949df6a4222e09f5c49a17">Define</a> (const <a class="el" href="a00342.html">Vector3</a> &amp;origin, const <a class="el" href="a00342.html">Vector3</a> &amp;direction)</td></tr>
-<tr class="memdesc:af567cd1a84949df6a4222e09f5c49a17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define from origin and direction. The direction will be normalized. <br/></td></tr>
-<tr class="separator:af567cd1a84949df6a4222e09f5c49a17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a347ad848dec9b5bc03f036413e46ce9d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a347ad848dec9b5bc03f036413e46ce9d"></a>
-<a class="el" href="a00342.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a347ad848dec9b5bc03f036413e46ce9d">Project</a> (const <a class="el" href="a00342.html">Vector3</a> &amp;point) const </td></tr>
-<tr class="memdesc:a347ad848dec9b5bc03f036413e46ce9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Project a point on the ray. <br/></td></tr>
-<tr class="separator:a347ad848dec9b5bc03f036413e46ce9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d2d15c771b885647e72370e1429b8f4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3d2d15c771b885647e72370e1429b8f4"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a3d2d15c771b885647e72370e1429b8f4">Distance</a> (const <a class="el" href="a00342.html">Vector3</a> &amp;point) const </td></tr>
-<tr class="memdesc:a3d2d15c771b885647e72370e1429b8f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return distance of a point from the ray. <br/></td></tr>
-<tr class="separator:a3d2d15c771b885647e72370e1429b8f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dd8eaa6528c71e47bb4faae09bbf468"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2dd8eaa6528c71e47bb4faae09bbf468"></a>
-<a class="el" href="a00342.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a2dd8eaa6528c71e47bb4faae09bbf468">ClosestPoint</a> (const <a class="el" href="a00250.html">Ray</a> &amp;ray) const </td></tr>
-<tr class="memdesc:a2dd8eaa6528c71e47bb4faae09bbf468"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return closest point to another ray. <br/></td></tr>
-<tr class="separator:a2dd8eaa6528c71e47bb4faae09bbf468"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac08d9b3eda57bec854f267860014a2b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac08d9b3eda57bec854f267860014a2b1"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#ac08d9b3eda57bec854f267860014a2b1">HitDistance</a> (const <a class="el" href="a00241.html">Plane</a> &amp;plane) const </td></tr>
-<tr class="memdesc:ac08d9b3eda57bec854f267860014a2b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hit distance to a plane, or infinity if no hit. <br/></td></tr>
-<tr class="separator:ac08d9b3eda57bec854f267860014a2b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e091b5f23a867eec6365085a43199e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e091b5f23a867eec6365085a43199e5"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a0e091b5f23a867eec6365085a43199e5">HitDistance</a> (const <a class="el" href="a00080.html">BoundingBox</a> &amp;box) const </td></tr>
-<tr class="memdesc:a0e091b5f23a867eec6365085a43199e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hit distance to a bounding box, or infinity if no hit. <br/></td></tr>
-<tr class="separator:a0e091b5f23a867eec6365085a43199e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39bcb8ad2d879d8588b0ec2bff76d05b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a39bcb8ad2d879d8588b0ec2bff76d05b"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a39bcb8ad2d879d8588b0ec2bff76d05b">HitDistance</a> (const <a class="el" href="a00146.html">Frustum</a> &amp;frustum, bool solidInside=true) const </td></tr>
-<tr class="memdesc:a39bcb8ad2d879d8588b0ec2bff76d05b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hit distance to a frustum, or infinity if no hit. If solidInside parameter is true (default) rays originating from inside return zero distance, otherwise the distance to the closest plane. <br/></td></tr>
-<tr class="separator:a39bcb8ad2d879d8588b0ec2bff76d05b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac031ab30e007afcdbbfcea7ebe4c83a7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac031ab30e007afcdbbfcea7ebe4c83a7"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#ac031ab30e007afcdbbfcea7ebe4c83a7">HitDistance</a> (const <a class="el" href="a00303.html">Sphere</a> &amp;sphere) const </td></tr>
-<tr class="memdesc:ac031ab30e007afcdbbfcea7ebe4c83a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hit distance to a sphere, or infinity if no hit. <br/></td></tr>
-<tr class="separator:ac031ab30e007afcdbbfcea7ebe4c83a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe9a0e5ed9f59abc8a6c8b212b5ec128"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe9a0e5ed9f59abc8a6c8b212b5ec128"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#abe9a0e5ed9f59abc8a6c8b212b5ec128">HitDistance</a> (const <a class="el" href="a00342.html">Vector3</a> &amp;v0, const <a class="el" href="a00342.html">Vector3</a> &amp;v1, const <a class="el" href="a00342.html">Vector3</a> &amp;v2) const </td></tr>
-<tr class="memdesc:abe9a0e5ed9f59abc8a6c8b212b5ec128"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hit distance to a triangle, or infinity if no hit. <br/></td></tr>
-<tr class="separator:abe9a0e5ed9f59abc8a6c8b212b5ec128"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a974bf82e2d539512fee784cf7d5da829"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a974bf82e2d539512fee784cf7d5da829"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a974bf82e2d539512fee784cf7d5da829">HitDistance</a> (const <a class="el" href="a00342.html">Vector3</a> &amp;v0, const <a class="el" href="a00342.html">Vector3</a> &amp;v1, const <a class="el" href="a00342.html">Vector3</a> &amp;v2, <a class="el" href="a00342.html">Vector3</a> *outNormal) const </td></tr>
-<tr class="memdesc:a974bf82e2d539512fee784cf7d5da829"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hit distance to a triangle and out normal, or infinity if no hit. <br/></td></tr>
-<tr class="separator:a974bf82e2d539512fee784cf7d5da829"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e13ce21dbe45375535c92d0789ce3c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e13ce21dbe45375535c92d0789ce3c8"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a8e13ce21dbe45375535c92d0789ce3c8">HitDistance</a> (const void *vertexData, unsigned vertexSize, unsigned vertexStart, unsigned vertexCount, <a class="el" href="a00342.html">Vector3</a> *outNormal=0) const </td></tr>
-<tr class="memdesc:a8e13ce21dbe45375535c92d0789ce3c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hit distance to non-indexed geometry data, or infinity if no hit. Optionally return normal. <br/></td></tr>
-<tr class="separator:a8e13ce21dbe45375535c92d0789ce3c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27a1169cf5316218a568b39d457d2a82"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a27a1169cf5316218a568b39d457d2a82"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a27a1169cf5316218a568b39d457d2a82">HitDistance</a> (const void *vertexData, unsigned vertexSize, const void *indexData, unsigned indexSize, unsigned indexStart, unsigned indexCount, <a class="el" href="a00342.html">Vector3</a> *outNormal=0) const </td></tr>
-<tr class="memdesc:a27a1169cf5316218a568b39d457d2a82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hit distance to indexed geometry data, or infinity if no hit. <br/></td></tr>
-<tr class="separator:a27a1169cf5316218a568b39d457d2a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e86374817dc67be576742b1d4b1be2b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e86374817dc67be576742b1d4b1be2b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a4e86374817dc67be576742b1d4b1be2b">InsideGeometry</a> (const void *vertexData, unsigned vertexSize, unsigned vertexStart, unsigned vertexCount) const </td></tr>
-<tr class="memdesc:a4e86374817dc67be576742b1d4b1be2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether ray is inside non-indexed geometry. <br/></td></tr>
-<tr class="separator:a4e86374817dc67be576742b1d4b1be2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4adfc71eded992408250a3bb4de2b081"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4adfc71eded992408250a3bb4de2b081"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a4adfc71eded992408250a3bb4de2b081">InsideGeometry</a> (const void *vertexData, unsigned vertexSize, const void *indexData, unsigned indexSize, unsigned indexStart, unsigned indexCount) const </td></tr>
-<tr class="memdesc:a4adfc71eded992408250a3bb4de2b081"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether ray is inside indexed geometry. <br/></td></tr>
-<tr class="separator:a4adfc71eded992408250a3bb4de2b081"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53e94939c0a9be488d31b47dcf868220"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53e94939c0a9be488d31b47dcf868220"></a>
-<a class="el" href="a00250.html">Ray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a53e94939c0a9be488d31b47dcf868220">Transformed</a> (const <a class="el" href="a00194.html">Matrix3x4</a> &amp;transform) const </td></tr>
-<tr class="memdesc:a53e94939c0a9be488d31b47dcf868220"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return transformed by a 3x4 matrix. This may result in a non-normalized direction. <br/></td></tr>
-<tr class="separator:a53e94939c0a9be488d31b47dcf868220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25a796d95b3324358e2e4f775d8e436c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25a796d95b3324358e2e4f775d8e436c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a25a796d95b3324358e2e4f775d8e436c">Quaternion</a> ()</td></tr>
+<tr class="memdesc:a25a796d95b3324358e2e4f775d8e436c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct identity quaternion. <br/></td></tr>
+<tr class="separator:a25a796d95b3324358e2e4f775d8e436c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3b35ee1ba5fb502f609b77748406e0d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3b35ee1ba5fb502f609b77748406e0d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#ae3b35ee1ba5fb502f609b77748406e0d">Quaternion</a> (const <a class="el" href="a00250.html">Quaternion</a> &amp;quat)</td></tr>
+<tr class="memdesc:ae3b35ee1ba5fb502f609b77748406e0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy-construct from another quaternion. <br/></td></tr>
+<tr class="separator:ae3b35ee1ba5fb502f609b77748406e0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38aa5644b16c5e7c5143f3bc9f08278d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38aa5644b16c5e7c5143f3bc9f08278d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a38aa5644b16c5e7c5143f3bc9f08278d">Quaternion</a> (float w, float x, float y, float z)</td></tr>
+<tr class="memdesc:a38aa5644b16c5e7c5143f3bc9f08278d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from values. <br/></td></tr>
+<tr class="separator:a38aa5644b16c5e7c5143f3bc9f08278d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a393bf2e5601c024320f420214af0e3ec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a393bf2e5601c024320f420214af0e3ec"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a393bf2e5601c024320f420214af0e3ec">Quaternion</a> (const float *data)</td></tr>
+<tr class="memdesc:a393bf2e5601c024320f420214af0e3ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a float array. <br/></td></tr>
+<tr class="separator:a393bf2e5601c024320f420214af0e3ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad56bb49ffee2f8f9eb038d0064034f89"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad56bb49ffee2f8f9eb038d0064034f89"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#ad56bb49ffee2f8f9eb038d0064034f89">Quaternion</a> (float angle, const <a class="el" href="a00345.html">Vector3</a> &amp;axis)</td></tr>
+<tr class="memdesc:ad56bb49ffee2f8f9eb038d0064034f89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from an angle (in degrees) and axis. <br/></td></tr>
+<tr class="separator:ad56bb49ffee2f8f9eb038d0064034f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f210fbb2e9b8844ab50c7b042176b5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f210fbb2e9b8844ab50c7b042176b5f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a6f210fbb2e9b8844ab50c7b042176b5f">Quaternion</a> (float x, float y, float z)</td></tr>
+<tr class="memdesc:a6f210fbb2e9b8844ab50c7b042176b5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from Euler angles (in degrees.) <br/></td></tr>
+<tr class="separator:a6f210fbb2e9b8844ab50c7b042176b5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00f19c375246b86bab4b4ff2cabc1f2b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a00f19c375246b86bab4b4ff2cabc1f2b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a00f19c375246b86bab4b4ff2cabc1f2b">Quaternion</a> (const <a class="el" href="a00345.html">Vector3</a> &amp;start, const <a class="el" href="a00345.html">Vector3</a> &amp;end)</td></tr>
+<tr class="memdesc:a00f19c375246b86bab4b4ff2cabc1f2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from the rotation difference between two direction vectors. <br/></td></tr>
+<tr class="separator:a00f19c375246b86bab4b4ff2cabc1f2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac50eb6c9f49c995ed4f94b3b0ef89d08"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac50eb6c9f49c995ed4f94b3b0ef89d08"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#ac50eb6c9f49c995ed4f94b3b0ef89d08">Quaternion</a> (const <a class="el" href="a00345.html">Vector3</a> &amp;xAxis, const <a class="el" href="a00345.html">Vector3</a> &amp;yAxis, const <a class="el" href="a00345.html">Vector3</a> &amp;zAxis)</td></tr>
+<tr class="memdesc:ac50eb6c9f49c995ed4f94b3b0ef89d08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from orthonormal axes. <br/></td></tr>
+<tr class="separator:ac50eb6c9f49c995ed4f94b3b0ef89d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1a770be5abe1da73c78935eb94745dd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1a770be5abe1da73c78935eb94745dd"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#ab1a770be5abe1da73c78935eb94745dd">Quaternion</a> (const <a class="el" href="a00196.html">Matrix3</a> &amp;matrix)</td></tr>
+<tr class="memdesc:ab1a770be5abe1da73c78935eb94745dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a rotation matrix. <br/></td></tr>
+<tr class="separator:ab1a770be5abe1da73c78935eb94745dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e3df43f59359e903819aff8e3a2bb54"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e3df43f59359e903819aff8e3a2bb54"></a>
+<a class="el" href="a00250.html">Quaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a8e3df43f59359e903819aff8e3a2bb54">operator=</a> (const <a class="el" href="a00250.html">Quaternion</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a8e3df43f59359e903819aff8e3a2bb54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign from another quaternion. <br/></td></tr>
+<tr class="separator:a8e3df43f59359e903819aff8e3a2bb54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace83e2a0850548533164f5fc172f0966"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ace83e2a0850548533164f5fc172f0966"></a>
+<a class="el" href="a00250.html">Quaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#ace83e2a0850548533164f5fc172f0966">operator+=</a> (const <a class="el" href="a00250.html">Quaternion</a> &amp;rhs)</td></tr>
+<tr class="memdesc:ace83e2a0850548533164f5fc172f0966"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add-assign a quaternion. <br/></td></tr>
+<tr class="separator:ace83e2a0850548533164f5fc172f0966"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8e067e6fc4e63c3a5eac6010bcf79e7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac8e067e6fc4e63c3a5eac6010bcf79e7"></a>
+<a class="el" href="a00250.html">Quaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#ac8e067e6fc4e63c3a5eac6010bcf79e7">operator*=</a> (float rhs)</td></tr>
+<tr class="memdesc:ac8e067e6fc4e63c3a5eac6010bcf79e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply-assign a scalar. <br/></td></tr>
+<tr class="separator:ac8e067e6fc4e63c3a5eac6010bcf79e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e4d7eb97c3c734fba39a04dadfe3db4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e4d7eb97c3c734fba39a04dadfe3db4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a7e4d7eb97c3c734fba39a04dadfe3db4">operator==</a> (const <a class="el" href="a00250.html">Quaternion</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:a7e4d7eb97c3c734fba39a04dadfe3db4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for equality with another quaternion without epsilon. <br/></td></tr>
+<tr class="separator:a7e4d7eb97c3c734fba39a04dadfe3db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a3997baecf77404a43369918d96f1da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a3997baecf77404a43369918d96f1da"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a3a3997baecf77404a43369918d96f1da">operator!=</a> (const <a class="el" href="a00250.html">Quaternion</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:a3a3997baecf77404a43369918d96f1da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for inequality with another quaternion without epsilon. <br/></td></tr>
+<tr class="separator:a3a3997baecf77404a43369918d96f1da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa96c947d2ae47390e1fc3bf2165bceec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa96c947d2ae47390e1fc3bf2165bceec"></a>
+<a class="el" href="a00250.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#aa96c947d2ae47390e1fc3bf2165bceec">operator*</a> (float rhs) const </td></tr>
+<tr class="memdesc:aa96c947d2ae47390e1fc3bf2165bceec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply with a scalar. <br/></td></tr>
+<tr class="separator:aa96c947d2ae47390e1fc3bf2165bceec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72a050ddf099bb35d18a7baa5a9ad250"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a72a050ddf099bb35d18a7baa5a9ad250"></a>
+<a class="el" href="a00250.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a72a050ddf099bb35d18a7baa5a9ad250">operator-</a> () const </td></tr>
+<tr class="memdesc:a72a050ddf099bb35d18a7baa5a9ad250"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return negation. <br/></td></tr>
+<tr class="separator:a72a050ddf099bb35d18a7baa5a9ad250"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ca769e0f7c9e4e7b28df9370041dccd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ca769e0f7c9e4e7b28df9370041dccd"></a>
+<a class="el" href="a00250.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a1ca769e0f7c9e4e7b28df9370041dccd">operator+</a> (const <a class="el" href="a00250.html">Quaternion</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:a1ca769e0f7c9e4e7b28df9370041dccd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a quaternion. <br/></td></tr>
+<tr class="separator:a1ca769e0f7c9e4e7b28df9370041dccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1210fcc7d4db60fa7ee5a4c0b332c564"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1210fcc7d4db60fa7ee5a4c0b332c564"></a>
+<a class="el" href="a00250.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a1210fcc7d4db60fa7ee5a4c0b332c564">operator-</a> (const <a class="el" href="a00250.html">Quaternion</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:a1210fcc7d4db60fa7ee5a4c0b332c564"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtract a quaternion. <br/></td></tr>
+<tr class="separator:a1210fcc7d4db60fa7ee5a4c0b332c564"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8f1e3f576f5828f3ffba8cebd93baac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad8f1e3f576f5828f3ffba8cebd93baac"></a>
+<a class="el" href="a00250.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#ad8f1e3f576f5828f3ffba8cebd93baac">operator*</a> (const <a class="el" href="a00250.html">Quaternion</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:ad8f1e3f576f5828f3ffba8cebd93baac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply a quaternion. <br/></td></tr>
+<tr class="separator:ad8f1e3f576f5828f3ffba8cebd93baac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab556e293b965882bc3ba4d454b763cd4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab556e293b965882bc3ba4d454b763cd4"></a>
+<a class="el" href="a00345.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#ab556e293b965882bc3ba4d454b763cd4">operator*</a> (const <a class="el" href="a00345.html">Vector3</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:ab556e293b965882bc3ba4d454b763cd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply a <a class="el" href="a00345.html" title="Three-dimensional vector.">Vector3</a>. <br/></td></tr>
+<tr class="separator:ab556e293b965882bc3ba4d454b763cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace2f5a09680f7d9c44186a8a3aeb9e35"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ace2f5a09680f7d9c44186a8a3aeb9e35"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#ace2f5a09680f7d9c44186a8a3aeb9e35">FromAngleAxis</a> (float angle, const <a class="el" href="a00345.html">Vector3</a> &amp;axis)</td></tr>
+<tr class="memdesc:ace2f5a09680f7d9c44186a8a3aeb9e35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define from an angle (in degrees) and axis. <br/></td></tr>
+<tr class="separator:ace2f5a09680f7d9c44186a8a3aeb9e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab56365284a371f7f82325e85665f20f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab56365284a371f7f82325e85665f20f2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#ab56365284a371f7f82325e85665f20f2">FromEulerAngles</a> (float x, float y, float z)</td></tr>
+<tr class="memdesc:ab56365284a371f7f82325e85665f20f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define from Euler angles (in degrees.) <br/></td></tr>
+<tr class="separator:ab56365284a371f7f82325e85665f20f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b5431f8dd2cf78744d07b9260b3677e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b5431f8dd2cf78744d07b9260b3677e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a7b5431f8dd2cf78744d07b9260b3677e">FromRotationTo</a> (const <a class="el" href="a00345.html">Vector3</a> &amp;start, const <a class="el" href="a00345.html">Vector3</a> &amp;end)</td></tr>
+<tr class="memdesc:a7b5431f8dd2cf78744d07b9260b3677e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define from the rotation difference between two direction vectors. <br/></td></tr>
+<tr class="separator:a7b5431f8dd2cf78744d07b9260b3677e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f7fbbb259a665f94df597eb1d81dbc7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f7fbbb259a665f94df597eb1d81dbc7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a0f7fbbb259a665f94df597eb1d81dbc7">FromAxes</a> (const <a class="el" href="a00345.html">Vector3</a> &amp;xAxis, const <a class="el" href="a00345.html">Vector3</a> &amp;yAxis, const <a class="el" href="a00345.html">Vector3</a> &amp;zAxis)</td></tr>
+<tr class="memdesc:a0f7fbbb259a665f94df597eb1d81dbc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define from orthonormal axes. <br/></td></tr>
+<tr class="separator:a0f7fbbb259a665f94df597eb1d81dbc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fdf9c0ccae7caf66fb93c5ace54e9de"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0fdf9c0ccae7caf66fb93c5ace54e9de"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a0fdf9c0ccae7caf66fb93c5ace54e9de">FromRotationMatrix</a> (const <a class="el" href="a00196.html">Matrix3</a> &amp;matrix)</td></tr>
+<tr class="memdesc:a0fdf9c0ccae7caf66fb93c5ace54e9de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define from a rotation matrix. <br/></td></tr>
+<tr class="separator:a0fdf9c0ccae7caf66fb93c5ace54e9de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a890c50b7f3cd94d44f9a53b316ef66d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a890c50b7f3cd94d44f9a53b316ef66d1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a890c50b7f3cd94d44f9a53b316ef66d1">FromLookRotation</a> (const <a class="el" href="a00345.html">Vector3</a> &amp;direction, const <a class="el" href="a00345.html">Vector3</a> &amp;up=<a class="el" href="a00345.html#a9a7af73dfe451a97a561760ee28b119e">Vector3::UP</a>)</td></tr>
+<tr class="memdesc:a890c50b7f3cd94d44f9a53b316ef66d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define from a direction to look in and an up direction. <br/></td></tr>
+<tr class="separator:a890c50b7f3cd94d44f9a53b316ef66d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a780e58000eb21f11ec9864887b865b48"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a780e58000eb21f11ec9864887b865b48"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a780e58000eb21f11ec9864887b865b48">Normalize</a> ()</td></tr>
+<tr class="memdesc:a780e58000eb21f11ec9864887b865b48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalize to unit length. <br/></td></tr>
+<tr class="separator:a780e58000eb21f11ec9864887b865b48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d7be7566f037bb12ee7fef1b549ee79"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d7be7566f037bb12ee7fef1b549ee79"></a>
+<a class="el" href="a00250.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a7d7be7566f037bb12ee7fef1b549ee79">Normalized</a> () const </td></tr>
+<tr class="memdesc:a7d7be7566f037bb12ee7fef1b549ee79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return normalized to unit length. <br/></td></tr>
+<tr class="separator:a7d7be7566f037bb12ee7fef1b549ee79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c3a1e34df823fb5127bcc02a18edc00"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c3a1e34df823fb5127bcc02a18edc00"></a>
+<a class="el" href="a00250.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a8c3a1e34df823fb5127bcc02a18edc00">Inverse</a> () const </td></tr>
+<tr class="memdesc:a8c3a1e34df823fb5127bcc02a18edc00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return inverse. <br/></td></tr>
+<tr class="separator:a8c3a1e34df823fb5127bcc02a18edc00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab119fb0b021dd4d31166796b1c9cbfb1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab119fb0b021dd4d31166796b1c9cbfb1"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#ab119fb0b021dd4d31166796b1c9cbfb1">LengthSquared</a> () const </td></tr>
+<tr class="memdesc:ab119fb0b021dd4d31166796b1c9cbfb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return squared length. <br/></td></tr>
+<tr class="separator:ab119fb0b021dd4d31166796b1c9cbfb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55d0b36b842e486dadf924a6f039b0c2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a55d0b36b842e486dadf924a6f039b0c2"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a55d0b36b842e486dadf924a6f039b0c2">DotProduct</a> (const <a class="el" href="a00250.html">Quaternion</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:a55d0b36b842e486dadf924a6f039b0c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate dot product. <br/></td></tr>
+<tr class="separator:a55d0b36b842e486dadf924a6f039b0c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad78b5712899c3c94d4a6d8e760cbf283"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad78b5712899c3c94d4a6d8e760cbf283"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#ad78b5712899c3c94d4a6d8e760cbf283">Equals</a> (const <a class="el" href="a00250.html">Quaternion</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:ad78b5712899c3c94d4a6d8e760cbf283"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for equality with another quaternion with epsilon. <br/></td></tr>
+<tr class="separator:ad78b5712899c3c94d4a6d8e760cbf283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cdc41f254f82ad8ce2d2e445e46afcd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9cdc41f254f82ad8ce2d2e445e46afcd"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a9cdc41f254f82ad8ce2d2e445e46afcd">IsNaN</a> () const </td></tr>
+<tr class="memdesc:a9cdc41f254f82ad8ce2d2e445e46afcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether is NaN. <br/></td></tr>
+<tr class="separator:a9cdc41f254f82ad8ce2d2e445e46afcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6578dadc5e2dd83d4eafddced3213abc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6578dadc5e2dd83d4eafddced3213abc"></a>
+<a class="el" href="a00250.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a6578dadc5e2dd83d4eafddced3213abc">Conjugate</a> () const </td></tr>
+<tr class="memdesc:a6578dadc5e2dd83d4eafddced3213abc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return conjugate. <br/></td></tr>
+<tr class="separator:a6578dadc5e2dd83d4eafddced3213abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4d0ec21e8811d619c2efa21396fd6fa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4d0ec21e8811d619c2efa21396fd6fa"></a>
+<a class="el" href="a00345.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#ab4d0ec21e8811d619c2efa21396fd6fa">EulerAngles</a> () const </td></tr>
+<tr class="memdesc:ab4d0ec21e8811d619c2efa21396fd6fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return Euler angles in degrees. <br/></td></tr>
+<tr class="separator:ab4d0ec21e8811d619c2efa21396fd6fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4434df8e11105549b398d489775bc34"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad4434df8e11105549b398d489775bc34"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#ad4434df8e11105549b398d489775bc34">YawAngle</a> () const </td></tr>
+<tr class="memdesc:ad4434df8e11105549b398d489775bc34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return yaw angle in degrees. <br/></td></tr>
+<tr class="separator:ad4434df8e11105549b398d489775bc34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e1da4f8450848f7d5cb29c24ee4e181"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e1da4f8450848f7d5cb29c24ee4e181"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a3e1da4f8450848f7d5cb29c24ee4e181">PitchAngle</a> () const </td></tr>
+<tr class="memdesc:a3e1da4f8450848f7d5cb29c24ee4e181"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return pitch angle in degrees. <br/></td></tr>
+<tr class="separator:a3e1da4f8450848f7d5cb29c24ee4e181"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86b24d98c2fb53793375f334da5ba2d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86b24d98c2fb53793375f334da5ba2d7"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a86b24d98c2fb53793375f334da5ba2d7">RollAngle</a> () const </td></tr>
+<tr class="memdesc:a86b24d98c2fb53793375f334da5ba2d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return roll angle in degrees. <br/></td></tr>
+<tr class="separator:a86b24d98c2fb53793375f334da5ba2d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9f0464bf2ac0b429c9bc95c61411fa2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa9f0464bf2ac0b429c9bc95c61411fa2"></a>
+<a class="el" href="a00196.html">Matrix3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#aa9f0464bf2ac0b429c9bc95c61411fa2">RotationMatrix</a> () const </td></tr>
+<tr class="memdesc:aa9f0464bf2ac0b429c9bc95c61411fa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the rotation matrix that corresponds to this quaternion. <br/></td></tr>
+<tr class="separator:aa9f0464bf2ac0b429c9bc95c61411fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a25f25669aac94583d65faefb6c4fca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a25f25669aac94583d65faefb6c4fca"></a>
+<a class="el" href="a00250.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a2a25f25669aac94583d65faefb6c4fca">Slerp</a> (<a class="el" href="a00250.html">Quaternion</a> rhs, float t) const </td></tr>
+<tr class="memdesc:a2a25f25669aac94583d65faefb6c4fca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spherical interpolation with another quaternion. <br/></td></tr>
+<tr class="separator:a2a25f25669aac94583d65faefb6c4fca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85dc340d08e139ec4971ffdb04c8dad2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85dc340d08e139ec4971ffdb04c8dad2"></a>
+<a class="el" href="a00250.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a85dc340d08e139ec4971ffdb04c8dad2">Nlerp</a> (<a class="el" href="a00250.html">Quaternion</a> rhs, float t, bool shortestPath=false) const </td></tr>
+<tr class="memdesc:a85dc340d08e139ec4971ffdb04c8dad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalized linear interpolation with another quaternion. <br/></td></tr>
+<tr class="separator:a85dc340d08e139ec4971ffdb04c8dad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b04c8944ba62bd75674dd3060f50def"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b04c8944ba62bd75674dd3060f50def"></a>
+const float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a4b04c8944ba62bd75674dd3060f50def">Data</a> () const </td></tr>
+<tr class="memdesc:a4b04c8944ba62bd75674dd3060f50def"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return float data. <br/></td></tr>
+<tr class="separator:a4b04c8944ba62bd75674dd3060f50def"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bbeac63b45602aeadcf2ad480813050"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8bbeac63b45602aeadcf2ad480813050"></a>
+<a class="el" href="a00317.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a8bbeac63b45602aeadcf2ad480813050">ToString</a> () const </td></tr>
+<tr class="memdesc:a8bbeac63b45602aeadcf2ad480813050"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return as string. <br/></td></tr>
+<tr class="separator:a8bbeac63b45602aeadcf2ad480813050"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a27df032f7d802b4595ece1d70896d0e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a27df032f7d802b4595ece1d70896d0e5"></a>
-<a class="el" href="a00342.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a27df032f7d802b4595ece1d70896d0e5">origin_</a></td></tr>
-<tr class="memdesc:a27df032f7d802b4595ece1d70896d0e5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00250.html" title="Infinite straight line in three-dimensional space.">Ray</a> origin. <br/></td></tr>
-<tr class="separator:a27df032f7d802b4595ece1d70896d0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d85bded5863ada8e089037714a21a78"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d85bded5863ada8e089037714a21a78"></a>
-<a class="el" href="a00342.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a1d85bded5863ada8e089037714a21a78">direction_</a></td></tr>
-<tr class="memdesc:a1d85bded5863ada8e089037714a21a78"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00250.html" title="Infinite straight line in three-dimensional space.">Ray</a> direction. <br/></td></tr>
-<tr class="separator:a1d85bded5863ada8e089037714a21a78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f0e08e51d101b8ad0bf267664d1a1d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f0e08e51d101b8ad0bf267664d1a1d3"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a2f0e08e51d101b8ad0bf267664d1a1d3">w_</a></td></tr>
+<tr class="memdesc:a2f0e08e51d101b8ad0bf267664d1a1d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">W coordinate. <br/></td></tr>
+<tr class="separator:a2f0e08e51d101b8ad0bf267664d1a1d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a2942c9b8d9079fb00573d37b69ae3b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a2942c9b8d9079fb00573d37b69ae3b"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a2a2942c9b8d9079fb00573d37b69ae3b">x_</a></td></tr>
+<tr class="memdesc:a2a2942c9b8d9079fb00573d37b69ae3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">X coordinate. <br/></td></tr>
+<tr class="separator:a2a2942c9b8d9079fb00573d37b69ae3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a972ee8620f1e577458dd62a8c13e2f41"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a972ee8620f1e577458dd62a8c13e2f41"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a972ee8620f1e577458dd62a8c13e2f41">y_</a></td></tr>
+<tr class="memdesc:a972ee8620f1e577458dd62a8c13e2f41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Y coordinate. <br/></td></tr>
+<tr class="separator:a972ee8620f1e577458dd62a8c13e2f41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a34f5a26639d9ca306dd881229d046e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a34f5a26639d9ca306dd881229d046e"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#a8a34f5a26639d9ca306dd881229d046e">z_</a></td></tr>
+<tr class="memdesc:a8a34f5a26639d9ca306dd881229d046e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Z coordinate. <br/></td></tr>
+<tr class="separator:a8a34f5a26639d9ca306dd881229d046e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:af53dbc2f29f41c9a4e7c432ccca289c5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af53dbc2f29f41c9a4e7c432ccca289c5"></a>
+static const <a class="el" href="a00250.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html#af53dbc2f29f41c9a4e7c432ccca289c5">IDENTITY</a></td></tr>
+<tr class="memdesc:af53dbc2f29f41c9a4e7c432ccca289c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identity quaternion. <br/></td></tr>
+<tr class="separator:af53dbc2f29f41c9a4e7c432ccca289c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Infinite straight line in three-dimensional space. </p>
+<div class="textblock"><p>Rotation represented as a four-dimensional normalized vector. </p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Math/Ray.h</li>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Math/Ray.cpp</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Math/Quaternion.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Math/Quaternion.cpp</li>
 </ul>
 </div><!-- contents -->
