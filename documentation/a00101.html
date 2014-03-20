@@ -20,58 +20,78 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00101.html">Condition</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00101.html">CompressedLevel</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="a00940.html">List of all members</a>  </div>
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="a01394.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::Condition Class Reference</div>  </div>
+<div class="title">Urho3D::CompressedLevel Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Condition on which a thread can wait.  
+<p>Compressed image mip level.  
  <a href="a00101.html#details">More...</a></p>
 
-<p><code>#include &lt;Condition.h&gt;</code></p>
+<p><code>#include &lt;Image.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad42f3e306f1fd9a8c1f724617710e259"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad42f3e306f1fd9a8c1f724617710e259"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#ad42f3e306f1fd9a8c1f724617710e259">Condition</a> ()</td></tr>
-<tr class="memdesc:ad42f3e306f1fd9a8c1f724617710e259"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
-<tr class="separator:ad42f3e306f1fd9a8c1f724617710e259"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ca517258bdc9ad2352088f1d42755e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ca517258bdc9ad2352088f1d42755e0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#a1ca517258bdc9ad2352088f1d42755e0">~Condition</a> ()</td></tr>
-<tr class="memdesc:a1ca517258bdc9ad2352088f1d42755e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
-<tr class="separator:a1ca517258bdc9ad2352088f1d42755e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cc6e3671e577bfff2f50da29f753fcb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7cc6e3671e577bfff2f50da29f753fcb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#a7cc6e3671e577bfff2f50da29f753fcb">Set</a> ()</td></tr>
-<tr class="memdesc:a7cc6e3671e577bfff2f50da29f753fcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the condition. Will be automatically reset once a waiting thread wakes up. <br/></td></tr>
-<tr class="separator:a7cc6e3671e577bfff2f50da29f753fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa10966c62b4190071c3b42834b4bfa78"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa10966c62b4190071c3b42834b4bfa78"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#aa10966c62b4190071c3b42834b4bfa78">Wait</a> ()</td></tr>
-<tr class="memdesc:aa10966c62b4190071c3b42834b4bfa78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait on the condition. <br/></td></tr>
-<tr class="separator:aa10966c62b4190071c3b42834b4bfa78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab1ca8d913e5bd86c81877284580c211"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab1ca8d913e5bd86c81877284580c211"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#aab1ca8d913e5bd86c81877284580c211">CompressedLevel</a> ()</td></tr>
+<tr class="memdesc:aab1ca8d913e5bd86c81877284580c211"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct empty. <br/></td></tr>
+<tr class="separator:aab1ca8d913e5bd86c81877284580c211"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae010ba0f1565ebf9203b5016642718e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae010ba0f1565ebf9203b5016642718e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#aae010ba0f1565ebf9203b5016642718e">Decompress</a> (unsigned char *dest)</td></tr>
+<tr class="memdesc:aae010ba0f1565ebf9203b5016642718e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decompress to RGBA. The destination buffer required is width * height * 4 bytes. Return true if successful. <br/></td></tr>
+<tr class="separator:aae010ba0f1565ebf9203b5016642718e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:af9128ee9ad30c6250874c6397969de16"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9128ee9ad30c6250874c6397969de16"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#af9128ee9ad30c6250874c6397969de16">mutex_</a></td></tr>
-<tr class="memdesc:af9128ee9ad30c6250874c6397969de16"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00209.html" title="Operating system mutual exclusion primitive.">Mutex</a> for the event, necessary for pthreads-based implementation. <br/></td></tr>
-<tr class="separator:af9128ee9ad30c6250874c6397969de16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98b69f2f52304c55d126cb2ecbb44e6f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98b69f2f52304c55d126cb2ecbb44e6f"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#a98b69f2f52304c55d126cb2ecbb44e6f">event_</a></td></tr>
-<tr class="memdesc:a98b69f2f52304c55d126cb2ecbb44e6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operating system specific event. <br/></td></tr>
-<tr class="separator:a98b69f2f52304c55d126cb2ecbb44e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a8009d0316a5ce58caf36ec4b64a13994"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8009d0316a5ce58caf36ec4b64a13994"></a>
+unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#a8009d0316a5ce58caf36ec4b64a13994">data_</a></td></tr>
+<tr class="memdesc:a8009d0316a5ce58caf36ec4b64a13994"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compressed image data. <br/></td></tr>
+<tr class="separator:a8009d0316a5ce58caf36ec4b64a13994"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28288add414be94ea9326eaea2d87321"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a28288add414be94ea9326eaea2d87321"></a>
+CompressedFormat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#a28288add414be94ea9326eaea2d87321">format_</a></td></tr>
+<tr class="memdesc:a28288add414be94ea9326eaea2d87321"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compression format. <br/></td></tr>
+<tr class="separator:a28288add414be94ea9326eaea2d87321"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d065edbabdb9bb221c8e16e46e2d364"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d065edbabdb9bb221c8e16e46e2d364"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#a0d065edbabdb9bb221c8e16e46e2d364">width_</a></td></tr>
+<tr class="memdesc:a0d065edbabdb9bb221c8e16e46e2d364"><td class="mdescLeft">&#160;</td><td class="mdescRight">Width. <br/></td></tr>
+<tr class="separator:a0d065edbabdb9bb221c8e16e46e2d364"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a123ea45edf2b4d555a0361d2e9f02d5a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a123ea45edf2b4d555a0361d2e9f02d5a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#a123ea45edf2b4d555a0361d2e9f02d5a">height_</a></td></tr>
+<tr class="memdesc:a123ea45edf2b4d555a0361d2e9f02d5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Height. <br/></td></tr>
+<tr class="separator:a123ea45edf2b4d555a0361d2e9f02d5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa98fcad4f759bdb78f1e4dfc5a820057"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa98fcad4f759bdb78f1e4dfc5a820057"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#aa98fcad4f759bdb78f1e4dfc5a820057">depth_</a></td></tr>
+<tr class="memdesc:aa98fcad4f759bdb78f1e4dfc5a820057"><td class="mdescLeft">&#160;</td><td class="mdescRight">Depth. <br/></td></tr>
+<tr class="separator:aa98fcad4f759bdb78f1e4dfc5a820057"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff440bb0f6ad85b3340efa4fbaede214"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff440bb0f6ad85b3340efa4fbaede214"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#aff440bb0f6ad85b3340efa4fbaede214">blockSize_</a></td></tr>
+<tr class="memdesc:aff440bb0f6ad85b3340efa4fbaede214"><td class="mdescLeft">&#160;</td><td class="mdescRight">Block size in bytes. <br/></td></tr>
+<tr class="separator:aff440bb0f6ad85b3340efa4fbaede214"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0d6cdd255eebb78d396d8ed6cc5aec4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0d6cdd255eebb78d396d8ed6cc5aec4"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#af0d6cdd255eebb78d396d8ed6cc5aec4">dataSize_</a></td></tr>
+<tr class="memdesc:af0d6cdd255eebb78d396d8ed6cc5aec4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total data size in bytes. <br/></td></tr>
+<tr class="separator:af0d6cdd255eebb78d396d8ed6cc5aec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5f4a59f9174237e80b504115a2e9bee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5f4a59f9174237e80b504115a2e9bee"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#ab5f4a59f9174237e80b504115a2e9bee">rowSize_</a></td></tr>
+<tr class="memdesc:ab5f4a59f9174237e80b504115a2e9bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Row size in bytes. <br/></td></tr>
+<tr class="separator:ab5f4a59f9174237e80b504115a2e9bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f5f4c5b9284abb7765b7178b0f04180"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f5f4c5b9284abb7765b7178b0f04180"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html#a9f5f4c5b9284abb7765b7178b0f04180">rows_</a></td></tr>
+<tr class="memdesc:a9f5f4c5b9284abb7765b7178b0f04180"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of rows. <br/></td></tr>
+<tr class="separator:a9f5f4c5b9284abb7765b7178b0f04180"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Condition on which a thread can wait. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Core/Condition.h</li>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Core/Condition.cpp</li>
+<div class="textblock"><p>Compressed image mip level. </p>
+</div><hr/>The documentation for this struct was generated from the following files:<ul>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Resource/Image.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Resource/Image.cpp</li>
 </ul>
 </div><!-- contents -->
