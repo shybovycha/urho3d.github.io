@@ -20,68 +20,55 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00230.html">PackageDownload</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00230.html">OctreeQueryResult</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01332.html">List of all members</a>  </div>
+<a href="a01129.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::PackageDownload Struct Reference</div>  </div>
+<div class="title">Urho3D::OctreeQueryResult Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Package file receive transfer.  
+<p>General octree query result. Used for Lua bindings only.  
  <a href="a00230.html#details">More...</a></p>
 
-<p><code>#include &lt;Connection.h&gt;</code></p>
+<p><code>#include &lt;OctreeQuery.h&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for Urho3D::PackageDownload:</div>
+Collaboration diagram for Urho3D::OctreeQueryResult:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01333.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01130.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1d248dbabcd081a6a417a483581b78d6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d248dbabcd081a6a417a483581b78d6"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00230.html#a1d248dbabcd081a6a417a483581b78d6">PackageDownload</a> ()</td></tr>
-<tr class="memdesc:a1d248dbabcd081a6a417a483581b78d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with defaults. <br/></td></tr>
-<tr class="separator:a1d248dbabcd081a6a417a483581b78d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab33889b5672b2e62ef00dd4e072836b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab33889b5672b2e62ef00dd4e072836b0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00230.html#ab33889b5672b2e62ef00dd4e072836b0">OctreeQueryResult</a> ()</td></tr>
+<tr class="memdesc:ab33889b5672b2e62ef00dd4e072836b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with defaults. <br/></td></tr>
+<tr class="separator:ab33889b5672b2e62ef00dd4e072836b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35f2d539cadef92f70e32ceddc6c44ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a35f2d539cadef92f70e32ceddc6c44ba"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00230.html#a35f2d539cadef92f70e32ceddc6c44ba">operator!=</a> (const <a class="el" href="a00230.html">OctreeQueryResult</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:a35f2d539cadef92f70e32ceddc6c44ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for inequality, added to prevent GCC from complaining. <br/></td></tr>
+<tr class="separator:a35f2d539cadef92f70e32ceddc6c44ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a84779eaea819aedcb12572c551d1d768"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84779eaea819aedcb12572c551d1d768"></a>
-<a class="el" href="a00297.html">SharedPtr</a>&lt; <a class="el" href="a00139.html">File</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00230.html#a84779eaea819aedcb12572c551d1d768">file_</a></td></tr>
-<tr class="memdesc:a84779eaea819aedcb12572c551d1d768"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destination file. <br/></td></tr>
-<tr class="separator:a84779eaea819aedcb12572c551d1d768"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb05ef79f0852f344632b63bc4340502"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb05ef79f0852f344632b63bc4340502"></a>
-<a class="el" href="a00161.html">HashSet</a>&lt; unsigned &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00230.html#aeb05ef79f0852f344632b63bc4340502">receivedFragments_</a></td></tr>
-<tr class="memdesc:aeb05ef79f0852f344632b63bc4340502"><td class="mdescLeft">&#160;</td><td class="mdescRight">Already received fragments. <br/></td></tr>
-<tr class="separator:aeb05ef79f0852f344632b63bc4340502"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a95d12f4e02e9093a74ce6d93ff9999"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a95d12f4e02e9093a74ce6d93ff9999"></a>
-<a class="el" href="a00320.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00230.html#a9a95d12f4e02e9093a74ce6d93ff9999">name_</a></td></tr>
-<tr class="memdesc:a9a95d12f4e02e9093a74ce6d93ff9999"><td class="mdescLeft">&#160;</td><td class="mdescRight">Package name. <br/></td></tr>
-<tr class="separator:a9a95d12f4e02e9093a74ce6d93ff9999"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d7782a9e49a72075bebfab0a9c4d926"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d7782a9e49a72075bebfab0a9c4d926"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00230.html#a6d7782a9e49a72075bebfab0a9c4d926">totalFragments_</a></td></tr>
-<tr class="memdesc:a6d7782a9e49a72075bebfab0a9c4d926"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total number of fragments. <br/></td></tr>
-<tr class="separator:a6d7782a9e49a72075bebfab0a9c4d926"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b0ef24bdead99bb8dd16209b092edfb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b0ef24bdead99bb8dd16209b092edfb"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00230.html#a3b0ef24bdead99bb8dd16209b092edfb">checksum_</a></td></tr>
-<tr class="memdesc:a3b0ef24bdead99bb8dd16209b092edfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checksum. <br/></td></tr>
-<tr class="separator:a3b0ef24bdead99bb8dd16209b092edfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd441a2c5cc359ef3d5ce7d029350cab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd441a2c5cc359ef3d5ce7d029350cab"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00230.html#afd441a2c5cc359ef3d5ce7d029350cab">initiated_</a></td></tr>
-<tr class="memdesc:afd441a2c5cc359ef3d5ce7d029350cab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Download initiated flag. <br/></td></tr>
-<tr class="separator:afd441a2c5cc359ef3d5ce7d029350cab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cef682d453f97408a5d9df36ce98595"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1cef682d453f97408a5d9df36ce98595"></a>
+<a class="el" href="a00135.html">Drawable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00230.html#a1cef682d453f97408a5d9df36ce98595">drawable_</a></td></tr>
+<tr class="memdesc:a1cef682d453f97408a5d9df36ce98595"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00135.html" title="Base class for visible components.">Drawable</a>. <br/></td></tr>
+<tr class="separator:a1cef682d453f97408a5d9df36ce98595"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a916a794ad1d77dc728155f60c2f1eefe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a916a794ad1d77dc728155f60c2f1eefe"></a>
+<a class="el" href="a00221.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00230.html#a916a794ad1d77dc728155f60c2f1eefe">node_</a></td></tr>
+<tr class="memdesc:a916a794ad1d77dc728155f60c2f1eefe"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00279.html" title="Root scene node, represents the whole scene.">Scene</a> node. <br/></td></tr>
+<tr class="separator:a916a794ad1d77dc728155f60c2f1eefe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Package file receive transfer. </p>
-</div><hr/>The documentation for this struct was generated from the following files:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Network/Connection.h</li>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Network/Connection.cpp</li>
+<div class="textblock"><p>General octree query result. Used for Lua bindings only. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/OctreeQuery.h</li>
 </ul>
 </div><!-- contents -->
