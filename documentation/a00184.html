@@ -20,75 +20,90 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00184.html">LightQueryResult</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00184.html">LinkedList</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01234.html">List of all members</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="a00888.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::LightQueryResult Struct Reference</div>  </div>
+<div class="title">Urho3D::LinkedList&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Intermediate light processing result.  
+<p>Singly-linked list template class. Elements must inherit from <a class="el" href="a00185.html" title="Singly-linked list node base class.">LinkedListNode</a>.  
  <a href="a00184.html#details">More...</a></p>
 
-<p><code>#include &lt;View.h&gt;</code></p>
+<p><code>#include &lt;LinkedList.h&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for Urho3D::LightQueryResult:</div>
+Collaboration diagram for Urho3D::LinkedList&lt; T &gt;:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01235.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00889.svg" width="190" height="136"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a6e640cda762714fad87d4338e3e20c70"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e640cda762714fad87d4338e3e20c70"></a>
-<a class="el" href="a00182.html">Light</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00184.html#a6e640cda762714fad87d4338e3e20c70">light_</a></td></tr>
-<tr class="memdesc:a6e640cda762714fad87d4338e3e20c70"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00182.html" title="Light component.">Light</a>. <br/></td></tr>
-<tr class="separator:a6e640cda762714fad87d4338e3e20c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca4f36fcf26bf153b530ac393f98d62f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca4f36fcf26bf153b530ac393f98d62f"></a>
-<a class="el" href="a00252.html">PODVector</a>&lt; <a class="el" href="a00136.html">Drawable</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00184.html#aca4f36fcf26bf153b530ac393f98d62f">litGeometries_</a></td></tr>
-<tr class="memdesc:aca4f36fcf26bf153b530ac393f98d62f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lit geometries. <br/></td></tr>
-<tr class="separator:aca4f36fcf26bf153b530ac393f98d62f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fb3183de7dd7049f1179392c2ab3117"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1fb3183de7dd7049f1179392c2ab3117"></a>
-<a class="el" href="a00252.html">PODVector</a>&lt; <a class="el" href="a00136.html">Drawable</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00184.html#a1fb3183de7dd7049f1179392c2ab3117">shadowCasters_</a></td></tr>
-<tr class="memdesc:a1fb3183de7dd7049f1179392c2ab3117"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shadow casters. <br/></td></tr>
-<tr class="separator:a1fb3183de7dd7049f1179392c2ab3117"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35998ae67ea64b0865b39b0c803bc332"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a35998ae67ea64b0865b39b0c803bc332"></a>
-<a class="el" href="a00085.html">Camera</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00184.html#a35998ae67ea64b0865b39b0c803bc332">shadowCameras_</a> [MAX_LIGHT_SPLITS]</td></tr>
-<tr class="memdesc:a35998ae67ea64b0865b39b0c803bc332"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shadow cameras. <br/></td></tr>
-<tr class="separator:a35998ae67ea64b0865b39b0c803bc332"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c233bb3441ee360085959a3cf027ced"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c233bb3441ee360085959a3cf027ced"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00184.html#a7c233bb3441ee360085959a3cf027ced">shadowCasterBegin_</a> [MAX_LIGHT_SPLITS]</td></tr>
-<tr class="memdesc:a7c233bb3441ee360085959a3cf027ced"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shadow caster start indices. <br/></td></tr>
-<tr class="separator:a7c233bb3441ee360085959a3cf027ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae610469c2c933552f3212f3ba25e493"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae610469c2c933552f3212f3ba25e493"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00184.html#aae610469c2c933552f3212f3ba25e493">shadowCasterEnd_</a> [MAX_LIGHT_SPLITS]</td></tr>
-<tr class="memdesc:aae610469c2c933552f3212f3ba25e493"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shadow caster end indices. <br/></td></tr>
-<tr class="separator:aae610469c2c933552f3212f3ba25e493"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29936299a8297abae9fb89a61272a78d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29936299a8297abae9fb89a61272a78d"></a>
-<a class="el" href="a00081.html">BoundingBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00184.html#a29936299a8297abae9fb89a61272a78d">shadowCasterBox_</a> [MAX_LIGHT_SPLITS]</td></tr>
-<tr class="memdesc:a29936299a8297abae9fb89a61272a78d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Combined bounding box of shadow casters in light view or projection space. <br/></td></tr>
-<tr class="separator:a29936299a8297abae9fb89a61272a78d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e1de03c769b30bd91c49b08b9764ff3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e1de03c769b30bd91c49b08b9764ff3"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00184.html#a0e1de03c769b30bd91c49b08b9764ff3">shadowNearSplits_</a> [MAX_LIGHT_SPLITS]</td></tr>
-<tr class="memdesc:a0e1de03c769b30bd91c49b08b9764ff3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shadow camera near splits (directional lights only.) <br/></td></tr>
-<tr class="separator:a0e1de03c769b30bd91c49b08b9764ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb24827ea5a3c4d514d91bd75af6aca9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb24827ea5a3c4d514d91bd75af6aca9"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00184.html#abb24827ea5a3c4d514d91bd75af6aca9">shadowFarSplits_</a> [MAX_LIGHT_SPLITS]</td></tr>
-<tr class="memdesc:abb24827ea5a3c4d514d91bd75af6aca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shadow camera far splits (directional lights only.) <br/></td></tr>
-<tr class="separator:abb24827ea5a3c4d514d91bd75af6aca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a5751f7107d2c119ebafe7d835b3967"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0a5751f7107d2c119ebafe7d835b3967"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00184.html#a0a5751f7107d2c119ebafe7d835b3967">numSplits_</a></td></tr>
-<tr class="memdesc:a0a5751f7107d2c119ebafe7d835b3967"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shadow map split count. <br/></td></tr>
-<tr class="separator:a0a5751f7107d2c119ebafe7d835b3967"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:aafc8c9469800c5a3db45d0e9a40745ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aafc8c9469800c5a3db45d0e9a40745ac"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00184.html#aafc8c9469800c5a3db45d0e9a40745ac">LinkedList</a> ()</td></tr>
+<tr class="memdesc:aafc8c9469800c5a3db45d0e9a40745ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct empty. <br/></td></tr>
+<tr class="separator:aafc8c9469800c5a3db45d0e9a40745ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab48b74395585fd61efe07abde64ab506"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab48b74395585fd61efe07abde64ab506"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00184.html#ab48b74395585fd61efe07abde64ab506">~LinkedList</a> ()</td></tr>
+<tr class="memdesc:ab48b74395585fd61efe07abde64ab506"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
+<tr class="separator:ab48b74395585fd61efe07abde64ab506"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f74444fabdb58aaae3d5dc55858e530"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f74444fabdb58aaae3d5dc55858e530"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00184.html#a3f74444fabdb58aaae3d5dc55858e530">Clear</a> ()</td></tr>
+<tr class="memdesc:a3f74444fabdb58aaae3d5dc55858e530"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all elements. <br/></td></tr>
+<tr class="separator:a3f74444fabdb58aaae3d5dc55858e530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab80b4b018dde1cce9c016eef1454aa79"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab80b4b018dde1cce9c016eef1454aa79"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00184.html#ab80b4b018dde1cce9c016eef1454aa79">InsertFront</a> (T *element)</td></tr>
+<tr class="memdesc:ab80b4b018dde1cce9c016eef1454aa79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert an element at the beginning. <br/></td></tr>
+<tr class="separator:ab80b4b018dde1cce9c016eef1454aa79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bdb3b1298f6c8a1cf5cf4ad409ce7e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7bdb3b1298f6c8a1cf5cf4ad409ce7e6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00184.html#a7bdb3b1298f6c8a1cf5cf4ad409ce7e6">Insert</a> (T *element)</td></tr>
+<tr class="memdesc:a7bdb3b1298f6c8a1cf5cf4ad409ce7e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert an element at the end. <br/></td></tr>
+<tr class="separator:a7bdb3b1298f6c8a1cf5cf4ad409ce7e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09a86febbf26d335038dbbe27acfb5cd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a09a86febbf26d335038dbbe27acfb5cd"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00184.html#a09a86febbf26d335038dbbe27acfb5cd">Erase</a> (T *element)</td></tr>
+<tr class="memdesc:a09a86febbf26d335038dbbe27acfb5cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase an element. Return true if successful. <br/></td></tr>
+<tr class="separator:a09a86febbf26d335038dbbe27acfb5cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d337372aaa6f525aafc8834f39cf155"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d337372aaa6f525aafc8834f39cf155"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00184.html#a4d337372aaa6f525aafc8834f39cf155">Erase</a> (T *element, T *previous)</td></tr>
+<tr class="memdesc:a4d337372aaa6f525aafc8834f39cf155"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase an element when the previous element is known (optimization.) Return true if successful. <br/></td></tr>
+<tr class="separator:a4d337372aaa6f525aafc8834f39cf155"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab57b81eeda861807014c585d6fd0d868"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab57b81eeda861807014c585d6fd0d868"></a>
+T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00184.html#ab57b81eeda861807014c585d6fd0d868">First</a> () const </td></tr>
+<tr class="memdesc:ab57b81eeda861807014c585d6fd0d868"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return first element, or null if empty. <br/></td></tr>
+<tr class="separator:ab57b81eeda861807014c585d6fd0d868"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb42340e8dc10fba88a9a394fc0f8ca9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb42340e8dc10fba88a9a394fc0f8ca9"></a>
+T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00184.html#afb42340e8dc10fba88a9a394fc0f8ca9">Last</a> () const </td></tr>
+<tr class="memdesc:afb42340e8dc10fba88a9a394fc0f8ca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return last element, or null if empty. <br/></td></tr>
+<tr class="separator:afb42340e8dc10fba88a9a394fc0f8ca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9ca51367dc387f8461bf5ebdfe2dde8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9ca51367dc387f8461bf5ebdfe2dde8"></a>
+T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00184.html#af9ca51367dc387f8461bf5ebdfe2dde8">Next</a> (T *element) const </td></tr>
+<tr class="memdesc:af9ca51367dc387f8461bf5ebdfe2dde8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return next element, or null if no more elements. <br/></td></tr>
+<tr class="separator:af9ca51367dc387f8461bf5ebdfe2dde8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18a9bf7ebfe1b4a8865273e79a62a549"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18a9bf7ebfe1b4a8865273e79a62a549"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00184.html#a18a9bf7ebfe1b4a8865273e79a62a549">Empty</a> () const </td></tr>
+<tr class="memdesc:a18a9bf7ebfe1b4a8865273e79a62a549"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether is empty. <br/></td></tr>
+<tr class="separator:a18a9bf7ebfe1b4a8865273e79a62a549"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ab7c1278870607cb3d3c91c6effd76ff7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7c1278870607cb3d3c91c6effd76ff7"></a>
+T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00184.html#ab7c1278870607cb3d3c91c6effd76ff7">head_</a></td></tr>
+<tr class="memdesc:ab7c1278870607cb3d3c91c6effd76ff7"><td class="mdescLeft">&#160;</td><td class="mdescRight">First element. <br/></td></tr>
+<tr class="separator:ab7c1278870607cb3d3c91c6effd76ff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Intermediate light processing result. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/View.h</li>
+<div class="textblock"><h3>template&lt;class T&gt;<br/>
+class Urho3D::LinkedList&lt; T &gt;</h3>
+
+<p>Singly-linked list template class. Elements must inherit from <a class="el" href="a00185.html" title="Singly-linked list node base class.">LinkedListNode</a>. </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Container/LinkedList.h</li>
 </ul>
 </div><!-- contents -->

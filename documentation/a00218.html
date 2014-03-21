@@ -20,55 +20,58 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00218.html">NetworkState</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00165.html">HashTable</a></li><li class="navelem"><a class="el" href="a00218.html">Node</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01429.html">List of all members</a>  </div>
+<a href="a00883.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::NetworkState Struct Reference</div>  </div>
+<div class="title">Urho3D::HashTable&lt; T, U &gt;::Node Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Per-object attribute state for network replication, allocated on demand.  
+<p>Hash table node.  
  <a href="a00218.html#details">More...</a></p>
 
-<p><code>#include &lt;ReplicationState.h&gt;</code></p>
+<p><code>#include &lt;HashTable.h&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for Urho3D::NetworkState:</div>
+Collaboration diagram for Urho3D::HashTable&lt; T, U &gt;::Node:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01430.svg" width="100%" height="531"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00884.svg" width="230" height="155"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a7ec6fc6a721dd6e91af1c51d99e1a304"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ec6fc6a721dd6e91af1c51d99e1a304"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a7ec6fc6a721dd6e91af1c51d99e1a304">Node</a> (unsigned hash, const T &amp;value, <a class="el" href="a00218.html">Node</a> *next)</td></tr>
+<tr class="memdesc:a7ec6fc6a721dd6e91af1c51d99e1a304"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
+<tr class="separator:a7ec6fc6a721dd6e91af1c51d99e1a304"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a6fdfbaac40df3197e45c745d52e9009d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6fdfbaac40df3197e45c745d52e9009d"></a>
-const <a class="el" href="a00352.html">Vector</a>&lt; <a class="el" href="a00069.html">AttributeInfo</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a6fdfbaac40df3197e45c745d52e9009d">attributes_</a></td></tr>
-<tr class="memdesc:a6fdfbaac40df3197e45c745d52e9009d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cached network attribute infos. <br/></td></tr>
-<tr class="separator:a6fdfbaac40df3197e45c745d52e9009d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fdb00329a3b54c70a91dd47c5c98582"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2fdb00329a3b54c70a91dd47c5c98582"></a>
-<a class="el" href="a00352.html">Vector</a>&lt; <a class="el" href="a00350.html">Variant</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a2fdb00329a3b54c70a91dd47c5c98582">currentValues_</a></td></tr>
-<tr class="memdesc:a2fdb00329a3b54c70a91dd47c5c98582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current network attribute values. <br/></td></tr>
-<tr class="separator:a2fdb00329a3b54c70a91dd47c5c98582"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e5cab00c50e00ba832aed2090562f38"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e5cab00c50e00ba832aed2090562f38"></a>
-<a class="el" href="a00352.html">Vector</a>&lt; <a class="el" href="a00350.html">Variant</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a3e5cab00c50e00ba832aed2090562f38">previousValues_</a></td></tr>
-<tr class="memdesc:a3e5cab00c50e00ba832aed2090562f38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Previous network attribute values. <br/></td></tr>
-<tr class="separator:a3e5cab00c50e00ba832aed2090562f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a798b3c31658bd6dd9312e248540c250a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a798b3c31658bd6dd9312e248540c250a"></a>
-<a class="el" href="a00252.html">PODVector</a>&lt; <a class="el" href="a00273.html">ReplicationState</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a798b3c31658bd6dd9312e248540c250a">replicationStates_</a></td></tr>
-<tr class="memdesc:a798b3c31658bd6dd9312e248540c250a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replication states that are tracking this object. <br/></td></tr>
-<tr class="separator:a798b3c31658bd6dd9312e248540c250a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa91ada69e1992696cbb55153a8645446"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa91ada69e1992696cbb55153a8645446"></a>
-<a class="el" href="a00163.html">VariantMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#aa91ada69e1992696cbb55153a8645446">previousVars_</a></td></tr>
-<tr class="memdesc:aa91ada69e1992696cbb55153a8645446"><td class="mdescLeft">&#160;</td><td class="mdescRight">Previous user variables. <br/></td></tr>
-<tr class="separator:aa91ada69e1992696cbb55153a8645446"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9e55d4d3eb2e954ec8c6017620c5580"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9e55d4d3eb2e954ec8c6017620c5580"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#af9e55d4d3eb2e954ec8c6017620c5580">hash_</a></td></tr>
+<tr class="memdesc:af9e55d4d3eb2e954ec8c6017620c5580"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hash value. <br/></td></tr>
+<tr class="separator:af9e55d4d3eb2e954ec8c6017620c5580"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3090b3aaa2270a3778d7f221e8f89de"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad3090b3aaa2270a3778d7f221e8f89de"></a>
+T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#ad3090b3aaa2270a3778d7f221e8f89de">value_</a></td></tr>
+<tr class="memdesc:ad3090b3aaa2270a3778d7f221e8f89de"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00218.html" title="Hash table node.">Node</a> value. <br/></td></tr>
+<tr class="separator:ad3090b3aaa2270a3778d7f221e8f89de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a2e6486b0110d54bb2d73d46aac8b93"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a2e6486b0110d54bb2d73d46aac8b93"></a>
+<a class="el" href="a00218.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html#a9a2e6486b0110d54bb2d73d46aac8b93">next_</a></td></tr>
+<tr class="memdesc:a9a2e6486b0110d54bb2d73d46aac8b93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Next node in bucket. <br/></td></tr>
+<tr class="separator:a9a2e6486b0110d54bb2d73d46aac8b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Per-object attribute state for network replication, allocated on demand. </p>
+<div class="textblock"><h3>template&lt;class T, unsigned U&gt;<br/>
+struct Urho3D::HashTable&lt; T, U &gt;::Node</h3>
+
+<p>Hash table node. </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Scene/ReplicationState.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Container/HashTable.h</li>
 </ul>
 </div><!-- contents -->

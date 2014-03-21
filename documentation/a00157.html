@@ -20,54 +20,102 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00157.html">GlyphLocation</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00157.html">GPUObject</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01551.html">List of all members</a>  </div>
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="a01135.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::GlyphLocation Struct Reference</div>  </div>
+<div class="title">Urho3D::GPUObject Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Glyph and its location within the text. Used when preparing text rendering.  
+<p>Base class for GPU resources.  
  <a href="a00157.html#details">More...</a></p>
 
-<p><code>#include &lt;Text.h&gt;</code></p>
+<p><code>#include &lt;OGLGPUObject.h&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for Urho3D::GlyphLocation:</div>
+Inheritance diagram for Urho3D::GPUObject:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01552.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a01136.svg" width="598" height="254"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for Urho3D::GPUObject:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01137.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac6123e1a5562d91e3394724694a10c5d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6123e1a5562d91e3394724694a10c5d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>GlyphLocation</b> (int x, int y, const <a class="el" href="a00151.html">FontGlyph</a> *glyph)</td></tr>
-<tr class="separator:ac6123e1a5562d91e3394724694a10c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a403872d965887004f1021405870ff865"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a403872d965887004f1021405870ff865"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00157.html#a403872d965887004f1021405870ff865">GPUObject</a> (<a class="el" href="a00158.html">Graphics</a> *graphics)</td></tr>
+<tr class="memdesc:a403872d965887004f1021405870ff865"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with graphics subsystem pointer. <br/></td></tr>
+<tr class="separator:a403872d965887004f1021405870ff865"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a818ceaf4f9debc5f4233f2e265d0cf42"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a818ceaf4f9debc5f4233f2e265d0cf42"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00157.html#a818ceaf4f9debc5f4233f2e265d0cf42">~GPUObject</a> ()</td></tr>
+<tr class="memdesc:a818ceaf4f9debc5f4233f2e265d0cf42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. Remove from the <a class="el" href="a00158.html" title="Graphics subsystem. Manages the application window, rendering state and GPU resources.">Graphics</a>. <br/></td></tr>
+<tr class="separator:a818ceaf4f9debc5f4233f2e265d0cf42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a054b2b9d1ac58c3dc81866bb7db6761a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a054b2b9d1ac58c3dc81866bb7db6761a"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00157.html#a054b2b9d1ac58c3dc81866bb7db6761a">OnDeviceLost</a> ()</td></tr>
+<tr class="memdesc:a054b2b9d1ac58c3dc81866bb7db6761a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark the GPU resource destroyed on context destruction. <br/></td></tr>
+<tr class="separator:a054b2b9d1ac58c3dc81866bb7db6761a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18ab28f33620594506eeb2c5fe168106"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18ab28f33620594506eeb2c5fe168106"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00157.html#a18ab28f33620594506eeb2c5fe168106">OnDeviceReset</a> ()</td></tr>
+<tr class="memdesc:a18ab28f33620594506eeb2c5fe168106"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recreate the GPU resource and restore data if applicable. <br/></td></tr>
+<tr class="separator:a18ab28f33620594506eeb2c5fe168106"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86d97d51d21841b9c057baee19a17a30"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86d97d51d21841b9c057baee19a17a30"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00157.html#a86d97d51d21841b9c057baee19a17a30">Release</a> ()</td></tr>
+<tr class="memdesc:a86d97d51d21841b9c057baee19a17a30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unconditionally release the GPU resource. <br/></td></tr>
+<tr class="separator:a86d97d51d21841b9c057baee19a17a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90de5fa07e164d6b5e95f832a0741088"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a90de5fa07e164d6b5e95f832a0741088"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00157.html#a90de5fa07e164d6b5e95f832a0741088">ClearDataLost</a> ()</td></tr>
+<tr class="memdesc:a90de5fa07e164d6b5e95f832a0741088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the data lost flag. <br/></td></tr>
+<tr class="separator:a90de5fa07e164d6b5e95f832a0741088"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada0cc0adf6cc06940102d64be88b9d4b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada0cc0adf6cc06940102d64be88b9d4b"></a>
+<a class="el" href="a00158.html">Graphics</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00157.html#ada0cc0adf6cc06940102d64be88b9d4b">GetGraphics</a> () const </td></tr>
+<tr class="memdesc:ada0cc0adf6cc06940102d64be88b9d4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the graphics subsystem. <br/></td></tr>
+<tr class="separator:ada0cc0adf6cc06940102d64be88b9d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc3aa11294b3d788965f299ca9bfb81c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc3aa11294b3d788965f299ca9bfb81c"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00157.html#acc3aa11294b3d788965f299ca9bfb81c">GetGPUObject</a> () const </td></tr>
+<tr class="memdesc:acc3aa11294b3d788965f299ca9bfb81c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the object's OpenGL handle. <br/></td></tr>
+<tr class="separator:acc3aa11294b3d788965f299ca9bfb81c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcfd2ec12501214e6f78bb0ce2fee6d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afcfd2ec12501214e6f78bb0ce2fee6d5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00157.html#afcfd2ec12501214e6f78bb0ce2fee6d5">IsDataLost</a> () const </td></tr>
+<tr class="memdesc:afcfd2ec12501214e6f78bb0ce2fee6d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether data is lost due to context loss. <br/></td></tr>
+<tr class="separator:afcfd2ec12501214e6f78bb0ce2fee6d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04fece8be486f0b627364667159d823c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04fece8be486f0b627364667159d823c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00157.html#a04fece8be486f0b627364667159d823c">HasPendingData</a> () const </td></tr>
+<tr class="memdesc:a04fece8be486f0b627364667159d823c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether has pending data assigned while context was lost. <br/></td></tr>
+<tr class="separator:a04fece8be486f0b627364667159d823c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a9db32f16f8d4f5b41cd9d66b130ad980"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9db32f16f8d4f5b41cd9d66b130ad980"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00157.html#a9db32f16f8d4f5b41cd9d66b130ad980">x_</a></td></tr>
-<tr class="memdesc:a9db32f16f8d4f5b41cd9d66b130ad980"><td class="mdescLeft">&#160;</td><td class="mdescRight">X coordinate. <br/></td></tr>
-<tr class="separator:a9db32f16f8d4f5b41cd9d66b130ad980"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abec1ef8a1037c5794f429250a3aa2587"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abec1ef8a1037c5794f429250a3aa2587"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00157.html#abec1ef8a1037c5794f429250a3aa2587">y_</a></td></tr>
-<tr class="memdesc:abec1ef8a1037c5794f429250a3aa2587"><td class="mdescLeft">&#160;</td><td class="mdescRight">Y coordinate. <br/></td></tr>
-<tr class="separator:abec1ef8a1037c5794f429250a3aa2587"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d17f5e562260b89d4723f671a054a1c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d17f5e562260b89d4723f671a054a1c"></a>
-const <a class="el" href="a00151.html">FontGlyph</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00157.html#a6d17f5e562260b89d4723f671a054a1c">glyph_</a></td></tr>
-<tr class="memdesc:a6d17f5e562260b89d4723f671a054a1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Glyph. <br/></td></tr>
-<tr class="separator:a6d17f5e562260b89d4723f671a054a1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:abf1a902885d2c3bac02f3f58e0e0f037"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf1a902885d2c3bac02f3f58e0e0f037"></a>
+<a class="el" href="a00362.html">WeakPtr</a>&lt; <a class="el" href="a00158.html">Graphics</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00157.html#abf1a902885d2c3bac02f3f58e0e0f037">graphics_</a></td></tr>
+<tr class="memdesc:abf1a902885d2c3bac02f3f58e0e0f037"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00158.html" title="Graphics subsystem. Manages the application window, rendering state and GPU resources.">Graphics</a> subsystem. <br/></td></tr>
+<tr class="separator:abf1a902885d2c3bac02f3f58e0e0f037"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a601debebd01ef73fa6f40c818232330e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a601debebd01ef73fa6f40c818232330e"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00157.html#a601debebd01ef73fa6f40c818232330e">object_</a></td></tr>
+<tr class="memdesc:a601debebd01ef73fa6f40c818232330e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00223.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a> handle. <br/></td></tr>
+<tr class="separator:a601debebd01ef73fa6f40c818232330e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6c82e62ca8b1098c4157acfe517c772"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6c82e62ca8b1098c4157acfe517c772"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00157.html#ab6c82e62ca8b1098c4157acfe517c772">dataLost_</a></td></tr>
+<tr class="memdesc:ab6c82e62ca8b1098c4157acfe517c772"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data lost flag. <br/></td></tr>
+<tr class="separator:ab6c82e62ca8b1098c4157acfe517c772"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada5a50cf10c6f65deb6b273bfc1649ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada5a50cf10c6f65deb6b273bfc1649ab"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00157.html#ada5a50cf10c6f65deb6b273bfc1649ab">dataPending_</a></td></tr>
+<tr class="memdesc:ada5a50cf10c6f65deb6b273bfc1649ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data pending flag. <br/></td></tr>
+<tr class="separator:ada5a50cf10c6f65deb6b273bfc1649ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Glyph and its location within the text. Used when preparing text rendering. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/UI/Text.h</li>
+<div class="textblock"><p>Base class for GPU resources. </p>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/OpenGL/OGLGPUObject.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/OpenGL/OGLGPUObject.cpp</li>
 </ul>
 </div><!-- contents -->

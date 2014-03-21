@@ -20,47 +20,67 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00286.html">ScratchBuffer</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00286.html">ScriptEventListener</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01145.html">List of all members</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="a01468.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::ScratchBuffer Struct Reference</div>  </div>
+<div class="title">Urho3D::ScriptEventListener Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>CPU-side scratch buffer for vertex data updates.  
+<p>Interface class for allowing script objects or functions to subscribe to events.  
  <a href="a00286.html#details">More...</a></p>
 
-<p><code>#include &lt;OGLGraphics.h&gt;</code></p>
+<p><code>#include &lt;ScriptEventListener.h&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for Urho3D::ScratchBuffer:</div>
+Inheritance diagram for Urho3D::ScriptEventListener:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a01146.svg" width="187" height="251"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a01469.svg" width="342" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a51146f599cad381056cb947e5faea8ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a51146f599cad381056cb947e5faea8ad"></a>
-<a class="el" href="a00302.html">SharedArrayPtr</a>&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00286.html#a51146f599cad381056cb947e5faea8ad">data_</a></td></tr>
-<tr class="memdesc:a51146f599cad381056cb947e5faea8ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer data. <br/></td></tr>
-<tr class="separator:a51146f599cad381056cb947e5faea8ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af16f35d8fcdccb174e5621acbe573146"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af16f35d8fcdccb174e5621acbe573146"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00286.html#af16f35d8fcdccb174e5621acbe573146">size_</a></td></tr>
-<tr class="memdesc:af16f35d8fcdccb174e5621acbe573146"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data size. <br/></td></tr>
-<tr class="separator:af16f35d8fcdccb174e5621acbe573146"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef972aaf6c930ccf763481a3e1cff7c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef972aaf6c930ccf763481a3e1cff7c8"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00286.html#aef972aaf6c930ccf763481a3e1cff7c8">reserved_</a></td></tr>
-<tr class="memdesc:aef972aaf6c930ccf763481a3e1cff7c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reserved flag. <br/></td></tr>
-<tr class="separator:aef972aaf6c930ccf763481a3e1cff7c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a31c6a7cb83c44a55b3a3665e12df95ec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31c6a7cb83c44a55b3a3665e12df95ec"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00286.html#a31c6a7cb83c44a55b3a3665e12df95ec">~ScriptEventListener</a> ()</td></tr>
+<tr class="memdesc:a31c6a7cb83c44a55b3a3665e12df95ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
+<tr class="separator:a31c6a7cb83c44a55b3a3665e12df95ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16768d782a7a9e7fcb0e5e7e63423543"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a16768d782a7a9e7fcb0e5e7e63423543"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00286.html#a16768d782a7a9e7fcb0e5e7e63423543">AddEventHandler</a> (<a class="el" href="a00324.html">StringHash</a> eventType, const <a class="el" href="a00323.html">String</a> &amp;handlerName)=0</td></tr>
+<tr class="memdesc:a16768d782a7a9e7fcb0e5e7e63423543"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a scripted event handler. <br/></td></tr>
+<tr class="separator:a16768d782a7a9e7fcb0e5e7e63423543"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11136253bde8b1d7319daca9a34b6ffd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11136253bde8b1d7319daca9a34b6ffd"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00286.html#a11136253bde8b1d7319daca9a34b6ffd">AddEventHandler</a> (<a class="el" href="a00223.html">Object</a> *sender, <a class="el" href="a00324.html">StringHash</a> eventType, const <a class="el" href="a00323.html">String</a> &amp;handlerName)=0</td></tr>
+<tr class="memdesc:a11136253bde8b1d7319daca9a34b6ffd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a scripted event handler for a specific sender. <br/></td></tr>
+<tr class="separator:a11136253bde8b1d7319daca9a34b6ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a828e59ae4db9a3b4a75e2f025604708a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a828e59ae4db9a3b4a75e2f025604708a"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00286.html#a828e59ae4db9a3b4a75e2f025604708a">RemoveEventHandler</a> (<a class="el" href="a00324.html">StringHash</a> eventType)=0</td></tr>
+<tr class="memdesc:a828e59ae4db9a3b4a75e2f025604708a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a scripted event handler. <br/></td></tr>
+<tr class="separator:a828e59ae4db9a3b4a75e2f025604708a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abafb445e1f3c953b1cbcfe879bf89668"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abafb445e1f3c953b1cbcfe879bf89668"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00286.html#abafb445e1f3c953b1cbcfe879bf89668">RemoveEventHandler</a> (<a class="el" href="a00223.html">Object</a> *sender, <a class="el" href="a00324.html">StringHash</a> eventType)=0</td></tr>
+<tr class="memdesc:abafb445e1f3c953b1cbcfe879bf89668"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a scripted event handler for a specific sender. <br/></td></tr>
+<tr class="separator:abafb445e1f3c953b1cbcfe879bf89668"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedae6844cf8a8dfa1b557bfeffbb42f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aedae6844cf8a8dfa1b557bfeffbb42f2"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00286.html#aedae6844cf8a8dfa1b557bfeffbb42f2">RemoveEventHandlers</a> (<a class="el" href="a00223.html">Object</a> *sender)=0</td></tr>
+<tr class="memdesc:aedae6844cf8a8dfa1b557bfeffbb42f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all scripted event handlers for a specific sender. <br/></td></tr>
+<tr class="separator:aedae6844cf8a8dfa1b557bfeffbb42f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a461bcb26228532b50db7a3a853a19ccf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a461bcb26228532b50db7a3a853a19ccf"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00286.html#a461bcb26228532b50db7a3a853a19ccf">RemoveEventHandlers</a> ()=0</td></tr>
+<tr class="memdesc:a461bcb26228532b50db7a3a853a19ccf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all scripted event handlers. <br/></td></tr>
+<tr class="separator:a461bcb26228532b50db7a3a853a19ccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa93506f06089edaf44256921e6c5797"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa93506f06089edaf44256921e6c5797"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00286.html#aaa93506f06089edaf44256921e6c5797">RemoveEventHandlersExcept</a> (const <a class="el" href="a00250.html">PODVector</a>&lt; <a class="el" href="a00324.html">StringHash</a> &gt; &amp;exceptions)=0</td></tr>
+<tr class="memdesc:aaa93506f06089edaf44256921e6c5797"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all scripted event handlers, except those listed. <br/></td></tr>
+<tr class="separator:aaa93506f06089edaf44256921e6c5797"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>CPU-side scratch buffer for vertex data updates. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/OpenGL/OGLGraphics.h</li>
+<div class="textblock"><p>Interface class for allowing script objects or functions to subscribe to events. </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Script/ScriptEventListener.h</li>
 </ul>
 </div><!-- contents -->

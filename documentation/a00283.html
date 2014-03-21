@@ -20,59 +20,47 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00283.html">ScenePassInfo</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00283.html">ScratchBuffer</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01236.html">List of all members</a>  </div>
+<a href="a01138.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::ScenePassInfo Struct Reference</div>  </div>
+<div class="title">Urho3D::ScratchBuffer Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="a00281.html" title="Root scene node, represents the whole scene.">Scene</a> render pass info.  
+<p>CPU-side scratch buffer for vertex data updates.  
  <a href="a00283.html#details">More...</a></p>
 
-<p><code>#include &lt;View.h&gt;</code></p>
+<p><code>#include &lt;OGLGraphics.h&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for Urho3D::ScenePassInfo:</div>
+Collaboration diagram for Urho3D::ScratchBuffer:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01237.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a01139.svg" width="187" height="251"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:abd29c1dd34db841c59e67463db473f79"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd29c1dd34db841c59e67463db473f79"></a>
-<a class="el" href="a00327.html">StringHash</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00283.html#abd29c1dd34db841c59e67463db473f79">pass_</a></td></tr>
-<tr class="memdesc:abd29c1dd34db841c59e67463db473f79"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00245.html" title="Material rendering pass, which defines shaders and render state.">Pass</a> name hash. <br/></td></tr>
-<tr class="separator:abd29c1dd34db841c59e67463db473f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3aa4a91b238cdd0fe653ff516c48e459"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3aa4a91b238cdd0fe653ff516c48e459"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00283.html#a3aa4a91b238cdd0fe653ff516c48e459">allowInstancing_</a></td></tr>
-<tr class="memdesc:a3aa4a91b238cdd0fe653ff516c48e459"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow instancing flag. <br/></td></tr>
-<tr class="separator:a3aa4a91b238cdd0fe653ff516c48e459"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5df46d124f49358e8b4cbdec5e0434c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5df46d124f49358e8b4cbdec5e0434c1"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00283.html#a5df46d124f49358e8b4cbdec5e0434c1">markToStencil_</a></td></tr>
-<tr class="memdesc:a5df46d124f49358e8b4cbdec5e0434c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark to stencil flag. <br/></td></tr>
-<tr class="separator:a5df46d124f49358e8b4cbdec5e0434c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab26545095e8ba9f9bbaf793d37d55664"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab26545095e8ba9f9bbaf793d37d55664"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00283.html#ab26545095e8ba9f9bbaf793d37d55664">useScissor_</a></td></tr>
-<tr class="memdesc:ab26545095e8ba9f9bbaf793d37d55664"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00182.html" title="Light component.">Light</a> scissor optimization flag. <br/></td></tr>
-<tr class="separator:ab26545095e8ba9f9bbaf793d37d55664"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24feafebbf30130ef73679d68ca1998c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a24feafebbf30130ef73679d68ca1998c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00283.html#a24feafebbf30130ef73679d68ca1998c">vertexLights_</a></td></tr>
-<tr class="memdesc:a24feafebbf30130ef73679d68ca1998c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex light flag. <br/></td></tr>
-<tr class="separator:a24feafebbf30130ef73679d68ca1998c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af336204680c8ee281198ef18aad216cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af336204680c8ee281198ef18aad216cb"></a>
-<a class="el" href="a00075.html">BatchQueue</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00283.html#af336204680c8ee281198ef18aad216cb">batchQueue_</a></td></tr>
-<tr class="memdesc:af336204680c8ee281198ef18aad216cb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00072.html" title="Queued 3D geometry draw call.">Batch</a> queue. <br/></td></tr>
-<tr class="separator:af336204680c8ee281198ef18aad216cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51146f599cad381056cb947e5faea8ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a51146f599cad381056cb947e5faea8ad"></a>
+<a class="el" href="a00299.html">SharedArrayPtr</a>&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00283.html#a51146f599cad381056cb947e5faea8ad">data_</a></td></tr>
+<tr class="memdesc:a51146f599cad381056cb947e5faea8ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer data. <br/></td></tr>
+<tr class="separator:a51146f599cad381056cb947e5faea8ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af16f35d8fcdccb174e5621acbe573146"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af16f35d8fcdccb174e5621acbe573146"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00283.html#af16f35d8fcdccb174e5621acbe573146">size_</a></td></tr>
+<tr class="memdesc:af16f35d8fcdccb174e5621acbe573146"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data size. <br/></td></tr>
+<tr class="separator:af16f35d8fcdccb174e5621acbe573146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef972aaf6c930ccf763481a3e1cff7c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef972aaf6c930ccf763481a3e1cff7c8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00283.html#aef972aaf6c930ccf763481a3e1cff7c8">reserved_</a></td></tr>
+<tr class="memdesc:aef972aaf6c930ccf763481a3e1cff7c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reserved flag. <br/></td></tr>
+<tr class="separator:aef972aaf6c930ccf763481a3e1cff7c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="a00281.html" title="Root scene node, represents the whole scene.">Scene</a> render pass info. </p>
+<div class="textblock"><p>CPU-side scratch buffer for vertex data updates. </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/View.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/OpenGL/OGLGraphics.h</li>
 </ul>
 </div><!-- contents -->
