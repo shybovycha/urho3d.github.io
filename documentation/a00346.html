@@ -20,35 +20,55 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00118.html">CScriptDictionary</a></li><li class="navelem"><a class="el" href="a00346.html">valueStruct</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00346.html">TouchState</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01461.html">List of all members</a>  </div>
+<a href="a01260.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::CScriptDictionary::valueStruct Struct Reference</div>  </div>
+<div class="title">Urho3D::TouchState Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Input state for a finger touch.  
+ <a href="a00346.html#details">More...</a></p>
+
+<p><code>#include &lt;Input.h&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Urho3D::TouchState:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a01261.svg" width="223" height="171"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a06f39d90b39bc6be8168ec2afef8c644"><td class="memItemLeft" ><a class="anchor" id="a06f39d90b39bc6be8168ec2afef8c644"></a>
-union {</td></tr>
-<tr class="memitem:a56cb9670b73d1407df602c065097f44c"><td class="memItemLeft" >&#160;&#160;&#160;asINT64&#160;&#160;&#160;<b>valueInt</b></td></tr>
-<tr class="separator:a56cb9670b73d1407df602c065097f44c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdea3f236d128b37e3ebc067fe2262fd"><td class="memItemLeft" >&#160;&#160;&#160;double&#160;&#160;&#160;<b>valueFlt</b></td></tr>
-<tr class="separator:abdea3f236d128b37e3ebc067fe2262fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9abd795abf57f1e2e586ba3e5b5193f"><td class="memItemLeft" >&#160;&#160;&#160;void *&#160;&#160;&#160;<b>valueObj</b></td></tr>
-<tr class="separator:ab9abd795abf57f1e2e586ba3e5b5193f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06f39d90b39bc6be8168ec2afef8c644"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a06f39d90b39bc6be8168ec2afef8c644"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad30d791ea267f20c80169149202ee8e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad30d791ea267f20c80169149202ee8e6"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>typeId</b></td></tr>
-<tr class="separator:ad30d791ea267f20c80169149202ee8e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad33ca29a42d0062ab9ca38d9665611cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad33ca29a42d0062ab9ca38d9665611cc"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00346.html#ad33ca29a42d0062ab9ca38d9665611cc">touchID_</a></td></tr>
+<tr class="memdesc:ad33ca29a42d0062ab9ca38d9665611cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Touch (finger) ID. <br/></td></tr>
+<tr class="separator:ad33ca29a42d0062ab9ca38d9665611cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d1f1c8a8aff0d850c307510100d19b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3d1f1c8a8aff0d850c307510100d19b1"></a>
+<a class="el" href="a00180.html">IntVector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00346.html#a3d1f1c8a8aff0d850c307510100d19b1">position_</a></td></tr>
+<tr class="memdesc:a3d1f1c8a8aff0d850c307510100d19b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position in screen coordinates. <br/></td></tr>
+<tr class="separator:a3d1f1c8a8aff0d850c307510100d19b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60557f62da1c5598ebf5a8dc5bff72bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60557f62da1c5598ebf5a8dc5bff72bc"></a>
+<a class="el" href="a00180.html">IntVector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00346.html#a60557f62da1c5598ebf5a8dc5bff72bc">lastPosition_</a></td></tr>
+<tr class="memdesc:a60557f62da1c5598ebf5a8dc5bff72bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last position in screen coordinates. <br/></td></tr>
+<tr class="separator:a60557f62da1c5598ebf5a8dc5bff72bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8d1a9b97565ed9eb7f1a67f0803f012"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac8d1a9b97565ed9eb7f1a67f0803f012"></a>
+<a class="el" href="a00180.html">IntVector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00346.html#ac8d1a9b97565ed9eb7f1a67f0803f012">delta_</a></td></tr>
+<tr class="memdesc:ac8d1a9b97565ed9eb7f1a67f0803f012"><td class="mdescLeft">&#160;</td><td class="mdescRight">Movement since last frame. <br/></td></tr>
+<tr class="separator:ac8d1a9b97565ed9eb7f1a67f0803f012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42e8585982f0a310de52fac3cc0b2125"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42e8585982f0a310de52fac3cc0b2125"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00346.html#a42e8585982f0a310de52fac3cc0b2125">pressure_</a></td></tr>
+<tr class="memdesc:a42e8585982f0a310de52fac3cc0b2125"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finger pressure. <br/></td></tr>
+<tr class="separator:a42e8585982f0a310de52fac3cc0b2125"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Script/Addons.h</li>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Input state for a finger touch. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Input/Input.h</li>
 </ul>
 </div><!-- contents -->

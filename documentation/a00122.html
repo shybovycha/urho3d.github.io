@@ -20,55 +20,78 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00122.html">CustomGeometryVertex</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00122.html">ConvexData</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01052.html">List of all members</a>  </div>
+<a href="a01383.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::CustomGeometryVertex Struct Reference</div>  </div>
+<div class="title">Urho3D::ConvexData Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Custom geometry vertex.  
+<p>Convex hull geometry data.  
  <a href="a00122.html#details">More...</a></p>
 
-<p><code>#include &lt;CustomGeometry.h&gt;</code></p>
+<p><code>#include &lt;CollisionShape.h&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for Urho3D::CustomGeometryVertex:</div>
+Inheritance diagram for Urho3D::ConvexData:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a01053.svg" width="655" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a01384.svg" width="238" height="195"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for Urho3D::ConvexData:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01385.svg" width="100%" height="518"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a94123547d0117887b01db8a1bcd1e903"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a94123547d0117887b01db8a1bcd1e903"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00122.html#a94123547d0117887b01db8a1bcd1e903">ConvexData</a> (<a class="el" href="a00212.html">Model</a> *model, unsigned lodLevel)</td></tr>
+<tr class="memdesc:a94123547d0117887b01db8a1bcd1e903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a model. <br/></td></tr>
+<tr class="separator:a94123547d0117887b01db8a1bcd1e903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ade8c2989d4189790de63a12b61e60f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ade8c2989d4189790de63a12b61e60f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00122.html#a0ade8c2989d4189790de63a12b61e60f">ConvexData</a> (<a class="el" href="a00127.html">CustomGeometry</a> *custom)</td></tr>
+<tr class="memdesc:a0ade8c2989d4189790de63a12b61e60f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a custom geometry. <br/></td></tr>
+<tr class="separator:a0ade8c2989d4189790de63a12b61e60f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9140fca13169214a402848bb30fdf82"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab9140fca13169214a402848bb30fdf82"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00122.html#ab9140fca13169214a402848bb30fdf82">~ConvexData</a> ()</td></tr>
+<tr class="memdesc:ab9140fca13169214a402848bb30fdf82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. Free geometry data. <br/></td></tr>
+<tr class="separator:ab9140fca13169214a402848bb30fdf82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71b87700ac6da8aa356664785a64b5dd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a71b87700ac6da8aa356664785a64b5dd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00122.html#a71b87700ac6da8aa356664785a64b5dd">BuildHull</a> (const <a class="el" href="a00256.html">PODVector</a>&lt; <a class="el" href="a00357.html">Vector3</a> &gt; &amp;vertices)</td></tr>
+<tr class="memdesc:a71b87700ac6da8aa356664785a64b5dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build the convex hull from vertices. <br/></td></tr>
+<tr class="separator:a71b87700ac6da8aa356664785a64b5dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:af46ccec129285413ba8614c4f05bae3f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af46ccec129285413ba8614c4f05bae3f"></a>
-<a class="el" href="a00351.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00122.html#af46ccec129285413ba8614c4f05bae3f">position_</a></td></tr>
-<tr class="memdesc:af46ccec129285413ba8614c4f05bae3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position. <br/></td></tr>
-<tr class="separator:af46ccec129285413ba8614c4f05bae3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ba2f922e405a682bbfece8785a697ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ba2f922e405a682bbfece8785a697ac"></a>
-<a class="el" href="a00351.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00122.html#a0ba2f922e405a682bbfece8785a697ac">normal_</a></td></tr>
-<tr class="memdesc:a0ba2f922e405a682bbfece8785a697ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normal. <br/></td></tr>
-<tr class="separator:a0ba2f922e405a682bbfece8785a697ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4899c57b5dbd507e30c78d8301e962d4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4899c57b5dbd507e30c78d8301e962d4"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00122.html#a4899c57b5dbd507e30c78d8301e962d4">color_</a></td></tr>
-<tr class="memdesc:a4899c57b5dbd507e30c78d8301e962d4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00096.html" title="RGBA color.">Color</a>. <br/></td></tr>
-<tr class="separator:a4899c57b5dbd507e30c78d8301e962d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd376efaa94f0a7434d33f7d8aef27d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd376efaa94f0a7434d33f7d8aef27d7"></a>
-<a class="el" href="a00350.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00122.html#acd376efaa94f0a7434d33f7d8aef27d7">texCoord_</a></td></tr>
-<tr class="memdesc:acd376efaa94f0a7434d33f7d8aef27d7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00331.html" title="Base class for texture resources.">Texture</a> coordinates. <br/></td></tr>
-<tr class="separator:acd376efaa94f0a7434d33f7d8aef27d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a000ca86978dd9ecdbe611f8b25acecd0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a000ca86978dd9ecdbe611f8b25acecd0"></a>
-<a class="el" href="a00352.html">Vector4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00122.html#a000ca86978dd9ecdbe611f8b25acecd0">tangent_</a></td></tr>
-<tr class="memdesc:a000ca86978dd9ecdbe611f8b25acecd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tangent. <br/></td></tr>
-<tr class="separator:a000ca86978dd9ecdbe611f8b25acecd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa001c0b7719694de211015b4bc9a30f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa001c0b7719694de211015b4bc9a30f"></a>
+<a class="el" href="a00305.html">SharedArrayPtr</a>&lt; <a class="el" href="a00357.html">Vector3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00122.html#afa001c0b7719694de211015b4bc9a30f">vertexData_</a></td></tr>
+<tr class="memdesc:afa001c0b7719694de211015b4bc9a30f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex data. <br/></td></tr>
+<tr class="separator:afa001c0b7719694de211015b4bc9a30f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a1da422644832612dc2b8c9d81ea402"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a1da422644832612dc2b8c9d81ea402"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00122.html#a7a1da422644832612dc2b8c9d81ea402">vertexCount_</a></td></tr>
+<tr class="memdesc:a7a1da422644832612dc2b8c9d81ea402"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of vertices. <br/></td></tr>
+<tr class="separator:a7a1da422644832612dc2b8c9d81ea402"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75270f2f8c6cca06f2b2d50d4d247859"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a75270f2f8c6cca06f2b2d50d4d247859"></a>
+<a class="el" href="a00305.html">SharedArrayPtr</a>&lt; unsigned &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00122.html#a75270f2f8c6cca06f2b2d50d4d247859">indexData_</a></td></tr>
+<tr class="memdesc:a75270f2f8c6cca06f2b2d50d4d247859"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index data. <br/></td></tr>
+<tr class="separator:a75270f2f8c6cca06f2b2d50d4d247859"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ee60b51276a890986abb94846b0b892"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ee60b51276a890986abb94846b0b892"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00122.html#a1ee60b51276a890986abb94846b0b892">indexCount_</a></td></tr>
+<tr class="memdesc:a1ee60b51276a890986abb94846b0b892"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of indices. <br/></td></tr>
+<tr class="separator:a1ee60b51276a890986abb94846b0b892"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Custom geometry vertex. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/CustomGeometry.h</li>
+<div class="textblock"><p>Convex hull geometry data. </p>
+</div><hr/>The documentation for this struct was generated from the following files:<ul>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Physics/CollisionShape.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Physics/CollisionShape.cpp</li>
 </ul>
 </div><!-- contents -->

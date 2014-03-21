@@ -20,55 +20,176 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00298.html">ShadowBatchQueue</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00298.html">Serializer</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01040.html">List of all members</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="a01288.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::ShadowBatchQueue Struct Reference</div>  </div>
+<div class="title">Urho3D::Serializer Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Queue for shadow map draw calls.  
+<p>Abstract stream for writing.  
  <a href="a00298.html#details">More...</a></p>
 
-<p><code>#include &lt;Batch.h&gt;</code></p>
+<p><code>#include &lt;Serializer.h&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for Urho3D::ShadowBatchQueue:</div>
+Inheritance diagram for Urho3D::Serializer:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01041.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a01289.svg" width="483" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a248ffb9b65492ee9d6a81214cd2e8cc0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a248ffb9b65492ee9d6a81214cd2e8cc0"></a>
-<a class="el" href="a00084.html">Camera</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#a248ffb9b65492ee9d6a81214cd2e8cc0">shadowCamera_</a></td></tr>
-<tr class="memdesc:a248ffb9b65492ee9d6a81214cd2e8cc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shadow map camera. <br/></td></tr>
-<tr class="separator:a248ffb9b65492ee9d6a81214cd2e8cc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4d55d184ce2821076e7696b552674d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4d55d184ce2821076e7696b552674d3"></a>
-<a class="el" href="a00173.html">IntRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#ab4d55d184ce2821076e7696b552674d3">shadowViewport_</a></td></tr>
-<tr class="memdesc:ab4d55d184ce2821076e7696b552674d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shadow map viewport. <br/></td></tr>
-<tr class="separator:ab4d55d184ce2821076e7696b552674d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2b17fd44441946f46f4ddf8a87420a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae2b17fd44441946f46f4ddf8a87420a4"></a>
-<a class="el" href="a00074.html">BatchQueue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#ae2b17fd44441946f46f4ddf8a87420a4">shadowBatches_</a></td></tr>
-<tr class="memdesc:ae2b17fd44441946f46f4ddf8a87420a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shadow caster draw calls. <br/></td></tr>
-<tr class="separator:ae2b17fd44441946f46f4ddf8a87420a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac41cf5f8edd305bfc02dff6097a5e942"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac41cf5f8edd305bfc02dff6097a5e942"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#ac41cf5f8edd305bfc02dff6097a5e942">nearSplit_</a></td></tr>
-<tr class="memdesc:ac41cf5f8edd305bfc02dff6097a5e942"><td class="mdescLeft">&#160;</td><td class="mdescRight">Directional light cascade near split distance. <br/></td></tr>
-<tr class="separator:ac41cf5f8edd305bfc02dff6097a5e942"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3df789ad75d49be1897355d0f8bf6e32"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3df789ad75d49be1897355d0f8bf6e32"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#a3df789ad75d49be1897355d0f8bf6e32">farSplit_</a></td></tr>
-<tr class="memdesc:a3df789ad75d49be1897355d0f8bf6e32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Directional light cascade far split distance. <br/></td></tr>
-<tr class="separator:a3df789ad75d49be1897355d0f8bf6e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a88c2430fe7a8733e032400a2b9ee4a24"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a88c2430fe7a8733e032400a2b9ee4a24"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#a88c2430fe7a8733e032400a2b9ee4a24">~Serializer</a> ()</td></tr>
+<tr class="memdesc:a88c2430fe7a8733e032400a2b9ee4a24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
+<tr class="separator:a88c2430fe7a8733e032400a2b9ee4a24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1212487507dad99d9f389f9c8b48a60"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1212487507dad99d9f389f9c8b48a60"></a>
+virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#af1212487507dad99d9f389f9c8b48a60">Write</a> (const void *data, unsigned size)=0</td></tr>
+<tr class="memdesc:af1212487507dad99d9f389f9c8b48a60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write bytes to the stream. Return number of bytes actually written. <br/></td></tr>
+<tr class="separator:af1212487507dad99d9f389f9c8b48a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fafd0034fc92b582689802c41112376"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8fafd0034fc92b582689802c41112376"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#a8fafd0034fc92b582689802c41112376">WriteInt</a> (int value)</td></tr>
+<tr class="memdesc:a8fafd0034fc92b582689802c41112376"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a 32-bit integer. <br/></td></tr>
+<tr class="separator:a8fafd0034fc92b582689802c41112376"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3af3c5b41495c07411886122aa7fa71f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3af3c5b41495c07411886122aa7fa71f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#a3af3c5b41495c07411886122aa7fa71f">WriteShort</a> (short value)</td></tr>
+<tr class="memdesc:a3af3c5b41495c07411886122aa7fa71f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a 16-bit integer. <br/></td></tr>
+<tr class="separator:a3af3c5b41495c07411886122aa7fa71f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8dca217acc7e982a97262ce8f0d7357"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8dca217acc7e982a97262ce8f0d7357"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#ae8dca217acc7e982a97262ce8f0d7357">WriteByte</a> (signed char value)</td></tr>
+<tr class="memdesc:ae8dca217acc7e982a97262ce8f0d7357"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write an 8-bit integer. <br/></td></tr>
+<tr class="separator:ae8dca217acc7e982a97262ce8f0d7357"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca5302ccd24e73a82da4aecee5343e4b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca5302ccd24e73a82da4aecee5343e4b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#aca5302ccd24e73a82da4aecee5343e4b">WriteUInt</a> (unsigned value)</td></tr>
+<tr class="memdesc:aca5302ccd24e73a82da4aecee5343e4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a 32-bit unsigned integer. <br/></td></tr>
+<tr class="separator:aca5302ccd24e73a82da4aecee5343e4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7952d1242f92862ee07add3c2769f3e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7952d1242f92862ee07add3c2769f3e5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#a7952d1242f92862ee07add3c2769f3e5">WriteUShort</a> (unsigned short value)</td></tr>
+<tr class="memdesc:a7952d1242f92862ee07add3c2769f3e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a 16-bit unsigned integer. <br/></td></tr>
+<tr class="separator:a7952d1242f92862ee07add3c2769f3e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f90c5159c785e81d4ba74ebcfb961a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f90c5159c785e81d4ba74ebcfb961a5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#a4f90c5159c785e81d4ba74ebcfb961a5">WriteUByte</a> (unsigned char value)</td></tr>
+<tr class="memdesc:a4f90c5159c785e81d4ba74ebcfb961a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write an 8-bit unsigned integer. <br/></td></tr>
+<tr class="separator:a4f90c5159c785e81d4ba74ebcfb961a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44ddefbaf5a7b7b67a002ed1c6d6d0da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a44ddefbaf5a7b7b67a002ed1c6d6d0da"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#a44ddefbaf5a7b7b67a002ed1c6d6d0da">WriteBool</a> (bool value)</td></tr>
+<tr class="memdesc:a44ddefbaf5a7b7b67a002ed1c6d6d0da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a bool. <br/></td></tr>
+<tr class="separator:a44ddefbaf5a7b7b67a002ed1c6d6d0da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2b0a9945e01a6e05ff0392970d86df2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af2b0a9945e01a6e05ff0392970d86df2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#af2b0a9945e01a6e05ff0392970d86df2">WriteFloat</a> (float value)</td></tr>
+<tr class="memdesc:af2b0a9945e01a6e05ff0392970d86df2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a float. <br/></td></tr>
+<tr class="separator:af2b0a9945e01a6e05ff0392970d86df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a85efe8f04338e7565304261c40818f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a85efe8f04338e7565304261c40818f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#a9a85efe8f04338e7565304261c40818f">WriteIntRect</a> (const <a class="el" href="a00179.html">IntRect</a> &amp;value)</td></tr>
+<tr class="memdesc:a9a85efe8f04338e7565304261c40818f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write an <a class="el" href="a00179.html" title="Two-dimensional bounding rectangle with integer values.">IntRect</a>. <br/></td></tr>
+<tr class="separator:a9a85efe8f04338e7565304261c40818f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cf295d4596dcc525341e7e27bb8b7a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2cf295d4596dcc525341e7e27bb8b7a4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#a2cf295d4596dcc525341e7e27bb8b7a4">WriteIntVector2</a> (const <a class="el" href="a00180.html">IntVector2</a> &amp;value)</td></tr>
+<tr class="memdesc:a2cf295d4596dcc525341e7e27bb8b7a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write an <a class="el" href="a00180.html" title="Two-dimensional vector with integer values.">IntVector2</a>. <br/></td></tr>
+<tr class="separator:a2cf295d4596dcc525341e7e27bb8b7a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67369c8dd151445b0ed9279acfa94cc5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a67369c8dd151445b0ed9279acfa94cc5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#a67369c8dd151445b0ed9279acfa94cc5">WriteRect</a> (const <a class="el" href="a00267.html">Rect</a> &amp;value)</td></tr>
+<tr class="memdesc:a67369c8dd151445b0ed9279acfa94cc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a <a class="el" href="a00267.html" title="Two-dimensional bounding rectangle.">Rect</a>. <br/></td></tr>
+<tr class="separator:a67369c8dd151445b0ed9279acfa94cc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc661f61e8350e917e25f95b987e3bc2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc661f61e8350e917e25f95b987e3bc2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#adc661f61e8350e917e25f95b987e3bc2">WriteVector2</a> (const <a class="el" href="a00356.html">Vector2</a> &amp;value)</td></tr>
+<tr class="memdesc:adc661f61e8350e917e25f95b987e3bc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a <a class="el" href="a00356.html" title="Two-dimensional vector.">Vector2</a>. <br/></td></tr>
+<tr class="separator:adc661f61e8350e917e25f95b987e3bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a007d70f03e5cdc1d6403c0a56cf264bb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a007d70f03e5cdc1d6403c0a56cf264bb"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#a007d70f03e5cdc1d6403c0a56cf264bb">WriteVector3</a> (const <a class="el" href="a00357.html">Vector3</a> &amp;value)</td></tr>
+<tr class="memdesc:a007d70f03e5cdc1d6403c0a56cf264bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a <a class="el" href="a00357.html" title="Three-dimensional vector.">Vector3</a>. <br/></td></tr>
+<tr class="separator:a007d70f03e5cdc1d6403c0a56cf264bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84359205f9647ecfe629608e1ce98755"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84359205f9647ecfe629608e1ce98755"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#a84359205f9647ecfe629608e1ce98755">WritePackedVector3</a> (const <a class="el" href="a00357.html">Vector3</a> &amp;value, float maxAbsCoord)</td></tr>
+<tr class="memdesc:a84359205f9647ecfe629608e1ce98755"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a <a class="el" href="a00357.html" title="Three-dimensional vector.">Vector3</a> packed into 3 x 16 bits with the specified maximum absolute range. <br/></td></tr>
+<tr class="separator:a84359205f9647ecfe629608e1ce98755"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb33f2ac3f65dd7cafa5425f7f452069"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb33f2ac3f65dd7cafa5425f7f452069"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#afb33f2ac3f65dd7cafa5425f7f452069">WriteVector4</a> (const <a class="el" href="a00358.html">Vector4</a> &amp;value)</td></tr>
+<tr class="memdesc:afb33f2ac3f65dd7cafa5425f7f452069"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a <a class="el" href="a00358.html" title="Four-dimensional vector.">Vector4</a>. <br/></td></tr>
+<tr class="separator:afb33f2ac3f65dd7cafa5425f7f452069"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d5a8c0a55e6be4beb8ac5d79ecac47b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d5a8c0a55e6be4beb8ac5d79ecac47b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#a6d5a8c0a55e6be4beb8ac5d79ecac47b">WriteQuaternion</a> (const <a class="el" href="a00261.html">Quaternion</a> &amp;value)</td></tr>
+<tr class="memdesc:a6d5a8c0a55e6be4beb8ac5d79ecac47b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a quaternion. <br/></td></tr>
+<tr class="separator:a6d5a8c0a55e6be4beb8ac5d79ecac47b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb76ec5a55bd12f882a691214b827a1d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb76ec5a55bd12f882a691214b827a1d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#afb76ec5a55bd12f882a691214b827a1d">WritePackedQuaternion</a> (const <a class="el" href="a00261.html">Quaternion</a> &amp;value)</td></tr>
+<tr class="memdesc:afb76ec5a55bd12f882a691214b827a1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a quaternion with each component packed in 16 bits. <br/></td></tr>
+<tr class="separator:afb76ec5a55bd12f882a691214b827a1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acda150736508d053316a8a3d7c5ca629"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acda150736508d053316a8a3d7c5ca629"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#acda150736508d053316a8a3d7c5ca629">WriteColor</a> (const <a class="el" href="a00096.html">Color</a> &amp;value)</td></tr>
+<tr class="memdesc:acda150736508d053316a8a3d7c5ca629"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a color. <br/></td></tr>
+<tr class="separator:acda150736508d053316a8a3d7c5ca629"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b72d159d2d843c9ffaf3e17be25fef7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b72d159d2d843c9ffaf3e17be25fef7"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#a5b72d159d2d843c9ffaf3e17be25fef7">WriteBoundingBox</a> (const <a class="el" href="a00080.html">BoundingBox</a> &amp;value)</td></tr>
+<tr class="memdesc:a5b72d159d2d843c9ffaf3e17be25fef7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a bounding box. <br/></td></tr>
+<tr class="separator:a5b72d159d2d843c9ffaf3e17be25fef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51c8222e9c2f0ce9deac7298ab0189c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a51c8222e9c2f0ce9deac7298ab0189c6"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#a51c8222e9c2f0ce9deac7298ab0189c6">WriteString</a> (const <a class="el" href="a00329.html">String</a> &amp;value)</td></tr>
+<tr class="memdesc:a51c8222e9c2f0ce9deac7298ab0189c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a null-terminated string. <br/></td></tr>
+<tr class="separator:a51c8222e9c2f0ce9deac7298ab0189c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a467e97940ee0e2911b7d8bfa837a875b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a467e97940ee0e2911b7d8bfa837a875b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#a467e97940ee0e2911b7d8bfa837a875b">WriteFileID</a> (const <a class="el" href="a00329.html">String</a> &amp;value)</td></tr>
+<tr class="memdesc:a467e97940ee0e2911b7d8bfa837a875b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a four-letter file ID. If the string is not long enough, spaces will be appended. <br/></td></tr>
+<tr class="separator:a467e97940ee0e2911b7d8bfa837a875b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfae08593bb40a16a3a78a2bc6426a88"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acfae08593bb40a16a3a78a2bc6426a88"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#acfae08593bb40a16a3a78a2bc6426a88">WriteStringHash</a> (const <a class="el" href="a00330.html">StringHash</a> &amp;value)</td></tr>
+<tr class="memdesc:acfae08593bb40a16a3a78a2bc6426a88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a 32-bit <a class="el" href="a00330.html" title="32-bit hash value for a string.">StringHash</a>. <br/></td></tr>
+<tr class="separator:acfae08593bb40a16a3a78a2bc6426a88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99ea9cc0963b5b5c062744e20a79ed9e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a99ea9cc0963b5b5c062744e20a79ed9e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#a99ea9cc0963b5b5c062744e20a79ed9e">WriteShortStringHash</a> (const <a class="el" href="a00307.html">ShortStringHash</a> &amp;value)</td></tr>
+<tr class="memdesc:a99ea9cc0963b5b5c062744e20a79ed9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a 16-bit <a class="el" href="a00307.html" title="16-bit hash value for a string.">ShortStringHash</a>. <br/></td></tr>
+<tr class="separator:a99ea9cc0963b5b5c062744e20a79ed9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a151961302503947abd00bd86334454b3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a151961302503947abd00bd86334454b3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#a151961302503947abd00bd86334454b3">WriteBuffer</a> (const <a class="el" href="a00256.html">PODVector</a>&lt; unsigned char &gt; &amp;buffer)</td></tr>
+<tr class="memdesc:a151961302503947abd00bd86334454b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a buffer, with size encoded as VLE. <br/></td></tr>
+<tr class="separator:a151961302503947abd00bd86334454b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3df14ec89889593e0171a8949fc398f4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3df14ec89889593e0171a8949fc398f4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#a3df14ec89889593e0171a8949fc398f4">WriteResourceRef</a> (const <a class="el" href="a00281.html">ResourceRef</a> &amp;value)</td></tr>
+<tr class="memdesc:a3df14ec89889593e0171a8949fc398f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a resource reference. <br/></td></tr>
+<tr class="separator:a3df14ec89889593e0171a8949fc398f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9248a2f3e66bd1a44891cbc0109dd8d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae9248a2f3e66bd1a44891cbc0109dd8d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#ae9248a2f3e66bd1a44891cbc0109dd8d">WriteResourceRefList</a> (const <a class="el" href="a00282.html">ResourceRefList</a> &amp;value)</td></tr>
+<tr class="memdesc:ae9248a2f3e66bd1a44891cbc0109dd8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a resource reference list. <br/></td></tr>
+<tr class="separator:ae9248a2f3e66bd1a44891cbc0109dd8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a512b833ebf115c9c25df30ed4ccb7a11"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a512b833ebf115c9c25df30ed4ccb7a11"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#a512b833ebf115c9c25df30ed4ccb7a11">WriteVariant</a> (const <a class="el" href="a00353.html">Variant</a> &amp;value)</td></tr>
+<tr class="memdesc:a512b833ebf115c9c25df30ed4ccb7a11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a variant. <br/></td></tr>
+<tr class="separator:a512b833ebf115c9c25df30ed4ccb7a11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33ad05e0f6b05140fe8941ebee14cc15"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33ad05e0f6b05140fe8941ebee14cc15"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#a33ad05e0f6b05140fe8941ebee14cc15">WriteVariantData</a> (const <a class="el" href="a00353.html">Variant</a> &amp;value)</td></tr>
+<tr class="memdesc:a33ad05e0f6b05140fe8941ebee14cc15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a variant without the type information. <br/></td></tr>
+<tr class="separator:a33ad05e0f6b05140fe8941ebee14cc15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafa0871855a21d84adbc84f180c3c41e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aafa0871855a21d84adbc84f180c3c41e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#aafa0871855a21d84adbc84f180c3c41e">WriteVariantVector</a> (const <a class="el" href="a00355.html">VariantVector</a> &amp;value)</td></tr>
+<tr class="memdesc:aafa0871855a21d84adbc84f180c3c41e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a variant vector. <br/></td></tr>
+<tr class="separator:aafa0871855a21d84adbc84f180c3c41e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5837d72917b6819d89cb63c093e31e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5837d72917b6819d89cb63c093e31e0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#ad5837d72917b6819d89cb63c093e31e0">WriteVariantMap</a> (const <a class="el" href="a00168.html">VariantMap</a> &amp;value)</td></tr>
+<tr class="memdesc:ad5837d72917b6819d89cb63c093e31e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a variant map. <br/></td></tr>
+<tr class="separator:ad5837d72917b6819d89cb63c093e31e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4429a6ec1f94508037c2d21430d2124"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae4429a6ec1f94508037c2d21430d2124"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#ae4429a6ec1f94508037c2d21430d2124">WriteVLE</a> (unsigned value)</td></tr>
+<tr class="memdesc:ae4429a6ec1f94508037c2d21430d2124"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a variable-length encoded unsigned integer, which can use 29 bits maximum. <br/></td></tr>
+<tr class="separator:ae4429a6ec1f94508037c2d21430d2124"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3e43493e05e9cbd2b771bb49ec10b46"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3e43493e05e9cbd2b771bb49ec10b46"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#ae3e43493e05e9cbd2b771bb49ec10b46">WriteNetID</a> (unsigned value)</td></tr>
+<tr class="memdesc:ae3e43493e05e9cbd2b771bb49ec10b46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a 24-bit network object ID. <br/></td></tr>
+<tr class="separator:ae3e43493e05e9cbd2b771bb49ec10b46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadc5e07763395ee773fe007a9ba3d858"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aadc5e07763395ee773fe007a9ba3d858"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#aadc5e07763395ee773fe007a9ba3d858">WriteLine</a> (const <a class="el" href="a00329.html">String</a> &amp;value)</td></tr>
+<tr class="memdesc:aadc5e07763395ee773fe007a9ba3d858"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a text line. Char codes 13 &amp; 10 will be automatically appended. <br/></td></tr>
+<tr class="separator:aadc5e07763395ee773fe007a9ba3d858"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Queue for shadow map draw calls. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/Batch.h</li>
+<div class="textblock"><p>Abstract stream for writing. </p>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/IO/Serializer.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/IO/Serializer.cpp</li>
 </ul>
 </div><!-- contents -->
