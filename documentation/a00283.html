@@ -175,10 +175,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a002
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00283.html#a6c5c56ca86c34e33b38918bb331bbc8d">SetKinematic</a> (bool enable)</td></tr>
 <tr class="memdesc:a6c5c56ca86c34e33b38918bb331bbc8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set rigid body kinematic mode. In kinematic mode forces are not applied to the rigid body. <br/></td></tr>
 <tr class="separator:a6c5c56ca86c34e33b38918bb331bbc8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4c3a51d5b75f7ed9975b3b2c24a4ebe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af4c3a51d5b75f7ed9975b3b2c24a4ebe"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00283.html#af4c3a51d5b75f7ed9975b3b2c24a4ebe">SetPhantom</a> (bool enable)</td></tr>
-<tr class="memdesc:af4c3a51d5b75f7ed9975b3b2c24a4ebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set rigid body phantom mode. In phantom mode collisions are reported but do not apply forces. <br/></td></tr>
-<tr class="separator:af4c3a51d5b75f7ed9975b3b2c24a4ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4879b880e0ee7c2a32d37207cd1b3f5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4879b880e0ee7c2a32d37207cd1b3f5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00283.html#ab4879b880e0ee7c2a32d37207cd1b3f5">SetTrigger</a> (bool enable)</td></tr>
+<tr class="memdesc:ab4879b880e0ee7c2a32d37207cd1b3f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set rigid body trigger mode. In trigger mode collisions are reported but do not apply forces. <br/></td></tr>
+<tr class="separator:ab4879b880e0ee7c2a32d37207cd1b3f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24a23993e8838edd5584aac3cda90b8e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a24a23993e8838edd5584aac3cda90b8e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00283.html#a24a23993e8838edd5584aac3cda90b8e">SetCollisionLayer</a> (unsigned layer)</td></tr>
 <tr class="memdesc:a24a23993e8838edd5584aac3cda90b8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set collision layer. <br/></td></tr>
@@ -335,10 +335,10 @@ const <a class="el" href="a00357.html">Vector3</a> &amp;&#160;</td><td class="me
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00283.html#a6cd664809a0274d7eead0b7bde7b2c38">IsKinematic</a> () const </td></tr>
 <tr class="memdesc:a6cd664809a0274d7eead0b7bde7b2c38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return kinematic mode flag. <br/></td></tr>
 <tr class="separator:a6cd664809a0274d7eead0b7bde7b2c38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5010d723d555094507dc9d6ce3ad9655"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5010d723d555094507dc9d6ce3ad9655"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00283.html#a5010d723d555094507dc9d6ce3ad9655">IsPhantom</a> () const </td></tr>
-<tr class="memdesc:a5010d723d555094507dc9d6ce3ad9655"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return phantom mode flag. <br/></td></tr>
-<tr class="separator:a5010d723d555094507dc9d6ce3ad9655"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41caefe120cce1dda8f28c44e01f22f0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41caefe120cce1dda8f28c44e01f22f0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00283.html#a41caefe120cce1dda8f28c44e01f22f0">IsTrigger</a> () const </td></tr>
+<tr class="memdesc:a41caefe120cce1dda8f28c44e01f22f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether this <a class="el" href="a00283.html" title="Physics rigid body component.">RigidBody</a> is acting as a trigger. <br/></td></tr>
+<tr class="separator:a41caefe120cce1dda8f28c44e01f22f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bb7f23a9d6d9967fe59f41d22a0a8a8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9bb7f23a9d6d9967fe59f41d22a0a8a8"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00283.html#a9bb7f23a9d6d9967fe59f41d22a0a8a8">IsActive</a> () const </td></tr>
 <tr class="memdesc:a9bb7f23a9d6d9967fe59f41d22a0a8a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether rigid body is active (not sleeping.) <br/></td></tr>
@@ -827,10 +827,10 @@ CollisionEventMode&#160;</td><td class="memItemRight" valign="bottom"><a class="
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00283.html#a98be42939ca5a3c7dd3c49d3a1a94be4">kinematic_</a></td></tr>
 <tr class="memdesc:a98be42939ca5a3c7dd3c49d3a1a94be4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kinematic flag. <br/></td></tr>
 <tr class="separator:a98be42939ca5a3c7dd3c49d3a1a94be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90131a277c86e7d84fbba7fec41fd50e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a90131a277c86e7d84fbba7fec41fd50e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00283.html#a90131a277c86e7d84fbba7fec41fd50e">phantom_</a></td></tr>
-<tr class="memdesc:a90131a277c86e7d84fbba7fec41fd50e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Phantom flag. <br/></td></tr>
-<tr class="separator:a90131a277c86e7d84fbba7fec41fd50e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64e6c11b9ab288e46688c7e8140d148e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a64e6c11b9ab288e46688c7e8140d148e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00283.html#a64e6c11b9ab288e46688c7e8140d148e">trigger_</a></td></tr>
+<tr class="memdesc:a64e6c11b9ab288e46688c7e8140d148e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Phantom flag. <br/></td></tr>
+<tr class="separator:a64e6c11b9ab288e46688c7e8140d148e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3561152cca47bd6fb61a4e727f3d005"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3561152cca47bd6fb61a4e727f3d005"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00283.html#aa3561152cca47bd6fb61a4e727f3d005">useGravity_</a></td></tr>
 <tr class="memdesc:aa3561152cca47bd6fb61a4e727f3d005"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use gravity flag. <br/></td></tr>
