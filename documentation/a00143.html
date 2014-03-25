@@ -28,8 +28,8 @@ title: Documentation
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="a01645.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Urho3D::DrawableProxy2D Class Reference</div>  </div>
@@ -723,8 +723,17 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a000
 <tr class="memdesc:abbd5b600c3a004defcb4eb393f855de6 inherit pro_methods_a00098"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set scene node. Called by <a class="el" href="a00225.html" title="Scene node that may contain components and child nodes.">Node</a> when creating the component. <br/></td></tr>
 <tr class="separator:abbd5b600c3a004defcb4eb393f855de6 inherit pro_methods_a00098"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a70c6a48b94bf48ae044a0d4fbf997857"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70c6a48b94bf48ae044a0d4fbf997857"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>OBJECT</b> (<a class="el" href="a00143.html">DrawableProxy2D</a>)</td></tr>
+<tr class="separator:a70c6a48b94bf48ae044a0d4fbf997857"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6157393f9ccc4bb66cf489a964a5f4e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a6157393f9ccc4bb66cf489a964a5f4e4">HandleBeginViewUpdate</a> (<a class="el" href="a00331.html">StringHash</a> eventType, <a class="el" href="a00169.html">VariantMap</a> &amp;eventData)</td></tr>
+<tr class="memdesc:a6157393f9ccc4bb66cf489a964a5f4e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle view update begin event. Determine <a class="el" href="a00142.html" title="Base class for 2D visible components.">Drawable2D</a>'s and their batches here.  <a href="#a6157393f9ccc4bb66cf489a964a5f4e4">More...</a><br/></td></tr>
+<tr class="separator:a6157393f9ccc4bb66cf489a964a5f4e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
 <tr class="memitem:acddeb507de544e204ecdada51768251a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acddeb507de544e204ecdada51768251a"></a>
 <a class="el" href="a00307.html">SharedPtr</a>&lt; <a class="el" href="a00177.html">IndexBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#acddeb507de544e204ecdada51768251a">indexBuffer_</a></td></tr>
 <tr class="memdesc:acddeb507de544e204ecdada51768251a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index buffer. <br/></td></tr>
@@ -745,10 +754,25 @@ Protected Attributes</h2></td></tr>
 <a class="el" href="a00257.html">PODVector</a>&lt; <a class="el" href="a00142.html">Drawable2D</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a59b41415ed88cedcb6da0d63cb3364e1">drawables_</a></td></tr>
 <tr class="memdesc:a59b41415ed88cedcb6da0d63cb3364e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drawables. <br/></td></tr>
 <tr class="separator:a59b41415ed88cedcb6da0d63cb3364e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2b6b03d8719e16f1f6d37cb30bd2c72"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2b6b03d8719e16f1f6d37cb30bd2c72"></a>
+<a class="el" href="a00257.html">PODVector</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#ad2b6b03d8719e16f1f6d37cb30bd2c72">drawablesVisible_</a></td></tr>
+<tr class="memdesc:ad2b6b03d8719e16f1f6d37cb30bd2c72"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00141.html" title="Base class for visible components.">Drawable</a> visibility results. <br/></td></tr>
+<tr class="separator:ad2b6b03d8719e16f1f6d37cb30bd2c72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa94676520114fd8c5c9cad3a83548530"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa94676520114fd8c5c9cad3a83548530"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#aa94676520114fd8c5c9cad3a83548530">vertexCount_</a></td></tr>
+<tr class="memdesc:aa94676520114fd8c5c9cad3a83548530"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total vertex count for the current frame. <br/></td></tr>
+<tr class="separator:aa94676520114fd8c5c9cad3a83548530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4b6539907876f61c12e5a26588732aa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4b6539907876f61c12e5a26588732aa"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#ab4b6539907876f61c12e5a26588732aa">indexCount_</a></td></tr>
+<tr class="memdesc:ab4b6539907876f61c12e5a26588732aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total index count for the current frame. <br/></td></tr>
+<tr class="separator:ab4b6539907876f61c12e5a26588732aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4458136a3ca96ce3fe375bb0e291ba2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af4458136a3ca96ce3fe375bb0e291ba2"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#af4458136a3ca96ce3fe375bb0e291ba2">orderDirty_</a></td></tr>
 <tr class="memdesc:af4458136a3ca96ce3fe375bb0e291ba2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Order dirty. <br/></td></tr>
 <tr class="separator:af4458136a3ca96ce3fe375bb0e291ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_a00141"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_a00141')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="a00141.html">Urho3D::Drawable</a></td></tr>
 <tr class="memitem:a10f4a0419fadd10735448f7a5b639099 inherit pro_attribs_a00141"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a10f4a0419fadd10735448f7a5b639099"></a>
 <a class="el" href="a00080.html">BoundingBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00141.html#a10f4a0419fadd10735448f7a5b639099">worldBoundingBox_</a></td></tr>
@@ -874,43 +898,64 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 <a class="el" href="a00171.html">HashSet</a>&lt; <a class="el" href="a00084.html">Camera</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00141.html#a405f8bb83f4d67e5c5f9af162175d7ec">viewCameras_</a></td></tr>
 <tr class="memdesc:a405f8bb83f4d67e5c5f9af162175d7ec inherit pro_attribs_a00141"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set of cameras from which is seen on the current frame. <br/></td></tr>
 <tr class="separator:a405f8bb83f4d67e5c5f9af162175d7ec inherit pro_attribs_a00141"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_a00098"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_a00098')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="a00098.html">Urho3D::Component</a></td></tr>
-<tr class="memitem:a1e35dfd6ec760ebafd81fabcec2ad86b inherit pro_attribs_a00098"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e35dfd6ec760ebafd81fabcec2ad86b"></a>
-<a class="el" href="a00225.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00098.html#a1e35dfd6ec760ebafd81fabcec2ad86b">node_</a></td></tr>
-<tr class="memdesc:a1e35dfd6ec760ebafd81fabcec2ad86b inherit pro_attribs_a00098"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00286.html" title="Root scene node, represents the whole scene.">Scene</a> node. <br/></td></tr>
-<tr class="separator:a1e35dfd6ec760ebafd81fabcec2ad86b inherit pro_attribs_a00098"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6192723cff1edc0cc7a96902e35f701 inherit pro_attribs_a00098"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6192723cff1edc0cc7a96902e35f701"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00098.html#ad6192723cff1edc0cc7a96902e35f701">id_</a></td></tr>
-<tr class="memdesc:ad6192723cff1edc0cc7a96902e35f701 inherit pro_attribs_a00098"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unique ID within the scene. <br/></td></tr>
-<tr class="separator:ad6192723cff1edc0cc7a96902e35f701 inherit pro_attribs_a00098"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47628d705616dd6b54ec22defd638265 inherit pro_attribs_a00098"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47628d705616dd6b54ec22defd638265"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00098.html#a47628d705616dd6b54ec22defd638265">networkUpdate_</a></td></tr>
-<tr class="memdesc:a47628d705616dd6b54ec22defd638265 inherit pro_attribs_a00098"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00221.html" title="Network subsystem. Manages client-server communications using the UDP protocol.">Network</a> update queued flag. <br/></td></tr>
-<tr class="separator:a47628d705616dd6b54ec22defd638265 inherit pro_attribs_a00098"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae52f352027bee0fa8d538591364b554a inherit pro_attribs_a00098"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae52f352027bee0fa8d538591364b554a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00098.html#ae52f352027bee0fa8d538591364b554a">enabled_</a></td></tr>
-<tr class="memdesc:ae52f352027bee0fa8d538591364b554a inherit pro_attribs_a00098"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enabled flag. <br/></td></tr>
-<tr class="separator:ae52f352027bee0fa8d538591364b554a inherit pro_attribs_a00098"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_a00298"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_a00298')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="a00298.html">Urho3D::Serializable</a></td></tr>
-<tr class="memitem:ac13d006e602441468e056a30e70dbb6d inherit pro_attribs_a00298"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac13d006e602441468e056a30e70dbb6d"></a>
-<a class="el" href="a00223.html">NetworkState</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#ac13d006e602441468e056a30e70dbb6d">networkState_</a></td></tr>
-<tr class="memdesc:ac13d006e602441468e056a30e70dbb6d inherit pro_attribs_a00298"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00221.html" title="Network subsystem. Manages client-server communications using the UDP protocol.">Network</a> attribute state. <br/></td></tr>
-<tr class="separator:ac13d006e602441468e056a30e70dbb6d inherit pro_attribs_a00298"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_a00230"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_a00230')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="a00230.html">Urho3D::Object</a></td></tr>
-<tr class="memitem:a3a7df857ddaa8c3e218c3645152dc23d inherit pro_attribs_a00230"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a7df857ddaa8c3e218c3645152dc23d"></a>
-<a class="el" href="a00120.html">Context</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00230.html#a3a7df857ddaa8c3e218c3645152dc23d">context_</a></td></tr>
-<tr class="memdesc:a3a7df857ddaa8c3e218c3645152dc23d inherit pro_attribs_a00230"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execution context. <br/></td></tr>
-<tr class="separator:a3a7df857ddaa8c3e218c3645152dc23d inherit pro_attribs_a00230"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a70c6a48b94bf48ae044a0d4fbf997857"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70c6a48b94bf48ae044a0d4fbf997857"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>OBJECT</b> (<a class="el" href="a00143.html">DrawableProxy2D</a>)</td></tr>
-<tr class="separator:a70c6a48b94bf48ae044a0d4fbf997857"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Proxy for 2D visible components. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a6157393f9ccc4bb66cf489a964a5f4e4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::DrawableProxy2D::HandleBeginViewUpdate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00331.html">StringHash</a>&#160;</td>
+          <td class="paramname"><em>eventType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00169.html">VariantMap</a> &amp;&#160;</td>
+          <td class="paramname"><em>eventData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handle view update begin event. Determine <a class="el" href="a00142.html" title="Base class for 2D visible components.">Drawable2D</a>'s and their batches here. </p>
+<dl class="todo"><dt><b><a class="el" href="a00832.html#_todo000033">Todo:</a></b></dt><dd>We could add frustum culling, but that would be problematic if we have several viewports. Right now all <a class="el" href="a00142.html" title="Base class for 2D visible components.">Drawable2D</a>'s are always submitted for rendering </dd></dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a00143_a6157393f9ccc4bb66cf489a964a5f4e4_cgraph.svg" width="100%" height="526"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00143_a6157393f9ccc4bb66cf489a964a5f4e4_icgraph.svg" width="443" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/travis/build/urho3d/Urho3D/Source/Engine/Urho2D/DrawableProxy2D.h</li>
 <li>/home/travis/build/urho3d/Urho3D/Source/Engine/Urho2D/DrawableProxy2D.cpp</li>
 </ul>

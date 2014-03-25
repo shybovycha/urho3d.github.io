@@ -141,6 +141,7 @@ title: Documentation
 : <a class="el" href="a00162.html#a4250a6175dcb9465d8add0fa807a446b">Urho3D::Geometry</a>
 , <a class="el" href="a00177.html#a198fe3590a089cd09043c4a2ab6eb25c">Urho3D::IndexBuffer</a>
 , <a class="el" href="a00122.html#a1ee60b51276a890986abb94846b0b892">Urho3D::ConvexData</a>
+, <a class="el" href="a00143.html#ab4b6539907876f61c12e5a26588732aa">Urho3D::DrawableProxy2D</a>
 </li>
 <li>indexData_
 : <a class="el" href="a00122.html#a75270f2f8c6cca06f2b2d50d4d247859">Urho3D::ConvexData</a>
@@ -207,7 +208,7 @@ title: Documentation
 : <a class="el" href="a00178.html#a471e35b5ce1544455116fe4d0e3da753">Urho3D::Input</a>
 </li>
 <li>Insert()
-: <a class="el" href="a00169.html#a35eda76339b695f7977f36aa961a1965">Urho3D::HashMap&lt; T, U &gt;</a>
+: <a class="el" href="a00169.html#ad7e80c0c98d795960287fdce2215e312">Urho3D::HashMap&lt; T, U &gt;</a>
 , <a class="el" href="a00171.html#a14064ab8bc6c6c6782961cb95295a2ee">Urho3D::HashSet&lt; T &gt;</a>
 , <a class="el" href="a00172.html#a138c0087db5bd9b619846e567e02af6c">Urho3D::HashTable&lt; T, U &gt;</a>
 , <a class="el" href="a00191.html#a7bdb3b1298f6c8a1cf5cf4ad409ce7e6">Urho3D::LinkedList&lt; T &gt;</a>
@@ -215,7 +216,6 @@ title: Documentation
 , <a class="el" href="a00330.html#af145241db072c498e92fa3f6e461f2b9">Urho3D::String</a>
 , <a class="el" href="a00356.html#a59348abb9b8a78f19208613d45431fc9">Urho3D::Vector&lt; T &gt;</a>
 , <a class="el" href="a00257.html#a4e7f5081dc04840ec772d55d98291829">Urho3D::PODVector&lt; T &gt;</a>
-, <a class="el" href="a00169.html#ad7e80c0c98d795960287fdce2215e312">Urho3D::HashMap&lt; T, U &gt;</a>
 </li>
 <li>InsertChild()
 : <a class="el" href="a00351.html#afca95d8f1971fbbdcf725f715cc8c7a9">Urho3D::UIElement</a>
@@ -297,7 +297,7 @@ title: Documentation
 : <a class="el" href="a00261.html#acfb8cff1cd18d5635fb10f081314ac93">Urho3D::ProfilerBlock</a>
 </li>
 <li>IntRect()
-: <a class="el" href="a00180.html#ad6b4928e6349cc16bd7a5b21d18b6e9e">Urho3D::IntRect</a>
+: <a class="el" href="a00180.html#af2006f937fca9d4a00c7a3bb4950d5cd">Urho3D::IntRect</a>
 </li>
 <li>IntVector2()
 : <a class="el" href="a00181.html#ac30fd7c3103a5ce5746a257287727077">Urho3D::IntVector2</a>
@@ -405,8 +405,8 @@ title: Documentation
 : <a class="el" href="a00121.html#a3cf51b74369a4f905c1cdf3d76aef477">Urho3D::Controls</a>
 </li>
 <li>IsDynamic()
-: <a class="el" href="a00177.html#a2a6f0abf60670faacd7eab377589e9c2">Urho3D::IndexBuffer</a>
-, <a class="el" href="a00363.html#aad9543df494123d5775b72e63f5cb742">Urho3D::VertexBuffer</a>
+: <a class="el" href="a00363.html#aad9543df494123d5775b72e63f5cb742">Urho3D::VertexBuffer</a>
+, <a class="el" href="a00177.html#a2a6f0abf60670faacd7eab377589e9c2">Urho3D::IndexBuffer</a>
 </li>
 <li>IsEditable()
 : <a class="el" href="a00351.html#a05cd3e6fa7dc9579d25093ceab79ce29">Urho3D::UIElement</a>
@@ -424,8 +424,8 @@ title: Documentation
 , <a class="el" href="a00234.html#a8382b02628fd755af2a20f83125d5b23">Urho3D::Octant</a>
 </li>
 <li>IsEnabled()
-: <a class="el" href="a00098.html#abaf74c1701f048986da1e2d5dae05c56">Urho3D::Component</a>
-, <a class="el" href="a00059.html#adb6fecb38877d8b0bf05b8611ea4ac61">Urho3D::AnimationState</a>
+: <a class="el" href="a00059.html#adb6fecb38877d8b0bf05b8611ea4ac61">Urho3D::AnimationState</a>
+, <a class="el" href="a00098.html#abaf74c1701f048986da1e2d5dae05c56">Urho3D::Component</a>
 , <a class="el" href="a00225.html#a8becd372b2db8397831009114dee147f">Urho3D::Node</a>
 , <a class="el" href="a00351.html#ae6ec675c864b55862ae03faa44049dc0">Urho3D::UIElement</a>
 </li>
@@ -469,40 +469,39 @@ title: Documentation
 : <a class="el" href="a00351.html#a3e0619e5a2760db2ce86d0dc69aee327">Urho3D::UIElement</a>
 </li>
 <li>IsInitialized()
-: <a class="el" href="a00145.html#a47d5462c0fe475a84f5d8b3d1e2bbeac">Urho3D::Engine</a>
+: <a class="el" href="a00069.html#a09fd60893419e0ca0605801ddcf85a36">Urho3D::Audio</a>
+, <a class="el" href="a00145.html#a47d5462c0fe475a84f5d8b3d1e2bbeac">Urho3D::Engine</a>
 , <a class="el" href="a00165.html#a758baad907187292abf52b2ba89c6723">Urho3D::Graphics</a>
 , <a class="el" href="a00220.html#af4f774e018b78368d46beb982e53fdf2">Urho3D::NavigationMesh</a>
-, <a class="el" href="a00069.html#a09fd60893419e0ca0605801ddcf85a36">Urho3D::Audio</a>
 </li>
 <li>IsInProgress()
 : <a class="el" href="a00312.html#a78b558332823ca428d627f083f00aeb6">Urho3D::SmoothedTransform</a>
 </li>
 <li>IsInside()
-: <a class="el" href="a00319.html#ab0fefc454ea18c44b5f08510fb12fded">Urho3D::Sphere</a>
-, <a class="el" href="a00351.html#a479f87ac369c89be8df4e9da40e6fa3a">Urho3D::UIElement</a>
+: <a class="el" href="a00319.html#a64b3945246b85e7adc0825c62f7c6f06">Urho3D::Sphere</a>
 , <a class="el" href="a00131.html#aa1ba82ecc6ee29b12fdad3f8e338a3b6">Urho3D::DebugRenderer</a>
-, <a class="el" href="a00326.html#a97db73bb0717e04c8d86812d1ba910bf">Urho3D::StaticModel</a>
-, <a class="el" href="a00080.html#ad8473b976b2c970026a634763b024346">Urho3D::BoundingBox</a>
-, <a class="el" href="a00319.html#a64b3945246b85e7adc0825c62f7c6f06">Urho3D::Sphere</a>
-, <a class="el" href="a00080.html#a7b23fbfb41921e37466ac70d6dc81b7c">Urho3D::BoundingBox</a>
-, <a class="el" href="a00180.html#adb910b299707b4793259f20c68156fcc">Urho3D::IntRect</a>
-, <a class="el" href="a00160.html#a301a50ae5506bc672e396f4cefbefd79">Urho3D::Frustum</a>
-, <a class="el" href="a00268.html#a7ba45145d533592ecf2881976e1fc3ba">Urho3D::Rect</a>
-, <a class="el" href="a00160.html#ae756b6d93575d58546ec6d3baf2590ba">Urho3D::Frustum</a>
-, <a class="el" href="a00319.html#a8ec9fa86b2e8630a7d285f4d9eee6227">Urho3D::Sphere</a>
-, <a class="el" href="a00160.html#ab17e3ded4330a24676ab8ffcfd42c3b7">Urho3D::Frustum</a>
-, <a class="el" href="a00378.html#aa47d1509103f86cd17b80c18bf961641">Urho3D::Zone</a>
 , <a class="el" href="a00162.html#a0c2c63368bf9120ed71caa17a00cf720">Urho3D::Geometry</a>
+, <a class="el" href="a00268.html#a7ba45145d533592ecf2881976e1fc3ba">Urho3D::Rect</a>
+, <a class="el" href="a00378.html#aa47d1509103f86cd17b80c18bf961641">Urho3D::Zone</a>
+, <a class="el" href="a00319.html#ab0fefc454ea18c44b5f08510fb12fded">Urho3D::Sphere</a>
+, <a class="el" href="a00180.html#adb910b299707b4793259f20c68156fcc">Urho3D::IntRect</a>
+, <a class="el" href="a00080.html#ad8473b976b2c970026a634763b024346">Urho3D::BoundingBox</a>
+, <a class="el" href="a00160.html#ab17e3ded4330a24676ab8ffcfd42c3b7">Urho3D::Frustum</a>
+, <a class="el" href="a00319.html#a8ec9fa86b2e8630a7d285f4d9eee6227">Urho3D::Sphere</a>
+, <a class="el" href="a00080.html#ace50aa548019799fdd1fc171b3aa9409">Urho3D::BoundingBox</a>
+, <a class="el" href="a00160.html#ae756b6d93575d58546ec6d3baf2590ba">Urho3D::Frustum</a>
+, <a class="el" href="a00351.html#a479f87ac369c89be8df4e9da40e6fa3a">Urho3D::UIElement</a>
+, <a class="el" href="a00326.html#a97db73bb0717e04c8d86812d1ba910bf">Urho3D::StaticModel</a>
 </li>
 <li>IsInsideCombined()
 : <a class="el" href="a00351.html#aaa6b4eddcd2e94d531ef885a68e0f13a">Urho3D::UIElement</a>
 </li>
 <li>IsInsideFast()
-: <a class="el" href="a00160.html#a48df64ed4b98657647b45a96e293cd97">Urho3D::Frustum</a>
-, <a class="el" href="a00319.html#a9b369dcff2f32bc523fa550acef38d58">Urho3D::Sphere</a>
+: <a class="el" href="a00319.html#a9b369dcff2f32bc523fa550acef38d58">Urho3D::Sphere</a>
 , <a class="el" href="a00080.html#ac149c12fdb0aeb14023ea6ebd137bcdd">Urho3D::BoundingBox</a>
-, <a class="el" href="a00160.html#a2339261ab11f940f481ac3cf95915867">Urho3D::Frustum</a>
 , <a class="el" href="a00319.html#af9bdab6691b5614918d332f2ab4b8110">Urho3D::Sphere</a>
+, <a class="el" href="a00160.html#a48df64ed4b98657647b45a96e293cd97">Urho3D::Frustum</a>
+, <a class="el" href="a00080.html#a3e31f522451bbabba857bd4e83384492">Urho3D::BoundingBox</a>
 </li>
 <li>IsInsideLocal()
 : <a class="el" href="a00326.html#a234b3b649fa56f1f1c6243a18277b051">Urho3D::StaticModel</a>
@@ -511,19 +510,19 @@ title: Documentation
 : <a class="el" href="a00351.html#a8296551e7368721c952f0277d2d40007">Urho3D::UIElement</a>
 </li>
 <li>IsInView()
-: <a class="el" href="a00141.html#a29ed2d07407126c12a8b9997fc6c6b74">Urho3D::Drawable</a>
+: <a class="el" href="a00141.html#a59b912ec5b7995253510ac48e8de808d">Urho3D::Drawable</a>
 </li>
 <li>IsKinematic()
 : <a class="el" href="a00284.html#a6cd664809a0274d7eead0b7bde7b2c38">Urho3D::RigidBody</a>
 </li>
 <li>IsLocked()
-: <a class="el" href="a00177.html#a3c36fd974c3b7ea76f20b6d9e6a58144">Urho3D::IndexBuffer</a>
-, <a class="el" href="a00363.html#aa337971e4a184d73e91a12dd8c702a37">Urho3D::VertexBuffer</a>
+: <a class="el" href="a00363.html#aa337971e4a184d73e91a12dd8c702a37">Urho3D::VertexBuffer</a>
+, <a class="el" href="a00177.html#a3c36fd974c3b7ea76f20b6d9e6a58144">Urho3D::IndexBuffer</a>
 </li>
 <li>IsLooped()
-: <a class="el" href="a00059.html#a7c1e5b0e935abbd50a07f892f26b9c32">Urho3D::AnimationState</a>
+: <a class="el" href="a00057.html#aa843d7c7e3a564e11ef78c5697232993">Urho3D::AnimationController</a>
+, <a class="el" href="a00059.html#a7c1e5b0e935abbd50a07f892f26b9c32">Urho3D::AnimationState</a>
 , <a class="el" href="a00313.html#ab46ad76cc9d621a9a1ec6904c8737d54">Urho3D::Sound</a>
-, <a class="el" href="a00057.html#aa843d7c7e3a564e11ef78c5697232993">Urho3D::AnimationController</a>
 </li>
 <li>IsMaster()
 : <a class="el" href="a00052.html#aeba82142d0cc6a65c076466fc9dc1b9f">Urho3D::AnimatedModel</a>
@@ -544,10 +543,10 @@ title: Documentation
 : <a class="el" href="a00370.html#abe599cf07f189094dc21fa4bba14a416">Urho3D::Window</a>
 </li>
 <li>IsNaN()
-: <a class="el" href="a00359.html#ae6c2e74c6d64031a5d3ad9fb46f01de0">Urho3D::Vector4</a>
-, <a class="el" href="a00358.html#a147fd15d5514dd6e88b523f8d74dd097">Urho3D::Vector3</a>
+: <a class="el" href="a00358.html#a147fd15d5514dd6e88b523f8d74dd097">Urho3D::Vector3</a>
 , <a class="el" href="a00357.html#aad2797c3724f63dfd89eb66bd58a3b1b">Urho3D::Vector2</a>
 , <a class="el" href="a00262.html#a9cdc41f254f82ad8ce2d2e445e46afcd">Urho3D::Quaternion</a>
+, <a class="el" href="a00359.html#ae6c2e74c6d64031a5d3ad9fb46f01de0">Urho3D::Vector4</a>
 </li>
 <li>IsNecessary()
 : <a class="el" href="a00365.html#af219b8d7e54bad20a81b0e8f14c030ec">Urho3D::View</a>
@@ -588,8 +587,8 @@ title: Documentation
 , <a class="el" href="a00069.html#a8d84d960bf8d0170af7afaf20322f773">Urho3D::Audio</a>
 </li>
 <li>IsPressed()
-: <a class="el" href="a00121.html#aecc0b4522ae8b039e550e407740c3a80">Urho3D::Controls</a>
-, <a class="el" href="a00083.html#aacb569959e65880fe01a87187e96168c">Urho3D::Button</a>
+: <a class="el" href="a00083.html#aacb569959e65880fe01a87187e96168c">Urho3D::Button</a>
+, <a class="el" href="a00121.html#aecc0b4522ae8b039e550e407740c3a80">Urho3D::Controls</a>
 </li>
 <li>IsProjectionValid()
 : <a class="el" href="a00084.html#aa342ca178488ff7b172b37d57d88ce8f">Urho3D::Camera</a>
@@ -655,9 +654,9 @@ title: Documentation
 : <a class="el" href="a00343.html#a63134bf27472c831a7f500f554fa66dc">Urho3D::Thread</a>
 </li>
 <li>IsStereo()
-: <a class="el" href="a00317.html#a626f2799fb5c4dfb7f738e4e15e93c9d">Urho3D::SoundStream</a>
-, <a class="el" href="a00069.html#a143a4f676354f6e714a687299c46a52b">Urho3D::Audio</a>
+: <a class="el" href="a00069.html#a143a4f676354f6e714a687299c46a52b">Urho3D::Audio</a>
 , <a class="el" href="a00313.html#a1683b45df1475d849765986470e2a8c9">Urho3D::Sound</a>
+, <a class="el" href="a00317.html#a626f2799fb5c4dfb7f738e4e15e93c9d">Urho3D::SoundStream</a>
 </li>
 <li>IsSupported()
 : <a class="el" href="a00174.html#a3f2546fa091586f1ed07582a815b5ace">Urho3D::HiresTimer</a>
@@ -686,13 +685,15 @@ title: Documentation
 <li>IsValid()
 : <a class="el" href="a00201.html#a65dedcdd8936666c31010a3c784b3da6">Urho3D::LuaFunction</a>
 </li>
+<li>IsVisible()
+: <a class="el" href="a00351.html#ac3426df12a6621a2fea7c6f18795501d">Urho3D::UIElement</a>
+, <a class="el" href="a00334.html#a6335491226490f47d27c70cd6b9a067f">Urho3D::Terrain</a>
+</li>
 <li>isVisible()
 : <a class="el" href="a00254.html#a171ffbb728437be442f6f3783cc8b1f8">Urho3D::PhysicsWorld</a>
 </li>
 <li>IsVisible()
-: <a class="el" href="a00334.html#a6335491226490f47d27c70cd6b9a067f">Urho3D::Terrain</a>
-, <a class="el" href="a00233.html#a6ca6bd200d73bc21883e712f81a047f2">Urho3D::OcclusionBuffer</a>
-, <a class="el" href="a00351.html#ac3426df12a6621a2fea7c6f18795501d">Urho3D::UIElement</a>
+: <a class="el" href="a00233.html#a6ca6bd200d73bc21883e712f81a047f2">Urho3D::OcclusionBuffer</a>
 , <a class="el" href="a00103.html#ada9c8fd7f15834433d872faf4c88f968">Urho3D::Console</a>
 </li>
 <li>IsWithinScissor()
@@ -706,11 +707,12 @@ title: Documentation
 : <a class="el" href="a00141.html#a0057557abbbd2bba7dab0a834145b2b7">Urho3D::Drawable</a>
 </li>
 <li>Iterator()
-: <a class="el" href="a00184.html#a14915d3813c7e5ac51282d5a86e9d573">Urho3D::HashSet&lt; T &gt;::Iterator</a>
-, <a class="el" href="a00183.html#ac58b06a4f47caff100e1c5fce1876536">Urho3D::HashMap&lt; T, U &gt;::Iterator</a>
-, <a class="el" href="a00182.html#a5ab383bad015dd52343d4ef9718c8556">Urho3D::List&lt; T &gt;::Iterator</a>
+: <a class="el" href="a00182.html#a5eefb6e918ab8bf0fc52021b2191bd82">Urho3D::List&lt; T &gt;::Iterator</a>
 , <a class="el" href="a00184.html#a964534c0f64479b61508396babd9939f">Urho3D::HashSet&lt; T &gt;::Iterator</a>
-, <a class="el" href="a00182.html#a5eefb6e918ab8bf0fc52021b2191bd82">Urho3D::List&lt; T &gt;::Iterator</a>
+, <a class="el" href="a00183.html#abc59433708685a11fa909706626c80b3">Urho3D::HashMap&lt; T, U &gt;::Iterator</a>
+, <a class="el" href="a00182.html#a5ab383bad015dd52343d4ef9718c8556">Urho3D::List&lt; T &gt;::Iterator</a>
+, <a class="el" href="a00183.html#ac58b06a4f47caff100e1c5fce1876536">Urho3D::HashMap&lt; T, U &gt;::Iterator</a>
+, <a class="el" href="a00184.html#a14915d3813c7e5ac51282d5a86e9d573">Urho3D::HashSet&lt; T &gt;::Iterator</a>
 </li>
 <li>iterator_
 : <a class="el" href="a00157.html#a85870345592e15893f63f6334bd1c83d">Urho3D::FontGlyph</a>
