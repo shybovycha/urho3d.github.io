@@ -27,7 +27,6 @@ title: Documentation
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="a01645.html">List of all members</a>  </div>
@@ -674,16 +673,64 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memdesc:a0c55d674395bb9f743dca395480eff0a inherit pub_static_methods_a00141"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register object attributes. <a class="el" href="a00141.html" title="Base class for visible components.">Drawable</a> must be registered first. <br/></td></tr>
 <tr class="separator:a0c55d674395bb9f743dca395480eff0a inherit pub_static_methods_a00141"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a70c6a48b94bf48ae044a0d4fbf997857"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70c6a48b94bf48ae044a0d4fbf997857"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>OBJECT</b> (<a class="el" href="a00143.html">DrawableProxy2D</a>)</td></tr>
+<tr class="separator:a70c6a48b94bf48ae044a0d4fbf997857"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae65a2e41596e89d8d886a1ab9b4cea57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae65a2e41596e89d8d886a1ab9b4cea57"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#ae65a2e41596e89d8d886a1ab9b4cea57">OnWorldBoundingBoxUpdate</a> ()</td></tr>
 <tr class="memdesc:ae65a2e41596e89d8d886a1ab9b4cea57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recalculate the world-space bounding box. <br/></td></tr>
 <tr class="separator:ae65a2e41596e89d8d886a1ab9b4cea57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6157393f9ccc4bb66cf489a964a5f4e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a6157393f9ccc4bb66cf489a964a5f4e4">HandleBeginViewUpdate</a> (<a class="el" href="a00331.html">StringHash</a> eventType, <a class="el" href="a00169.html">VariantMap</a> &amp;eventData)</td></tr>
+<tr class="memdesc:a6157393f9ccc4bb66cf489a964a5f4e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle view update begin event. Determine <a class="el" href="a00142.html" title="Base class for 2D visible components.">Drawable2D</a>'s and their batches here.  <a href="#a6157393f9ccc4bb66cf489a964a5f4e4">More...</a><br/></td></tr>
+<tr class="separator:a6157393f9ccc4bb66cf489a964a5f4e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3317ea4407a206133900003b1143e259"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3317ea4407a206133900003b1143e259"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a3317ea4407a206133900003b1143e259">AddBatch</a> (<a class="el" href="a00204.html">Material</a> *material, unsigned indexStart, unsigned indexCount, unsigned vertexStart, unsigned vertexCount)</td></tr>
 <tr class="memdesc:a3317ea4407a206133900003b1143e259"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add batch. <br/></td></tr>
 <tr class="separator:a3317ea4407a206133900003b1143e259"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:acddeb507de544e204ecdada51768251a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acddeb507de544e204ecdada51768251a"></a>
+<a class="el" href="a00307.html">SharedPtr</a>&lt; <a class="el" href="a00177.html">IndexBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#acddeb507de544e204ecdada51768251a">indexBuffer_</a></td></tr>
+<tr class="memdesc:acddeb507de544e204ecdada51768251a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index buffer. <br/></td></tr>
+<tr class="separator:acddeb507de544e204ecdada51768251a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a196795b9e39424edd97b1fa824079644"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a196795b9e39424edd97b1fa824079644"></a>
+<a class="el" href="a00307.html">SharedPtr</a>&lt; <a class="el" href="a00363.html">VertexBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a196795b9e39424edd97b1fa824079644">vertexBuffer_</a></td></tr>
+<tr class="memdesc:a196795b9e39424edd97b1fa824079644"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex buffer. <br/></td></tr>
+<tr class="separator:a196795b9e39424edd97b1fa824079644"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a502b6354f0ae11fda2e891295c924588"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a502b6354f0ae11fda2e891295c924588"></a>
+<a class="el" href="a00356.html">Vector</a>&lt; <a class="el" href="a00307.html">SharedPtr</a>&lt; <a class="el" href="a00204.html">Material</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a502b6354f0ae11fda2e891295c924588">materials_</a></td></tr>
+<tr class="memdesc:a502b6354f0ae11fda2e891295c924588"><td class="mdescLeft">&#160;</td><td class="mdescRight">Materials. <br/></td></tr>
+<tr class="separator:a502b6354f0ae11fda2e891295c924588"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44e2e3b39ce6a88d07fc1b9e98f35606"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a44e2e3b39ce6a88d07fc1b9e98f35606"></a>
+<a class="el" href="a00356.html">Vector</a>&lt; <a class="el" href="a00307.html">SharedPtr</a>&lt; <a class="el" href="a00162.html">Geometry</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a44e2e3b39ce6a88d07fc1b9e98f35606">geometries_</a></td></tr>
+<tr class="memdesc:a44e2e3b39ce6a88d07fc1b9e98f35606"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geometries. <br/></td></tr>
+<tr class="separator:a44e2e3b39ce6a88d07fc1b9e98f35606"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2661b84abf28b3f5f6e3b9d6d6017b6b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2661b84abf28b3f5f6e3b9d6d6017b6b"></a>
+<a class="el" href="a00257.html">PODVector</a>&lt; <a class="el" href="a00142.html">Drawable2D</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a2661b84abf28b3f5f6e3b9d6d6017b6b">drawables_</a></td></tr>
+<tr class="memdesc:a2661b84abf28b3f5f6e3b9d6d6017b6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drawables. <br/></td></tr>
+<tr class="separator:a2661b84abf28b3f5f6e3b9d6d6017b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4458136a3ca96ce3fe375bb0e291ba2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af4458136a3ca96ce3fe375bb0e291ba2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#af4458136a3ca96ce3fe375bb0e291ba2">orderDirty_</a></td></tr>
+<tr class="memdesc:af4458136a3ca96ce3fe375bb0e291ba2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Order dirty. <br/></td></tr>
+<tr class="separator:af4458136a3ca96ce3fe375bb0e291ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2b6b03d8719e16f1f6d37cb30bd2c72"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2b6b03d8719e16f1f6d37cb30bd2c72"></a>
+<a class="el" href="a00257.html">PODVector</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#ad2b6b03d8719e16f1f6d37cb30bd2c72">drawablesVisible_</a></td></tr>
+<tr class="memdesc:ad2b6b03d8719e16f1f6d37cb30bd2c72"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00141.html" title="Base class for visible components.">Drawable</a> visibility results. <br/></td></tr>
+<tr class="separator:ad2b6b03d8719e16f1f6d37cb30bd2c72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4b6539907876f61c12e5a26588732aa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4b6539907876f61c12e5a26588732aa"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#ab4b6539907876f61c12e5a26588732aa">indexCount_</a></td></tr>
+<tr class="memdesc:ab4b6539907876f61c12e5a26588732aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total index count for the current frame. <br/></td></tr>
+<tr class="separator:ab4b6539907876f61c12e5a26588732aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa94676520114fd8c5c9cad3a83548530"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa94676520114fd8c5c9cad3a83548530"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#aa94676520114fd8c5c9cad3a83548530">vertexCount_</a></td></tr>
+<tr class="memdesc:aa94676520114fd8c5c9cad3a83548530"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total vertex count for the current frame. <br/></td></tr>
+<tr class="separator:aa94676520114fd8c5c9cad3a83548530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_a00141"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_a00141')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="a00141.html">Urho3D::Drawable</a></td></tr>
 <tr class="memitem:a7c597de13d682aec8aee6c0e892add66 inherit pro_methods_a00141"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c597de13d682aec8aee6c0e892add66"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00141.html#a7c597de13d682aec8aee6c0e892add66">OnNodeSet</a> (<a class="el" href="a00225.html">Node</a> *node)</td></tr>
@@ -709,70 +756,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00141.html#a3c746486b469ad2c987eaa2faca73afd">SetOctant</a> (<a class="el" href="a00234.html">Octant</a> *octant)</td></tr>
 <tr class="memdesc:a3c746486b469ad2c987eaa2faca73afd inherit pro_methods_a00141"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move into another octree octant. <br/></td></tr>
 <tr class="separator:a3c746486b469ad2c987eaa2faca73afd inherit pro_methods_a00141"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_a00098"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_a00098')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="a00098.html">Urho3D::Component</a></td></tr>
-<tr class="memitem:a6d8427933ca3aedcc7397e84176dc321 inherit pro_methods_a00098"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d8427933ca3aedcc7397e84176dc321"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00098.html#a6d8427933ca3aedcc7397e84176dc321">OnNodeSetEnabled</a> (<a class="el" href="a00225.html">Node</a> *node)</td></tr>
-<tr class="memdesc:a6d8427933ca3aedcc7397e84176dc321 inherit pro_methods_a00098"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene node enabled status changing. <br/></td></tr>
-<tr class="separator:a6d8427933ca3aedcc7397e84176dc321 inherit pro_methods_a00098"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a871e9a8397df466d804a02786970788c inherit pro_methods_a00098"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a871e9a8397df466d804a02786970788c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00098.html#a871e9a8397df466d804a02786970788c">SetID</a> (unsigned id)</td></tr>
-<tr class="memdesc:a871e9a8397df466d804a02786970788c inherit pro_methods_a00098"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set ID. Called by <a class="el" href="a00286.html" title="Root scene node, represents the whole scene.">Scene</a>. <br/></td></tr>
-<tr class="separator:a871e9a8397df466d804a02786970788c inherit pro_methods_a00098"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbd5b600c3a004defcb4eb393f855de6 inherit pro_methods_a00098"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abbd5b600c3a004defcb4eb393f855de6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00098.html#abbd5b600c3a004defcb4eb393f855de6">SetNode</a> (<a class="el" href="a00225.html">Node</a> *node)</td></tr>
-<tr class="memdesc:abbd5b600c3a004defcb4eb393f855de6 inherit pro_methods_a00098"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set scene node. Called by <a class="el" href="a00225.html" title="Scene node that may contain components and child nodes.">Node</a> when creating the component. <br/></td></tr>
-<tr class="separator:abbd5b600c3a004defcb4eb393f855de6 inherit pro_methods_a00098"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a70c6a48b94bf48ae044a0d4fbf997857"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70c6a48b94bf48ae044a0d4fbf997857"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>OBJECT</b> (<a class="el" href="a00143.html">DrawableProxy2D</a>)</td></tr>
-<tr class="separator:a70c6a48b94bf48ae044a0d4fbf997857"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6157393f9ccc4bb66cf489a964a5f4e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a6157393f9ccc4bb66cf489a964a5f4e4">HandleBeginViewUpdate</a> (<a class="el" href="a00331.html">StringHash</a> eventType, <a class="el" href="a00169.html">VariantMap</a> &amp;eventData)</td></tr>
-<tr class="memdesc:a6157393f9ccc4bb66cf489a964a5f4e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle view update begin event. Determine <a class="el" href="a00142.html" title="Base class for 2D visible components.">Drawable2D</a>'s and their batches here.  <a href="#a6157393f9ccc4bb66cf489a964a5f4e4">More...</a><br/></td></tr>
-<tr class="separator:a6157393f9ccc4bb66cf489a964a5f4e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:acddeb507de544e204ecdada51768251a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acddeb507de544e204ecdada51768251a"></a>
-<a class="el" href="a00307.html">SharedPtr</a>&lt; <a class="el" href="a00177.html">IndexBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#acddeb507de544e204ecdada51768251a">indexBuffer_</a></td></tr>
-<tr class="memdesc:acddeb507de544e204ecdada51768251a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index buffer. <br/></td></tr>
-<tr class="separator:acddeb507de544e204ecdada51768251a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a196795b9e39424edd97b1fa824079644"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a196795b9e39424edd97b1fa824079644"></a>
-<a class="el" href="a00307.html">SharedPtr</a>&lt; <a class="el" href="a00363.html">VertexBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a196795b9e39424edd97b1fa824079644">vertexBuffer_</a></td></tr>
-<tr class="memdesc:a196795b9e39424edd97b1fa824079644"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex buffer. <br/></td></tr>
-<tr class="separator:a196795b9e39424edd97b1fa824079644"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a502b6354f0ae11fda2e891295c924588"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a502b6354f0ae11fda2e891295c924588"></a>
-<a class="el" href="a00356.html">Vector</a>&lt; <a class="el" href="a00307.html">SharedPtr</a>&lt; <a class="el" href="a00204.html">Material</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a502b6354f0ae11fda2e891295c924588">materials_</a></td></tr>
-<tr class="memdesc:a502b6354f0ae11fda2e891295c924588"><td class="mdescLeft">&#160;</td><td class="mdescRight">Materials. <br/></td></tr>
-<tr class="separator:a502b6354f0ae11fda2e891295c924588"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44e2e3b39ce6a88d07fc1b9e98f35606"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a44e2e3b39ce6a88d07fc1b9e98f35606"></a>
-<a class="el" href="a00356.html">Vector</a>&lt; <a class="el" href="a00307.html">SharedPtr</a>&lt; <a class="el" href="a00162.html">Geometry</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a44e2e3b39ce6a88d07fc1b9e98f35606">geometries_</a></td></tr>
-<tr class="memdesc:a44e2e3b39ce6a88d07fc1b9e98f35606"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geometries. <br/></td></tr>
-<tr class="separator:a44e2e3b39ce6a88d07fc1b9e98f35606"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59b41415ed88cedcb6da0d63cb3364e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59b41415ed88cedcb6da0d63cb3364e1"></a>
-<a class="el" href="a00257.html">PODVector</a>&lt; <a class="el" href="a00142.html">Drawable2D</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a59b41415ed88cedcb6da0d63cb3364e1">drawables_</a></td></tr>
-<tr class="memdesc:a59b41415ed88cedcb6da0d63cb3364e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drawables. <br/></td></tr>
-<tr class="separator:a59b41415ed88cedcb6da0d63cb3364e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2b6b03d8719e16f1f6d37cb30bd2c72"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2b6b03d8719e16f1f6d37cb30bd2c72"></a>
-<a class="el" href="a00257.html">PODVector</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#ad2b6b03d8719e16f1f6d37cb30bd2c72">drawablesVisible_</a></td></tr>
-<tr class="memdesc:ad2b6b03d8719e16f1f6d37cb30bd2c72"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00141.html" title="Base class for visible components.">Drawable</a> visibility results. <br/></td></tr>
-<tr class="separator:ad2b6b03d8719e16f1f6d37cb30bd2c72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa94676520114fd8c5c9cad3a83548530"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa94676520114fd8c5c9cad3a83548530"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#aa94676520114fd8c5c9cad3a83548530">vertexCount_</a></td></tr>
-<tr class="memdesc:aa94676520114fd8c5c9cad3a83548530"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total vertex count for the current frame. <br/></td></tr>
-<tr class="separator:aa94676520114fd8c5c9cad3a83548530"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4b6539907876f61c12e5a26588732aa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4b6539907876f61c12e5a26588732aa"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#ab4b6539907876f61c12e5a26588732aa">indexCount_</a></td></tr>
-<tr class="memdesc:ab4b6539907876f61c12e5a26588732aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total index count for the current frame. <br/></td></tr>
-<tr class="separator:ab4b6539907876f61c12e5a26588732aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4458136a3ca96ce3fe375bb0e291ba2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af4458136a3ca96ce3fe375bb0e291ba2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#af4458136a3ca96ce3fe375bb0e291ba2">orderDirty_</a></td></tr>
-<tr class="memdesc:af4458136a3ca96ce3fe375bb0e291ba2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Order dirty. <br/></td></tr>
-<tr class="separator:af4458136a3ca96ce3fe375bb0e291ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_a00141"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_a00141')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="a00141.html">Urho3D::Drawable</a></td></tr>
 <tr class="memitem:a10f4a0419fadd10735448f7a5b639099 inherit pro_attribs_a00141"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a10f4a0419fadd10735448f7a5b639099"></a>
 <a class="el" href="a00080.html">BoundingBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00141.html#a10f4a0419fadd10735448f7a5b639099">worldBoundingBox_</a></td></tr>

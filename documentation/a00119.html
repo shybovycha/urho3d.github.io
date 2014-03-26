@@ -521,13 +521,17 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:af1ed9692de70b46b278e53cdcb13a38e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1ed9692de70b46b278e53cdcb13a38e"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>OBJECT</b> (<a class="el" href="a00119.html">ConstraintWheel2D</a>)</td></tr>
 <tr class="separator:af1ed9692de70b46b278e53cdcb13a38e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6cd4a941b952c6938296bfb6f391404"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae6cd4a941b952c6938296bfb6f391404"></a>
-virtual b2JointDef *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00119.html#ae6cd4a941b952c6938296bfb6f391404">CreateJointDef</a> ()</td></tr>
-<tr class="memdesc:ae6cd4a941b952c6938296bfb6f391404"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create Joint def. <br/></td></tr>
-<tr class="separator:ae6cd4a941b952c6938296bfb6f391404"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7e6289517d1d3f6bd3f95d86a6ed777"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7e6289517d1d3f6bd3f95d86a6ed777"></a>
+virtual b2JointDef *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00119.html#af7e6289517d1d3f6bd3f95d86a6ed777">GetJointDef</a> ()</td></tr>
+<tr class="memdesc:af7e6289517d1d3f6bd3f95d86a6ed777"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return joint def. <br/></td></tr>
+<tr class="separator:af7e6289517d1d3f6bd3f95d86a6ed777"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:ab7e7644833b6cccb17ab9911d25fbd6f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7e7644833b6cccb17ab9911d25fbd6f"></a>
+b2WheelJointDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00119.html#ab7e7644833b6cccb17ab9911d25fbd6f">jointDef_</a></td></tr>
+<tr class="memdesc:ab7e7644833b6cccb17ab9911d25fbd6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Box2D joint def. <br/></td></tr>
+<tr class="separator:ab7e7644833b6cccb17ab9911d25fbd6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac511342f7d12bf246c781659d28a7c1d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac511342f7d12bf246c781659d28a7c1d"></a>
 <a class="el" href="a00357.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00119.html#ac511342f7d12bf246c781659d28a7c1d">anchor_</a></td></tr>
 <tr class="memdesc:ac511342f7d12bf246c781659d28a7c1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Anchor. <br/></td></tr>
@@ -536,26 +540,6 @@ Private Attributes</h2></td></tr>
 <a class="el" href="a00357.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00119.html#a885e351f8eedc01af9b532942b892ea8">axis_</a></td></tr>
 <tr class="memdesc:a885e351f8eedc01af9b532942b892ea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Axis. <br/></td></tr>
 <tr class="separator:a885e351f8eedc01af9b532942b892ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a000f85bb6e393cfd07498e3787f07e48"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a000f85bb6e393cfd07498e3787f07e48"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00119.html#a000f85bb6e393cfd07498e3787f07e48">enableMotor_</a></td></tr>
-<tr class="memdesc:a000f85bb6e393cfd07498e3787f07e48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable motor. <br/></td></tr>
-<tr class="separator:a000f85bb6e393cfd07498e3787f07e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a727a890d53a9e4cb1b9a6b81831e0158"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a727a890d53a9e4cb1b9a6b81831e0158"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00119.html#a727a890d53a9e4cb1b9a6b81831e0158">maxMotorTorque_</a></td></tr>
-<tr class="memdesc:a727a890d53a9e4cb1b9a6b81831e0158"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max motor torque. <br/></td></tr>
-<tr class="separator:a727a890d53a9e4cb1b9a6b81831e0158"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae29b4fefcfe19ddd977c0a25a15547b5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae29b4fefcfe19ddd977c0a25a15547b5"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00119.html#ae29b4fefcfe19ddd977c0a25a15547b5">motorSpeed_</a></td></tr>
-<tr class="memdesc:ae29b4fefcfe19ddd977c0a25a15547b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Motor speed. <br/></td></tr>
-<tr class="separator:ae29b4fefcfe19ddd977c0a25a15547b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2ddf5e556bdf62cfbe185cce977d5dd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa2ddf5e556bdf62cfbe185cce977d5dd"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00119.html#aa2ddf5e556bdf62cfbe185cce977d5dd">frequencyHz_</a></td></tr>
-<tr class="memdesc:aa2ddf5e556bdf62cfbe185cce977d5dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frequency Hz. <br/></td></tr>
-<tr class="separator:aa2ddf5e556bdf62cfbe185cce977d5dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a857725eb7d31da6cfcf796be6e4ab689"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a857725eb7d31da6cfcf796be6e4ab689"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00119.html#a857725eb7d31da6cfcf796be6e4ab689">dampingRatio_</a></td></tr>
-<tr class="memdesc:a857725eb7d31da6cfcf796be6e4ab689"><td class="mdescLeft">&#160;</td><td class="mdescRight">Damping ratio. <br/></td></tr>
-<tr class="separator:a857725eb7d31da6cfcf796be6e4ab689"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
