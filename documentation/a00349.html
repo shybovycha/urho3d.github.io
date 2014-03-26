@@ -423,10 +423,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a003
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00349.html#a854a93001fe61e237b3ab2a7db68ed38">ProcessMove</a> (const <a class="el" href="a00181.html">IntVector2</a> &amp;cursorPos, int buttons, int qualifiers, <a class="el" href="a00125.html">Cursor</a> *cursor, bool cursorVisible)</td></tr>
 <tr class="memdesc:a854a93001fe61e237b3ab2a7db68ed38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle mouse or touch move. <br/></td></tr>
 <tr class="separator:a854a93001fe61e237b3ab2a7db68ed38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b1e72950ad5a3fb785271d0d4bbb880"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8b1e72950ad5a3fb785271d0d4bbb880"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00349.html#a8b1e72950ad5a3fb785271d0d4bbb880">SendDragEvent</a> (<a class="el" href="a00331.html">StringHash</a> eventType, <a class="el" href="a00351.html">UIElement</a> *element, const <a class="el" href="a00181.html">IntVector2</a> &amp;screenPos)</td></tr>
-<tr class="memdesc:a8b1e72950ad5a3fb785271d0d4bbb880"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a <a class="el" href="a00349.html" title="UI subsystem. Manages the graphical user interface.">UI</a> element drag event. <br/></td></tr>
-<tr class="separator:a8b1e72950ad5a3fb785271d0d4bbb880"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76e3a1ddc3a6d3af95ec53a2a99c0520"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a76e3a1ddc3a6d3af95ec53a2a99c0520"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00349.html#a76e3a1ddc3a6d3af95ec53a2a99c0520">SendDragOrHoverEvent</a> (<a class="el" href="a00331.html">StringHash</a> eventType, <a class="el" href="a00351.html">UIElement</a> *element, const <a class="el" href="a00181.html">IntVector2</a> &amp;screenPos)</td></tr>
+<tr class="memdesc:a76e3a1ddc3a6d3af95ec53a2a99c0520"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a <a class="el" href="a00349.html" title="UI subsystem. Manages the graphical user interface.">UI</a> element drag or hover begin event. <br/></td></tr>
+<tr class="separator:a76e3a1ddc3a6d3af95ec53a2a99c0520"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67a49af2ac639eafb4a073bca39d1880"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a67a49af2ac639eafb4a073bca39d1880"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00349.html#a67a49af2ac639eafb4a073bca39d1880">SendClickEvent</a> (<a class="el" href="a00331.html">StringHash</a> eventType, <a class="el" href="a00351.html">UIElement</a> *element, const <a class="el" href="a00181.html">IntVector2</a> &amp;pos, int button, int buttons, int qualifiers)</td></tr>
 <tr class="memdesc:a67a49af2ac639eafb4a073bca39d1880"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a <a class="el" href="a00349.html" title="UI subsystem. Manages the graphical user interface.">UI</a> click or double click event. <br/></td></tr>
@@ -632,6 +632,11 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <a class="el" href="a00369.html">WeakPtr</a>&lt; <a class="el" href="a00351.html">UIElement</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00349.html#a71579095f6e960656a8a247f8e3c19dc">doubleClickElement_</a></td></tr>
 <tr class="memdesc:a71579095f6e960656a8a247f8e3c19dc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00349.html" title="UI subsystem. Manages the graphical user interface.">UI</a> element last clicked for tracking double clicks. <br/></td></tr>
 <tr class="separator:a71579095f6e960656a8a247f8e3c19dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93fd6671fd9b27fa5be7eb793f1e5274"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a93fd6671fd9b27fa5be7eb793f1e5274"></a>
+<a class="el" href="a00169.html">HashMap</a>&lt; <a class="el" href="a00369.html">WeakPtr</a>&lt; <a class="el" href="a00351.html">UIElement</a> &gt;<br class="typebreak"/>
+, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00349.html#a93fd6671fd9b27fa5be7eb793f1e5274">hoveredElements_</a></td></tr>
+<tr class="memdesc:a93fd6671fd9b27fa5be7eb793f1e5274"><td class="mdescLeft">&#160;</td><td class="mdescRight">Currently hovered elements. <br/></td></tr>
+<tr class="separator:a93fd6671fd9b27fa5be7eb793f1e5274"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
