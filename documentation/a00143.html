@@ -682,9 +682,14 @@ Private Member Functions</h2></td></tr>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#ae65a2e41596e89d8d886a1ab9b4cea57">OnWorldBoundingBoxUpdate</a> ()</td></tr>
 <tr class="memdesc:ae65a2e41596e89d8d886a1ab9b4cea57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recalculate the world-space bounding box. <br/></td></tr>
 <tr class="separator:ae65a2e41596e89d8d886a1ab9b4cea57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6157393f9ccc4bb66cf489a964a5f4e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a6157393f9ccc4bb66cf489a964a5f4e4">HandleBeginViewUpdate</a> (<a class="el" href="a00331.html">StringHash</a> eventType, <a class="el" href="a00169.html">VariantMap</a> &amp;eventData)</td></tr>
-<tr class="memdesc:a6157393f9ccc4bb66cf489a964a5f4e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle view update begin event. Determine <a class="el" href="a00142.html" title="Base class for 2D visible components.">Drawable2D</a>'s and their batches here.  <a href="#a6157393f9ccc4bb66cf489a964a5f4e4">More...</a><br/></td></tr>
+<tr class="memitem:a6157393f9ccc4bb66cf489a964a5f4e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6157393f9ccc4bb66cf489a964a5f4e4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a6157393f9ccc4bb66cf489a964a5f4e4">HandleBeginViewUpdate</a> (<a class="el" href="a00331.html">StringHash</a> eventType, <a class="el" href="a00169.html">VariantMap</a> &amp;eventData)</td></tr>
+<tr class="memdesc:a6157393f9ccc4bb66cf489a964a5f4e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle view update begin event. Determine <a class="el" href="a00142.html" title="Base class for 2D visible components.">Drawable2D</a>'s and their batches here. <br/></td></tr>
 <tr class="separator:a6157393f9ccc4bb66cf489a964a5f4e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a375a4e1fcd53d46ca0f182dbe39ef982"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a375a4e1fcd53d46ca0f182dbe39ef982"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a375a4e1fcd53d46ca0f182dbe39ef982">CheckVisibility</a> (<a class="el" href="a00142.html">Drawable2D</a> *drawable) const </td></tr>
+<tr class="memdesc:a375a4e1fcd53d46ca0f182dbe39ef982"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check visibility. <br/></td></tr>
+<tr class="separator:a375a4e1fcd53d46ca0f182dbe39ef982"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3317ea4407a206133900003b1143e259"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3317ea4407a206133900003b1143e259"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a3317ea4407a206133900003b1143e259">AddBatch</a> (<a class="el" href="a00204.html">Material</a> *material, unsigned indexStart, unsigned indexCount, unsigned vertexStart, unsigned vertexCount)</td></tr>
 <tr class="memdesc:a3317ea4407a206133900003b1143e259"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add batch. <br/></td></tr>
@@ -716,6 +721,14 @@ Private Attributes</h2></td></tr>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#af4458136a3ca96ce3fe375bb0e291ba2">orderDirty_</a></td></tr>
 <tr class="memdesc:af4458136a3ca96ce3fe375bb0e291ba2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Order dirty. <br/></td></tr>
 <tr class="separator:af4458136a3ca96ce3fe375bb0e291ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dfefbb2a51279a6e53a771e85c929c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5dfefbb2a51279a6e53a771e85c929c7"></a>
+const <a class="el" href="a00160.html">Frustum</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a5dfefbb2a51279a6e53a771e85c929c7">frustum_</a></td></tr>
+<tr class="memdesc:a5dfefbb2a51279a6e53a771e85c929c7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00160.html" title="Convex constructed of 6 planes.">Frustum</a> for current frame. <br/></td></tr>
+<tr class="separator:a5dfefbb2a51279a6e53a771e85c929c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46c12ba0a79d0e491350121c4abab9e9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46c12ba0a79d0e491350121c4abab9e9"></a>
+<a class="el" href="a00080.html">BoundingBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a46c12ba0a79d0e491350121c4abab9e9">frustumBoundingBox_</a></td></tr>
+<tr class="memdesc:a46c12ba0a79d0e491350121c4abab9e9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00160.html" title="Convex constructed of 6 planes.">Frustum</a> bounding box for current frame. <br/></td></tr>
+<tr class="separator:a46c12ba0a79d0e491350121c4abab9e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2b6b03d8719e16f1f6d37cb30bd2c72"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2b6b03d8719e16f1f6d37cb30bd2c72"></a>
 <a class="el" href="a00257.html">PODVector</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#ad2b6b03d8719e16f1f6d37cb30bd2c72">drawablesVisible_</a></td></tr>
 <tr class="memdesc:ad2b6b03d8719e16f1f6d37cb30bd2c72"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00141.html" title="Base class for visible components.">Drawable</a> visibility results. <br/></td></tr>
@@ -884,61 +897,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Proxy for 2D visible components. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a6157393f9ccc4bb66cf489a964a5f4e4"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::DrawableProxy2D::HandleBeginViewUpdate </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00331.html">StringHash</a>&#160;</td>
-          <td class="paramname"><em>eventType</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00169.html">VariantMap</a> &amp;&#160;</td>
-          <td class="paramname"><em>eventData</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Handle view update begin event. Determine <a class="el" href="a00142.html" title="Base class for 2D visible components.">Drawable2D</a>'s and their batches here. </p>
-<dl class="todo"><dt><b><a class="el" href="a00832.html#_todo000033">Todo:</a></b></dt><dd>We could add frustum culling, but that would be problematic if we have several viewports. Right now all <a class="el" href="a00142.html" title="Base class for 2D visible components.">Drawable2D</a>'s are always submitted for rendering </dd></dl>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a00143_a6157393f9ccc4bb66cf489a964a5f4e4_cgraph.svg" width="100%" height="526"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00143_a6157393f9ccc4bb66cf489a964a5f4e4_icgraph.svg" width="443" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/travis/build/urho3d/Urho3D/Source/Engine/Urho2D/DrawableProxy2D.h</li>
 <li>/home/travis/build/urho3d/Urho3D/Source/Engine/Urho2D/DrawableProxy2D.cpp</li>
 </ul>
