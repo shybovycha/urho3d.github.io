@@ -98,6 +98,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00165.html#a686213415a77f2ce656a6fb823c19dfb">SetFlushGPU</a> (bool enable)</td></tr>
 <tr class="memdesc:a686213415a77f2ce656a6fb823c19dfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether to flush the GPU command buffer to prevent multiple frames being queued and uneven frame timesteps. Not yet implemented on OpenGL. <br/></td></tr>
 <tr class="separator:a686213415a77f2ce656a6fb823c19dfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab376231d9cf6828eb33cc1ab796d09bb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab376231d9cf6828eb33cc1ab796d09bb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00165.html#ab376231d9cf6828eb33cc1ab796d09bb">SetOrientations</a> (const <a class="el" href="a00330.html">String</a> &amp;orientations)</td></tr>
+<tr class="memdesc:ab376231d9cf6828eb33cc1ab796d09bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set allowed screen orientations as a space-separated list of "LandscapeLeft", "LandscapeRight", "Portrait" and "PortraitUpsideDown". Affects currently only iOS platform. <br/></td></tr>
+<tr class="separator:ab376231d9cf6828eb33cc1ab796d09bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a116de4d90d4b556f408b58878bfd5654"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a116de4d90d4b556f408b58878bfd5654"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00165.html#a116de4d90d4b556f408b58878bfd5654">ToggleFullscreen</a> ()</td></tr>
 <tr class="memdesc:a116de4d90d4b556f408b58878bfd5654"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggle between full screen and windowed mode. Return true if successful. <br/></td></tr>
@@ -405,6 +409,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00165.html#a28781e112013da450a4a6748c9550fd9">GetFlushGPU</a> () const </td></tr>
 <tr class="memdesc:a28781e112013da450a4a6748c9550fd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the GPU command buffer is flushed each frame. Not yet implemented on OpenGL. <br/></td></tr>
 <tr class="separator:a28781e112013da450a4a6748c9550fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b499580416622ea885df16777d7daaa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b499580416622ea885df16777d7daaa"></a>
+const <a class="el" href="a00330.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00165.html#a4b499580416622ea885df16777d7daaa">GetOrientations</a> () const </td></tr>
+<tr class="memdesc:a4b499580416622ea885df16777d7daaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return allowed screen orientations. <br/></td></tr>
+<tr class="separator:a4b499580416622ea885df16777d7daaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ac4551141baca4b8362cfce869771b6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ac4551141baca4b8362cfce869771b6"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00165.html#a3ac4551141baca4b8362cfce869771b6">IsDeviceLost</a> () const </td></tr>
 <tr class="memdesc:a3ac4551141baca4b8362cfce869771b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether device is lost, and can not yet render. <br/></td></tr>
@@ -1211,6 +1219,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 <a class="el" href="a00307.html">SharedPtr</a>&lt; <a class="el" href="a00302.html">ShaderPrecache</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00165.html#aaaff56d3a46ca22e9ed4af0187b71428">shaderPrecache_</a></td></tr>
 <tr class="memdesc:aaaff56d3a46ca22e9ed4af0187b71428"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00300.html" title="Shader resource consisting of several shader variations.">Shader</a> precache utility. <br/></td></tr>
 <tr class="separator:aaaff56d3a46ca22e9ed4af0187b71428"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8969d9ec7f4abd00c5bbed19ced6d43"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac8969d9ec7f4abd00c5bbed19ced6d43"></a>
+<a class="el" href="a00330.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00165.html#ac8969d9ec7f4abd00c5bbed19ced6d43">orientations_</a></td></tr>
+<tr class="memdesc:ac8969d9ec7f4abd00c5bbed19ced6d43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allowed screen orientations. <br/></td></tr>
+<tr class="separator:ac8969d9ec7f4abd00c5bbed19ced6d43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
