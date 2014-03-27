@@ -86,6 +86,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#ab2894033dffd0a7f085612cc6dfd390e">MarkOrderDirty</a> ()</td></tr>
 <tr class="memdesc:ab2894033dffd0a7f085612cc6dfd390e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark order dirty. <br/></td></tr>
 <tr class="separator:ab2894033dffd0a7f085612cc6dfd390e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a375a4e1fcd53d46ca0f182dbe39ef982"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a375a4e1fcd53d46ca0f182dbe39ef982"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a375a4e1fcd53d46ca0f182dbe39ef982">CheckVisibility</a> (<a class="el" href="a00142.html">Drawable2D</a> *drawable) const </td></tr>
+<tr class="memdesc:a375a4e1fcd53d46ca0f182dbe39ef982"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check visibility. <br/></td></tr>
+<tr class="separator:a375a4e1fcd53d46ca0f182dbe39ef982"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_a00141"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00141')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="a00141.html">Urho3D::Drawable</a></td></tr>
 <tr class="memitem:a5a9391dafb2151dde0a717d59413caab inherit pub_methods_a00141"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5a9391dafb2151dde0a717d59413caab"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00141.html#a5a9391dafb2151dde0a717d59413caab">Drawable</a> (<a class="el" href="a00120.html">Context</a> *context, unsigned char drawableFlags)</td></tr>
@@ -686,10 +690,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a6157393f9ccc4bb66cf489a964a5f4e4">HandleBeginViewUpdate</a> (<a class="el" href="a00331.html">StringHash</a> eventType, <a class="el" href="a00169.html">VariantMap</a> &amp;eventData)</td></tr>
 <tr class="memdesc:a6157393f9ccc4bb66cf489a964a5f4e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle view update begin event. Determine <a class="el" href="a00142.html" title="Base class for 2D visible components.">Drawable2D</a>'s and their batches here. <br/></td></tr>
 <tr class="separator:a6157393f9ccc4bb66cf489a964a5f4e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a375a4e1fcd53d46ca0f182dbe39ef982"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a375a4e1fcd53d46ca0f182dbe39ef982"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a375a4e1fcd53d46ca0f182dbe39ef982">CheckVisibility</a> (<a class="el" href="a00142.html">Drawable2D</a> *drawable) const </td></tr>
-<tr class="memdesc:a375a4e1fcd53d46ca0f182dbe39ef982"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check visibility. <br/></td></tr>
-<tr class="separator:a375a4e1fcd53d46ca0f182dbe39ef982"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3317ea4407a206133900003b1143e259"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3317ea4407a206133900003b1143e259"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a3317ea4407a206133900003b1143e259">AddBatch</a> (<a class="el" href="a00204.html">Material</a> *material, unsigned indexStart, unsigned indexCount, unsigned vertexStart, unsigned vertexCount)</td></tr>
 <tr class="memdesc:a3317ea4407a206133900003b1143e259"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add batch. <br/></td></tr>
@@ -729,10 +729,6 @@ const <a class="el" href="a00160.html">Frustum</a> *&#160;</td><td class="memIte
 <a class="el" href="a00080.html">BoundingBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a46c12ba0a79d0e491350121c4abab9e9">frustumBoundingBox_</a></td></tr>
 <tr class="memdesc:a46c12ba0a79d0e491350121c4abab9e9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00160.html" title="Convex constructed of 6 planes.">Frustum</a> bounding box for current frame. <br/></td></tr>
 <tr class="separator:a46c12ba0a79d0e491350121c4abab9e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2b6b03d8719e16f1f6d37cb30bd2c72"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2b6b03d8719e16f1f6d37cb30bd2c72"></a>
-<a class="el" href="a00257.html">PODVector</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#ad2b6b03d8719e16f1f6d37cb30bd2c72">drawablesVisible_</a></td></tr>
-<tr class="memdesc:ad2b6b03d8719e16f1f6d37cb30bd2c72"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00141.html" title="Base class for visible components.">Drawable</a> visibility results. <br/></td></tr>
-<tr class="separator:ad2b6b03d8719e16f1f6d37cb30bd2c72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4b6539907876f61c12e5a26588732aa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4b6539907876f61c12e5a26588732aa"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#ab4b6539907876f61c12e5a26588732aa">indexCount_</a></td></tr>
 <tr class="memdesc:ab4b6539907876f61c12e5a26588732aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total index count for the current frame. <br/></td></tr>
