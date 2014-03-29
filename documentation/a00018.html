@@ -33,11 +33,17 @@ Graphics</h1>
 <p>Screen resolution, fullscreen/windowed, vertical sync and hardware multisampling level are all set at once by calling <a class="el" href="a00165.html" title="Graphics subsystem. Manages the application window, rendering state and GPU resources.">Graphics</a>'s <a class="el" href="a00165.html#adc16c8a19af1584c902fe29e3d21d6eb">SetMode()</a> function. There is also an experimental option of rendering to an existing window by passing its OS-specific handle to <a class="el" href="a00165.html#abb1c387ef3e39d11a19066f12c420cc6">SetExternalWindow()</a> before setting the initial screen mode.</p>
 <p>When setting the initial screen mode, <a class="el" href="a00165.html" title="Graphics subsystem. Manages the application window, rendering state and GPU resources.">Graphics</a> does a few checks:</p>
 <ul>
-<li>For Direct3D9, the supported shader model is checked. 2 is minimum, but 3 will be used if available. SM2 can be forced by calling <a class="el" href="a00165.html#a88b8eb411b824937171647ea4d74d4c6">SetForceSM2()</a> before setting the initial screen mode.</li>
+<li>For Direct3D9, the supported shader model is checked. 2 is minimum, but 3 will be used if available. For testing, SM2 can be forced by calling <a class="el" href="a00165.html#a88b8eb411b824937171647ea4d74d4c6">SetForceSM2()</a> before setting the initial screen mode.</li>
 <li>For OpenGL, version 2.0 with EXT_framebuffer_object, EXT_packed_depth_stencil and EXT_texture_filter_anisotropic extensions is checked for.</li>
 <li>Is hardware instancing supported? This requires Shader Model 3 on Direct3D9 and the ARB_instanced_arrays extension on OpenGL.</li>
-<li>Are hardware shadow maps supported? Both ATI &amp; NVIDIA style shadow maps can be used. If neither are available, no shadows will be rendered.</li>
+<li>Are hardware shadow maps supported? Both AMD &amp; NVIDIA style shadow maps can be used. If neither are available, no shadows will be rendered.</li>
 <li>Are light pre-pass and deferred rendering modes supported? These require sufficient multiple rendertarget support, and R32F texture format support.</li>
+</ul>
+<p>Shader model 2 has the following limitations due to limited pixel shader instruction count:</p>
+<ul>
+<li>Directional light shadows support a maximum of 3 cascade splits instead of 4.</li>
+<li>High quality (4 samples) shadow mapping is not supported.</li>
+<li>Height fog is not supported.</li>
 </ul>
 <h1><a class="anchor" id="Rendering_Renderer"></a>
 Renderer</h1>
@@ -65,7 +71,7 @@ Renderer</h1>
 </ul>
 <h1><a class="anchor" id="Rendering_Drawable"></a>
 Rendering components</h1>
-<p>The rendering-related components defined by the Graphics, UI and Urho2D libraries are:</p>
+<p>The rendering-related components defined by the Graphics and UI libraries are:</p>
 <ul>
 <li><a class="el" href="a00235.html" title="Octree component. Should be added only to the root scene node">Octree</a>: spatial partitioning of Drawables for accelerated visibility queries. Needs to be created to the <a class="el" href="a00286.html" title="Root scene node, represents the whole scene.">Scene</a> (root node.)</li>
 <li><a class="el" href="a00084.html" title="Camera component.">Camera</a>: describes a viewpoint for rendering, including projection parameters (FOV, near/far distance, perspective/orthographic)</li>
@@ -84,6 +90,7 @@ Rendering components</h1>
 <li><a class="el" href="a00378.html" title="Component that describes global rendering properties">Zone</a>: defines ambient light and fog settings for objects inside the zone volume.</li>
 <li><a class="el" href="a00337.html" title="3D text component.">Text3D</a>: text that is rendered into the 3D view.</li>
 </ul>
+<p>Additionally there are 2D drawable components defined by the <a class="el" href="a00034.html">Urho2D</a> library.</p>
 <h1><a class="anchor" id="Rendering_Optimizations"></a>
 Optimizations</h1>
 <p>The following techniques will be used to reduce the amount of CPU and GPU work when rendering. By default they are all on:</p>

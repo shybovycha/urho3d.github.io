@@ -2070,6 +2070,7 @@ Classes</h1>
 <li>Texture* GetRampTexture() const</li>
 <li>Texture* GetShapeTexture() const</li>
 <li><a class="el" href="a00160.html" title="Convex constructed of 6 planes.">Frustum</a> GetFrustum() const</li>
+<li>int GetNumShadowSplits() const</li>
 <li>bool IsNegative() const</li>
 </ul>
 <p>Properties:</p>
@@ -2093,6 +2094,7 @@ Classes</h1>
 <li>Texture* rampTexture</li>
 <li>Texture* shapeTexture</li>
 <li><a class="el" href="a00160.html" title="Convex constructed of 6 planes.">Frustum</a> frustum (readonly)</li>
+<li>int numShadowSplits (readonly)</li>
 <li>bool negative (readonly)</li>
 <li><a class="el" href="a00096.html" title="RGBA color.">Color</a> effectiveColor (readonly)</li>
 <li>float effectiveSpecularIntensity (readonly)</li>
@@ -3423,7 +3425,6 @@ Classes</h1>
 <li>void SetShadowQuality(int quality)</li>
 <li>void SetReuseShadowMaps(bool enable)</li>
 <li>void SetMaxShadowMaps(int shadowMaps)</li>
-<li>void SetMaxShadowCascades(int cascades)</li>
 <li>void SetDynamicInstancing(bool enable)</li>
 <li>void SetMinInstances(int instances)</li>
 <li>void SetMaxInstanceTriangles(int triangles)</li>
@@ -3446,7 +3447,6 @@ Classes</h1>
 <li>int GetShadowQuality() const</li>
 <li>bool GetReuseShadowMaps() const</li>
 <li>int GetMaxShadowMaps() const</li>
-<li>int GetMaxShadowCascades() const</li>
 <li>bool GetDynamicInstancing() const</li>
 <li>int GetMinInstances() const</li>
 <li>int GetMaxInstanceTriangles() const</li>
@@ -3487,7 +3487,6 @@ Classes</h1>
 <li>int shadowQuality</li>
 <li>bool reuseShadowMaps</li>
 <li>int maxShadowMaps</li>
-<li>int maxShadowCascades</li>
 <li>bool dynamicInstancing</li>
 <li>int minInstances</li>
 <li>int maxInstanceTriangles</li>
@@ -5656,50 +5655,6 @@ Enumerations</h1>
 <li>int CM_CLAMP</li>
 <li>int CM_PINGPONG</li>
 </ul>
-<h3>DeferredLightPSVariation</h3>
-<ul>
-<li>int DLPS_NONE</li>
-<li>int DLPS_SPOT</li>
-<li>int DLPS_POINT</li>
-<li>int DLPS_POINTMASK</li>
-<li>int DLPS_SPEC</li>
-<li>int DLPS_SPOTSPEC</li>
-<li>int DLPS_POINTSPEC</li>
-<li>int DLPS_POINTMASKSPEC</li>
-<li>int DLPS_SHADOW</li>
-<li>int DLPS_SPOTSHADOW</li>
-<li>int DLPS_POINTSHADOW</li>
-<li>int DLPS_POINTMASKSHADOW</li>
-<li>int DLPS_SHADOWSPEC</li>
-<li>int DLPS_SPOTSHADOWSPEC</li>
-<li>int DLPS_POINTSHADOWSPEC</li>
-<li>int DLPS_POINTMASKSHADOWSPEC</li>
-<li>int DLPS_ORTHO</li>
-<li>int DLPS_ORTHOSPOT</li>
-<li>int DLPS_ORTHOPOINT</li>
-<li>int DLPS_ORTHOPOINTMASK</li>
-<li>int DLPS_ORTHOSPEC</li>
-<li>int DLPS_ORTHOSPOTSPEC</li>
-<li>int DLPS_ORTHOPOINTSPEC</li>
-<li>int DLPS_ORTHOPOINTMASKSPEC</li>
-<li>int DLPS_ORTHOSHADOW</li>
-<li>int DLPS_ORTHOSPOTSHADOW</li>
-<li>int DLPS_ORTHOPOINTSHADOW</li>
-<li>int DLPS_ORTHOPOINTMASKSHADOW</li>
-<li>int DLPS_ORTHOSHADOWSPEC</li>
-<li>int DLPS_ORTHOSPOTSHADOWSPEC</li>
-<li>int DLPS_ORTHOPOINTSHADOWSPEC</li>
-<li>int DLPS_ORTHOPOINTMASKSHADOWSPEC</li>
-<li>int MAX_DEFERRED_LIGHT_PS_VARIATIONS</li>
-</ul>
-<h3>DeferredLightVSVariation</h3>
-<ul>
-<li>int DLVS_NONE</li>
-<li>int DLVS_DIR</li>
-<li>int DLVS_ORTHO</li>
-<li>int DLVS_ORTHODIR</li>
-<li>int MAX_DEFERRED_LIGHT_VS_VARIATIONS</li>
-</ul>
 <h3>EmitterType</h3>
 <ul>
 <li>int EMITTER_SPHERE</li>
@@ -5782,47 +5737,11 @@ Enumerations</h1>
 <li>int LM_HORIZONTAL</li>
 <li>int LM_VERTICAL</li>
 </ul>
-<h3>LightPSVariation</h3>
-<ul>
-<li>int LPS_NONE</li>
-<li>int LPS_SPOT</li>
-<li>int LPS_POINT</li>
-<li>int LPS_POINTMASK</li>
-<li>int LPS_SPEC</li>
-<li>int LPS_SPOTSPEC</li>
-<li>int LPS_POINTSPEC</li>
-<li>int LPS_POINTMASKSPEC</li>
-<li>int LPS_SHADOW</li>
-<li>int LPS_SPOTSHADOW</li>
-<li>int LPS_POINTSHADOW</li>
-<li>int LPS_POINTMASKSHADOW</li>
-<li>int LPS_SHADOWSPEC</li>
-<li>int LPS_SPOTSHADOWSPEC</li>
-<li>int LPS_POINTSHADOWSPEC</li>
-<li>int LPS_POINTMASKSHADOWSPEC</li>
-<li>int MAX_LIGHT_PS_VARIATIONS</li>
-</ul>
 <h3>LightType</h3>
 <ul>
 <li>int LIGHT_DIRECTIONAL</li>
 <li>int LIGHT_SPOT</li>
 <li>int LIGHT_POINT</li>
-</ul>
-<h3>LightVSVariation</h3>
-<ul>
-<li>int LVS_DIR</li>
-<li>int LVS_SPOT</li>
-<li>int LVS_POINT</li>
-<li>int LVS_SPEC</li>
-<li>int LVS_SPOTSPEC</li>
-<li>int LVS_POINTSPEC</li>
-<li>int LVS_SHADOW</li>
-<li>int LVS_SPOTSHADOW</li>
-<li>int LVS_POINTSHADOW</li>
-<li>int LVS_DIRSPECSHADOW</li>
-<li>int LVS_SPOTSPECSHADOW</li>
-<li>int LVS_POINTSPECSHADOW</li>
-<li>int MAX_LIGHT_VS_VARIATIONS</li>
 </ul>
 <h3>LockState</h3>
 <ul>
@@ -6007,15 +5926,6 @@ Enumerations</h1>
 <li>int ELEMENT_INSTANCEMATRIX3</li>
 <li>int MAX_VERTEX_ELEMENTS</li>
 </ul>
-<h3>VertexLightVSVariation</h3>
-<ul>
-<li>int VLVS_NOLIGHTS</li>
-<li>int VLVS_1LIGHT</li>
-<li>int VLVS_2LIGHTS</li>
-<li>int VLVS_3LIGHTS</li>
-<li>int VLVS_4LIGHTS</li>
-<li>int MAX_VERTEXLIGHT_VS_VARIATIONS</li>
-</ul>
 <h3>VerticalAlignment</h3>
 <ul>
 <li>int VA_TOP</li>
@@ -6196,7 +6106,6 @@ Global constants</h1>
 <li>int HAT_LEFT</li>
 <li>int HAT_RIGHT</li>
 <li>int HAT_UP</li>
-<li>int INSTANCING_BUFFER_DEFAULT_SIZE</li>
 <li>int KEY_0</li>
 <li>int KEY_1</li>
 <li>int KEY_2</li>
@@ -6596,7 +6505,6 @@ Global constants</h1>
 <li>int SHADOWQUALITY_HIGH_24BIT</li>
 <li>int SHADOWQUALITY_LOW_16BIT</li>
 <li>int SHADOWQUALITY_LOW_24BIT</li>
-<li>int SHADOW_MIN_PIXELS</li>
 <li>unsigned VO_DISABLE_OCCLUSION</li>
 <li>unsigned VO_DISABLE_SHADOWS</li>
 <li>unsigned VO_LOW_MATERIAL_QUALITY</li>
