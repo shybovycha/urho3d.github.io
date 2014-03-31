@@ -42,9 +42,9 @@ Graphics</h1>
 <p>Shader model 2 has the following limitations due to limited pixel shader instruction count:</p>
 <ul>
 <li>Directional light shadows support a maximum of 3 cascade splits instead of 4.</li>
-<li>Combining the ambient pass with the first forward light (lit base pass optimization) is not supported with shadowed lights when 4 shadow samples are being used.</li>
 <li>Shadowed point lights do not support specular calculations in forward rendering.</li>
-<li>Height fog is not supported.</li>
+<li>Complex materials do not combine the ambient pass with the first forward light (lit base pass optimization.)</li>
+<li>Complex forward rendered materials (eg. normal + specular map + alpha masking) combined with shadow mapping or height fog may not work.</li>
 </ul>
 <h1><a class="anchor" id="Rendering_Renderer"></a>
 Renderer</h1>
