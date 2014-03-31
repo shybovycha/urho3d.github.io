@@ -3626,6 +3626,7 @@ Classes</h1>
 <li><a class="el" href="a00207.html" title="3x3 matrix for rotation and scaling.">Matrix3</a> Scaled(const Vector3&amp;) const</li>
 <li>void SetScale(const Vector3&amp;)</li>
 <li>void SetScale(float)</li>
+<li><a class="el" href="a00330.html" title="String class.">String</a> ToString() const</li>
 <li><a class="el" href="a00207.html" title="3x3 matrix for rotation and scaling.">Matrix3</a> Transpose() const</li>
 </ul>
 <p>Properties:</p>
@@ -3655,6 +3656,7 @@ Classes</h1>
 <li>void SetTranslation(const Vector3&amp;)</li>
 <li><a class="el" href="a00207.html" title="3x3 matrix for rotation and scaling.">Matrix3</a> ToMatrix3() const</li>
 <li><a class="el" href="a00209.html" title="4x4 matrix for arbitrary linear transforms including projection.">Matrix4</a> ToMatrix4() const</li>
+<li><a class="el" href="a00330.html" title="String class.">String</a> ToString() const</li>
 <li><a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a> Translation() const</li>
 </ul>
 <p>Properties:</p>
@@ -3686,6 +3688,7 @@ Classes</h1>
 <li>void SetScale(float)</li>
 <li>void SetTranslation(const Vector3&amp;)</li>
 <li><a class="el" href="a00207.html" title="3x3 matrix for rotation and scaling.">Matrix3</a> ToMatrix3() const</li>
+<li><a class="el" href="a00330.html" title="String class.">String</a> ToString() const</li>
 <li><a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a> Translation() const</li>
 <li><a class="el" href="a00209.html" title="4x4 matrix for arbitrary linear transforms including projection.">Matrix4</a> Transpose() const</li>
 </ul>
@@ -6522,6 +6525,9 @@ Classes</h1>
 <li><a class="el" href="a00180.html" title="Two-dimensional bounding rectangle with integer values.">IntRect</a> ToIntRect() const</li>
 <li><a class="el" href="a00181.html" title="Two-dimensional vector with integer values.">IntVector2</a> ToIntVector2() const</li>
 <li><a class="el" href="a00330.html" title="String class.">String</a> ToLower() const</li>
+<li><a class="el" href="a00207.html" title="3x3 matrix for rotation and scaling.">Matrix3</a> ToMatrix3() const</li>
+<li><a class="el" href="a00208.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> ToMatrix3x4() const</li>
+<li><a class="el" href="a00209.html" title="4x4 matrix for arbitrary linear transforms including projection.">Matrix4</a> ToMatrix4() const</li>
 <li><a class="el" href="a00262.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> ToQuaternion() const</li>
 <li>uint ToUInt() const</li>
 <li><a class="el" href="a00330.html" title="String class.">String</a> ToUpper() const</li>
@@ -7430,6 +7436,9 @@ Classes</h1>
 <li><a class="el" href="a00354.html" title="Variable that supports a fixed set of types.">Variant</a>[]@ GetVariantVector() const</li>
 <li>const <a class="el" href="a00180.html" title="Two-dimensional bounding rectangle with integer values.">IntRect</a>&amp; GetIntRect() const</li>
 <li>const <a class="el" href="a00181.html" title="Two-dimensional vector with integer values.">IntVector2</a>&amp; GetIntVector2() const</li>
+<li>const <a class="el" href="a00207.html" title="3x3 matrix for rotation and scaling.">Matrix3</a>&amp; GetMatrix3() const</li>
+<li>const <a class="el" href="a00208.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a>&amp; GetMatrix3x4() const</li>
+<li>const <a class="el" href="a00209.html" title="4x4 matrix for arbitrary linear transforms including projection.">Matrix4</a>&amp; GetMatrix4() const</li>
 <li>const <a class="el" href="a00262.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; GetQuaternion() const</li>
 <li>const <a class="el" href="a00282.html" title="Typed resource reference.">ResourceRef</a>&amp; GetResourceRef() const</li>
 <li>const <a class="el" href="a00283.html" title="List of typed resource references.">ResourceRefList</a>&amp; GetResourceRefList() const</li>
@@ -7917,6 +7926,9 @@ Classes</h1>
 <li><a class="el" href="a00096.html" title="RGBA color.">Color</a> GetColor(const String&amp;) const</li>
 <li>float GetFloat(const String&amp;) const</li>
 <li>int GetInt(const String&amp;) const</li>
+<li><a class="el" href="a00207.html" title="3x3 matrix for rotation and scaling.">Matrix3</a> GetMatrix3(const String&amp;) const</li>
+<li><a class="el" href="a00208.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> GetMatrix3x4(const String&amp;) const</li>
+<li><a class="el" href="a00209.html" title="4x4 matrix for arbitrary linear transforms including projection.">Matrix4</a> GetMatrix4(const String&amp;) const</li>
 <li><a class="el" href="a00374.html" title="Element in an XML file.">XMLElement</a> GetNext(const <a class="el" href="a00330.html" title="String class.">String</a>&amp; = <a class="el" href="a00330.html" title="String class.">String</a> ( )) const</li>
 <li><a class="el" href="a00262.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> GetQuaternion(const String&amp;) const</li>
 <li><a class="el" href="a00282.html" title="Typed resource reference.">ResourceRef</a> GetResourceRef() const</li>
@@ -7947,6 +7959,9 @@ Classes</h1>
 <li>bool SetColor(const String&amp;, const Color&amp;)</li>
 <li>bool SetFloat(const String&amp;, float)</li>
 <li>bool SetInt(const String&amp;, int)</li>
+<li>bool SetMatrix3(const String&amp;, const Matrix3&amp;)</li>
+<li>bool SetMatrix3x4(const String&amp;, const Matrix3x4&amp;)</li>
+<li>bool SetMatrix4(const String&amp;, const Matrix4&amp;)</li>
 <li>bool SetQuaternion(const String&amp;, const Quaternion&amp;)</li>
 <li>bool SetResourceRef(const String&amp;, const ResourceRef&amp;)</li>
 <li>bool SetResourceRefList(const String&amp;, const ResourceRefList&amp;)</li>
@@ -8395,6 +8410,9 @@ Enumerations</h1>
 <li>VAR_INTRECT</li>
 <li>VAR_INTVECTOR2</li>
 <li>VAR_PTR</li>
+<li>VAR_MATRIX3</li>
+<li>VAR_MATRIX3X4</li>
+<li>VAR_MATRIX4</li>
 </ul>
 <h3>VerticalAlignment</h3>
 <ul>

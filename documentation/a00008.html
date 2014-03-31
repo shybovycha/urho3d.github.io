@@ -2294,6 +2294,7 @@ Classes</h1>
 <li><a class="el" href="a00207.html" title="3x3 matrix for rotation and scaling.">Matrix3</a> Scaled(const Vector3&amp; scale) const</li>
 <li>bool Equals(const Matrix3&amp; rhs) const</li>
 <li><a class="el" href="a00207.html" title="3x3 matrix for rotation and scaling.">Matrix3</a> Inverse() const</li>
+<li><a class="el" href="a00330.html" title="String class.">String</a> ToString() const</li>
 </ul>
 <p>Properties:</p>
 <ul>
@@ -2348,6 +2349,7 @@ Classes</h1>
 <li>bool Equals(const Matrix3x4&amp; rhs) const</li>
 <li>void Decompose(Vector3&amp; translation, Quaternion&amp; rotation, Vector3&amp; scale) const</li>
 <li><a class="el" href="a00208.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> Inverse() const</li>
+<li><a class="el" href="a00330.html" title="String class.">String</a> ToString() const</li>
 </ul>
 <p>Properties:</p>
 <ul>
@@ -2398,6 +2400,7 @@ Classes</h1>
 <li>bool Equals(const Matrix4&amp; rhs) const</li>
 <li>void Decompose(Vector3&amp; translation, Quaternion&amp; rotation, Vector3&amp; scale) const</li>
 <li><a class="el" href="a00209.html" title="4x4 matrix for arbitrary linear transforms including projection.">Matrix4</a> Inverse() const</li>
+<li><a class="el" href="a00330.html" title="String class.">String</a> ToString() const</li>
 </ul>
 <p>Properties:</p>
 <ul>
@@ -5002,6 +5005,12 @@ Classes</h1>
 <li>Variant* new(const IntRect&amp; value)</li>
 <li>Variant(const IntVector2&amp; value) (GC)</li>
 <li>Variant* new(const IntVector2&amp; value)</li>
+<li>Variant(const Matrix3&amp; value) (GC)</li>
+<li>Variant* new(const Matrix3&amp; value)</li>
+<li>Variant(const Matrix3x4&amp; value) (GC)</li>
+<li>Variant* new(const Matrix3x4&amp; value)</li>
+<li>Variant(const Matrix4&amp; value) (GC)</li>
+<li>Variant* new(const Matrix4&amp; value)</li>
 <li>Variant(const String type, const String value) (GC)</li>
 <li>Variant* new(const String type, const String value)</li>
 <li>Variant(VariantType type, const String value) (GC)</li>
@@ -5029,6 +5038,9 @@ Classes</h1>
 <li>bool operator==(const IntVector2&amp; rhs) const</li>
 <li>bool operator==(const StringHash&amp; rhs) const</li>
 <li>bool operator==(const ShortStringHash&amp; rhs) const</li>
+<li>bool operator==(const Matrix3&amp; rhs) const</li>
+<li>bool operator==(const Matrix3x4&amp; rhs) const</li>
+<li>bool operator==(const Matrix4&amp; rhs) const</li>
 <li>void SetInt(int value)</li>
 <li>void SetUint(unsigned value)</li>
 <li>void SetStringHash(const StringHash&amp; value)</li>
@@ -5046,6 +5058,9 @@ Classes</h1>
 <li>void SetResourceRefList(const ResourceRefList&amp; value)</li>
 <li>void SetIntRect(const IntRect&amp; value)</li>
 <li>void SetIntVector2(const IntVector2&amp; value)</li>
+<li>void SetMatrix3(const Matrix3&amp; value)</li>
+<li>void SetMatrix3x4(const Matrix3x4&amp; value)</li>
+<li>void SetMatrix4(const Matrix4&amp; value)</li>
 <li>int GetInt() const</li>
 <li>int GetUInt() const</li>
 <li><a class="el" href="a00331.html" title="32-bit hash value for a string.">StringHash</a> GetStringHash()</li>
@@ -5063,6 +5078,9 @@ Classes</h1>
 <li>const <a class="el" href="a00283.html" title="List of typed resource references.">ResourceRefList</a>&amp; GetResourceRefList() const</li>
 <li>const <a class="el" href="a00180.html" title="Two-dimensional bounding rectangle with integer values.">IntRect</a>&amp; GetIntRect() const</li>
 <li>const <a class="el" href="a00181.html" title="Two-dimensional vector with integer values.">IntVector2</a>&amp; GetIntVector2() const</li>
+<li>const <a class="el" href="a00207.html" title="3x3 matrix for rotation and scaling.">Matrix3</a>&amp; GetMatrix3() const</li>
+<li>const <a class="el" href="a00208.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a>&amp; GetMatrix3x4() const</li>
+<li>const <a class="el" href="a00209.html" title="4x4 matrix for arbitrary linear transforms including projection.">Matrix4</a>&amp; GetMatrix4() const</li>
 <li>VariantType GetType() const</li>
 <li><a class="el" href="a00330.html" title="String class.">String</a> GetTypeName() const</li>
 <li><a class="el" href="a00330.html" title="String class.">String</a> ToString() const</li>
@@ -5100,6 +5118,9 @@ Classes</h1>
 <li>void SetIntRect(const String key, const IntRect value)</li>
 <li>void SetIntVector2(const String key, const IntVector2 value)</li>
 <li>void SetPtr(const String key, void* value)</li>
+<li>void SetMatrix3(const String key, const Matrix3 value)</li>
+<li>void SetMatrix3x4(const String key, const Matrix3x4 value)</li>
+<li>void SetMatrix4(const String key, const Matrix4 value)</li>
 <li>int GetInt(const String key)</li>
 <li>int GetUInt(const String key)</li>
 <li><a class="el" href="a00331.html" title="32-bit hash value for a string.">StringHash</a> GetStringHash(const String key)</li>
@@ -5118,6 +5139,9 @@ Classes</h1>
 <li>const <a class="el" href="a00180.html" title="Two-dimensional bounding rectangle with integer values.">IntRect</a>&amp; GetIntRect(const String key)</li>
 <li>const <a class="el" href="a00181.html" title="Two-dimensional vector with integer values.">IntVector2</a>&amp; GetIntVector2(const String key)</li>
 <li>const void* GetPtr(const String type, const String key)</li>
+<li>const <a class="el" href="a00207.html" title="3x3 matrix for rotation and scaling.">Matrix3</a>&amp; GetMatrix3(const String key)</li>
+<li>const <a class="el" href="a00208.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a>&amp; GetMatrix3x4(const String key)</li>
+<li>const <a class="el" href="a00209.html" title="4x4 matrix for arbitrary linear transforms including projection.">Matrix4</a>&amp; GetMatrix4(const String key)</li>
 </ul>
 <h3><a class="el" href="a00357.html" title="Two-dimensional vector.">Vector2</a></h3>
 <p>Methods:</p>
@@ -5459,6 +5483,9 @@ Classes</h1>
 <li>bool SetVector3(const String name, const Vector3&amp; value)</li>
 <li>bool SetVector4(const String name, const Vector4&amp; value)</li>
 <li>bool SetVectorVariant(const String name, const Variant&amp; value)</li>
+<li>bool SetMatrix3(const String name, const Matrix3&amp; value)</li>
+<li>bool SetMatrix3x4(const String name, const Matrix3x4&amp; value)</li>
+<li>bool SetMatrix4(const String name, const Matrix4&amp; value)</li>
 <li>bool IsNull() const</li>
 <li>bool NotNull() const</li>
 <li>bool operatorbool() const</li>
@@ -5489,6 +5516,9 @@ Classes</h1>
 <li><a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a> GetVector3(const String name) const</li>
 <li><a class="el" href="a00359.html" title="Four-dimensional vector.">Vector4</a> GetVector4(const String name) const</li>
 <li><a class="el" href="a00359.html" title="Four-dimensional vector.">Vector4</a> GetVector(const String name) const</li>
+<li><a class="el" href="a00207.html" title="3x3 matrix for rotation and scaling.">Matrix3</a> GetMatrix3(const String name) const</li>
+<li><a class="el" href="a00208.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> GetMatrix3x4(const String name) const</li>
+<li><a class="el" href="a00209.html" title="4x4 matrix for arbitrary linear transforms including projection.">Matrix4</a> GetMatrix4(const String name) const</li>
 <li>XMLFile* GetFile() const</li>
 </ul>
 <p>Properties:</p>
@@ -5915,6 +5945,9 @@ Enumerations</h1>
 <li>int VAR_INTRECT</li>
 <li>int VAR_INTVECTOR2</li>
 <li>int VAR_PTR</li>
+<li>int VAR_MATRIX3</li>
+<li>int VAR_MATRIX3X4</li>
+<li>int VAR_MATRIX4</li>
 <li>int MAX_VAR_TYPES</li>
 </ul>
 <h3>VertexElement</h3>
@@ -6008,8 +6041,8 @@ Global functions</h1>
 <li>float Random(float range)</li>
 <li>float Random()</li>
 <li>float Random(float min, float max)</li>
-<li>int RandomInt(int min, int max)</li>
 <li>int RandomInt(int range)</li>
+<li>int RandomInt(int min, int max)</li>
 <li>float RandomNormal(float meanValue, float variance)</li>
 <li><a class="el" href="a00330.html" title="String class.">String</a> RemoveTrailingSlash(const String pathName)</li>
 <li><a class="el" href="a00330.html" title="String class.">String</a> ReplaceExtension(const String fullPath, const String newExtension)</li>
@@ -6028,6 +6061,9 @@ Global functions</h1>
 <li><a class="el" href="a00180.html" title="Two-dimensional bounding rectangle with integer values.">IntRect</a> ToIntRect(const String source)</li>
 <li><a class="el" href="a00181.html" title="Two-dimensional vector with integer values.">IntVector2</a> ToIntVector2(const String source)</li>
 <li>unsigned ToLower(unsigned ch)</li>
+<li><a class="el" href="a00207.html" title="3x3 matrix for rotation and scaling.">Matrix3</a> ToMatrix3(const String source)</li>
+<li><a class="el" href="a00208.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> ToMatrix3x4(const String source)</li>
+<li><a class="el" href="a00209.html" title="4x4 matrix for arbitrary linear transforms including projection.">Matrix4</a> ToMatrix4(const String source)</li>
 <li><a class="el" href="a00262.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> ToQuaternion(const String source)</li>
 <li><a class="el" href="a00268.html" title="Two-dimensional bounding rectangle.">Rect</a> ToRect(const String source)</li>
 <li><a class="el" href="a00330.html" title="String class.">String</a> ToString(void* value)</li>
