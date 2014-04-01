@@ -1355,6 +1355,9 @@ Classes</h1>
 <li><a class="el" href="a00359.html" title="Four-dimensional vector.">Vector4</a> ReadVector4()</li>
 <li><a class="el" href="a00262.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> ReadQuaternion()</li>
 <li><a class="el" href="a00262.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> ReadPackedQuaternion()</li>
+<li><a class="el" href="a00207.html" title="3x3 matrix for rotation and scaling.">Matrix3</a> ReadMatrix3()</li>
+<li><a class="el" href="a00208.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> ReadMatrix3x4()</li>
+<li><a class="el" href="a00209.html" title="4x4 matrix for arbitrary linear transforms including projection.">Matrix4</a> ReadMatrix4()</li>
 <li><a class="el" href="a00096.html" title="RGBA color.">Color</a> ReadColor()</li>
 <li><a class="el" href="a00080.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a> ReadBoundingBox()</li>
 <li><a class="el" href="a00330.html" title="String class.">String</a> ReadString()</li>
@@ -1570,6 +1573,9 @@ Classes</h1>
 <li><a class="el" href="a00359.html" title="Four-dimensional vector.">Vector4</a> ReadVector4()</li>
 <li><a class="el" href="a00262.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> ReadQuaternion()</li>
 <li><a class="el" href="a00262.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> ReadPackedQuaternion()</li>
+<li><a class="el" href="a00207.html" title="3x3 matrix for rotation and scaling.">Matrix3</a> ReadMatrix3()</li>
+<li><a class="el" href="a00208.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> ReadMatrix3x4()</li>
+<li><a class="el" href="a00209.html" title="4x4 matrix for arbitrary linear transforms including projection.">Matrix4</a> ReadMatrix4()</li>
 <li><a class="el" href="a00096.html" title="RGBA color.">Color</a> ReadColor()</li>
 <li><a class="el" href="a00080.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a> ReadBoundingBox()</li>
 <li><a class="el" href="a00330.html" title="String class.">String</a> ReadString()</li>
@@ -1604,6 +1610,9 @@ Classes</h1>
 <li>bool WriteVector4(const Vector4&amp; value)</li>
 <li>bool WriteQuaternion(const Quaternion&amp; value)</li>
 <li>bool WritePackedQuaternion(const Quaternion&amp; value)</li>
+<li>bool WriteMatrix3(const Matrix3&amp; value)</li>
+<li>bool WriteMatrix3x4(const Matrix3x4&amp; value)</li>
+<li>bool WriteMatrix4(const Matrix4&amp; value)</li>
 <li>bool WriteColor(const Color&amp; value)</li>
 <li>bool WriteBoundingBox(const BoundingBox&amp; value)</li>
 <li>bool WriteString(const String value)</li>
@@ -2683,9 +2692,9 @@ Classes</h1>
 <li>void Pitch(float angle, bool fixedAxis = false)</li>
 <li>void Yaw(float angle, bool fixedAxis = false)</li>
 <li>void Roll(float angle, bool fixedAxis = false)</li>
-<li>void LookAt(const Vector3&amp; target)</li>
-<li>void LookAt(const Vector3&amp; target, const Vector3&amp; upAxis)</li>
-<li>void LookAtXYZ(float x, float y, float z, float upX = 0.0f, float upY = 1.0f, float upZ = 0.0f)</li>
+<li>bool LookAt(const Vector3&amp; target)</li>
+<li>bool LookAt(const Vector3&amp; target, const Vector3&amp; upAxis)</li>
+<li>bool LookAtXYZ(float x, float y, float z, float upX = 0.0f, float upY = 1.0f, float upZ = 0.0f)</li>
 <li>void Scale(float scale)</li>
 <li>void Scale(const Vector3&amp; scale)</li>
 <li>void ScaleXYZ(float x, float y, float z)</li>
@@ -3243,7 +3252,7 @@ Classes</h1>
 <li>void FromRotationTo(const Vector3&amp; start, const Vector3&amp; end)</li>
 <li>void FromAxes(const Vector3&amp; xAxis, const Vector3&amp; yAxis, const Vector3&amp; zAxis)</li>
 <li>void FromRotationMatrix(const Matrix3&amp; matrix)</li>
-<li>void FromLookRotation(const Vector3&amp; direction, const Vector3&amp; up)</li>
+<li>bool FromLookRotation(const Vector3&amp; direction, const Vector3&amp; up)</li>
 <li>void Normalize()</li>
 <li><a class="el" href="a00262.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> Normalized() const</li>
 <li><a class="el" href="a00262.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> Inverse() const</li>
@@ -3921,6 +3930,9 @@ Classes</h1>
 <li>bool WriteVector4(const Vector4&amp; value)</li>
 <li>bool WriteQuaternion(const Quaternion&amp; value)</li>
 <li>bool WritePackedQuaternion(const Quaternion&amp; value)</li>
+<li>bool WriteMatrix3(const Matrix3&amp; value)</li>
+<li>bool WriteMatrix3x4(const Matrix3x4&amp; value)</li>
+<li>bool WriteMatrix4(const Matrix4&amp; value)</li>
 <li>bool WriteColor(const Color&amp; value)</li>
 <li>bool WriteBoundingBox(const BoundingBox&amp; value)</li>
 <li>bool WriteString(const String value)</li>
@@ -5308,6 +5320,9 @@ Classes</h1>
 <li><a class="el" href="a00359.html" title="Four-dimensional vector.">Vector4</a> ReadVector4()</li>
 <li><a class="el" href="a00262.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> ReadQuaternion()</li>
 <li><a class="el" href="a00262.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> ReadPackedQuaternion()</li>
+<li><a class="el" href="a00207.html" title="3x3 matrix for rotation and scaling.">Matrix3</a> ReadMatrix3()</li>
+<li><a class="el" href="a00208.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> ReadMatrix3x4()</li>
+<li><a class="el" href="a00209.html" title="4x4 matrix for arbitrary linear transforms including projection.">Matrix4</a> ReadMatrix4()</li>
 <li><a class="el" href="a00096.html" title="RGBA color.">Color</a> ReadColor()</li>
 <li><a class="el" href="a00080.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a> ReadBoundingBox()</li>
 <li><a class="el" href="a00330.html" title="String class.">String</a> ReadString()</li>
@@ -5342,6 +5357,9 @@ Classes</h1>
 <li>bool WriteVector4(const Vector4&amp; value)</li>
 <li>bool WriteQuaternion(const Quaternion&amp; value)</li>
 <li>bool WritePackedQuaternion(const Quaternion&amp; value)</li>
+<li>bool WriteMatrix3(const Matrix3&amp; value)</li>
+<li>bool WriteMatrix3x4(const Matrix3x4&amp; value)</li>
+<li>bool WriteMatrix4(const Matrix4&amp; value)</li>
 <li>bool WriteColor(const Color&amp; value)</li>
 <li>bool WriteBoundingBox(const BoundingBox&amp; value)</li>
 <li>bool WriteString(const String value)</li>

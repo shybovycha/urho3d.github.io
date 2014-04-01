@@ -2406,6 +2406,9 @@ Classes</h1>
 <li><a class="el" href="a00180.html" title="Two-dimensional bounding rectangle with integer values.">IntRect</a> ReadIntRect()</li>
 <li><a class="el" href="a00181.html" title="Two-dimensional vector with integer values.">IntVector2</a> ReadIntVector2()</li>
 <li><a class="el" href="a00330.html" title="String class.">String</a> ReadLine()</li>
+<li><a class="el" href="a00207.html" title="3x3 matrix for rotation and scaling.">Matrix3</a> ReadMatrix3()</li>
+<li><a class="el" href="a00208.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> ReadMatrix3x4()</li>
+<li><a class="el" href="a00209.html" title="4x4 matrix for arbitrary linear transforms including projection.">Matrix4</a> ReadMatrix4()</li>
 <li>uint ReadNetID()</li>
 <li><a class="el" href="a00262.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> ReadPackedQuaternion()</li>
 <li><a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a> ReadPackedVector3(float)</li>
@@ -2767,6 +2770,9 @@ Classes</h1>
 <li><a class="el" href="a00180.html" title="Two-dimensional bounding rectangle with integer values.">IntRect</a> ReadIntRect()</li>
 <li><a class="el" href="a00181.html" title="Two-dimensional vector with integer values.">IntVector2</a> ReadIntVector2()</li>
 <li><a class="el" href="a00330.html" title="String class.">String</a> ReadLine()</li>
+<li><a class="el" href="a00207.html" title="3x3 matrix for rotation and scaling.">Matrix3</a> ReadMatrix3()</li>
+<li><a class="el" href="a00208.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> ReadMatrix3x4()</li>
+<li><a class="el" href="a00209.html" title="4x4 matrix for arbitrary linear transforms including projection.">Matrix4</a> ReadMatrix4()</li>
 <li>uint ReadNetID()</li>
 <li><a class="el" href="a00262.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> ReadPackedQuaternion()</li>
 <li><a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a> ReadPackedVector3(float)</li>
@@ -2797,6 +2803,9 @@ Classes</h1>
 <li>bool WriteIntRect(const IntRect&amp;)</li>
 <li>bool WriteIntVector2(const IntVector2&amp;)</li>
 <li>bool WriteLine(const String&amp;)</li>
+<li>bool WriteMatrix3(const Matrix3&amp;)</li>
+<li>bool WriteMatrix3x4(const Matrix3x4&amp;)</li>
+<li>bool WriteMatrix4(const Matrix4&amp;)</li>
 <li>bool WriteNetID(uint)</li>
 <li>bool WritePackedQuaternion(const Quaternion&amp;)</li>
 <li>bool WritePackedVector3(const Vector3&amp;, float)</li>
@@ -3010,6 +3019,9 @@ Classes</h1>
 <li><a class="el" href="a00180.html" title="Two-dimensional bounding rectangle with integer values.">IntRect</a> ReadIntRect()</li>
 <li><a class="el" href="a00181.html" title="Two-dimensional vector with integer values.">IntVector2</a> ReadIntVector2()</li>
 <li><a class="el" href="a00330.html" title="String class.">String</a> ReadLine()</li>
+<li><a class="el" href="a00207.html" title="3x3 matrix for rotation and scaling.">Matrix3</a> ReadMatrix3()</li>
+<li><a class="el" href="a00208.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> ReadMatrix3x4()</li>
+<li><a class="el" href="a00209.html" title="4x4 matrix for arbitrary linear transforms including projection.">Matrix4</a> ReadMatrix4()</li>
 <li>uint ReadNetID()</li>
 <li><a class="el" href="a00262.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> ReadPackedQuaternion()</li>
 <li><a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a> ReadPackedVector3(float)</li>
@@ -4103,7 +4115,7 @@ Classes</h1>
 <li>bool LoadXML(const <a class="el" href="a00374.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li><a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a> LocalToWorld(const Vector3&amp;) const</li>
 <li><a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a> LocalToWorld(const Vector4&amp;) const</li>
-<li>void LookAt(const <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a>&amp; = <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a> ( 0 , 1 , 0 ))</li>
+<li>bool LookAt(const <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a>&amp; = <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a> ( 0 , 1 , 0 ))</li>
 <li>void Pitch(float, bool = false)</li>
 <li>void Remove()</li>
 <li>void RemoveAllChildren()</li>
@@ -4663,7 +4675,7 @@ Classes</h1>
 <li>void FromAngleAxis(float, const Vector3&amp;)</li>
 <li>void FromAxes(const Vector3&amp;, const Vector3&amp;, const Vector3&amp;)</li>
 <li>void FromEulerAngles(float, float, float)</li>
-<li>void FromLookRotation(const Vector3&amp;, const Vector3&amp;)</li>
+<li>bool FromLookRotation(const Vector3&amp;, const Vector3&amp;)</li>
 <li>void FromRotationTo(const Vector3&amp;, const Vector3&amp;)</li>
 <li><a class="el" href="a00262.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> Inverse() const</li>
 <li>bool IsNaN() const</li>
@@ -5129,7 +5141,7 @@ Classes</h1>
 <li>bool LoadXML(const <a class="el" href="a00374.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li><a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a> LocalToWorld(const Vector3&amp;) const</li>
 <li><a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a> LocalToWorld(const Vector4&amp;) const</li>
-<li>void LookAt(const <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a>&amp; = <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a> ( 0 , 1 , 0 ))</li>
+<li>bool LookAt(const <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a>&amp; = <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a> ( 0 , 1 , 0 ))</li>
 <li>void Pitch(float, bool = false)</li>
 <li>void RegisterVar(const String&amp;)</li>
 <li>void Remove()</li>
@@ -5627,6 +5639,9 @@ Classes</h1>
 <li>bool WriteIntRect(const IntRect&amp;)</li>
 <li>bool WriteIntVector2(const IntVector2&amp;)</li>
 <li>bool WriteLine(const String&amp;)</li>
+<li>bool WriteMatrix3(const Matrix3&amp;)</li>
+<li>bool WriteMatrix3x4(const Matrix3x4&amp;)</li>
+<li>bool WriteMatrix4(const Matrix4&amp;)</li>
 <li>bool WriteNetID(uint)</li>
 <li>bool WritePackedQuaternion(const Quaternion&amp;)</li>
 <li>bool WritePackedVector3(const Vector3&amp;, float)</li>
@@ -7546,6 +7561,9 @@ Classes</h1>
 <li><a class="el" href="a00180.html" title="Two-dimensional bounding rectangle with integer values.">IntRect</a> ReadIntRect()</li>
 <li><a class="el" href="a00181.html" title="Two-dimensional vector with integer values.">IntVector2</a> ReadIntVector2()</li>
 <li><a class="el" href="a00330.html" title="String class.">String</a> ReadLine()</li>
+<li><a class="el" href="a00207.html" title="3x3 matrix for rotation and scaling.">Matrix3</a> ReadMatrix3()</li>
+<li><a class="el" href="a00208.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> ReadMatrix3x4()</li>
+<li><a class="el" href="a00209.html" title="4x4 matrix for arbitrary linear transforms including projection.">Matrix4</a> ReadMatrix4()</li>
 <li>uint ReadNetID()</li>
 <li><a class="el" href="a00262.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> ReadPackedQuaternion()</li>
 <li><a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a> ReadPackedVector3(float)</li>
@@ -7577,6 +7595,9 @@ Classes</h1>
 <li>bool WriteIntRect(const IntRect&amp;)</li>
 <li>bool WriteIntVector2(const IntVector2&amp;)</li>
 <li>bool WriteLine(const String&amp;)</li>
+<li>bool WriteMatrix3(const Matrix3&amp;)</li>
+<li>bool WriteMatrix3x4(const Matrix3x4&amp;)</li>
+<li>bool WriteMatrix4(const Matrix4&amp;)</li>
 <li>bool WriteNetID(uint)</li>
 <li>bool WritePackedQuaternion(const Quaternion&amp;)</li>
 <li>bool WritePackedVector3(const Vector3&amp;, float)</li>
