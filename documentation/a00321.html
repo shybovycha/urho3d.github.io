@@ -20,136 +20,76 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00321.html">Spline</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00321.html">SourceBatch</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="a00989.html">List of all members</a>  </div>
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="a01098.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::Spline Class Reference</div>  </div>
+<div class="title">Urho3D::SourceBatch Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="a00321.html" title="Spline class to get a point on it based off the interpolation mode.">Spline</a> class to get a point on it based off the interpolation mode.  
+<p>Source data for a 3D geometry draw call.  
  <a href="a00321.html#details">More...</a></p>
 
-<p><code>#include &lt;Spline.h&gt;</code></p>
+<p><code>#include &lt;Drawable.h&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for Urho3D::Spline:</div>
+Collaboration diagram for Urho3D::SourceBatch:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00990.svg" width="206" height="216"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01099.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac53bf81997466016d00ed1e94500c4ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac53bf81997466016d00ed1e94500c4ea"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#ac53bf81997466016d00ed1e94500c4ea">Spline</a> ()</td></tr>
-<tr class="memdesc:ac53bf81997466016d00ed1e94500c4ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. <br/></td></tr>
-<tr class="separator:ac53bf81997466016d00ed1e94500c4ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6713729fcc73642aa7ad7e7433e18c0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6713729fcc73642aa7ad7e7433e18c0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#ad6713729fcc73642aa7ad7e7433e18c0">Spline</a> (InterpolationMode mode)</td></tr>
-<tr class="memdesc:ad6713729fcc73642aa7ad7e7433e18c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor setting InterpolationMode. <br/></td></tr>
-<tr class="separator:ad6713729fcc73642aa7ad7e7433e18c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1e1a1469b2e32c5216961a2c95b5b80"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1e1a1469b2e32c5216961a2c95b5b80"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#aa1e1a1469b2e32c5216961a2c95b5b80">Spline</a> (const <a class="el" href="a00356.html">Vector</a>&lt; <a class="el" href="a00354.html">Variant</a> &gt; &amp;knots, InterpolationMode mode=BEZIER_CURVE)</td></tr>
-<tr class="memdesc:aa1e1a1469b2e32c5216961a2c95b5b80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor setting Knots and InterpolationMode. <br/></td></tr>
-<tr class="separator:aa1e1a1469b2e32c5216961a2c95b5b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08d2835e6c28d8fecfef91f6d4da63bf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08d2835e6c28d8fecfef91f6d4da63bf"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a08d2835e6c28d8fecfef91f6d4da63bf">Spline</a> (const <a class="el" href="a00321.html">Spline</a> &amp;rhs)</td></tr>
-<tr class="memdesc:a08d2835e6c28d8fecfef91f6d4da63bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor. <br/></td></tr>
-<tr class="separator:a08d2835e6c28d8fecfef91f6d4da63bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57318bc693071d27e73720792bc18040"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57318bc693071d27e73720792bc18040"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a57318bc693071d27e73720792bc18040">operator=</a> (const <a class="el" href="a00321.html">Spline</a> &amp;rhs)</td></tr>
-<tr class="memdesc:a57318bc693071d27e73720792bc18040"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy operator. <br/></td></tr>
-<tr class="separator:a57318bc693071d27e73720792bc18040"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d8aa3ead2efb35e2fb0f6c09225de53"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d8aa3ead2efb35e2fb0f6c09225de53"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a0d8aa3ead2efb35e2fb0f6c09225de53">operator==</a> (const <a class="el" href="a00321.html">Spline</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:a0d8aa3ead2efb35e2fb0f6c09225de53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equality operator. <br/></td></tr>
-<tr class="separator:a0d8aa3ead2efb35e2fb0f6c09225de53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28f3f34d158e4acd514a92ab7b328f0a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a28f3f34d158e4acd514a92ab7b328f0a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a28f3f34d158e4acd514a92ab7b328f0a">operator!=</a> (const <a class="el" href="a00321.html">Spline</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:a28f3f34d158e4acd514a92ab7b328f0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non Equality operator. <br/></td></tr>
-<tr class="separator:a28f3f34d158e4acd514a92ab7b328f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae72846e35cb7f8967e7021f98a2807da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae72846e35cb7f8967e7021f98a2807da"></a>
-InterpolationMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#ae72846e35cb7f8967e7021f98a2807da">GetInterpolationMode</a> () const </td></tr>
-<tr class="memdesc:ae72846e35cb7f8967e7021f98a2807da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the ImplementationMode. <br/></td></tr>
-<tr class="separator:ae72846e35cb7f8967e7021f98a2807da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c2f80a42a367960b386ed7465d2560c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c2f80a42a367960b386ed7465d2560c"></a>
-const <a class="el" href="a00356.html">VariantVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a5c2f80a42a367960b386ed7465d2560c">GetKnots</a> () const </td></tr>
-<tr class="memdesc:a5c2f80a42a367960b386ed7465d2560c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the Knots of the <a class="el" href="a00321.html" title="Spline class to get a point on it based off the interpolation mode.">Spline</a>. <br/></td></tr>
-<tr class="separator:a5c2f80a42a367960b386ed7465d2560c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a569bf2f9c5906ddc49527094794b3f12"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a569bf2f9c5906ddc49527094794b3f12"></a>
-<a class="el" href="a00354.html">Variant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a569bf2f9c5906ddc49527094794b3f12">GetKnot</a> (unsigned index) const </td></tr>
-<tr class="memdesc:a569bf2f9c5906ddc49527094794b3f12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the Knot at the specific index. <br/></td></tr>
-<tr class="separator:a569bf2f9c5906ddc49527094794b3f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a797a4db283284031153a6dd1b6a9ded9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a797a4db283284031153a6dd1b6a9ded9"></a>
-<a class="el" href="a00354.html">Variant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a797a4db283284031153a6dd1b6a9ded9">GetPoint</a> (float f) const </td></tr>
-<tr class="memdesc:a797a4db283284031153a6dd1b6a9ded9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the T of the point of the <a class="el" href="a00321.html" title="Spline class to get a point on it based off the interpolation mode.">Spline</a> at f from 0.f - 1.f. <br/></td></tr>
-<tr class="separator:a797a4db283284031153a6dd1b6a9ded9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54065e0455f38df16ca0e4d965bc978a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54065e0455f38df16ca0e4d965bc978a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a54065e0455f38df16ca0e4d965bc978a">SetInterpolationMode</a> (InterpolationMode interpolationMode)</td></tr>
-<tr class="memdesc:a54065e0455f38df16ca0e4d965bc978a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the InterpolationMode of the <a class="el" href="a00321.html" title="Spline class to get a point on it based off the interpolation mode.">Spline</a>. <br/></td></tr>
-<tr class="separator:a54065e0455f38df16ca0e4d965bc978a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46456817e28e5850767742369d157778"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46456817e28e5850767742369d157778"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a46456817e28e5850767742369d157778">SetKnots</a> (const <a class="el" href="a00356.html">Vector</a>&lt; <a class="el" href="a00354.html">Variant</a> &gt; &amp;knots)</td></tr>
-<tr class="memdesc:a46456817e28e5850767742369d157778"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Knots of the <a class="el" href="a00321.html" title="Spline class to get a point on it based off the interpolation mode.">Spline</a>. <br/></td></tr>
-<tr class="separator:a46456817e28e5850767742369d157778"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5a5477e8dd8bd471c6a00e508cfc399"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5a5477e8dd8bd471c6a00e508cfc399"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#ad5a5477e8dd8bd471c6a00e508cfc399">SetKnot</a> (const <a class="el" href="a00354.html">Variant</a> &amp;knot, unsigned index)</td></tr>
-<tr class="memdesc:ad5a5477e8dd8bd471c6a00e508cfc399"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Knot value of an existing Knot. <br/></td></tr>
-<tr class="separator:ad5a5477e8dd8bd471c6a00e508cfc399"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa77a744c301a9c7475d635d00b4df2e7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa77a744c301a9c7475d635d00b4df2e7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#aa77a744c301a9c7475d635d00b4df2e7">AddKnot</a> (const <a class="el" href="a00354.html">Variant</a> &amp;knot)</td></tr>
-<tr class="memdesc:aa77a744c301a9c7475d635d00b4df2e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a Knot to the end of the <a class="el" href="a00321.html" title="Spline class to get a point on it based off the interpolation mode.">Spline</a>. <br/></td></tr>
-<tr class="separator:aa77a744c301a9c7475d635d00b4df2e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7be487029e035f59f9acc214414a8a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa7be487029e035f59f9acc214414a8a3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#aa7be487029e035f59f9acc214414a8a3">AddKnot</a> (const <a class="el" href="a00354.html">Variant</a> &amp;knot, unsigned index)</td></tr>
-<tr class="memdesc:aa7be487029e035f59f9acc214414a8a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a Knot to the <a class="el" href="a00321.html" title="Spline class to get a point on it based off the interpolation mode.">Spline</a> at a specific index. <br/></td></tr>
-<tr class="separator:aa7be487029e035f59f9acc214414a8a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba4c008df1cac89a3b9b876184e6ad0a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba4c008df1cac89a3b9b876184e6ad0a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#aba4c008df1cac89a3b9b876184e6ad0a">RemoveKnot</a> ()</td></tr>
-<tr class="memdesc:aba4c008df1cac89a3b9b876184e6ad0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the last Knot on the <a class="el" href="a00321.html" title="Spline class to get a point on it based off the interpolation mode.">Spline</a>. <br/></td></tr>
-<tr class="separator:aba4c008df1cac89a3b9b876184e6ad0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcdb84d33afd31139089a98079afe19d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afcdb84d33afd31139089a98079afe19d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#afcdb84d33afd31139089a98079afe19d">RemoveKnot</a> (unsigned index)</td></tr>
-<tr class="memdesc:afcdb84d33afd31139089a98079afe19d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the Knot at the specific index. <br/></td></tr>
-<tr class="separator:afcdb84d33afd31139089a98079afe19d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b405174354c875bd7d0623385626f67"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b405174354c875bd7d0623385626f67"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a0b405174354c875bd7d0623385626f67">Clear</a> ()</td></tr>
-<tr class="memdesc:a0b405174354c875bd7d0623385626f67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the <a class="el" href="a00321.html" title="Spline class to get a point on it based off the interpolation mode.">Spline</a>. <br/></td></tr>
-<tr class="separator:a0b405174354c875bd7d0623385626f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab196d2e4fae74fc65fd1f227b7910c59"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab196d2e4fae74fc65fd1f227b7910c59"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#ab196d2e4fae74fc65fd1f227b7910c59">SourceBatch</a> ()</td></tr>
+<tr class="memdesc:ab196d2e4fae74fc65fd1f227b7910c59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with defaults. <br/></td></tr>
+<tr class="separator:ab196d2e4fae74fc65fd1f227b7910c59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d150c24a6b666f7723a28984ab73cb7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d150c24a6b666f7723a28984ab73cb7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a5d150c24a6b666f7723a28984ab73cb7">~SourceBatch</a> ()</td></tr>
+<tr class="memdesc:a5d150c24a6b666f7723a28984ab73cb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
+<tr class="separator:a5d150c24a6b666f7723a28984ab73cb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a8efd8706f6896bf30783ede383993fcb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8efd8706f6896bf30783ede383993fcb"></a>
-<a class="el" href="a00354.html">Variant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a8efd8706f6896bf30783ede383993fcb">BezierInterpolation</a> (const <a class="el" href="a00356.html">Vector</a>&lt; <a class="el" href="a00354.html">Variant</a> &gt; &amp;knots, float t) const </td></tr>
-<tr class="memdesc:a8efd8706f6896bf30783ede383993fcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform Bezier Interpolation on the <a class="el" href="a00321.html" title="Spline class to get a point on it based off the interpolation mode.">Spline</a>. <br/></td></tr>
-<tr class="separator:a8efd8706f6896bf30783ede383993fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbd24ee371b597f045b6974172c08d18"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abbd24ee371b597f045b6974172c08d18"></a>
-<a class="el" href="a00354.html">Variant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#abbd24ee371b597f045b6974172c08d18">LinearInterpolation</a> (const <a class="el" href="a00354.html">Variant</a> &amp;lhs, const <a class="el" href="a00354.html">Variant</a> &amp;rhs, float t) const </td></tr>
-<tr class="memdesc:abbd24ee371b597f045b6974172c08d18"><td class="mdescLeft">&#160;</td><td class="mdescRight">LinearInterpolation between two Variants based on underlying type. <br/></td></tr>
-<tr class="separator:abbd24ee371b597f045b6974172c08d18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a42093a07b9949bcd1c402621e1dad080"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42093a07b9949bcd1c402621e1dad080"></a>
-InterpolationMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a42093a07b9949bcd1c402621e1dad080">interpolationMode_</a></td></tr>
-<tr class="memdesc:a42093a07b9949bcd1c402621e1dad080"><td class="mdescLeft">&#160;</td><td class="mdescRight">InterpolationMode. <br/></td></tr>
-<tr class="separator:a42093a07b9949bcd1c402621e1dad080"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cdddea8ecb5db6129aeccb11ddfb72f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6cdddea8ecb5db6129aeccb11ddfb72f"></a>
-<a class="el" href="a00356.html">VariantVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a6cdddea8ecb5db6129aeccb11ddfb72f">knots_</a></td></tr>
-<tr class="memdesc:a6cdddea8ecb5db6129aeccb11ddfb72f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Knots on the <a class="el" href="a00321.html" title="Spline class to get a point on it based off the interpolation mode.">Spline</a>. <br/></td></tr>
-<tr class="separator:a6cdddea8ecb5db6129aeccb11ddfb72f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a4d65f33f8c219673f22e0fa31773a2e3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d65f33f8c219673f22e0fa31773a2e3"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a4d65f33f8c219673f22e0fa31773a2e3">distance_</a></td></tr>
+<tr class="memdesc:a4d65f33f8c219673f22e0fa31773a2e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distance from camera. <br/></td></tr>
+<tr class="separator:a4d65f33f8c219673f22e0fa31773a2e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b6b4fefc523d70c450f16c4d7cd7745"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b6b4fefc523d70c450f16c4d7cd7745"></a>
+<a class="el" href="a00165.html">Geometry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a0b6b4fefc523d70c450f16c4d7cd7745">geometry_</a></td></tr>
+<tr class="memdesc:a0b6b4fefc523d70c450f16c4d7cd7745"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00165.html" title="Defines one or more vertex buffers, an index buffer and a draw range.">Geometry</a>. <br/></td></tr>
+<tr class="separator:a0b6b4fefc523d70c450f16c4d7cd7745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad179ea27ef8bf2919eab6ba630048e1c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad179ea27ef8bf2919eab6ba630048e1c"></a>
+<a class="el" href="a00310.html">SharedPtr</a>&lt; <a class="el" href="a00207.html">Material</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#ad179ea27ef8bf2919eab6ba630048e1c">material_</a></td></tr>
+<tr class="memdesc:ad179ea27ef8bf2919eab6ba630048e1c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00207.html" title="Describes how to render 3D geometries.">Material</a>. <br/></td></tr>
+<tr class="separator:ad179ea27ef8bf2919eab6ba630048e1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfc617214c171c52132031b8c43d4201"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adfc617214c171c52132031b8c43d4201"></a>
+const <a class="el" href="a00211.html">Matrix3x4</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#adfc617214c171c52132031b8c43d4201">worldTransform_</a></td></tr>
+<tr class="memdesc:adfc617214c171c52132031b8c43d4201"><td class="mdescLeft">&#160;</td><td class="mdescRight">World transform(s). For a skinned model, these are the bone transforms. <br/></td></tr>
+<tr class="separator:adfc617214c171c52132031b8c43d4201"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac51c099c9ea666e815fff8600970e331"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac51c099c9ea666e815fff8600970e331"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#ac51c099c9ea666e815fff8600970e331">numWorldTransforms_</a></td></tr>
+<tr class="memdesc:ac51c099c9ea666e815fff8600970e331"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of world transforms. <br/></td></tr>
+<tr class="separator:ac51c099c9ea666e815fff8600970e331"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4448b041153e5b78c14fca7ee7d23182"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4448b041153e5b78c14fca7ee7d23182"></a>
+GeometryType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a4448b041153e5b78c14fca7ee7d23182">geometryType_</a></td></tr>
+<tr class="memdesc:a4448b041153e5b78c14fca7ee7d23182"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geometry type. <br/></td></tr>
+<tr class="separator:a4448b041153e5b78c14fca7ee7d23182"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78de4f794a94ebd8f8636e90d1617d16"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a78de4f794a94ebd8f8636e90d1617d16"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html#a78de4f794a94ebd8f8636e90d1617d16">overrideView_</a></td></tr>
+<tr class="memdesc:a78de4f794a94ebd8f8636e90d1617d16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override view transform flag. <br/></td></tr>
+<tr class="separator:a78de4f794a94ebd8f8636e90d1617d16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="a00321.html" title="Spline class to get a point on it based off the interpolation mode.">Spline</a> class to get a point on it based off the interpolation mode. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Core/Spline.h</li>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Core/Spline.cpp</li>
+<div class="textblock"><p>Source data for a 3D geometry draw call. </p>
+</div><hr/>The documentation for this struct was generated from the following files:<ul>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/Drawable.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/Drawable.cpp</li>
 </ul>
 </div><!-- contents -->

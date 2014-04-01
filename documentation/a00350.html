@@ -20,124 +20,55 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00350.html">UIBatch</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00350.html">TouchState</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01571.html">List of all members</a>  </div>
+<a href="a01267.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::UIBatch Class Reference</div>  </div>
+<div class="title">Urho3D::TouchState Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>UI rendering draw call.  
+<p>Input state for a finger touch.  
  <a href="a00350.html#details">More...</a></p>
 
-<p><code>#include &lt;UIBatch.h&gt;</code></p>
+<p><code>#include &lt;Input.h&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for Urho3D::UIBatch:</div>
+Collaboration diagram for Urho3D::TouchState:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01572.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a01268.svg" width="223" height="171"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a96b2148cc7ea02f422e3da8501c22a1c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a96b2148cc7ea02f422e3da8501c22a1c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00350.html#a96b2148cc7ea02f422e3da8501c22a1c">UIBatch</a> ()</td></tr>
-<tr class="memdesc:a96b2148cc7ea02f422e3da8501c22a1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with defaults. <br/></td></tr>
-<tr class="separator:a96b2148cc7ea02f422e3da8501c22a1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6218e1fa6a66e68b63f4ead7d4f2b071"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6218e1fa6a66e68b63f4ead7d4f2b071"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00350.html#a6218e1fa6a66e68b63f4ead7d4f2b071">UIBatch</a> (<a class="el" href="a00351.html">UIElement</a> *element, BlendMode blendMode, const <a class="el" href="a00180.html">IntRect</a> &amp;scissor, <a class="el" href="a00338.html">Texture</a> *texture, <a class="el" href="a00257.html">PODVector</a>&lt; float &gt; *vertexData)</td></tr>
-<tr class="memdesc:a6218e1fa6a66e68b63f4ead7d4f2b071"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
-<tr class="separator:a6218e1fa6a66e68b63f4ead7d4f2b071"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcc8c0f4f3221e3e814ffa0f8f11b73f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abcc8c0f4f3221e3e814ffa0f8f11b73f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00350.html#abcc8c0f4f3221e3e814ffa0f8f11b73f">SetColor</a> (const <a class="el" href="a00096.html">Color</a> &amp;color, bool overrideAlpha=false)</td></tr>
-<tr class="memdesc:abcc8c0f4f3221e3e814ffa0f8f11b73f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set new color for the batch. Overrides gradient. <br/></td></tr>
-<tr class="separator:abcc8c0f4f3221e3e814ffa0f8f11b73f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f2038027b731686692757da512dfc0f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f2038027b731686692757da512dfc0f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00350.html#a2f2038027b731686692757da512dfc0f">SetDefaultColor</a> ()</td></tr>
-<tr class="memdesc:a2f2038027b731686692757da512dfc0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restore <a class="el" href="a00349.html" title="UI subsystem. Manages the graphical user interface.">UI</a> element's default color. <br/></td></tr>
-<tr class="separator:a2f2038027b731686692757da512dfc0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca777219f8d08baf7318ea56e2a31229"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca777219f8d08baf7318ea56e2a31229"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00350.html#aca777219f8d08baf7318ea56e2a31229">AddQuad</a> (int x, int y, int width, int height, int texOffsetX, int texOffsetY, int texWidth=0, int texHeight=0)</td></tr>
-<tr class="memdesc:aca777219f8d08baf7318ea56e2a31229"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a quad. <br/></td></tr>
-<tr class="separator:aca777219f8d08baf7318ea56e2a31229"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb03b7acf1ad8e244bcb9407f30f09c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb03b7acf1ad8e244bcb9407f30f09c3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00350.html#aeb03b7acf1ad8e244bcb9407f30f09c3">AddQuad</a> (const <a class="el" href="a00208.html">Matrix3x4</a> &amp;transform, int x, int y, int width, int height, int texOffsetX, int texOffsetY, int texWidth=0, int texHeight=0)</td></tr>
-<tr class="memdesc:aeb03b7acf1ad8e244bcb9407f30f09c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a quad using a transform matrix. <br/></td></tr>
-<tr class="separator:aeb03b7acf1ad8e244bcb9407f30f09c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c8fcf983576330117d1f3574a831821"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c8fcf983576330117d1f3574a831821"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00350.html#a0c8fcf983576330117d1f3574a831821">AddQuad</a> (int x, int y, int width, int height, int texOffsetX, int texOffsetY, int texWidth, int texHeight, bool tiled)</td></tr>
-<tr class="memdesc:a0c8fcf983576330117d1f3574a831821"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a quad with tiled texture. <br/></td></tr>
-<tr class="separator:a0c8fcf983576330117d1f3574a831821"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a716bbd0567f4013b135ea1e132c79de7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a716bbd0567f4013b135ea1e132c79de7"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00350.html#a716bbd0567f4013b135ea1e132c79de7">Merge</a> (const <a class="el" href="a00350.html">UIBatch</a> &amp;batch)</td></tr>
-<tr class="memdesc:a716bbd0567f4013b135ea1e132c79de7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Merge with another batch. <br/></td></tr>
-<tr class="separator:a716bbd0567f4013b135ea1e132c79de7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac764c59dbfa7b5941cd9618c9dfa2d56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac764c59dbfa7b5941cd9618c9dfa2d56"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00350.html#ac764c59dbfa7b5941cd9618c9dfa2d56">GetInterpolatedColor</a> (int x, int y)</td></tr>
-<tr class="memdesc:ac764c59dbfa7b5941cd9618c9dfa2d56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an interpolated color for the <a class="el" href="a00349.html" title="UI subsystem. Manages the graphical user interface.">UI</a> element. <br/></td></tr>
-<tr class="separator:ac764c59dbfa7b5941cd9618c9dfa2d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a1c81f25e8e558f8acf2ddd886f51606a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c81f25e8e558f8acf2ddd886f51606a"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00350.html#a1c81f25e8e558f8acf2ddd886f51606a">AddOrMerge</a> (const <a class="el" href="a00350.html">UIBatch</a> &amp;batch, <a class="el" href="a00257.html">PODVector</a>&lt; <a class="el" href="a00350.html">UIBatch</a> &gt; &amp;batches)</td></tr>
-<tr class="memdesc:a1c81f25e8e558f8acf2ddd886f51606a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add or merge a batch. <br/></td></tr>
-<tr class="separator:a1c81f25e8e558f8acf2ddd886f51606a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a49f1dde18676987818fad2642ca7e521"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a49f1dde18676987818fad2642ca7e521"></a>
-<a class="el" href="a00351.html">UIElement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00350.html#a49f1dde18676987818fad2642ca7e521">element_</a></td></tr>
-<tr class="memdesc:a49f1dde18676987818fad2642ca7e521"><td class="mdescLeft">&#160;</td><td class="mdescRight">Element this batch represents. <br/></td></tr>
-<tr class="separator:a49f1dde18676987818fad2642ca7e521"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a64e2da2e5a1177e1b282cfe7dd345c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a64e2da2e5a1177e1b282cfe7dd345c"></a>
-BlendMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00350.html#a2a64e2da2e5a1177e1b282cfe7dd345c">blendMode_</a></td></tr>
-<tr class="memdesc:a2a64e2da2e5a1177e1b282cfe7dd345c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blending mode. <br/></td></tr>
-<tr class="separator:a2a64e2da2e5a1177e1b282cfe7dd345c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52e0f67a396cdd0fec777466249e30c5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52e0f67a396cdd0fec777466249e30c5"></a>
-<a class="el" href="a00180.html">IntRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00350.html#a52e0f67a396cdd0fec777466249e30c5">scissor_</a></td></tr>
-<tr class="memdesc:a52e0f67a396cdd0fec777466249e30c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scissor rectangle. <br/></td></tr>
-<tr class="separator:a52e0f67a396cdd0fec777466249e30c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a592f7b92d6b37379f9b546d33bdd2f3b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a592f7b92d6b37379f9b546d33bdd2f3b"></a>
-<a class="el" href="a00338.html">Texture</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00350.html#a592f7b92d6b37379f9b546d33bdd2f3b">texture_</a></td></tr>
-<tr class="memdesc:a592f7b92d6b37379f9b546d33bdd2f3b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00338.html" title="Base class for texture resources.">Texture</a>. <br/></td></tr>
-<tr class="separator:a592f7b92d6b37379f9b546d33bdd2f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2864bb97d399431922ccfeea107466d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2864bb97d399431922ccfeea107466d1"></a>
-<a class="el" href="a00357.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00350.html#a2864bb97d399431922ccfeea107466d1">invTextureSize_</a></td></tr>
-<tr class="memdesc:a2864bb97d399431922ccfeea107466d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverse texture size. <br/></td></tr>
-<tr class="separator:a2864bb97d399431922ccfeea107466d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07f32e8665a86591fd67cc45e2d9ed7e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a07f32e8665a86591fd67cc45e2d9ed7e"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00350.html#a07f32e8665a86591fd67cc45e2d9ed7e">color_</a></td></tr>
-<tr class="memdesc:a07f32e8665a86591fd67cc45e2d9ed7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current color. By default calculated from the element. <br/></td></tr>
-<tr class="separator:a07f32e8665a86591fd67cc45e2d9ed7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0466ff5cd4f678f39ada4d7e849a943c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0466ff5cd4f678f39ada4d7e849a943c"></a>
-<a class="el" href="a00257.html">PODVector</a>&lt; float &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00350.html#a0466ff5cd4f678f39ada4d7e849a943c">vertexData_</a></td></tr>
-<tr class="memdesc:a0466ff5cd4f678f39ada4d7e849a943c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex data. <br/></td></tr>
-<tr class="separator:a0466ff5cd4f678f39ada4d7e849a943c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96d60ccf425a2e7a9bb46d9e6c63ca01"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a96d60ccf425a2e7a9bb46d9e6c63ca01"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00350.html#a96d60ccf425a2e7a9bb46d9e6c63ca01">vertexStart_</a></td></tr>
-<tr class="memdesc:a96d60ccf425a2e7a9bb46d9e6c63ca01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex data start index. <br/></td></tr>
-<tr class="separator:a96d60ccf425a2e7a9bb46d9e6c63ca01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f5730fa1d908448352dc0405874f78d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f5730fa1d908448352dc0405874f78d"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00350.html#a4f5730fa1d908448352dc0405874f78d">vertexEnd_</a></td></tr>
-<tr class="memdesc:a4f5730fa1d908448352dc0405874f78d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex data end index. <br/></td></tr>
-<tr class="separator:a4f5730fa1d908448352dc0405874f78d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b86e140a3f8f7153d72d4b033a4ae6b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b86e140a3f8f7153d72d4b033a4ae6b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00350.html#a0b86e140a3f8f7153d72d4b033a4ae6b">useGradient_</a></td></tr>
-<tr class="memdesc:a0b86e140a3f8f7153d72d4b033a4ae6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gradient flag. <br/></td></tr>
-<tr class="separator:a0b86e140a3f8f7153d72d4b033a4ae6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad33ca29a42d0062ab9ca38d9665611cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad33ca29a42d0062ab9ca38d9665611cc"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00350.html#ad33ca29a42d0062ab9ca38d9665611cc">touchID_</a></td></tr>
+<tr class="memdesc:ad33ca29a42d0062ab9ca38d9665611cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Touch (finger) ID. <br/></td></tr>
+<tr class="separator:ad33ca29a42d0062ab9ca38d9665611cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d1f1c8a8aff0d850c307510100d19b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3d1f1c8a8aff0d850c307510100d19b1"></a>
+<a class="el" href="a00184.html">IntVector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00350.html#a3d1f1c8a8aff0d850c307510100d19b1">position_</a></td></tr>
+<tr class="memdesc:a3d1f1c8a8aff0d850c307510100d19b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position in screen coordinates. <br/></td></tr>
+<tr class="separator:a3d1f1c8a8aff0d850c307510100d19b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60557f62da1c5598ebf5a8dc5bff72bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60557f62da1c5598ebf5a8dc5bff72bc"></a>
+<a class="el" href="a00184.html">IntVector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00350.html#a60557f62da1c5598ebf5a8dc5bff72bc">lastPosition_</a></td></tr>
+<tr class="memdesc:a60557f62da1c5598ebf5a8dc5bff72bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last position in screen coordinates. <br/></td></tr>
+<tr class="separator:a60557f62da1c5598ebf5a8dc5bff72bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8d1a9b97565ed9eb7f1a67f0803f012"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac8d1a9b97565ed9eb7f1a67f0803f012"></a>
+<a class="el" href="a00184.html">IntVector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00350.html#ac8d1a9b97565ed9eb7f1a67f0803f012">delta_</a></td></tr>
+<tr class="memdesc:ac8d1a9b97565ed9eb7f1a67f0803f012"><td class="mdescLeft">&#160;</td><td class="mdescRight">Movement since last frame. <br/></td></tr>
+<tr class="separator:ac8d1a9b97565ed9eb7f1a67f0803f012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42e8585982f0a310de52fac3cc0b2125"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42e8585982f0a310de52fac3cc0b2125"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00350.html#a42e8585982f0a310de52fac3cc0b2125">pressure_</a></td></tr>
+<tr class="memdesc:a42e8585982f0a310de52fac3cc0b2125"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finger pressure. <br/></td></tr>
+<tr class="separator:a42e8585982f0a310de52fac3cc0b2125"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>UI rendering draw call. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/UI/UIBatch.h</li>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/UI/UIBatch.cpp</li>
+<div class="textblock"><p>Input state for a finger touch. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Input/Input.h</li>
 </ul>
 </div><!-- contents -->
