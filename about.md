@@ -47,7 +47,7 @@ title: About
 - Build as single external library<font color="olive"><sup>v1.3</sup></font> (can be linked against statically or dynamically)
 
 ## Discussions, support and contributing
-- The [Urho3D forum](http://urho3d.prophpbb.com/) exists for questions and discussion. The Google [discussion group / mailing list](http://groups.google.com/group/urho3d/) can still be used but is being phased out.
+- Use the [Urho3D forum](http://urho3d.prophpbb.com/) for questions and discussion.
 - For bug reports and contributing, please use the GitHub [issue tracker](https://github.com/urho3d/Urho3D/issues/) and [pull requests](https://github.com/urho3d/Urho3D/pulls) pages.
 - When you contribute, you have to agree that your work will be released under the license as seen at the top of [License.txt](https://github.com/urho3d/Urho3D/blob/master/License.txt).
 
