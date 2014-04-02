@@ -20,21 +20,21 @@ title: Documentation
 <div class="textblock"><p>Resources include most things in Urho3D that are loaded from mass storage during initialization or runtime:</p>
 <ul>
 <li><a class="el" href="a00054.html" title="Skeletal animation resource.">Animation</a></li>
-<li><a class="el" href="a00179.html" title="Image resource.">Image</a></li>
-<li><a class="el" href="a00216.html" title="3D model resource.">Model</a></li>
-<li><a class="el" href="a00207.html" title="Describes how to render 3D geometries.">Material</a></li>
-<li><a class="el" href="a00297.html" title="Script file resource.">ScriptFile</a></li>
-<li><a class="el" href="a00303.html" title="Shader resource consisting of several shader variations.">Shader</a></li>
-<li><a class="el" href="a00316.html" title="Sound resource.">Sound</a></li>
-<li><a class="el" href="a00335.html" title="Material technique. Consists of several passes.">Technique</a></li>
-<li><a class="el" href="a00342.html" title="2D texture resource.">Texture2D</a></li>
-<li><a class="el" href="a00344.html" title="Cube texture resource.">TextureCube</a></li>
-<li><a class="el" href="a00378.html" title="XML document resource.">XMLFile</a></li>
+<li><a class="el" href="a00176.html" title="Image resource.">Image</a></li>
+<li><a class="el" href="a00213.html" title="3D model resource.">Model</a></li>
+<li><a class="el" href="a00204.html" title="Describes how to render 3D geometries.">Material</a></li>
+<li><a class="el" href="a00294.html" title="Script file resource.">ScriptFile</a></li>
+<li><a class="el" href="a00300.html" title="Shader resource consisting of several shader variations.">Shader</a></li>
+<li><a class="el" href="a00313.html" title="Sound resource.">Sound</a></li>
+<li><a class="el" href="a00332.html" title="Material technique. Consists of several passes.">Technique</a></li>
+<li><a class="el" href="a00339.html" title="2D texture resource.">Texture2D</a></li>
+<li><a class="el" href="a00341.html" title="Cube texture resource.">TextureCube</a></li>
+<li><a class="el" href="a00375.html" title="XML document resource.">XMLFile</a></li>
 </ul>
-<p>They are managed and loaded by the <a class="el" href="a00283.html" title="Resource cache subsystem. Loads resources on demand and stores them for later access.">ResourceCache</a> subsystem. Like with all other <a class="el" href="a00010.html">typed objects</a>, resource types are identified by 16-bit type name hashes (C++) or type names (script). An object factory must be registered for each resource type.</p>
-<p>The resources themselves are identified by their file paths, relative to the registered resource directories or <a class="el" href="a00245.html">package files</a>. By default, the engine registers the resource directories Data and CoreData, or the packages Data.pak and CoreData.pak if they exist.</p>
+<p>They are managed and loaded by the <a class="el" href="a00280.html" title="Resource cache subsystem. Loads resources on demand and stores them for later access.">ResourceCache</a> subsystem. Like with all other <a class="el" href="a00010.html">typed objects</a>, resource types are identified by 16-bit type name hashes (C++) or type names (script). An object factory must be registered for each resource type.</p>
+<p>The resources themselves are identified by their file paths, relative to the registered resource directories or <a class="el" href="a00242.html">package files</a>. By default, the engine registers the resource directories Data and CoreData, or the packages Data.pak and CoreData.pak if they exist.</p>
 <p>If loading a resource fails, an error will be logged and a null pointer is returned.</p>
-<p>Typical C++ example of requesting a resource from the cache, in this case, a texture for a <a class="el" href="a00352.html" title="UI subsystem. Manages the graphical user interface.">UI</a> element. Note the use of a convenience template argument to specify the resource type, instead of using the type hash.</p>
+<p>Typical C++ example of requesting a resource from the cache, in this case, a texture for a <a class="el" href="a00349.html" title="UI subsystem. Manages the graphical user interface.">UI</a> element. Note the use of a convenience template argument to specify the resource type, instead of using the type hash.</p>
 <div class="fragment"><div class="line">healthBar-&gt;SetTexture(GetSubsystem&lt;ResourceCache&gt;()-&gt;GetResource&lt;Texture2D&gt;(<span class="stringliteral">&quot;Textures/HealthBarBorder.png&quot;</span>));</div>
 </div><!-- fragment --><p>The same in script would look like this (note the use of a property instead of a setter function):</p>
 <div class="fragment"><div class="line">healthBar.texture = cache.GetResource(<span class="stringliteral">&quot;Texture2D&quot;</span>, <span class="stringliteral">&quot;Textures/HealthBarBorder.png&quot;</span>);</div>

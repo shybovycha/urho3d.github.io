@@ -20,128 +20,105 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00074.html">Batch</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00074.html">BatchQueue</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01053.html">List of all members</a>  </div>
+<a href="a01059.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::Batch Struct Reference</div>  </div>
+<div class="title">Urho3D::BatchQueue Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Queued 3D geometry draw call.  
+<p>Queue that contains both instanced and non-instanced draw calls.  
  <a href="a00074.html#details">More...</a></p>
 
 <p><code>#include &lt;Batch.h&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Urho3D::Batch:</div>
+Collaboration diagram for Urho3D::BatchQueue:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a01054.svg" width="166" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for Urho3D::Batch:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01055.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01060.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac42271aa275d71c526b5aabaddd23efa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac42271aa275d71c526b5aabaddd23efa"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#ac42271aa275d71c526b5aabaddd23efa">Batch</a> ()</td></tr>
-<tr class="memdesc:ac42271aa275d71c526b5aabaddd23efa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with defaults. <br/></td></tr>
-<tr class="separator:ac42271aa275d71c526b5aabaddd23efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3edf36908e9c74e396fee7641764b752"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3edf36908e9c74e396fee7641764b752"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#a3edf36908e9c74e396fee7641764b752">Batch</a> (const <a class="el" href="a00321.html">SourceBatch</a> &amp;rhs)</td></tr>
-<tr class="memdesc:a3edf36908e9c74e396fee7641764b752"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a drawable's source batch. <br/></td></tr>
-<tr class="separator:a3edf36908e9c74e396fee7641764b752"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03e6c90ef0f19b20114e096ca71f3484"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a03e6c90ef0f19b20114e096ca71f3484"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#a03e6c90ef0f19b20114e096ca71f3484">CalculateSortKey</a> ()</td></tr>
-<tr class="memdesc:a03e6c90ef0f19b20114e096ca71f3484"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate state sorting key, which consists of base pass flag, light, pass and geometry. <br/></td></tr>
-<tr class="separator:a03e6c90ef0f19b20114e096ca71f3484"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11822b99026dd862a24d159287791cce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11822b99026dd862a24d159287791cce"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#a11822b99026dd862a24d159287791cce">Prepare</a> (<a class="el" href="a00368.html">View</a> *view, bool setModelTransform=true) const </td></tr>
-<tr class="memdesc:a11822b99026dd862a24d159287791cce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare for rendering. <br/></td></tr>
-<tr class="separator:a11822b99026dd862a24d159287791cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9f9a92be96147a298067aa8a5872913"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad9f9a92be96147a298067aa8a5872913"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#ad9f9a92be96147a298067aa8a5872913">Draw</a> (<a class="el" href="a00368.html">View</a> *view) const </td></tr>
-<tr class="memdesc:ad9f9a92be96147a298067aa8a5872913"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare and draw. <br/></td></tr>
-<tr class="separator:ad9f9a92be96147a298067aa8a5872913"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a662c2d13611904fee60835f40616b479"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a662c2d13611904fee60835f40616b479"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#a662c2d13611904fee60835f40616b479">Clear</a> (int maxSortedInstances)</td></tr>
+<tr class="memdesc:a662c2d13611904fee60835f40616b479"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear for new frame by clearing all groups and batches. <br/></td></tr>
+<tr class="separator:a662c2d13611904fee60835f40616b479"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60a4ba2f189a46fef79af7523708d7f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60a4ba2f189a46fef79af7523708d7f1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#a60a4ba2f189a46fef79af7523708d7f1">SortBackToFront</a> ()</td></tr>
+<tr class="memdesc:a60a4ba2f189a46fef79af7523708d7f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sort non-instanced draw calls back to front. <br/></td></tr>
+<tr class="separator:a60a4ba2f189a46fef79af7523708d7f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a985650f0ab8a45d05a61bf01310d659c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a985650f0ab8a45d05a61bf01310d659c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#a985650f0ab8a45d05a61bf01310d659c">SortFrontToBack</a> ()</td></tr>
+<tr class="memdesc:a985650f0ab8a45d05a61bf01310d659c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sort instanced and non-instanced draw calls front to back. <br/></td></tr>
+<tr class="separator:a985650f0ab8a45d05a61bf01310d659c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f8f1cf2b5220d326999af5d50523d32"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f8f1cf2b5220d326999af5d50523d32"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#a0f8f1cf2b5220d326999af5d50523d32">SortFrontToBack2Pass</a> (<a class="el" href="a00257.html">PODVector</a>&lt; <a class="el" href="a00071.html">Batch</a> * &gt; &amp;batches)</td></tr>
+<tr class="memdesc:a0f8f1cf2b5220d326999af5d50523d32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sort batches front to back while also maintaining state sorting. <br/></td></tr>
+<tr class="separator:a0f8f1cf2b5220d326999af5d50523d32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bc6684690a05ae7181c5c134c339251"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6bc6684690a05ae7181c5c134c339251"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#a6bc6684690a05ae7181c5c134c339251">SetTransforms</a> (void *lockedData, unsigned &amp;freeIndex)</td></tr>
+<tr class="memdesc:a6bc6684690a05ae7181c5c134c339251"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pre-set instance transforms of all groups. The vertex buffer must be big enough to hold all transforms. <br/></td></tr>
+<tr class="separator:a6bc6684690a05ae7181c5c134c339251"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56393239c732365ee4be6a247800758b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a56393239c732365ee4be6a247800758b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#a56393239c732365ee4be6a247800758b">Draw</a> (<a class="el" href="a00365.html">View</a> *view, bool markToStencil=false, bool usingLightOptimization=false) const </td></tr>
+<tr class="memdesc:a56393239c732365ee4be6a247800758b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw. <br/></td></tr>
+<tr class="separator:a56393239c732365ee4be6a247800758b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43da6d8cee00834c67f731ee2ae2e319"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43da6d8cee00834c67f731ee2ae2e319"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#a43da6d8cee00834c67f731ee2ae2e319">GetNumInstances</a> () const </td></tr>
+<tr class="memdesc:a43da6d8cee00834c67f731ee2ae2e319"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the combined amount of instances. <br/></td></tr>
+<tr class="separator:a43da6d8cee00834c67f731ee2ae2e319"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6254711f4a6582983cdaefb84ec0e3e3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6254711f4a6582983cdaefb84ec0e3e3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#a6254711f4a6582983cdaefb84ec0e3e3">IsEmpty</a> () const </td></tr>
+<tr class="memdesc:a6254711f4a6582983cdaefb84ec0e3e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the batch group is empty. <br/></td></tr>
+<tr class="separator:a6254711f4a6582983cdaefb84ec0e3e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a280b4f65a46d3f91576956fb7a697e08"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a280b4f65a46d3f91576956fb7a697e08"></a>
-unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#a280b4f65a46d3f91576956fb7a697e08">sortKey_</a></td></tr>
-<tr class="memdesc:a280b4f65a46d3f91576956fb7a697e08"><td class="mdescLeft">&#160;</td><td class="mdescRight">State sorting key. <br/></td></tr>
-<tr class="separator:a280b4f65a46d3f91576956fb7a697e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab67e488dbd06fb4ad5d4ca30a0c142b3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab67e488dbd06fb4ad5d4ca30a0c142b3"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#ab67e488dbd06fb4ad5d4ca30a0c142b3">distance_</a></td></tr>
-<tr class="memdesc:ab67e488dbd06fb4ad5d4ca30a0c142b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distance from camera. <br/></td></tr>
-<tr class="separator:ab67e488dbd06fb4ad5d4ca30a0c142b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02bda9ff330190fea1f629671f1be8f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02bda9ff330190fea1f629671f1be8f7"></a>
-<a class="el" href="a00165.html">Geometry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#a02bda9ff330190fea1f629671f1be8f7">geometry_</a></td></tr>
-<tr class="memdesc:a02bda9ff330190fea1f629671f1be8f7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00165.html" title="Defines one or more vertex buffers, an index buffer and a draw range.">Geometry</a>. <br/></td></tr>
-<tr class="separator:a02bda9ff330190fea1f629671f1be8f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b1bdfa165af35fe384ca4fe60d04833"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b1bdfa165af35fe384ca4fe60d04833"></a>
-<a class="el" href="a00207.html">Material</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#a3b1bdfa165af35fe384ca4fe60d04833">material_</a></td></tr>
-<tr class="memdesc:a3b1bdfa165af35fe384ca4fe60d04833"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00207.html" title="Describes how to render 3D geometries.">Material</a>. <br/></td></tr>
-<tr class="separator:a3b1bdfa165af35fe384ca4fe60d04833"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba6007620d79f6be14048848f46f665e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba6007620d79f6be14048848f46f665e"></a>
-const <a class="el" href="a00211.html">Matrix3x4</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#aba6007620d79f6be14048848f46f665e">worldTransform_</a></td></tr>
-<tr class="memdesc:aba6007620d79f6be14048848f46f665e"><td class="mdescLeft">&#160;</td><td class="mdescRight">World transform(s). For a skinned model, these are the bone transforms. <br/></td></tr>
-<tr class="separator:aba6007620d79f6be14048848f46f665e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10fef31fefa9d8ed7128457804a74ae4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a10fef31fefa9d8ed7128457804a74ae4"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#a10fef31fefa9d8ed7128457804a74ae4">numWorldTransforms_</a></td></tr>
-<tr class="memdesc:a10fef31fefa9d8ed7128457804a74ae4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of world transforms. <br/></td></tr>
-<tr class="separator:a10fef31fefa9d8ed7128457804a74ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06b52a8716a49ae7b82e7ef59200ed0d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a06b52a8716a49ae7b82e7ef59200ed0d"></a>
-<a class="el" href="a00087.html">Camera</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#a06b52a8716a49ae7b82e7ef59200ed0d">camera_</a></td></tr>
-<tr class="memdesc:a06b52a8716a49ae7b82e7ef59200ed0d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00087.html" title="Camera component.">Camera</a>. <br/></td></tr>
-<tr class="separator:a06b52a8716a49ae7b82e7ef59200ed0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd0e368ed367f3e69deb02ed356401d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd0e368ed367f3e69deb02ed356401d9"></a>
-<a class="el" href="a00381.html">Zone</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#afd0e368ed367f3e69deb02ed356401d9">zone_</a></td></tr>
-<tr class="memdesc:afd0e368ed367f3e69deb02ed356401d9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00381.html" title="Component that describes global rendering properties">Zone</a>. <br/></td></tr>
-<tr class="separator:afd0e368ed367f3e69deb02ed356401d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab763b56431b05a56c2fbace86f669538"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab763b56431b05a56c2fbace86f669538"></a>
-<a class="el" href="a00191.html">LightBatchQueue</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#ab763b56431b05a56c2fbace86f669538">lightQueue_</a></td></tr>
-<tr class="memdesc:ab763b56431b05a56c2fbace86f669538"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00190.html" title="Light component.">Light</a> properties. <br/></td></tr>
-<tr class="separator:ab763b56431b05a56c2fbace86f669538"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5e6b173cf2a3e9882b1f423fbf116a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5e6b173cf2a3e9882b1f423fbf116a3"></a>
-<a class="el" href="a00253.html">Pass</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#ac5e6b173cf2a3e9882b1f423fbf116a3">pass_</a></td></tr>
-<tr class="memdesc:ac5e6b173cf2a3e9882b1f423fbf116a3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00207.html" title="Describes how to render 3D geometries.">Material</a> pass. <br/></td></tr>
-<tr class="separator:ac5e6b173cf2a3e9882b1f423fbf116a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35a531db51177128fd9c57d602a3d1fa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a35a531db51177128fd9c57d602a3d1fa"></a>
-<a class="el" href="a00307.html">ShaderVariation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#a35a531db51177128fd9c57d602a3d1fa">vertexShader_</a></td></tr>
-<tr class="memdesc:a35a531db51177128fd9c57d602a3d1fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex shader. <br/></td></tr>
-<tr class="separator:a35a531db51177128fd9c57d602a3d1fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7fb02aba577c825192fb0093c939fa7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7fb02aba577c825192fb0093c939fa7"></a>
-<a class="el" href="a00307.html">ShaderVariation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#ae7fb02aba577c825192fb0093c939fa7">pixelShader_</a></td></tr>
-<tr class="memdesc:ae7fb02aba577c825192fb0093c939fa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pixel shader. <br/></td></tr>
-<tr class="separator:ae7fb02aba577c825192fb0093c939fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6fe944557b76f3bbfaefbeac01add0a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae6fe944557b76f3bbfaefbeac01add0a"></a>
-GeometryType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#ae6fe944557b76f3bbfaefbeac01add0a">geometryType_</a></td></tr>
-<tr class="memdesc:ae6fe944557b76f3bbfaefbeac01add0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geometry type. <br/></td></tr>
-<tr class="separator:ae6fe944557b76f3bbfaefbeac01add0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f1d3fc3d205cd2fb6db678a6080f3b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f1d3fc3d205cd2fb6db678a6080f3b9"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#a0f1d3fc3d205cd2fb6db678a6080f3b9">overrideView_</a></td></tr>
-<tr class="memdesc:a0f1d3fc3d205cd2fb6db678a6080f3b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override view transform flag. When set, the camera's view transform is replaced with an identity matrix. <br/></td></tr>
-<tr class="separator:a0f1d3fc3d205cd2fb6db678a6080f3b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe92f4bb95a256a6c9ea7fc90d9fbcc7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe92f4bb95a256a6c9ea7fc90d9fbcc7"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#afe92f4bb95a256a6c9ea7fc90d9fbcc7">isBase_</a></td></tr>
-<tr class="memdesc:afe92f4bb95a256a6c9ea7fc90d9fbcc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base batch flag. This tells to draw the object fully without light optimizations. <br/></td></tr>
-<tr class="separator:afe92f4bb95a256a6c9ea7fc90d9fbcc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbcddea31d881e1915c19563875b0a57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abbcddea31d881e1915c19563875b0a57"></a>
-unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#abbcddea31d881e1915c19563875b0a57">lightMask_</a></td></tr>
-<tr class="memdesc:abbcddea31d881e1915c19563875b0a57"><td class="mdescLeft">&#160;</td><td class="mdescRight">8-bit light mask for stencil marking in deferred rendering. <br/></td></tr>
-<tr class="separator:abbcddea31d881e1915c19563875b0a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff54ffa287473625b2abdd15ee1a8812"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff54ffa287473625b2abdd15ee1a8812"></a>
+<a class="el" href="a00169.html">HashMap</a>&lt; <a class="el" href="a00073.html">BatchGroupKey</a>, <br class="typebreak"/>
+<a class="el" href="a00072.html">BatchGroup</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#aff54ffa287473625b2abdd15ee1a8812">batchGroups_</a></td></tr>
+<tr class="memdesc:aff54ffa287473625b2abdd15ee1a8812"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instanced draw calls. <br/></td></tr>
+<tr class="separator:aff54ffa287473625b2abdd15ee1a8812"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba2dbe7861e94eb51b73d3d7fe909eea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba2dbe7861e94eb51b73d3d7fe909eea"></a>
+<a class="el" href="a00169.html">HashMap</a>&lt; unsigned, unsigned &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#aba2dbe7861e94eb51b73d3d7fe909eea">shaderRemapping_</a></td></tr>
+<tr class="memdesc:aba2dbe7861e94eb51b73d3d7fe909eea"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00300.html" title="Shader resource consisting of several shader variations.">Shader</a> remapping table for 2-pass state and distance sort. <br/></td></tr>
+<tr class="separator:aba2dbe7861e94eb51b73d3d7fe909eea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d2cfb1022eba37f45de9be6f71300ee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d2cfb1022eba37f45de9be6f71300ee"></a>
+<a class="el" href="a00169.html">HashMap</a>&lt; unsigned short, <br class="typebreak"/>
+unsigned short &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#a9d2cfb1022eba37f45de9be6f71300ee">materialRemapping_</a></td></tr>
+<tr class="memdesc:a9d2cfb1022eba37f45de9be6f71300ee"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00204.html" title="Describes how to render 3D geometries.">Material</a> remapping table for 2-pass state and distance sort. <br/></td></tr>
+<tr class="separator:a9d2cfb1022eba37f45de9be6f71300ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f956ab2a13fd0b5f4bbfab857d0f94e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f956ab2a13fd0b5f4bbfab857d0f94e"></a>
+<a class="el" href="a00169.html">HashMap</a>&lt; unsigned short, <br class="typebreak"/>
+unsigned short &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#a9f956ab2a13fd0b5f4bbfab857d0f94e">geometryRemapping_</a></td></tr>
+<tr class="memdesc:a9f956ab2a13fd0b5f4bbfab857d0f94e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00162.html" title="Defines one or more vertex buffers, an index buffer and a draw range.">Geometry</a> remapping table for 2-pass state and distance sort. <br/></td></tr>
+<tr class="separator:a9f956ab2a13fd0b5f4bbfab857d0f94e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f99a16a48ff749112ef7f5c5986c8b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f99a16a48ff749112ef7f5c5986c8b0"></a>
+<a class="el" href="a00257.html">PODVector</a>&lt; <a class="el" href="a00071.html">Batch</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#a9f99a16a48ff749112ef7f5c5986c8b0">batches_</a></td></tr>
+<tr class="memdesc:a9f99a16a48ff749112ef7f5c5986c8b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsorted non-instanced draw calls. <br/></td></tr>
+<tr class="separator:a9f99a16a48ff749112ef7f5c5986c8b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37f2f99f0cf49fbc209d718082a5b072"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37f2f99f0cf49fbc209d718082a5b072"></a>
+<a class="el" href="a00257.html">PODVector</a>&lt; <a class="el" href="a00071.html">Batch</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#a37f2f99f0cf49fbc209d718082a5b072">sortedBatches_</a></td></tr>
+<tr class="memdesc:a37f2f99f0cf49fbc209d718082a5b072"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sorted non-instanced draw calls. <br/></td></tr>
+<tr class="separator:a37f2f99f0cf49fbc209d718082a5b072"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79a0f0be4241010df805cfbf28b7f4fa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a79a0f0be4241010df805cfbf28b7f4fa"></a>
+<a class="el" href="a00257.html">PODVector</a>&lt; <a class="el" href="a00072.html">BatchGroup</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#a79a0f0be4241010df805cfbf28b7f4fa">sortedBatchGroups_</a></td></tr>
+<tr class="memdesc:a79a0f0be4241010df805cfbf28b7f4fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sorted instanced draw calls. <br/></td></tr>
+<tr class="separator:a79a0f0be4241010df805cfbf28b7f4fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0d069fefe2a5a2f259c4a2e148c80cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae0d069fefe2a5a2f259c4a2e148c80cb"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html#ae0d069fefe2a5a2f259c4a2e148c80cb">maxSortedInstances_</a></td></tr>
+<tr class="memdesc:ae0d069fefe2a5a2f259c4a2e148c80cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum sorted instances. <br/></td></tr>
+<tr class="separator:ae0d069fefe2a5a2f259c4a2e148c80cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Queued 3D geometry draw call. </p>
+<div class="textblock"><p>Queue that contains both instanced and non-instanced draw calls. </p>
 </div><hr/>The documentation for this struct was generated from the following files:<ul>
 <li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/Batch.h</li>
 <li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/Batch.cpp</li>
