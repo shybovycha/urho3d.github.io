@@ -17,7 +17,7 @@ title: Documentation
 <div class="title">Lua scripting </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Lua scripting in Urho3D has its dedicated <a class="el" href="a00202.html" title="Lua script subsystem.">LuaScript</a> subsystem that must be instantiated before the scripting capabilities can be used. Lua support is not compiled in by default but must be enabled by the CMake build option -DENABLE_LUA=1. For more details see <a class="el" href="a00001.html#Build_Options">Build options</a>. Instantiating the subsystem is done like this:</p>
+<div class="textblock"><p>Lua scripting in Urho3D has its dedicated <a class="el" href="a00202.html" title="Lua script subsystem.">LuaScript</a> subsystem that must be instantiated before the scripting capabilities can be used. Lua support is not compiled in by default but must be enabled by the CMake build option -DURHO3D_LUA=1. For more details see <a class="el" href="a00001.html#Build_Options">Build options</a>. Instantiating the subsystem is done like this:</p>
 <div class="fragment"><div class="line">context_-&gt;RegisterSubsystem(<span class="keyword">new</span> LuaScript(context_));</div>
 </div><!-- fragment --><p>Like AngelScript, Lua scripting supports immediate compiling and execution of single script lines, loading script files and executing procedural functions from them, and instantiating script objects to scene nodes using the <a class="el" href="a00203.html" title="Lua script object component.">LuaScriptInstance</a> component.</p>
 <h1><a class="anchor" id="LuaScripting_Immediate"></a>

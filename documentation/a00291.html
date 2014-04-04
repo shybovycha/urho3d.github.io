@@ -80,7 +80,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a002
 <tr class="memdesc:a1f189cc879fcb6761fc4f2d7fb9bd451"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether to execute engine console commands as script code. Default true. <br/></td></tr>
 <tr class="separator:a1f189cc879fcb6761fc4f2d7fb9bd451"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7063ccf0fcfbb9adafe8fc5d73bb1b78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00291.html#a7063ccf0fcfbb9adafe8fc5d73bb1b78">DumpAPI</a> (DumpMode mode=DOXYGEN)</td></tr>
-<tr class="memdesc:a7063ccf0fcfbb9adafe8fc5d73bb1b78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the whole script API (all registered classes, methods and properties) to the log. No-ops when ENABLE_LOGGING not defined.  <a href="#a7063ccf0fcfbb9adafe8fc5d73bb1b78">More...</a><br/></td></tr>
+<tr class="memdesc:a7063ccf0fcfbb9adafe8fc5d73bb1b78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the whole script API (all registered classes, methods and properties) to the log. No-ops when URHO3D_LOGGING not defined.  <a href="#a7063ccf0fcfbb9adafe8fc5d73bb1b78">More...</a><br/></td></tr>
 <tr class="separator:a7063ccf0fcfbb9adafe8fc5d73bb1b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90629feee155212c4dd19c49e27a83aa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a90629feee155212c4dd19c49e27a83aa"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00291.html#a90629feee155212c4dd19c49e27a83aa">MessageCallback</a> (const asSMessageInfo *msg)</td></tr>
@@ -278,7 +278,7 @@ asIScriptContext *&#160;</td><td class="memItemRight" valign="bottom"><a class="
 <tr class="memdesc:af09075cf7be657ab08e89f354ea51d82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a script function/method execution context for the current execution nesting level. <br/></td></tr>
 <tr class="separator:af09075cf7be657ab08e89f354ea51d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a3d0019b68f3e928ebd8ca72bfb80d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00291.html#a5a3d0019b68f3e928ebd8ca72bfb80d4">OutputAPIRow</a> (DumpMode mode, const <a class="el" href="a00330.html">String</a> &amp;row, bool removeReference=false, <a class="el" href="a00330.html">String</a> separator=&quot;;&quot;)</td></tr>
-<tr class="memdesc:a5a3d0019b68f3e928ebd8ca72bfb80d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output a sanitated row of script API. No-ops when ENABLE_LOGGING not defined.  <a href="#a5a3d0019b68f3e928ebd8ca72bfb80d4">More...</a><br/></td></tr>
+<tr class="memdesc:a5a3d0019b68f3e928ebd8ca72bfb80d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output a sanitated row of script API. No-ops when URHO3D_LOGGING not defined.  <a href="#a5a3d0019b68f3e928ebd8ca72bfb80d4">More...</a><br/></td></tr>
 <tr class="separator:a5a3d0019b68f3e928ebd8ca72bfb80d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa05e8601165951c4da36ff958431346a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa05e8601165951c4da36ff958431346a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00291.html#aa05e8601165951c4da36ff958431346a">HandleConsoleCommand</a> (<a class="el" href="a00331.html">StringHash</a> eventType, <a class="el" href="a00169.html">VariantMap</a> &amp;eventData)</td></tr>
@@ -352,7 +352,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Print the whole script API (all registered classes, methods and properties) to the log. No-ops when ENABLE_LOGGING not defined. </p>
+<p>Print the whole script API (all registered classes, methods and properties) to the log. No-ops when URHO3D_LOGGING not defined. </p>
 <dl class="todo"><dt><b><a class="el" href="a00832.html#_todo000030">Todo:</a></b></dt><dd>Find a cleaner way to do this instead of hardcoding </dd></dl>
 <dl class="todo"><dt><b><a class="el" href="a00832.html#_todo000031">Todo:</a></b></dt><dd>Is there a better way to mark deprecated API bindings for AngelScript? </dd></dl>
 
@@ -410,7 +410,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Output a sanitated row of script API. No-ops when ENABLE_LOGGING not defined. </p>
+<p>Output a sanitated row of script API. No-ops when URHO3D_LOGGING not defined. </p>
 <dl class="todo"><dt><b><a class="el" href="a00832.html#_todo000032">Todo:</a></b></dt><dd>We need C++11 &lt;regex&gt; in <a class="el" href="a00330.html" title="String class.">String</a> class to handle REGEX whole-word replacement correctly. Can't do that since we still support VS2008. </dd></dl>
 
 <p><div class="dynheader">
