@@ -133,7 +133,7 @@ Build options</h1>
  </p>
 <table class="doxtable">
 <tr>
-<th>Defines </th><th>V</th><th>Build Options</th></tr>
+<th>Build Option </th><th>V</th><th>Description </th></tr>
 <tr>
 <td>URHO3D_64BIT </td><td>0</td><td>Enable 64bit build </td></tr>
 <tr>
@@ -153,7 +153,9 @@ Build options</h1>
 <tr>
 <td>URHO3D_EXTRAS </td><td>0</td><td>Build extras (Desktop and RPI only) </td></tr>
 <tr>
-<td>URHO3D_DOCS[_QUIET] </td><td>0</td><td>Generate documentation as part of normal build (the 'doc' builtin target can be used to generate documentation regardless of this option's value) </td></tr>
+<td>URHO3D_DOCS </td><td>0</td><td>Generate documentation as part of normal build (the 'doc' builtin target can be used to generate documentation regardless of this option's value) </td></tr>
+<tr>
+<td>URHO3D_DOCS_QUIET </td><td>0</td><td>Generate documentation as part of normal build, suppress generation process from sending anything to stdout </td></tr>
 <tr>
 <td>URHO3D_SSE </td><td>1</td><td>Enable SSE instruction set </td></tr>
 <tr>
@@ -205,7 +207,7 @@ Using cmake-gui to configure and generate Urho3D project file</h1>
 </ul>
 </li>
 <li>The runtime and archive output directories are automatically set based on the target platform regardless of the build directory name (should you choose not to adhere with the above). For example on Android platform, they will be android-Bin and android-Lib, respectively.<br/>
- If you choose not to adhere with this build directory naming convention then you will have to install the Urho3D library into your local filesystem in order to use the Urho3D library in your external project (See <a href="http://urho3d.github.io/documentation/a00004.html#UsingLibraryFromSDK">http://urho3d.github.io/documentation/a00004.html#UsingLibraryFromSDK</a>).</li>
+ If you choose not to adhere with this build directory naming convention then you will have to install the Urho3D library into your local filesystem in order to use the Urho3D library in your external project (See <a class="el" href="a00001.html#Building_Library">Library build</a> Library build and <a class="el" href="a00004.html#UsingLibraryFromSDK">Using Library from SDK</a>).</li>
 <li>All the post-CMake workaround and/or bug fixes that are scripted in the batch files or shell scripts are not applied to the generated project file.</li>
 </ul>
 <p>Steps to configure:</p>
