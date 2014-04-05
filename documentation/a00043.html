@@ -4115,8 +4115,8 @@ Classes</h1>
 <li>bool LoadXML(const <a class="el" href="a00374.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li><a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a> LocalToWorld(const Vector3&amp;) const</li>
 <li><a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a> LocalToWorld(const Vector4&amp;) const</li>
-<li>bool LookAt(const <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a>&amp; = <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a> ( 0 , 1 , 0 ))</li>
-<li>void Pitch(float, bool = false)</li>
+<li>bool LookAt(const <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a>&amp; = <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a> ( 0 , 1 , 0 ), TransformSpace = TS_WORLD)</li>
+<li>void Pitch(float, TransformSpace = TS_LOCAL)</li>
 <li>void Remove()</li>
 <li>void RemoveAllChildren()</li>
 <li>void RemoveAllComponents()</li>
@@ -4127,8 +4127,9 @@ Classes</h1>
 <li>void RemoveComponents(bool, bool)</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
-<li>void Roll(float, bool = false)</li>
-<li>void Rotate(const <a class="el" href="a00262.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp;, bool = false)</li>
+<li>void Roll(float, TransformSpace = TS_LOCAL)</li>
+<li>void Rotate(const <a class="el" href="a00262.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp;, TransformSpace = TS_LOCAL)</li>
+<li>void RotateAround(const <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="a00262.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp;, TransformSpace = TS_LOCAL)</li>
 <li>bool Save(<a class="el" href="a00149.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
 <li>bool SaveXML(<a class="el" href="a00149.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
@@ -4144,11 +4145,10 @@ Classes</h1>
 <li>void SetWorldTransform(const Vector3&amp;, const Quaternion&amp;)</li>
 <li>void SetWorldTransform(const Vector3&amp;, const Quaternion&amp;, const Vector3&amp;)</li>
 <li>void SetWorldTransform(const Vector3&amp;, const Quaternion&amp;, float)</li>
-<li>void Translate(const Vector3&amp;)</li>
-<li>void TranslateRelative(const Vector3&amp;)</li>
+<li>void Translate(const <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a>&amp;, TransformSpace = TS_LOCAL)</li>
 <li><a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a> WorldToLocal(const Vector3&amp;) const</li>
 <li><a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a> WorldToLocal(const Vector4&amp;) const</li>
-<li>void Yaw(float, bool = false)</li>
+<li>void Yaw(float, TransformSpace = TS_LOCAL)</li>
 </ul>
 <p>Properties:</p>
 <ul>
@@ -5143,8 +5143,8 @@ Classes</h1>
 <li>bool LoadXML(const <a class="el" href="a00374.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li><a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a> LocalToWorld(const Vector3&amp;) const</li>
 <li><a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a> LocalToWorld(const Vector4&amp;) const</li>
-<li>bool LookAt(const <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a>&amp; = <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a> ( 0 , 1 , 0 ))</li>
-<li>void Pitch(float, bool = false)</li>
+<li>bool LookAt(const <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a>&amp; = <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a> ( 0 , 1 , 0 ), TransformSpace = TS_WORLD)</li>
+<li>void Pitch(float, TransformSpace = TS_LOCAL)</li>
 <li>void RegisterVar(const String&amp;)</li>
 <li>void Remove()</li>
 <li>void RemoveAllChildren()</li>
@@ -5156,8 +5156,9 @@ Classes</h1>
 <li>void RemoveComponents(bool, bool)</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
-<li>void Roll(float, bool = false)</li>
-<li>void Rotate(const <a class="el" href="a00262.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp;, bool = false)</li>
+<li>void Roll(float, TransformSpace = TS_LOCAL)</li>
+<li>void Rotate(const <a class="el" href="a00262.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp;, TransformSpace = TS_LOCAL)</li>
+<li>void RotateAround(const <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="a00262.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp;, TransformSpace = TS_LOCAL)</li>
 <li>bool Save(<a class="el" href="a00149.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
 <li>bool SaveXML(<a class="el" href="a00149.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
@@ -5174,14 +5175,13 @@ Classes</h1>
 <li>void SetWorldTransform(const Vector3&amp;, const Quaternion&amp;, float)</li>
 <li>void StopAsyncLoading()</li>
 <li>const <a class="el" href="a00330.html" title="String class.">String</a>&amp; GetVarName(ShortStringHash) const</li>
-<li>void Translate(const Vector3&amp;)</li>
-<li>void TranslateRelative(const Vector3&amp;)</li>
+<li>void Translate(const <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a>&amp;, TransformSpace = TS_LOCAL)</li>
 <li>void UnregisterAllVars(const String&amp;)</li>
 <li>void UnregisterVar(const String&amp;)</li>
 <li>void Update(float)</li>
 <li><a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a> WorldToLocal(const Vector3&amp;) const</li>
 <li><a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a> WorldToLocal(const Vector4&amp;) const</li>
-<li>void Yaw(float, bool = false)</li>
+<li>void Yaw(float, TransformSpace = TS_LOCAL)</li>
 </ul>
 <p>Properties:</p>
 <ul>
@@ -8406,6 +8406,12 @@ Enumerations</h1>
 <li>TEXTURE_DYNAMIC</li>
 <li>TEXTURE_RENDERTARGET</li>
 <li>TEXTURE_DEPTHSTENCIL</li>
+</ul>
+<h3>TransformSpace</h3>
+<ul>
+<li>TS_LOCAL</li>
+<li>TS_PARENT</li>
+<li>TS_WORLD</li>
 </ul>
 <h3>TraversalMode</h3>
 <ul>

@@ -2683,18 +2683,18 @@ Classes</h1>
 <li>void SetWorldTransform(const Vector3&amp; position, const Quaternion&amp; rotation)</li>
 <li>void SetWorldTransform(const Vector3&amp; position, const Quaternion&amp; rotation, float scale)</li>
 <li>void SetWorldTransform(const Vector3&amp; position, const Quaternion&amp; rotation, const Vector3&amp; scale)</li>
-<li>void Translate(const Vector3&amp; delta)</li>
-<li>void TranslateXYZ(float x, float y, float z)</li>
-<li>void TranslateRelative(const Vector3&amp; delta)</li>
-<li>void TranslateRelativeXYZ(float x, float y, float z)</li>
-<li>void Rotate(const <a class="el" href="a00262.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; delta, bool fixedAxis = false)</li>
-<li>void RotateXYZ(float x, float y, float z, bool fixedAxis = false)</li>
-<li>void Pitch(float angle, bool fixedAxis = false)</li>
-<li>void Yaw(float angle, bool fixedAxis = false)</li>
-<li>void Roll(float angle, bool fixedAxis = false)</li>
+<li>void Translate(const <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a>&amp; delta, TransformSpace space = TS_LOCAL)</li>
+<li>void TranslateXYZ(float x, float y, float z, TransformSpace space = TS_LOCAL)</li>
+<li>void Rotate(const <a class="el" href="a00262.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; delta, TransformSpace space = TS_LOCAL)</li>
+<li>void RotateXYZ(float x, float y, float z, TransformSpace space = TS_LOCAL)</li>
+<li>void RotateAround(const <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a>&amp; point, const <a class="el" href="a00262.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; delta, TransformSpace space = TS_LOCAL)</li>
+<li>void RotateAroundXYZ(float pX, float pY, float pZ, float dX, float dY, float dZ, TransformSpace space = TS_LOCAL)</li>
+<li>void Pitch(float angle, TransformSpace space = TS_LOCAL)</li>
+<li>void Yaw(float angle, TransformSpace space = TS_LOCAL)</li>
+<li>void Roll(float angle, TransformSpace space = TS_LOCAL)</li>
 <li>bool LookAt(const Vector3&amp; target)</li>
-<li>bool LookAt(const Vector3&amp; target, const Vector3&amp; upAxis)</li>
-<li>bool LookAtXYZ(float x, float y, float z, float upX = 0.0f, float upY = 1.0f, float upZ = 0.0f)</li>
+<li>bool LookAt(const <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a>&amp; target, const <a class="el" href="a00358.html" title="Three-dimensional vector.">Vector3</a>&amp; upAxis, TransformSpace space = TS_WORLD)</li>
+<li>bool LookAtXYZ(float x, float y, float z, float upX = 0.0f, float upY = 1.0f, float upZ = 0.0f, TransformSpace space = TS_WORLD)</li>
 <li>void Scale(float scale)</li>
 <li>void Scale(const Vector3&amp; scale)</li>
 <li>void ScaleXYZ(float x, float y, float z)</li>
@@ -5942,6 +5942,12 @@ Enumerations</h1>
 <li>int TEXTURE_DYNAMIC</li>
 <li>int TEXTURE_RENDERTARGET</li>
 <li>int TEXTURE_DEPTHSTENCIL</li>
+</ul>
+<h3>TransformSpace</h3>
+<ul>
+<li>int TS_LOCAL</li>
+<li>int TS_PARENT</li>
+<li>int TS_WORLD</li>
 </ul>
 <h3>TraversalMode</h3>
 <ul>
