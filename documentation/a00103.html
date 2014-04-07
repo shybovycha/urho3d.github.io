@@ -77,6 +77,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00103.html#a8a7662a654ecdff173220fb9d058c100">SetAutoVisibleOnError</a> (bool enable)</td></tr>
 <tr class="memdesc:a8a7662a654ecdff173220fb9d058c100"><td class="mdescLeft">&#160;</td><td class="mdescRight">Automatically set console to visible when receiving an error log message. <br/></td></tr>
 <tr class="separator:a8a7662a654ecdff173220fb9d058c100"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18546b712ec118a256122c627696662e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18546b712ec118a256122c627696662e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00103.html#a18546b712ec118a256122c627696662e">SetNumBufferedRows</a> (unsigned rows)</td></tr>
+<tr class="memdesc:a18546b712ec118a256122c627696662e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set number of buffered rows. <br/></td></tr>
+<tr class="separator:a18546b712ec118a256122c627696662e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b523b3fbdff6cc3da360dc128be09fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b523b3fbdff6cc3da360dc128be09fd"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00103.html#a6b523b3fbdff6cc3da360dc128be09fd">SetNumRows</a> (unsigned rows)</td></tr>
 <tr class="memdesc:a6b523b3fbdff6cc3da360dc128be09fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set number of displayed rows. <br/></td></tr>
@@ -113,6 +117,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00103.html#ac434b5b023700c602de4eb55bc5eba51">IsAutoVisibleOnError</a> () const </td></tr>
 <tr class="memdesc:ac434b5b023700c602de4eb55bc5eba51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true when console is set to automatically visible when receiving an error log message. <br/></td></tr>
 <tr class="separator:ac434b5b023700c602de4eb55bc5eba51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab03631f50a48afc4d2bf098c0d59ad45"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab03631f50a48afc4d2bf098c0d59ad45"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00103.html#ab03631f50a48afc4d2bf098c0d59ad45">GetNumBufferedRows</a> () const </td></tr>
+<tr class="memdesc:ab03631f50a48afc4d2bf098c0d59ad45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of buffered rows. <br/></td></tr>
+<tr class="separator:ab03631f50a48afc4d2bf098c0d59ad45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadf998cdb99b653111f44a7ab5fab07b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aadf998cdb99b653111f44a7ab5fab07b"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00103.html#aadf998cdb99b653111f44a7ab5fab07b">GetNumRows</a> () const </td></tr>
 <tr class="memdesc:aadf998cdb99b653111f44a7ab5fab07b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of displayed rows. <br/></td></tr>
@@ -300,10 +308,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 <a class="el" href="a00307.html">SharedPtr</a>&lt; <a class="el" href="a00079.html">BorderImage</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00103.html#a7a33d46a512c7547fd6669e0929fe7c3">background_</a></td></tr>
 <tr class="memdesc:a7a33d46a512c7547fd6669e0929fe7c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Background. <br/></td></tr>
 <tr class="separator:a7a33d46a512c7547fd6669e0929fe7c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67891875825cf6fd47b76df6458567e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a67891875825cf6fd47b76df6458567e1"></a>
-<a class="el" href="a00307.html">SharedPtr</a>&lt; <a class="el" href="a00351.html">UIElement</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00103.html#a67891875825cf6fd47b76df6458567e1">rowContainer_</a></td></tr>
-<tr class="memdesc:a67891875825cf6fd47b76df6458567e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Container for text rows. <br/></td></tr>
-<tr class="separator:a67891875825cf6fd47b76df6458567e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac59800d0915ad7853e54f152af9a00ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac59800d0915ad7853e54f152af9a00ae"></a>
+<a class="el" href="a00307.html">SharedPtr</a>&lt; <a class="el" href="a00197.html">ListView</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00103.html#ac59800d0915ad7853e54f152af9a00ae">rowContainer_</a></td></tr>
+<tr class="memdesc:ac59800d0915ad7853e54f152af9a00ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Container for text rows. <br/></td></tr>
+<tr class="separator:ac59800d0915ad7853e54f152af9a00ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0f53b7e8de601bb3526126a6020fc16"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab0f53b7e8de601bb3526126a6020fc16"></a>
 <a class="el" href="a00307.html">SharedPtr</a>&lt; <a class="el" href="a00190.html">LineEdit</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00103.html#ab0f53b7e8de601bb3526126a6020fc16">lineEdit_</a></td></tr>
 <tr class="memdesc:ab0f53b7e8de601bb3526126a6020fc16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Line edit. <br/></td></tr>
@@ -320,6 +328,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 <a class="el" href="a00330.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00103.html#a3c0177005b7df303522ca5d767de1b3d">currentRow_</a></td></tr>
 <tr class="memdesc:a3c0177005b7df303522ca5d767de1b3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current row being edited. <br/></td></tr>
 <tr class="separator:a3c0177005b7df303522ca5d767de1b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac26270fff2d1adbf2751851a50f25032"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac26270fff2d1adbf2751851a50f25032"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00103.html#ac26270fff2d1adbf2751851a50f25032">displayedRows_</a></td></tr>
+<tr class="memdesc:ac26270fff2d1adbf2751851a50f25032"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum displayed rows. <br/></td></tr>
+<tr class="separator:ac26270fff2d1adbf2751851a50f25032"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0792859cc98504b5c6ed5cc83c7ad0a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0792859cc98504b5c6ed5cc83c7ad0a4"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00103.html#a0792859cc98504b5c6ed5cc83c7ad0a4">historyRows_</a></td></tr>
 <tr class="memdesc:a0792859cc98504b5c6ed5cc83c7ad0a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Command history maximum rows. <br/></td></tr>
@@ -336,6 +348,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00103.html#a778ee928402eb530a4658424301bce2a">focusOnShow_</a></td></tr>
 <tr class="memdesc:a778ee928402eb530a4658424301bce2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag for automatically focusing the line edit on showing the console. <br/></td></tr>
 <tr class="separator:a778ee928402eb530a4658424301bce2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b75447d232d7d15ae550b4bb77b52b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b75447d232d7d15ae550b4bb77b52b0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00103.html#a2b75447d232d7d15ae550b4bb77b52b0">savedMouseVisibility_</a></td></tr>
+<tr class="memdesc:a2b75447d232d7d15ae550b4bb77b52b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saved OS mouse visiblity flag. Used internally to save and restore OS mouse visibility. <br/></td></tr>
+<tr class="separator:a2b75447d232d7d15ae550b4bb77b52b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
