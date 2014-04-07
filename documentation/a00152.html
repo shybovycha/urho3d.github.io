@@ -28,7 +28,7 @@ title: Documentation
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="a01275.html">List of all members</a>  </div>
+<a href="a01278.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Urho3D::FileSystem Class Reference</div>  </div>
 </div><!--header-->
@@ -41,13 +41,13 @@ title: Documentation
 <div class="dynheader">
 Inheritance diagram for Urho3D::FileSystem:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a01276.svg" width="163" height="195"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a01279.svg" width="163" height="195"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for Urho3D::FileSystem:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01277.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01280.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -77,6 +77,14 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a0015
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#a58d430f0fa0724294df51f0b292ef6da">SystemRun</a> (const <a class="el" href="a00330.html">String</a> &amp;fileName, const <a class="el" href="a00356.html">Vector</a>&lt; <a class="el" href="a00330.html">String</a> &gt; &amp;arguments)</td></tr>
 <tr class="memdesc:a58d430f0fa0724294df51f0b292ef6da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run a specific program, block until it exits and return the exit code. Will fail if any allowed paths are defined. <br/></td></tr>
 <tr class="separator:a58d430f0fa0724294df51f0b292ef6da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac41addf8aca3d3a227ab3d40521bbd88"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac41addf8aca3d3a227ab3d40521bbd88"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#ac41addf8aca3d3a227ab3d40521bbd88">SystemCommandAsync</a> (const <a class="el" href="a00330.html">String</a> &amp;commandLine)</td></tr>
+<tr class="memdesc:ac41addf8aca3d3a227ab3d40521bbd88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run a program using the command interpreter asynchronously. Return a request ID or M_MAX_UNSIGNED if failed. The exit code will be posted together with the request ID in an AsyncExecFinished event. Will fail if any allowed paths are defined. <br/></td></tr>
+<tr class="separator:ac41addf8aca3d3a227ab3d40521bbd88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14b57b04fdb0e3794fe4d36bfc291a0f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a14b57b04fdb0e3794fe4d36bfc291a0f"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#a14b57b04fdb0e3794fe4d36bfc291a0f">SystemRunAsync</a> (const <a class="el" href="a00330.html">String</a> &amp;fileName, const <a class="el" href="a00356.html">Vector</a>&lt; <a class="el" href="a00330.html">String</a> &gt; &amp;arguments)</td></tr>
+<tr class="memdesc:a14b57b04fdb0e3794fe4d36bfc291a0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run a specific program asynchronously. Return a request ID or M_MAX_UNSIGNED if failed. The exit code will be posted together with the request ID in an AsyncExecFinished event. Will fail if any allowed paths are defined. <br/></td></tr>
+<tr class="separator:a14b57b04fdb0e3794fe4d36bfc291a0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa92aa00773df60ebc86680e433e156f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa92aa00773df60ebc86680e433e156f"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#aaa92aa00773df60ebc86680e433e156f">SystemOpen</a> (const <a class="el" href="a00330.html">String</a> &amp;fileName, const <a class="el" href="a00330.html">String</a> &amp;mode=<a class="el" href="a00330.html#ac4b764c2af370a120fb9e3470329c96e">String::EMPTY</a>)</td></tr>
 <tr class="memdesc:aaa92aa00773df60ebc86680e433e156f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a file in an external program, with mode such as "edit" optionally specified. Will fail if any allowed paths are defined. <br/></td></tr>
@@ -95,7 +103,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 <tr class="separator:ac803ab7aa678335adcc3dabac93eead3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7efdd8723ddb68cd314928345c6f4739"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7efdd8723ddb68cd314928345c6f4739"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#a7efdd8723ddb68cd314928345c6f4739">RegisterPath</a> (const <a class="el" href="a00330.html">String</a> &amp;pathName)</td></tr>
-<tr class="memdesc:a7efdd8723ddb68cd314928345c6f4739"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a path as allowed to access. If no paths are registered, all are allowed. <br/></td></tr>
+<tr class="memdesc:a7efdd8723ddb68cd314928345c6f4739"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a path as allowed to access. If no paths are registered, all are allowed. Registering allowed paths is considered securing the Urho3D execution environment: running programs and opening files externally through the system will fail afterward. <br/></td></tr>
 <tr class="separator:a7efdd8723ddb68cd314928345c6f4739"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a575af6ad91fa461aca37622cfe928c85"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a575af6ad91fa461aca37622cfe928c85"></a>
 <a class="el" href="a00330.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#a575af6ad91fa461aca37622cfe928c85">GetCurrentDir</a> () const </td></tr>
@@ -271,6 +279,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a59227c0c4b9e7cd81ad0eabb203ea949"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#a59227c0c4b9e7cd81ad0eabb203ea949">ScanDirInternal</a> (<a class="el" href="a00356.html">Vector</a>&lt; <a class="el" href="a00330.html">String</a> &gt; &amp;result, <a class="el" href="a00330.html">String</a> path, const <a class="el" href="a00330.html">String</a> &amp;startPath, const <a class="el" href="a00330.html">String</a> &amp;filter, unsigned flags, bool recursive) const </td></tr>
 <tr class="memdesc:a59227c0c4b9e7cd81ad0eabb203ea949"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scan directory, called internally.  <a href="#a59227c0c4b9e7cd81ad0eabb203ea949">More...</a><br/></td></tr>
 <tr class="separator:a59227c0c4b9e7cd81ad0eabb203ea949"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67d807c13f09d57b1c2e96618ddcbfb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#a67d807c13f09d57b1c2e96618ddcbfb8">HandleBeginFrame</a> (<a class="el" href="a00331.html">StringHash</a> eventType, <a class="el" href="a00169.html">VariantMap</a> &amp;eventData)</td></tr>
+<tr class="memdesc:a67d807c13f09d57b1c2e96618ddcbfb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle begin frame event to check for completed async executions.  <a href="#a67d807c13f09d57b1c2e96618ddcbfb8">More...</a><br/></td></tr>
+<tr class="separator:a67d807c13f09d57b1c2e96618ddcbfb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -282,6 +293,14 @@ Private Attributes</h2></td></tr>
 <a class="el" href="a00330.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#a3a110369164189f8cdc3ef06721e4647">programDir_</a></td></tr>
 <tr class="memdesc:a3a110369164189f8cdc3ef06721e4647"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cached program directory. <br/></td></tr>
 <tr class="separator:a3a110369164189f8cdc3ef06721e4647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91f0b77d743ca4408a9b77160aff8cba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91f0b77d743ca4408a9b77160aff8cba"></a>
+<a class="el" href="a00193.html">List</a>&lt; AsyncExecRequest * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#a91f0b77d743ca4408a9b77160aff8cba">asyncExecQueue_</a></td></tr>
+<tr class="memdesc:a91f0b77d743ca4408a9b77160aff8cba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Async execution queue. <br/></td></tr>
+<tr class="separator:a91f0b77d743ca4408a9b77160aff8cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabe0af8ac355b278a54949e0abb86719"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aabe0af8ac355b278a54949e0abb86719"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#aabe0af8ac355b278a54949e0abb86719">nextAsyncExecID_</a></td></tr>
+<tr class="memdesc:aabe0af8ac355b278a54949e0abb86719"><td class="mdescLeft">&#160;</td><td class="mdescRight">Next async execution ID. <br/></td></tr>
+<tr class="separator:aabe0af8ac355b278a54949e0abb86719"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -322,6 +341,59 @@ Here is the call graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a00152_a5d93365af462341ea8029827581854a6_icgraph.svg" width="100%" height="578"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a67d807c13f09d57b1c2e96618ddcbfb8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::FileSystem::HandleBeginFrame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00331.html">StringHash</a>&#160;</td>
+          <td class="paramname"><em>eventType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00169.html">VariantMap</a> &amp;&#160;</td>
+          <td class="paramname"><em>eventData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handle begin frame event to check for completed async executions. </p>
+<p>Go through the execution queue and post + remove completed requests </p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a00152_a67d807c13f09d57b1c2e96618ddcbfb8_cgraph.svg" width="100%" height="502"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00152_a67d807c13f09d57b1c2e96618ddcbfb8_icgraph.svg" width="360" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </p>
