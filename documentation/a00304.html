@@ -20,200 +20,334 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00304.html">ShaderVariation</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00304.html">Serializable</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="a01181.html">List of all members</a>  </div>
+<a href="a01492.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::ShaderVariation Class Reference</div>  </div>
+<div class="title">Urho3D::Serializable Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Vertex or pixel shader on the GPU.  
+<p>Base class for objects with automatic serialization through attributes.  
  <a href="a00304.html#details">More...</a></p>
 
-<p><code>#include &lt;OGLShaderVariation.h&gt;</code></p>
+<p><code>#include &lt;Serializable.h&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Urho3D::ShaderVariation:</div>
+Inheritance diagram for Urho3D::Serializable:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a01182.svg" width="334" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01493.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
-Collaboration diagram for Urho3D::ShaderVariation:</div>
+Collaboration diagram for Urho3D::Serializable:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01183.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01494.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a55da24c2c821f46953dd4e946a676d21"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a55da24c2c821f46953dd4e946a676d21"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a55da24c2c821f46953dd4e946a676d21">ShaderVariation</a> (<a class="el" href="a00300.html">Shader</a> *owner, ShaderType type)</td></tr>
-<tr class="memdesc:a55da24c2c821f46953dd4e946a676d21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
-<tr class="separator:a55da24c2c821f46953dd4e946a676d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b95a63085d93c84c14941e66b22a174"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b95a63085d93c84c14941e66b22a174"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a1b95a63085d93c84c14941e66b22a174">~ShaderVariation</a> ()</td></tr>
-<tr class="memdesc:a1b95a63085d93c84c14941e66b22a174"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
-<tr class="separator:a1b95a63085d93c84c14941e66b22a174"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a379e81b408ef1008032896a1a0f5df98"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a379e81b408ef1008032896a1a0f5df98"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a379e81b408ef1008032896a1a0f5df98">OnDeviceLost</a> ()</td></tr>
-<tr class="memdesc:a379e81b408ef1008032896a1a0f5df98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark the GPU resource destroyed on context destruction. <br/></td></tr>
-<tr class="separator:a379e81b408ef1008032896a1a0f5df98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad356475c4c1d8b88b3469cf7a6acef67"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad356475c4c1d8b88b3469cf7a6acef67"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#ad356475c4c1d8b88b3469cf7a6acef67">Release</a> ()</td></tr>
-<tr class="memdesc:ad356475c4c1d8b88b3469cf7a6acef67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release the shader. <br/></td></tr>
-<tr class="separator:ad356475c4c1d8b88b3469cf7a6acef67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a796302110897b35c3faf6c18208e289c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a796302110897b35c3faf6c18208e289c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a796302110897b35c3faf6c18208e289c">Create</a> ()</td></tr>
-<tr class="memdesc:a796302110897b35c3faf6c18208e289c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile the shader. Return true if successful. <br/></td></tr>
-<tr class="separator:a796302110897b35c3faf6c18208e289c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a95c1cb7196757744cca86b915734d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0a95c1cb7196757744cca86b915734d0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a0a95c1cb7196757744cca86b915734d0">SetName</a> (const <a class="el" href="a00330.html">String</a> &amp;name)</td></tr>
-<tr class="memdesc:a0a95c1cb7196757744cca86b915734d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set name. <br/></td></tr>
-<tr class="separator:a0a95c1cb7196757744cca86b915734d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fc30c33a6427a7eaa39f27b3507d386"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1fc30c33a6427a7eaa39f27b3507d386"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a1fc30c33a6427a7eaa39f27b3507d386">SetDefines</a> (const <a class="el" href="a00330.html">String</a> &amp;defines)</td></tr>
-<tr class="memdesc:a1fc30c33a6427a7eaa39f27b3507d386"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set defines. <br/></td></tr>
-<tr class="separator:a1fc30c33a6427a7eaa39f27b3507d386"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab33e116bbdedb8ff3d21ff8730c0173"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab33e116bbdedb8ff3d21ff8730c0173"></a>
-<a class="el" href="a00300.html">Shader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#aab33e116bbdedb8ff3d21ff8730c0173">GetOwner</a> () const </td></tr>
-<tr class="memdesc:aab33e116bbdedb8ff3d21ff8730c0173"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the owner resource. <br/></td></tr>
-<tr class="separator:aab33e116bbdedb8ff3d21ff8730c0173"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace537c9d8b6db592db5520f4f40fdea7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ace537c9d8b6db592db5520f4f40fdea7"></a>
-ShaderType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#ace537c9d8b6db592db5520f4f40fdea7">GetShaderType</a> () const </td></tr>
-<tr class="memdesc:ace537c9d8b6db592db5520f4f40fdea7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return shader type. <br/></td></tr>
-<tr class="separator:ace537c9d8b6db592db5520f4f40fdea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41d2cc01c0d9ad07dc0658927ab54ba8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41d2cc01c0d9ad07dc0658927ab54ba8"></a>
-const <a class="el" href="a00330.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a41d2cc01c0d9ad07dc0658927ab54ba8">GetName</a> () const </td></tr>
-<tr class="memdesc:a41d2cc01c0d9ad07dc0658927ab54ba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return name. <br/></td></tr>
-<tr class="separator:a41d2cc01c0d9ad07dc0658927ab54ba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7c7533a1d7a15d1c8e386718a2a3acb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7c7533a1d7a15d1c8e386718a2a3acb"></a>
-const <a class="el" href="a00330.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#ab7c7533a1d7a15d1c8e386718a2a3acb">GetDefines</a> () const </td></tr>
-<tr class="memdesc:ab7c7533a1d7a15d1c8e386718a2a3acb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return defines. <br/></td></tr>
-<tr class="separator:ab7c7533a1d7a15d1c8e386718a2a3acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6da1356b18b052d0413ff106934103fc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6da1356b18b052d0413ff106934103fc"></a>
-<a class="el" href="a00330.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a6da1356b18b052d0413ff106934103fc">GetFullName</a> () const </td></tr>
-<tr class="memdesc:a6da1356b18b052d0413ff106934103fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return full shader name. <br/></td></tr>
-<tr class="separator:a6da1356b18b052d0413ff106934103fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5edd8bf851488e3320748be9d6dd0916"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5edd8bf851488e3320748be9d6dd0916"></a>
-const <a class="el" href="a00330.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a5edd8bf851488e3320748be9d6dd0916">GetCompilerOutput</a> () const </td></tr>
-<tr class="memdesc:a5edd8bf851488e3320748be9d6dd0916"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return compile error/warning string. <br/></td></tr>
-<tr class="separator:a5edd8bf851488e3320748be9d6dd0916"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_a00271"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00271')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="a00271.html">Urho3D::RefCounted</a></td></tr>
-<tr class="memitem:aad6e2ac9e97ca71b28c47248a9aad9b9 inherit pub_methods_a00271"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad6e2ac9e97ca71b28c47248a9aad9b9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00271.html#aad6e2ac9e97ca71b28c47248a9aad9b9">RefCounted</a> ()</td></tr>
-<tr class="memdesc:aad6e2ac9e97ca71b28c47248a9aad9b9 inherit pub_methods_a00271"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. Allocate the reference count structure and set an initial self weak reference. <br/></td></tr>
-<tr class="separator:aad6e2ac9e97ca71b28c47248a9aad9b9 inherit pub_methods_a00271"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1f332b55c08fd702f2c7ebb18e42a90 inherit pub_methods_a00271"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1f332b55c08fd702f2c7ebb18e42a90"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00271.html#aa1f332b55c08fd702f2c7ebb18e42a90">~RefCounted</a> ()</td></tr>
-<tr class="memdesc:aa1f332b55c08fd702f2c7ebb18e42a90 inherit pub_methods_a00271"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. Mark as expired and also delete the reference count structure if no outside weak references exist. <br/></td></tr>
-<tr class="separator:aa1f332b55c08fd702f2c7ebb18e42a90 inherit pub_methods_a00271"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d857f439bb5a7935199a8e4fdb8f2c8 inherit pub_methods_a00271"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d857f439bb5a7935199a8e4fdb8f2c8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00271.html#a0d857f439bb5a7935199a8e4fdb8f2c8">AddRef</a> ()</td></tr>
-<tr class="memdesc:a0d857f439bb5a7935199a8e4fdb8f2c8 inherit pub_methods_a00271"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment reference count. Can also be called outside of a <a class="el" href="a00307.html" title="Shared pointer template class with intrusive reference counting.">SharedPtr</a> for traditional reference counting. <br/></td></tr>
-<tr class="separator:a0d857f439bb5a7935199a8e4fdb8f2c8 inherit pub_methods_a00271"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59e95fecbcbc560f81f0bdd52306cc1d inherit pub_methods_a00271"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59e95fecbcbc560f81f0bdd52306cc1d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00271.html#a59e95fecbcbc560f81f0bdd52306cc1d">ReleaseRef</a> ()</td></tr>
-<tr class="memdesc:a59e95fecbcbc560f81f0bdd52306cc1d inherit pub_methods_a00271"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrement reference count and delete self if no more references. Can also be called outside of a <a class="el" href="a00307.html" title="Shared pointer template class with intrusive reference counting.">SharedPtr</a> for traditional reference counting. <br/></td></tr>
-<tr class="separator:a59e95fecbcbc560f81f0bdd52306cc1d inherit pub_methods_a00271"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5ac3cb7e5f64c056351e15d3a30b4ba inherit pub_methods_a00271"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5ac3cb7e5f64c056351e15d3a30b4ba"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00271.html#ad5ac3cb7e5f64c056351e15d3a30b4ba">Refs</a> () const </td></tr>
-<tr class="memdesc:ad5ac3cb7e5f64c056351e15d3a30b4ba inherit pub_methods_a00271"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return reference count. <br/></td></tr>
-<tr class="separator:ad5ac3cb7e5f64c056351e15d3a30b4ba inherit pub_methods_a00271"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab05087f4c487de02faed7411bbcf9df1 inherit pub_methods_a00271"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab05087f4c487de02faed7411bbcf9df1"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00271.html#ab05087f4c487de02faed7411bbcf9df1">WeakRefs</a> () const </td></tr>
-<tr class="memdesc:ab05087f4c487de02faed7411bbcf9df1 inherit pub_methods_a00271"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return weak reference count. <br/></td></tr>
-<tr class="separator:ab05087f4c487de02faed7411bbcf9df1 inherit pub_methods_a00271"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0eb5281d7e6cfd7e729ae0d07ca0da92 inherit pub_methods_a00271"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0eb5281d7e6cfd7e729ae0d07ca0da92"></a>
-<a class="el" href="a00270.html">RefCount</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00271.html#a0eb5281d7e6cfd7e729ae0d07ca0da92">RefCountPtr</a> ()</td></tr>
-<tr class="memdesc:a0eb5281d7e6cfd7e729ae0d07ca0da92 inherit pub_methods_a00271"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return pointer to the reference count structure. <br/></td></tr>
-<tr class="separator:a0eb5281d7e6cfd7e729ae0d07ca0da92 inherit pub_methods_a00271"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_a00164"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00164')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="a00164.html">Urho3D::GPUObject</a></td></tr>
-<tr class="memitem:a403872d965887004f1021405870ff865 inherit pub_methods_a00164"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a403872d965887004f1021405870ff865"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a403872d965887004f1021405870ff865">GPUObject</a> (<a class="el" href="a00165.html">Graphics</a> *graphics)</td></tr>
-<tr class="memdesc:a403872d965887004f1021405870ff865 inherit pub_methods_a00164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with graphics subsystem pointer. <br/></td></tr>
-<tr class="separator:a403872d965887004f1021405870ff865 inherit pub_methods_a00164"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a818ceaf4f9debc5f4233f2e265d0cf42 inherit pub_methods_a00164"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a818ceaf4f9debc5f4233f2e265d0cf42"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a818ceaf4f9debc5f4233f2e265d0cf42">~GPUObject</a> ()</td></tr>
-<tr class="memdesc:a818ceaf4f9debc5f4233f2e265d0cf42 inherit pub_methods_a00164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. Remove from the <a class="el" href="a00165.html" title="Graphics subsystem. Manages the application window, rendering state and GPU resources.">Graphics</a>. <br/></td></tr>
-<tr class="separator:a818ceaf4f9debc5f4233f2e265d0cf42 inherit pub_methods_a00164"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18ab28f33620594506eeb2c5fe168106 inherit pub_methods_a00164"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18ab28f33620594506eeb2c5fe168106"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a18ab28f33620594506eeb2c5fe168106">OnDeviceReset</a> ()</td></tr>
-<tr class="memdesc:a18ab28f33620594506eeb2c5fe168106 inherit pub_methods_a00164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recreate the GPU resource and restore data if applicable. <br/></td></tr>
-<tr class="separator:a18ab28f33620594506eeb2c5fe168106 inherit pub_methods_a00164"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90de5fa07e164d6b5e95f832a0741088 inherit pub_methods_a00164"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a90de5fa07e164d6b5e95f832a0741088"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a90de5fa07e164d6b5e95f832a0741088">ClearDataLost</a> ()</td></tr>
-<tr class="memdesc:a90de5fa07e164d6b5e95f832a0741088 inherit pub_methods_a00164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the data lost flag. <br/></td></tr>
-<tr class="separator:a90de5fa07e164d6b5e95f832a0741088 inherit pub_methods_a00164"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada0cc0adf6cc06940102d64be88b9d4b inherit pub_methods_a00164"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada0cc0adf6cc06940102d64be88b9d4b"></a>
-<a class="el" href="a00165.html">Graphics</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#ada0cc0adf6cc06940102d64be88b9d4b">GetGraphics</a> () const </td></tr>
-<tr class="memdesc:ada0cc0adf6cc06940102d64be88b9d4b inherit pub_methods_a00164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the graphics subsystem. <br/></td></tr>
-<tr class="separator:ada0cc0adf6cc06940102d64be88b9d4b inherit pub_methods_a00164"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc3aa11294b3d788965f299ca9bfb81c inherit pub_methods_a00164"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc3aa11294b3d788965f299ca9bfb81c"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#acc3aa11294b3d788965f299ca9bfb81c">GetGPUObject</a> () const </td></tr>
-<tr class="memdesc:acc3aa11294b3d788965f299ca9bfb81c inherit pub_methods_a00164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the object's OpenGL handle. <br/></td></tr>
-<tr class="separator:acc3aa11294b3d788965f299ca9bfb81c inherit pub_methods_a00164"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcfd2ec12501214e6f78bb0ce2fee6d5 inherit pub_methods_a00164"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afcfd2ec12501214e6f78bb0ce2fee6d5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#afcfd2ec12501214e6f78bb0ce2fee6d5">IsDataLost</a> () const </td></tr>
-<tr class="memdesc:afcfd2ec12501214e6f78bb0ce2fee6d5 inherit pub_methods_a00164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether data is lost due to context loss. <br/></td></tr>
-<tr class="separator:afcfd2ec12501214e6f78bb0ce2fee6d5 inherit pub_methods_a00164"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04fece8be486f0b627364667159d823c inherit pub_methods_a00164"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04fece8be486f0b627364667159d823c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a04fece8be486f0b627364667159d823c">HasPendingData</a> () const </td></tr>
-<tr class="memdesc:a04fece8be486f0b627364667159d823c inherit pub_methods_a00164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether has pending data assigned while context was lost. <br/></td></tr>
-<tr class="separator:a04fece8be486f0b627364667159d823c inherit pub_methods_a00164"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23c677a1f43edd6bbd8db693bc1f6bc9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23c677a1f43edd6bbd8db693bc1f6bc9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a23c677a1f43edd6bbd8db693bc1f6bc9">Serializable</a> (<a class="el" href="a00125.html">Context</a> *context)</td></tr>
+<tr class="memdesc:a23c677a1f43edd6bbd8db693bc1f6bc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
+<tr class="separator:a23c677a1f43edd6bbd8db693bc1f6bc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4be5aa810d8c2388cdb30d16204f9847"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4be5aa810d8c2388cdb30d16204f9847"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a4be5aa810d8c2388cdb30d16204f9847">~Serializable</a> ()</td></tr>
+<tr class="memdesc:a4be5aa810d8c2388cdb30d16204f9847"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
+<tr class="separator:a4be5aa810d8c2388cdb30d16204f9847"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3785d97ef92557bab8239688af94ac5e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3785d97ef92557bab8239688af94ac5e"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a3785d97ef92557bab8239688af94ac5e">OnSetAttribute</a> (const <a class="el" href="a00072.html">AttributeInfo</a> &amp;attr, const <a class="el" href="a00360.html">Variant</a> &amp;src)</td></tr>
+<tr class="memdesc:a3785d97ef92557bab8239688af94ac5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle attribute write access. Default implementation writes to the variable at offset, or invokes the set accessor. <br/></td></tr>
+<tr class="separator:a3785d97ef92557bab8239688af94ac5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a938ff9d35938771da3843f3fa129ed21"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a938ff9d35938771da3843f3fa129ed21"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a938ff9d35938771da3843f3fa129ed21">OnGetAttribute</a> (const <a class="el" href="a00072.html">AttributeInfo</a> &amp;attr, <a class="el" href="a00360.html">Variant</a> &amp;dest) const </td></tr>
+<tr class="memdesc:a938ff9d35938771da3843f3fa129ed21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle attribute read access. Default implementation reads the variable at offset, or invokes the get accessor. <br/></td></tr>
+<tr class="separator:a938ff9d35938771da3843f3fa129ed21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba0920b61420d159fdc99628eb295a71"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba0920b61420d159fdc99628eb295a71"></a>
+virtual const <a class="el" href="a00362.html">Vector</a><br class="typebreak"/>
+&lt; <a class="el" href="a00072.html">AttributeInfo</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#aba0920b61420d159fdc99628eb295a71">GetAttributes</a> () const </td></tr>
+<tr class="memdesc:aba0920b61420d159fdc99628eb295a71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return attribute descriptions, or null if none defined. <br/></td></tr>
+<tr class="separator:aba0920b61420d159fdc99628eb295a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e1be5b8087800821d37ebb87837329a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e1be5b8087800821d37ebb87837329a"></a>
+virtual const <a class="el" href="a00362.html">Vector</a><br class="typebreak"/>
+&lt; <a class="el" href="a00072.html">AttributeInfo</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a4e1be5b8087800821d37ebb87837329a">GetNetworkAttributes</a> () const </td></tr>
+<tr class="memdesc:a4e1be5b8087800821d37ebb87837329a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return network replication attribute descriptions, or null if none defined. <br/></td></tr>
+<tr class="separator:a4e1be5b8087800821d37ebb87837329a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf236a970d61b56c78e2c95ae53839d4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf236a970d61b56c78e2c95ae53839d4"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#adf236a970d61b56c78e2c95ae53839d4">Load</a> (<a class="el" href="a00144.html">Deserializer</a> &amp;source, bool setInstanceDefault=false)</td></tr>
+<tr class="memdesc:adf236a970d61b56c78e2c95ae53839d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load from binary data. When setInstanceDefault is set to true, after setting the attribute value, store the value as instance's default value. Return true if successful. <br/></td></tr>
+<tr class="separator:adf236a970d61b56c78e2c95ae53839d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9efaa89f4647724a205bd94d86981984"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9efaa89f4647724a205bd94d86981984"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a9efaa89f4647724a205bd94d86981984">Save</a> (<a class="el" href="a00305.html">Serializer</a> &amp;dest) const </td></tr>
+<tr class="memdesc:a9efaa89f4647724a205bd94d86981984"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save as binary data. Return true if successful. <br/></td></tr>
+<tr class="separator:a9efaa89f4647724a205bd94d86981984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f2b4f1b59a4b918238eb92d62d061ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f2b4f1b59a4b918238eb92d62d061ba"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a3f2b4f1b59a4b918238eb92d62d061ba">LoadXML</a> (const <a class="el" href="a00380.html">XMLElement</a> &amp;source, bool setInstanceDefault=false)</td></tr>
+<tr class="memdesc:a3f2b4f1b59a4b918238eb92d62d061ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load from XML data. When setInstanceDefault is set to true, after setting the attribute value, store the value as instance's default value. Return true if successful. <br/></td></tr>
+<tr class="separator:a3f2b4f1b59a4b918238eb92d62d061ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62d15302a8260651af8bbb687a85a256"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62d15302a8260651af8bbb687a85a256"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a62d15302a8260651af8bbb687a85a256">SaveXML</a> (<a class="el" href="a00380.html">XMLElement</a> &amp;dest) const </td></tr>
+<tr class="memdesc:a62d15302a8260651af8bbb687a85a256"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save as XML data. Return true if successful. <br/></td></tr>
+<tr class="separator:a62d15302a8260651af8bbb687a85a256"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58f03d097b05420b50a9017f44a24593"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58f03d097b05420b50a9017f44a24593"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a58f03d097b05420b50a9017f44a24593">ApplyAttributes</a> ()</td></tr>
+<tr class="memdesc:a58f03d097b05420b50a9017f44a24593"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply attribute changes that can not be applied immediately. Called after scene load or a network update. <br/></td></tr>
+<tr class="separator:a58f03d097b05420b50a9017f44a24593"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e4b0717513e3cd6d2fcc1a90b09d70c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e4b0717513e3cd6d2fcc1a90b09d70c"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a1e4b0717513e3cd6d2fcc1a90b09d70c">SaveDefaultAttributes</a> () const </td></tr>
+<tr class="memdesc:a1e4b0717513e3cd6d2fcc1a90b09d70c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether should save default-valued attributes into XML. Default false. <br/></td></tr>
+<tr class="separator:a1e4b0717513e3cd6d2fcc1a90b09d70c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52c377ff65bd3198a3c460c6a43dc008"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52c377ff65bd3198a3c460c6a43dc008"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a52c377ff65bd3198a3c460c6a43dc008">SetAttribute</a> (unsigned index, const <a class="el" href="a00360.html">Variant</a> &amp;value)</td></tr>
+<tr class="memdesc:a52c377ff65bd3198a3c460c6a43dc008"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set attribute by index. Return true if successfully set. <br/></td></tr>
+<tr class="separator:a52c377ff65bd3198a3c460c6a43dc008"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45834f05e09c1edc90bd759b1c03e187"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45834f05e09c1edc90bd759b1c03e187"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a45834f05e09c1edc90bd759b1c03e187">SetAttribute</a> (const <a class="el" href="a00336.html">String</a> &amp;name, const <a class="el" href="a00360.html">Variant</a> &amp;value)</td></tr>
+<tr class="memdesc:a45834f05e09c1edc90bd759b1c03e187"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set attribute by name. Return true if successfully set. <br/></td></tr>
+<tr class="separator:a45834f05e09c1edc90bd759b1c03e187"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9652196ab03ef1f9d98f9dbfa9e1adbb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9652196ab03ef1f9d98f9dbfa9e1adbb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a9652196ab03ef1f9d98f9dbfa9e1adbb">ResetToDefault</a> ()</td></tr>
+<tr class="memdesc:a9652196ab03ef1f9d98f9dbfa9e1adbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset all editable attributes to their default values. <br/></td></tr>
+<tr class="separator:a9652196ab03ef1f9d98f9dbfa9e1adbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aa03ec3737aa52aa3f8419f43aff050"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1aa03ec3737aa52aa3f8419f43aff050"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a1aa03ec3737aa52aa3f8419f43aff050">RemoveInstanceDefault</a> ()</td></tr>
+<tr class="memdesc:a1aa03ec3737aa52aa3f8419f43aff050"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove instance's default values if they are set previously. <br/></td></tr>
+<tr class="separator:a1aa03ec3737aa52aa3f8419f43aff050"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa044160c22b374e032ae85c30520f89"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa044160c22b374e032ae85c30520f89"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#aaa044160c22b374e032ae85c30520f89">SetTemporary</a> (bool enable)</td></tr>
+<tr class="memdesc:aaa044160c22b374e032ae85c30520f89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set temporary flag. Temporary objects will not be saved. <br/></td></tr>
+<tr class="separator:aaa044160c22b374e032ae85c30520f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e1df002476170cd2ad9179397617693"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e1df002476170cd2ad9179397617693"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a7e1df002476170cd2ad9179397617693">AllocateNetworkState</a> ()</td></tr>
+<tr class="memdesc:a7e1df002476170cd2ad9179397617693"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate network attribute state. <br/></td></tr>
+<tr class="separator:a7e1df002476170cd2ad9179397617693"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f3f827d0f6681578511cc18414ab0c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f3f827d0f6681578511cc18414ab0c1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a5f3f827d0f6681578511cc18414ab0c1">WriteInitialDeltaUpdate</a> (<a class="el" href="a00305.html">Serializer</a> &amp;dest)</td></tr>
+<tr class="memdesc:a5f3f827d0f6681578511cc18414ab0c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write initial delta network update. <br/></td></tr>
+<tr class="separator:a5f3f827d0f6681578511cc18414ab0c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a5ee403ae4c65accc8317fbe8dd50d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a5ee403ae4c65accc8317fbe8dd50d0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a1a5ee403ae4c65accc8317fbe8dd50d0">WriteDeltaUpdate</a> (<a class="el" href="a00305.html">Serializer</a> &amp;dest, const <a class="el" href="a00145.html">DirtyBits</a> &amp;attributeBits)</td></tr>
+<tr class="memdesc:a1a5ee403ae4c65accc8317fbe8dd50d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a delta network update according to dirty attribute bits. <br/></td></tr>
+<tr class="separator:a1a5ee403ae4c65accc8317fbe8dd50d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3268662548fc340a87e21c1f14ddb55"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3268662548fc340a87e21c1f14ddb55"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#ae3268662548fc340a87e21c1f14ddb55">WriteLatestDataUpdate</a> (<a class="el" href="a00305.html">Serializer</a> &amp;dest)</td></tr>
+<tr class="memdesc:ae3268662548fc340a87e21c1f14ddb55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a latest data network update. <br/></td></tr>
+<tr class="separator:ae3268662548fc340a87e21c1f14ddb55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9730804962c1be60bf4046e39e761596"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9730804962c1be60bf4046e39e761596"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a9730804962c1be60bf4046e39e761596">ReadDeltaUpdate</a> (<a class="el" href="a00144.html">Deserializer</a> &amp;source)</td></tr>
+<tr class="memdesc:a9730804962c1be60bf4046e39e761596"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read and apply a network delta update. <br/></td></tr>
+<tr class="separator:a9730804962c1be60bf4046e39e761596"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd3767d313bb15bcb891428d5b0814e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd3767d313bb15bcb891428d5b0814e8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#acd3767d313bb15bcb891428d5b0814e8">ReadLatestDataUpdate</a> (<a class="el" href="a00144.html">Deserializer</a> &amp;source)</td></tr>
+<tr class="memdesc:acd3767d313bb15bcb891428d5b0814e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read and apply a network latest data update. <br/></td></tr>
+<tr class="separator:acd3767d313bb15bcb891428d5b0814e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af82bb29224a484c6fb01003b6a202531"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af82bb29224a484c6fb01003b6a202531"></a>
+<a class="el" href="a00360.html">Variant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#af82bb29224a484c6fb01003b6a202531">GetAttribute</a> (unsigned index) const </td></tr>
+<tr class="memdesc:af82bb29224a484c6fb01003b6a202531"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return attribute value by index. Return empty if illegal index. <br/></td></tr>
+<tr class="separator:af82bb29224a484c6fb01003b6a202531"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0251d0c30153390c7a62c649332c7eca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0251d0c30153390c7a62c649332c7eca"></a>
+<a class="el" href="a00360.html">Variant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a0251d0c30153390c7a62c649332c7eca">GetAttribute</a> (const <a class="el" href="a00336.html">String</a> &amp;name) const </td></tr>
+<tr class="memdesc:a0251d0c30153390c7a62c649332c7eca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return attribute value by name. Return empty if not found. <br/></td></tr>
+<tr class="separator:a0251d0c30153390c7a62c649332c7eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16e8a28e61d077b7dc6b98e4e7b91581"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a16e8a28e61d077b7dc6b98e4e7b91581"></a>
+<a class="el" href="a00360.html">Variant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a16e8a28e61d077b7dc6b98e4e7b91581">GetAttributeDefault</a> (unsigned index) const </td></tr>
+<tr class="memdesc:a16e8a28e61d077b7dc6b98e4e7b91581"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return attribute default value by index. Return empty if illegal index. <br/></td></tr>
+<tr class="separator:a16e8a28e61d077b7dc6b98e4e7b91581"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0051ceb3985845215c59a311b16238a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0051ceb3985845215c59a311b16238a"></a>
+<a class="el" href="a00360.html">Variant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#ad0051ceb3985845215c59a311b16238a">GetAttributeDefault</a> (const <a class="el" href="a00336.html">String</a> &amp;name) const </td></tr>
+<tr class="memdesc:ad0051ceb3985845215c59a311b16238a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return attribute default value by name. Return empty if not found. <br/></td></tr>
+<tr class="separator:ad0051ceb3985845215c59a311b16238a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a040b04677da69ba8bad92d1ce97c2381"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a040b04677da69ba8bad92d1ce97c2381"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a040b04677da69ba8bad92d1ce97c2381">GetNumAttributes</a> () const </td></tr>
+<tr class="memdesc:a040b04677da69ba8bad92d1ce97c2381"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of attributes. <br/></td></tr>
+<tr class="separator:a040b04677da69ba8bad92d1ce97c2381"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4c75172d303d24c0bdfe7b8cab4e883"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae4c75172d303d24c0bdfe7b8cab4e883"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#ae4c75172d303d24c0bdfe7b8cab4e883">GetNumNetworkAttributes</a> () const </td></tr>
+<tr class="memdesc:ae4c75172d303d24c0bdfe7b8cab4e883"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of network replication attributes. <br/></td></tr>
+<tr class="separator:ae4c75172d303d24c0bdfe7b8cab4e883"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cdb52c6c9359536c7fe3fa0622bbfe7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4cdb52c6c9359536c7fe3fa0622bbfe7"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a4cdb52c6c9359536c7fe3fa0622bbfe7">IsTemporary</a> () const </td></tr>
+<tr class="memdesc:a4cdb52c6c9359536c7fe3fa0622bbfe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether is temporary. <br/></td></tr>
+<tr class="separator:a4cdb52c6c9359536c7fe3fa0622bbfe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_a00235"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00235')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="a00235.html">Urho3D::Object</a></td></tr>
+<tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_a00235"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a95a6cd1c5c12a458fda4b38f873a334d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00235.html#a95a6cd1c5c12a458fda4b38f873a334d">Object</a> (<a class="el" href="a00125.html">Context</a> *context)</td></tr>
+<tr class="memdesc:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_a00235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
+<tr class="separator:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_a00235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0315666e4cd1d17b8de8c62bb0231f64 inherit pub_methods_a00235"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0315666e4cd1d17b8de8c62bb0231f64"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00235.html#a0315666e4cd1d17b8de8c62bb0231f64">~Object</a> ()</td></tr>
+<tr class="memdesc:a0315666e4cd1d17b8de8c62bb0231f64 inherit pub_methods_a00235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. Clean up self from event sender &amp; receiver structures. <br/></td></tr>
+<tr class="separator:a0315666e4cd1d17b8de8c62bb0231f64 inherit pub_methods_a00235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc59a1d0b1bb4c67ed06d220c3c81c4a inherit pub_methods_a00235"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc59a1d0b1bb4c67ed06d220c3c81c4a"></a>
+virtual <a class="el" href="a00314.html">ShortStringHash</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00235.html#abc59a1d0b1bb4c67ed06d220c3c81c4a">GetType</a> () const =0</td></tr>
+<tr class="memdesc:abc59a1d0b1bb4c67ed06d220c3c81c4a inherit pub_methods_a00235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return type hash. <br/></td></tr>
+<tr class="separator:abc59a1d0b1bb4c67ed06d220c3c81c4a inherit pub_methods_a00235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff7df33f6f558e9f1d43355858ad77c9 inherit pub_methods_a00235"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff7df33f6f558e9f1d43355858ad77c9"></a>
+virtual <a class="el" href="a00314.html">ShortStringHash</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00235.html#aff7df33f6f558e9f1d43355858ad77c9">GetBaseType</a> () const =0</td></tr>
+<tr class="memdesc:aff7df33f6f558e9f1d43355858ad77c9 inherit pub_methods_a00235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return base class type hash. <br/></td></tr>
+<tr class="separator:aff7df33f6f558e9f1d43355858ad77c9 inherit pub_methods_a00235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e095e012835897947ccaf26fdf4b81f inherit pub_methods_a00235"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e095e012835897947ccaf26fdf4b81f"></a>
+virtual const <a class="el" href="a00336.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00235.html#a2e095e012835897947ccaf26fdf4b81f">GetTypeName</a> () const =0</td></tr>
+<tr class="memdesc:a2e095e012835897947ccaf26fdf4b81f inherit pub_methods_a00235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return type name. <br/></td></tr>
+<tr class="separator:a2e095e012835897947ccaf26fdf4b81f inherit pub_methods_a00235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_a00235"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0ce1699ce5bd9d4033e5800bbb8c15b"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00235.html#ad0ce1699ce5bd9d4033e5800bbb8c15b">OnEvent</a> (<a class="el" href="a00235.html">Object</a> *sender, <a class="el" href="a00337.html">StringHash</a> eventType, <a class="el" href="a00174.html">VariantMap</a> &amp;eventData)</td></tr>
+<tr class="memdesc:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_a00235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle event. <br/></td></tr>
+<tr class="separator:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_a00235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d9d061f4cf32f5fd5531e11a72834b6 inherit pub_methods_a00235"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d9d061f4cf32f5fd5531e11a72834b6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00235.html#a7d9d061f4cf32f5fd5531e11a72834b6">SubscribeToEvent</a> (<a class="el" href="a00337.html">StringHash</a> eventType, <a class="el" href="a00151.html">EventHandler</a> *handler)</td></tr>
+<tr class="memdesc:a7d9d061f4cf32f5fd5531e11a72834b6 inherit pub_methods_a00235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribe to an event that can be sent by any sender. <br/></td></tr>
+<tr class="separator:a7d9d061f4cf32f5fd5531e11a72834b6 inherit pub_methods_a00235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9ea95ee6f24e7fbeede16ba149dbc2d inherit pub_methods_a00235"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9ea95ee6f24e7fbeede16ba149dbc2d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00235.html#ac9ea95ee6f24e7fbeede16ba149dbc2d">SubscribeToEvent</a> (<a class="el" href="a00235.html">Object</a> *sender, <a class="el" href="a00337.html">StringHash</a> eventType, <a class="el" href="a00151.html">EventHandler</a> *handler)</td></tr>
+<tr class="memdesc:ac9ea95ee6f24e7fbeede16ba149dbc2d inherit pub_methods_a00235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribe to a specific sender's event. <br/></td></tr>
+<tr class="separator:ac9ea95ee6f24e7fbeede16ba149dbc2d inherit pub_methods_a00235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a153b96c4397e045b2ca2b2d5471d097c inherit pub_methods_a00235"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a153b96c4397e045b2ca2b2d5471d097c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00235.html#a153b96c4397e045b2ca2b2d5471d097c">UnsubscribeFromEvent</a> (<a class="el" href="a00337.html">StringHash</a> eventType)</td></tr>
+<tr class="memdesc:a153b96c4397e045b2ca2b2d5471d097c inherit pub_methods_a00235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsubscribe from an event. <br/></td></tr>
+<tr class="separator:a153b96c4397e045b2ca2b2d5471d097c inherit pub_methods_a00235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0997136c3ee9c04289e2f708e72c6fa4 inherit pub_methods_a00235"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0997136c3ee9c04289e2f708e72c6fa4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00235.html#a0997136c3ee9c04289e2f708e72c6fa4">UnsubscribeFromEvent</a> (<a class="el" href="a00235.html">Object</a> *sender, <a class="el" href="a00337.html">StringHash</a> eventType)</td></tr>
+<tr class="memdesc:a0997136c3ee9c04289e2f708e72c6fa4 inherit pub_methods_a00235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsubscribe from a specific sender's event. <br/></td></tr>
+<tr class="separator:a0997136c3ee9c04289e2f708e72c6fa4 inherit pub_methods_a00235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac31525619cc3f3053ed8b789f7060217 inherit pub_methods_a00235"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac31525619cc3f3053ed8b789f7060217"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00235.html#ac31525619cc3f3053ed8b789f7060217">UnsubscribeFromEvents</a> (<a class="el" href="a00235.html">Object</a> *sender)</td></tr>
+<tr class="memdesc:ac31525619cc3f3053ed8b789f7060217 inherit pub_methods_a00235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsubscribe from a specific sender's events. <br/></td></tr>
+<tr class="separator:ac31525619cc3f3053ed8b789f7060217 inherit pub_methods_a00235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1296ea9c99b7e03e1a40b23667b1eedc inherit pub_methods_a00235"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1296ea9c99b7e03e1a40b23667b1eedc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00235.html#a1296ea9c99b7e03e1a40b23667b1eedc">UnsubscribeFromAllEvents</a> ()</td></tr>
+<tr class="memdesc:a1296ea9c99b7e03e1a40b23667b1eedc inherit pub_methods_a00235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsubscribe from all events. <br/></td></tr>
+<tr class="separator:a1296ea9c99b7e03e1a40b23667b1eedc inherit pub_methods_a00235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37a53fa52f1615fddd212107cf51c587 inherit pub_methods_a00235"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37a53fa52f1615fddd212107cf51c587"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00235.html#a37a53fa52f1615fddd212107cf51c587">UnsubscribeFromAllEventsExcept</a> (const <a class="el" href="a00263.html">PODVector</a>&lt; <a class="el" href="a00337.html">StringHash</a> &gt; &amp;exceptions, bool onlyUserData)</td></tr>
+<tr class="memdesc:a37a53fa52f1615fddd212107cf51c587 inherit pub_methods_a00235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsubscribe from all events except those listed, and optionally only those with userdata (script registered events.) <br/></td></tr>
+<tr class="separator:a37a53fa52f1615fddd212107cf51c587 inherit pub_methods_a00235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32020dbf77c196b9777eca479e8abb36 inherit pub_methods_a00235"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a32020dbf77c196b9777eca479e8abb36"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00235.html#a32020dbf77c196b9777eca479e8abb36">SendEvent</a> (<a class="el" href="a00337.html">StringHash</a> eventType)</td></tr>
+<tr class="memdesc:a32020dbf77c196b9777eca479e8abb36 inherit pub_methods_a00235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send event to all subscribers. <br/></td></tr>
+<tr class="separator:a32020dbf77c196b9777eca479e8abb36 inherit pub_methods_a00235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_a00235"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00235.html#af8f8bd3f7e2f51ecca7199e737f53364">SendEvent</a> (<a class="el" href="a00337.html">StringHash</a> eventType, <a class="el" href="a00174.html">VariantMap</a> &amp;eventData)</td></tr>
+<tr class="memdesc:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_a00235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send event with parameters to all subscribers.  <a href="#af8f8bd3f7e2f51ecca7199e737f53364">More...</a><br/></td></tr>
+<tr class="separator:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_a00235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8dbe9844094c04463def7df1fa650d5 inherit pub_methods_a00235"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab8dbe9844094c04463def7df1fa650d5"></a>
+<a class="el" href="a00174.html">VariantMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00235.html#ab8dbe9844094c04463def7df1fa650d5">GetEventDataMap</a> () const </td></tr>
+<tr class="memdesc:ab8dbe9844094c04463def7df1fa650d5 inherit pub_methods_a00235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a preallocated map for event data. Used for optimization to avoid constant re-allocation of event data maps. <br/></td></tr>
+<tr class="separator:ab8dbe9844094c04463def7df1fa650d5 inherit pub_methods_a00235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48c407eb402e328382c2a61fb3db4441 inherit pub_methods_a00235"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a48c407eb402e328382c2a61fb3db4441"></a>
+<a class="el" href="a00125.html">Context</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00235.html#a48c407eb402e328382c2a61fb3db4441">GetContext</a> () const </td></tr>
+<tr class="memdesc:a48c407eb402e328382c2a61fb3db4441 inherit pub_methods_a00235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return execution context. <br/></td></tr>
+<tr class="separator:a48c407eb402e328382c2a61fb3db4441 inherit pub_methods_a00235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedcc90c292caf58f2317194019f8b51a inherit pub_methods_a00235"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aedcc90c292caf58f2317194019f8b51a"></a>
+<a class="el" href="a00235.html">Object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00235.html#aedcc90c292caf58f2317194019f8b51a">GetSubsystem</a> (<a class="el" href="a00314.html">ShortStringHash</a> type) const </td></tr>
+<tr class="memdesc:aedcc90c292caf58f2317194019f8b51a inherit pub_methods_a00235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return subsystem by type. <br/></td></tr>
+<tr class="separator:aedcc90c292caf58f2317194019f8b51a inherit pub_methods_a00235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af77f10214e90fb621d2ee797a18f8974 inherit pub_methods_a00235"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af77f10214e90fb621d2ee797a18f8974"></a>
+<a class="el" href="a00235.html">Object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00235.html#af77f10214e90fb621d2ee797a18f8974">GetEventSender</a> () const </td></tr>
+<tr class="memdesc:af77f10214e90fb621d2ee797a18f8974 inherit pub_methods_a00235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return active event sender. Null outside event handling. <br/></td></tr>
+<tr class="separator:af77f10214e90fb621d2ee797a18f8974 inherit pub_methods_a00235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d2f34a4ab171e3f9efb2fb90fe64493 inherit pub_methods_a00235"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d2f34a4ab171e3f9efb2fb90fe64493"></a>
+<a class="el" href="a00151.html">EventHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00235.html#a8d2f34a4ab171e3f9efb2fb90fe64493">GetEventHandler</a> () const </td></tr>
+<tr class="memdesc:a8d2f34a4ab171e3f9efb2fb90fe64493 inherit pub_methods_a00235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return active event handler. Null outside event handling. <br/></td></tr>
+<tr class="separator:a8d2f34a4ab171e3f9efb2fb90fe64493 inherit pub_methods_a00235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e1e02093f67f7d56056c5992a6d7b1e inherit pub_methods_a00235"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e1e02093f67f7d56056c5992a6d7b1e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00235.html#a7e1e02093f67f7d56056c5992a6d7b1e">HasSubscribedToEvent</a> (<a class="el" href="a00337.html">StringHash</a> eventType) const </td></tr>
+<tr class="memdesc:a7e1e02093f67f7d56056c5992a6d7b1e inherit pub_methods_a00235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether has subscribed to an event without specific sender. <br/></td></tr>
+<tr class="separator:a7e1e02093f67f7d56056c5992a6d7b1e inherit pub_methods_a00235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0adfe36d21569e2f4f5785627c87fa3d inherit pub_methods_a00235"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0adfe36d21569e2f4f5785627c87fa3d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00235.html#a0adfe36d21569e2f4f5785627c87fa3d">HasSubscribedToEvent</a> (<a class="el" href="a00235.html">Object</a> *sender, <a class="el" href="a00337.html">StringHash</a> eventType) const </td></tr>
+<tr class="memdesc:a0adfe36d21569e2f4f5785627c87fa3d inherit pub_methods_a00235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether has subscribed to a specific sender's event. <br/></td></tr>
+<tr class="separator:a0adfe36d21569e2f4f5785627c87fa3d inherit pub_methods_a00235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd8d1263bc0207d56e6c4e0d75a0b684 inherit pub_methods_a00235"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd8d1263bc0207d56e6c4e0d75a0b684"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00235.html#abd8d1263bc0207d56e6c4e0d75a0b684">HasEventHandlers</a> () const </td></tr>
+<tr class="memdesc:abd8d1263bc0207d56e6c4e0d75a0b684 inherit pub_methods_a00235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether has subscribed to any event. <br/></td></tr>
+<tr class="separator:abd8d1263bc0207d56e6c4e0d75a0b684 inherit pub_methods_a00235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1f70ceb09c8615e7dd2522eb4a87331 inherit pub_methods_a00235"><td class="memTemplParams" colspan="2"><a class="anchor" id="ad1f70ceb09c8615e7dd2522eb4a87331"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:ad1f70ceb09c8615e7dd2522eb4a87331 inherit pub_methods_a00235"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00235.html#ad1f70ceb09c8615e7dd2522eb4a87331">GetSubsystem</a> () const </td></tr>
+<tr class="memdesc:ad1f70ceb09c8615e7dd2522eb4a87331 inherit pub_methods_a00235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template version of returning a subsystem. <br/></td></tr>
+<tr class="separator:ad1f70ceb09c8615e7dd2522eb4a87331 inherit pub_methods_a00235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af91bcd494ffe005fbf0f8238ba82121e inherit pub_methods_a00235"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af91bcd494ffe005fbf0f8238ba82121e"></a>
+const <a class="el" href="a00336.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00235.html#af91bcd494ffe005fbf0f8238ba82121e">GetCategory</a> () const </td></tr>
+<tr class="memdesc:af91bcd494ffe005fbf0f8238ba82121e inherit pub_methods_a00235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object category. Categories are (optionally) registered along with the object factory. Return an empty string if the object category is not registered. <br/></td></tr>
+<tr class="separator:af91bcd494ffe005fbf0f8238ba82121e inherit pub_methods_a00235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_a00277"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00277')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="a00277.html">Urho3D::RefCounted</a></td></tr>
+<tr class="memitem:aad6e2ac9e97ca71b28c47248a9aad9b9 inherit pub_methods_a00277"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad6e2ac9e97ca71b28c47248a9aad9b9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#aad6e2ac9e97ca71b28c47248a9aad9b9">RefCounted</a> ()</td></tr>
+<tr class="memdesc:aad6e2ac9e97ca71b28c47248a9aad9b9 inherit pub_methods_a00277"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. Allocate the reference count structure and set an initial self weak reference. <br/></td></tr>
+<tr class="separator:aad6e2ac9e97ca71b28c47248a9aad9b9 inherit pub_methods_a00277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1f332b55c08fd702f2c7ebb18e42a90 inherit pub_methods_a00277"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1f332b55c08fd702f2c7ebb18e42a90"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#aa1f332b55c08fd702f2c7ebb18e42a90">~RefCounted</a> ()</td></tr>
+<tr class="memdesc:aa1f332b55c08fd702f2c7ebb18e42a90 inherit pub_methods_a00277"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. Mark as expired and also delete the reference count structure if no outside weak references exist. <br/></td></tr>
+<tr class="separator:aa1f332b55c08fd702f2c7ebb18e42a90 inherit pub_methods_a00277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d857f439bb5a7935199a8e4fdb8f2c8 inherit pub_methods_a00277"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d857f439bb5a7935199a8e4fdb8f2c8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#a0d857f439bb5a7935199a8e4fdb8f2c8">AddRef</a> ()</td></tr>
+<tr class="memdesc:a0d857f439bb5a7935199a8e4fdb8f2c8 inherit pub_methods_a00277"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment reference count. Can also be called outside of a <a class="el" href="a00313.html" title="Shared pointer template class with intrusive reference counting.">SharedPtr</a> for traditional reference counting. <br/></td></tr>
+<tr class="separator:a0d857f439bb5a7935199a8e4fdb8f2c8 inherit pub_methods_a00277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59e95fecbcbc560f81f0bdd52306cc1d inherit pub_methods_a00277"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59e95fecbcbc560f81f0bdd52306cc1d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#a59e95fecbcbc560f81f0bdd52306cc1d">ReleaseRef</a> ()</td></tr>
+<tr class="memdesc:a59e95fecbcbc560f81f0bdd52306cc1d inherit pub_methods_a00277"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrement reference count and delete self if no more references. Can also be called outside of a <a class="el" href="a00313.html" title="Shared pointer template class with intrusive reference counting.">SharedPtr</a> for traditional reference counting. <br/></td></tr>
+<tr class="separator:a59e95fecbcbc560f81f0bdd52306cc1d inherit pub_methods_a00277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5ac3cb7e5f64c056351e15d3a30b4ba inherit pub_methods_a00277"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5ac3cb7e5f64c056351e15d3a30b4ba"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#ad5ac3cb7e5f64c056351e15d3a30b4ba">Refs</a> () const </td></tr>
+<tr class="memdesc:ad5ac3cb7e5f64c056351e15d3a30b4ba inherit pub_methods_a00277"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return reference count. <br/></td></tr>
+<tr class="separator:ad5ac3cb7e5f64c056351e15d3a30b4ba inherit pub_methods_a00277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab05087f4c487de02faed7411bbcf9df1 inherit pub_methods_a00277"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab05087f4c487de02faed7411bbcf9df1"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#ab05087f4c487de02faed7411bbcf9df1">WeakRefs</a> () const </td></tr>
+<tr class="memdesc:ab05087f4c487de02faed7411bbcf9df1 inherit pub_methods_a00277"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return weak reference count. <br/></td></tr>
+<tr class="separator:ab05087f4c487de02faed7411bbcf9df1 inherit pub_methods_a00277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eb5281d7e6cfd7e729ae0d07ca0da92 inherit pub_methods_a00277"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0eb5281d7e6cfd7e729ae0d07ca0da92"></a>
+<a class="el" href="a00276.html">RefCount</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#a0eb5281d7e6cfd7e729ae0d07ca0da92">RefCountPtr</a> ()</td></tr>
+<tr class="memdesc:a0eb5281d7e6cfd7e729ae0d07ca0da92 inherit pub_methods_a00277"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return pointer to the reference count structure. <br/></td></tr>
+<tr class="separator:a0eb5281d7e6cfd7e729ae0d07ca0da92 inherit pub_methods_a00277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:ac13d006e602441468e056a30e70dbb6d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac13d006e602441468e056a30e70dbb6d"></a>
+<a class="el" href="a00228.html">NetworkState</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#ac13d006e602441468e056a30e70dbb6d">networkState_</a></td></tr>
+<tr class="memdesc:ac13d006e602441468e056a30e70dbb6d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00226.html" title="Network subsystem. Manages client-server communications using the UDP protocol.">Network</a> attribute state. <br/></td></tr>
+<tr class="separator:ac13d006e602441468e056a30e70dbb6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_a00235"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_a00235')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="a00235.html">Urho3D::Object</a></td></tr>
+<tr class="memitem:a3a7df857ddaa8c3e218c3645152dc23d inherit pro_attribs_a00235"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a7df857ddaa8c3e218c3645152dc23d"></a>
+<a class="el" href="a00125.html">Context</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00235.html#a3a7df857ddaa8c3e218c3645152dc23d">context_</a></td></tr>
+<tr class="memdesc:a3a7df857ddaa8c3e218c3645152dc23d inherit pro_attribs_a00235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execution context. <br/></td></tr>
+<tr class="separator:a3a7df857ddaa8c3e218c3645152dc23d inherit pro_attribs_a00235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a1f122da84e31f6a83270300ba4302a32"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f122da84e31f6a83270300ba4302a32"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>OBJECT</b> (<a class="el" href="a00304.html">Serializable</a>)</td></tr>
+<tr class="separator:a1f122da84e31f6a83270300ba4302a32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a391a12da0585beefca02d1dbcb3f3676"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a391a12da0585beefca02d1dbcb3f3676"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a391a12da0585beefca02d1dbcb3f3676">SetInstanceDefault</a> (const <a class="el" href="a00336.html">String</a> &amp;name, const <a class="el" href="a00360.html">Variant</a> &amp;defaultValue)</td></tr>
+<tr class="memdesc:a391a12da0585beefca02d1dbcb3f3676"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set instance-level default value. Allocate the internal data structure as necessary. <br/></td></tr>
+<tr class="separator:a391a12da0585beefca02d1dbcb3f3676"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9b3ae6ea6a2a09aa3f06d3ef5356a1a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9b3ae6ea6a2a09aa3f06d3ef5356a1a"></a>
+<a class="el" href="a00360.html">Variant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#af9b3ae6ea6a2a09aa3f06d3ef5356a1a">GetInstanceDefault</a> (const <a class="el" href="a00336.html">String</a> &amp;name) const </td></tr>
+<tr class="memdesc:af9b3ae6ea6a2a09aa3f06d3ef5356a1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get instance-level default value. <br/></td></tr>
+<tr class="separator:af9b3ae6ea6a2a09aa3f06d3ef5356a1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a1084411c318e0ed359d5ba3b07467186"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1084411c318e0ed359d5ba3b07467186"></a>
-<a class="el" href="a00369.html">WeakPtr</a>&lt; <a class="el" href="a00300.html">Shader</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a1084411c318e0ed359d5ba3b07467186">owner_</a></td></tr>
-<tr class="memdesc:a1084411c318e0ed359d5ba3b07467186"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00300.html" title="Shader resource consisting of several shader variations.">Shader</a> this variation belongs to. <br/></td></tr>
-<tr class="separator:a1084411c318e0ed359d5ba3b07467186"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe27e4fc0536ebded28cb982a54f1271"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe27e4fc0536ebded28cb982a54f1271"></a>
-ShaderType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#afe27e4fc0536ebded28cb982a54f1271">type_</a></td></tr>
-<tr class="memdesc:afe27e4fc0536ebded28cb982a54f1271"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00300.html" title="Shader resource consisting of several shader variations.">Shader</a> type. <br/></td></tr>
-<tr class="separator:afe27e4fc0536ebded28cb982a54f1271"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39539980f94b4b1e25f0c99253abd52a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a39539980f94b4b1e25f0c99253abd52a"></a>
-<a class="el" href="a00330.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a39539980f94b4b1e25f0c99253abd52a">name_</a></td></tr>
-<tr class="memdesc:a39539980f94b4b1e25f0c99253abd52a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00300.html" title="Shader resource consisting of several shader variations.">Shader</a> name. <br/></td></tr>
-<tr class="separator:a39539980f94b4b1e25f0c99253abd52a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac865db20e5b54234a191d1303fff3cae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac865db20e5b54234a191d1303fff3cae"></a>
-<a class="el" href="a00330.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#ac865db20e5b54234a191d1303fff3cae">defines_</a></td></tr>
-<tr class="memdesc:ac865db20e5b54234a191d1303fff3cae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines to use in compiling. <br/></td></tr>
-<tr class="separator:ac865db20e5b54234a191d1303fff3cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08bc358d930c4de1b5e831c7f7153869"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08bc358d930c4de1b5e831c7f7153869"></a>
-<a class="el" href="a00330.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a08bc358d930c4de1b5e831c7f7153869">compilerOutput_</a></td></tr>
-<tr class="memdesc:a08bc358d930c4de1b5e831c7f7153869"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00300.html" title="Shader resource consisting of several shader variations.">Shader</a> compile error string. <br/></td></tr>
-<tr class="separator:a08bc358d930c4de1b5e831c7f7153869"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_attribs_a00164"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_a00164')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="a00164.html">Urho3D::GPUObject</a></td></tr>
-<tr class="memitem:abf1a902885d2c3bac02f3f58e0e0f037 inherit pro_attribs_a00164"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf1a902885d2c3bac02f3f58e0e0f037"></a>
-<a class="el" href="a00369.html">WeakPtr</a>&lt; <a class="el" href="a00165.html">Graphics</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#abf1a902885d2c3bac02f3f58e0e0f037">graphics_</a></td></tr>
-<tr class="memdesc:abf1a902885d2c3bac02f3f58e0e0f037 inherit pro_attribs_a00164"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00165.html" title="Graphics subsystem. Manages the application window, rendering state and GPU resources.">Graphics</a> subsystem. <br/></td></tr>
-<tr class="separator:abf1a902885d2c3bac02f3f58e0e0f037 inherit pro_attribs_a00164"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a601debebd01ef73fa6f40c818232330e inherit pro_attribs_a00164"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a601debebd01ef73fa6f40c818232330e"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#a601debebd01ef73fa6f40c818232330e">object_</a></td></tr>
-<tr class="memdesc:a601debebd01ef73fa6f40c818232330e inherit pro_attribs_a00164"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00230.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a> handle. <br/></td></tr>
-<tr class="separator:a601debebd01ef73fa6f40c818232330e inherit pro_attribs_a00164"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6c82e62ca8b1098c4157acfe517c772 inherit pro_attribs_a00164"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6c82e62ca8b1098c4157acfe517c772"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#ab6c82e62ca8b1098c4157acfe517c772">dataLost_</a></td></tr>
-<tr class="memdesc:ab6c82e62ca8b1098c4157acfe517c772 inherit pro_attribs_a00164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data lost flag. <br/></td></tr>
-<tr class="separator:ab6c82e62ca8b1098c4157acfe517c772 inherit pro_attribs_a00164"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada5a50cf10c6f65deb6b273bfc1649ab inherit pro_attribs_a00164"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada5a50cf10c6f65deb6b273bfc1649ab"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00164.html#ada5a50cf10c6f65deb6b273bfc1649ab">dataPending_</a></td></tr>
-<tr class="memdesc:ada5a50cf10c6f65deb6b273bfc1649ab inherit pro_attribs_a00164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data pending flag. <br/></td></tr>
-<tr class="separator:ada5a50cf10c6f65deb6b273bfc1649ab inherit pro_attribs_a00164"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a2e215bedd75174a09a2b38ed5fd728"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a2e215bedd75174a09a2b38ed5fd728"></a>
+<a class="el" href="a00174.html">VariantMap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a6a2e215bedd75174a09a2b38ed5fd728">instanceDefaultValues_</a></td></tr>
+<tr class="memdesc:a6a2e215bedd75174a09a2b38ed5fd728"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attribute default value at each instance level. <br/></td></tr>
+<tr class="separator:a6a2e215bedd75174a09a2b38ed5fd728"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e600cc84e1f680cc08714f733739c20"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e600cc84e1f680cc08714f733739c20"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#a7e600cc84e1f680cc08714f733739c20">temporary_</a></td></tr>
+<tr class="memdesc:a7e600cc84e1f680cc08714f733739c20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary flag. <br/></td></tr>
+<tr class="separator:a7e600cc84e1f680cc08714f733739c20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Vertex or pixel shader on the GPU. </p>
+<div class="textblock"><p>Base class for objects with automatic serialization through attributes. </p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/OpenGL/OGLShaderVariation.h</li>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/OpenGL/OGLShaderVariation.cpp</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Scene/Serializable.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Scene/Serializable.cpp</li>
 </ul>
 </div><!-- contents -->
