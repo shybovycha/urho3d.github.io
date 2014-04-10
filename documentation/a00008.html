@@ -238,17 +238,17 @@ Classes</h1>
 <li>AttributeAnimation() (GC)</li>
 <li>AttributeAnimation* new()</li>
 <li>void delete()</li>
-<li>void SetCycleMode(CycleMode cycleMode)</li>
+<li>void SetWrapMode(WrapMode wrapMode)</li>
 <li>void SetValueType(VariantType valueType)</li>
 <li>bool SetKeyFrame(float time, const Variant&amp; value)</li>
 <li>void SetEventFrame(float time, const StringHash&amp; eventType)</li>
 <li>void SetEventFrame(float time, const StringHash&amp; eventType, const VariantMap&amp; eventData)</li>
-<li>CycleMode GetCycleMode() const</li>
+<li>WrapMode GetWrapMode() const</li>
 <li>VariantType GetValueType() const</li>
 </ul>
 <p>Properties:</p>
 <ul>
-<li>CycleMode cycleMode</li>
+<li>WrapMode wrapMode</li>
 <li>VariantType valueType</li>
 </ul>
 <h3><a class="el" href="a00073.html" title="Audio subsystem.">Audio</a> : <a class="el" href="a00234.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
@@ -5775,12 +5775,6 @@ Enumerations</h1>
 <li>int CM_CLAMP</li>
 <li>int CM_PINGPONG</li>
 </ul>
-<h3>CycleMode</h3>
-<ul>
-<li>int CM_LOOP</li>
-<li>int CM_CLAMP</li>
-<li>int CM_PINGPONG</li>
-</ul>
 <h3>EmitterType</h3>
 <ul>
 <li>int EMITTER_SPHERE</li>
@@ -6079,6 +6073,12 @@ Enumerations</h1>
 <li>int DRAG_RESIZE_BOTTOM</li>
 <li>int DRAG_RESIZE_BOTTOMLEFT</li>
 <li>int DRAG_RESIZE_LEFT</li>
+</ul>
+<h3>WrapMode</h3>
+<ul>
+<li>int WM_LOOP</li>
+<li>int WM_ONCE</li>
+<li>int WM_CLAMP</li>
 </ul>
 <h1><a class="anchor" id="LuaScriptAPI_GlobalFunctions"></a>
 Global functions</h1>
