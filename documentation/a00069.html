@@ -53,10 +53,10 @@ Collaboration diagram for Urho3D::AttributeAnimationInstance:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4d496e4b52ee7544c7b667124e0f682e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d496e4b52ee7544c7b667124e0f682e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00069.html#a4d496e4b52ee7544c7b667124e0f682e">AttributeAnimationInstance</a> (<a class="el" href="a00051.html">Animatable</a> *animatable, const <a class="el" href="a00071.html">AttributeInfo</a> &amp;attributeInfo, <a class="el" href="a00068.html">AttributeAnimation</a> *attributeAnimation, float speed)</td></tr>
-<tr class="memdesc:a4d496e4b52ee7544c7b667124e0f682e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
-<tr class="separator:a4d496e4b52ee7544c7b667124e0f682e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5329f35ceb4ce23f08d889931643d71"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5329f35ceb4ce23f08d889931643d71"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00069.html#ac5329f35ceb4ce23f08d889931643d71">AttributeAnimationInstance</a> (<a class="el" href="a00051.html">Animatable</a> *animatable, const <a class="el" href="a00071.html">AttributeInfo</a> &amp;attributeInfo, <a class="el" href="a00068.html">AttributeAnimation</a> *attributeAnimation, WrapMode wrapMode, float speed)</td></tr>
+<tr class="memdesc:ac5329f35ceb4ce23f08d889931643d71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
+<tr class="separator:ac5329f35ceb4ce23f08d889931643d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a8aa984870b3d4041637b9b017e2a37"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a8aa984870b3d4041637b9b017e2a37"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00069.html#a9a8aa984870b3d4041637b9b017e2a37">AttributeAnimationInstance</a> (const <a class="el" href="a00069.html">AttributeAnimationInstance</a> &amp;other)</td></tr>
 <tr class="memdesc:a9a8aa984870b3d4041637b9b017e2a37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
@@ -69,6 +69,10 @@ Public Member Functions</h2></td></tr>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00069.html#ac7a55574f32daa38a6d18a6fadd792e5">Update</a> (float timeStep)</td></tr>
 <tr class="memdesc:ac7a55574f32daa38a6d18a6fadd792e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update (if animaiton finished return true). <br/></td></tr>
 <tr class="separator:ac7a55574f32daa38a6d18a6fadd792e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03f24ecc4616fee1b609fbf508b78b2d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a03f24ecc4616fee1b609fbf508b78b2d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00069.html#a03f24ecc4616fee1b609fbf508b78b2d">SetWrapMode</a> (WrapMode wrapMode)</td></tr>
+<tr class="memdesc:a03f24ecc4616fee1b609fbf508b78b2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set wrap mode. <br/></td></tr>
+<tr class="separator:a03f24ecc4616fee1b609fbf508b78b2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaad72d6433a90b5f5ba13e06a98dfe83"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaad72d6433a90b5f5ba13e06a98dfe83"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00069.html#aaad72d6433a90b5f5ba13e06a98dfe83">SetSpeed</a> (float speed)</td></tr>
 <tr class="memdesc:aaad72d6433a90b5f5ba13e06a98dfe83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set speed. <br/></td></tr>
@@ -85,6 +89,10 @@ const <a class="el" href="a00071.html">AttributeInfo</a> &amp;&#160;</td><td cla
 <a class="el" href="a00068.html">AttributeAnimation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00069.html#a63974643aa57a1af7c30c8ca98fd0594">GetAttributeAnimation</a> () const </td></tr>
 <tr class="memdesc:a63974643aa57a1af7c30c8ca98fd0594"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return attribute animation. <br/></td></tr>
 <tr class="separator:a63974643aa57a1af7c30c8ca98fd0594"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18a1e9092465907a53e10733eaf9e9c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18a1e9092465907a53e10733eaf9e9c8"></a>
+WrapMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00069.html#a18a1e9092465907a53e10733eaf9e9c8">GetWrapMode</a> () const </td></tr>
+<tr class="memdesc:a18a1e9092465907a53e10733eaf9e9c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return wrap mode. <br/></td></tr>
+<tr class="separator:a18a1e9092465907a53e10733eaf9e9c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb49cda0dfabe06875105c65708021b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb49cda0dfabe06875105c65708021b8"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00069.html#aeb49cda0dfabe06875105c65708021b8">GetSpeed</a> () const </td></tr>
 <tr class="memdesc:aeb49cda0dfabe06875105c65708021b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return speed. <br/></td></tr>
@@ -125,6 +133,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a0027
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:af287d157e54d6a399a716488dfe053a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af287d157e54d6a399a716488dfe053a9"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00069.html#af287d157e54d6a399a716488dfe053a9">CalculateScaledTime</a> (float currentTime, bool &amp;finished) const </td></tr>
+<tr class="memdesc:af287d157e54d6a399a716488dfe053a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate scaled time. <br/></td></tr>
+<tr class="separator:af287d157e54d6a399a716488dfe053a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1217aa8870ebf56a8ae5db4bf6c940c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1217aa8870ebf56a8ae5db4bf6c940c1"></a>
 <a class="el" href="a00359.html">Variant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00069.html#a1217aa8870ebf56a8ae5db4bf6c940c1">Interpolation</a> (const <a class="el" href="a00072.html">AttributeKeyFrame</a> &amp;prevKeyFrame, const <a class="el" href="a00072.html">AttributeKeyFrame</a> &amp;currKeyFrame, float scaledTime) const </td></tr>
 <tr class="memdesc:a1217aa8870ebf56a8ae5db4bf6c940c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpolation. <br/></td></tr>
@@ -144,6 +156,10 @@ const <a class="el" href="a00071.html">AttributeInfo</a> &amp;&#160;</td><td cla
 <a class="el" href="a00312.html">SharedPtr</a>&lt; <a class="el" href="a00068.html">AttributeAnimation</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00069.html#ac8f2778f20b9a8005ffabf723212423d">attributeAnimation_</a></td></tr>
 <tr class="memdesc:ac8f2778f20b9a8005ffabf723212423d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attribute animation. <br/></td></tr>
 <tr class="separator:ac8f2778f20b9a8005ffabf723212423d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27eb46bade88a411f9c299fc0da6db08"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a27eb46bade88a411f9c299fc0da6db08"></a>
+WrapMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00069.html#a27eb46bade88a411f9c299fc0da6db08">wrapMode_</a></td></tr>
+<tr class="memdesc:a27eb46bade88a411f9c299fc0da6db08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrap mode. <br/></td></tr>
+<tr class="separator:a27eb46bade88a411f9c299fc0da6db08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a304086e4b79a52446785603b22c41e9d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a304086e4b79a52446785603b22c41e9d"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00069.html#a304086e4b79a52446785603b22c41e9d">speed_</a></td></tr>
 <tr class="memdesc:a304086e4b79a52446785603b22c41e9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Speed. <br/></td></tr>

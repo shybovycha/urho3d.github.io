@@ -24,11 +24,13 @@ Classes</h1>
 <ul>
 <li>void SetAnimationEnabled(bool enable)</li>
 <li>void SetObjectAnimation(ObjectAnimation* objectAnimation)</li>
-<li>void SetAttributeAnimation(const <a class="el" href="a00335.html" title="String class.">String</a> name, AttributeAnimation* attributeAnimation, float speed = 1.0f)</li>
+<li>void SetAttributeAnimation(const <a class="el" href="a00335.html" title="String class.">String</a> name, AttributeAnimation* attributeAnimation, WrapMode wrapMode = WM_LOOP, float speed = 1.0f)</li>
+<li>void SetAttributeAnimationWrapMode(const String name, WrapMode wrapMode)</li>
 <li>void SetAttributeAnimationSpeed(const String name, float speed)</li>
 <li>bool GetAnimationEnabled() const</li>
 <li>ObjectAnimation* GetObjectAnimation() const</li>
 <li>AttributeAnimation* GetAttributeAnimation(const String name) const</li>
+<li>WrapMode GetAttributeAnimationWrapMode(const String name) const</li>
 <li>float GetAttributeAnimationSpeed(const String name) const</li>
 </ul>
 <p>Properties:</p>
@@ -238,17 +240,14 @@ Classes</h1>
 <li>AttributeAnimation() (GC)</li>
 <li>AttributeAnimation* new()</li>
 <li>void delete()</li>
-<li>void SetWrapMode(WrapMode wrapMode)</li>
 <li>void SetValueType(VariantType valueType)</li>
 <li>bool SetKeyFrame(float time, const Variant&amp; value)</li>
 <li>void SetEventFrame(float time, const StringHash&amp; eventType)</li>
 <li>void SetEventFrame(float time, const StringHash&amp; eventType, const VariantMap&amp; eventData)</li>
-<li>WrapMode GetWrapMode() const</li>
 <li>VariantType GetValueType() const</li>
 </ul>
 <p>Properties:</p>
 <ul>
-<li>WrapMode wrapMode</li>
 <li>VariantType valueType</li>
 </ul>
 <h3><a class="el" href="a00073.html" title="Audio subsystem.">Audio</a> : <a class="el" href="a00234.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
@@ -2697,7 +2696,7 @@ Classes</h1>
 <li>float minPriority</li>
 <li>bool alwaysUpdateOwner</li>
 </ul>
-<h3><a class="el" href="a00229.html" title="Scene node that may contain components and child nodes.">Node</a> : <a class="el" href="a00051.html" title="Base class for animatable object.">Animatable</a></h3>
+<h3><a class="el" href="a00230.html" title="Scene node that may contain components and child nodes.">Node</a> : <a class="el" href="a00051.html" title="Base class for animatable object.">Animatable</a></h3>
 <p>Methods:</p>
 <ul>
 <li>Node() (GC)</li>
@@ -2877,10 +2876,11 @@ Classes</h1>
 <li>ObjectAnimation() (GC)</li>
 <li>ObjectAnimation* new()</li>
 <li>void delete()</li>
-<li>void AddAttributeAnimation(const <a class="el" href="a00335.html" title="String class.">String</a> name, AttributeAnimation* attributeAnimation, float speed = 1.0f)</li>
+<li>void AddAttributeAnimation(const <a class="el" href="a00335.html" title="String class.">String</a> name, AttributeAnimation* attributeAnimation, WrapMode wrapMode = WM_LOOP, float speed = 1.0f)</li>
 <li>void RemoveAttributeAnimation(const String name)</li>
 <li>void RemoveAttributeAnimation(AttributeAnimation* attributeAnimation)</li>
 <li>AttributeAnimation* GetAttributeAnimation(const String name) const</li>
+<li>WrapMode GetAttributeAnimationWrapMode(const String name) const</li>
 <li>float GetAttributeAnimationSpeed(const String name) const</li>
 </ul>
 <h3><a class="el" href="a00240.html" title="Octree component. Should be added only to the root scene node">Octree</a> : <a class="el" href="a00102.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h3>
@@ -3821,7 +3821,7 @@ Classes</h1>
 <li><a class="el" href="a00362.html" title="Two-dimensional vector.">Vector2</a> linearVelocity</li>
 <li>float angularVelocity</li>
 </ul>
-<h3><a class="el" href="a00291.html" title="Root scene node, represents the whole scene.">Scene</a> : <a class="el" href="a00229.html" title="Scene node that may contain components and child nodes.">Node</a></h3>
+<h3><a class="el" href="a00291.html" title="Root scene node, represents the whole scene.">Scene</a> : <a class="el" href="a00230.html" title="Scene node that may contain components and child nodes.">Node</a></h3>
 <p>Methods:</p>
 <ul>
 <li>Scene() (GC)</li>
