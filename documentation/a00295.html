@@ -20,74 +20,47 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00295.html">SceneResolver</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00295.html">ScratchBuffer</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="a01490.html">List of all members</a>  </div>
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="a01175.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::SceneResolver Class Reference</div>  </div>
+<div class="title">Urho3D::ScratchBuffer Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Utility class that resolves node &amp; component IDs after a scene or partial scene load.  
+<p>CPU-side scratch buffer for vertex data updates.  
  <a href="a00295.html#details">More...</a></p>
 
-<p><code>#include &lt;SceneResolver.h&gt;</code></p>
+<p><code>#include &lt;OGLGraphics.h&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for Urho3D::SceneResolver:</div>
+Collaboration diagram for Urho3D::ScratchBuffer:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01491.svg" width="100%" height="458"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a01176.svg" width="187" height="251"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a1326d953febcbb74e893f352a2b4fe64"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1326d953febcbb74e893f352a2b4fe64"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00295.html#a1326d953febcbb74e893f352a2b4fe64">SceneResolver</a> ()</td></tr>
-<tr class="memdesc:a1326d953febcbb74e893f352a2b4fe64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
-<tr class="separator:a1326d953febcbb74e893f352a2b4fe64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a700ff0124bf7fb77fde8b89a0a63e071"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a700ff0124bf7fb77fde8b89a0a63e071"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00295.html#a700ff0124bf7fb77fde8b89a0a63e071">~SceneResolver</a> ()</td></tr>
-<tr class="memdesc:a700ff0124bf7fb77fde8b89a0a63e071"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
-<tr class="separator:a700ff0124bf7fb77fde8b89a0a63e071"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33df99e344392eb3cc86dfee09b02b6b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33df99e344392eb3cc86dfee09b02b6b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00295.html#a33df99e344392eb3cc86dfee09b02b6b">Reset</a> ()</td></tr>
-<tr class="memdesc:a33df99e344392eb3cc86dfee09b02b6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset. Clear all remembered nodes and components. <br/></td></tr>
-<tr class="separator:a33df99e344392eb3cc86dfee09b02b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1d8eba7016a02851c191e203be845c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1d8eba7016a02851c191e203be845c9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00295.html#ab1d8eba7016a02851c191e203be845c9">AddNode</a> (unsigned oldID, <a class="el" href="a00230.html">Node</a> *node)</td></tr>
-<tr class="memdesc:ab1d8eba7016a02851c191e203be845c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remember a created node. <br/></td></tr>
-<tr class="separator:ab1d8eba7016a02851c191e203be845c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6bf8bb0adf4405dbe8da533aff14382"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6bf8bb0adf4405dbe8da533aff14382"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00295.html#ab6bf8bb0adf4405dbe8da533aff14382">AddComponent</a> (unsigned oldID, <a class="el" href="a00103.html">Component</a> *component)</td></tr>
-<tr class="memdesc:ab6bf8bb0adf4405dbe8da533aff14382"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remember a created component. <br/></td></tr>
-<tr class="separator:ab6bf8bb0adf4405dbe8da533aff14382"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4322ce210921b372aa621462408597cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4322ce210921b372aa621462408597cc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00295.html#a4322ce210921b372aa621462408597cc">Resolve</a> ()</td></tr>
-<tr class="memdesc:a4322ce210921b372aa621462408597cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve component and node ID attributes and reset. <br/></td></tr>
-<tr class="separator:a4322ce210921b372aa621462408597cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:aee399d66b12fa63fb380d34e2939cc27"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee399d66b12fa63fb380d34e2939cc27"></a>
-<a class="el" href="a00174.html">HashMap</a>&lt; unsigned, <a class="el" href="a00375.html">WeakPtr</a><br class="typebreak"/>
-&lt; <a class="el" href="a00230.html">Node</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00295.html#aee399d66b12fa63fb380d34e2939cc27">nodes_</a></td></tr>
-<tr class="memdesc:aee399d66b12fa63fb380d34e2939cc27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nodes. <br/></td></tr>
-<tr class="separator:aee399d66b12fa63fb380d34e2939cc27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acce67b0eab885591e842c81c16170c16"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acce67b0eab885591e842c81c16170c16"></a>
-<a class="el" href="a00174.html">HashMap</a>&lt; unsigned, <a class="el" href="a00375.html">WeakPtr</a><br class="typebreak"/>
-&lt; <a class="el" href="a00103.html">Component</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00295.html#acce67b0eab885591e842c81c16170c16">components_</a></td></tr>
-<tr class="memdesc:acce67b0eab885591e842c81c16170c16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Components. <br/></td></tr>
-<tr class="separator:acce67b0eab885591e842c81c16170c16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a51146f599cad381056cb947e5faea8ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a51146f599cad381056cb947e5faea8ad"></a>
+<a class="el" href="a00311.html">SharedArrayPtr</a>&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00295.html#a51146f599cad381056cb947e5faea8ad">data_</a></td></tr>
+<tr class="memdesc:a51146f599cad381056cb947e5faea8ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer data. <br/></td></tr>
+<tr class="separator:a51146f599cad381056cb947e5faea8ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af16f35d8fcdccb174e5621acbe573146"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af16f35d8fcdccb174e5621acbe573146"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00295.html#af16f35d8fcdccb174e5621acbe573146">size_</a></td></tr>
+<tr class="memdesc:af16f35d8fcdccb174e5621acbe573146"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data size. <br/></td></tr>
+<tr class="separator:af16f35d8fcdccb174e5621acbe573146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef972aaf6c930ccf763481a3e1cff7c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef972aaf6c930ccf763481a3e1cff7c8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00295.html#aef972aaf6c930ccf763481a3e1cff7c8">reserved_</a></td></tr>
+<tr class="memdesc:aef972aaf6c930ccf763481a3e1cff7c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reserved flag. <br/></td></tr>
+<tr class="separator:aef972aaf6c930ccf763481a3e1cff7c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Utility class that resolves node &amp; component IDs after a scene or partial scene load. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Scene/SceneResolver.h</li>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Scene/SceneResolver.cpp</li>
+<div class="textblock"><p>CPU-side scratch buffer for vertex data updates. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/OpenGL/OGLGraphics.h</li>
 </ul>
 </div><!-- contents -->
