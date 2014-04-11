@@ -26,8 +26,15 @@ title: Documentation
 <div class="line"></div>
 <div class="line">light-&gt;SetAttributeAnimation(<span class="stringliteral">&quot;Color&quot;</span>, colorAnimation, WM_LOOP); </div>
 </div><!-- fragment --><p>On above code, we first create an <a class="el" href="a00069.html" title="Base class for attribute animation.">AttributeAnimation</a> object call colorAnimation, and set it’s key frame value, then apply it to light’s color attribute. (Note here: in order to make animation look correct, the last key frame must equal to the first key frame for loop mode).</p>
-<p>Another way is load attribute animation from resource, here is a simple sample: AttributeAnimatio* colorAnimation = cache-&gt;GetResource&lt;AttributeAnimation&gt;("Scene/LightColorAnimation.xml"); light-&gt;SetAttributeAnimation("Color", colorAnimation, WM_LOOP);</p>
-<p>These are three kind of wrap mode for attribute animation: WM_LOOP: Loop mode, when the animation arrived to end, it will loop from begin. WM_ONCE: Play once mode, when the animation finished, it will be removed from the object. WM_CLAMP: Clamp mode, then the animation finished, it will keep the last key frame’s value.</p>
+<p>Another way is load attribute animation from resource, here is a simple sample: </p>
+<div class="fragment"><div class="line">AttributeAnimatio* colorAnimation = cache-&gt;GetResource&lt;AttributeAnimation&gt;(<span class="stringliteral">&quot;Scene/LightColorAnimation.xml&quot;</span>);</div>
+<div class="line">light-&gt;SetAttributeAnimation(<span class="stringliteral">&quot;Color&quot;</span>, colorAnimation, WM_LOOP);</div>
+</div><!-- fragment --><p>These are three kind of wrap mode for attribute animation:</p>
+<ul>
+<li>WM_LOOP: Loop mode, when the animation arrived to end, it will loop from begin.</li>
+<li>WM_ONCE: Play once mode, when the animation finished, it will be removed from the object.</li>
+<li>WM_CLAMP: Clamp mode, then the animation finished, it will keep the last key frame’s value.</li>
+</ul>
 <p>These is another argument call speed the animation play speed, the default value is 1.0f, user can change the value to control the animation play speed. User can also change animation’s wrap mode and speed on fly.</p>
 <p>When user want to apply multi-attribute animation to an object, <a class="el" href="a00237.html" title="Object animation class, an object animation include one or more attribute animations and theirs wrap ...">ObjectAnimation</a> is for it. For example when user want to apply position and color animation for light, can use following code: </p>
 <div class="fragment"><div class="line"><span class="comment">// Create object animation.</span></div>
