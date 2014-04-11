@@ -69,10 +69,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00157.html#a09594968968c8ce5511523f6a002d8d1">CreateDir</a> (const <a class="el" href="a00336.html">String</a> &amp;pathName)</td></tr>
 <tr class="memdesc:a09594968968c8ce5511523f6a002d8d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a directory. <br/></td></tr>
 <tr class="separator:a09594968968c8ce5511523f6a002d8d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e77a43bddbe2bf6142a6b58117e31ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e77a43bddbe2bf6142a6b58117e31ba"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00157.html#a6e77a43bddbe2bf6142a6b58117e31ba">SystemCommand</a> (const <a class="el" href="a00336.html">String</a> &amp;commandLine)</td></tr>
-<tr class="memdesc:a6e77a43bddbe2bf6142a6b58117e31ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run a program using the command interpreter, block until it exits and return the exit code. Will fail if any allowed paths are defined. <br/></td></tr>
-<tr class="separator:a6e77a43bddbe2bf6142a6b58117e31ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08a99c4e2661a009f2ef61ed665dea25"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08a99c4e2661a009f2ef61ed665dea25"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00157.html#a08a99c4e2661a009f2ef61ed665dea25">SetExecuteConsoleCommands</a> (bool enable)</td></tr>
+<tr class="memdesc:a08a99c4e2661a009f2ef61ed665dea25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether to execute engine console commands as OS-specific system command. <br/></td></tr>
+<tr class="separator:a08a99c4e2661a009f2ef61ed665dea25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0149d36ce7946f6d0feec557ec8245a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0149d36ce7946f6d0feec557ec8245a9"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00157.html#a0149d36ce7946f6d0feec557ec8245a9">SystemCommand</a> (const <a class="el" href="a00336.html">String</a> &amp;commandLine, bool redirectStdOutToLog=false)</td></tr>
+<tr class="memdesc:a0149d36ce7946f6d0feec557ec8245a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run a program using the command interpreter, block until it exits and return the exit code. Will fail if any allowed paths are defined. <br/></td></tr>
+<tr class="separator:a0149d36ce7946f6d0feec557ec8245a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58d430f0fa0724294df51f0b292ef6da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58d430f0fa0724294df51f0b292ef6da"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00157.html#a58d430f0fa0724294df51f0b292ef6da">SystemRun</a> (const <a class="el" href="a00336.html">String</a> &amp;fileName, const <a class="el" href="a00362.html">Vector</a>&lt; <a class="el" href="a00336.html">String</a> &gt; &amp;arguments)</td></tr>
 <tr class="memdesc:a58d430f0fa0724294df51f0b292ef6da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run a specific program, block until it exits and return the exit code. Will fail if any allowed paths are defined. <br/></td></tr>
@@ -109,6 +113,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 <a class="el" href="a00336.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00157.html#a575af6ad91fa461aca37622cfe928c85">GetCurrentDir</a> () const </td></tr>
 <tr class="memdesc:a575af6ad91fa461aca37622cfe928c85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the absolute current working directory. <br/></td></tr>
 <tr class="separator:a575af6ad91fa461aca37622cfe928c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaf45d54a440bf74843feff9d96b5147"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeaf45d54a440bf74843feff9d96b5147"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00157.html#aeaf45d54a440bf74843feff9d96b5147">GetExecuteConsoleCommands</a> () const </td></tr>
+<tr class="memdesc:aeaf45d54a440bf74843feff9d96b5147"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether is executing engine console commands as OS-specific system command. <br/></td></tr>
+<tr class="separator:aeaf45d54a440bf74843feff9d96b5147"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a276f0fc963cf4005d3150063fd07258a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a276f0fc963cf4005d3150063fd07258a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00157.html#a276f0fc963cf4005d3150063fd07258a">HasRegisteredPaths</a> () const </td></tr>
 <tr class="memdesc:a276f0fc963cf4005d3150063fd07258a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether paths have been registered. <br/></td></tr>
@@ -282,6 +290,10 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a67d807c13f09d57b1c2e96618ddcbfb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00157.html#a67d807c13f09d57b1c2e96618ddcbfb8">HandleBeginFrame</a> (<a class="el" href="a00337.html">StringHash</a> eventType, <a class="el" href="a00174.html">VariantMap</a> &amp;eventData)</td></tr>
 <tr class="memdesc:a67d807c13f09d57b1c2e96618ddcbfb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle begin frame event to check for completed async executions.  <a href="#a67d807c13f09d57b1c2e96618ddcbfb8">More...</a><br/></td></tr>
 <tr class="separator:a67d807c13f09d57b1c2e96618ddcbfb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0160529012807d4a61dee3bfcc477784"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0160529012807d4a61dee3bfcc477784"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00157.html#a0160529012807d4a61dee3bfcc477784">HandleConsoleCommand</a> (<a class="el" href="a00337.html">StringHash</a> eventType, <a class="el" href="a00174.html">VariantMap</a> &amp;eventData)</td></tr>
+<tr class="memdesc:a0160529012807d4a61dee3bfcc477784"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle a console command event. <br/></td></tr>
+<tr class="separator:a0160529012807d4a61dee3bfcc477784"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -301,6 +313,10 @@ Private Attributes</h2></td></tr>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00157.html#aabe0af8ac355b278a54949e0abb86719">nextAsyncExecID_</a></td></tr>
 <tr class="memdesc:aabe0af8ac355b278a54949e0abb86719"><td class="mdescLeft">&#160;</td><td class="mdescRight">Next async execution ID. <br/></td></tr>
 <tr class="separator:aabe0af8ac355b278a54949e0abb86719"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e155c16dadc27181d74913643edb90a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e155c16dadc27181d74913643edb90a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00157.html#a7e155c16dadc27181d74913643edb90a">executeConsoleCommands_</a></td></tr>
+<tr class="memdesc:a7e155c16dadc27181d74913643edb90a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag for executing engine console commands as OS-specific system command. Default to true. <br/></td></tr>
+<tr class="separator:a7e155c16dadc27181d74913643edb90a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>

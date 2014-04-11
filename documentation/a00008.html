@@ -1744,7 +1744,8 @@ Classes</h1>
 <ul>
 <li>bool SetCurrentDir(const String pathName)</li>
 <li>bool CreateDir(const String pathName)</li>
-<li>int SystemCommand(const String commandLine)</li>
+<li>void SetExecuteConsoleCommands(bool enable)</li>
+<li>int SystemCommand(const <a class="el" href="a00336.html" title="String class.">String</a> commandLine, bool redirectStdOutToLog = false)</li>
 <li>int SystemRun(const String fileName, const Vector&lt;String&gt;&amp; arguments)</li>
 <li>unsigned SystemCommandAsync(const String commandLine)</li>
 <li>unsigned SystemRunAsync(const String fileName, const Vector&lt;String&gt;&amp; arguments)</li>
@@ -1754,6 +1755,7 @@ Classes</h1>
 <li>bool Delete(const String fileName)</li>
 <li>void RegisterPath(const String pathName)</li>
 <li><a class="el" href="a00336.html" title="String class.">String</a> GetCurrentDir() const</li>
+<li>bool GetExecuteConsoleCommands() const</li>
 <li>bool HasRegisteredPaths() const</li>
 <li>bool CheckAccess(const String pathName) const</li>
 <li>unsigned GetLastModifiedTime(const String fileName) const</li>
