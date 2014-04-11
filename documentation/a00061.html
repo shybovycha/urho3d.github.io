@@ -20,60 +20,68 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00061.html">AnimationTrack</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00061.html">AnimationStateTrack</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01051.html">List of all members</a>  </div>
+<a href="a01064.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::AnimationTrack Struct Reference</div>  </div>
+<div class="title">Urho3D::AnimationStateTrack Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Skeletal animation track, stores keyframes of a single bone.  
+<p>Animation instance per-track data.  
  <a href="a00061.html#details">More...</a></p>
 
-<p><code>#include &lt;Animation.h&gt;</code></p>
+<p><code>#include &lt;AnimationState.h&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for Urho3D::AnimationTrack:</div>
+Collaboration diagram for Urho3D::AnimationStateTrack:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a01052.svg" width="644" height="235"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01065.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a77ac4018990860f48992c60a17a30f65"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77ac4018990860f48992c60a17a30f65"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00061.html#a77ac4018990860f48992c60a17a30f65">GetKeyFrameIndex</a> (float time, unsigned &amp;index) const </td></tr>
-<tr class="memdesc:a77ac4018990860f48992c60a17a30f65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return keyframe index based on time and previous index. <br/></td></tr>
-<tr class="separator:a77ac4018990860f48992c60a17a30f65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90736ec1a8af5b196d3d628ed97a7344"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a90736ec1a8af5b196d3d628ed97a7344"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00061.html#a90736ec1a8af5b196d3d628ed97a7344">AnimationStateTrack</a> ()</td></tr>
+<tr class="memdesc:a90736ec1a8af5b196d3d628ed97a7344"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with defaults. <br/></td></tr>
+<tr class="separator:a90736ec1a8af5b196d3d628ed97a7344"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a695b5c9eb46002395f302e259deb55d6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a695b5c9eb46002395f302e259deb55d6"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00061.html#a695b5c9eb46002395f302e259deb55d6">~AnimationStateTrack</a> ()</td></tr>
+<tr class="memdesc:a695b5c9eb46002395f302e259deb55d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
+<tr class="separator:a695b5c9eb46002395f302e259deb55d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:adf13e077a3086dde02d2970251fad9c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf13e077a3086dde02d2970251fad9c3"></a>
-<a class="el" href="a00336.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00061.html#adf13e077a3086dde02d2970251fad9c3">name_</a></td></tr>
-<tr class="memdesc:adf13e077a3086dde02d2970251fad9c3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00083.html" title="Bone in a skeleton.">Bone</a> name. <br/></td></tr>
-<tr class="separator:adf13e077a3086dde02d2970251fad9c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff37bb7241811f95f6051626f0719fe5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff37bb7241811f95f6051626f0719fe5"></a>
-<a class="el" href="a00337.html">StringHash</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00061.html#aff37bb7241811f95f6051626f0719fe5">nameHash_</a></td></tr>
-<tr class="memdesc:aff37bb7241811f95f6051626f0719fe5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00083.html" title="Bone in a skeleton.">Bone</a> name hash. <br/></td></tr>
-<tr class="separator:aff37bb7241811f95f6051626f0719fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f9f5ca1df8f9b8a0c4c380d536676d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f9f5ca1df8f9b8a0c4c380d536676d7"></a>
-unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00061.html#a6f9f5ca1df8f9b8a0c4c380d536676d7">channelMask_</a></td></tr>
-<tr class="memdesc:a6f9f5ca1df8f9b8a0c4c380d536676d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitmask of included data (position, rotation, scale.) <br/></td></tr>
-<tr class="separator:a6f9f5ca1df8f9b8a0c4c380d536676d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1725e29f143897214fce5a0e12ee8f03"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1725e29f143897214fce5a0e12ee8f03"></a>
-<a class="el" href="a00362.html">Vector</a>&lt; <a class="el" href="a00058.html">AnimationKeyFrame</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00061.html#a1725e29f143897214fce5a0e12ee8f03">keyFrames_</a></td></tr>
-<tr class="memdesc:a1725e29f143897214fce5a0e12ee8f03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyframes. <br/></td></tr>
-<tr class="separator:a1725e29f143897214fce5a0e12ee8f03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf732ffe05cff6d41714562d4fd07ff5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf732ffe05cff6d41714562d4fd07ff5"></a>
+const <a class="el" href="a00062.html">AnimationTrack</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00061.html#abf732ffe05cff6d41714562d4fd07ff5">track_</a></td></tr>
+<tr class="memdesc:abf732ffe05cff6d41714562d4fd07ff5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00055.html" title="Skeletal animation resource.">Animation</a> track. <br/></td></tr>
+<tr class="separator:abf732ffe05cff6d41714562d4fd07ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f29118b5268945e46f91d0ff5ada169"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f29118b5268945e46f91d0ff5ada169"></a>
+<a class="el" href="a00084.html">Bone</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00061.html#a9f29118b5268945e46f91d0ff5ada169">bone_</a></td></tr>
+<tr class="memdesc:a9f29118b5268945e46f91d0ff5ada169"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00084.html" title="Bone in a skeleton.">Bone</a> pointer. <br/></td></tr>
+<tr class="separator:a9f29118b5268945e46f91d0ff5ada169"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af92ca183a105c7fac624b3512cef154e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af92ca183a105c7fac624b3512cef154e"></a>
+<a class="el" href="a00376.html">WeakPtr</a>&lt; <a class="el" href="a00232.html">Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00061.html#af92ca183a105c7fac624b3512cef154e">node_</a></td></tr>
+<tr class="memdesc:af92ca183a105c7fac624b3512cef154e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00293.html" title="Root scene node, represents the whole scene.">Scene</a> node pointer. <br/></td></tr>
+<tr class="separator:af92ca183a105c7fac624b3512cef154e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea1c0e3e05120d2a40c8956e00dec491"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea1c0e3e05120d2a40c8956e00dec491"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00061.html#aea1c0e3e05120d2a40c8956e00dec491">weight_</a></td></tr>
+<tr class="memdesc:aea1c0e3e05120d2a40c8956e00dec491"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blending weight. <br/></td></tr>
+<tr class="separator:aea1c0e3e05120d2a40c8956e00dec491"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb327158f492d29ae60c4c0d979f5628"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb327158f492d29ae60c4c0d979f5628"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00061.html#aeb327158f492d29ae60c4c0d979f5628">keyFrame_</a></td></tr>
+<tr class="memdesc:aeb327158f492d29ae60c4c0d979f5628"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last key frame. <br/></td></tr>
+<tr class="separator:aeb327158f492d29ae60c4c0d979f5628"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Skeletal animation track, stores keyframes of a single bone. </p>
+<div class="textblock"><p>Animation instance per-track data. </p>
 </div><hr/>The documentation for this struct was generated from the following files:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/Animation.h</li>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/Animation.cpp</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/AnimationState.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/AnimationState.cpp</li>
 </ul>
 </div><!-- contents -->
