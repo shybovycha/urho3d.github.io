@@ -20,67 +20,116 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00273.html">RayOctreeQuery</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00273.html">RandomAccessIterator</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01175.html">List of all members</a>  </div>
+<a href="a00973.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::RayOctreeQuery Class Reference</div>  </div>
+<div class="title">Urho3D::RandomAccessIterator&lt; T &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Raycast octree query.  
+<p>Random access iterator.  
  <a href="a00273.html#details">More...</a></p>
 
-<p><code>#include &lt;OctreeQuery.h&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for Urho3D::RayOctreeQuery:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a01176.svg" width="414" height="376"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<p><code>#include &lt;VectorBase.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6d1faa4a6729eda2ae5866c005631988"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d1faa4a6729eda2ae5866c005631988"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00273.html#a6d1faa4a6729eda2ae5866c005631988">RayOctreeQuery</a> (<a class="el" href="a00264.html">PODVector</a>&lt; <a class="el" href="a00274.html">RayQueryResult</a> &gt; &amp;result, const <a class="el" href="a00272.html">Ray</a> &amp;ray, RayQueryLevel level=RAY_TRIANGLE, float maxDistance=M_INFINITY, unsigned char drawableFlags=DRAWABLE_ANY, unsigned viewMask=DEFAULT_VIEWMASK)</td></tr>
-<tr class="memdesc:a6d1faa4a6729eda2ae5866c005631988"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with ray and query parameters. <br/></td></tr>
-<tr class="separator:a6d1faa4a6729eda2ae5866c005631988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87ddcdfe745810275be2ce8f6d4b62c4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a87ddcdfe745810275be2ce8f6d4b62c4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00273.html#a87ddcdfe745810275be2ce8f6d4b62c4">RandomAccessIterator</a> ()</td></tr>
+<tr class="memdesc:a87ddcdfe745810275be2ce8f6d4b62c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
+<tr class="separator:a87ddcdfe745810275be2ce8f6d4b62c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38b1838969e0f962534f24dbcfe6899c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38b1838969e0f962534f24dbcfe6899c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00273.html#a38b1838969e0f962534f24dbcfe6899c">RandomAccessIterator</a> (T *ptr)</td></tr>
+<tr class="memdesc:a38b1838969e0f962534f24dbcfe6899c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with an object pointer. <br/></td></tr>
+<tr class="separator:a38b1838969e0f962534f24dbcfe6899c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad764c680827fcb584b5b83677666271f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad764c680827fcb584b5b83677666271f"></a>
+T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00273.html#ad764c680827fcb584b5b83677666271f">operator-&gt;</a> () const </td></tr>
+<tr class="memdesc:ad764c680827fcb584b5b83677666271f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Point to the object. <br/></td></tr>
+<tr class="separator:ad764c680827fcb584b5b83677666271f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5308ce300eef7ff39f29f3009a15b6f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af5308ce300eef7ff39f29f3009a15b6f"></a>
+T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00273.html#af5308ce300eef7ff39f29f3009a15b6f">operator*</a> () const </td></tr>
+<tr class="memdesc:af5308ce300eef7ff39f29f3009a15b6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dereference the object. <br/></td></tr>
+<tr class="separator:af5308ce300eef7ff39f29f3009a15b6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff5b8675e64f9c5f55bfd0f4c3db1b0b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff5b8675e64f9c5f55bfd0f4c3db1b0b"></a>
+<a class="el" href="a00273.html">RandomAccessIterator</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00273.html#aff5b8675e64f9c5f55bfd0f4c3db1b0b">operator++</a> ()</td></tr>
+<tr class="memdesc:aff5b8675e64f9c5f55bfd0f4c3db1b0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Preincrement the pointer. <br/></td></tr>
+<tr class="separator:aff5b8675e64f9c5f55bfd0f4c3db1b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a032f73813c7a823155984fbcea4e85fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a032f73813c7a823155984fbcea4e85fd"></a>
+<a class="el" href="a00273.html">RandomAccessIterator</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00273.html#a032f73813c7a823155984fbcea4e85fd">operator++</a> (int)</td></tr>
+<tr class="memdesc:a032f73813c7a823155984fbcea4e85fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Postincrement the pointer. <br/></td></tr>
+<tr class="separator:a032f73813c7a823155984fbcea4e85fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31207ed3deae2821011a03beced72cf6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31207ed3deae2821011a03beced72cf6"></a>
+<a class="el" href="a00273.html">RandomAccessIterator</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00273.html#a31207ed3deae2821011a03beced72cf6">operator--</a> ()</td></tr>
+<tr class="memdesc:a31207ed3deae2821011a03beced72cf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predecrement the pointer. <br/></td></tr>
+<tr class="separator:a31207ed3deae2821011a03beced72cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef37245d363e18ea556578963a688b2c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef37245d363e18ea556578963a688b2c"></a>
+<a class="el" href="a00273.html">RandomAccessIterator</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00273.html#aef37245d363e18ea556578963a688b2c">operator--</a> (int)</td></tr>
+<tr class="memdesc:aef37245d363e18ea556578963a688b2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Postdecrement the pointer. <br/></td></tr>
+<tr class="separator:aef37245d363e18ea556578963a688b2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49a997d9a3287153386d19cfa602cbbd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a49a997d9a3287153386d19cfa602cbbd"></a>
+<a class="el" href="a00273.html">RandomAccessIterator</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00273.html#a49a997d9a3287153386d19cfa602cbbd">operator+=</a> (int value)</td></tr>
+<tr class="memdesc:a49a997d9a3287153386d19cfa602cbbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an offset to the pointer. <br/></td></tr>
+<tr class="separator:a49a997d9a3287153386d19cfa602cbbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9764ce2e1555c21dca2cd07d0da6255b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9764ce2e1555c21dca2cd07d0da6255b"></a>
+<a class="el" href="a00273.html">RandomAccessIterator</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00273.html#a9764ce2e1555c21dca2cd07d0da6255b">operator-=</a> (int value)</td></tr>
+<tr class="memdesc:a9764ce2e1555c21dca2cd07d0da6255b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtract an offset from the pointer. <br/></td></tr>
+<tr class="separator:a9764ce2e1555c21dca2cd07d0da6255b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa89ea6d08c8ed6b63e62e8165616f1d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa89ea6d08c8ed6b63e62e8165616f1d7"></a>
+<a class="el" href="a00273.html">RandomAccessIterator</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00273.html#aa89ea6d08c8ed6b63e62e8165616f1d7">operator+</a> (int value) const </td></tr>
+<tr class="memdesc:aa89ea6d08c8ed6b63e62e8165616f1d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an offset to the pointer. <br/></td></tr>
+<tr class="separator:aa89ea6d08c8ed6b63e62e8165616f1d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05a467021e9e0d4ac387ddc7fd8886be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05a467021e9e0d4ac387ddc7fd8886be"></a>
+<a class="el" href="a00273.html">RandomAccessIterator</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00273.html#a05a467021e9e0d4ac387ddc7fd8886be">operator-</a> (int value) const </td></tr>
+<tr class="memdesc:a05a467021e9e0d4ac387ddc7fd8886be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtract an offset from the pointer. <br/></td></tr>
+<tr class="separator:a05a467021e9e0d4ac387ddc7fd8886be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71da3f4d149ab756f5e4639214ffb51d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a71da3f4d149ab756f5e4639214ffb51d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00273.html#a71da3f4d149ab756f5e4639214ffb51d">operator-</a> (const <a class="el" href="a00273.html">RandomAccessIterator</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:a71da3f4d149ab756f5e4639214ffb51d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate offset to another iterator. <br/></td></tr>
+<tr class="separator:a71da3f4d149ab756f5e4639214ffb51d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b6654b62754e0b069b536e2ff4b2e49"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b6654b62754e0b069b536e2ff4b2e49"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00273.html#a1b6654b62754e0b069b536e2ff4b2e49">operator==</a> (const <a class="el" href="a00273.html">RandomAccessIterator</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:a1b6654b62754e0b069b536e2ff4b2e49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for equality with another iterator. <br/></td></tr>
+<tr class="separator:a1b6654b62754e0b069b536e2ff4b2e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab54b6f626e26fc714e0367a8eb67c96a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab54b6f626e26fc714e0367a8eb67c96a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00273.html#ab54b6f626e26fc714e0367a8eb67c96a">operator!=</a> (const <a class="el" href="a00273.html">RandomAccessIterator</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:ab54b6f626e26fc714e0367a8eb67c96a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for inequality with another iterator. <br/></td></tr>
+<tr class="separator:ab54b6f626e26fc714e0367a8eb67c96a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acceefd541fd23fea71153e68eaa31641"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acceefd541fd23fea71153e68eaa31641"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00273.html#acceefd541fd23fea71153e68eaa31641">operator&lt;</a> (const <a class="el" href="a00273.html">RandomAccessIterator</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:acceefd541fd23fea71153e68eaa31641"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for less than with another iterator. <br/></td></tr>
+<tr class="separator:acceefd541fd23fea71153e68eaa31641"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5af50d5a4277067ca5beead082ea3a18"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5af50d5a4277067ca5beead082ea3a18"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00273.html#a5af50d5a4277067ca5beead082ea3a18">operator&gt;</a> (const <a class="el" href="a00273.html">RandomAccessIterator</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:a5af50d5a4277067ca5beead082ea3a18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for greater than with another iterator. <br/></td></tr>
+<tr class="separator:a5af50d5a4277067ca5beead082ea3a18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabf00d472b8ea0e065c0a6d107ac10a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aabf00d472b8ea0e065c0a6d107ac10a0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00273.html#aabf00d472b8ea0e065c0a6d107ac10a0">operator&lt;=</a> (const <a class="el" href="a00273.html">RandomAccessIterator</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:aabf00d472b8ea0e065c0a6d107ac10a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for less than or equal with another iterator. <br/></td></tr>
+<tr class="separator:aabf00d472b8ea0e065c0a6d107ac10a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a26f19436825720edf305e0c922a840"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5a26f19436825720edf305e0c922a840"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00273.html#a5a26f19436825720edf305e0c922a840">operator&gt;=</a> (const <a class="el" href="a00273.html">RandomAccessIterator</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:a5a26f19436825720edf305e0c922a840"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for greater than or equal with another iterator. <br/></td></tr>
+<tr class="separator:a5a26f19436825720edf305e0c922a840"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a11a87820ec71778e34317f2954bd3da1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11a87820ec71778e34317f2954bd3da1"></a>
-<a class="el" href="a00264.html">PODVector</a>&lt; <a class="el" href="a00274.html">RayQueryResult</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00273.html#a11a87820ec71778e34317f2954bd3da1">result_</a></td></tr>
-<tr class="memdesc:a11a87820ec71778e34317f2954bd3da1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result vector reference. <br/></td></tr>
-<tr class="separator:a11a87820ec71778e34317f2954bd3da1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a433178c8a9a6c707e3e49b4b5b9cc931"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a433178c8a9a6c707e3e49b4b5b9cc931"></a>
-<a class="el" href="a00272.html">Ray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00273.html#a433178c8a9a6c707e3e49b4b5b9cc931">ray_</a></td></tr>
-<tr class="memdesc:a433178c8a9a6c707e3e49b4b5b9cc931"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00272.html" title="Infinite straight line in three-dimensional space.">Ray</a>. <br/></td></tr>
-<tr class="separator:a433178c8a9a6c707e3e49b4b5b9cc931"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbaa5aaef647e41f74b863c2b3ee4208"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abbaa5aaef647e41f74b863c2b3ee4208"></a>
-unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00273.html#abbaa5aaef647e41f74b863c2b3ee4208">drawableFlags_</a></td></tr>
-<tr class="memdesc:abbaa5aaef647e41f74b863c2b3ee4208"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00147.html" title="Base class for visible components.">Drawable</a> flags to include. <br/></td></tr>
-<tr class="separator:abbaa5aaef647e41f74b863c2b3ee4208"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a960e05dc69a509ef726fffe9137ccd5d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a960e05dc69a509ef726fffe9137ccd5d"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00273.html#a960e05dc69a509ef726fffe9137ccd5d">viewMask_</a></td></tr>
-<tr class="memdesc:a960e05dc69a509ef726fffe9137ccd5d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00147.html" title="Base class for visible components.">Drawable</a> layers to include. <br/></td></tr>
-<tr class="separator:a960e05dc69a509ef726fffe9137ccd5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa4a7c030a345dc79ee04d44f3561302"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa4a7c030a345dc79ee04d44f3561302"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00273.html#afa4a7c030a345dc79ee04d44f3561302">maxDistance_</a></td></tr>
-<tr class="memdesc:afa4a7c030a345dc79ee04d44f3561302"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum ray distance. <br/></td></tr>
-<tr class="separator:afa4a7c030a345dc79ee04d44f3561302"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46e82454603d2d2c15f5a06923419a37"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46e82454603d2d2c15f5a06923419a37"></a>
-RayQueryLevel&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00273.html#a46e82454603d2d2c15f5a06923419a37">level_</a></td></tr>
-<tr class="memdesc:a46e82454603d2d2c15f5a06923419a37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raycast detail level. <br/></td></tr>
-<tr class="separator:a46e82454603d2d2c15f5a06923419a37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2afc54b22edd38e5a7e3d82a0307d1ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2afc54b22edd38e5a7e3d82a0307d1ab"></a>
+T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00273.html#a2afc54b22edd38e5a7e3d82a0307d1ab">ptr_</a></td></tr>
+<tr class="memdesc:a2afc54b22edd38e5a7e3d82a0307d1ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer. <br/></td></tr>
+<tr class="separator:a2afc54b22edd38e5a7e3d82a0307d1ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Raycast octree query. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/OctreeQuery.h</li>
+<div class="textblock"><h3>template&lt;class T&gt;<br/>
+struct Urho3D::RandomAccessIterator&lt; T &gt;</h3>
+
+<p>Random access iterator. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Container/VectorBase.h</li>
 </ul>
 </div><!-- contents -->

@@ -20,168 +20,135 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00326.html">Sphere</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00326.html">SoundStream</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01355.html">List of all members</a>  </div>
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="a00874.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::Sphere Class Reference</div>  </div>
+<div class="title">Urho3D::SoundStream Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Sphere in three-dimensional space.  
+<p>Base class for sound streams.  
  <a href="a00326.html#details">More...</a></p>
 
-<p><code>#include &lt;Sphere.h&gt;</code></p>
+<p><code>#include &lt;SoundStream.h&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for Urho3D::Sphere:</div>
+Inheritance diagram for Urho3D::SoundStream:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a01356.svg" width="224" height="246"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00875.svg" width="488" height="195"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for Urho3D::SoundStream:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00876.svg" width="179" height="216"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1e0816e008011eb7e006ccfa845b2e46"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e0816e008011eb7e006ccfa845b2e46"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a1e0816e008011eb7e006ccfa845b2e46">Sphere</a> ()</td></tr>
-<tr class="memdesc:a1e0816e008011eb7e006ccfa845b2e46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct undefined. <br/></td></tr>
-<tr class="separator:a1e0816e008011eb7e006ccfa845b2e46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add0241cc80c6bf676182fd86065b5dd9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add0241cc80c6bf676182fd86065b5dd9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#add0241cc80c6bf676182fd86065b5dd9">Sphere</a> (const <a class="el" href="a00326.html">Sphere</a> &amp;sphere)</td></tr>
-<tr class="memdesc:add0241cc80c6bf676182fd86065b5dd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy-construct from another sphere. <br/></td></tr>
-<tr class="separator:add0241cc80c6bf676182fd86065b5dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7103b3daf655e0243658df2e413ffd5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac7103b3daf655e0243658df2e413ffd5"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#ac7103b3daf655e0243658df2e413ffd5">Sphere</a> (const <a class="el" href="a00365.html">Vector3</a> &amp;center, float radius)</td></tr>
-<tr class="memdesc:ac7103b3daf655e0243658df2e413ffd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from center and radius. <br/></td></tr>
-<tr class="separator:ac7103b3daf655e0243658df2e413ffd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a6507c315906c22b18b4c991d4e0427"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a6507c315906c22b18b4c991d4e0427"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a6a6507c315906c22b18b4c991d4e0427">Sphere</a> (const <a class="el" href="a00365.html">Vector3</a> *vertices, unsigned count)</td></tr>
-<tr class="memdesc:a6a6507c315906c22b18b4c991d4e0427"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from an array of vertices. <br/></td></tr>
-<tr class="separator:a6a6507c315906c22b18b4c991d4e0427"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20df45cc6979726d4535f6cb5f8c5f2d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20df45cc6979726d4535f6cb5f8c5f2d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a20df45cc6979726d4535f6cb5f8c5f2d">Sphere</a> (const <a class="el" href="a00086.html">BoundingBox</a> &amp;box)</td></tr>
-<tr class="memdesc:a20df45cc6979726d4535f6cb5f8c5f2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a bounding box. <br/></td></tr>
-<tr class="separator:a20df45cc6979726d4535f6cb5f8c5f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c0961e80cee0e23063bd0b534a53556"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9c0961e80cee0e23063bd0b534a53556"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a9c0961e80cee0e23063bd0b534a53556">Sphere</a> (const <a class="el" href="a00166.html">Frustum</a> &amp;frustum)</td></tr>
-<tr class="memdesc:a9c0961e80cee0e23063bd0b534a53556"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a frustum. <br/></td></tr>
-<tr class="separator:a9c0961e80cee0e23063bd0b534a53556"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade91e8c08b0cb5478a9ded4f0ce13c87"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade91e8c08b0cb5478a9ded4f0ce13c87"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#ade91e8c08b0cb5478a9ded4f0ce13c87">Sphere</a> (const <a class="el" href="a00266.html">Polyhedron</a> &amp;poly)</td></tr>
-<tr class="memdesc:ade91e8c08b0cb5478a9ded4f0ce13c87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a polyhedron. <br/></td></tr>
-<tr class="separator:ade91e8c08b0cb5478a9ded4f0ce13c87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a254838bc3db33b19b5ad8a3bded3e4f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a254838bc3db33b19b5ad8a3bded3e4f7"></a>
-<a class="el" href="a00326.html">Sphere</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a254838bc3db33b19b5ad8a3bded3e4f7">operator=</a> (const <a class="el" href="a00326.html">Sphere</a> &amp;rhs)</td></tr>
-<tr class="memdesc:a254838bc3db33b19b5ad8a3bded3e4f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign from another sphere. <br/></td></tr>
-<tr class="separator:a254838bc3db33b19b5ad8a3bded3e4f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53e982ee4c7f4d7c998f142b6d736de4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53e982ee4c7f4d7c998f142b6d736de4"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a53e982ee4c7f4d7c998f142b6d736de4">operator==</a> (const <a class="el" href="a00326.html">Sphere</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:a53e982ee4c7f4d7c998f142b6d736de4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for equality with another sphere. <br/></td></tr>
-<tr class="separator:a53e982ee4c7f4d7c998f142b6d736de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a689605300a79246ac610a16f2e1a52f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a689605300a79246ac610a16f2e1a52f8"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a689605300a79246ac610a16f2e1a52f8">operator!=</a> (const <a class="el" href="a00326.html">Sphere</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:a689605300a79246ac610a16f2e1a52f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for inequality with another sphere. <br/></td></tr>
-<tr class="separator:a689605300a79246ac610a16f2e1a52f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a605a559ba1b2eec5e65d17a39b849b60"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a605a559ba1b2eec5e65d17a39b849b60"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a605a559ba1b2eec5e65d17a39b849b60">Define</a> (const <a class="el" href="a00326.html">Sphere</a> &amp;sphere)</td></tr>
-<tr class="memdesc:a605a559ba1b2eec5e65d17a39b849b60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define from another sphere. <br/></td></tr>
-<tr class="separator:a605a559ba1b2eec5e65d17a39b849b60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b245e02d04bf7109c1f61c8f9c280d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b245e02d04bf7109c1f61c8f9c280d7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a4b245e02d04bf7109c1f61c8f9c280d7">Define</a> (const <a class="el" href="a00365.html">Vector3</a> &amp;center, float radius)</td></tr>
-<tr class="memdesc:a4b245e02d04bf7109c1f61c8f9c280d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define from center and radius. <br/></td></tr>
-<tr class="separator:a4b245e02d04bf7109c1f61c8f9c280d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6de05290d5055a082e3d9b43655336f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6de05290d5055a082e3d9b43655336f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#ad6de05290d5055a082e3d9b43655336f">Define</a> (const <a class="el" href="a00365.html">Vector3</a> *vertices, unsigned count)</td></tr>
-<tr class="memdesc:ad6de05290d5055a082e3d9b43655336f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define from an array of vertices. <br/></td></tr>
-<tr class="separator:ad6de05290d5055a082e3d9b43655336f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a874cb74998723002fcffbc591313de5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a874cb74998723002fcffbc591313de5f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a874cb74998723002fcffbc591313de5f">Define</a> (const <a class="el" href="a00086.html">BoundingBox</a> &amp;box)</td></tr>
-<tr class="memdesc:a874cb74998723002fcffbc591313de5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define from a bounding box. <br/></td></tr>
-<tr class="separator:a874cb74998723002fcffbc591313de5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1077254c9dabc3cfb7953719068fd369"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1077254c9dabc3cfb7953719068fd369"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a1077254c9dabc3cfb7953719068fd369">Define</a> (const <a class="el" href="a00166.html">Frustum</a> &amp;frustum)</td></tr>
-<tr class="memdesc:a1077254c9dabc3cfb7953719068fd369"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define from a frustum. <br/></td></tr>
-<tr class="separator:a1077254c9dabc3cfb7953719068fd369"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0412fa9e0c6c54d3ece0f6f7c9d2dcb9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0412fa9e0c6c54d3ece0f6f7c9d2dcb9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a0412fa9e0c6c54d3ece0f6f7c9d2dcb9">Define</a> (const <a class="el" href="a00266.html">Polyhedron</a> &amp;poly)</td></tr>
-<tr class="memdesc:a0412fa9e0c6c54d3ece0f6f7c9d2dcb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define from a polyhedron. <br/></td></tr>
-<tr class="separator:a0412fa9e0c6c54d3ece0f6f7c9d2dcb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b5d4b9d99b9b4b158ca504a4e7a5b93"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b5d4b9d99b9b4b158ca504a4e7a5b93"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a7b5d4b9d99b9b4b158ca504a4e7a5b93">Merge</a> (const <a class="el" href="a00365.html">Vector3</a> &amp;point)</td></tr>
-<tr class="memdesc:a7b5d4b9d99b9b4b158ca504a4e7a5b93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Merge a point. <br/></td></tr>
-<tr class="separator:a7b5d4b9d99b9b4b158ca504a4e7a5b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a486bfd22bdd03c4e3f2a32a82b7e1553"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a486bfd22bdd03c4e3f2a32a82b7e1553"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a486bfd22bdd03c4e3f2a32a82b7e1553">Merge</a> (const <a class="el" href="a00365.html">Vector3</a> *vertices, unsigned count)</td></tr>
-<tr class="memdesc:a486bfd22bdd03c4e3f2a32a82b7e1553"><td class="mdescLeft">&#160;</td><td class="mdescRight">Merge an array of vertices. <br/></td></tr>
-<tr class="separator:a486bfd22bdd03c4e3f2a32a82b7e1553"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97d624c4eb77e300556222e5e5898821"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97d624c4eb77e300556222e5e5898821"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a97d624c4eb77e300556222e5e5898821">Merge</a> (const <a class="el" href="a00086.html">BoundingBox</a> &amp;box)</td></tr>
-<tr class="memdesc:a97d624c4eb77e300556222e5e5898821"><td class="mdescLeft">&#160;</td><td class="mdescRight">Merge a bounding box. <br/></td></tr>
-<tr class="separator:a97d624c4eb77e300556222e5e5898821"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a790a7e9c6d43465a1ed5f9115daf805d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a790a7e9c6d43465a1ed5f9115daf805d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a790a7e9c6d43465a1ed5f9115daf805d">Merge</a> (const <a class="el" href="a00166.html">Frustum</a> &amp;frustum)</td></tr>
-<tr class="memdesc:a790a7e9c6d43465a1ed5f9115daf805d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Merge a frustum. <br/></td></tr>
-<tr class="separator:a790a7e9c6d43465a1ed5f9115daf805d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86aa6ab6cbb630ebdf16ee8c4ac834f9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86aa6ab6cbb630ebdf16ee8c4ac834f9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a86aa6ab6cbb630ebdf16ee8c4ac834f9">Merge</a> (const <a class="el" href="a00266.html">Polyhedron</a> &amp;poly)</td></tr>
-<tr class="memdesc:a86aa6ab6cbb630ebdf16ee8c4ac834f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Merge a polyhedron. <br/></td></tr>
-<tr class="separator:a86aa6ab6cbb630ebdf16ee8c4ac834f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7420edaf1d8d1850a794c3f885c60a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac7420edaf1d8d1850a794c3f885c60a6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#ac7420edaf1d8d1850a794c3f885c60a6">Merge</a> (const <a class="el" href="a00326.html">Sphere</a> &amp;sphere)</td></tr>
-<tr class="memdesc:ac7420edaf1d8d1850a794c3f885c60a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Merge a sphere. <br/></td></tr>
-<tr class="separator:ac7420edaf1d8d1850a794c3f885c60a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6437c8b116f63a6d3fcbf996a49a34b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6437c8b116f63a6d3fcbf996a49a34b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#ac6437c8b116f63a6d3fcbf996a49a34b">Clear</a> ()</td></tr>
-<tr class="memdesc:ac6437c8b116f63a6d3fcbf996a49a34b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear to undefined state. <br/></td></tr>
-<tr class="separator:ac6437c8b116f63a6d3fcbf996a49a34b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ec9fa86b2e8630a7d285f4d9eee6227"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ec9fa86b2e8630a7d285f4d9eee6227"></a>
-Intersection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a8ec9fa86b2e8630a7d285f4d9eee6227">IsInside</a> (const <a class="el" href="a00365.html">Vector3</a> &amp;point) const </td></tr>
-<tr class="memdesc:a8ec9fa86b2e8630a7d285f4d9eee6227"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if a point is inside. <br/></td></tr>
-<tr class="separator:a8ec9fa86b2e8630a7d285f4d9eee6227"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0fefc454ea18c44b5f08510fb12fded"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab0fefc454ea18c44b5f08510fb12fded"></a>
-Intersection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#ab0fefc454ea18c44b5f08510fb12fded">IsInside</a> (const <a class="el" href="a00326.html">Sphere</a> &amp;sphere) const </td></tr>
-<tr class="memdesc:ab0fefc454ea18c44b5f08510fb12fded"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if another sphere is inside, outside or intersects. <br/></td></tr>
-<tr class="separator:ab0fefc454ea18c44b5f08510fb12fded"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9bdab6691b5614918d332f2ab4b8110"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9bdab6691b5614918d332f2ab4b8110"></a>
-Intersection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#af9bdab6691b5614918d332f2ab4b8110">IsInsideFast</a> (const <a class="el" href="a00326.html">Sphere</a> &amp;sphere) const </td></tr>
-<tr class="memdesc:af9bdab6691b5614918d332f2ab4b8110"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if another sphere is (partially) inside or outside. <br/></td></tr>
-<tr class="separator:af9bdab6691b5614918d332f2ab4b8110"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64b3945246b85e7adc0825c62f7c6f06"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a64b3945246b85e7adc0825c62f7c6f06"></a>
-Intersection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a64b3945246b85e7adc0825c62f7c6f06">IsInside</a> (const <a class="el" href="a00086.html">BoundingBox</a> &amp;box) const </td></tr>
-<tr class="memdesc:a64b3945246b85e7adc0825c62f7c6f06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if a bounding box is inside, outside or intersects. <br/></td></tr>
-<tr class="separator:a64b3945246b85e7adc0825c62f7c6f06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b369dcff2f32bc523fa550acef38d58"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b369dcff2f32bc523fa550acef38d58"></a>
-Intersection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a9b369dcff2f32bc523fa550acef38d58">IsInsideFast</a> (const <a class="el" href="a00086.html">BoundingBox</a> &amp;box) const </td></tr>
-<tr class="memdesc:a9b369dcff2f32bc523fa550acef38d58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if a bounding box is (partially) inside or outside. <br/></td></tr>
-<tr class="separator:a9b369dcff2f32bc523fa550acef38d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7bb41a663363888183521b7f73e5630a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7bb41a663363888183521b7f73e5630a"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a7bb41a663363888183521b7f73e5630a">Distance</a> (const <a class="el" href="a00365.html">Vector3</a> &amp;point) const </td></tr>
-<tr class="memdesc:a7bb41a663363888183521b7f73e5630a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return distance of a point to the surface, or 0 if inside. <br/></td></tr>
-<tr class="separator:a7bb41a663363888183521b7f73e5630a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3d389af2fdebf8e005dcc54def92001"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af3d389af2fdebf8e005dcc54def92001"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#af3d389af2fdebf8e005dcc54def92001">SoundStream</a> ()</td></tr>
+<tr class="memdesc:af3d389af2fdebf8e005dcc54def92001"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
+<tr class="separator:af3d389af2fdebf8e005dcc54def92001"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8f0f699b20cf7fae917c24c7a89a083"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad8f0f699b20cf7fae917c24c7a89a083"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#ad8f0f699b20cf7fae917c24c7a89a083">~SoundStream</a> ()</td></tr>
+<tr class="memdesc:ad8f0f699b20cf7fae917c24c7a89a083"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
+<tr class="separator:ad8f0f699b20cf7fae917c24c7a89a083"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d87ae1420d6fc6f0b7d69fe3efebce2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d87ae1420d6fc6f0b7d69fe3efebce2"></a>
+virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a7d87ae1420d6fc6f0b7d69fe3efebce2">GetData</a> (signed char *dest, unsigned numBytes)=0</td></tr>
+<tr class="memdesc:a7d87ae1420d6fc6f0b7d69fe3efebce2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Produce sound data into destination. Return number of bytes produced. Called by <a class="el" href="a00324.html" title="Sound source component with stereo position.">SoundSource</a> from the mixing thread. <br/></td></tr>
+<tr class="separator:a7d87ae1420d6fc6f0b7d69fe3efebce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7afb45af3b57d89b188f6035b1861f44"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7afb45af3b57d89b188f6035b1861f44"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a7afb45af3b57d89b188f6035b1861f44">SetFormat</a> (unsigned frequency, bool sixteenBit, bool stereo)</td></tr>
+<tr class="memdesc:a7afb45af3b57d89b188f6035b1861f44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set sound data format. <br/></td></tr>
+<tr class="separator:a7afb45af3b57d89b188f6035b1861f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebcd0f3bd10ee0259b5ec289683e2a61"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aebcd0f3bd10ee0259b5ec289683e2a61"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#aebcd0f3bd10ee0259b5ec289683e2a61">SetStopAtEnd</a> (bool enable)</td></tr>
+<tr class="memdesc:aebcd0f3bd10ee0259b5ec289683e2a61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether playback should stop when no more data. Default false. <br/></td></tr>
+<tr class="separator:aebcd0f3bd10ee0259b5ec289683e2a61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e97e377984753ce02aa44ba9c0c1307"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e97e377984753ce02aa44ba9c0c1307"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a9e97e377984753ce02aa44ba9c0c1307">GetSampleSize</a> () const </td></tr>
+<tr class="memdesc:a9e97e377984753ce02aa44ba9c0c1307"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return sample size. <br/></td></tr>
+<tr class="separator:a9e97e377984753ce02aa44ba9c0c1307"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a051cbd07a9b45c43f33e27d9e043b37f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a051cbd07a9b45c43f33e27d9e043b37f"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a051cbd07a9b45c43f33e27d9e043b37f">GetFrequency</a> () const </td></tr>
+<tr class="memdesc:a051cbd07a9b45c43f33e27d9e043b37f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return default frequency as a float. <br/></td></tr>
+<tr class="separator:a051cbd07a9b45c43f33e27d9e043b37f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada66a010a4ac084eaf17b7b9766aea21"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada66a010a4ac084eaf17b7b9766aea21"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#ada66a010a4ac084eaf17b7b9766aea21">GetIntFrequency</a> () const </td></tr>
+<tr class="memdesc:ada66a010a4ac084eaf17b7b9766aea21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return default frequency as an integer. <br/></td></tr>
+<tr class="separator:ada66a010a4ac084eaf17b7b9766aea21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af53918cbbc4c0d8fc5ba5e0cc71f1385"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af53918cbbc4c0d8fc5ba5e0cc71f1385"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#af53918cbbc4c0d8fc5ba5e0cc71f1385">GetStopAtEnd</a> () const </td></tr>
+<tr class="memdesc:af53918cbbc4c0d8fc5ba5e0cc71f1385"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether playback should stop when no more data. <br/></td></tr>
+<tr class="separator:af53918cbbc4c0d8fc5ba5e0cc71f1385"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b9231161f50a677afa2c612b44232fe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b9231161f50a677afa2c612b44232fe"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a2b9231161f50a677afa2c612b44232fe">IsSixteenBit</a> () const </td></tr>
+<tr class="memdesc:a2b9231161f50a677afa2c612b44232fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether data is sixteen bit. <br/></td></tr>
+<tr class="separator:a2b9231161f50a677afa2c612b44232fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a626f2799fb5c4dfb7f738e4e15e93c9d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a626f2799fb5c4dfb7f738e4e15e93c9d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a626f2799fb5c4dfb7f738e4e15e93c9d">IsStereo</a> () const </td></tr>
+<tr class="memdesc:a626f2799fb5c4dfb7f738e4e15e93c9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether data is stereo. <br/></td></tr>
+<tr class="separator:a626f2799fb5c4dfb7f738e4e15e93c9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_a00280"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00280')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="a00280.html">Urho3D::RefCounted</a></td></tr>
+<tr class="memitem:aad6e2ac9e97ca71b28c47248a9aad9b9 inherit pub_methods_a00280"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad6e2ac9e97ca71b28c47248a9aad9b9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00280.html#aad6e2ac9e97ca71b28c47248a9aad9b9">RefCounted</a> ()</td></tr>
+<tr class="memdesc:aad6e2ac9e97ca71b28c47248a9aad9b9 inherit pub_methods_a00280"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. Allocate the reference count structure and set an initial self weak reference. <br/></td></tr>
+<tr class="separator:aad6e2ac9e97ca71b28c47248a9aad9b9 inherit pub_methods_a00280"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1f332b55c08fd702f2c7ebb18e42a90 inherit pub_methods_a00280"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1f332b55c08fd702f2c7ebb18e42a90"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00280.html#aa1f332b55c08fd702f2c7ebb18e42a90">~RefCounted</a> ()</td></tr>
+<tr class="memdesc:aa1f332b55c08fd702f2c7ebb18e42a90 inherit pub_methods_a00280"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. Mark as expired and also delete the reference count structure if no outside weak references exist. <br/></td></tr>
+<tr class="separator:aa1f332b55c08fd702f2c7ebb18e42a90 inherit pub_methods_a00280"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d857f439bb5a7935199a8e4fdb8f2c8 inherit pub_methods_a00280"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d857f439bb5a7935199a8e4fdb8f2c8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00280.html#a0d857f439bb5a7935199a8e4fdb8f2c8">AddRef</a> ()</td></tr>
+<tr class="memdesc:a0d857f439bb5a7935199a8e4fdb8f2c8 inherit pub_methods_a00280"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment reference count. Can also be called outside of a <a class="el" href="a00316.html" title="Shared pointer template class with intrusive reference counting.">SharedPtr</a> for traditional reference counting. <br/></td></tr>
+<tr class="separator:a0d857f439bb5a7935199a8e4fdb8f2c8 inherit pub_methods_a00280"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59e95fecbcbc560f81f0bdd52306cc1d inherit pub_methods_a00280"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59e95fecbcbc560f81f0bdd52306cc1d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00280.html#a59e95fecbcbc560f81f0bdd52306cc1d">ReleaseRef</a> ()</td></tr>
+<tr class="memdesc:a59e95fecbcbc560f81f0bdd52306cc1d inherit pub_methods_a00280"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrement reference count and delete self if no more references. Can also be called outside of a <a class="el" href="a00316.html" title="Shared pointer template class with intrusive reference counting.">SharedPtr</a> for traditional reference counting. <br/></td></tr>
+<tr class="separator:a59e95fecbcbc560f81f0bdd52306cc1d inherit pub_methods_a00280"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5ac3cb7e5f64c056351e15d3a30b4ba inherit pub_methods_a00280"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5ac3cb7e5f64c056351e15d3a30b4ba"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00280.html#ad5ac3cb7e5f64c056351e15d3a30b4ba">Refs</a> () const </td></tr>
+<tr class="memdesc:ad5ac3cb7e5f64c056351e15d3a30b4ba inherit pub_methods_a00280"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return reference count. <br/></td></tr>
+<tr class="separator:ad5ac3cb7e5f64c056351e15d3a30b4ba inherit pub_methods_a00280"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab05087f4c487de02faed7411bbcf9df1 inherit pub_methods_a00280"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab05087f4c487de02faed7411bbcf9df1"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00280.html#ab05087f4c487de02faed7411bbcf9df1">WeakRefs</a> () const </td></tr>
+<tr class="memdesc:ab05087f4c487de02faed7411bbcf9df1 inherit pub_methods_a00280"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return weak reference count. <br/></td></tr>
+<tr class="separator:ab05087f4c487de02faed7411bbcf9df1 inherit pub_methods_a00280"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eb5281d7e6cfd7e729ae0d07ca0da92 inherit pub_methods_a00280"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0eb5281d7e6cfd7e729ae0d07ca0da92"></a>
+<a class="el" href="a00279.html">RefCount</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00280.html#a0eb5281d7e6cfd7e729ae0d07ca0da92">RefCountPtr</a> ()</td></tr>
+<tr class="memdesc:a0eb5281d7e6cfd7e729ae0d07ca0da92 inherit pub_methods_a00280"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return pointer to the reference count structure. <br/></td></tr>
+<tr class="separator:a0eb5281d7e6cfd7e729ae0d07ca0da92 inherit pub_methods_a00280"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:ac5d5f99064023816b297780fcab85109"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5d5f99064023816b297780fcab85109"></a>
-<a class="el" href="a00365.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#ac5d5f99064023816b297780fcab85109">center_</a></td></tr>
-<tr class="memdesc:ac5d5f99064023816b297780fcab85109"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00326.html" title="Sphere in three-dimensional space.">Sphere</a> center. <br/></td></tr>
-<tr class="separator:ac5d5f99064023816b297780fcab85109"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97194148abd15ecea37c417304c1173c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97194148abd15ecea37c417304c1173c"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a97194148abd15ecea37c417304c1173c">radius_</a></td></tr>
-<tr class="memdesc:a97194148abd15ecea37c417304c1173c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00326.html" title="Sphere in three-dimensional space.">Sphere</a> radius. <br/></td></tr>
-<tr class="separator:a97194148abd15ecea37c417304c1173c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09d6bdb1bc6377bd9b7bf46a792d9a30"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a09d6bdb1bc6377bd9b7bf46a792d9a30"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a09d6bdb1bc6377bd9b7bf46a792d9a30">defined_</a></td></tr>
-<tr class="memdesc:a09d6bdb1bc6377bd9b7bf46a792d9a30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defined flag. <br/></td></tr>
-<tr class="separator:a09d6bdb1bc6377bd9b7bf46a792d9a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a39b9946606bfd9e9f803f3d4adde7ed1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a39b9946606bfd9e9f803f3d4adde7ed1"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a39b9946606bfd9e9f803f3d4adde7ed1">frequency_</a></td></tr>
+<tr class="memdesc:a39b9946606bfd9e9f803f3d4adde7ed1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default frequency. <br/></td></tr>
+<tr class="separator:a39b9946606bfd9e9f803f3d4adde7ed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcf0fb843fe14d450edf904eb8e9f36b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abcf0fb843fe14d450edf904eb8e9f36b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#abcf0fb843fe14d450edf904eb8e9f36b">stopAtEnd_</a></td></tr>
+<tr class="memdesc:abcf0fb843fe14d450edf904eb8e9f36b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop when no more data flag. <br/></td></tr>
+<tr class="separator:abcf0fb843fe14d450edf904eb8e9f36b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48a52063b42992900bc66c30f081390e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a48a52063b42992900bc66c30f081390e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#a48a52063b42992900bc66c30f081390e">sixteenBit_</a></td></tr>
+<tr class="memdesc:a48a52063b42992900bc66c30f081390e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sixteen bit flag. <br/></td></tr>
+<tr class="separator:a48a52063b42992900bc66c30f081390e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abea28978297450df14fbcf1e3f49278c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abea28978297450df14fbcf1e3f49278c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00326.html#abea28978297450df14fbcf1e3f49278c">stereo_</a></td></tr>
+<tr class="memdesc:abea28978297450df14fbcf1e3f49278c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stereo flag. <br/></td></tr>
+<tr class="separator:abea28978297450df14fbcf1e3f49278c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Sphere in three-dimensional space. </p>
+<div class="textblock"><p>Base class for sound streams. </p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Math/Sphere.h</li>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Math/Sphere.cpp</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Audio/SoundStream.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Audio/SoundStream.cpp</li>
 </ul>
 </div><!-- contents -->

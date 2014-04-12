@@ -20,7 +20,7 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00215.html">Matrix4</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00215.html">Matrix3</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -29,216 +29,162 @@ title: Documentation
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
-<a href="a01341.html">List of all members</a>  </div>
+<a href="a01339.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::Matrix4 Class Reference</div>  </div>
+<div class="title">Urho3D::Matrix3 Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>4x4 matrix for arbitrary linear transforms including projection.  
+<p>3x3 matrix for rotation and scaling.  
  <a href="a00215.html#details">More...</a></p>
 
-<p><code>#include &lt;Matrix4.h&gt;</code></p>
+<p><code>#include &lt;Matrix3.h&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for Urho3D::Matrix4:</div>
+Collaboration diagram for Urho3D::Matrix3:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a01342.svg" width="220" height="46"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a01340.svg" width="220" height="46"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aec317947c911d29e85bfdcb5a8a1f7ec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec317947c911d29e85bfdcb5a8a1f7ec"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#aec317947c911d29e85bfdcb5a8a1f7ec">Matrix4</a> ()</td></tr>
-<tr class="memdesc:aec317947c911d29e85bfdcb5a8a1f7ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an identity matrix. <br/></td></tr>
-<tr class="separator:aec317947c911d29e85bfdcb5a8a1f7ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6322b4ceb00420c10ef2b4e1492a0f2f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6322b4ceb00420c10ef2b4e1492a0f2f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a6322b4ceb00420c10ef2b4e1492a0f2f">Matrix4</a> (const <a class="el" href="a00215.html">Matrix4</a> &amp;matrix)</td></tr>
-<tr class="memdesc:a6322b4ceb00420c10ef2b4e1492a0f2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy-construct from another matrix. <br/></td></tr>
-<tr class="separator:a6322b4ceb00420c10ef2b4e1492a0f2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad034330eab2f47e9394c8aee2e8c8664"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad034330eab2f47e9394c8aee2e8c8664"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#ad034330eab2f47e9394c8aee2e8c8664">Matrix4</a> (const <a class="el" href="a00213.html">Matrix3</a> &amp;matrix)</td></tr>
-<tr class="memdesc:ad034330eab2f47e9394c8aee2e8c8664"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy-cnstruct from a 3x3 matrix and set the extra elements to identity. <br/></td></tr>
-<tr class="separator:ad034330eab2f47e9394c8aee2e8c8664"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6d98a96f127be09ed71240a6405667d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6d98a96f127be09ed71240a6405667d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix4</b> (float v00, float v01, float v02, float v03, float v10, float v11, float v12, float v13, float v20, float v21, float v22, float v23, float v30, float v31, float v32, float v33)</td></tr>
-<tr class="separator:ad6d98a96f127be09ed71240a6405667d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab716d93abec58da4fcd8e6a1ae8b6c57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab716d93abec58da4fcd8e6a1ae8b6c57"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#ab716d93abec58da4fcd8e6a1ae8b6c57">Matrix4</a> (const float *data)</td></tr>
-<tr class="memdesc:ab716d93abec58da4fcd8e6a1ae8b6c57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a float array. <br/></td></tr>
-<tr class="separator:ab716d93abec58da4fcd8e6a1ae8b6c57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d170b817e2e54879389dce01b9827e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d170b817e2e54879389dce01b9827e0"></a>
-<a class="el" href="a00215.html">Matrix4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a1d170b817e2e54879389dce01b9827e0">operator=</a> (const <a class="el" href="a00215.html">Matrix4</a> &amp;rhs)</td></tr>
-<tr class="memdesc:a1d170b817e2e54879389dce01b9827e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign from another matrix. <br/></td></tr>
-<tr class="separator:a1d170b817e2e54879389dce01b9827e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5abbcb76be13d2d4b2d22c00871d6064"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5abbcb76be13d2d4b2d22c00871d6064"></a>
-<a class="el" href="a00215.html">Matrix4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a5abbcb76be13d2d4b2d22c00871d6064">operator=</a> (const <a class="el" href="a00213.html">Matrix3</a> &amp;rhs)</td></tr>
-<tr class="memdesc:a5abbcb76be13d2d4b2d22c00871d6064"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign from a 3x3 matrix. Set the extra elements to identity. <br/></td></tr>
-<tr class="separator:a5abbcb76be13d2d4b2d22c00871d6064"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04629ca016ad4cf727e3bc5f4533aaa1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04629ca016ad4cf727e3bc5f4533aaa1"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a04629ca016ad4cf727e3bc5f4533aaa1">operator==</a> (const <a class="el" href="a00215.html">Matrix4</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:a04629ca016ad4cf727e3bc5f4533aaa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for equality with another matrix without epsilon. <br/></td></tr>
-<tr class="separator:a04629ca016ad4cf727e3bc5f4533aaa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79300d5ff4999c4fdc83449f3a63b0c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a79300d5ff4999c4fdc83449f3a63b0c8"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a79300d5ff4999c4fdc83449f3a63b0c8">operator!=</a> (const <a class="el" href="a00215.html">Matrix4</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:a79300d5ff4999c4fdc83449f3a63b0c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for inequality with another matrix without epsilon. <br/></td></tr>
-<tr class="separator:a79300d5ff4999c4fdc83449f3a63b0c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3844ef844d3a821a9922486ebca99536"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3844ef844d3a821a9922486ebca99536"></a>
-<a class="el" href="a00365.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a3844ef844d3a821a9922486ebca99536">operator*</a> (const <a class="el" href="a00365.html">Vector3</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:a3844ef844d3a821a9922486ebca99536"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply a <a class="el" href="a00365.html" title="Three-dimensional vector.">Vector3</a> which is assumed to represent position. <br/></td></tr>
-<tr class="separator:a3844ef844d3a821a9922486ebca99536"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3f37271cbfe2c2ffedd2e707b16c5e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3f37271cbfe2c2ffedd2e707b16c5e1"></a>
-<a class="el" href="a00366.html">Vector4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#ae3f37271cbfe2c2ffedd2e707b16c5e1">operator*</a> (const <a class="el" href="a00366.html">Vector4</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:ae3f37271cbfe2c2ffedd2e707b16c5e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply a <a class="el" href="a00366.html" title="Four-dimensional vector.">Vector4</a>. <br/></td></tr>
-<tr class="separator:ae3f37271cbfe2c2ffedd2e707b16c5e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:accaa33a67dd6fc305bd2f42d724b19ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="accaa33a67dd6fc305bd2f42d724b19ed"></a>
-<a class="el" href="a00215.html">Matrix4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#accaa33a67dd6fc305bd2f42d724b19ed">operator+</a> (const <a class="el" href="a00215.html">Matrix4</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:accaa33a67dd6fc305bd2f42d724b19ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a matrix. <br/></td></tr>
-<tr class="separator:accaa33a67dd6fc305bd2f42d724b19ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1de12595a367317998e073dcbe288d82"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1de12595a367317998e073dcbe288d82"></a>
-<a class="el" href="a00215.html">Matrix4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a1de12595a367317998e073dcbe288d82">operator-</a> (const <a class="el" href="a00215.html">Matrix4</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:a1de12595a367317998e073dcbe288d82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtract a matrix. <br/></td></tr>
-<tr class="separator:a1de12595a367317998e073dcbe288d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a790f33d384473b532da77e3de811c838"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a790f33d384473b532da77e3de811c838"></a>
-<a class="el" href="a00215.html">Matrix4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a790f33d384473b532da77e3de811c838">operator*</a> (float rhs) const </td></tr>
-<tr class="memdesc:a790f33d384473b532da77e3de811c838"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply with a scalar. <br/></td></tr>
-<tr class="separator:a790f33d384473b532da77e3de811c838"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb12add092245ec1de2d6a26ab705758"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb12add092245ec1de2d6a26ab705758"></a>
-<a class="el" href="a00215.html">Matrix4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#afb12add092245ec1de2d6a26ab705758">operator*</a> (const <a class="el" href="a00215.html">Matrix4</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:afb12add092245ec1de2d6a26ab705758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply a matrix. <br/></td></tr>
-<tr class="separator:afb12add092245ec1de2d6a26ab705758"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f75cd8f83b116ec8d850358a9e23d7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f75cd8f83b116ec8d850358a9e23d7d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a9f75cd8f83b116ec8d850358a9e23d7d">SetTranslation</a> (const <a class="el" href="a00365.html">Vector3</a> &amp;translation)</td></tr>
-<tr class="memdesc:a9f75cd8f83b116ec8d850358a9e23d7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set translation elements. <br/></td></tr>
-<tr class="separator:a9f75cd8f83b116ec8d850358a9e23d7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e238216fb227dc8831eb577c426da70"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e238216fb227dc8831eb577c426da70"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a4e238216fb227dc8831eb577c426da70">SetRotation</a> (const <a class="el" href="a00213.html">Matrix3</a> &amp;rotation)</td></tr>
-<tr class="memdesc:a4e238216fb227dc8831eb577c426da70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set rotation elements from a 3x3 matrix. <br/></td></tr>
-<tr class="separator:a4e238216fb227dc8831eb577c426da70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28c5121d7b662d2df7d0271f87ab9517"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a28c5121d7b662d2df7d0271f87ab9517"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetScale</b> (const <a class="el" href="a00365.html">Vector3</a> &amp;scale)</td></tr>
-<tr class="separator:a28c5121d7b662d2df7d0271f87ab9517"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9c3e7ab2266d4cdf67ff69f51bc3d1d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab9c3e7ab2266d4cdf67ff69f51bc3d1d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetScale</b> (float scale)</td></tr>
-<tr class="separator:ab9c3e7ab2266d4cdf67ff69f51bc3d1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9845da3322bf6369de697d7435a8e39d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9845da3322bf6369de697d7435a8e39d"></a>
-<a class="el" href="a00213.html">Matrix3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a9845da3322bf6369de697d7435a8e39d">ToMatrix3</a> () const </td></tr>
-<tr class="memdesc:a9845da3322bf6369de697d7435a8e39d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the combined rotation and scaling matrix. <br/></td></tr>
-<tr class="separator:a9845da3322bf6369de697d7435a8e39d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37685ce340302418e24f74d9ec2142a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37685ce340302418e24f74d9ec2142a6"></a>
-<a class="el" href="a00213.html">Matrix3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a37685ce340302418e24f74d9ec2142a6">RotationMatrix</a> () const </td></tr>
-<tr class="memdesc:a37685ce340302418e24f74d9ec2142a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the rotation matrix with scaling removed. <br/></td></tr>
-<tr class="separator:a37685ce340302418e24f74d9ec2142a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a7faa9a9c5301c04ddb2c0f0d198e5a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a7faa9a9c5301c04ddb2c0f0d198e5a"></a>
-<a class="el" href="a00365.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a6a7faa9a9c5301c04ddb2c0f0d198e5a">Translation</a> () const </td></tr>
-<tr class="memdesc:a6a7faa9a9c5301c04ddb2c0f0d198e5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the translation part. <br/></td></tr>
-<tr class="separator:a6a7faa9a9c5301c04ddb2c0f0d198e5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59ae645f02f74d1df8421ae2d6ba4b49"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59ae645f02f74d1df8421ae2d6ba4b49"></a>
-<a class="el" href="a00269.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a59ae645f02f74d1df8421ae2d6ba4b49">Rotation</a> () const </td></tr>
-<tr class="memdesc:a59ae645f02f74d1df8421ae2d6ba4b49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the rotation part. <br/></td></tr>
-<tr class="separator:a59ae645f02f74d1df8421ae2d6ba4b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5245bcaf50608d38d1015631a20613bf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5245bcaf50608d38d1015631a20613bf"></a>
-<a class="el" href="a00365.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a5245bcaf50608d38d1015631a20613bf">Scale</a> () const </td></tr>
-<tr class="memdesc:a5245bcaf50608d38d1015631a20613bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the scaling part. <br/></td></tr>
-<tr class="separator:a5245bcaf50608d38d1015631a20613bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29743f48effd05ceba216fa9600beddc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29743f48effd05ceba216fa9600beddc"></a>
-<a class="el" href="a00215.html">Matrix4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a29743f48effd05ceba216fa9600beddc">Transpose</a> () const </td></tr>
-<tr class="memdesc:a29743f48effd05ceba216fa9600beddc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return transpose. <br/></td></tr>
-<tr class="separator:a29743f48effd05ceba216fa9600beddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac87aa6eed46d2ee409a5ebed6de0c721"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac87aa6eed46d2ee409a5ebed6de0c721"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#ac87aa6eed46d2ee409a5ebed6de0c721">Equals</a> (const <a class="el" href="a00215.html">Matrix4</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:ac87aa6eed46d2ee409a5ebed6de0c721"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for equality with another matrix with epsilon. <br/></td></tr>
-<tr class="separator:ac87aa6eed46d2ee409a5ebed6de0c721"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3af4da1a10198ad641de295691a5d5a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab3af4da1a10198ad641de295691a5d5a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#ab3af4da1a10198ad641de295691a5d5a">Decompose</a> (<a class="el" href="a00365.html">Vector3</a> &amp;translation, <a class="el" href="a00269.html">Quaternion</a> &amp;rotation, <a class="el" href="a00365.html">Vector3</a> &amp;scale) const </td></tr>
-<tr class="memdesc:ab3af4da1a10198ad641de295691a5d5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return decomposition to translation, rotation and scale. <br/></td></tr>
-<tr class="separator:ab3af4da1a10198ad641de295691a5d5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae813f27cd60cef7171ecbe90d7897bee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae813f27cd60cef7171ecbe90d7897bee"></a>
-<a class="el" href="a00215.html">Matrix4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#ae813f27cd60cef7171ecbe90d7897bee">Inverse</a> () const </td></tr>
-<tr class="memdesc:ae813f27cd60cef7171ecbe90d7897bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return inverse. <br/></td></tr>
-<tr class="separator:ae813f27cd60cef7171ecbe90d7897bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e8fcaf349c2180ae3657ceb20fb19f4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e8fcaf349c2180ae3657ceb20fb19f4"></a>
-const float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a7e8fcaf349c2180ae3657ceb20fb19f4">Data</a> () const </td></tr>
-<tr class="memdesc:a7e8fcaf349c2180ae3657ceb20fb19f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return float data. <br/></td></tr>
-<tr class="separator:a7e8fcaf349c2180ae3657ceb20fb19f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff9c265580898fdb8246285df0388495"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff9c265580898fdb8246285df0388495"></a>
-<a class="el" href="a00337.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#aff9c265580898fdb8246285df0388495">ToString</a> () const </td></tr>
-<tr class="memdesc:aff9c265580898fdb8246285df0388495"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return as string. <br/></td></tr>
-<tr class="separator:aff9c265580898fdb8246285df0388495"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ca2f2bb17af6f1f168721d3ac83c153"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ca2f2bb17af6f1f168721d3ac83c153"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a7ca2f2bb17af6f1f168721d3ac83c153">Matrix3</a> ()</td></tr>
+<tr class="memdesc:a7ca2f2bb17af6f1f168721d3ac83c153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an identity matrix. <br/></td></tr>
+<tr class="separator:a7ca2f2bb17af6f1f168721d3ac83c153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ccba63e3d4bd6e0fdf2396803d8e30d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ccba63e3d4bd6e0fdf2396803d8e30d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a6ccba63e3d4bd6e0fdf2396803d8e30d">Matrix3</a> (const <a class="el" href="a00215.html">Matrix3</a> &amp;matrix)</td></tr>
+<tr class="memdesc:a6ccba63e3d4bd6e0fdf2396803d8e30d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy-construct from another matrix. <br/></td></tr>
+<tr class="separator:a6ccba63e3d4bd6e0fdf2396803d8e30d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae308c3007637695a7f40f98fccc5b304"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae308c3007637695a7f40f98fccc5b304"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#ae308c3007637695a7f40f98fccc5b304">Matrix3</a> (float v00, float v01, float v02, float v10, float v11, float v12, float v20, float v21, float v22)</td></tr>
+<tr class="memdesc:ae308c3007637695a7f40f98fccc5b304"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from values. <br/></td></tr>
+<tr class="separator:ae308c3007637695a7f40f98fccc5b304"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9c999c22f9e23c46c479b3b665f9167"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad9c999c22f9e23c46c479b3b665f9167"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#ad9c999c22f9e23c46c479b3b665f9167">Matrix3</a> (const float *data)</td></tr>
+<tr class="memdesc:ad9c999c22f9e23c46c479b3b665f9167"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a float array. <br/></td></tr>
+<tr class="separator:ad9c999c22f9e23c46c479b3b665f9167"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e42c915115c067246fad1699a03ed52"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e42c915115c067246fad1699a03ed52"></a>
+<a class="el" href="a00215.html">Matrix3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a3e42c915115c067246fad1699a03ed52">operator=</a> (const <a class="el" href="a00215.html">Matrix3</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a3e42c915115c067246fad1699a03ed52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign from another matrix. <br/></td></tr>
+<tr class="separator:a3e42c915115c067246fad1699a03ed52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab19ae0198d6a38c3b3b5bc2703055a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab19ae0198d6a38c3b3b5bc2703055a1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#aab19ae0198d6a38c3b3b5bc2703055a1">operator==</a> (const <a class="el" href="a00215.html">Matrix3</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:aab19ae0198d6a38c3b3b5bc2703055a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for equality with another matrix without epsilon. <br/></td></tr>
+<tr class="separator:aab19ae0198d6a38c3b3b5bc2703055a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cb8012ddcc9218019e93928e4b01007"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7cb8012ddcc9218019e93928e4b01007"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a7cb8012ddcc9218019e93928e4b01007">operator!=</a> (const <a class="el" href="a00215.html">Matrix3</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:a7cb8012ddcc9218019e93928e4b01007"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for inequality with another matrix without epsilon. <br/></td></tr>
+<tr class="separator:a7cb8012ddcc9218019e93928e4b01007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2b85192c13f9d2e0f89dc2768bef66e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2b85192c13f9d2e0f89dc2768bef66e"></a>
+<a class="el" href="a00367.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#ad2b85192c13f9d2e0f89dc2768bef66e">operator*</a> (const <a class="el" href="a00367.html">Vector3</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:ad2b85192c13f9d2e0f89dc2768bef66e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply a <a class="el" href="a00367.html" title="Three-dimensional vector.">Vector3</a>. <br/></td></tr>
+<tr class="separator:ad2b85192c13f9d2e0f89dc2768bef66e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d45234db3ba5719bc0f82c576b53c56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d45234db3ba5719bc0f82c576b53c56"></a>
+<a class="el" href="a00215.html">Matrix3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a7d45234db3ba5719bc0f82c576b53c56">operator+</a> (const <a class="el" href="a00215.html">Matrix3</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:a7d45234db3ba5719bc0f82c576b53c56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a matrix. <br/></td></tr>
+<tr class="separator:a7d45234db3ba5719bc0f82c576b53c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d8d15ef8e3b9c853c95505c47e611e3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d8d15ef8e3b9c853c95505c47e611e3"></a>
+<a class="el" href="a00215.html">Matrix3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a2d8d15ef8e3b9c853c95505c47e611e3">operator-</a> (const <a class="el" href="a00215.html">Matrix3</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:a2d8d15ef8e3b9c853c95505c47e611e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtract a matrix. <br/></td></tr>
+<tr class="separator:a2d8d15ef8e3b9c853c95505c47e611e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3278eaca246521254e2aef5549fcd5b5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3278eaca246521254e2aef5549fcd5b5"></a>
+<a class="el" href="a00215.html">Matrix3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a3278eaca246521254e2aef5549fcd5b5">operator*</a> (float rhs) const </td></tr>
+<tr class="memdesc:a3278eaca246521254e2aef5549fcd5b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply with a scalar. <br/></td></tr>
+<tr class="separator:a3278eaca246521254e2aef5549fcd5b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0c4cfe3a3991908ddbc4baf87e6cfc8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0c4cfe3a3991908ddbc4baf87e6cfc8"></a>
+<a class="el" href="a00215.html">Matrix3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#ad0c4cfe3a3991908ddbc4baf87e6cfc8">operator*</a> (const <a class="el" href="a00215.html">Matrix3</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:ad0c4cfe3a3991908ddbc4baf87e6cfc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply a matrix. <br/></td></tr>
+<tr class="separator:ad0c4cfe3a3991908ddbc4baf87e6cfc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06a8c91bef5e88641f986189709f0cdd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a06a8c91bef5e88641f986189709f0cdd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a06a8c91bef5e88641f986189709f0cdd">SetScale</a> (const <a class="el" href="a00367.html">Vector3</a> &amp;scale)</td></tr>
+<tr class="memdesc:a06a8c91bef5e88641f986189709f0cdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set scaling elements. <br/></td></tr>
+<tr class="separator:a06a8c91bef5e88641f986189709f0cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea56d08ef5802664e2a4d27804462df5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea56d08ef5802664e2a4d27804462df5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#aea56d08ef5802664e2a4d27804462df5">SetScale</a> (float scale)</td></tr>
+<tr class="memdesc:aea56d08ef5802664e2a4d27804462df5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set uniform scaling elements. <br/></td></tr>
+<tr class="separator:aea56d08ef5802664e2a4d27804462df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a449c5adb31cc64a80162511bf70e6413"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a449c5adb31cc64a80162511bf70e6413"></a>
+<a class="el" href="a00367.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a449c5adb31cc64a80162511bf70e6413">Scale</a> () const </td></tr>
+<tr class="memdesc:a449c5adb31cc64a80162511bf70e6413"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the scaling part. <br/></td></tr>
+<tr class="separator:a449c5adb31cc64a80162511bf70e6413"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a453848542dd97aa995f49c443e533890"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a453848542dd97aa995f49c443e533890"></a>
+<a class="el" href="a00215.html">Matrix3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a453848542dd97aa995f49c443e533890">Transpose</a> () const </td></tr>
+<tr class="memdesc:a453848542dd97aa995f49c443e533890"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return transpose. <br/></td></tr>
+<tr class="separator:a453848542dd97aa995f49c443e533890"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac95674b85fd23173b0fbf0a329fed542"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac95674b85fd23173b0fbf0a329fed542"></a>
+<a class="el" href="a00215.html">Matrix3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#ac95674b85fd23173b0fbf0a329fed542">Scaled</a> (const <a class="el" href="a00367.html">Vector3</a> &amp;scale) const </td></tr>
+<tr class="memdesc:ac95674b85fd23173b0fbf0a329fed542"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return scaled by a vector. <br/></td></tr>
+<tr class="separator:ac95674b85fd23173b0fbf0a329fed542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9eebff5a28a3d518161394f79dee1169"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9eebff5a28a3d518161394f79dee1169"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a9eebff5a28a3d518161394f79dee1169">Equals</a> (const <a class="el" href="a00215.html">Matrix3</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:a9eebff5a28a3d518161394f79dee1169"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for equality with another matrix with epsilon. <br/></td></tr>
+<tr class="separator:a9eebff5a28a3d518161394f79dee1169"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cc943918831653ed73c08db9036c5f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3cc943918831653ed73c08db9036c5f7"></a>
+<a class="el" href="a00215.html">Matrix3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a3cc943918831653ed73c08db9036c5f7">Inverse</a> () const </td></tr>
+<tr class="memdesc:a3cc943918831653ed73c08db9036c5f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return inverse. <br/></td></tr>
+<tr class="separator:a3cc943918831653ed73c08db9036c5f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e594761809e7c440917503a8e12ccc4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e594761809e7c440917503a8e12ccc4"></a>
+const float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a6e594761809e7c440917503a8e12ccc4">Data</a> () const </td></tr>
+<tr class="memdesc:a6e594761809e7c440917503a8e12ccc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return float data. <br/></td></tr>
+<tr class="separator:a6e594761809e7c440917503a8e12ccc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4ec09c134f7fea687e5941ef1356e9c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae4ec09c134f7fea687e5941ef1356e9c"></a>
+<a class="el" href="a00339.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#ae4ec09c134f7fea687e5941ef1356e9c">ToString</a> () const </td></tr>
+<tr class="memdesc:ae4ec09c134f7fea687e5941ef1356e9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return as string. <br/></td></tr>
+<tr class="separator:ae4ec09c134f7fea687e5941ef1356e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ab02ee318f3bb4238cd7e484ffc4f6026"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab02ee318f3bb4238cd7e484ffc4f6026"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#ab02ee318f3bb4238cd7e484ffc4f6026">BulkTranspose</a> (float *dest, const float *src, unsigned count)</td></tr>
-<tr class="memdesc:ab02ee318f3bb4238cd7e484ffc4f6026"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bulk transpose matrices. <br/></td></tr>
-<tr class="separator:ab02ee318f3bb4238cd7e484ffc4f6026"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ef16ae9df8f8057b9fca736dbc23d50"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5ef16ae9df8f8057b9fca736dbc23d50"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a5ef16ae9df8f8057b9fca736dbc23d50">BulkTranspose</a> (float *dest, const float *src, unsigned count)</td></tr>
+<tr class="memdesc:a5ef16ae9df8f8057b9fca736dbc23d50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bulk transpose matrices. <br/></td></tr>
+<tr class="separator:a5ef16ae9df8f8057b9fca736dbc23d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a347a8b11b36fed14eb8af1ba2c9e125a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a347a8b11b36fed14eb8af1ba2c9e125a"></a>
+<tr class="memitem:ab544e3ec96348b94d9ab1af5443c8b80"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab544e3ec96348b94d9ab1af5443c8b80"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>m00_</b></td></tr>
-<tr class="separator:a347a8b11b36fed14eb8af1ba2c9e125a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a116973d4d4b171c9344451b320fb0958"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a116973d4d4b171c9344451b320fb0958"></a>
+<tr class="separator:ab544e3ec96348b94d9ab1af5443c8b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add2a55b47540ce5d9ee4db6656d20c8d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add2a55b47540ce5d9ee4db6656d20c8d"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>m01_</b></td></tr>
-<tr class="separator:a116973d4d4b171c9344451b320fb0958"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a601fc0c30e6633f8129ad29a9783554f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a601fc0c30e6633f8129ad29a9783554f"></a>
+<tr class="separator:add2a55b47540ce5d9ee4db6656d20c8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe8ae94db3a8664b30b2a4dda95ca200"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe8ae94db3a8664b30b2a4dda95ca200"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>m02_</b></td></tr>
-<tr class="separator:a601fc0c30e6633f8129ad29a9783554f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb588b2b06b84fb6ffcc86214a1bef7c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb588b2b06b84fb6ffcc86214a1bef7c"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>m03_</b></td></tr>
-<tr class="separator:acb588b2b06b84fb6ffcc86214a1bef7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8f71edc57ff6adfd48cf70c329b6aa9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad8f71edc57ff6adfd48cf70c329b6aa9"></a>
+<tr class="separator:abe8ae94db3a8664b30b2a4dda95ca200"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad749c921722b07425caedc5678da9d57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad749c921722b07425caedc5678da9d57"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>m10_</b></td></tr>
-<tr class="separator:ad8f71edc57ff6adfd48cf70c329b6aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26226cde357fd08c5a98921c16155232"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26226cde357fd08c5a98921c16155232"></a>
+<tr class="separator:ad749c921722b07425caedc5678da9d57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9ff0e50384f4212218f3e83b465682c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa9ff0e50384f4212218f3e83b465682c"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>m11_</b></td></tr>
-<tr class="separator:a26226cde357fd08c5a98921c16155232"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9efe953213e355302a89163673fa2f13"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9efe953213e355302a89163673fa2f13"></a>
+<tr class="separator:aa9ff0e50384f4212218f3e83b465682c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10017f3f1f0d3119f754d440e52571d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a10017f3f1f0d3119f754d440e52571d7"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>m12_</b></td></tr>
-<tr class="separator:a9efe953213e355302a89163673fa2f13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c4a4f2005056ede89099463b71d67ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c4a4f2005056ede89099463b71d67ba"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>m13_</b></td></tr>
-<tr class="separator:a6c4a4f2005056ede89099463b71d67ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe346b84f15f6fb033ee374d892997d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe346b84f15f6fb033ee374d892997d0"></a>
+<tr class="separator:a10017f3f1f0d3119f754d440e52571d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bfd24a71477ee6e0425ad9509f28a58"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2bfd24a71477ee6e0425ad9509f28a58"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>m20_</b></td></tr>
-<tr class="separator:afe346b84f15f6fb033ee374d892997d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a397c5dfbea6771ba1c2031d2b47cfcb7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a397c5dfbea6771ba1c2031d2b47cfcb7"></a>
+<tr class="separator:a2bfd24a71477ee6e0425ad9509f28a58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2fd3663e4d4455beddf25a22d91d572"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af2fd3663e4d4455beddf25a22d91d572"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>m21_</b></td></tr>
-<tr class="separator:a397c5dfbea6771ba1c2031d2b47cfcb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8e0887cd6add702abedf596f65e4548"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad8e0887cd6add702abedf596f65e4548"></a>
+<tr class="separator:af2fd3663e4d4455beddf25a22d91d572"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7be20a591e64fd8d7e35adfc04566676"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7be20a591e64fd8d7e35adfc04566676"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>m22_</b></td></tr>
-<tr class="separator:ad8e0887cd6add702abedf596f65e4548"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aceacbf62ddeddf50e50402f760a56eb5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aceacbf62ddeddf50e50402f760a56eb5"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>m23_</b></td></tr>
-<tr class="separator:aceacbf62ddeddf50e50402f760a56eb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade907344f185c630f05e4177f83a61a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade907344f185c630f05e4177f83a61a5"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>m30_</b></td></tr>
-<tr class="separator:ade907344f185c630f05e4177f83a61a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ffd64dcd65010c568ccfe6aeb366d0d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ffd64dcd65010c568ccfe6aeb366d0d"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>m31_</b></td></tr>
-<tr class="separator:a8ffd64dcd65010c568ccfe6aeb366d0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e935d75cdc7ca43fca2c1aa0787b403"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e935d75cdc7ca43fca2c1aa0787b403"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>m32_</b></td></tr>
-<tr class="separator:a3e935d75cdc7ca43fca2c1aa0787b403"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ea4049d2a235eb2ce6106deeae9b3c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ea4049d2a235eb2ce6106deeae9b3c8"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>m33_</b></td></tr>
-<tr class="separator:a0ea4049d2a235eb2ce6106deeae9b3c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a7be20a591e64fd8d7e35adfc04566676"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a724abee7df3ea1b3c68bc76f7b74947e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a724abee7df3ea1b3c68bc76f7b74947e"></a>
-static const <a class="el" href="a00215.html">Matrix4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a724abee7df3ea1b3c68bc76f7b74947e">ZERO</a></td></tr>
-<tr class="memdesc:a724abee7df3ea1b3c68bc76f7b74947e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zero matrix. <br/></td></tr>
-<tr class="separator:a724abee7df3ea1b3c68bc76f7b74947e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86040251571d238e00bc5253673110f5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86040251571d238e00bc5253673110f5"></a>
-static const <a class="el" href="a00215.html">Matrix4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a86040251571d238e00bc5253673110f5">IDENTITY</a></td></tr>
-<tr class="memdesc:a86040251571d238e00bc5253673110f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identity matrix. <br/></td></tr>
-<tr class="separator:a86040251571d238e00bc5253673110f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af80f338013b35396dc2372e34a0c6e6f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af80f338013b35396dc2372e34a0c6e6f"></a>
+static const <a class="el" href="a00215.html">Matrix3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#af80f338013b35396dc2372e34a0c6e6f">ZERO</a></td></tr>
+<tr class="memdesc:af80f338013b35396dc2372e34a0c6e6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zero matrix. <br/></td></tr>
+<tr class="separator:af80f338013b35396dc2372e34a0c6e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ef17ffa281c9c298e87ca299a9d88d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ef17ffa281c9c298e87ca299a9d88d0"></a>
+static const <a class="el" href="a00215.html">Matrix3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html#a4ef17ffa281c9c298e87ca299a9d88d0">IDENTITY</a></td></tr>
+<tr class="memdesc:a4ef17ffa281c9c298e87ca299a9d88d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identity matrix. <br/></td></tr>
+<tr class="separator:a4ef17ffa281c9c298e87ca299a9d88d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>4x4 matrix for arbitrary linear transforms including projection. </p>
+<div class="textblock"><p>3x3 matrix for rotation and scaling. </p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Math/Matrix4.h</li>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Math/Matrix4.cpp</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Math/Matrix3.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Math/Matrix3.cpp</li>
 </ul>
 </div><!-- contents -->
