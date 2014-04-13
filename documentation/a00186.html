@@ -85,6 +85,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00186.html#aa7f01e33cc110c8d3fadc91050ec9554">DetectJoysticks</a> ()</td></tr>
 <tr class="memdesc:aa7f01e33cc110c8d3fadc91050ec9554"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redetect joysticks. Return true if successful. <br/></td></tr>
 <tr class="separator:aa7f01e33cc110c8d3fadc91050ec9554"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16407995da45688ec2915f822da1d04d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a16407995da45688ec2915f822da1d04d"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00186.html#a16407995da45688ec2915f822da1d04d">AddScreenJoystick</a> (bool injectAsKeyEvents=false, <a class="el" href="a00384.html">XMLFile</a> *layoutFile=0, <a class="el" href="a00384.html">XMLFile</a> *styleFile=0)</td></tr>
+<tr class="memdesc:a16407995da45688ec2915f822da1d04d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add on-screen joystick. Return the joystick index number when successful or M_MAX_UNSIGNED when error. If layout file is not given, use the default screen joystick layout. If style file is not given, use the default style file from root <a class="el" href="a00358.html" title="UI subsystem. Manages the graphical user interface.">UI</a> element. <br/></td></tr>
+<tr class="separator:a16407995da45688ec2915f822da1d04d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a8e1073c5e29bac46a0183a803d6df4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a8e1073c5e29bac46a0183a803d6df4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00186.html#a9a8e1073c5e29bac46a0183a803d6df4">SetScreenKeyboardVisible</a> (bool enable)</td></tr>
 <tr class="memdesc:a9a8e1073c5e29bac46a0183a803d6df4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show or hide on-screen keyboard on platforms that support it. When shown, keypresses from it are delivered as key events. <br/></td></tr>
@@ -396,6 +400,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00186.html#a147c4675aa679dbf4d9702b3d3d6b921">HandleBeginFrame</a> (<a class="el" href="a00340.html">StringHash</a> eventType, <a class="el" href="a00177.html">VariantMap</a> &amp;eventData)</td></tr>
 <tr class="memdesc:a147c4675aa679dbf4d9702b3d3d6b921"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle frame start event. <br/></td></tr>
 <tr class="separator:a147c4675aa679dbf4d9702b3d3d6b921"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a732ddf99845c52f770c92c3e302ffb2c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a732ddf99845c52f770c92c3e302ffb2c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00186.html#a732ddf99845c52f770c92c3e302ffb2c">HandleMouseClick</a> (<a class="el" href="a00340.html">StringHash</a> eventType, <a class="el" href="a00177.html">VariantMap</a> &amp;eventData)</td></tr>
+<tr class="memdesc:a732ddf99845c52f770c92c3e302ffb2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle mouse click begin and end event from the screen joystick(s), ignore event from others. <br/></td></tr>
+<tr class="separator:a732ddf99845c52f770c92c3e302ffb2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dc8699608ba629964e3c702e629be92"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6dc8699608ba629964e3c702e629be92"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00186.html#a6dc8699608ba629964e3c702e629be92">HandleSDLEvent</a> (void *sdlEvent)</td></tr>
 <tr class="memdesc:a6dc8699608ba629964e3c702e629be92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle SDL event. <br/></td></tr>
