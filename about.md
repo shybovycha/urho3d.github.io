@@ -98,6 +98,7 @@ Though Urho3D already contains several useful features and implements a framewor
 - reattiva
 - skaiware
 - szamq
+- thebluefish
 
 ## Origin of the name
 **Urho** (Finnish for "hero" or "brave fighter") was a legendary, tyrannical king among the fish. He always hunted without mercy. Sadly, he passed away on 6th November 2009. This engine was originally called Bofh3D (hinting at the covert goal of reimplementing the game BOFH: Servers under Siege in 3D, which still stands) but was renamed to Urho3D in his honor. For more of Urho's legend, see also the music project [http://www.mikseri.net/Urho/](http://www.mikseri.net/Urho/).
