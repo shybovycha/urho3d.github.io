@@ -1972,7 +1972,8 @@ Classes</h1>
 <li>bool OpenJoystick(unsigned index)</li>
 <li>void CloseJoystick(unsigned index)</li>
 <li>bool DetectJoysticks()</li>
-<li>unsigned AddScreenJoystick(bool injectAsKeyEvents = false, XMLFile* layoutFile = 0, XMLFile* styleFile = 0)</li>
+<li>unsigned AddScreenJoystick(XMLFile* layoutFile = 0, XMLFile* styleFile = 0)</li>
+<li>bool RemoveScreenJoystick(unsigned index)</li>
 <li>void SetScreenKeyboardVisible(bool enable)</li>
 <li>int GetKeyFromName(const String name) const</li>
 <li>int GetKeyFromScancode(int scancode) const</li>
@@ -4779,6 +4780,7 @@ Classes</h1>
 <li><a class="el" href="a00189.html" title="Two-dimensional vector with integer values.">IntVector2</a> lastPosition</li>
 <li><a class="el" href="a00189.html" title="Two-dimensional vector with integer values.">IntVector2</a> delta</li>
 <li>float pressure</li>
+<li>WeakPtr&lt;UIElement&gt; touchedElement</li>
 </ul>
 <h3><a class="el" href="a00358.html" title="UI subsystem. Manages the graphical user interface.">UI</a> : <a class="el" href="a00238.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
 <p>Methods:</p>

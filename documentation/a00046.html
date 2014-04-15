@@ -3455,7 +3455,7 @@ Classes</h1>
 <h3><a class="el" href="a00186.html" title="Input subsystem. Converts operating system window messages to input state and events.">Input</a></h3>
 <p>Methods:</p>
 <ul>
-<li>uint AddScreenJoystick(bool = false, <a class="el" href="a00384.html" title="XML document resource.">XMLFile</a>@ = null, <a class="el" href="a00384.html" title="XML document resource.">XMLFile</a>@ = null)</li>
+<li>uint AddScreenJoystick(<a class="el" href="a00384.html" title="XML document resource.">XMLFile</a>@ = null, <a class="el" href="a00384.html" title="XML document resource.">XMLFile</a>@ = null)</li>
 <li>void CloseJoystick(uint)</li>
 <li>bool DetectJoysticks()</li>
 <li>int GetKeyFromName(const String&amp;) const</li>
@@ -3465,6 +3465,7 @@ Classes</h1>
 <li>int GetScancodeFromName(const String&amp;) const</li>
 <li><a class="el" href="a00339.html" title="String class.">String</a> GetScancodeName(int) const</li>
 <li>bool OpenJoystick(uint)</li>
+<li>bool RemoveScreenJoystick(uint)</li>
 <li>void SendEvent(const <a class="el" href="a00339.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 </ul>
 <p>Properties:</p>
@@ -7927,6 +7928,7 @@ Classes</h1>
 <li><a class="el" href="a00189.html" title="Two-dimensional vector with integer values.">IntVector2</a> position</li>
 <li>float pressure</li>
 <li>int touchID</li>
+<li>WeakHandle touchedElement</li>
 </ul>
 <h3><a class="el" href="a00358.html" title="UI subsystem. Manages the graphical user interface.">UI</a></h3>
 <p>Methods:</p>
