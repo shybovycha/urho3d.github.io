@@ -17,7 +17,7 @@ title: Documentation
 <div class="title">Attribute animation </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Attribute animation is a new system for Urho3D, With it user can apply animation to object’s attribute. All object derived from <a class="el" href="a00054.html" title="Base class for animatable object, an animatable object can be set animation on it&#39;s attributes...">Animatable</a> can use attribute animation, currently these classes include <a class="el" href="a00233.html" title="Scene node that may contain components and child nodes.">Node</a>, <a class="el" href="a00106.html" title="Base class for components. Components can be created to scene nodes.">Component</a> and <a class="el" href="a00360.html" title="Base class for UI elements.">UIElement</a>.</p>
+<div class="textblock"><p>Attribute animation is a new system for Urho3D, With it user can apply animation to object’s attribute. All object derived from <a class="el" href="a00054.html" title="Base class for animatable object, an animatable object can be set animation on it&#39;s attributes...">Animatable</a> can use attribute animation, currently these classes include <a class="el" href="a00234.html" title="Scene node that may contain components and child nodes.">Node</a>, <a class="el" href="a00106.html" title="Base class for components. Components can be created to scene nodes.">Component</a> and <a class="el" href="a00361.html" title="Base class for UI elements.">UIElement</a>.</p>
 <p>These are two way to use use attribute animation. First user can create attribute animation with code, and then apply it to object’s attribute. Here is a simple code for light color animation: </p>
 <div class="fragment"><div class="line">SharedPtr&lt;AttributeAnimation&gt; colorAnimation(<span class="keyword">new</span> AttributeAnimation(context_));</div>
 <div class="line">colorAnimation-&gt;SetKeyFrame(0.0f, <a class="code" href="a00104.html#a42aad3adf983cede243a815e0cccd76f" title="Opaque white color.">Color::WHITE</a>);</div>
@@ -42,9 +42,9 @@ title: Documentation
 <div class="line"></div>
 <div class="line"><span class="comment">// Create position animation</span></div>
 <div class="line">SharedPtr&lt;AttributeAnimation&gt; positionAnimation(<span class="keyword">new</span> AttributeAnimation(context_));</div>
-<div class="line">positionAnimation-&gt;SetKeyFrame(0.0f, <a class="code" href="a00367.html#ad412e0011a7987f2b91c530158f19f16" title="Zero vector.">Vector3::ZERO</a>);</div>
+<div class="line">positionAnimation-&gt;SetKeyFrame(0.0f, <a class="code" href="a00368.html#ad412e0011a7987f2b91c530158f19f16" title="Zero vector.">Vector3::ZERO</a>);</div>
 <div class="line">positionAnimation-&gt;SetKeyFrame(1.0f, Vector3(1.0f, 1.0f, 1.0f));</div>
-<div class="line">positionAnimation-&gt;SetKeyFrame(4.0f, <a class="code" href="a00367.html#ad412e0011a7987f2b91c530158f19f16" title="Zero vector.">Vector3::ZERO</a>);</div>
+<div class="line">positionAnimation-&gt;SetKeyFrame(4.0f, <a class="code" href="a00368.html#ad412e0011a7987f2b91c530158f19f16" title="Zero vector.">Vector3::ZERO</a>);</div>
 <div class="line"><span class="comment">// Add position animation</span></div>
 <div class="line">lightAnimation-&gt;AddAttributeAnimation(<span class="stringliteral">&quot;Position&quot;</span>, positionAnimation, WM_LOOP); </div>
 <div class="line"></div>
@@ -61,7 +61,7 @@ title: Documentation
 </div><!-- fragment --><p>Also user can load object animation from file, like: </p>
 <div class="fragment"><div class="line">ObjectAnimation * lightAnimation = cache-&gt;GetResource&lt; ObjectAnimation &gt;(<span class="stringliteral">&quot;Scene/LightAnimation.xml&quot;</span>);</div>
 <div class="line">light-&gt; SetObjectAnimation (lightAnimation);</div>
-</div><!-- fragment --><p>Current attribute animation use linear interpolation for numeric value type (like float, <a class="el" href="a00366.html" title="Two-dimensional vector.">Vector2</a>, <a class="el" href="a00367.html" title="Three-dimensional vector.">Vector3</a> etc), and these is no interpolation for non-numeric type (like int, bool).</p>
+</div><!-- fragment --><p>Current attribute animation use linear interpolation for numeric value type (like float, <a class="el" href="a00367.html" title="Two-dimensional vector.">Vector2</a>, <a class="el" href="a00368.html" title="Three-dimensional vector.">Vector3</a> etc), and these is no interpolation for non-numeric type (like int, bool).</p>
 <p>Attribute animation and object animation can be save to scene file, Someday if our editor support edit animation, we can create animation in editor and save it to scene file.</p>
 <h1><a class="anchor" id="AttributeAnimation_Classes"></a>
 Classes of attribute animation:</h1>
