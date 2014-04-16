@@ -22,16 +22,18 @@ title: About
 - Geometry, material & animation LOD
 - Software rasterized occlusion culling
 - Post-processing
-- HDR rendering<font color="green"><sup>new</sup></font>
-- 2D sprites and particles that integrate into the 3D scene<font color="green"><sup>new</sup></font>
+- HDR rendering<font color="olive"><sup>v1.31</sup></font>
+- 2D sprites and particles that integrate into the 3D scene<font color="olive"><sup>v1.31</sup></font>
 - Task-based multithreading
 - Hierarchical performance profiler
 - Scene and object load/save in binary and XML format
+- Keyframe animation of object attributes<font color="green"><sup>new</sup></font>
 - Keyboard, mouse, joystick and touch input (if available)
 - Cross-platform support using [SDL 2.0](http://www.libsdl.org/) (currently runs on Windows, Linux, Mac OS X, Android, iOS, and [Raspberry Pi](http://www.raspberrypi.org/)<font color="olive"><sup>v1.3</sup></font>)
 - Physics using [Bullet](http://www.bulletphysics.org/)
+- 2D physics using [Box2D](http://box2d.org/)<font color="green"><sup>new</sup></font>
 - Scripting using [AngelScript](http://www.angelcode.com/angelscript/)
-- Alternative script interface using [Lua](http://www.lua.org/)<font color="olive"><sup>v1.3</sup></font> or [LuaJIT](http://luajit.org/)<font color="green"><sup>new</sup></font> (on Windows, Linux, Mac OS X, Android, and Raspberry Pi)
+- Alternative script interface using [Lua](http://www.lua.org/)<font color="olive"><sup>v1.3</sup></font> or [LuaJIT](http://luajit.org/)<font color="olive"><sup>v1.31</sup></font> (on Windows, Linux, Mac OS X, Android, and Raspberry Pi)
 - Networking using [kNet](https://github.com/juj/kNet/) + possibility to make HTTP requests<font color="olive"><sup>v1.3</sup></font>
 - Pathfinding using [Recast/Detour](https://code.google.com/p/recastnavigation/)<font color="olive"><sup>v1.23</sup></font>
 - Image loading using [stb_image](http://nothings.org/) + DDS / KTX / PVR compressed texture support
