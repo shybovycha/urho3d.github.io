@@ -20,73 +20,114 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00176.html">HashIteratorBase</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00176.html">HashBase</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a00894.html">List of all members</a>  </div>
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="a00898.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::HashIteratorBase Struct Reference</div>  </div>
+<div class="title">Urho3D::HashBase Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Hash set/map iterator base class.  
+<p>Hash set/map base class.  
  <a href="a00176.html#details">More...</a></p>
 
 <p><code>#include &lt;HashBase.h&gt;</code></p>
+
+<p>Inherited by <a class="el" href="a00178.html">Urho3D::HashMap&lt; asIObjectType *, bool &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; asIObjectType *, Urho3D::HashMap&lt; Urho3D::String, asIScriptFunction * &gt; &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; asIScriptObject *, Urho3D::SharedPtr&lt; Urho3D::ScriptEventInvoker &gt; &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; const char *, asIObjectType * &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; int, unsigned &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; int, Urho3D::PODVector&lt; Urho3D::Light * &gt; &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; int, Urho3D::SharedPtr&lt; Urho3D::FontFace &gt; &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; int, Urho3D::SharedPtr&lt; Urho3D::Texture2D &gt; &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; int, Urho3D::TouchState &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; int, Urho3D::Vector&lt; Urho3D::SharedPtr&lt; Urho3D::Texture2D &gt; &gt; &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; kNet::MessageConnection *, Urho3D::SharedPtr&lt; Urho3D::Connection &gt; &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; long long, unsigned &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; long long, Urho3D::Vector&lt; Urho3D::SharedPtr&lt; Urho3D::Texture2D &gt; &gt; &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Pair&lt; ShaderVariation *, ShaderVariation * &gt;, SharedPtr&lt; ShaderProgram &gt; &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; ShortStringHash, Variant &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; unsigned long long, Urho3D::FrameBufferObject &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; unsigned long long, Urho3D::LightBatchQueue &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; unsigned short, unsigned short &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; unsigned, unsigned &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; unsigned, Urho3D::Component * &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; unsigned, Urho3D::ComponentReplicationState &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; unsigned, Urho3D::Node * &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; unsigned, Urho3D::NodeReplicationState &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; unsigned, Urho3D::PODVector&lt; unsigned char &gt; &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; unsigned, Urho3D::VertexBufferMorph &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; unsigned, Urho3D::WeakPtr&lt; Urho3D::Component &gt; &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; unsigned, Urho3D::WeakPtr&lt; Urho3D::Node &gt; &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::AttributeInfo *, unsigned &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::BatchGroupKey, Urho3D::BatchGroup &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::Camera *, Urho3D::Matrix3x4 &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::Object *, Urho3D::HashMap&lt; Urho3D::StringHash, Urho3D::HashSet&lt; Urho3D::Object * &gt; &gt; &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::Object *, Urho3D::HashMap&lt; Urho3D::StringHash, Urho3D::Vector &gt; &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::Object *, Urho3D::HashMap&lt; Urho3D::StringHash, Urho3D::WeakPtr&lt; Urho3D::LuaFunction &gt; &gt; &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::Pair&lt; Urho3D::Light *, Urho3D::Camera * &gt;, Urho3D::Rect &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::Pair&lt; Urho3D::Model *, unsigned &gt;, Urho3D::SharedPtr&lt; Urho3D::CollisionGeometryData &gt; &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::Pair&lt; Urho3D::WeakPtr&lt; Urho3D::RigidBody &gt;, Urho3D::WeakPtr&lt; Urho3D::RigidBody &gt; &gt;, btPersistentManifold * &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::RigidBody *, Urho3D::DelayedWorldTransform &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::ShortStringHash, Urho3D::ResourceGroup &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::ShortStringHash, Urho3D::SharedPtr&lt; Urho3D::Object &gt; &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::ShortStringHash, Urho3D::SharedPtr&lt; Urho3D::ObjectFactory &gt; &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::ShortStringHash, Urho3D::String &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::ShortStringHash, Urho3D::Vector&lt; Urho3D::AttributeInfo &gt; &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::String, asIScriptFunction * &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::String, TextureUnit &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::String, Urho3D::CScriptDictionary::valueStruct &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::String, Urho3D::PackageEntry &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::String, Urho3D::SharedPtr&lt; Urho3D::AttributeAnimationInfo &gt; &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::String, Urho3D::SharedPtr&lt; Urho3D::AttributeAnimationInstance &gt; &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::String, Urho3D::SharedPtr&lt; Urho3D::LuaFunction &gt; &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::String, Urho3D::SharedPtr&lt; Urho3D::Sprite2D &gt; &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::String, Urho3D::String &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::String, Urho3D::Vector&lt; Urho3D::ShortStringHash &gt; &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::StringHash, Urho3D::BatchQueue &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::StringHash, Urho3D::HashSet&lt; Urho3D::Object * &gt; &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::StringHash, Urho3D::HashSet&lt; Urho3D::StringHash &gt; &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::StringHash, Urho3D::MaterialShaderParameter &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::StringHash, Urho3D::PackageDownload &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::StringHash, Urho3D::PackageUpload &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::StringHash, Urho3D::ShaderParameter &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::StringHash, Urho3D::SharedPtr&lt; Urho3D::Resource &gt; &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::StringHash, Urho3D::SharedPtr&lt; Urho3D::ShaderVariation &gt; &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::StringHash, Urho3D::Texture2D * &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::StringHash, Urho3D::Variant &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::StringHash, Urho3D::Vector &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::StringHash, Urho3D::WeakPtr&lt; Urho3D::LuaFunction &gt; &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::Texture2D *, Urho3D::HashMap&lt; int, Urho3D::SharedPtr&lt; Urho3D::Material &gt; &gt; &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; Urho3D::WeakPtr&lt; Urho3D::UIElement &gt;, bool &gt;</a>, <a class="el" href="a00180.html">Urho3D::HashSet&lt; const Urho3D::AttributeInfo * &gt;</a>, <a class="el" href="a00180.html">Urho3D::HashSet&lt; int &gt;</a>, <a class="el" href="a00180.html">Urho3D::HashSet&lt; unsigned &gt;</a>, <a class="el" href="a00180.html">Urho3D::HashSet&lt; Urho3D::Camera * &gt;</a>, <a class="el" href="a00180.html">Urho3D::HashSet&lt; Urho3D::Drawable * &gt;</a>, <a class="el" href="a00180.html">Urho3D::HashSet&lt; Urho3D::Octree * &gt;</a>, <a class="el" href="a00180.html">Urho3D::HashSet&lt; Urho3D::Pair&lt; Urho3D::ShaderVariation *, Urho3D::ShaderVariation * &gt; &gt;</a>, <a class="el" href="a00180.html">Urho3D::HashSet&lt; Urho3D::Scene * &gt;</a>, <a class="el" href="a00180.html">Urho3D::HashSet&lt; Urho3D::ShortStringHash &gt;</a>, <a class="el" href="a00180.html">Urho3D::HashSet&lt; Urho3D::String &gt;</a>, <a class="el" href="a00180.html">Urho3D::HashSet&lt; Urho3D::StringHash &gt;</a>, <a class="el" href="a00180.html">Urho3D::HashSet&lt; Urho3D::Technique * &gt;</a>, <a class="el" href="a00178.html">Urho3D::HashMap&lt; T, U &gt;</a>, and <a class="el" href="a00180.html">Urho3D::HashSet&lt; T &gt;</a>.</p>
 <div class="dynheader">
-Inheritance diagram for Urho3D::HashIteratorBase:</div>
+Collaboration diagram for Urho3D::HashBase:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00895.svg" width="416" height="264"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for Urho3D::HashIteratorBase:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00896.svg" width="260" height="159"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00899.svg" width="511" height="288"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1bce5f766c31b9e226a83712feb63379"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1bce5f766c31b9e226a83712feb63379"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#a1bce5f766c31b9e226a83712feb63379">HashIteratorBase</a> ()</td></tr>
-<tr class="memdesc:a1bce5f766c31b9e226a83712feb63379"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
-<tr class="separator:a1bce5f766c31b9e226a83712feb63379"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99fe34ae42596e0d12a4ca364c63ee72"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a99fe34ae42596e0d12a4ca364c63ee72"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#a99fe34ae42596e0d12a4ca364c63ee72">HashIteratorBase</a> (<a class="el" href="a00178.html">HashNodeBase</a> *ptr)</td></tr>
-<tr class="memdesc:a99fe34ae42596e0d12a4ca364c63ee72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with a node pointer. <br/></td></tr>
-<tr class="separator:a99fe34ae42596e0d12a4ca364c63ee72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa22b2d471693a099c33912515b77c4da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa22b2d471693a099c33912515b77c4da"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#aa22b2d471693a099c33912515b77c4da">operator==</a> (const <a class="el" href="a00176.html">HashIteratorBase</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:aa22b2d471693a099c33912515b77c4da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for equality with another iterator. <br/></td></tr>
-<tr class="separator:aa22b2d471693a099c33912515b77c4da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79c6b64b57fda4326510372c83ccb256"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a79c6b64b57fda4326510372c83ccb256"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#a79c6b64b57fda4326510372c83ccb256">operator!=</a> (const <a class="el" href="a00176.html">HashIteratorBase</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:a79c6b64b57fda4326510372c83ccb256"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for inequality with another iterator. <br/></td></tr>
-<tr class="separator:a79c6b64b57fda4326510372c83ccb256"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a218dee5726d69027acc2f62f84798b9b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a218dee5726d69027acc2f62f84798b9b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#a218dee5726d69027acc2f62f84798b9b">GotoNext</a> ()</td></tr>
-<tr class="memdesc:a218dee5726d69027acc2f62f84798b9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Go to the next node. <br/></td></tr>
-<tr class="separator:a218dee5726d69027acc2f62f84798b9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08858880ec0fe225c576bb8f6f7b0dc8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08858880ec0fe225c576bb8f6f7b0dc8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#a08858880ec0fe225c576bb8f6f7b0dc8">GotoPrev</a> ()</td></tr>
-<tr class="memdesc:a08858880ec0fe225c576bb8f6f7b0dc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Go to the previous node. <br/></td></tr>
-<tr class="separator:a08858880ec0fe225c576bb8f6f7b0dc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a531e375a95ac79b4ee296bb35ad1d300"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a531e375a95ac79b4ee296bb35ad1d300"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#a531e375a95ac79b4ee296bb35ad1d300">HashBase</a> ()</td></tr>
+<tr class="memdesc:a531e375a95ac79b4ee296bb35ad1d300"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
+<tr class="separator:a531e375a95ac79b4ee296bb35ad1d300"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4874a70b0b8a004d8f0c84295ebb75e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4874a70b0b8a004d8f0c84295ebb75e4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#a4874a70b0b8a004d8f0c84295ebb75e4">~HashBase</a> ()</td></tr>
+<tr class="memdesc:a4874a70b0b8a004d8f0c84295ebb75e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
+<tr class="separator:a4874a70b0b8a004d8f0c84295ebb75e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37ba30adba5ba7be5c286a46afcfbbc0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37ba30adba5ba7be5c286a46afcfbbc0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#a37ba30adba5ba7be5c286a46afcfbbc0">Swap</a> (<a class="el" href="a00176.html">HashBase</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a37ba30adba5ba7be5c286a46afcfbbc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swap with another hash set or map. <br/></td></tr>
+<tr class="separator:a37ba30adba5ba7be5c286a46afcfbbc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13f2e18d25795c8761ede975c826f001"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a13f2e18d25795c8761ede975c826f001"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#a13f2e18d25795c8761ede975c826f001">Size</a> () const </td></tr>
+<tr class="memdesc:a13f2e18d25795c8761ede975c826f001"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of elements. <br/></td></tr>
+<tr class="separator:a13f2e18d25795c8761ede975c826f001"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78d7898ae4bb5bde4c26e12fb2a32579"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a78d7898ae4bb5bde4c26e12fb2a32579"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#a78d7898ae4bb5bde4c26e12fb2a32579">NumBuckets</a> () const </td></tr>
+<tr class="memdesc:a78d7898ae4bb5bde4c26e12fb2a32579"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of buckets. <br/></td></tr>
+<tr class="separator:a78d7898ae4bb5bde4c26e12fb2a32579"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3cde3a1cc3464293a61030e73c33c58"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3cde3a1cc3464293a61030e73c33c58"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#ae3cde3a1cc3464293a61030e73c33c58">Empty</a> () const </td></tr>
+<tr class="memdesc:ae3cde3a1cc3464293a61030e73c33c58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether has no elements. <br/></td></tr>
+<tr class="separator:ae3cde3a1cc3464293a61030e73c33c58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a052c51b3975f36b95c3cc705532cde14"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a052c51b3975f36b95c3cc705532cde14"></a>
-<a class="el" href="a00178.html">HashNodeBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#a052c51b3975f36b95c3cc705532cde14">ptr_</a></td></tr>
-<tr class="memdesc:a052c51b3975f36b95c3cc705532cde14"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00234.html" title="Scene node that may contain components and child nodes.">Node</a> pointer. <br/></td></tr>
-<tr class="separator:a052c51b3975f36b95c3cc705532cde14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a5f804c9e6aba28140c250579d9618f98"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f804c9e6aba28140c250579d9618f98"></a>
+static const unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#a5f804c9e6aba28140c250579d9618f98">MIN_BUCKETS</a> = 8</td></tr>
+<tr class="memdesc:a5f804c9e6aba28140c250579d9618f98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initial amount of buckets. <br/></td></tr>
+<tr class="separator:a5f804c9e6aba28140c250579d9618f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5b58c219e3f5d363e24350e94c09932"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5b58c219e3f5d363e24350e94c09932"></a>
+static const unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#ac5b58c219e3f5d363e24350e94c09932">MAX_LOAD_FACTOR</a> = 4</td></tr>
+<tr class="memdesc:ac5b58c219e3f5d363e24350e94c09932"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum load factor. <br/></td></tr>
+<tr class="separator:ac5b58c219e3f5d363e24350e94c09932"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:aa42035b544f9dfee6c1353df83cc2d45"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa42035b544f9dfee6c1353df83cc2d45"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#aa42035b544f9dfee6c1353df83cc2d45">AllocateBuckets</a> (unsigned size, unsigned numBuckets)</td></tr>
+<tr class="memdesc:aa42035b544f9dfee6c1353df83cc2d45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate bucket head pointers + room for size and bucket count variables. <br/></td></tr>
+<tr class="separator:aa42035b544f9dfee6c1353df83cc2d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2774d115a617b0d6c315132352d43c01"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2774d115a617b0d6c315132352d43c01"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#a2774d115a617b0d6c315132352d43c01">ResetPtrs</a> ()</td></tr>
+<tr class="memdesc:a2774d115a617b0d6c315132352d43c01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset bucket head pointers. <br/></td></tr>
+<tr class="separator:a2774d115a617b0d6c315132352d43c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7790b0fb5131f0e0a098e322c9198f39"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7790b0fb5131f0e0a098e322c9198f39"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#a7790b0fb5131f0e0a098e322c9198f39">SetSize</a> (unsigned size)</td></tr>
+<tr class="memdesc:a7790b0fb5131f0e0a098e322c9198f39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set new size. <br/></td></tr>
+<tr class="separator:a7790b0fb5131f0e0a098e322c9198f39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11e98e551f284d8b8ae316929f1181e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11e98e551f284d8b8ae316929f1181e5"></a>
+<a class="el" href="a00179.html">HashNodeBase</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#a11e98e551f284d8b8ae316929f1181e5">Ptrs</a> () const </td></tr>
+<tr class="memdesc:a11e98e551f284d8b8ae316929f1181e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return bucket head pointers. <br/></td></tr>
+<tr class="separator:a11e98e551f284d8b8ae316929f1181e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a9869ef8c8934e85d9f11c37e15c3fbcd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9869ef8c8934e85d9f11c37e15c3fbcd"></a>
+<a class="el" href="a00179.html">HashNodeBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#a9869ef8c8934e85d9f11c37e15c3fbcd">head_</a></td></tr>
+<tr class="memdesc:a9869ef8c8934e85d9f11c37e15c3fbcd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00202.html" title="Doubly-linked list template class.">List</a> head node pointer. <br/></td></tr>
+<tr class="separator:a9869ef8c8934e85d9f11c37e15c3fbcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ba444c70f6b66b87bb27a6d2d36797d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ba444c70f6b66b87bb27a6d2d36797d"></a>
+<a class="el" href="a00179.html">HashNodeBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#a7ba444c70f6b66b87bb27a6d2d36797d">tail_</a></td></tr>
+<tr class="memdesc:a7ba444c70f6b66b87bb27a6d2d36797d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00202.html" title="Doubly-linked list template class.">List</a> tail node pointer. <br/></td></tr>
+<tr class="separator:a7ba444c70f6b66b87bb27a6d2d36797d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c7d86e1585fb81b1cdc51bd2d386254"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c7d86e1585fb81b1cdc51bd2d386254"></a>
+<a class="el" href="a00179.html">HashNodeBase</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#a0c7d86e1585fb81b1cdc51bd2d386254">ptrs_</a></td></tr>
+<tr class="memdesc:a0c7d86e1585fb81b1cdc51bd2d386254"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bucket head pointers. <br/></td></tr>
+<tr class="separator:a0c7d86e1585fb81b1cdc51bd2d386254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3a0b8b24606e88eae46288aa5a3ae9f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3a0b8b24606e88eae46288aa5a3ae9f"></a>
+<a class="el" href="a00052.html">AllocatorBlock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#ae3a0b8b24606e88eae46288aa5a3ae9f">allocator_</a></td></tr>
+<tr class="memdesc:ae3a0b8b24606e88eae46288aa5a3ae9f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00234.html" title="Scene node that may contain components and child nodes.">Node</a> allocator. <br/></td></tr>
+<tr class="separator:ae3a0b8b24606e88eae46288aa5a3ae9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Hash set/map iterator base class. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<div class="textblock"><p>Hash set/map base class. </p>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/travis/build/urho3d/Urho3D/Source/Engine/Container/HashBase.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Container/HashBase.cpp</li>
 </ul>
 </div><!-- contents -->
