@@ -1969,11 +1969,9 @@ Classes</h1>
 <ul>
 <li>void SetToggleFullscreen(bool enable)</li>
 <li>void SetMouseVisible(bool enable)</li>
-<li>bool OpenJoystick(unsigned index)</li>
-<li>void CloseJoystick(unsigned index)</li>
-<li>bool DetectJoysticks()</li>
-<li>unsigned AddScreenJoystick(XMLFile* layoutFile = 0, XMLFile* styleFile = 0)</li>
-<li>bool RemoveScreenJoystick(unsigned index)</li>
+<li>int AddScreenJoystick(XMLFile* layoutFile = 0, XMLFile* styleFile = 0)</li>
+<li>bool RemoveScreenJoystick(int id)</li>
+<li>void SetScreenJoystickVisible(int id, bool enable)</li>
 <li>void SetScreenKeyboardVisible(bool enable)</li>
 <li>bool RecordGesture()</li>
 <li>bool SaveGestures(File* dest)</li>
@@ -2005,10 +2003,11 @@ Classes</h1>
 <li>unsigned GetNumTouches() const</li>
 <li>TouchState* GetTouch(unsigned index) const</li>
 <li>unsigned GetNumJoysticks() const</li>
-<li>const <a class="el" href="a00341.html" title="String class.">String</a> GetJoystickName(unsigned index) const</li>
-<li>JoystickState* GetJoystick(unsigned index)</li>
+<li>JoystickState* GetJoystick(int id)</li>
+<li>JoystickState* GetJoystickByIndex(unsigned index)</li>
 <li>bool GetToggleFullscreen() const</li>
 <li>bool GetScreenKeyboardSupport() const</li>
+<li>bool IsScreenJoystickVisible(int id) const</li>
 <li>bool IsScreenKeyboardVisible() const</li>
 <li>bool IsMouseVisible() const</li>
 <li>bool HasFocus()</li>
@@ -2084,6 +2083,7 @@ Classes</h1>
 <h3><a class="el" href="a00194.html" title="Input state for a joystick.">JoystickState</a></h3>
 <p>Methods:</p>
 <ul>
+<li>bool IsController() const</li>
 <li>unsigned GetNumButtons() const</li>
 <li>unsigned GetNumAxes() const</li>
 <li>unsigned GetNumHats() const</li>
@@ -2094,6 +2094,9 @@ Classes</h1>
 </ul>
 <p>Properties:</p>
 <ul>
+<li>const <a class="el" href="a00341.html" title="String class.">String</a> name</li>
+<li>const int joystickID</li>
+<li>bool controller (readonly)</li>
 <li>unsigned numButtons (readonly)</li>
 <li>unsigned numAxes (readonly)</li>
 <li>unsigned numHats (readonly)</li>
@@ -2713,7 +2716,7 @@ Classes</h1>
 <li>float minPriority</li>
 <li>bool alwaysUpdateOwner</li>
 </ul>
-<h3><a class="el" href="a00234.html" title="Scene node that may contain components and child nodes.">Node</a> : <a class="el" href="a00054.html" title="Base class for animatable object, an animatable object can be set animation on it&#39;s attributes...">Animatable</a></h3>
+<h3><a class="el" href="a00235.html" title="Scene node that may contain components and child nodes.">Node</a> : <a class="el" href="a00054.html" title="Base class for animatable object, an animatable object can be set animation on it&#39;s attributes...">Animatable</a></h3>
 <p>Methods:</p>
 <ul>
 <li>Node() (GC)</li>
@@ -3839,7 +3842,7 @@ Classes</h1>
 <li><a class="el" href="a00368.html" title="Two-dimensional vector.">Vector2</a> linearVelocity</li>
 <li>float angularVelocity</li>
 </ul>
-<h3><a class="el" href="a00297.html" title="Root scene node, represents the whole scene.">Scene</a> : <a class="el" href="a00234.html" title="Scene node that may contain components and child nodes.">Node</a></h3>
+<h3><a class="el" href="a00297.html" title="Root scene node, represents the whole scene.">Scene</a> : <a class="el" href="a00235.html" title="Scene node that may contain components and child nodes.">Node</a></h3>
 <p>Methods:</p>
 <ul>
 <li>Scene() (GC)</li>
