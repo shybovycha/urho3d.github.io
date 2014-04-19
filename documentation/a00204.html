@@ -20,73 +20,90 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00204.html">ListIteratorBase</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00204.html">LinkedList</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a00949.html">List of all members</a>  </div>
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="a00943.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::ListIteratorBase Struct Reference</div>  </div>
+<div class="title">Urho3D::LinkedList&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Doubly-linked list iterator base class.  
+<p>Singly-linked list template class. Elements must inherit from <a class="el" href="a00205.html" title="Singly-linked list node base class.">LinkedListNode</a>.  
  <a href="a00204.html#details">More...</a></p>
 
-<p><code>#include &lt;ListBase.h&gt;</code></p>
+<p><code>#include &lt;LinkedList.h&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Urho3D::ListIteratorBase:</div>
+Collaboration diagram for Urho3D::LinkedList&lt; T &gt;:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00950.svg" width="328" height="136"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for Urho3D::ListIteratorBase:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a00951.svg" width="247" height="142"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00944.svg" width="190" height="136"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa3921f22556453101af0e29d2909a6f6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3921f22556453101af0e29d2909a6f6"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#aa3921f22556453101af0e29d2909a6f6">ListIteratorBase</a> ()</td></tr>
-<tr class="memdesc:aa3921f22556453101af0e29d2909a6f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
-<tr class="separator:aa3921f22556453101af0e29d2909a6f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6389401714615a4b67aeb89685e33582"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6389401714615a4b67aeb89685e33582"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#a6389401714615a4b67aeb89685e33582">ListIteratorBase</a> (<a class="el" href="a00205.html">ListNodeBase</a> *ptr)</td></tr>
-<tr class="memdesc:a6389401714615a4b67aeb89685e33582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with a node pointer. <br/></td></tr>
-<tr class="separator:a6389401714615a4b67aeb89685e33582"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a5d0e52f1ba8d073624e699588f849e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a5d0e52f1ba8d073624e699588f849e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#a8a5d0e52f1ba8d073624e699588f849e">operator==</a> (const <a class="el" href="a00204.html">ListIteratorBase</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:a8a5d0e52f1ba8d073624e699588f849e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for equality with another iterator. <br/></td></tr>
-<tr class="separator:a8a5d0e52f1ba8d073624e699588f849e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91b6ed90409dfb5ccaedb0d822f710f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91b6ed90409dfb5ccaedb0d822f710f1"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#a91b6ed90409dfb5ccaedb0d822f710f1">operator!=</a> (const <a class="el" href="a00204.html">ListIteratorBase</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:a91b6ed90409dfb5ccaedb0d822f710f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for inequality with another iterator. <br/></td></tr>
-<tr class="separator:a91b6ed90409dfb5ccaedb0d822f710f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae00d73e9f6c814076803c9fb8f2fdf98"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae00d73e9f6c814076803c9fb8f2fdf98"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#ae00d73e9f6c814076803c9fb8f2fdf98">GotoNext</a> ()</td></tr>
-<tr class="memdesc:ae00d73e9f6c814076803c9fb8f2fdf98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Go to the next node. <br/></td></tr>
-<tr class="separator:ae00d73e9f6c814076803c9fb8f2fdf98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac63b48ac4d55bcae49d3e2dcd09edf0b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac63b48ac4d55bcae49d3e2dcd09edf0b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#ac63b48ac4d55bcae49d3e2dcd09edf0b">GotoPrev</a> ()</td></tr>
-<tr class="memdesc:ac63b48ac4d55bcae49d3e2dcd09edf0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Go to the previous node. <br/></td></tr>
-<tr class="separator:ac63b48ac4d55bcae49d3e2dcd09edf0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafc8c9469800c5a3db45d0e9a40745ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aafc8c9469800c5a3db45d0e9a40745ac"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#aafc8c9469800c5a3db45d0e9a40745ac">LinkedList</a> ()</td></tr>
+<tr class="memdesc:aafc8c9469800c5a3db45d0e9a40745ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct empty. <br/></td></tr>
+<tr class="separator:aafc8c9469800c5a3db45d0e9a40745ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab48b74395585fd61efe07abde64ab506"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab48b74395585fd61efe07abde64ab506"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#ab48b74395585fd61efe07abde64ab506">~LinkedList</a> ()</td></tr>
+<tr class="memdesc:ab48b74395585fd61efe07abde64ab506"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
+<tr class="separator:ab48b74395585fd61efe07abde64ab506"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f74444fabdb58aaae3d5dc55858e530"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f74444fabdb58aaae3d5dc55858e530"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#a3f74444fabdb58aaae3d5dc55858e530">Clear</a> ()</td></tr>
+<tr class="memdesc:a3f74444fabdb58aaae3d5dc55858e530"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all elements. <br/></td></tr>
+<tr class="separator:a3f74444fabdb58aaae3d5dc55858e530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab80b4b018dde1cce9c016eef1454aa79"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab80b4b018dde1cce9c016eef1454aa79"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#ab80b4b018dde1cce9c016eef1454aa79">InsertFront</a> (T *element)</td></tr>
+<tr class="memdesc:ab80b4b018dde1cce9c016eef1454aa79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert an element at the beginning. <br/></td></tr>
+<tr class="separator:ab80b4b018dde1cce9c016eef1454aa79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bdb3b1298f6c8a1cf5cf4ad409ce7e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7bdb3b1298f6c8a1cf5cf4ad409ce7e6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#a7bdb3b1298f6c8a1cf5cf4ad409ce7e6">Insert</a> (T *element)</td></tr>
+<tr class="memdesc:a7bdb3b1298f6c8a1cf5cf4ad409ce7e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert an element at the end. <br/></td></tr>
+<tr class="separator:a7bdb3b1298f6c8a1cf5cf4ad409ce7e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09a86febbf26d335038dbbe27acfb5cd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a09a86febbf26d335038dbbe27acfb5cd"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#a09a86febbf26d335038dbbe27acfb5cd">Erase</a> (T *element)</td></tr>
+<tr class="memdesc:a09a86febbf26d335038dbbe27acfb5cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase an element. Return true if successful. <br/></td></tr>
+<tr class="separator:a09a86febbf26d335038dbbe27acfb5cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d337372aaa6f525aafc8834f39cf155"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d337372aaa6f525aafc8834f39cf155"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#a4d337372aaa6f525aafc8834f39cf155">Erase</a> (T *element, T *previous)</td></tr>
+<tr class="memdesc:a4d337372aaa6f525aafc8834f39cf155"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase an element when the previous element is known (optimization.) Return true if successful. <br/></td></tr>
+<tr class="separator:a4d337372aaa6f525aafc8834f39cf155"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab57b81eeda861807014c585d6fd0d868"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab57b81eeda861807014c585d6fd0d868"></a>
+T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#ab57b81eeda861807014c585d6fd0d868">First</a> () const </td></tr>
+<tr class="memdesc:ab57b81eeda861807014c585d6fd0d868"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return first element, or null if empty. <br/></td></tr>
+<tr class="separator:ab57b81eeda861807014c585d6fd0d868"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb42340e8dc10fba88a9a394fc0f8ca9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb42340e8dc10fba88a9a394fc0f8ca9"></a>
+T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#afb42340e8dc10fba88a9a394fc0f8ca9">Last</a> () const </td></tr>
+<tr class="memdesc:afb42340e8dc10fba88a9a394fc0f8ca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return last element, or null if empty. <br/></td></tr>
+<tr class="separator:afb42340e8dc10fba88a9a394fc0f8ca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9ca51367dc387f8461bf5ebdfe2dde8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9ca51367dc387f8461bf5ebdfe2dde8"></a>
+T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#af9ca51367dc387f8461bf5ebdfe2dde8">Next</a> (T *element) const </td></tr>
+<tr class="memdesc:af9ca51367dc387f8461bf5ebdfe2dde8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return next element, or null if no more elements. <br/></td></tr>
+<tr class="separator:af9ca51367dc387f8461bf5ebdfe2dde8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18a9bf7ebfe1b4a8865273e79a62a549"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18a9bf7ebfe1b4a8865273e79a62a549"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#a18a9bf7ebfe1b4a8865273e79a62a549">Empty</a> () const </td></tr>
+<tr class="memdesc:a18a9bf7ebfe1b4a8865273e79a62a549"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether is empty. <br/></td></tr>
+<tr class="separator:a18a9bf7ebfe1b4a8865273e79a62a549"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a80ff89552b2692650c91993bb595881e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80ff89552b2692650c91993bb595881e"></a>
-<a class="el" href="a00205.html">ListNodeBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#a80ff89552b2692650c91993bb595881e">ptr_</a></td></tr>
-<tr class="memdesc:a80ff89552b2692650c91993bb595881e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00235.html" title="Scene node that may contain components and child nodes.">Node</a> pointer. <br/></td></tr>
-<tr class="separator:a80ff89552b2692650c91993bb595881e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ab7c1278870607cb3d3c91c6effd76ff7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7c1278870607cb3d3c91c6effd76ff7"></a>
+T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#ab7c1278870607cb3d3c91c6effd76ff7">head_</a></td></tr>
+<tr class="memdesc:ab7c1278870607cb3d3c91c6effd76ff7"><td class="mdescLeft">&#160;</td><td class="mdescRight">First element. <br/></td></tr>
+<tr class="separator:ab7c1278870607cb3d3c91c6effd76ff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Doubly-linked list iterator base class. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Container/ListBase.h</li>
+<div class="textblock"><h3>template&lt;class T&gt;<br/>
+class Urho3D::LinkedList&lt; T &gt;</h3>
+
+<p>Singly-linked list template class. Elements must inherit from <a class="el" href="a00205.html" title="Singly-linked list node base class.">LinkedListNode</a>. </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Container/LinkedList.h</li>
 </ul>
 </div><!-- contents -->
