@@ -285,10 +285,6 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <a class="el" href="a00395.html">Zone</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00288.html#add23f2f9f835ed761827555f746b9658">GetDefaultZone</a> () const </td></tr>
 <tr class="memdesc:add23f2f9f835ed761827555f746b9658"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the default zone. <br/></td></tr>
 <tr class="separator:add23f2f9f835ed761827555f746b9658"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c77e9aae8547adb4a142e79d797bd92"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2c77e9aae8547adb4a142e79d797bd92"></a>
-<a class="el" href="a00200.html">Light</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00288.html#a2c77e9aae8547adb4a142e79d797bd92">GetQuadDirLight</a> () const </td></tr>
-<tr class="memdesc:a2c77e9aae8547adb4a142e79d797bd92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the directional light for fullscreen quad rendering. <br/></td></tr>
-<tr class="separator:a2c77e9aae8547adb4a142e79d797bd92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ba48787e27304c79281bf3036db5988"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ba48787e27304c79281bf3036db5988"></a>
 <a class="el" href="a00217.html">Material</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00288.html#a1ba48787e27304c79281bf3036db5988">GetDefaultMaterial</a> () const </td></tr>
 <tr class="memdesc:a1ba48787e27304c79281bf3036db5988"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the default material. <br/></td></tr>
@@ -339,6 +335,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a002
 <a class="el" href="a00173.html">Geometry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00288.html#acad56929dfa55c978d3ce19aa57c5483">GetLightGeometry</a> (<a class="el" href="a00200.html">Light</a> *light)</td></tr>
 <tr class="memdesc:acad56929dfa55c978d3ce19aa57c5483"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return volume geometry for a light. <br/></td></tr>
 <tr class="separator:acad56929dfa55c978d3ce19aa57c5483"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a887e9961f27af8db3298c0c0ba0e582c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a887e9961f27af8db3298c0c0ba0e582c"></a>
+<a class="el" href="a00173.html">Geometry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00288.html#a887e9961f27af8db3298c0c0ba0e582c">GetQuadGeometry</a> ()</td></tr>
+<tr class="memdesc:a887e9961f27af8db3298c0c0ba0e582c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return quad geometry used in postprocessing. <br/></td></tr>
+<tr class="separator:a887e9961f27af8db3298c0c0ba0e582c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d4509e32b17bff5f3069f8fe6fd448d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00355.html">Texture2D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00288.html#a7d4509e32b17bff5f3069f8fe6fd448d">GetShadowMap</a> (<a class="el" href="a00200.html">Light</a> *light, <a class="el" href="a00092.html">Camera</a> *camera, unsigned viewWidth, unsigned viewHeight)</td></tr>
 <tr class="memdesc:a7d4509e32b17bff5f3069f8fe6fd448d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a shadow map. If shadow map reuse is disabled, a different map is returned each time.  <a href="#a7d4509e32b17bff5f3069f8fe6fd448d">More...</a><br/></td></tr>
 <tr class="separator:a7d4509e32b17bff5f3069f8fe6fd448d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -617,10 +617,6 @@ Private Attributes</h2></td></tr>
 <a class="el" href="a00323.html">SharedPtr</a>&lt; <a class="el" href="a00395.html">Zone</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00288.html#a088f440d5b8412ff8f02f2a3d9531404">defaultZone_</a></td></tr>
 <tr class="memdesc:a088f440d5b8412ff8f02f2a3d9531404"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default zone. <br/></td></tr>
 <tr class="separator:a088f440d5b8412ff8f02f2a3d9531404"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9a038f399607308eb872afeac05f4bb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9a038f399607308eb872afeac05f4bb"></a>
-<a class="el" href="a00323.html">SharedPtr</a>&lt; <a class="el" href="a00200.html">Light</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00288.html#af9a038f399607308eb872afeac05f4bb">quadDirLight_</a></td></tr>
-<tr class="memdesc:af9a038f399607308eb872afeac05f4bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Directional light for drawing fullscreen quads. <br/></td></tr>
-<tr class="separator:af9a038f399607308eb872afeac05f4bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59998b0e5210e4856f347e8b992579e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59998b0e5210e4856f347e8b992579e8"></a>
 <a class="el" href="a00323.html">SharedPtr</a>&lt; <a class="el" href="a00173.html">Geometry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00288.html#a59998b0e5210e4856f347e8b992579e8">dirLightGeometry_</a></td></tr>
 <tr class="memdesc:a59998b0e5210e4856f347e8b992579e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Directional light quad geometry. <br/></td></tr>
