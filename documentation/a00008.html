@@ -2080,6 +2080,115 @@ Classes</h1>
 <li>int y</li>
 <li>const <a class="el" href="a00192.html" title="Two-dimensional vector with integer values.">IntVector2</a> ZERO</li>
 </ul>
+<h3><a class="el" href="a00197.html" title="JSON document resource.">JSONFile</a> : <a class="el" href="a00294.html" title="Base class for resources.">Resource</a></h3>
+<p>Methods:</p>
+<ul>
+<li>JSONFile() (GC)</li>
+<li>JSONFile* new()</li>
+<li>void delete()</li>
+<li><a class="el" href="a00198.html" title="JSON value class.">JSONValue</a> CreateRoot(JSONValueType valueType = JSON_OBJECT)</li>
+<li><a class="el" href="a00198.html" title="JSON value class.">JSONValue</a> GetRoot(JSONValueType valueType = JSON_ANY)</li>
+</ul>
+<h3><a class="el" href="a00198.html" title="JSON value class.">JSONValue</a></h3>
+<p>Methods:</p>
+<ul>
+<li>bool IsNull() const</li>
+<li>bool NotNull() const</li>
+<li>bool operatorbool() const</li>
+<li><a class="el" href="a00198.html" title="JSON value class.">JSONValue</a> CreateChild(const <a class="el" href="a00346.html" title="String class.">String</a> name, JSONValueType valueType = JSON_OBJECT)</li>
+<li><a class="el" href="a00198.html" title="JSON value class.">JSONValue</a> GetChild(const <a class="el" href="a00346.html" title="String class.">String</a> name, JSONValueType valueType = JSON_ANY) const</li>
+<li>void SetInt(const String name, int value)</li>
+<li>void SetBool(const String name, bool value)</li>
+<li>void SetFloat(const String name, float value)</li>
+<li>void SetVector2(const String name, const Vector2&amp; value)</li>
+<li>void SetVector3(const String name, const Vector3&amp; value)</li>
+<li>void SetVector4(const String name, const Vector4&amp; value)</li>
+<li>void SetVectorVariant(const String name, const Variant&amp; value)</li>
+<li>void SetQuaternion(const String name, const Quaternion&amp; value)</li>
+<li>void SetColor(const String name, const Color&amp; value)</li>
+<li>void SetString(const String name, const String value)</li>
+<li>void SetResourceRef(const String name, const ResourceRef&amp; value)</li>
+<li>void SetResourceRefList(const String name, const ResourceRefList&amp; value)</li>
+<li>void SetIntRect(const String name, const IntRect&amp; value)</li>
+<li>void SetIntVector2(const String name, const IntVector2&amp; value)</li>
+<li>void SetMatrix3(const String name, const Matrix3&amp; value)</li>
+<li>void SetMatrix3x4(const String name, const Matrix3x4&amp; value)</li>
+<li>void SetMatrix4(const String name, const Matrix4&amp; value)</li>
+<li>void SetVariant(const String name, const Variant&amp; value)</li>
+<li>void SetVariantValue(const String name, const Variant&amp; value)</li>
+<li>bool IsObject() const</li>
+<li>Vector&lt;String&gt; GetChildNames() const</li>
+<li>int GetInt(const String name) const</li>
+<li>bool GetBool(const String name) const</li>
+<li>float GetFloat(const String name) const</li>
+<li><a class="el" href="a00374.html" title="Two-dimensional vector.">Vector2</a> GetVector2(const String name) const</li>
+<li><a class="el" href="a00375.html" title="Three-dimensional vector.">Vector3</a> GetVector3(const String name) const</li>
+<li><a class="el" href="a00376.html" title="Four-dimensional vector.">Vector4</a> GetVector4(const String name) const</li>
+<li><a class="el" href="a00371.html" title="Variable that supports a fixed set of types.">Variant</a> GetVectorVariant(const String name) const</li>
+<li><a class="el" href="a00277.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> GetQuaternion(const String name) const</li>
+<li><a class="el" href="a00104.html" title="RGBA color.">Color</a> GetColor(const String name) const</li>
+<li><a class="el" href="a00346.html" title="String class.">String</a> GetString(const String name) const</li>
+<li>const char* GetCString(const String name) const</li>
+<li><a class="el" href="a00297.html" title="Typed resource reference.">ResourceRef</a> GetResourceRef(const String name) const</li>
+<li><a class="el" href="a00298.html" title="List of typed resource references.">ResourceRefList</a> GetResourceRefList(const String name) const</li>
+<li><a class="el" href="a00191.html" title="Two-dimensional bounding rectangle with integer values.">IntRect</a> GetIntRect(const String name) const</li>
+<li><a class="el" href="a00192.html" title="Two-dimensional vector with integer values.">IntVector2</a> GetIntVector2(const String name) const</li>
+<li><a class="el" href="a00220.html" title="3x3 matrix for rotation and scaling.">Matrix3</a> GetMatrix3(const String name) const</li>
+<li><a class="el" href="a00221.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> GetMatrix3x4(const String name) const</li>
+<li><a class="el" href="a00222.html" title="4x4 matrix for arbitrary linear transforms including projection.">Matrix4</a> GetMatrix4(const String name) const</li>
+<li><a class="el" href="a00371.html" title="Variable that supports a fixed set of types.">Variant</a> GetVariant(const String name) const</li>
+<li><a class="el" href="a00371.html" title="Variable that supports a fixed set of types.">Variant</a> GetVariantValue(const String name, VariantType type) const</li>
+<li><a class="el" href="a00198.html" title="JSON value class.">JSONValue</a> CreateChild(JSONValueType valueType = JSON_OBJECT)</li>
+<li><a class="el" href="a00198.html" title="JSON value class.">JSONValue</a> GetChild(unsigned index, JSONValueType valueType = JSON_ANY) const</li>
+<li>void AddInt(int value)</li>
+<li>void AddBool(bool value)</li>
+<li>void AddFloat(float value)</li>
+<li>void AddVector2(const Vector2&amp; value)</li>
+<li>void AddVector3(const Vector3&amp; value)</li>
+<li>void AddVector4(const Vector4&amp; value)</li>
+<li>void AddVectorVariant(const Variant&amp; value)</li>
+<li>void AddQuaternion(const Quaternion&amp; value)</li>
+<li>void AddColor(const Color&amp; value)</li>
+<li>void AddString(const String value)</li>
+<li>void AddResourceRef(const ResourceRef&amp; value)</li>
+<li>void AddResourceRefList(const ResourceRefList&amp; value)</li>
+<li>void AddIntRect(const IntRect&amp; value)</li>
+<li>void AddIntVector2(const IntVector2&amp; value)</li>
+<li>void AddMatrix3(const Matrix3&amp; value)</li>
+<li>void AddMatrix3x4(const Matrix3x4&amp; value)</li>
+<li>void AddMatrix4(const Matrix4&amp; value)</li>
+<li>void AddVariant(const Variant&amp; value)</li>
+<li>void AddVariantValue(const Variant&amp; value)</li>
+<li>bool IsArray() const</li>
+<li>unsigned GetSize() const</li>
+<li>int GetInt(unsigned index) const</li>
+<li>bool GetBool(unsigned index) const</li>
+<li>float GetFloat(unsigned index) const</li>
+<li><a class="el" href="a00374.html" title="Two-dimensional vector.">Vector2</a> GetVector2(unsigned index) const</li>
+<li><a class="el" href="a00375.html" title="Three-dimensional vector.">Vector3</a> GetVector3(unsigned index) const</li>
+<li><a class="el" href="a00376.html" title="Four-dimensional vector.">Vector4</a> GetVector4(unsigned index) const</li>
+<li><a class="el" href="a00371.html" title="Variable that supports a fixed set of types.">Variant</a> GetVectorVariant(unsigned index) const</li>
+<li><a class="el" href="a00277.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> GetQuaternion(unsigned index) const</li>
+<li><a class="el" href="a00104.html" title="RGBA color.">Color</a> GetColor(unsigned index) const</li>
+<li><a class="el" href="a00346.html" title="String class.">String</a> GetString(unsigned index) const</li>
+<li>const char* GetCString(unsigned index) const</li>
+<li><a class="el" href="a00297.html" title="Typed resource reference.">ResourceRef</a> GetResourceRef(unsigned index) const</li>
+<li><a class="el" href="a00298.html" title="List of typed resource references.">ResourceRefList</a> GetResourceRefList(unsigned index) const</li>
+<li><a class="el" href="a00191.html" title="Two-dimensional bounding rectangle with integer values.">IntRect</a> GetIntRect(unsigned index) const</li>
+<li><a class="el" href="a00192.html" title="Two-dimensional vector with integer values.">IntVector2</a> GetIntVector2(unsigned index) const</li>
+<li><a class="el" href="a00220.html" title="3x3 matrix for rotation and scaling.">Matrix3</a> GetMatrix3(unsigned index) const</li>
+<li><a class="el" href="a00221.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> GetMatrix3x4(unsigned index) const</li>
+<li><a class="el" href="a00222.html" title="4x4 matrix for arbitrary linear transforms including projection.">Matrix4</a> GetMatrix4(unsigned index) const</li>
+<li><a class="el" href="a00371.html" title="Variable that supports a fixed set of types.">Variant</a> GetVariant(unsigned index) const</li>
+<li><a class="el" href="a00371.html" title="Variable that supports a fixed set of types.">Variant</a> GetVariantValue(unsigned index, VariantType type) const</li>
+</ul>
+<p>Properties:</p>
+<ul>
+<li>const <a class="el" href="a00198.html" title="JSON value class.">JSONValue</a> EMPTY</li>
+<li>bool null (readonly)</li>
+<li>bool object (readonly)</li>
+<li>bool array (readonly)</li>
+</ul>
 <h3><a class="el" href="a00196.html" title="Input state for a joystick.">JoystickState</a></h3>
 <p>Methods:</p>
 <ul>
@@ -5878,6 +5987,12 @@ Enumerations</h1>
 <li>int OUTSIDE</li>
 <li>int INTERSECTS</li>
 <li>int INSIDE</li>
+</ul>
+<h3>JSONValueType</h3>
+<ul>
+<li>int JSON_ANY</li>
+<li>int JSON_OBJECT</li>
+<li>int JSON_ARRAY</li>
 </ul>
 <h3>LayoutMode</h3>
 <ul>
