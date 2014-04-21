@@ -20,132 +20,67 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00277.html">Ray</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00277.html">RayOctreeQuery</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01372.html">List of all members</a>  </div>
+<a href="a01193.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::Ray Class Reference</div>  </div>
+<div class="title">Urho3D::RayOctreeQuery Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Infinite straight line in three-dimensional space.  
+<p>Raycast octree query.  
  <a href="a00277.html#details">More...</a></p>
 
-<p><code>#include &lt;Ray.h&gt;</code></p>
+<p><code>#include &lt;OctreeQuery.h&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for Urho3D::Ray:</div>
+Collaboration diagram for Urho3D::RayOctreeQuery:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a01373.svg" width="224" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a01194.svg" width="414" height="376"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a530310fd7d8e66eb3d5f9ea188f129bb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a530310fd7d8e66eb3d5f9ea188f129bb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#a530310fd7d8e66eb3d5f9ea188f129bb">Ray</a> ()</td></tr>
-<tr class="memdesc:a530310fd7d8e66eb3d5f9ea188f129bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a degenerate ray with zero origin and direction. <br/></td></tr>
-<tr class="separator:a530310fd7d8e66eb3d5f9ea188f129bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa74c386da4eacaacbb55c4309137a543"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa74c386da4eacaacbb55c4309137a543"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#aa74c386da4eacaacbb55c4309137a543">Ray</a> (const <a class="el" href="a00376.html">Vector3</a> &amp;origin, const <a class="el" href="a00376.html">Vector3</a> &amp;direction)</td></tr>
-<tr class="memdesc:aa74c386da4eacaacbb55c4309137a543"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from origin and direction. The direction will be normalized. <br/></td></tr>
-<tr class="separator:aa74c386da4eacaacbb55c4309137a543"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f8a3b8a7963da145951e0dbfd1b5bb9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f8a3b8a7963da145951e0dbfd1b5bb9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#a7f8a3b8a7963da145951e0dbfd1b5bb9">Ray</a> (const <a class="el" href="a00277.html">Ray</a> &amp;ray)</td></tr>
-<tr class="memdesc:a7f8a3b8a7963da145951e0dbfd1b5bb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy-construct from another ray. <br/></td></tr>
-<tr class="separator:a7f8a3b8a7963da145951e0dbfd1b5bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca7ded3b19959ed33cb5375318c0247a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca7ded3b19959ed33cb5375318c0247a"></a>
-<a class="el" href="a00277.html">Ray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#aca7ded3b19959ed33cb5375318c0247a">operator=</a> (const <a class="el" href="a00277.html">Ray</a> &amp;rhs)</td></tr>
-<tr class="memdesc:aca7ded3b19959ed33cb5375318c0247a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign from another ray. <br/></td></tr>
-<tr class="separator:aca7ded3b19959ed33cb5375318c0247a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3b4e1249c0d9304ca4abec8045d500d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3b4e1249c0d9304ca4abec8045d500d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#aa3b4e1249c0d9304ca4abec8045d500d">operator==</a> (const <a class="el" href="a00277.html">Ray</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:aa3b4e1249c0d9304ca4abec8045d500d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for equality with another ray. <br/></td></tr>
-<tr class="separator:aa3b4e1249c0d9304ca4abec8045d500d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43e1292016fb917b7bc4e4d6631349f5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43e1292016fb917b7bc4e4d6631349f5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#a43e1292016fb917b7bc4e4d6631349f5">operator!=</a> (const <a class="el" href="a00277.html">Ray</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:a43e1292016fb917b7bc4e4d6631349f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for inequality with another ray. <br/></td></tr>
-<tr class="separator:a43e1292016fb917b7bc4e4d6631349f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af567cd1a84949df6a4222e09f5c49a17"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af567cd1a84949df6a4222e09f5c49a17"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#af567cd1a84949df6a4222e09f5c49a17">Define</a> (const <a class="el" href="a00376.html">Vector3</a> &amp;origin, const <a class="el" href="a00376.html">Vector3</a> &amp;direction)</td></tr>
-<tr class="memdesc:af567cd1a84949df6a4222e09f5c49a17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define from origin and direction. The direction will be normalized. <br/></td></tr>
-<tr class="separator:af567cd1a84949df6a4222e09f5c49a17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a347ad848dec9b5bc03f036413e46ce9d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a347ad848dec9b5bc03f036413e46ce9d"></a>
-<a class="el" href="a00376.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#a347ad848dec9b5bc03f036413e46ce9d">Project</a> (const <a class="el" href="a00376.html">Vector3</a> &amp;point) const </td></tr>
-<tr class="memdesc:a347ad848dec9b5bc03f036413e46ce9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Project a point on the ray. <br/></td></tr>
-<tr class="separator:a347ad848dec9b5bc03f036413e46ce9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d2d15c771b885647e72370e1429b8f4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3d2d15c771b885647e72370e1429b8f4"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#a3d2d15c771b885647e72370e1429b8f4">Distance</a> (const <a class="el" href="a00376.html">Vector3</a> &amp;point) const </td></tr>
-<tr class="memdesc:a3d2d15c771b885647e72370e1429b8f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return distance of a point from the ray. <br/></td></tr>
-<tr class="separator:a3d2d15c771b885647e72370e1429b8f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dd8eaa6528c71e47bb4faae09bbf468"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2dd8eaa6528c71e47bb4faae09bbf468"></a>
-<a class="el" href="a00376.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#a2dd8eaa6528c71e47bb4faae09bbf468">ClosestPoint</a> (const <a class="el" href="a00277.html">Ray</a> &amp;ray) const </td></tr>
-<tr class="memdesc:a2dd8eaa6528c71e47bb4faae09bbf468"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return closest point to another ray. <br/></td></tr>
-<tr class="separator:a2dd8eaa6528c71e47bb4faae09bbf468"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac08d9b3eda57bec854f267860014a2b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac08d9b3eda57bec854f267860014a2b1"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#ac08d9b3eda57bec854f267860014a2b1">HitDistance</a> (const <a class="el" href="a00268.html">Plane</a> &amp;plane) const </td></tr>
-<tr class="memdesc:ac08d9b3eda57bec854f267860014a2b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hit distance to a plane, or infinity if no hit. <br/></td></tr>
-<tr class="separator:ac08d9b3eda57bec854f267860014a2b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e091b5f23a867eec6365085a43199e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e091b5f23a867eec6365085a43199e5"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#a0e091b5f23a867eec6365085a43199e5">HitDistance</a> (const <a class="el" href="a00084.html">BoundingBox</a> &amp;box) const </td></tr>
-<tr class="memdesc:a0e091b5f23a867eec6365085a43199e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hit distance to a bounding box, or infinity if no hit. <br/></td></tr>
-<tr class="separator:a0e091b5f23a867eec6365085a43199e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39bcb8ad2d879d8588b0ec2bff76d05b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a39bcb8ad2d879d8588b0ec2bff76d05b"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#a39bcb8ad2d879d8588b0ec2bff76d05b">HitDistance</a> (const <a class="el" href="a00165.html">Frustum</a> &amp;frustum, bool solidInside=true) const </td></tr>
-<tr class="memdesc:a39bcb8ad2d879d8588b0ec2bff76d05b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hit distance to a frustum, or infinity if no hit. If solidInside parameter is true (default) rays originating from inside return zero distance, otherwise the distance to the closest plane. <br/></td></tr>
-<tr class="separator:a39bcb8ad2d879d8588b0ec2bff76d05b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac031ab30e007afcdbbfcea7ebe4c83a7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac031ab30e007afcdbbfcea7ebe4c83a7"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#ac031ab30e007afcdbbfcea7ebe4c83a7">HitDistance</a> (const <a class="el" href="a00332.html">Sphere</a> &amp;sphere) const </td></tr>
-<tr class="memdesc:ac031ab30e007afcdbbfcea7ebe4c83a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hit distance to a sphere, or infinity if no hit. <br/></td></tr>
-<tr class="separator:ac031ab30e007afcdbbfcea7ebe4c83a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe9a0e5ed9f59abc8a6c8b212b5ec128"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe9a0e5ed9f59abc8a6c8b212b5ec128"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#abe9a0e5ed9f59abc8a6c8b212b5ec128">HitDistance</a> (const <a class="el" href="a00376.html">Vector3</a> &amp;v0, const <a class="el" href="a00376.html">Vector3</a> &amp;v1, const <a class="el" href="a00376.html">Vector3</a> &amp;v2) const </td></tr>
-<tr class="memdesc:abe9a0e5ed9f59abc8a6c8b212b5ec128"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hit distance to a triangle, or infinity if no hit. <br/></td></tr>
-<tr class="separator:abe9a0e5ed9f59abc8a6c8b212b5ec128"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a974bf82e2d539512fee784cf7d5da829"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a974bf82e2d539512fee784cf7d5da829"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#a974bf82e2d539512fee784cf7d5da829">HitDistance</a> (const <a class="el" href="a00376.html">Vector3</a> &amp;v0, const <a class="el" href="a00376.html">Vector3</a> &amp;v1, const <a class="el" href="a00376.html">Vector3</a> &amp;v2, <a class="el" href="a00376.html">Vector3</a> *outNormal) const </td></tr>
-<tr class="memdesc:a974bf82e2d539512fee784cf7d5da829"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hit distance to a triangle and out normal, or infinity if no hit. <br/></td></tr>
-<tr class="separator:a974bf82e2d539512fee784cf7d5da829"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e13ce21dbe45375535c92d0789ce3c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e13ce21dbe45375535c92d0789ce3c8"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#a8e13ce21dbe45375535c92d0789ce3c8">HitDistance</a> (const void *vertexData, unsigned vertexSize, unsigned vertexStart, unsigned vertexCount, <a class="el" href="a00376.html">Vector3</a> *outNormal=0) const </td></tr>
-<tr class="memdesc:a8e13ce21dbe45375535c92d0789ce3c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hit distance to non-indexed geometry data, or infinity if no hit. Optionally return normal. <br/></td></tr>
-<tr class="separator:a8e13ce21dbe45375535c92d0789ce3c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27a1169cf5316218a568b39d457d2a82"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a27a1169cf5316218a568b39d457d2a82"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#a27a1169cf5316218a568b39d457d2a82">HitDistance</a> (const void *vertexData, unsigned vertexSize, const void *indexData, unsigned indexSize, unsigned indexStart, unsigned indexCount, <a class="el" href="a00376.html">Vector3</a> *outNormal=0) const </td></tr>
-<tr class="memdesc:a27a1169cf5316218a568b39d457d2a82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hit distance to indexed geometry data, or infinity if no hit. <br/></td></tr>
-<tr class="separator:a27a1169cf5316218a568b39d457d2a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e86374817dc67be576742b1d4b1be2b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e86374817dc67be576742b1d4b1be2b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#a4e86374817dc67be576742b1d4b1be2b">InsideGeometry</a> (const void *vertexData, unsigned vertexSize, unsigned vertexStart, unsigned vertexCount) const </td></tr>
-<tr class="memdesc:a4e86374817dc67be576742b1d4b1be2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether ray is inside non-indexed geometry. <br/></td></tr>
-<tr class="separator:a4e86374817dc67be576742b1d4b1be2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4adfc71eded992408250a3bb4de2b081"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4adfc71eded992408250a3bb4de2b081"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#a4adfc71eded992408250a3bb4de2b081">InsideGeometry</a> (const void *vertexData, unsigned vertexSize, const void *indexData, unsigned indexSize, unsigned indexStart, unsigned indexCount) const </td></tr>
-<tr class="memdesc:a4adfc71eded992408250a3bb4de2b081"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether ray is inside indexed geometry. <br/></td></tr>
-<tr class="separator:a4adfc71eded992408250a3bb4de2b081"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53e94939c0a9be488d31b47dcf868220"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53e94939c0a9be488d31b47dcf868220"></a>
-<a class="el" href="a00277.html">Ray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#a53e94939c0a9be488d31b47dcf868220">Transformed</a> (const <a class="el" href="a00218.html">Matrix3x4</a> &amp;transform) const </td></tr>
-<tr class="memdesc:a53e94939c0a9be488d31b47dcf868220"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return transformed by a 3x4 matrix. This may result in a non-normalized direction. <br/></td></tr>
-<tr class="separator:a53e94939c0a9be488d31b47dcf868220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d1faa4a6729eda2ae5866c005631988"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d1faa4a6729eda2ae5866c005631988"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#a6d1faa4a6729eda2ae5866c005631988">RayOctreeQuery</a> (<a class="el" href="a00268.html">PODVector</a>&lt; <a class="el" href="a00278.html">RayQueryResult</a> &gt; &amp;result, const <a class="el" href="a00276.html">Ray</a> &amp;ray, RayQueryLevel level=RAY_TRIANGLE, float maxDistance=M_INFINITY, unsigned char drawableFlags=DRAWABLE_ANY, unsigned viewMask=DEFAULT_VIEWMASK)</td></tr>
+<tr class="memdesc:a6d1faa4a6729eda2ae5866c005631988"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with ray and query parameters. <br/></td></tr>
+<tr class="separator:a6d1faa4a6729eda2ae5866c005631988"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a27df032f7d802b4595ece1d70896d0e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a27df032f7d802b4595ece1d70896d0e5"></a>
-<a class="el" href="a00376.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#a27df032f7d802b4595ece1d70896d0e5">origin_</a></td></tr>
-<tr class="memdesc:a27df032f7d802b4595ece1d70896d0e5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00277.html" title="Infinite straight line in three-dimensional space.">Ray</a> origin. <br/></td></tr>
-<tr class="separator:a27df032f7d802b4595ece1d70896d0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d85bded5863ada8e089037714a21a78"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d85bded5863ada8e089037714a21a78"></a>
-<a class="el" href="a00376.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#a1d85bded5863ada8e089037714a21a78">direction_</a></td></tr>
-<tr class="memdesc:a1d85bded5863ada8e089037714a21a78"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00277.html" title="Infinite straight line in three-dimensional space.">Ray</a> direction. <br/></td></tr>
-<tr class="separator:a1d85bded5863ada8e089037714a21a78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11a87820ec71778e34317f2954bd3da1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11a87820ec71778e34317f2954bd3da1"></a>
+<a class="el" href="a00268.html">PODVector</a>&lt; <a class="el" href="a00278.html">RayQueryResult</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#a11a87820ec71778e34317f2954bd3da1">result_</a></td></tr>
+<tr class="memdesc:a11a87820ec71778e34317f2954bd3da1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result vector reference. <br/></td></tr>
+<tr class="separator:a11a87820ec71778e34317f2954bd3da1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a433178c8a9a6c707e3e49b4b5b9cc931"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a433178c8a9a6c707e3e49b4b5b9cc931"></a>
+<a class="el" href="a00276.html">Ray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#a433178c8a9a6c707e3e49b4b5b9cc931">ray_</a></td></tr>
+<tr class="memdesc:a433178c8a9a6c707e3e49b4b5b9cc931"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00276.html" title="Infinite straight line in three-dimensional space.">Ray</a>. <br/></td></tr>
+<tr class="separator:a433178c8a9a6c707e3e49b4b5b9cc931"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbaa5aaef647e41f74b863c2b3ee4208"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abbaa5aaef647e41f74b863c2b3ee4208"></a>
+unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#abbaa5aaef647e41f74b863c2b3ee4208">drawableFlags_</a></td></tr>
+<tr class="memdesc:abbaa5aaef647e41f74b863c2b3ee4208"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00146.html" title="Base class for visible components.">Drawable</a> flags to include. <br/></td></tr>
+<tr class="separator:abbaa5aaef647e41f74b863c2b3ee4208"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a960e05dc69a509ef726fffe9137ccd5d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a960e05dc69a509ef726fffe9137ccd5d"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#a960e05dc69a509ef726fffe9137ccd5d">viewMask_</a></td></tr>
+<tr class="memdesc:a960e05dc69a509ef726fffe9137ccd5d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00146.html" title="Base class for visible components.">Drawable</a> layers to include. <br/></td></tr>
+<tr class="separator:a960e05dc69a509ef726fffe9137ccd5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa4a7c030a345dc79ee04d44f3561302"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa4a7c030a345dc79ee04d44f3561302"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#afa4a7c030a345dc79ee04d44f3561302">maxDistance_</a></td></tr>
+<tr class="memdesc:afa4a7c030a345dc79ee04d44f3561302"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum ray distance. <br/></td></tr>
+<tr class="separator:afa4a7c030a345dc79ee04d44f3561302"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46e82454603d2d2c15f5a06923419a37"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46e82454603d2d2c15f5a06923419a37"></a>
+RayQueryLevel&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00277.html#a46e82454603d2d2c15f5a06923419a37">level_</a></td></tr>
+<tr class="memdesc:a46e82454603d2d2c15f5a06923419a37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raycast detail level. <br/></td></tr>
+<tr class="separator:a46e82454603d2d2c15f5a06923419a37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Infinite straight line in three-dimensional space. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Math/Ray.h</li>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Math/Ray.cpp</li>
+<div class="textblock"><p>Raycast octree query. </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/OctreeQuery.h</li>
 </ul>
 </div><!-- contents -->
