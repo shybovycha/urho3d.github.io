@@ -38,7 +38,7 @@ Animation triggers</h1>
 <div class="line">&lt;/animation&gt;</div>
 </div><!-- fragment --><h1><a class="anchor" id="SkeletalAnimation_ManualControl"></a>
 Manual bone control</h1>
-<p>By default an <a class="el" href="a00055.html" title="Animated model component.">AnimatedModel</a>'s bone nodes are reset on each frame, after which all active animation states are applied to the bones. This mechanism can be turned off per-bone basis to allow manual bone control. To do this, query a bone from the <a class="el" href="a00055.html" title="Animated model component.">AnimatedModel</a>'s skeleton and set its <a class="el" href="a00086.html#a81a1ce6f32473a71fe072911cc07e167">animated_</a> member variable to false. For example:</p>
+<p>By default an <a class="el" href="a00055.html" title="Animated model component.">AnimatedModel</a>'s bone nodes are reset on each frame, after which all active animation states are applied to the bones. This mechanism can be turned off per-bone basis to allow manual bone control. To do this, query a bone from the <a class="el" href="a00055.html" title="Animated model component.">AnimatedModel</a>'s skeleton and set its <a class="el" href="a00082.html#a81a1ce6f32473a71fe072911cc07e167">animated_</a> member variable to false. For example:</p>
 <div class="fragment"><div class="line">Bone* headBone = model-&gt;GetSkeleton().GetBone(<span class="stringliteral">&quot;Bip01_Head&quot;</span>);</div>
 <div class="line"><span class="keywordflow">if</span> (headBone)</div>
 <div class="line">    headBone-&gt;animated_ = <span class="keyword">false</span>;</div>

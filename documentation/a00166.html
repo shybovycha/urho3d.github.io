@@ -20,88 +20,84 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00166.html">FontGlyph</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00166.html">FrustumOctreeQuery</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01585.html">List of all members</a>  </div>
+<a href="a01184.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::FontGlyph Struct Reference</div>  </div>
+<div class="title">Urho3D::FrustumOctreeQuery Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Font glyph description.  
+<p>Frustum octree query.  
  <a href="a00166.html#details">More...</a></p>
 
-<p><code>#include &lt;Font.h&gt;</code></p>
+<p><code>#include &lt;OctreeQuery.h&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for Urho3D::FontGlyph:</div>
+Inheritance diagram for Urho3D::FrustumOctreeQuery:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01586.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01185.svg" width="100%" height="446"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for Urho3D::FrustumOctreeQuery:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a01186.svg" width="490" height="472"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a22e37bbf762b54aeaa452577af44bac8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a22e37bbf762b54aeaa452577af44bac8"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00166.html#a22e37bbf762b54aeaa452577af44bac8">FontGlyph</a> ()</td></tr>
-<tr class="memdesc:a22e37bbf762b54aeaa452577af44bac8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
-<tr class="separator:a22e37bbf762b54aeaa452577af44bac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ada552c570e0bb2ec098ae11f10a16e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ada552c570e0bb2ec098ae11f10a16e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00166.html#a0ada552c570e0bb2ec098ae11f10a16e">FrustumOctreeQuery</a> (<a class="el" href="a00268.html">PODVector</a>&lt; <a class="el" href="a00146.html">Drawable</a> * &gt; &amp;result, const <a class="el" href="a00165.html">Frustum</a> &amp;frustum, unsigned char drawableFlags=DRAWABLE_ANY, unsigned viewMask=DEFAULT_VIEWMASK)</td></tr>
+<tr class="memdesc:a0ada552c570e0bb2ec098ae11f10a16e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with frustum and query parameters. <br/></td></tr>
+<tr class="separator:a0ada552c570e0bb2ec098ae11f10a16e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add56acfcffe63c133fb4f334d3f1f74f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add56acfcffe63c133fb4f334d3f1f74f"></a>
+virtual Intersection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00166.html#add56acfcffe63c133fb4f334d3f1f74f">TestOctant</a> (const <a class="el" href="a00084.html">BoundingBox</a> &amp;box, bool inside)</td></tr>
+<tr class="memdesc:add56acfcffe63c133fb4f334d3f1f74f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intersection test for an octant. <br/></td></tr>
+<tr class="separator:add56acfcffe63c133fb4f334d3f1f74f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57e8093db404c0d313c4fc96e0ed5363"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57e8093db404c0d313c4fc96e0ed5363"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00166.html#a57e8093db404c0d313c4fc96e0ed5363">TestDrawables</a> (<a class="el" href="a00146.html">Drawable</a> **start, <a class="el" href="a00146.html">Drawable</a> **end, bool inside)</td></tr>
+<tr class="memdesc:a57e8093db404c0d313c4fc96e0ed5363"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intersection test for drawables. <br/></td></tr>
+<tr class="separator:a57e8093db404c0d313c4fc96e0ed5363"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_a00247"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00247')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="a00247.html">Urho3D::OctreeQuery</a></td></tr>
+<tr class="memitem:a263ee40b401403b8a2ab69cb0526dbb4 inherit pub_methods_a00247"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a263ee40b401403b8a2ab69cb0526dbb4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00247.html#a263ee40b401403b8a2ab69cb0526dbb4">OctreeQuery</a> (<a class="el" href="a00268.html">PODVector</a>&lt; <a class="el" href="a00146.html">Drawable</a> * &gt; &amp;result, unsigned char drawableFlags, unsigned viewMask)</td></tr>
+<tr class="memdesc:a263ee40b401403b8a2ab69cb0526dbb4 inherit pub_methods_a00247"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with query parameters. <br/></td></tr>
+<tr class="separator:a263ee40b401403b8a2ab69cb0526dbb4 inherit pub_methods_a00247"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0862c34a9759d51f96cc0d715e5815e inherit pub_methods_a00247"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab0862c34a9759d51f96cc0d715e5815e"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00247.html#ab0862c34a9759d51f96cc0d715e5815e">~OctreeQuery</a> ()</td></tr>
+<tr class="memdesc:ab0862c34a9759d51f96cc0d715e5815e inherit pub_methods_a00247"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
+<tr class="separator:ab0862c34a9759d51f96cc0d715e5815e inherit pub_methods_a00247"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a0d23eef6db5287fcd800f0726588d58b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d23eef6db5287fcd800f0726588d58b"></a>
-short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00166.html#a0d23eef6db5287fcd800f0726588d58b">x_</a></td></tr>
-<tr class="memdesc:a0d23eef6db5287fcd800f0726588d58b"><td class="mdescLeft">&#160;</td><td class="mdescRight">X position in texture. <br/></td></tr>
-<tr class="separator:a0d23eef6db5287fcd800f0726588d58b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2f1932d312c54d199d0ccf8acbe6152"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2f1932d312c54d199d0ccf8acbe6152"></a>
-short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00166.html#ab2f1932d312c54d199d0ccf8acbe6152">y_</a></td></tr>
-<tr class="memdesc:ab2f1932d312c54d199d0ccf8acbe6152"><td class="mdescLeft">&#160;</td><td class="mdescRight">Y position in texture. <br/></td></tr>
-<tr class="separator:ab2f1932d312c54d199d0ccf8acbe6152"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca1bc2ed3e26d04602fd0b5bfdb6f2b7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca1bc2ed3e26d04602fd0b5bfdb6f2b7"></a>
-short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00166.html#aca1bc2ed3e26d04602fd0b5bfdb6f2b7">width_</a></td></tr>
-<tr class="memdesc:aca1bc2ed3e26d04602fd0b5bfdb6f2b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Width. <br/></td></tr>
-<tr class="separator:aca1bc2ed3e26d04602fd0b5bfdb6f2b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21fae532b33ea3faf4b149dc07450d7c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a21fae532b33ea3faf4b149dc07450d7c"></a>
-short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00166.html#a21fae532b33ea3faf4b149dc07450d7c">height_</a></td></tr>
-<tr class="memdesc:a21fae532b33ea3faf4b149dc07450d7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Height. <br/></td></tr>
-<tr class="separator:a21fae532b33ea3faf4b149dc07450d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11ad66ccb7132b089cdae59af2d47ab5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11ad66ccb7132b089cdae59af2d47ab5"></a>
-short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00166.html#a11ad66ccb7132b089cdae59af2d47ab5">offsetX_</a></td></tr>
-<tr class="memdesc:a11ad66ccb7132b089cdae59af2d47ab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Glyph X offset from origin. <br/></td></tr>
-<tr class="separator:a11ad66ccb7132b089cdae59af2d47ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac345ca3cf9028e770694a902f983be86"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac345ca3cf9028e770694a902f983be86"></a>
-short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00166.html#ac345ca3cf9028e770694a902f983be86">offsetY_</a></td></tr>
-<tr class="memdesc:ac345ca3cf9028e770694a902f983be86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Glyph Y offset from origin. <br/></td></tr>
-<tr class="separator:ac345ca3cf9028e770694a902f983be86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a060ba57cabfbf35a76d7b202ddaea1a2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a060ba57cabfbf35a76d7b202ddaea1a2"></a>
-short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00166.html#a060ba57cabfbf35a76d7b202ddaea1a2">advanceX_</a></td></tr>
-<tr class="memdesc:a060ba57cabfbf35a76d7b202ddaea1a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Horizontal advance. <br/></td></tr>
-<tr class="separator:a060ba57cabfbf35a76d7b202ddaea1a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abaa1d3fb928effb534dc5b60773db068"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abaa1d3fb928effb534dc5b60773db068"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00166.html#abaa1d3fb928effb534dc5b60773db068">page_</a></td></tr>
-<tr class="memdesc:abaa1d3fb928effb534dc5b60773db068"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00354.html" title="Base class for texture resources.">Texture</a> page. M_MAX_UNSIGNED if not yet resident on any texture. <br/></td></tr>
-<tr class="separator:abaa1d3fb928effb534dc5b60773db068"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4454d1b67556156271cc913a05896be9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4454d1b67556156271cc913a05896be9"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00166.html#a4454d1b67556156271cc913a05896be9">used_</a></td></tr>
-<tr class="memdesc:a4454d1b67556156271cc913a05896be9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used flag. <br/></td></tr>
-<tr class="separator:a4454d1b67556156271cc913a05896be9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeeb9499fa619a4dcf5b6bbb3e8b47a8f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeeb9499fa619a4dcf5b6bbb3e8b47a8f"></a>
-<a class="el" href="a00180.html">HashMap</a>&lt; unsigned, unsigned &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00166.html#aeeb9499fa619a4dcf5b6bbb3e8b47a8f">kerning_</a></td></tr>
-<tr class="memdesc:aeeb9499fa619a4dcf5b6bbb3e8b47a8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kerning information. <br/></td></tr>
-<tr class="separator:aeeb9499fa619a4dcf5b6bbb3e8b47a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85870345592e15893f63f6334bd1c83d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85870345592e15893f63f6334bd1c83d"></a>
-<a class="el" href="a00206.html">List</a>&lt; <a class="el" href="a00229.html">MutableGlyph</a> * &gt;::Iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00166.html#a85870345592e15893f63f6334bd1c83d">iterator_</a></td></tr>
-<tr class="memdesc:a85870345592e15893f63f6334bd1c83d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutable glyph list iterator. <br/></td></tr>
-<tr class="separator:a85870345592e15893f63f6334bd1c83d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96ed6e2ad30ad0c8f1a572917a6f67b3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a96ed6e2ad30ad0c8f1a572917a6f67b3"></a>
+<a class="el" href="a00165.html">Frustum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00166.html#a96ed6e2ad30ad0c8f1a572917a6f67b3">frustum_</a></td></tr>
+<tr class="memdesc:a96ed6e2ad30ad0c8f1a572917a6f67b3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00165.html" title="Convex constructed of 6 planes.">Frustum</a>. <br/></td></tr>
+<tr class="separator:a96ed6e2ad30ad0c8f1a572917a6f67b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_a00247"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a00247')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="a00247.html">Urho3D::OctreeQuery</a></td></tr>
+<tr class="memitem:aa57c45fc937d6f1336f788361e82fdeb inherit pub_attribs_a00247"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa57c45fc937d6f1336f788361e82fdeb"></a>
+<a class="el" href="a00268.html">PODVector</a>&lt; <a class="el" href="a00146.html">Drawable</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00247.html#aa57c45fc937d6f1336f788361e82fdeb">result_</a></td></tr>
+<tr class="memdesc:aa57c45fc937d6f1336f788361e82fdeb inherit pub_attribs_a00247"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result vector reference. <br/></td></tr>
+<tr class="separator:aa57c45fc937d6f1336f788361e82fdeb inherit pub_attribs_a00247"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a3608064b9da6320a62b2c0db7b32e3 inherit pub_attribs_a00247"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a3608064b9da6320a62b2c0db7b32e3"></a>
+unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00247.html#a4a3608064b9da6320a62b2c0db7b32e3">drawableFlags_</a></td></tr>
+<tr class="memdesc:a4a3608064b9da6320a62b2c0db7b32e3 inherit pub_attribs_a00247"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00146.html" title="Base class for visible components.">Drawable</a> flags to include. <br/></td></tr>
+<tr class="separator:a4a3608064b9da6320a62b2c0db7b32e3 inherit pub_attribs_a00247"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e6e7966103b4a5482ea36829027e2cd inherit pub_attribs_a00247"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e6e7966103b4a5482ea36829027e2cd"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00247.html#a8e6e7966103b4a5482ea36829027e2cd">viewMask_</a></td></tr>
+<tr class="memdesc:a8e6e7966103b4a5482ea36829027e2cd inherit pub_attribs_a00247"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00146.html" title="Base class for visible components.">Drawable</a> layers to include. <br/></td></tr>
+<tr class="separator:a8e6e7966103b4a5482ea36829027e2cd inherit pub_attribs_a00247"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Font glyph description. </p>
-</div><hr/>The documentation for this struct was generated from the following files:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/UI/Font.h</li>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/UI/Font.cpp</li>
+<div class="textblock"><p>Frustum octree query. </p>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/OctreeQuery.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/OctreeQuery.cpp</li>
 </ul>
 </div><!-- contents -->

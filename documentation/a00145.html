@@ -20,55 +20,69 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00145.html">DelayedCall</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00145.html">DirtyBits</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01549.html">List of all members</a>  </div>
+<a href="a01489.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::DelayedCall Struct Reference</div>  </div>
+<div class="title">Urho3D::DirtyBits Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Delay-executed function or method call.  
+<p>Dirty attribute bits structure for network replication.  
  <a href="a00145.html#details">More...</a></p>
 
-<p><code>#include &lt;ScriptEventListener.h&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for Urho3D::DelayedCall:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a01550.svg" width="416" height="216"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<p><code>#include &lt;ReplicationState.h&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a89bc27d15462472cf922afdd25a904a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a89bc27d15462472cf922afdd25a904a1"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00145.html#a89bc27d15462472cf922afdd25a904a1">DirtyBits</a> ()</td></tr>
+<tr class="memdesc:a89bc27d15462472cf922afdd25a904a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct empty. <br/></td></tr>
+<tr class="separator:a89bc27d15462472cf922afdd25a904a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66b4665f9a8f253a6dc88e09923bafcc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66b4665f9a8f253a6dc88e09923bafcc"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00145.html#a66b4665f9a8f253a6dc88e09923bafcc">DirtyBits</a> (const <a class="el" href="a00145.html">DirtyBits</a> &amp;bits)</td></tr>
+<tr class="memdesc:a66b4665f9a8f253a6dc88e09923bafcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy-construct. <br/></td></tr>
+<tr class="separator:a66b4665f9a8f253a6dc88e09923bafcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a509f74263c5685cff050753d92c6e628"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a509f74263c5685cff050753d92c6e628"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00145.html#a509f74263c5685cff050753d92c6e628">Set</a> (unsigned index)</td></tr>
+<tr class="memdesc:a509f74263c5685cff050753d92c6e628"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a bit. <br/></td></tr>
+<tr class="separator:a509f74263c5685cff050753d92c6e628"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae320907d114f7a8ff508edab430f2e48"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae320907d114f7a8ff508edab430f2e48"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00145.html#ae320907d114f7a8ff508edab430f2e48">Clear</a> (unsigned index)</td></tr>
+<tr class="memdesc:ae320907d114f7a8ff508edab430f2e48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear a bit. <br/></td></tr>
+<tr class="separator:ae320907d114f7a8ff508edab430f2e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6d85404aa69f51b163a2b04dc29958d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6d85404aa69f51b163a2b04dc29958d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00145.html#ad6d85404aa69f51b163a2b04dc29958d">ClearAll</a> ()</td></tr>
+<tr class="memdesc:ad6d85404aa69f51b163a2b04dc29958d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all bits. <br/></td></tr>
+<tr class="separator:ad6d85404aa69f51b163a2b04dc29958d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a654b45f45805801a6cecdce84859b35d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a654b45f45805801a6cecdce84859b35d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00145.html#a654b45f45805801a6cecdce84859b35d">IsSet</a> (unsigned index) const </td></tr>
+<tr class="memdesc:a654b45f45805801a6cecdce84859b35d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return if bit is set. <br/></td></tr>
+<tr class="separator:a654b45f45805801a6cecdce84859b35d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc14ff7750bf5e7205a265716dc42e17"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc14ff7750bf5e7205a265716dc42e17"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00145.html#afc14ff7750bf5e7205a265716dc42e17">Count</a> () const </td></tr>
+<tr class="memdesc:afc14ff7750bf5e7205a265716dc42e17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of set bits. <br/></td></tr>
+<tr class="separator:afc14ff7750bf5e7205a265716dc42e17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a38ea48f8e32c595ec87b4b8be73269fa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38ea48f8e32c595ec87b4b8be73269fa"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00145.html#a38ea48f8e32c595ec87b4b8be73269fa">period_</a></td></tr>
-<tr class="memdesc:a38ea48f8e32c595ec87b4b8be73269fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Period for repeating calls. <br/></td></tr>
-<tr class="separator:a38ea48f8e32c595ec87b4b8be73269fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e2ca1aafb9a57a39ed4d60a009a6869"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e2ca1aafb9a57a39ed4d60a009a6869"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00145.html#a6e2ca1aafb9a57a39ed4d60a009a6869">delay_</a></td></tr>
-<tr class="memdesc:a6e2ca1aafb9a57a39ed4d60a009a6869"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delay time remaining until execution. <br/></td></tr>
-<tr class="separator:a6e2ca1aafb9a57a39ed4d60a009a6869"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab83bd0fa1a30e031dd5faebca193f71a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab83bd0fa1a30e031dd5faebca193f71a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00145.html#ab83bd0fa1a30e031dd5faebca193f71a">repeat_</a></td></tr>
-<tr class="memdesc:ab83bd0fa1a30e031dd5faebca193f71a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repeat flag. <br/></td></tr>
-<tr class="separator:ab83bd0fa1a30e031dd5faebca193f71a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab46ca8b5429cee8764348e97b4970b90"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab46ca8b5429cee8764348e97b4970b90"></a>
-<a class="el" href="a00346.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00145.html#ab46ca8b5429cee8764348e97b4970b90">declaration_</a></td></tr>
-<tr class="memdesc:ab46ca8b5429cee8764348e97b4970b90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function declaration. <br/></td></tr>
-<tr class="separator:ab46ca8b5429cee8764348e97b4970b90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5435381281fe7a7253594758b24a0d46"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5435381281fe7a7253594758b24a0d46"></a>
-<a class="el" href="a00373.html">VariantVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00145.html#a5435381281fe7a7253594758b24a0d46">parameters_</a></td></tr>
-<tr class="memdesc:a5435381281fe7a7253594758b24a0d46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameters. <br/></td></tr>
-<tr class="separator:a5435381281fe7a7253594758b24a0d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3a6fb68c4506b7366cb5acfec83caf8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab3a6fb68c4506b7366cb5acfec83caf8"></a>
+unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00145.html#ab3a6fb68c4506b7366cb5acfec83caf8">data_</a> [MAX_NETWORK_ATTRIBUTES/8]</td></tr>
+<tr class="memdesc:ab3a6fb68c4506b7366cb5acfec83caf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bit data. <br/></td></tr>
+<tr class="separator:ab3a6fb68c4506b7366cb5acfec83caf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b74dc62da90462bda2cfbb4a2a5654f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b74dc62da90462bda2cfbb4a2a5654f"></a>
+unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00145.html#a0b74dc62da90462bda2cfbb4a2a5654f">count_</a></td></tr>
+<tr class="memdesc:a0b74dc62da90462bda2cfbb4a2a5654f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of set bits. <br/></td></tr>
+<tr class="separator:a0b74dc62da90462bda2cfbb4a2a5654f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Delay-executed function or method call. </p>
+<div class="textblock"><p>Dirty attribute bits structure for network replication. </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Script/ScriptEventListener.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Scene/ReplicationState.h</li>
 </ul>
 </div><!-- contents -->

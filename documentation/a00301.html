@@ -20,72 +20,74 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00301.html">RWOpsWrapper</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00301.html">SceneResolver</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="a01328.html">List of all members</a>  </div>
+<a href="a01509.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::RWOpsWrapper&lt; T &gt; Class Template Reference</div>  </div>
+<div class="title">Urho3D::SceneResolver Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Template wrapper class for using <a class="el" href="a00315.html" title="Abstract stream for writing.">Serializer</a> / <a class="el" href="a00148.html" title="Abstract stream for reading.">Deserializer</a> or their subclasses through SDL's RWOps structure.  
+<p>Utility class that resolves node &amp; component IDs after a scene or partial scene load.  
  <a href="a00301.html#details">More...</a></p>
 
-<p><code>#include &lt;RWOpsWrapper.h&gt;</code></p>
+<p><code>#include &lt;SceneResolver.h&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Urho3D::SceneResolver:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01510.svg" width="100%" height="458"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a94f65e1b9b129d9fb9c6777b275e3b36"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a94f65e1b9b129d9fb9c6777b275e3b36"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a94f65e1b9b129d9fb9c6777b275e3b36">RWOpsWrapper</a> (T &amp;object)</td></tr>
-<tr class="memdesc:a94f65e1b9b129d9fb9c6777b275e3b36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with object reference. <br/></td></tr>
-<tr class="separator:a94f65e1b9b129d9fb9c6777b275e3b36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a688164781dc6dec1677d7f291a77ba57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a688164781dc6dec1677d7f291a77ba57"></a>
-SDL_RWops *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a688164781dc6dec1677d7f291a77ba57">GetRWOps</a> ()</td></tr>
-<tr class="memdesc:a688164781dc6dec1677d7f291a77ba57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the RWOps structure. <br/></td></tr>
-<tr class="separator:a688164781dc6dec1677d7f291a77ba57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
-Static Private Member Functions</h2></td></tr>
-<tr class="memitem:ab0cb1b6ee491defeb79659c620002ab3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab0cb1b6ee491defeb79659c620002ab3"></a>
-static Sint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#ab0cb1b6ee491defeb79659c620002ab3">Size</a> (SDL_RWops *context)</td></tr>
-<tr class="memdesc:ab0cb1b6ee491defeb79659c620002ab3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return data size of the object. <br/></td></tr>
-<tr class="separator:ab0cb1b6ee491defeb79659c620002ab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8af14d1251abfaa381fe9822437a8249"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8af14d1251abfaa381fe9822437a8249"></a>
-static Sint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a8af14d1251abfaa381fe9822437a8249">Seek</a> (SDL_RWops *context, Sint64 offset, int whence)</td></tr>
-<tr class="memdesc:a8af14d1251abfaa381fe9822437a8249"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seek within the object's data. <br/></td></tr>
-<tr class="separator:a8af14d1251abfaa381fe9822437a8249"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a241a41cc33646c1ae4bf59d04c2c2235"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a241a41cc33646c1ae4bf59d04c2c2235"></a>
-static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a241a41cc33646c1ae4bf59d04c2c2235">Close</a> (SDL_RWops *context)</td></tr>
-<tr class="memdesc:a241a41cc33646c1ae4bf59d04c2c2235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close the object. Only meaningful for files, no-op otherwise. <br/></td></tr>
-<tr class="separator:a241a41cc33646c1ae4bf59d04c2c2235"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20ae067eab0d35296d8997d2e5d6e092"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20ae067eab0d35296d8997d2e5d6e092"></a>
-static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a20ae067eab0d35296d8997d2e5d6e092">Read</a> (SDL_RWops *context, void *ptr, size_t size, size_t maxNum)</td></tr>
-<tr class="memdesc:a20ae067eab0d35296d8997d2e5d6e092"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read from the object. Return number of "packets" read. <br/></td></tr>
-<tr class="separator:a20ae067eab0d35296d8997d2e5d6e092"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a346c6730e9ba9ac7f7d2e724b04ae1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a346c6730e9ba9ac7f7d2e724b04ae1"></a>
-static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a3a346c6730e9ba9ac7f7d2e724b04ae1">Write</a> (SDL_RWops *context, const void *ptr, size_t size, size_t maxNum)</td></tr>
-<tr class="memdesc:a3a346c6730e9ba9ac7f7d2e724b04ae1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write to the object. Return number of "packets" written. <br/></td></tr>
-<tr class="separator:a3a346c6730e9ba9ac7f7d2e724b04ae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1326d953febcbb74e893f352a2b4fe64"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1326d953febcbb74e893f352a2b4fe64"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a1326d953febcbb74e893f352a2b4fe64">SceneResolver</a> ()</td></tr>
+<tr class="memdesc:a1326d953febcbb74e893f352a2b4fe64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
+<tr class="separator:a1326d953febcbb74e893f352a2b4fe64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a700ff0124bf7fb77fde8b89a0a63e071"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a700ff0124bf7fb77fde8b89a0a63e071"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a700ff0124bf7fb77fde8b89a0a63e071">~SceneResolver</a> ()</td></tr>
+<tr class="memdesc:a700ff0124bf7fb77fde8b89a0a63e071"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
+<tr class="separator:a700ff0124bf7fb77fde8b89a0a63e071"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33df99e344392eb3cc86dfee09b02b6b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33df99e344392eb3cc86dfee09b02b6b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a33df99e344392eb3cc86dfee09b02b6b">Reset</a> ()</td></tr>
+<tr class="memdesc:a33df99e344392eb3cc86dfee09b02b6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset. Clear all remembered nodes and components. <br/></td></tr>
+<tr class="separator:a33df99e344392eb3cc86dfee09b02b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1d8eba7016a02851c191e203be845c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1d8eba7016a02851c191e203be845c9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#ab1d8eba7016a02851c191e203be845c9">AddNode</a> (unsigned oldID, <a class="el" href="a00236.html">Node</a> *node)</td></tr>
+<tr class="memdesc:ab1d8eba7016a02851c191e203be845c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remember a created node. <br/></td></tr>
+<tr class="separator:ab1d8eba7016a02851c191e203be845c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6bf8bb0adf4405dbe8da533aff14382"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6bf8bb0adf4405dbe8da533aff14382"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#ab6bf8bb0adf4405dbe8da533aff14382">AddComponent</a> (unsigned oldID, <a class="el" href="a00102.html">Component</a> *component)</td></tr>
+<tr class="memdesc:ab6bf8bb0adf4405dbe8da533aff14382"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remember a created component. <br/></td></tr>
+<tr class="separator:ab6bf8bb0adf4405dbe8da533aff14382"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4322ce210921b372aa621462408597cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4322ce210921b372aa621462408597cc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#a4322ce210921b372aa621462408597cc">Resolve</a> ()</td></tr>
+<tr class="memdesc:a4322ce210921b372aa621462408597cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolve component and node ID attributes and reset. <br/></td></tr>
+<tr class="separator:a4322ce210921b372aa621462408597cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:ab34da2ffa07091fb6399530442e11407"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab34da2ffa07091fb6399530442e11407"></a>
-SDL_RWops&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#ab34da2ffa07091fb6399530442e11407">ops_</a></td></tr>
-<tr class="memdesc:ab34da2ffa07091fb6399530442e11407"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDL RWOps structure associated with the object. <br/></td></tr>
-<tr class="separator:ab34da2ffa07091fb6399530442e11407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee399d66b12fa63fb380d34e2939cc27"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee399d66b12fa63fb380d34e2939cc27"></a>
+<a class="el" href="a00176.html">HashMap</a>&lt; unsigned, <a class="el" href="a00386.html">WeakPtr</a><br class="typebreak"/>
+&lt; <a class="el" href="a00236.html">Node</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#aee399d66b12fa63fb380d34e2939cc27">nodes_</a></td></tr>
+<tr class="memdesc:aee399d66b12fa63fb380d34e2939cc27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nodes. <br/></td></tr>
+<tr class="separator:aee399d66b12fa63fb380d34e2939cc27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acce67b0eab885591e842c81c16170c16"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acce67b0eab885591e842c81c16170c16"></a>
+<a class="el" href="a00176.html">HashMap</a>&lt; unsigned, <a class="el" href="a00386.html">WeakPtr</a><br class="typebreak"/>
+&lt; <a class="el" href="a00102.html">Component</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html#acce67b0eab885591e842c81c16170c16">components_</a></td></tr>
+<tr class="memdesc:acce67b0eab885591e842c81c16170c16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Components. <br/></td></tr>
+<tr class="separator:acce67b0eab885591e842c81c16170c16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;class T&gt;<br/>
-class Urho3D::RWOpsWrapper&lt; T &gt;</h3>
-
-<p>Template wrapper class for using <a class="el" href="a00315.html" title="Abstract stream for writing.">Serializer</a> / <a class="el" href="a00148.html" title="Abstract stream for reading.">Deserializer</a> or their subclasses through SDL's RWOps structure. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/IO/RWOpsWrapper.h</li>
+<div class="textblock"><p>Utility class that resolves node &amp; component IDs after a scene or partial scene load. </p>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Scene/SceneResolver.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Scene/SceneResolver.cpp</li>
 </ul>
 </div><!-- contents -->

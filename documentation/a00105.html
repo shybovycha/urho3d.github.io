@@ -20,63 +20,58 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00105.html">ColorFrame</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00105.html">Condition</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01235.html">List of all members</a>  </div>
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="a00995.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::ColorFrame Struct Reference</div>  </div>
+<div class="title">Urho3D::Condition Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Color animation frame definition.  
+<p>Condition on which a thread can wait.  
  <a href="a00105.html#details">More...</a></p>
 
-<p><code>#include &lt;ParticleEmitter.h&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for Urho3D::ColorFrame:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a01236.svg" width="259" height="298"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<p><code>#include &lt;Condition.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab34d7a94b3c35eca59ab37dba18ba60a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab34d7a94b3c35eca59ab37dba18ba60a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00105.html#ab34d7a94b3c35eca59ab37dba18ba60a">ColorFrame</a> ()</td></tr>
-<tr class="memdesc:ab34d7a94b3c35eca59ab37dba18ba60a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with default values. <br/></td></tr>
-<tr class="separator:ab34d7a94b3c35eca59ab37dba18ba60a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26c8b15020e9b9a3a1e1f144b8868d53"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26c8b15020e9b9a3a1e1f144b8868d53"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00105.html#a26c8b15020e9b9a3a1e1f144b8868d53">ColorFrame</a> (const <a class="el" href="a00104.html">Color</a> &amp;color)</td></tr>
-<tr class="memdesc:a26c8b15020e9b9a3a1e1f144b8868d53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with a color and zero time. <br/></td></tr>
-<tr class="separator:a26c8b15020e9b9a3a1e1f144b8868d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d4fede3ee02a39180d14afbb4d1bb46"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d4fede3ee02a39180d14afbb4d1bb46"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00105.html#a9d4fede3ee02a39180d14afbb4d1bb46">ColorFrame</a> (const <a class="el" href="a00104.html">Color</a> &amp;color, float time)</td></tr>
-<tr class="memdesc:a9d4fede3ee02a39180d14afbb4d1bb46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a color and time. <br/></td></tr>
-<tr class="separator:a9d4fede3ee02a39180d14afbb4d1bb46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1891e1598c7bbfa0cebc0af5b775f8d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1891e1598c7bbfa0cebc0af5b775f8d9"></a>
-<a class="el" href="a00104.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00105.html#a1891e1598c7bbfa0cebc0af5b775f8d9">Interpolate</a> (const <a class="el" href="a00105.html">ColorFrame</a> &amp;next, float time)</td></tr>
-<tr class="memdesc:a1891e1598c7bbfa0cebc0af5b775f8d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return interpolated value with another color-time pair at the time specified. <br/></td></tr>
-<tr class="separator:a1891e1598c7bbfa0cebc0af5b775f8d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad42f3e306f1fd9a8c1f724617710e259"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad42f3e306f1fd9a8c1f724617710e259"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00105.html#ad42f3e306f1fd9a8c1f724617710e259">Condition</a> ()</td></tr>
+<tr class="memdesc:ad42f3e306f1fd9a8c1f724617710e259"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
+<tr class="separator:ad42f3e306f1fd9a8c1f724617710e259"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ca517258bdc9ad2352088f1d42755e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ca517258bdc9ad2352088f1d42755e0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00105.html#a1ca517258bdc9ad2352088f1d42755e0">~Condition</a> ()</td></tr>
+<tr class="memdesc:a1ca517258bdc9ad2352088f1d42755e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
+<tr class="separator:a1ca517258bdc9ad2352088f1d42755e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cc6e3671e577bfff2f50da29f753fcb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7cc6e3671e577bfff2f50da29f753fcb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00105.html#a7cc6e3671e577bfff2f50da29f753fcb">Set</a> ()</td></tr>
+<tr class="memdesc:a7cc6e3671e577bfff2f50da29f753fcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the condition. Will be automatically reset once a waiting thread wakes up. <br/></td></tr>
+<tr class="separator:a7cc6e3671e577bfff2f50da29f753fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa10966c62b4190071c3b42834b4bfa78"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa10966c62b4190071c3b42834b4bfa78"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00105.html#aa10966c62b4190071c3b42834b4bfa78">Wait</a> ()</td></tr>
+<tr class="memdesc:aa10966c62b4190071c3b42834b4bfa78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait on the condition. <br/></td></tr>
+<tr class="separator:aa10966c62b4190071c3b42834b4bfa78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a42c2a6850b1c33711d03a881c8bb0737"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42c2a6850b1c33711d03a881c8bb0737"></a>
-<a class="el" href="a00104.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00105.html#a42c2a6850b1c33711d03a881c8bb0737">color_</a></td></tr>
-<tr class="memdesc:a42c2a6850b1c33711d03a881c8bb0737"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00104.html" title="RGBA color.">Color</a>. <br/></td></tr>
-<tr class="separator:a42c2a6850b1c33711d03a881c8bb0737"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3a2c5d1db34bebaf7ae9de73abc534b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3a2c5d1db34bebaf7ae9de73abc534b"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00105.html#aa3a2c5d1db34bebaf7ae9de73abc534b">time_</a></td></tr>
-<tr class="memdesc:aa3a2c5d1db34bebaf7ae9de73abc534b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00360.html" title="Time and frame counter subsystem.">Time</a>. <br/></td></tr>
-<tr class="separator:aa3a2c5d1db34bebaf7ae9de73abc534b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:af9128ee9ad30c6250874c6397969de16"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9128ee9ad30c6250874c6397969de16"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00105.html#af9128ee9ad30c6250874c6397969de16">mutex_</a></td></tr>
+<tr class="memdesc:af9128ee9ad30c6250874c6397969de16"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00226.html" title="Operating system mutual exclusion primitive.">Mutex</a> for the event, necessary for pthreads-based implementation. <br/></td></tr>
+<tr class="separator:af9128ee9ad30c6250874c6397969de16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98b69f2f52304c55d126cb2ecbb44e6f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98b69f2f52304c55d126cb2ecbb44e6f"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00105.html#a98b69f2f52304c55d126cb2ecbb44e6f">event_</a></td></tr>
+<tr class="memdesc:a98b69f2f52304c55d126cb2ecbb44e6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operating system specific event. <br/></td></tr>
+<tr class="separator:a98b69f2f52304c55d126cb2ecbb44e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Color animation frame definition. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/ParticleEmitter.h</li>
+<div class="textblock"><p>Condition on which a thread can wait. </p>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Core/Condition.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Core/Condition.cpp</li>
 </ul>
 </div><!-- contents -->
