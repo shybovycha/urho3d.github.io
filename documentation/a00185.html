@@ -73,6 +73,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00185.html#a5a8edc8ee7876348bfa4e95f9d901805">SetMouseVisible</a> (bool enable)</td></tr>
 <tr class="memdesc:a5a8edc8ee7876348bfa4e95f9d901805"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether the operating system mouse cursor is visible. When not visible (default), is kept centered to prevent leaving the window. <br/></td></tr>
 <tr class="separator:a5a8edc8ee7876348bfa4e95f9d901805"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac28a5fe115e791f3d8ceb695f674914c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac28a5fe115e791f3d8ceb695f674914c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00185.html#ac28a5fe115e791f3d8ceb695f674914c">SetMouseGrabbed</a> (bool grab)</td></tr>
+<tr class="memdesc:ac28a5fe115e791f3d8ceb695f674914c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether the mouse is currently being grabbed by an operation. <br/></td></tr>
+<tr class="separator:ac28a5fe115e791f3d8ceb695f674914c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a108458dfa956947d861e96c58d269e85"><td class="memItemLeft" align="right" valign="top">SDL_JoystickID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00185.html#a108458dfa956947d861e96c58d269e85">AddScreenJoystick</a> (<a class="el" href="a00393.html">XMLFile</a> *layoutFile=0, <a class="el" href="a00393.html">XMLFile</a> *styleFile=0)</td></tr>
 <tr class="memdesc:a108458dfa956947d861e96c58d269e85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add screen joystick.  <a href="#a108458dfa956947d861e96c58d269e85">More...</a><br/></td></tr>
 <tr class="separator:a108458dfa956947d861e96c58d269e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -223,6 +227,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00185.html#a6f0539b21d6930bbc220e9ef18d2578b">IsMouseVisible</a> () const </td></tr>
 <tr class="memdesc:a6f0539b21d6930bbc220e9ef18d2578b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the operating system mouse cursor is visible. <br/></td></tr>
 <tr class="separator:a6f0539b21d6930bbc220e9ef18d2578b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6e3173ea9faf735e5c7fb766c1f0405"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6e3173ea9faf735e5c7fb766c1f0405"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00185.html#ab6e3173ea9faf735e5c7fb766c1f0405">IsMouseGrabbed</a> () const </td></tr>
+<tr class="memdesc:ab6e3173ea9faf735e5c7fb766c1f0405"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the mouse is currently being grabbed by an operation. <br/></td></tr>
+<tr class="separator:ab6e3173ea9faf735e5c7fb766c1f0405"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11e086f4e8be5b26f26a949bcf118297"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11e086f4e8be5b26f26a949bcf118297"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00185.html#a11e086f4e8be5b26f26a949bcf118297">HasFocus</a> ()</td></tr>
 <tr class="memdesc:a11e086f4e8be5b26f26a949bcf118297"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether application window has input focus. <br/></td></tr>
@@ -494,6 +502,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00185.html#aec5cacf96172d922e8c148aac61b6cce">mouseVisible_</a></td></tr>
 <tr class="memdesc:aec5cacf96172d922e8c148aac61b6cce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operating system mouse cursor visible flag. <br/></td></tr>
 <tr class="separator:aec5cacf96172d922e8c148aac61b6cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addc33f13a31dfce9f62a3b4afa199d56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="addc33f13a31dfce9f62a3b4afa199d56"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00185.html#addc33f13a31dfce9f62a3b4afa199d56">mouseGrabbed_</a></td></tr>
+<tr class="memdesc:addc33f13a31dfce9f62a3b4afa199d56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate the mouse is being grabbed by an operation. Subsystems like <a class="el" href="a00362.html" title="UI subsystem. Manages the graphical user interface.">UI</a> that uses mouse should temporarily ignore the mouse hover or click events. <br/></td></tr>
+<tr class="separator:addc33f13a31dfce9f62a3b4afa199d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a471e35b5ce1544455116fe4d0e3da753"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a471e35b5ce1544455116fe4d0e3da753"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00185.html#a471e35b5ce1544455116fe4d0e3da753">inputFocus_</a></td></tr>
 <tr class="memdesc:a471e35b5ce1544455116fe4d0e3da753"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00185.html" title="Input subsystem. Converts operating system window messages to input state and events.">Input</a> focus flag. <br/></td></tr>
