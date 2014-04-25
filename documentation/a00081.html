@@ -104,6 +104,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a000
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00081.html#a59d31e297bb93f3eeae1361673213639">SetFaceCamera</a> (bool enable)</td></tr>
 <tr class="memdesc:a59d31e297bb93f3eeae1361673213639"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether billboards face the camera automatically. Default true. <br/></td></tr>
 <tr class="separator:a59d31e297bb93f3eeae1361673213639"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a683de96c69197a40e6b56cbe295d7b49"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a683de96c69197a40e6b56cbe295d7b49"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00081.html#a683de96c69197a40e6b56cbe295d7b49">SetFaceCameraAxes</a> (const <a class="el" href="a00378.html">Vector3</a> &amp;axes)</td></tr>
+<tr class="memdesc:a683de96c69197a40e6b56cbe295d7b49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set on which coordinate axes the billboards face the camera. Default all axes (1,1,1). Negative axes imply facing away. <br/></td></tr>
+<tr class="separator:a683de96c69197a40e6b56cbe295d7b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f1557cbe2c62b021f002a716d46de14"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f1557cbe2c62b021f002a716d46de14"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00081.html#a1f1557cbe2c62b021f002a716d46de14">SetAnimationLodBias</a> (float bias)</td></tr>
 <tr class="memdesc:a1f1557cbe2c62b021f002a716d46de14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set animation LOD bias. <br/></td></tr>
@@ -144,6 +148,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a000
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00081.html#a942bbd6ba564076f3b268196c2282680">GetFaceCamera</a> () const </td></tr>
 <tr class="memdesc:a942bbd6ba564076f3b268196c2282680"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether faces the camera automatically. <br/></td></tr>
 <tr class="separator:a942bbd6ba564076f3b268196c2282680"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab64351693b0cc195a041692210587b04"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab64351693b0cc195a041692210587b04"></a>
+const <a class="el" href="a00378.html">Vector3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00081.html#ab64351693b0cc195a041692210587b04">GetFaceCameraAxes</a> () const </td></tr>
+<tr class="memdesc:ab64351693b0cc195a041692210587b04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return on which coordinate axes camera facing is done. <br/></td></tr>
+<tr class="separator:ab64351693b0cc195a041692210587b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73465c4913a120a3c6329f267f8b2de3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73465c4913a120a3c6329f267f8b2de3"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00081.html#a73465c4913a120a3c6329f267f8b2de3">GetAnimationLodBias</a> () const </td></tr>
 <tr class="memdesc:a73465c4913a120a3c6329f267f8b2de3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return animation LOD bias. <br/></td></tr>
@@ -900,6 +908,10 @@ Protected Attributes</h2></td></tr>
 <a class="el" href="a00270.html">PODVector</a>&lt; <a class="el" href="a00080.html">Billboard</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00081.html#a2b4029195ed41bf2089cc1fe6ba24013">billboards_</a></td></tr>
 <tr class="memdesc:a2b4029195ed41bf2089cc1fe6ba24013"><td class="mdescLeft">&#160;</td><td class="mdescRight">Billboards. <br/></td></tr>
 <tr class="separator:a2b4029195ed41bf2089cc1fe6ba24013"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d43952c82a7de9f0da02f9f07ee37c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d43952c82a7de9f0da02f9f07ee37c9"></a>
+<a class="el" href="a00378.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00081.html#a1d43952c82a7de9f0da02f9f07ee37c9">faceCameraAxes_</a></td></tr>
+<tr class="memdesc:a1d43952c82a7de9f0da02f9f07ee37c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordinate axes on which camera facing is done. <br/></td></tr>
+<tr class="separator:a1d43952c82a7de9f0da02f9f07ee37c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f0f5844d6921600e63c83e1a85787ff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f0f5844d6921600e63c83e1a85787ff"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00081.html#a2f0f5844d6921600e63c83e1a85787ff">animationLodBias_</a></td></tr>
 <tr class="memdesc:a2f0f5844d6921600e63c83e1a85787ff"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00057.html" title="Skeletal animation resource.">Animation</a> LOD bias. <br/></td></tr>
