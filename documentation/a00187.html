@@ -91,6 +91,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00187.html#a9a8e1073c5e29bac46a0183a803d6df4">SetScreenKeyboardVisible</a> (bool enable)</td></tr>
 <tr class="memdesc:a9a8e1073c5e29bac46a0183a803d6df4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show or hide on-screen keyboard on platforms that support it. When shown, keypresses from it are delivered as key events. <br/></td></tr>
 <tr class="separator:a9a8e1073c5e29bac46a0183a803d6df4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af189e73afffcd2185b72f8546a444876"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af189e73afffcd2185b72f8546a444876"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00187.html#af189e73afffcd2185b72f8546a444876">SetTouchEmulation</a> (bool enable)</td></tr>
+<tr class="memdesc:af189e73afffcd2185b72f8546a444876"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set touch emulation by mouse. Only available on desktop platforms. When enabled, actual mouse events are no longer sent and the mouse cursor is forced visible. <br/></td></tr>
+<tr class="separator:af189e73afffcd2185b72f8546a444876"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38b0e7ff65040113836a5aff8f2d67c5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38b0e7ff65040113836a5aff8f2d67c5"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00187.html#a38b0e7ff65040113836a5aff8f2d67c5">RecordGesture</a> ()</td></tr>
 <tr class="memdesc:a38b0e7ff65040113836a5aff8f2d67c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin recording a touch gesture. Return true if successful. The E_GESTURERECORDED event (which contains the ID for the new gesture) will be sent when recording finishes. <br/></td></tr>
@@ -223,6 +227,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00187.html#adfa1cb5c6fb0633bb4255e290eff81e0">IsScreenKeyboardVisible</a> () const </td></tr>
 <tr class="memdesc:adfa1cb5c6fb0633bb4255e290eff81e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether on-screen keyboard is being shown. <br/></td></tr>
 <tr class="separator:adfa1cb5c6fb0633bb4255e290eff81e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa47f010e9f1ba613c9ada888d6131347"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa47f010e9f1ba613c9ada888d6131347"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00187.html#aa47f010e9f1ba613c9ada888d6131347">GetTouchEmulation</a> () const </td></tr>
+<tr class="memdesc:aa47f010e9f1ba613c9ada888d6131347"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether touch emulation is enabled. <br/></td></tr>
+<tr class="separator:aa47f010e9f1ba613c9ada888d6131347"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f0539b21d6930bbc220e9ef18d2578b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f0539b21d6930bbc220e9ef18d2578b"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00187.html#a6f0539b21d6930bbc220e9ef18d2578b">IsMouseVisible</a> () const </td></tr>
 <tr class="memdesc:a6f0539b21d6930bbc220e9ef18d2578b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the operating system mouse cursor is visible. <br/></td></tr>
@@ -398,6 +406,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 <tr class="memitem:a0131572cfae7e4fc8d150c6efae41f72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00187.html#a0131572cfae7e4fc8d150c6efae41f72">ResetState</a> ()</td></tr>
 <tr class="memdesc:a0131572cfae7e4fc8d150c6efae41f72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear input state.  <a href="#a0131572cfae7e4fc8d150c6efae41f72">More...</a><br/></td></tr>
 <tr class="separator:a0131572cfae7e4fc8d150c6efae41f72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18266163742f83e3e22fd57d9f76d938"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18266163742f83e3e22fd57d9f76d938"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00187.html#a18266163742f83e3e22fd57d9f76d938">ClearTouches</a> ()</td></tr>
+<tr class="memdesc:a18266163742f83e3e22fd57d9f76d938"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear touch states and send touch end events. <br/></td></tr>
+<tr class="separator:a18266163742f83e3e22fd57d9f76d938"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62f0700878de37c1964cc3f057287718"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62f0700878de37c1964cc3f057287718"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00187.html#a62f0700878de37c1964cc3f057287718">SendInputFocusEvent</a> ()</td></tr>
 <tr class="memdesc:a62f0700878de37c1964cc3f057287718"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send an input focus or window minimization change event. <br/></td></tr>
@@ -506,6 +518,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00187.html#addc33f13a31dfce9f62a3b4afa199d56">mouseGrabbed_</a></td></tr>
 <tr class="memdesc:addc33f13a31dfce9f62a3b4afa199d56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate the mouse is being grabbed by an operation. Subsystems like <a class="el" href="a00363.html" title="UI subsystem. Manages the graphical user interface.">UI</a> that uses mouse should temporarily ignore the mouse hover or click events. <br/></td></tr>
 <tr class="separator:addc33f13a31dfce9f62a3b4afa199d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1846a6c701ba9fc9fb348108db3f1f41"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1846a6c701ba9fc9fb348108db3f1f41"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00187.html#a1846a6c701ba9fc9fb348108db3f1f41">touchEmulation_</a></td></tr>
+<tr class="memdesc:a1846a6c701ba9fc9fb348108db3f1f41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Touch emulation mode flag. <br/></td></tr>
+<tr class="separator:a1846a6c701ba9fc9fb348108db3f1f41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a471e35b5ce1544455116fe4d0e3da753"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a471e35b5ce1544455116fe4d0e3da753"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00187.html#a471e35b5ce1544455116fe4d0e3da753">inputFocus_</a></td></tr>
 <tr class="memdesc:a471e35b5ce1544455116fe4d0e3da753"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00187.html" title="Input subsystem. Converts operating system window messages to input state and events.">Input</a> focus flag. <br/></td></tr>
@@ -633,7 +649,7 @@ Here is the call graph for this function:</div>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a00187_a0131572cfae7e4fc8d150c6efae41f72_cgraph.svg" width="100%" height="448"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a00187_a0131572cfae7e4fc8d150c6efae41f72_cgraph.svg" width="100%" height="456"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </p>
