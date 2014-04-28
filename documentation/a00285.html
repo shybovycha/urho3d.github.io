@@ -20,51 +20,955 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00285.html">RemoteEvent</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00285.html">Renderer</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01408.html">List of all members</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="a01251.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::RemoteEvent Struct Reference</div>  </div>
+<div class="title">Urho3D::Renderer Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Queued remote event.  
+<p>High-level rendering subsystem. Manages drawing of 3D views.  
  <a href="a00285.html#details">More...</a></p>
 
-<p><code>#include &lt;Connection.h&gt;</code></p>
+<p><code>#include &lt;Renderer.h&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for Urho3D::RemoteEvent:</div>
+Inheritance diagram for Urho3D::Renderer:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a01409.svg" width="619" height="483"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a01252.svg" width="163" height="195"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for Urho3D::Renderer:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01253.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a6a2c4f7ed017e562b3d985aec1826566"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a2c4f7ed017e562b3d985aec1826566"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a6a2c4f7ed017e562b3d985aec1826566">senderID_</a></td></tr>
-<tr class="memdesc:a6a2c4f7ed017e562b3d985aec1826566"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remote sender node ID (0 if not a remote node event.) <br/></td></tr>
-<tr class="separator:a6a2c4f7ed017e562b3d985aec1826566"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1fb2b3970b481a0a1a0ee7a34d9cdd4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1fb2b3970b481a0a1a0ee7a34d9cdd4"></a>
-<a class="el" href="a00346.html">StringHash</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#af1fb2b3970b481a0a1a0ee7a34d9cdd4">eventType_</a></td></tr>
-<tr class="memdesc:af1fb2b3970b481a0a1a0ee7a34d9cdd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event type. <br/></td></tr>
-<tr class="separator:af1fb2b3970b481a0a1a0ee7a34d9cdd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d89fcbccb55239c75126dad5b476ea7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d89fcbccb55239c75126dad5b476ea7"></a>
-<a class="el" href="a00178.html">VariantMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a8d89fcbccb55239c75126dad5b476ea7">eventData_</a></td></tr>
-<tr class="memdesc:a8d89fcbccb55239c75126dad5b476ea7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event data. <br/></td></tr>
-<tr class="separator:a8d89fcbccb55239c75126dad5b476ea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a9bbdb6bf67228fc323f9361315b91f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a9bbdb6bf67228fc323f9361315b91f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a2a9bbdb6bf67228fc323f9361315b91f">inOrder_</a></td></tr>
-<tr class="memdesc:a2a9bbdb6bf67228fc323f9361315b91f"><td class="mdescLeft">&#160;</td><td class="mdescRight">In order flag. <br/></td></tr>
-<tr class="separator:a2a9bbdb6bf67228fc323f9361315b91f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a8e41f9dda2e33e9e208c5ccfd0d1c6ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e41f9dda2e33e9e208c5ccfd0d1c6ac"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a8e41f9dda2e33e9e208c5ccfd0d1c6ac">Renderer</a> (<a class="el" href="a00125.html">Context</a> *context)</td></tr>
+<tr class="memdesc:a8e41f9dda2e33e9e208c5ccfd0d1c6ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
+<tr class="separator:a8e41f9dda2e33e9e208c5ccfd0d1c6ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50399fca517dcd19ff2efd45d93f28a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50399fca517dcd19ff2efd45d93f28a4"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a50399fca517dcd19ff2efd45d93f28a4">~Renderer</a> ()</td></tr>
+<tr class="memdesc:a50399fca517dcd19ff2efd45d93f28a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
+<tr class="separator:a50399fca517dcd19ff2efd45d93f28a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22da80417d1fe5b0bedd955b9fe836cf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a22da80417d1fe5b0bedd955b9fe836cf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a22da80417d1fe5b0bedd955b9fe836cf">SetNumViewports</a> (unsigned num)</td></tr>
+<tr class="memdesc:a22da80417d1fe5b0bedd955b9fe836cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set number of backbuffer viewports to render. <br/></td></tr>
+<tr class="separator:a22da80417d1fe5b0bedd955b9fe836cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ea48bfca77a69f1d2f4e2182c0e6a50"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ea48bfca77a69f1d2f4e2182c0e6a50"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a0ea48bfca77a69f1d2f4e2182c0e6a50">SetViewport</a> (unsigned index, <a class="el" href="a00386.html">Viewport</a> *viewport)</td></tr>
+<tr class="memdesc:a0ea48bfca77a69f1d2f4e2182c0e6a50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a backbuffer viewport. <br/></td></tr>
+<tr class="separator:a0ea48bfca77a69f1d2f4e2182c0e6a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e9a7903978c7f793a95a3eedd93d370"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e9a7903978c7f793a95a3eedd93d370"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a0e9a7903978c7f793a95a3eedd93d370">SetDefaultRenderPath</a> (<a class="el" href="a00286.html">RenderPath</a> *renderPath)</td></tr>
+<tr class="memdesc:a0e9a7903978c7f793a95a3eedd93d370"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set default renderpath. <br/></td></tr>
+<tr class="separator:a0e9a7903978c7f793a95a3eedd93d370"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2921d9e840f2efc60c6ad044da78e249"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2921d9e840f2efc60c6ad044da78e249"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a2921d9e840f2efc60c6ad044da78e249">SetDefaultRenderPath</a> (<a class="el" href="a00394.html">XMLFile</a> *file)</td></tr>
+<tr class="memdesc:a2921d9e840f2efc60c6ad044da78e249"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set default renderpath from an XML file. <br/></td></tr>
+<tr class="separator:a2921d9e840f2efc60c6ad044da78e249"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac701b0041a1932397f71f9775aacb536"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac701b0041a1932397f71f9775aacb536"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#ac701b0041a1932397f71f9775aacb536">SetHDRRendering</a> (bool enable)</td></tr>
+<tr class="memdesc:ac701b0041a1932397f71f9775aacb536"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set HDR rendering on/off. <br/></td></tr>
+<tr class="separator:ac701b0041a1932397f71f9775aacb536"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe38959b89dbcfb34b61eab3ac7ea8e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe38959b89dbcfb34b61eab3ac7ea8e0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#abe38959b89dbcfb34b61eab3ac7ea8e0">SetSpecularLighting</a> (bool enable)</td></tr>
+<tr class="memdesc:abe38959b89dbcfb34b61eab3ac7ea8e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set specular lighting on/off. <br/></td></tr>
+<tr class="separator:abe38959b89dbcfb34b61eab3ac7ea8e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b5f2617525693c666631f2f69c55986"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b5f2617525693c666631f2f69c55986"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a4b5f2617525693c666631f2f69c55986">SetTextureAnisotropy</a> (int level)</td></tr>
+<tr class="memdesc:a4b5f2617525693c666631f2f69c55986"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set texture anisotropy. <br/></td></tr>
+<tr class="separator:a4b5f2617525693c666631f2f69c55986"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa081451e57fcc1a754bf876ef0bb1802"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa081451e57fcc1a754bf876ef0bb1802"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#aa081451e57fcc1a754bf876ef0bb1802">SetTextureFilterMode</a> (TextureFilterMode mode)</td></tr>
+<tr class="memdesc:aa081451e57fcc1a754bf876ef0bb1802"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set texture filtering. <br/></td></tr>
+<tr class="separator:aa081451e57fcc1a754bf876ef0bb1802"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58bbb07b983f41ca13576db751aee10d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58bbb07b983f41ca13576db751aee10d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a58bbb07b983f41ca13576db751aee10d">SetTextureQuality</a> (int quality)</td></tr>
+<tr class="memdesc:a58bbb07b983f41ca13576db751aee10d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set texture quality level. <br/></td></tr>
+<tr class="separator:a58bbb07b983f41ca13576db751aee10d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabb13682895a9c8f0cabec5ae55cb802"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aabb13682895a9c8f0cabec5ae55cb802"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#aabb13682895a9c8f0cabec5ae55cb802">SetMaterialQuality</a> (int quality)</td></tr>
+<tr class="memdesc:aabb13682895a9c8f0cabec5ae55cb802"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set material quality level. <br/></td></tr>
+<tr class="separator:aabb13682895a9c8f0cabec5ae55cb802"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4467251481d7f71628384d3367a1e105"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4467251481d7f71628384d3367a1e105"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a4467251481d7f71628384d3367a1e105">SetDrawShadows</a> (bool enable)</td></tr>
+<tr class="memdesc:a4467251481d7f71628384d3367a1e105"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set shadows on/off. <br/></td></tr>
+<tr class="separator:a4467251481d7f71628384d3367a1e105"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2e2e6cb90eca5a60ec6fe4160b57f58"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa2e2e6cb90eca5a60ec6fe4160b57f58"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#aa2e2e6cb90eca5a60ec6fe4160b57f58">SetShadowMapSize</a> (int size)</td></tr>
+<tr class="memdesc:aa2e2e6cb90eca5a60ec6fe4160b57f58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set shadow map resolution. <br/></td></tr>
+<tr class="separator:aa2e2e6cb90eca5a60ec6fe4160b57f58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a807c8dee002afdc345535470f51a561f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a807c8dee002afdc345535470f51a561f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a807c8dee002afdc345535470f51a561f">SetShadowQuality</a> (int quality)</td></tr>
+<tr class="memdesc:a807c8dee002afdc345535470f51a561f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set shadow quality (amount of samples and bit depth.) <br/></td></tr>
+<tr class="separator:a807c8dee002afdc345535470f51a561f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa4ea9bd7d3a0942c27071082d1419c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa4ea9bd7d3a0942c27071082d1419c9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#afa4ea9bd7d3a0942c27071082d1419c9">SetReuseShadowMaps</a> (bool enable)</td></tr>
+<tr class="memdesc:afa4ea9bd7d3a0942c27071082d1419c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set reuse of shadow maps. Default is true. If disabled, also transparent geometry can be shadowed. <br/></td></tr>
+<tr class="separator:afa4ea9bd7d3a0942c27071082d1419c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ce616cf2ae0af4773e0dc36ef6a441a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ce616cf2ae0af4773e0dc36ef6a441a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a8ce616cf2ae0af4773e0dc36ef6a441a">SetMaxShadowMaps</a> (int shadowMaps)</td></tr>
+<tr class="memdesc:a8ce616cf2ae0af4773e0dc36ef6a441a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set maximum number of shadow maps created for one resolution. Only has effect if reuse of shadow maps is disabled. <br/></td></tr>
+<tr class="separator:a8ce616cf2ae0af4773e0dc36ef6a441a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2d9abee635f8713f8ca92cf41790596"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2d9abee635f8713f8ca92cf41790596"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#ab2d9abee635f8713f8ca92cf41790596">SetDynamicInstancing</a> (bool enable)</td></tr>
+<tr class="memdesc:ab2d9abee635f8713f8ca92cf41790596"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set dynamic instancing on/off. <br/></td></tr>
+<tr class="separator:ab2d9abee635f8713f8ca92cf41790596"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26e087b58ea5e19d4677f28b2100797e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26e087b58ea5e19d4677f28b2100797e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a26e087b58ea5e19d4677f28b2100797e">SetMinInstances</a> (int instances)</td></tr>
+<tr class="memdesc:a26e087b58ea5e19d4677f28b2100797e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set minimum number of instances required in a batch group to render as instanced. <br/></td></tr>
+<tr class="separator:a26e087b58ea5e19d4677f28b2100797e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24957792f7933a93d47f3b63a1b69db7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a24957792f7933a93d47f3b63a1b69db7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a24957792f7933a93d47f3b63a1b69db7">SetMaxInstanceTriangles</a> (int triangles)</td></tr>
+<tr class="memdesc:a24957792f7933a93d47f3b63a1b69db7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set maximum number of triangles per object for instancing. <br/></td></tr>
+<tr class="separator:a24957792f7933a93d47f3b63a1b69db7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81d948f4cfbb215a4fba49541350eb5b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a81d948f4cfbb215a4fba49541350eb5b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a81d948f4cfbb215a4fba49541350eb5b">SetMaxSortedInstances</a> (int instances)</td></tr>
+<tr class="memdesc:a81d948f4cfbb215a4fba49541350eb5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set maximum number of sorted instances per batch group. If exceeded, instances are rendered unsorted. <br/></td></tr>
+<tr class="separator:a81d948f4cfbb215a4fba49541350eb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f8f74b8fdee7f55b1ecc128141eb176"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f8f74b8fdee7f55b1ecc128141eb176"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a6f8f74b8fdee7f55b1ecc128141eb176">SetMaxOccluderTriangles</a> (int triangles)</td></tr>
+<tr class="memdesc:a6f8f74b8fdee7f55b1ecc128141eb176"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set maximum number of occluder trianges. <br/></td></tr>
+<tr class="separator:a6f8f74b8fdee7f55b1ecc128141eb176"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1af74251ac39634daa7e9a8df816fd7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae1af74251ac39634daa7e9a8df816fd7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#ae1af74251ac39634daa7e9a8df816fd7">SetOcclusionBufferSize</a> (int size)</td></tr>
+<tr class="memdesc:ae1af74251ac39634daa7e9a8df816fd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set occluder buffer width. <br/></td></tr>
+<tr class="separator:ae1af74251ac39634daa7e9a8df816fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fcccde75cf5c79fcc05180a60eb44d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3fcccde75cf5c79fcc05180a60eb44d8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a3fcccde75cf5c79fcc05180a60eb44d8">SetOccluderSizeThreshold</a> (float screenSize)</td></tr>
+<tr class="memdesc:a3fcccde75cf5c79fcc05180a60eb44d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set required screen size (1.0 = full screen) for occluders. <br/></td></tr>
+<tr class="separator:a3fcccde75cf5c79fcc05180a60eb44d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26fd3f9815f6b05f92be26e45269f093"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26fd3f9815f6b05f92be26e45269f093"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a26fd3f9815f6b05f92be26e45269f093">SetMobileShadowBiasMul</a> (float mul)</td></tr>
+<tr class="memdesc:a26fd3f9815f6b05f92be26e45269f093"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set shadow depth bias multiplier for mobile platforms (OpenGL ES.) No effect on desktops. Default 2. <br/></td></tr>
+<tr class="separator:a26fd3f9815f6b05f92be26e45269f093"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a797137c1b7e4a8016830d49b02b09a5d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a797137c1b7e4a8016830d49b02b09a5d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a797137c1b7e4a8016830d49b02b09a5d">SetMobileShadowBiasAdd</a> (float add)</td></tr>
+<tr class="memdesc:a797137c1b7e4a8016830d49b02b09a5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set shadow depth bias addition for mobile platforms (OpenGL ES.) No effect on desktops. Default 0.0001. <br/></td></tr>
+<tr class="separator:a797137c1b7e4a8016830d49b02b09a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97029f9ce4cb7b52240e97cc5b7f2861"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97029f9ce4cb7b52240e97cc5b7f2861"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a97029f9ce4cb7b52240e97cc5b7f2861">ReloadShaders</a> ()</td></tr>
+<tr class="memdesc:a97029f9ce4cb7b52240e97cc5b7f2861"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force reload of shaders. <br/></td></tr>
+<tr class="separator:a97029f9ce4cb7b52240e97cc5b7f2861"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a244fce2ef8fd7d672400f2d7de603798"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a244fce2ef8fd7d672400f2d7de603798"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a244fce2ef8fd7d672400f2d7de603798">GetNumViewports</a> () const </td></tr>
+<tr class="memdesc:a244fce2ef8fd7d672400f2d7de603798"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of backbuffer viewports. <br/></td></tr>
+<tr class="separator:a244fce2ef8fd7d672400f2d7de603798"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6a152df61329743e9e1ad9e89f0cf09"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af6a152df61329743e9e1ad9e89f0cf09"></a>
+<a class="el" href="a00386.html">Viewport</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#af6a152df61329743e9e1ad9e89f0cf09">GetViewport</a> (unsigned index) const </td></tr>
+<tr class="memdesc:af6a152df61329743e9e1ad9e89f0cf09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return backbuffer viewport by index. <br/></td></tr>
+<tr class="separator:af6a152df61329743e9e1ad9e89f0cf09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a572a2cd0bc67cf0c0d7348debb655e5c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a572a2cd0bc67cf0c0d7348debb655e5c"></a>
+<a class="el" href="a00286.html">RenderPath</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a572a2cd0bc67cf0c0d7348debb655e5c">GetDefaultRenderPath</a> () const </td></tr>
+<tr class="memdesc:a572a2cd0bc67cf0c0d7348debb655e5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return default renderpath. <br/></td></tr>
+<tr class="separator:a572a2cd0bc67cf0c0d7348debb655e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42a0d061e891bbff33bcb4434613b3b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42a0d061e891bbff33bcb4434613b3b1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a42a0d061e891bbff33bcb4434613b3b1">GetHDRRendering</a> () const </td></tr>
+<tr class="memdesc:a42a0d061e891bbff33bcb4434613b3b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether HDR rendering is enabled. <br/></td></tr>
+<tr class="separator:a42a0d061e891bbff33bcb4434613b3b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4da749901e156a3526b1cef30036fd86"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4da749901e156a3526b1cef30036fd86"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a4da749901e156a3526b1cef30036fd86">GetSpecularLighting</a> () const </td></tr>
+<tr class="memdesc:a4da749901e156a3526b1cef30036fd86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether specular lighting is enabled. <br/></td></tr>
+<tr class="separator:a4da749901e156a3526b1cef30036fd86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade4791aadb3d809448ed0d4d0fa84f8a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade4791aadb3d809448ed0d4d0fa84f8a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#ade4791aadb3d809448ed0d4d0fa84f8a">GetDrawShadows</a> () const </td></tr>
+<tr class="memdesc:ade4791aadb3d809448ed0d4d0fa84f8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether drawing shadows is enabled. <br/></td></tr>
+<tr class="separator:ade4791aadb3d809448ed0d4d0fa84f8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67d8a5b13ed7d41cd1f87fbab249bd0b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a67d8a5b13ed7d41cd1f87fbab249bd0b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a67d8a5b13ed7d41cd1f87fbab249bd0b">GetTextureAnisotropy</a> () const </td></tr>
+<tr class="memdesc:a67d8a5b13ed7d41cd1f87fbab249bd0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return texture anisotropy. <br/></td></tr>
+<tr class="separator:a67d8a5b13ed7d41cd1f87fbab249bd0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90c38dd3b2681240a0d8d13f70de563b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a90c38dd3b2681240a0d8d13f70de563b"></a>
+TextureFilterMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a90c38dd3b2681240a0d8d13f70de563b">GetTextureFilterMode</a> () const </td></tr>
+<tr class="memdesc:a90c38dd3b2681240a0d8d13f70de563b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return texture filtering. <br/></td></tr>
+<tr class="separator:a90c38dd3b2681240a0d8d13f70de563b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f6a5b2c742d0ff6a454a6ac0850902a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f6a5b2c742d0ff6a454a6ac0850902a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a9f6a5b2c742d0ff6a454a6ac0850902a">GetTextureQuality</a> () const </td></tr>
+<tr class="memdesc:a9f6a5b2c742d0ff6a454a6ac0850902a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return texture quality level. <br/></td></tr>
+<tr class="separator:a9f6a5b2c742d0ff6a454a6ac0850902a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeedb3a3b5d1e043db741df0af6ef0fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaeedb3a3b5d1e043db741df0af6ef0fd"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#aaeedb3a3b5d1e043db741df0af6ef0fd">GetMaterialQuality</a> () const </td></tr>
+<tr class="memdesc:aaeedb3a3b5d1e043db741df0af6ef0fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return material quality level. <br/></td></tr>
+<tr class="separator:aaeedb3a3b5d1e043db741df0af6ef0fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0c90d5966441195417b4dd1952199f5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae0c90d5966441195417b4dd1952199f5"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#ae0c90d5966441195417b4dd1952199f5">GetShadowMapSize</a> () const </td></tr>
+<tr class="memdesc:ae0c90d5966441195417b4dd1952199f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return shadow map resolution. <br/></td></tr>
+<tr class="separator:ae0c90d5966441195417b4dd1952199f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f50debe1f691e950e1888b03fc52b6b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f50debe1f691e950e1888b03fc52b6b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a2f50debe1f691e950e1888b03fc52b6b">GetShadowQuality</a> () const </td></tr>
+<tr class="memdesc:a2f50debe1f691e950e1888b03fc52b6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return shadow quality. <br/></td></tr>
+<tr class="separator:a2f50debe1f691e950e1888b03fc52b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac522ec9cd4e25f17a6b9dfe886c641d6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac522ec9cd4e25f17a6b9dfe886c641d6"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#ac522ec9cd4e25f17a6b9dfe886c641d6">GetReuseShadowMaps</a> () const </td></tr>
+<tr class="memdesc:ac522ec9cd4e25f17a6b9dfe886c641d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether shadow maps are reused. <br/></td></tr>
+<tr class="separator:ac522ec9cd4e25f17a6b9dfe886c641d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15802d28c9d950b1c7705c0fcea3ec62"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a15802d28c9d950b1c7705c0fcea3ec62"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a15802d28c9d950b1c7705c0fcea3ec62">GetMaxShadowMaps</a> () const </td></tr>
+<tr class="memdesc:a15802d28c9d950b1c7705c0fcea3ec62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return maximum number of shadow maps per resolution. <br/></td></tr>
+<tr class="separator:a15802d28c9d950b1c7705c0fcea3ec62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5dc1059bf75fd7d2974ca034f767541"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5dc1059bf75fd7d2974ca034f767541"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#ae5dc1059bf75fd7d2974ca034f767541">GetDynamicInstancing</a> () const </td></tr>
+<tr class="memdesc:ae5dc1059bf75fd7d2974ca034f767541"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether dynamic instancing is in use. <br/></td></tr>
+<tr class="separator:ae5dc1059bf75fd7d2974ca034f767541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52743ad9e6248cc40a4bb24a09d4b6df"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52743ad9e6248cc40a4bb24a09d4b6df"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a52743ad9e6248cc40a4bb24a09d4b6df">GetMinInstances</a> () const </td></tr>
+<tr class="memdesc:a52743ad9e6248cc40a4bb24a09d4b6df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return minimum number of instances required in a batch group to render as instanced. <br/></td></tr>
+<tr class="separator:a52743ad9e6248cc40a4bb24a09d4b6df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cc1e11d4dc58f15ff54a90d6b2e28ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9cc1e11d4dc58f15ff54a90d6b2e28ed"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a9cc1e11d4dc58f15ff54a90d6b2e28ed">GetMaxInstanceTriangles</a> () const </td></tr>
+<tr class="memdesc:a9cc1e11d4dc58f15ff54a90d6b2e28ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return maximum number of triangles per object for instancing. <br/></td></tr>
+<tr class="separator:a9cc1e11d4dc58f15ff54a90d6b2e28ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cffab41d4ee10a05f1b13b1257d80df"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4cffab41d4ee10a05f1b13b1257d80df"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a4cffab41d4ee10a05f1b13b1257d80df">GetMaxSortedInstances</a> () const </td></tr>
+<tr class="memdesc:a4cffab41d4ee10a05f1b13b1257d80df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return maximum number of sorted instances per batch group. <br/></td></tr>
+<tr class="separator:a4cffab41d4ee10a05f1b13b1257d80df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6193508c2537bce5c879856844cebf3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6193508c2537bce5c879856844cebf3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#ac6193508c2537bce5c879856844cebf3">GetMaxOccluderTriangles</a> () const </td></tr>
+<tr class="memdesc:ac6193508c2537bce5c879856844cebf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return maximum number of occluder triangles. <br/></td></tr>
+<tr class="separator:ac6193508c2537bce5c879856844cebf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41604c0c9ca5ca619f60014539555cd6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41604c0c9ca5ca619f60014539555cd6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a41604c0c9ca5ca619f60014539555cd6">GetOcclusionBufferSize</a> () const </td></tr>
+<tr class="memdesc:a41604c0c9ca5ca619f60014539555cd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return occlusion buffer width. <br/></td></tr>
+<tr class="separator:a41604c0c9ca5ca619f60014539555cd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46d1232b9fc1d6d138e7e93d0b8355b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46d1232b9fc1d6d138e7e93d0b8355b9"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a46d1232b9fc1d6d138e7e93d0b8355b9">GetOccluderSizeThreshold</a> () const </td></tr>
+<tr class="memdesc:a46d1232b9fc1d6d138e7e93d0b8355b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return occluder screen size threshold. <br/></td></tr>
+<tr class="separator:a46d1232b9fc1d6d138e7e93d0b8355b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b8cd0266aa397abf7c9d96b05d748f0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b8cd0266aa397abf7c9d96b05d748f0"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a4b8cd0266aa397abf7c9d96b05d748f0">GetMobileShadowBiasMul</a> () const </td></tr>
+<tr class="memdesc:a4b8cd0266aa397abf7c9d96b05d748f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return shadow depth bias multiplier for mobile platforms. <br/></td></tr>
+<tr class="separator:a4b8cd0266aa397abf7c9d96b05d748f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae77d1e3435ba96ace2b06930b0a2779c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae77d1e3435ba96ace2b06930b0a2779c"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#ae77d1e3435ba96ace2b06930b0a2779c">GetMobileShadowBiasAdd</a> () const </td></tr>
+<tr class="memdesc:ae77d1e3435ba96ace2b06930b0a2779c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return shadow depth bias addition for mobile platforms. <br/></td></tr>
+<tr class="separator:ae77d1e3435ba96ace2b06930b0a2779c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab602fce2a18c93d4ea8a9d1b4cc82e20"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab602fce2a18c93d4ea8a9d1b4cc82e20"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#ab602fce2a18c93d4ea8a9d1b4cc82e20">GetNumViews</a> () const </td></tr>
+<tr class="memdesc:ab602fce2a18c93d4ea8a9d1b4cc82e20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of views rendered. <br/></td></tr>
+<tr class="separator:ab602fce2a18c93d4ea8a9d1b4cc82e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28c6c320238798c349bad621190db47b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a28c6c320238798c349bad621190db47b"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a28c6c320238798c349bad621190db47b">GetNumPrimitives</a> () const </td></tr>
+<tr class="memdesc:a28c6c320238798c349bad621190db47b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of primitives rendered. <br/></td></tr>
+<tr class="separator:a28c6c320238798c349bad621190db47b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2edc1b4b7137661cd2fea449b97a645b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2edc1b4b7137661cd2fea449b97a645b"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a2edc1b4b7137661cd2fea449b97a645b">GetNumBatches</a> () const </td></tr>
+<tr class="memdesc:a2edc1b4b7137661cd2fea449b97a645b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of batches rendered. <br/></td></tr>
+<tr class="separator:a2edc1b4b7137661cd2fea449b97a645b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13752ebce218548d8f99a187fe46c9dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a13752ebce218548d8f99a187fe46c9dc"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a13752ebce218548d8f99a187fe46c9dc">GetNumGeometries</a> (bool allViews=false) const </td></tr>
+<tr class="memdesc:a13752ebce218548d8f99a187fe46c9dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of geometries rendered. <br/></td></tr>
+<tr class="separator:a13752ebce218548d8f99a187fe46c9dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27e54a1bf60db154a863357b1d58588b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a27e54a1bf60db154a863357b1d58588b"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a27e54a1bf60db154a863357b1d58588b">GetNumLights</a> (bool allViews=false) const </td></tr>
+<tr class="memdesc:a27e54a1bf60db154a863357b1d58588b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of lights rendered. <br/></td></tr>
+<tr class="separator:a27e54a1bf60db154a863357b1d58588b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70b4d39d7b35717c66908df1e7b43533"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70b4d39d7b35717c66908df1e7b43533"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a70b4d39d7b35717c66908df1e7b43533">GetNumShadowMaps</a> (bool allViews=false) const </td></tr>
+<tr class="memdesc:a70b4d39d7b35717c66908df1e7b43533"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of shadow maps rendered. <br/></td></tr>
+<tr class="separator:a70b4d39d7b35717c66908df1e7b43533"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab46ff03b2455246a7e67d4a23ef80a7e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab46ff03b2455246a7e67d4a23ef80a7e"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#ab46ff03b2455246a7e67d4a23ef80a7e">GetNumOccluders</a> (bool allViews=false) const </td></tr>
+<tr class="memdesc:ab46ff03b2455246a7e67d4a23ef80a7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of occluders rendered. <br/></td></tr>
+<tr class="separator:ab46ff03b2455246a7e67d4a23ef80a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add23f2f9f835ed761827555f746b9658"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add23f2f9f835ed761827555f746b9658"></a>
+<a class="el" href="a00397.html">Zone</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#add23f2f9f835ed761827555f746b9658">GetDefaultZone</a> () const </td></tr>
+<tr class="memdesc:add23f2f9f835ed761827555f746b9658"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the default zone. <br/></td></tr>
+<tr class="separator:add23f2f9f835ed761827555f746b9658"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ba48787e27304c79281bf3036db5988"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ba48787e27304c79281bf3036db5988"></a>
+<a class="el" href="a00215.html">Material</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a1ba48787e27304c79281bf3036db5988">GetDefaultMaterial</a> () const </td></tr>
+<tr class="memdesc:a1ba48787e27304c79281bf3036db5988"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the default material. <br/></td></tr>
+<tr class="separator:a1ba48787e27304c79281bf3036db5988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93db7efd9f7b6810ec49de0f3bce79f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a93db7efd9f7b6810ec49de0f3bce79f8"></a>
+<a class="el" href="a00353.html">Texture2D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a93db7efd9f7b6810ec49de0f3bce79f8">GetDefaultLightRamp</a> () const </td></tr>
+<tr class="memdesc:a93db7efd9f7b6810ec49de0f3bce79f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the default range attenuation texture. <br/></td></tr>
+<tr class="separator:a93db7efd9f7b6810ec49de0f3bce79f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0258c6cf3eec42e6897f24fb2546c8c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0258c6cf3eec42e6897f24fb2546c8c6"></a>
+<a class="el" href="a00353.html">Texture2D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a0258c6cf3eec42e6897f24fb2546c8c6">GetDefaultLightSpot</a> () const </td></tr>
+<tr class="memdesc:a0258c6cf3eec42e6897f24fb2546c8c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the default spotlight attenuation texture. <br/></td></tr>
+<tr class="separator:a0258c6cf3eec42e6897f24fb2546c8c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1bb5f1452e274fae6330909132e6ac5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1bb5f1452e274fae6330909132e6ac5"></a>
+<a class="el" href="a00355.html">TextureCube</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#aa1bb5f1452e274fae6330909132e6ac5">GetFaceSelectCubeMap</a> () const </td></tr>
+<tr class="memdesc:aa1bb5f1452e274fae6330909132e6ac5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the shadowed pointlight face selection cube map. <br/></td></tr>
+<tr class="separator:aa1bb5f1452e274fae6330909132e6ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af410af9d6e3392accffffb3310586ebc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af410af9d6e3392accffffb3310586ebc"></a>
+<a class="el" href="a00355.html">TextureCube</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#af410af9d6e3392accffffb3310586ebc">GetIndirectionCubeMap</a> () const </td></tr>
+<tr class="memdesc:af410af9d6e3392accffffb3310586ebc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the shadowed pointlight indirection cube map. <br/></td></tr>
+<tr class="separator:af410af9d6e3392accffffb3310586ebc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaeea7da0df2d5074ac3fe9f4aeeff4b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeaeea7da0df2d5074ac3fe9f4aeeff4b"></a>
+<a class="el" href="a00382.html">VertexBuffer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#aeaeea7da0df2d5074ac3fe9f4aeeff4b">GetInstancingBuffer</a> () const </td></tr>
+<tr class="memdesc:aeaeea7da0df2d5074ac3fe9f4aeeff4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the instancing vertex buffer. <br/></td></tr>
+<tr class="separator:aeaeea7da0df2d5074ac3fe9f4aeeff4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42737b57d756b9656b22930be34b9a19"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42737b57d756b9656b22930be34b9a19"></a>
+const <a class="el" href="a00166.html">FrameInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a42737b57d756b9656b22930be34b9a19">GetFrameInfo</a> () const </td></tr>
+<tr class="memdesc:a42737b57d756b9656b22930be34b9a19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the frame update parameters. <br/></td></tr>
+<tr class="separator:a42737b57d756b9656b22930be34b9a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a993f63f35d27a9ea6df861962018f354"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a993f63f35d27a9ea6df861962018f354">Update</a> (float timeStep)</td></tr>
+<tr class="memdesc:a993f63f35d27a9ea6df861962018f354"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update for rendering. Called by <a class="el" href="a00285.html#adf594e7a524f6e003e8370cf23dbee13" title="Handle render update event.">HandleRenderUpdate()</a>.  <a href="#a993f63f35d27a9ea6df861962018f354">More...</a><br/></td></tr>
+<tr class="separator:a993f63f35d27a9ea6df861962018f354"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab246b6b23f39f3cdff9c279782b48993"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab246b6b23f39f3cdff9c279782b48993"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#ab246b6b23f39f3cdff9c279782b48993">Render</a> ()</td></tr>
+<tr class="memdesc:ab246b6b23f39f3cdff9c279782b48993"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render. Called by <a class="el" href="a00150.html" title="Urho3D engine. Creates the other subsystems.">Engine</a>. <br/></td></tr>
+<tr class="separator:ab246b6b23f39f3cdff9c279782b48993"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2edda10af9679e17b00db07891945c73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a2edda10af9679e17b00db07891945c73">DrawDebugGeometry</a> (bool depthTest)</td></tr>
+<tr class="memdesc:a2edda10af9679e17b00db07891945c73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add debug geometry to the debug renderer.  <a href="#a2edda10af9679e17b00db07891945c73">More...</a><br/></td></tr>
+<tr class="separator:a2edda10af9679e17b00db07891945c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeb454d44341ed3f84ab04880a7553f5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afeb454d44341ed3f84ab04880a7553f5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#afeb454d44341ed3f84ab04880a7553f5">QueueRenderSurface</a> (<a class="el" href="a00288.html">RenderSurface</a> *renderTarget)</td></tr>
+<tr class="memdesc:afeb454d44341ed3f84ab04880a7553f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queue a render surface's viewports for rendering. Called by the surface, or by <a class="el" href="a00384.html" title="3D rendering view. Includes the main view(s) and any auxiliary views, but not shadow cameras...">View</a>. <br/></td></tr>
+<tr class="separator:afeb454d44341ed3f84ab04880a7553f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8faee04d4f315f7bb12e54965d79c4f4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8faee04d4f315f7bb12e54965d79c4f4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a8faee04d4f315f7bb12e54965d79c4f4">QueueViewport</a> (<a class="el" href="a00288.html">RenderSurface</a> *renderTarget, <a class="el" href="a00386.html">Viewport</a> *viewport)</td></tr>
+<tr class="memdesc:a8faee04d4f315f7bb12e54965d79c4f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queue a viewport for rendering. Null surface means backbuffer. <br/></td></tr>
+<tr class="separator:a8faee04d4f315f7bb12e54965d79c4f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acad56929dfa55c978d3ce19aa57c5483"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acad56929dfa55c978d3ce19aa57c5483"></a>
+<a class="el" href="a00171.html">Geometry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#acad56929dfa55c978d3ce19aa57c5483">GetLightGeometry</a> (<a class="el" href="a00198.html">Light</a> *light)</td></tr>
+<tr class="memdesc:acad56929dfa55c978d3ce19aa57c5483"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return volume geometry for a light. <br/></td></tr>
+<tr class="separator:acad56929dfa55c978d3ce19aa57c5483"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a887e9961f27af8db3298c0c0ba0e582c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a887e9961f27af8db3298c0c0ba0e582c"></a>
+<a class="el" href="a00171.html">Geometry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a887e9961f27af8db3298c0c0ba0e582c">GetQuadGeometry</a> ()</td></tr>
+<tr class="memdesc:a887e9961f27af8db3298c0c0ba0e582c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return quad geometry used in postprocessing. <br/></td></tr>
+<tr class="separator:a887e9961f27af8db3298c0c0ba0e582c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d4509e32b17bff5f3069f8fe6fd448d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00353.html">Texture2D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a7d4509e32b17bff5f3069f8fe6fd448d">GetShadowMap</a> (<a class="el" href="a00198.html">Light</a> *light, <a class="el" href="a00088.html">Camera</a> *camera, unsigned viewWidth, unsigned viewHeight)</td></tr>
+<tr class="memdesc:a7d4509e32b17bff5f3069f8fe6fd448d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a shadow map. If shadow map reuse is disabled, a different map is returned each time.  <a href="#a7d4509e32b17bff5f3069f8fe6fd448d">More...</a><br/></td></tr>
+<tr class="separator:a7d4509e32b17bff5f3069f8fe6fd448d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78d0df272f6811e2865d3ecba5ca9a40"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a78d0df272f6811e2865d3ecba5ca9a40"></a>
+<a class="el" href="a00353.html">Texture2D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a78d0df272f6811e2865d3ecba5ca9a40">GetScreenBuffer</a> (int width, int height, unsigned format, bool filtered, bool srgb, unsigned persistentKey=0)</td></tr>
+<tr class="memdesc:a78d0df272f6811e2865d3ecba5ca9a40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a rendertarget or depth-stencil texture for deferred rendering or postprocessing. Should only be called during actual rendering, not before. <br/></td></tr>
+<tr class="separator:a78d0df272f6811e2865d3ecba5ca9a40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa85ebfe526277a94526014e6b962e94"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa85ebfe526277a94526014e6b962e94"></a>
+<a class="el" href="a00288.html">RenderSurface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#afa85ebfe526277a94526014e6b962e94">GetDepthStencil</a> (int width, int height)</td></tr>
+<tr class="memdesc:afa85ebfe526277a94526014e6b962e94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a depth-stencil surface that does not need to be readable. Should only be called during actual rendering, not before. <br/></td></tr>
+<tr class="separator:afa85ebfe526277a94526014e6b962e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1019022bc7420a27a99aeac2434980ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1019022bc7420a27a99aeac2434980ba"></a>
+<a class="el" href="a00245.html">OcclusionBuffer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a1019022bc7420a27a99aeac2434980ba">GetOcclusionBuffer</a> (<a class="el" href="a00088.html">Camera</a> *camera)</td></tr>
+<tr class="memdesc:a1019022bc7420a27a99aeac2434980ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate an occlusion buffer. <br/></td></tr>
+<tr class="separator:a1019022bc7420a27a99aeac2434980ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c0831e08bf00013bbc106da1dd6a8c5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c0831e08bf00013bbc106da1dd6a8c5"></a>
+<a class="el" href="a00088.html">Camera</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a5c0831e08bf00013bbc106da1dd6a8c5">GetShadowCamera</a> ()</td></tr>
+<tr class="memdesc:a5c0831e08bf00013bbc106da1dd6a8c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a temporary shadow camera and a scene node for it. Is thread-safe. <br/></td></tr>
+<tr class="separator:a5c0831e08bf00013bbc106da1dd6a8c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa42e1606ad0740a23ae30f64ca079ddb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa42e1606ad0740a23ae30f64ca079ddb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#aa42e1606ad0740a23ae30f64ca079ddb">SetBatchShaders</a> (<a class="el" href="a00075.html">Batch</a> &amp;batch, <a class="el" href="a00346.html">Technique</a> *tech, bool allowShadows=true)</td></tr>
+<tr class="memdesc:aa42e1606ad0740a23ae30f64ca079ddb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Choose shaders for a forward rendering batch. <br/></td></tr>
+<tr class="separator:aa42e1606ad0740a23ae30f64ca079ddb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9e5d2bfbd82ba13e05fe939e4f92b0b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9e5d2bfbd82ba13e05fe939e4f92b0b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#ac9e5d2bfbd82ba13e05fe939e4f92b0b">SetLightVolumeBatchShaders</a> (<a class="el" href="a00075.html">Batch</a> &amp;batch, const <a class="el" href="a00344.html">String</a> &amp;vsName, const <a class="el" href="a00344.html">String</a> &amp;psName)</td></tr>
+<tr class="memdesc:ac9e5d2bfbd82ba13e05fe939e4f92b0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Choose shaders for a deferred light volume batch. <br/></td></tr>
+<tr class="separator:ac9e5d2bfbd82ba13e05fe939e4f92b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cf64510e7fdd35d5387413a242e2e52"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3cf64510e7fdd35d5387413a242e2e52"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a3cf64510e7fdd35d5387413a242e2e52">SetCullMode</a> (CullMode mode, <a class="el" href="a00088.html">Camera</a> *camera)</td></tr>
+<tr class="memdesc:a3cf64510e7fdd35d5387413a242e2e52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set cull mode while taking possible projection flipping into account. <br/></td></tr>
+<tr class="separator:a3cf64510e7fdd35d5387413a242e2e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a262f02617ee83376acefea529668e183"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a262f02617ee83376acefea529668e183"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a262f02617ee83376acefea529668e183">ResizeInstancingBuffer</a> (unsigned numInstances)</td></tr>
+<tr class="memdesc:a262f02617ee83376acefea529668e183"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensure sufficient size of the instancing vertex buffer. Return true if successful. <br/></td></tr>
+<tr class="separator:a262f02617ee83376acefea529668e183"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26e9a4aa04eaa697900965da9aaa632f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26e9a4aa04eaa697900965da9aaa632f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a26e9a4aa04eaa697900965da9aaa632f">SaveScreenBufferAllocations</a> ()</td></tr>
+<tr class="memdesc:a26e9a4aa04eaa697900965da9aaa632f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the screen buffer allocation status. Called by <a class="el" href="a00384.html" title="3D rendering view. Includes the main view(s) and any auxiliary views, but not shadow cameras...">View</a>. <br/></td></tr>
+<tr class="separator:a26e9a4aa04eaa697900965da9aaa632f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1876026e21f2884c37c5ce433658b284"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1876026e21f2884c37c5ce433658b284"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a1876026e21f2884c37c5ce433658b284">RestoreScreenBufferAllocations</a> ()</td></tr>
+<tr class="memdesc:a1876026e21f2884c37c5ce433658b284"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restore the screen buffer allocation status. Called by <a class="el" href="a00384.html" title="3D rendering view. Includes the main view(s) and any auxiliary views, but not shadow cameras...">View</a>. <br/></td></tr>
+<tr class="separator:a1876026e21f2884c37c5ce433658b284"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f8fe99765e7b8700c68577eca16103d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f8fe99765e7b8700c68577eca16103d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a7f8fe99765e7b8700c68577eca16103d">OptimizeLightByScissor</a> (<a class="el" href="a00198.html">Light</a> *light, <a class="el" href="a00088.html">Camera</a> *camera)</td></tr>
+<tr class="memdesc:a7f8fe99765e7b8700c68577eca16103d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optimize a light by scissor rectangle. <br/></td></tr>
+<tr class="separator:a7f8fe99765e7b8700c68577eca16103d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a408789b2d93f27c7884360b7ecccec55"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a408789b2d93f27c7884360b7ecccec55"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a408789b2d93f27c7884360b7ecccec55">OptimizeLightByStencil</a> (<a class="el" href="a00198.html">Light</a> *light, <a class="el" href="a00088.html">Camera</a> *camera)</td></tr>
+<tr class="memdesc:a408789b2d93f27c7884360b7ecccec55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optimize a light by marking it to the stencil buffer and setting a stencil test. <br/></td></tr>
+<tr class="separator:a408789b2d93f27c7884360b7ecccec55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f4c5f6c7f7490e74f15349dc16a6c69"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f4c5f6c7f7490e74f15349dc16a6c69"></a>
+const <a class="el" href="a00280.html">Rect</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a3f4c5f6c7f7490e74f15349dc16a6c69">GetLightScissor</a> (<a class="el" href="a00198.html">Light</a> *light, <a class="el" href="a00088.html">Camera</a> *camera)</td></tr>
+<tr class="memdesc:a3f4c5f6c7f7490e74f15349dc16a6c69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a scissor rectangle for a light. <br/></td></tr>
+<tr class="separator:a3f4c5f6c7f7490e74f15349dc16a6c69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_a00241"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00241')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="a00241.html">Urho3D::Object</a></td></tr>
+<tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_a00241"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a95a6cd1c5c12a458fda4b38f873a334d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00241.html#a95a6cd1c5c12a458fda4b38f873a334d">Object</a> (<a class="el" href="a00125.html">Context</a> *context)</td></tr>
+<tr class="memdesc:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_a00241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
+<tr class="separator:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_a00241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0315666e4cd1d17b8de8c62bb0231f64 inherit pub_methods_a00241"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0315666e4cd1d17b8de8c62bb0231f64"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00241.html#a0315666e4cd1d17b8de8c62bb0231f64">~Object</a> ()</td></tr>
+<tr class="memdesc:a0315666e4cd1d17b8de8c62bb0231f64 inherit pub_methods_a00241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. Clean up self from event sender &amp; receiver structures. <br/></td></tr>
+<tr class="separator:a0315666e4cd1d17b8de8c62bb0231f64 inherit pub_methods_a00241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc59a1d0b1bb4c67ed06d220c3c81c4a inherit pub_methods_a00241"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc59a1d0b1bb4c67ed06d220c3c81c4a"></a>
+virtual <a class="el" href="a00322.html">ShortStringHash</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00241.html#abc59a1d0b1bb4c67ed06d220c3c81c4a">GetType</a> () const =0</td></tr>
+<tr class="memdesc:abc59a1d0b1bb4c67ed06d220c3c81c4a inherit pub_methods_a00241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return type hash. <br/></td></tr>
+<tr class="separator:abc59a1d0b1bb4c67ed06d220c3c81c4a inherit pub_methods_a00241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff7df33f6f558e9f1d43355858ad77c9 inherit pub_methods_a00241"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff7df33f6f558e9f1d43355858ad77c9"></a>
+virtual <a class="el" href="a00322.html">ShortStringHash</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00241.html#aff7df33f6f558e9f1d43355858ad77c9">GetBaseType</a> () const =0</td></tr>
+<tr class="memdesc:aff7df33f6f558e9f1d43355858ad77c9 inherit pub_methods_a00241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return base class type hash. <br/></td></tr>
+<tr class="separator:aff7df33f6f558e9f1d43355858ad77c9 inherit pub_methods_a00241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e095e012835897947ccaf26fdf4b81f inherit pub_methods_a00241"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e095e012835897947ccaf26fdf4b81f"></a>
+virtual const <a class="el" href="a00344.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00241.html#a2e095e012835897947ccaf26fdf4b81f">GetTypeName</a> () const =0</td></tr>
+<tr class="memdesc:a2e095e012835897947ccaf26fdf4b81f inherit pub_methods_a00241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return type name. <br/></td></tr>
+<tr class="separator:a2e095e012835897947ccaf26fdf4b81f inherit pub_methods_a00241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_a00241"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0ce1699ce5bd9d4033e5800bbb8c15b"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00241.html#ad0ce1699ce5bd9d4033e5800bbb8c15b">OnEvent</a> (<a class="el" href="a00241.html">Object</a> *sender, <a class="el" href="a00345.html">StringHash</a> eventType, <a class="el" href="a00178.html">VariantMap</a> &amp;eventData)</td></tr>
+<tr class="memdesc:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_a00241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle event. <br/></td></tr>
+<tr class="separator:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_a00241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d9d061f4cf32f5fd5531e11a72834b6 inherit pub_methods_a00241"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d9d061f4cf32f5fd5531e11a72834b6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00241.html#a7d9d061f4cf32f5fd5531e11a72834b6">SubscribeToEvent</a> (<a class="el" href="a00345.html">StringHash</a> eventType, <a class="el" href="a00151.html">EventHandler</a> *handler)</td></tr>
+<tr class="memdesc:a7d9d061f4cf32f5fd5531e11a72834b6 inherit pub_methods_a00241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribe to an event that can be sent by any sender. <br/></td></tr>
+<tr class="separator:a7d9d061f4cf32f5fd5531e11a72834b6 inherit pub_methods_a00241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9ea95ee6f24e7fbeede16ba149dbc2d inherit pub_methods_a00241"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9ea95ee6f24e7fbeede16ba149dbc2d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00241.html#ac9ea95ee6f24e7fbeede16ba149dbc2d">SubscribeToEvent</a> (<a class="el" href="a00241.html">Object</a> *sender, <a class="el" href="a00345.html">StringHash</a> eventType, <a class="el" href="a00151.html">EventHandler</a> *handler)</td></tr>
+<tr class="memdesc:ac9ea95ee6f24e7fbeede16ba149dbc2d inherit pub_methods_a00241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribe to a specific sender's event. <br/></td></tr>
+<tr class="separator:ac9ea95ee6f24e7fbeede16ba149dbc2d inherit pub_methods_a00241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a153b96c4397e045b2ca2b2d5471d097c inherit pub_methods_a00241"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a153b96c4397e045b2ca2b2d5471d097c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00241.html#a153b96c4397e045b2ca2b2d5471d097c">UnsubscribeFromEvent</a> (<a class="el" href="a00345.html">StringHash</a> eventType)</td></tr>
+<tr class="memdesc:a153b96c4397e045b2ca2b2d5471d097c inherit pub_methods_a00241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsubscribe from an event. <br/></td></tr>
+<tr class="separator:a153b96c4397e045b2ca2b2d5471d097c inherit pub_methods_a00241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0997136c3ee9c04289e2f708e72c6fa4 inherit pub_methods_a00241"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0997136c3ee9c04289e2f708e72c6fa4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00241.html#a0997136c3ee9c04289e2f708e72c6fa4">UnsubscribeFromEvent</a> (<a class="el" href="a00241.html">Object</a> *sender, <a class="el" href="a00345.html">StringHash</a> eventType)</td></tr>
+<tr class="memdesc:a0997136c3ee9c04289e2f708e72c6fa4 inherit pub_methods_a00241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsubscribe from a specific sender's event. <br/></td></tr>
+<tr class="separator:a0997136c3ee9c04289e2f708e72c6fa4 inherit pub_methods_a00241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac31525619cc3f3053ed8b789f7060217 inherit pub_methods_a00241"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac31525619cc3f3053ed8b789f7060217"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00241.html#ac31525619cc3f3053ed8b789f7060217">UnsubscribeFromEvents</a> (<a class="el" href="a00241.html">Object</a> *sender)</td></tr>
+<tr class="memdesc:ac31525619cc3f3053ed8b789f7060217 inherit pub_methods_a00241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsubscribe from a specific sender's events. <br/></td></tr>
+<tr class="separator:ac31525619cc3f3053ed8b789f7060217 inherit pub_methods_a00241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1296ea9c99b7e03e1a40b23667b1eedc inherit pub_methods_a00241"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1296ea9c99b7e03e1a40b23667b1eedc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00241.html#a1296ea9c99b7e03e1a40b23667b1eedc">UnsubscribeFromAllEvents</a> ()</td></tr>
+<tr class="memdesc:a1296ea9c99b7e03e1a40b23667b1eedc inherit pub_methods_a00241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsubscribe from all events. <br/></td></tr>
+<tr class="separator:a1296ea9c99b7e03e1a40b23667b1eedc inherit pub_methods_a00241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37a53fa52f1615fddd212107cf51c587 inherit pub_methods_a00241"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37a53fa52f1615fddd212107cf51c587"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00241.html#a37a53fa52f1615fddd212107cf51c587">UnsubscribeFromAllEventsExcept</a> (const <a class="el" href="a00269.html">PODVector</a>&lt; <a class="el" href="a00345.html">StringHash</a> &gt; &amp;exceptions, bool onlyUserData)</td></tr>
+<tr class="memdesc:a37a53fa52f1615fddd212107cf51c587 inherit pub_methods_a00241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsubscribe from all events except those listed, and optionally only those with userdata (script registered events.) <br/></td></tr>
+<tr class="separator:a37a53fa52f1615fddd212107cf51c587 inherit pub_methods_a00241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32020dbf77c196b9777eca479e8abb36 inherit pub_methods_a00241"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a32020dbf77c196b9777eca479e8abb36"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00241.html#a32020dbf77c196b9777eca479e8abb36">SendEvent</a> (<a class="el" href="a00345.html">StringHash</a> eventType)</td></tr>
+<tr class="memdesc:a32020dbf77c196b9777eca479e8abb36 inherit pub_methods_a00241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send event to all subscribers. <br/></td></tr>
+<tr class="separator:a32020dbf77c196b9777eca479e8abb36 inherit pub_methods_a00241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_a00241"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00241.html#af8f8bd3f7e2f51ecca7199e737f53364">SendEvent</a> (<a class="el" href="a00345.html">StringHash</a> eventType, <a class="el" href="a00178.html">VariantMap</a> &amp;eventData)</td></tr>
+<tr class="memdesc:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_a00241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send event with parameters to all subscribers.  <a href="#af8f8bd3f7e2f51ecca7199e737f53364">More...</a><br/></td></tr>
+<tr class="separator:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_a00241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8dbe9844094c04463def7df1fa650d5 inherit pub_methods_a00241"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab8dbe9844094c04463def7df1fa650d5"></a>
+<a class="el" href="a00178.html">VariantMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00241.html#ab8dbe9844094c04463def7df1fa650d5">GetEventDataMap</a> () const </td></tr>
+<tr class="memdesc:ab8dbe9844094c04463def7df1fa650d5 inherit pub_methods_a00241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a preallocated map for event data. Used for optimization to avoid constant re-allocation of event data maps. <br/></td></tr>
+<tr class="separator:ab8dbe9844094c04463def7df1fa650d5 inherit pub_methods_a00241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48c407eb402e328382c2a61fb3db4441 inherit pub_methods_a00241"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a48c407eb402e328382c2a61fb3db4441"></a>
+<a class="el" href="a00125.html">Context</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00241.html#a48c407eb402e328382c2a61fb3db4441">GetContext</a> () const </td></tr>
+<tr class="memdesc:a48c407eb402e328382c2a61fb3db4441 inherit pub_methods_a00241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return execution context. <br/></td></tr>
+<tr class="separator:a48c407eb402e328382c2a61fb3db4441 inherit pub_methods_a00241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedcc90c292caf58f2317194019f8b51a inherit pub_methods_a00241"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aedcc90c292caf58f2317194019f8b51a"></a>
+<a class="el" href="a00241.html">Object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00241.html#aedcc90c292caf58f2317194019f8b51a">GetSubsystem</a> (<a class="el" href="a00322.html">ShortStringHash</a> type) const </td></tr>
+<tr class="memdesc:aedcc90c292caf58f2317194019f8b51a inherit pub_methods_a00241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return subsystem by type. <br/></td></tr>
+<tr class="separator:aedcc90c292caf58f2317194019f8b51a inherit pub_methods_a00241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af77f10214e90fb621d2ee797a18f8974 inherit pub_methods_a00241"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af77f10214e90fb621d2ee797a18f8974"></a>
+<a class="el" href="a00241.html">Object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00241.html#af77f10214e90fb621d2ee797a18f8974">GetEventSender</a> () const </td></tr>
+<tr class="memdesc:af77f10214e90fb621d2ee797a18f8974 inherit pub_methods_a00241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return active event sender. Null outside event handling. <br/></td></tr>
+<tr class="separator:af77f10214e90fb621d2ee797a18f8974 inherit pub_methods_a00241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d2f34a4ab171e3f9efb2fb90fe64493 inherit pub_methods_a00241"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d2f34a4ab171e3f9efb2fb90fe64493"></a>
+<a class="el" href="a00151.html">EventHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00241.html#a8d2f34a4ab171e3f9efb2fb90fe64493">GetEventHandler</a> () const </td></tr>
+<tr class="memdesc:a8d2f34a4ab171e3f9efb2fb90fe64493 inherit pub_methods_a00241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return active event handler. Null outside event handling. <br/></td></tr>
+<tr class="separator:a8d2f34a4ab171e3f9efb2fb90fe64493 inherit pub_methods_a00241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e1e02093f67f7d56056c5992a6d7b1e inherit pub_methods_a00241"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e1e02093f67f7d56056c5992a6d7b1e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00241.html#a7e1e02093f67f7d56056c5992a6d7b1e">HasSubscribedToEvent</a> (<a class="el" href="a00345.html">StringHash</a> eventType) const </td></tr>
+<tr class="memdesc:a7e1e02093f67f7d56056c5992a6d7b1e inherit pub_methods_a00241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether has subscribed to an event without specific sender. <br/></td></tr>
+<tr class="separator:a7e1e02093f67f7d56056c5992a6d7b1e inherit pub_methods_a00241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0adfe36d21569e2f4f5785627c87fa3d inherit pub_methods_a00241"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0adfe36d21569e2f4f5785627c87fa3d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00241.html#a0adfe36d21569e2f4f5785627c87fa3d">HasSubscribedToEvent</a> (<a class="el" href="a00241.html">Object</a> *sender, <a class="el" href="a00345.html">StringHash</a> eventType) const </td></tr>
+<tr class="memdesc:a0adfe36d21569e2f4f5785627c87fa3d inherit pub_methods_a00241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether has subscribed to a specific sender's event. <br/></td></tr>
+<tr class="separator:a0adfe36d21569e2f4f5785627c87fa3d inherit pub_methods_a00241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd8d1263bc0207d56e6c4e0d75a0b684 inherit pub_methods_a00241"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd8d1263bc0207d56e6c4e0d75a0b684"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00241.html#abd8d1263bc0207d56e6c4e0d75a0b684">HasEventHandlers</a> () const </td></tr>
+<tr class="memdesc:abd8d1263bc0207d56e6c4e0d75a0b684 inherit pub_methods_a00241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether has subscribed to any event. <br/></td></tr>
+<tr class="separator:abd8d1263bc0207d56e6c4e0d75a0b684 inherit pub_methods_a00241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1f70ceb09c8615e7dd2522eb4a87331 inherit pub_methods_a00241"><td class="memTemplParams" colspan="2"><a class="anchor" id="ad1f70ceb09c8615e7dd2522eb4a87331"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:ad1f70ceb09c8615e7dd2522eb4a87331 inherit pub_methods_a00241"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00241.html#ad1f70ceb09c8615e7dd2522eb4a87331">GetSubsystem</a> () const </td></tr>
+<tr class="memdesc:ad1f70ceb09c8615e7dd2522eb4a87331 inherit pub_methods_a00241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template version of returning a subsystem. <br/></td></tr>
+<tr class="separator:ad1f70ceb09c8615e7dd2522eb4a87331 inherit pub_methods_a00241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af91bcd494ffe005fbf0f8238ba82121e inherit pub_methods_a00241"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af91bcd494ffe005fbf0f8238ba82121e"></a>
+const <a class="el" href="a00344.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00241.html#af91bcd494ffe005fbf0f8238ba82121e">GetCategory</a> () const </td></tr>
+<tr class="memdesc:af91bcd494ffe005fbf0f8238ba82121e inherit pub_methods_a00241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return object category. Categories are (optionally) registered along with the object factory. Return an empty string if the object category is not registered. <br/></td></tr>
+<tr class="separator:af91bcd494ffe005fbf0f8238ba82121e inherit pub_methods_a00241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_a00283"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00283')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="a00283.html">Urho3D::RefCounted</a></td></tr>
+<tr class="memitem:aad6e2ac9e97ca71b28c47248a9aad9b9 inherit pub_methods_a00283"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad6e2ac9e97ca71b28c47248a9aad9b9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00283.html#aad6e2ac9e97ca71b28c47248a9aad9b9">RefCounted</a> ()</td></tr>
+<tr class="memdesc:aad6e2ac9e97ca71b28c47248a9aad9b9 inherit pub_methods_a00283"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. Allocate the reference count structure and set an initial self weak reference. <br/></td></tr>
+<tr class="separator:aad6e2ac9e97ca71b28c47248a9aad9b9 inherit pub_methods_a00283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1f332b55c08fd702f2c7ebb18e42a90 inherit pub_methods_a00283"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1f332b55c08fd702f2c7ebb18e42a90"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00283.html#aa1f332b55c08fd702f2c7ebb18e42a90">~RefCounted</a> ()</td></tr>
+<tr class="memdesc:aa1f332b55c08fd702f2c7ebb18e42a90 inherit pub_methods_a00283"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. Mark as expired and also delete the reference count structure if no outside weak references exist. <br/></td></tr>
+<tr class="separator:aa1f332b55c08fd702f2c7ebb18e42a90 inherit pub_methods_a00283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d857f439bb5a7935199a8e4fdb8f2c8 inherit pub_methods_a00283"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d857f439bb5a7935199a8e4fdb8f2c8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00283.html#a0d857f439bb5a7935199a8e4fdb8f2c8">AddRef</a> ()</td></tr>
+<tr class="memdesc:a0d857f439bb5a7935199a8e4fdb8f2c8 inherit pub_methods_a00283"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment reference count. Can also be called outside of a <a class="el" href="a00321.html" title="Shared pointer template class with intrusive reference counting.">SharedPtr</a> for traditional reference counting. <br/></td></tr>
+<tr class="separator:a0d857f439bb5a7935199a8e4fdb8f2c8 inherit pub_methods_a00283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59e95fecbcbc560f81f0bdd52306cc1d inherit pub_methods_a00283"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59e95fecbcbc560f81f0bdd52306cc1d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00283.html#a59e95fecbcbc560f81f0bdd52306cc1d">ReleaseRef</a> ()</td></tr>
+<tr class="memdesc:a59e95fecbcbc560f81f0bdd52306cc1d inherit pub_methods_a00283"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrement reference count and delete self if no more references. Can also be called outside of a <a class="el" href="a00321.html" title="Shared pointer template class with intrusive reference counting.">SharedPtr</a> for traditional reference counting. <br/></td></tr>
+<tr class="separator:a59e95fecbcbc560f81f0bdd52306cc1d inherit pub_methods_a00283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5ac3cb7e5f64c056351e15d3a30b4ba inherit pub_methods_a00283"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5ac3cb7e5f64c056351e15d3a30b4ba"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00283.html#ad5ac3cb7e5f64c056351e15d3a30b4ba">Refs</a> () const </td></tr>
+<tr class="memdesc:ad5ac3cb7e5f64c056351e15d3a30b4ba inherit pub_methods_a00283"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return reference count. <br/></td></tr>
+<tr class="separator:ad5ac3cb7e5f64c056351e15d3a30b4ba inherit pub_methods_a00283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab05087f4c487de02faed7411bbcf9df1 inherit pub_methods_a00283"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab05087f4c487de02faed7411bbcf9df1"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00283.html#ab05087f4c487de02faed7411bbcf9df1">WeakRefs</a> () const </td></tr>
+<tr class="memdesc:ab05087f4c487de02faed7411bbcf9df1 inherit pub_methods_a00283"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return weak reference count. <br/></td></tr>
+<tr class="separator:ab05087f4c487de02faed7411bbcf9df1 inherit pub_methods_a00283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eb5281d7e6cfd7e729ae0d07ca0da92 inherit pub_methods_a00283"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0eb5281d7e6cfd7e729ae0d07ca0da92"></a>
+<a class="el" href="a00282.html">RefCount</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00283.html#a0eb5281d7e6cfd7e729ae0d07ca0da92">RefCountPtr</a> ()</td></tr>
+<tr class="memdesc:a0eb5281d7e6cfd7e729ae0d07ca0da92 inherit pub_methods_a00283"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return pointer to the reference count structure. <br/></td></tr>
+<tr class="separator:a0eb5281d7e6cfd7e729ae0d07ca0da92 inherit pub_methods_a00283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a6b3badadd879e828d86b83da9ab5bae9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b3badadd879e828d86b83da9ab5bae9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>OBJECT</b> (<a class="el" href="a00285.html">Renderer</a>)</td></tr>
+<tr class="separator:a6b3badadd879e828d86b83da9ab5bae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0d765a240f7cf5f829ddc95cb2729c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae0d765a240f7cf5f829ddc95cb2729c9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#ae0d765a240f7cf5f829ddc95cb2729c9">Initialize</a> ()</td></tr>
+<tr class="memdesc:ae0d765a240f7cf5f829ddc95cb2729c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize when screen mode initially set. <br/></td></tr>
+<tr class="separator:ae0d765a240f7cf5f829ddc95cb2729c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61794dd783e4a1da373e161cd541ceeb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61794dd783e4a1da373e161cd541ceeb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a61794dd783e4a1da373e161cd541ceeb">ResetViews</a> ()</td></tr>
+<tr class="memdesc:a61794dd783e4a1da373e161cd541ceeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear views from previous frame. <br/></td></tr>
+<tr class="separator:a61794dd783e4a1da373e161cd541ceeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7091de5f9dcce8312bc85b3342fe1ac2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7091de5f9dcce8312bc85b3342fe1ac2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a7091de5f9dcce8312bc85b3342fe1ac2">LoadShaders</a> ()</td></tr>
+<tr class="memdesc:a7091de5f9dcce8312bc85b3342fe1ac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reload shaders. <br/></td></tr>
+<tr class="separator:a7091de5f9dcce8312bc85b3342fe1ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afff140716599c2b6405de5dcd0ac7b3f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afff140716599c2b6405de5dcd0ac7b3f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#afff140716599c2b6405de5dcd0ac7b3f">LoadPassShaders</a> (<a class="el" href="a00346.html">Technique</a> *tech, <a class="el" href="a00345.html">StringHash</a> passType)</td></tr>
+<tr class="memdesc:afff140716599c2b6405de5dcd0ac7b3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reload shaders for a material pass. <br/></td></tr>
+<tr class="separator:afff140716599c2b6405de5dcd0ac7b3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac938d98240b1d9f33201d4aad78c9086"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac938d98240b1d9f33201d4aad78c9086"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#ac938d98240b1d9f33201d4aad78c9086">ReleaseMaterialShaders</a> ()</td></tr>
+<tr class="memdesc:ac938d98240b1d9f33201d4aad78c9086"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release shaders used in materials. <br/></td></tr>
+<tr class="separator:ac938d98240b1d9f33201d4aad78c9086"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a967baa98fd74df00b6fd0827e5c20473"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a967baa98fd74df00b6fd0827e5c20473"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a967baa98fd74df00b6fd0827e5c20473">ReloadTextures</a> ()</td></tr>
+<tr class="memdesc:a967baa98fd74df00b6fd0827e5c20473"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reload textures. <br/></td></tr>
+<tr class="separator:a967baa98fd74df00b6fd0827e5c20473"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5121b95333802032e65b2bac639b9eef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5121b95333802032e65b2bac639b9eef"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a5121b95333802032e65b2bac639b9eef">CreateGeometries</a> ()</td></tr>
+<tr class="memdesc:a5121b95333802032e65b2bac639b9eef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create light volume geometries. <br/></td></tr>
+<tr class="separator:a5121b95333802032e65b2bac639b9eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a480f38bdf27906657d1e483d9be30411"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a480f38bdf27906657d1e483d9be30411"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a480f38bdf27906657d1e483d9be30411">CreateInstancingBuffer</a> ()</td></tr>
+<tr class="memdesc:a480f38bdf27906657d1e483d9be30411"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create instancing vertex buffer. <br/></td></tr>
+<tr class="separator:a480f38bdf27906657d1e483d9be30411"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a572d9c18b1b2c5c0db85d3f1c310e48e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a572d9c18b1b2c5c0db85d3f1c310e48e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a572d9c18b1b2c5c0db85d3f1c310e48e">SetIndirectionTextureData</a> ()</td></tr>
+<tr class="memdesc:a572d9c18b1b2c5c0db85d3f1c310e48e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create point light shadow indirection texture data. <br/></td></tr>
+<tr class="separator:a572d9c18b1b2c5c0db85d3f1c310e48e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b6d8f978872348f1c4ab32b88072c26"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b6d8f978872348f1c4ab32b88072c26"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a1b6d8f978872348f1c4ab32b88072c26">PrepareViewRender</a> ()</td></tr>
+<tr class="memdesc:a1b6d8f978872348f1c4ab32b88072c26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare for rendering of a new view. <br/></td></tr>
+<tr class="separator:a1b6d8f978872348f1c4ab32b88072c26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f1b359a3daee56e5186fff085178d50"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f1b359a3daee56e5186fff085178d50"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a3f1b359a3daee56e5186fff085178d50">RemoveUnusedBuffers</a> ()</td></tr>
+<tr class="memdesc:a3f1b359a3daee56e5186fff085178d50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove unused occlusion and screen buffers. <br/></td></tr>
+<tr class="separator:a3f1b359a3daee56e5186fff085178d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adea49989775cfdab341fd9e1a20b75f4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adea49989775cfdab341fd9e1a20b75f4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#adea49989775cfdab341fd9e1a20b75f4">ResetShadowMapAllocations</a> ()</td></tr>
+<tr class="memdesc:adea49989775cfdab341fd9e1a20b75f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset shadow map allocation counts. <br/></td></tr>
+<tr class="separator:adea49989775cfdab341fd9e1a20b75f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac835927a9548d704df5323816c00971b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac835927a9548d704df5323816c00971b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#ac835927a9548d704df5323816c00971b">ResetScreenBufferAllocations</a> ()</td></tr>
+<tr class="memdesc:ac835927a9548d704df5323816c00971b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset screem buffer allocation counts. <br/></td></tr>
+<tr class="separator:ac835927a9548d704df5323816c00971b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03b35442eee1c6071cf8e06c0514bb9e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a03b35442eee1c6071cf8e06c0514bb9e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a03b35442eee1c6071cf8e06c0514bb9e">ResetShadowMaps</a> ()</td></tr>
+<tr class="memdesc:a03b35442eee1c6071cf8e06c0514bb9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all shadow maps. Called when global shadow map resolution or format is changed. <br/></td></tr>
+<tr class="separator:a03b35442eee1c6071cf8e06c0514bb9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6340987dcb954d220d729c9797dd6b26"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6340987dcb954d220d729c9797dd6b26"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a6340987dcb954d220d729c9797dd6b26">ResetBuffers</a> ()</td></tr>
+<tr class="memdesc:a6340987dcb954d220d729c9797dd6b26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all occlusion and screen buffers. <br/></td></tr>
+<tr class="separator:a6340987dcb954d220d729c9797dd6b26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade42fa3aa8f7f48620bffc61ab32c635"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade42fa3aa8f7f48620bffc61ab32c635"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#ade42fa3aa8f7f48620bffc61ab32c635">HandleScreenMode</a> (<a class="el" href="a00345.html">StringHash</a> eventType, <a class="el" href="a00178.html">VariantMap</a> &amp;eventData)</td></tr>
+<tr class="memdesc:ade42fa3aa8f7f48620bffc61ab32c635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle screen mode event. <br/></td></tr>
+<tr class="separator:ade42fa3aa8f7f48620bffc61ab32c635"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a91e0ca6c82f08417b234d46eae56d4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a91e0ca6c82f08417b234d46eae56d4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a7a91e0ca6c82f08417b234d46eae56d4">HandleGraphicsFeatures</a> (<a class="el" href="a00345.html">StringHash</a> eventType, <a class="el" href="a00178.html">VariantMap</a> &amp;eventData)</td></tr>
+<tr class="memdesc:a7a91e0ca6c82f08417b234d46eae56d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle graphics features (re)check event. Event only sent by D3D9Graphics class. <br/></td></tr>
+<tr class="separator:a7a91e0ca6c82f08417b234d46eae56d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf594e7a524f6e003e8370cf23dbee13"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf594e7a524f6e003e8370cf23dbee13"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#adf594e7a524f6e003e8370cf23dbee13">HandleRenderUpdate</a> (<a class="el" href="a00345.html">StringHash</a> eventType, <a class="el" href="a00178.html">VariantMap</a> &amp;eventData)</td></tr>
+<tr class="memdesc:adf594e7a524f6e003e8370cf23dbee13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle render update event. <br/></td></tr>
+<tr class="separator:adf594e7a524f6e003e8370cf23dbee13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aca14f5acb1653e9568863120df0edb52"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca14f5acb1653e9568863120df0edb52"></a>
+<a class="el" href="a00388.html">WeakPtr</a>&lt; <a class="el" href="a00174.html">Graphics</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#aca14f5acb1653e9568863120df0edb52">graphics_</a></td></tr>
+<tr class="memdesc:aca14f5acb1653e9568863120df0edb52"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00174.html" title="Graphics subsystem. Manages the application window, rendering state and GPU resources.">Graphics</a> subsystem. <br/></td></tr>
+<tr class="separator:aca14f5acb1653e9568863120df0edb52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93b168441232f752b6ad7330d80c63d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a93b168441232f752b6ad7330d80c63d1"></a>
+<a class="el" href="a00321.html">SharedPtr</a>&lt; <a class="el" href="a00286.html">RenderPath</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a93b168441232f752b6ad7330d80c63d1">defaultRenderPath_</a></td></tr>
+<tr class="memdesc:a93b168441232f752b6ad7330d80c63d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default renderpath. <br/></td></tr>
+<tr class="separator:a93b168441232f752b6ad7330d80c63d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a088f440d5b8412ff8f02f2a3d9531404"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a088f440d5b8412ff8f02f2a3d9531404"></a>
+<a class="el" href="a00321.html">SharedPtr</a>&lt; <a class="el" href="a00397.html">Zone</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a088f440d5b8412ff8f02f2a3d9531404">defaultZone_</a></td></tr>
+<tr class="memdesc:a088f440d5b8412ff8f02f2a3d9531404"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default zone. <br/></td></tr>
+<tr class="separator:a088f440d5b8412ff8f02f2a3d9531404"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59998b0e5210e4856f347e8b992579e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59998b0e5210e4856f347e8b992579e8"></a>
+<a class="el" href="a00321.html">SharedPtr</a>&lt; <a class="el" href="a00171.html">Geometry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a59998b0e5210e4856f347e8b992579e8">dirLightGeometry_</a></td></tr>
+<tr class="memdesc:a59998b0e5210e4856f347e8b992579e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Directional light quad geometry. <br/></td></tr>
+<tr class="separator:a59998b0e5210e4856f347e8b992579e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6f70bc747e011e929f454fabe1baabc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6f70bc747e011e929f454fabe1baabc"></a>
+<a class="el" href="a00321.html">SharedPtr</a>&lt; <a class="el" href="a00171.html">Geometry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#ac6f70bc747e011e929f454fabe1baabc">spotLightGeometry_</a></td></tr>
+<tr class="memdesc:ac6f70bc747e011e929f454fabe1baabc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spot light volume geometry. <br/></td></tr>
+<tr class="separator:ac6f70bc747e011e929f454fabe1baabc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32796f4c8445e629cfc85493ca045f57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a32796f4c8445e629cfc85493ca045f57"></a>
+<a class="el" href="a00321.html">SharedPtr</a>&lt; <a class="el" href="a00171.html">Geometry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a32796f4c8445e629cfc85493ca045f57">pointLightGeometry_</a></td></tr>
+<tr class="memdesc:a32796f4c8445e629cfc85493ca045f57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Point light volume geometry. <br/></td></tr>
+<tr class="separator:a32796f4c8445e629cfc85493ca045f57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a793c483e504e7d6495bb2627131b4e71"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a793c483e504e7d6495bb2627131b4e71"></a>
+<a class="el" href="a00321.html">SharedPtr</a>&lt; <a class="el" href="a00382.html">VertexBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a793c483e504e7d6495bb2627131b4e71">instancingBuffer_</a></td></tr>
+<tr class="memdesc:a793c483e504e7d6495bb2627131b4e71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance stream vertex buffer. <br/></td></tr>
+<tr class="separator:a793c483e504e7d6495bb2627131b4e71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1c6dcff483e98d99408abfb0081fb49"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1c6dcff483e98d99408abfb0081fb49"></a>
+<a class="el" href="a00321.html">SharedPtr</a>&lt; <a class="el" href="a00215.html">Material</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#ab1c6dcff483e98d99408abfb0081fb49">defaultMaterial_</a></td></tr>
+<tr class="memdesc:ab1c6dcff483e98d99408abfb0081fb49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default material. <br/></td></tr>
+<tr class="separator:ab1c6dcff483e98d99408abfb0081fb49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6684e5f700234f42f01a7dd62a227362"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6684e5f700234f42f01a7dd62a227362"></a>
+<a class="el" href="a00321.html">SharedPtr</a>&lt; <a class="el" href="a00353.html">Texture2D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a6684e5f700234f42f01a7dd62a227362">defaultLightRamp_</a></td></tr>
+<tr class="memdesc:a6684e5f700234f42f01a7dd62a227362"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default range attenuation texture. <br/></td></tr>
+<tr class="separator:a6684e5f700234f42f01a7dd62a227362"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a147cda37c6d6869d9cc3429009ee1290"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a147cda37c6d6869d9cc3429009ee1290"></a>
+<a class="el" href="a00321.html">SharedPtr</a>&lt; <a class="el" href="a00353.html">Texture2D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a147cda37c6d6869d9cc3429009ee1290">defaultLightSpot_</a></td></tr>
+<tr class="memdesc:a147cda37c6d6869d9cc3429009ee1290"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default spotlight attenuation texture. <br/></td></tr>
+<tr class="separator:a147cda37c6d6869d9cc3429009ee1290"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a670cda81c63d38d2f5028aa46adfb889"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a670cda81c63d38d2f5028aa46adfb889"></a>
+<a class="el" href="a00321.html">SharedPtr</a>&lt; <a class="el" href="a00355.html">TextureCube</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a670cda81c63d38d2f5028aa46adfb889">faceSelectCubeMap_</a></td></tr>
+<tr class="memdesc:a670cda81c63d38d2f5028aa46adfb889"><td class="mdescLeft">&#160;</td><td class="mdescRight">Face selection cube map for shadowed pointlights. <br/></td></tr>
+<tr class="separator:a670cda81c63d38d2f5028aa46adfb889"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e9377ed382da54b67658fd8f42270a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e9377ed382da54b67658fd8f42270a9"></a>
+<a class="el" href="a00321.html">SharedPtr</a>&lt; <a class="el" href="a00355.html">TextureCube</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a9e9377ed382da54b67658fd8f42270a9">indirectionCubeMap_</a></td></tr>
+<tr class="memdesc:a9e9377ed382da54b67658fd8f42270a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indirection cube map for shadowed pointlights. <br/></td></tr>
+<tr class="separator:a9e9377ed382da54b67658fd8f42270a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa07f259a82a8d9e22efabcc9c1db854"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa07f259a82a8d9e22efabcc9c1db854"></a>
+<a class="el" href="a00375.html">Vector</a>&lt; <a class="el" href="a00321.html">SharedPtr</a>&lt; <a class="el" href="a00236.html">Node</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#aaa07f259a82a8d9e22efabcc9c1db854">shadowCameraNodes_</a></td></tr>
+<tr class="memdesc:aaa07f259a82a8d9e22efabcc9c1db854"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reusable scene nodes with shadow camera components. <br/></td></tr>
+<tr class="separator:aaa07f259a82a8d9e22efabcc9c1db854"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59ba9bd7f3915f7d8146b0002aecf4fc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59ba9bd7f3915f7d8146b0002aecf4fc"></a>
+<a class="el" href="a00375.html">Vector</a>&lt; <a class="el" href="a00321.html">SharedPtr</a><br class="typebreak"/>
+&lt; <a class="el" href="a00245.html">OcclusionBuffer</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a59ba9bd7f3915f7d8146b0002aecf4fc">occlusionBuffers_</a></td></tr>
+<tr class="memdesc:a59ba9bd7f3915f7d8146b0002aecf4fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reusable occlusion buffers. <br/></td></tr>
+<tr class="separator:a59ba9bd7f3915f7d8146b0002aecf4fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29b6eb843584d65f3ce0c3b8c2f26f5b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29b6eb843584d65f3ce0c3b8c2f26f5b"></a>
+<a class="el" href="a00178.html">HashMap</a>&lt; int, <a class="el" href="a00375.html">Vector</a><br class="typebreak"/>
+&lt; <a class="el" href="a00321.html">SharedPtr</a>&lt; <a class="el" href="a00353.html">Texture2D</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a29b6eb843584d65f3ce0c3b8c2f26f5b">shadowMaps_</a></td></tr>
+<tr class="memdesc:a29b6eb843584d65f3ce0c3b8c2f26f5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shadow maps by resolution. <br/></td></tr>
+<tr class="separator:a29b6eb843584d65f3ce0c3b8c2f26f5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabc0b5958e2c6e1a0e518fa0d452f0b6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aabc0b5958e2c6e1a0e518fa0d452f0b6"></a>
+<a class="el" href="a00178.html">HashMap</a>&lt; int, <a class="el" href="a00321.html">SharedPtr</a><br class="typebreak"/>
+&lt; <a class="el" href="a00353.html">Texture2D</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#aabc0b5958e2c6e1a0e518fa0d452f0b6">colorShadowMaps_</a></td></tr>
+<tr class="memdesc:aabc0b5958e2c6e1a0e518fa0d452f0b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shadow map dummy color buffers by resolution. <br/></td></tr>
+<tr class="separator:aabc0b5958e2c6e1a0e518fa0d452f0b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9706a916f3eebffac41622503edcb04f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9706a916f3eebffac41622503edcb04f"></a>
+<a class="el" href="a00178.html">HashMap</a>&lt; int, <a class="el" href="a00269.html">PODVector</a>&lt; <a class="el" href="a00198.html">Light</a> * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a9706a916f3eebffac41622503edcb04f">shadowMapAllocations_</a></td></tr>
+<tr class="memdesc:a9706a916f3eebffac41622503edcb04f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shadow map allocations by resolution. <br/></td></tr>
+<tr class="separator:a9706a916f3eebffac41622503edcb04f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc3fa0bf641cf989091f152670e29c18"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc3fa0bf641cf989091f152670e29c18"></a>
+<a class="el" href="a00178.html">HashMap</a>&lt; long long, <a class="el" href="a00375.html">Vector</a><br class="typebreak"/>
+&lt; <a class="el" href="a00321.html">SharedPtr</a>&lt; <a class="el" href="a00353.html">Texture2D</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#acc3fa0bf641cf989091f152670e29c18">screenBuffers_</a></td></tr>
+<tr class="memdesc:acc3fa0bf641cf989091f152670e29c18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Screen buffers by resolution and format. <br/></td></tr>
+<tr class="separator:acc3fa0bf641cf989091f152670e29c18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3dd479a0711c1286192ce18b285c938"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab3dd479a0711c1286192ce18b285c938"></a>
+<a class="el" href="a00178.html">HashMap</a>&lt; long long, unsigned &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#ab3dd479a0711c1286192ce18b285c938">screenBufferAllocations_</a></td></tr>
+<tr class="memdesc:ab3dd479a0711c1286192ce18b285c938"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current screen buffer allocations by resolution and format. <br/></td></tr>
+<tr class="separator:ab3dd479a0711c1286192ce18b285c938"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3654d7ddb88544da3db1a6b58f8c691c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3654d7ddb88544da3db1a6b58f8c691c"></a>
+<a class="el" href="a00178.html">HashMap</a>&lt; long long, unsigned &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a3654d7ddb88544da3db1a6b58f8c691c">savedScreenBufferAllocations_</a></td></tr>
+<tr class="memdesc:a3654d7ddb88544da3db1a6b58f8c691c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saved status of screen buffer allocations for restoring. <br/></td></tr>
+<tr class="separator:a3654d7ddb88544da3db1a6b58f8c691c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72eabb4be3e9bd1049efe131faa7036f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a72eabb4be3e9bd1049efe131faa7036f"></a>
+<a class="el" href="a00178.html">HashMap</a>&lt; <a class="el" href="a00256.html">Pair</a>&lt; <a class="el" href="a00198.html">Light</a> *, <a class="el" href="a00088.html">Camera</a> * &gt;<br class="typebreak"/>
+, <a class="el" href="a00280.html">Rect</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a72eabb4be3e9bd1049efe131faa7036f">lightScissorCache_</a></td></tr>
+<tr class="memdesc:a72eabb4be3e9bd1049efe131faa7036f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache for light scissor queries. <br/></td></tr>
+<tr class="separator:a72eabb4be3e9bd1049efe131faa7036f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a590792c7c52e7295d92910c717ca276e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a590792c7c52e7295d92910c717ca276e"></a>
+<a class="el" href="a00375.html">Vector</a>&lt; <a class="el" href="a00321.html">SharedPtr</a>&lt; <a class="el" href="a00386.html">Viewport</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a590792c7c52e7295d92910c717ca276e">viewports_</a></td></tr>
+<tr class="memdesc:a590792c7c52e7295d92910c717ca276e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Viewports. <br/></td></tr>
+<tr class="separator:a590792c7c52e7295d92910c717ca276e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abedf0861333b83f89d61ac6f78d7e87d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abedf0861333b83f89d61ac6f78d7e87d"></a>
+<a class="el" href="a00375.html">Vector</a>&lt; <a class="el" href="a00256.html">Pair</a>&lt; <a class="el" href="a00388.html">WeakPtr</a><br class="typebreak"/>
+&lt; <a class="el" href="a00288.html">RenderSurface</a> &gt;, <a class="el" href="a00388.html">WeakPtr</a><br class="typebreak"/>
+&lt; <a class="el" href="a00386.html">Viewport</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#abedf0861333b83f89d61ac6f78d7e87d">queuedViews_</a></td></tr>
+<tr class="memdesc:abedf0861333b83f89d61ac6f78d7e87d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queued views. <br/></td></tr>
+<tr class="separator:abedf0861333b83f89d61ac6f78d7e87d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a8dde0ddc417f9ca9432ba79c5e7aa0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a8dde0ddc417f9ca9432ba79c5e7aa0"></a>
+<a class="el" href="a00375.html">Vector</a>&lt; <a class="el" href="a00321.html">SharedPtr</a>&lt; <a class="el" href="a00384.html">View</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a8a8dde0ddc417f9ca9432ba79c5e7aa0">views_</a></td></tr>
+<tr class="memdesc:a8a8dde0ddc417f9ca9432ba79c5e7aa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Views. <br/></td></tr>
+<tr class="separator:a8a8dde0ddc417f9ca9432ba79c5e7aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab09f920841fa03c4d62fac5a40abb4af"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab09f920841fa03c4d62fac5a40abb4af"></a>
+<a class="el" href="a00180.html">HashSet</a>&lt; <a class="el" href="a00247.html">Octree</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#ab09f920841fa03c4d62fac5a40abb4af">updatedOctrees_</a></td></tr>
+<tr class="memdesc:ab09f920841fa03c4d62fac5a40abb4af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Octrees that have been updated during the frame. <br/></td></tr>
+<tr class="separator:ab09f920841fa03c4d62fac5a40abb4af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a325f34e302e306233bfa74702260dd5d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a325f34e302e306233bfa74702260dd5d"></a>
+<a class="el" href="a00180.html">HashSet</a>&lt; <a class="el" href="a00346.html">Technique</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a325f34e302e306233bfa74702260dd5d">shaderErrorDisplayed_</a></td></tr>
+<tr class="memdesc:a325f34e302e306233bfa74702260dd5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Techniques for which missing shader error has been displayed. <br/></td></tr>
+<tr class="separator:a325f34e302e306233bfa74702260dd5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb692bcbbf7c1a7b107b9ca17b89c9ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb692bcbbf7c1a7b107b9ca17b89c9ac"></a>
+<a class="el" href="a00227.html">Mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#abb692bcbbf7c1a7b107b9ca17b89c9ac">rendererMutex_</a></td></tr>
+<tr class="memdesc:abb692bcbbf7c1a7b107b9ca17b89c9ac"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00227.html" title="Operating system mutual exclusion primitive.">Mutex</a> for shadow camera allocation. <br/></td></tr>
+<tr class="separator:abb692bcbbf7c1a7b107b9ca17b89c9ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5513c17be8c0c87fe9684ccc58b86d78"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5513c17be8c0c87fe9684ccc58b86d78"></a>
+<a class="el" href="a00375.html">Vector</a>&lt; <a class="el" href="a00344.html">String</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a5513c17be8c0c87fe9684ccc58b86d78">deferredLightPSVariations_</a></td></tr>
+<tr class="memdesc:a5513c17be8c0c87fe9684ccc58b86d78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current variation names for deferred light volume shaders. <br/></td></tr>
+<tr class="separator:a5513c17be8c0c87fe9684ccc58b86d78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3a17617912bd09668caa7deb78ea43a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af3a17617912bd09668caa7deb78ea43a"></a>
+<a class="el" href="a00166.html">FrameInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#af3a17617912bd09668caa7deb78ea43a">frame_</a></td></tr>
+<tr class="memdesc:af3a17617912bd09668caa7deb78ea43a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frame info for rendering. <br/></td></tr>
+<tr class="separator:af3a17617912bd09668caa7deb78ea43a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4ee29caaf7ba7750cf142412652c2e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af4ee29caaf7ba7750cf142412652c2e5"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#af4ee29caaf7ba7750cf142412652c2e5">textureAnisotropy_</a></td></tr>
+<tr class="memdesc:af4ee29caaf7ba7750cf142412652c2e5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00352.html" title="Base class for texture resources.">Texture</a> anisotropy level. <br/></td></tr>
+<tr class="separator:af4ee29caaf7ba7750cf142412652c2e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a205d92770a013011483c20bc546c777c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a205d92770a013011483c20bc546c777c"></a>
+TextureFilterMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a205d92770a013011483c20bc546c777c">textureFilterMode_</a></td></tr>
+<tr class="memdesc:a205d92770a013011483c20bc546c777c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00352.html" title="Base class for texture resources.">Texture</a> filtering mode. <br/></td></tr>
+<tr class="separator:a205d92770a013011483c20bc546c777c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae276a87db6e336c8b6aa2134a7a71aba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae276a87db6e336c8b6aa2134a7a71aba"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#ae276a87db6e336c8b6aa2134a7a71aba">textureQuality_</a></td></tr>
+<tr class="memdesc:ae276a87db6e336c8b6aa2134a7a71aba"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00352.html" title="Base class for texture resources.">Texture</a> quality level. <br/></td></tr>
+<tr class="separator:ae276a87db6e336c8b6aa2134a7a71aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6afb59029e7af1ffded6fb3181de0c2c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6afb59029e7af1ffded6fb3181de0c2c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a6afb59029e7af1ffded6fb3181de0c2c">materialQuality_</a></td></tr>
+<tr class="memdesc:a6afb59029e7af1ffded6fb3181de0c2c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00215.html" title="Describes how to render 3D geometries.">Material</a> quality level. <br/></td></tr>
+<tr class="separator:a6afb59029e7af1ffded6fb3181de0c2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac352a52df9305f168da3c5e9336a293b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac352a52df9305f168da3c5e9336a293b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#ac352a52df9305f168da3c5e9336a293b">shadowMapSize_</a></td></tr>
+<tr class="memdesc:ac352a52df9305f168da3c5e9336a293b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shadow map resolution. <br/></td></tr>
+<tr class="separator:ac352a52df9305f168da3c5e9336a293b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a111b6b4a827910757af5bebe2fd9e697"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a111b6b4a827910757af5bebe2fd9e697"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a111b6b4a827910757af5bebe2fd9e697">shadowQuality_</a></td></tr>
+<tr class="memdesc:a111b6b4a827910757af5bebe2fd9e697"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shadow quality. <br/></td></tr>
+<tr class="separator:a111b6b4a827910757af5bebe2fd9e697"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96eb6e090a492cb81de47d8a3bdd7d7a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a96eb6e090a492cb81de47d8a3bdd7d7a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a96eb6e090a492cb81de47d8a3bdd7d7a">maxShadowMaps_</a></td></tr>
+<tr class="memdesc:a96eb6e090a492cb81de47d8a3bdd7d7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of shadow maps per resolution. <br/></td></tr>
+<tr class="separator:a96eb6e090a492cb81de47d8a3bdd7d7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15d05ab226e8813e64a65d0a5915f648"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a15d05ab226e8813e64a65d0a5915f648"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a15d05ab226e8813e64a65d0a5915f648">minInstances_</a></td></tr>
+<tr class="memdesc:a15d05ab226e8813e64a65d0a5915f648"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum number of instances required in a batch group to render as instanced. <br/></td></tr>
+<tr class="separator:a15d05ab226e8813e64a65d0a5915f648"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac2d10e46ce57ff2589874025cd1e145"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac2d10e46ce57ff2589874025cd1e145"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#aac2d10e46ce57ff2589874025cd1e145">maxInstanceTriangles_</a></td></tr>
+<tr class="memdesc:aac2d10e46ce57ff2589874025cd1e145"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum triangles per object for instancing. <br/></td></tr>
+<tr class="separator:aac2d10e46ce57ff2589874025cd1e145"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b8824354b9c769b40765ae790aeb797"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b8824354b9c769b40765ae790aeb797"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a0b8824354b9c769b40765ae790aeb797">maxSortedInstances_</a></td></tr>
+<tr class="memdesc:a0b8824354b9c769b40765ae790aeb797"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum sorted instances per batch group. <br/></td></tr>
+<tr class="separator:a0b8824354b9c769b40765ae790aeb797"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eaeebaebcaed8f9533fcf9596254b01"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1eaeebaebcaed8f9533fcf9596254b01"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a1eaeebaebcaed8f9533fcf9596254b01">maxOccluderTriangles_</a></td></tr>
+<tr class="memdesc:a1eaeebaebcaed8f9533fcf9596254b01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum occluder triangles. <br/></td></tr>
+<tr class="separator:a1eaeebaebcaed8f9533fcf9596254b01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad6ed15800d43fb8835835f0f872409c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad6ed15800d43fb8835835f0f872409c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#aad6ed15800d43fb8835835f0f872409c">occlusionBufferSize_</a></td></tr>
+<tr class="memdesc:aad6ed15800d43fb8835835f0f872409c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Occlusion buffer width. <br/></td></tr>
+<tr class="separator:aad6ed15800d43fb8835835f0f872409c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab76d590bcdbaf51a73671d7c0415fcba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab76d590bcdbaf51a73671d7c0415fcba"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#ab76d590bcdbaf51a73671d7c0415fcba">occluderSizeThreshold_</a></td></tr>
+<tr class="memdesc:ab76d590bcdbaf51a73671d7c0415fcba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Occluder screen size threshold. <br/></td></tr>
+<tr class="separator:ab76d590bcdbaf51a73671d7c0415fcba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf7f0691bb72891b71f8eab813787db0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf7f0691bb72891b71f8eab813787db0"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#adf7f0691bb72891b71f8eab813787db0">mobileShadowBiasMul_</a></td></tr>
+<tr class="memdesc:adf7f0691bb72891b71f8eab813787db0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mobile platform shadow depth bias multiplier. <br/></td></tr>
+<tr class="separator:adf7f0691bb72891b71f8eab813787db0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58442c973568bbefbd9b4d98cbe07488"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58442c973568bbefbd9b4d98cbe07488"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a58442c973568bbefbd9b4d98cbe07488">mobileShadowBiasAdd_</a></td></tr>
+<tr class="memdesc:a58442c973568bbefbd9b4d98cbe07488"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mobile platform shadow depth bias addition. <br/></td></tr>
+<tr class="separator:a58442c973568bbefbd9b4d98cbe07488"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66cc16171ac6df5660a0304c90a307f5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66cc16171ac6df5660a0304c90a307f5"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a66cc16171ac6df5660a0304c90a307f5">numViews_</a></td></tr>
+<tr class="memdesc:a66cc16171ac6df5660a0304c90a307f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of views. <br/></td></tr>
+<tr class="separator:a66cc16171ac6df5660a0304c90a307f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f0848ab6de6c9d08aa24ff423328e2b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f0848ab6de6c9d08aa24ff423328e2b"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a5f0848ab6de6c9d08aa24ff423328e2b">numOcclusionBuffers_</a></td></tr>
+<tr class="memdesc:a5f0848ab6de6c9d08aa24ff423328e2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of occlusion buffers in use. <br/></td></tr>
+<tr class="separator:a5f0848ab6de6c9d08aa24ff423328e2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64242d0fd8685a99e0d247777bb7d762"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a64242d0fd8685a99e0d247777bb7d762"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a64242d0fd8685a99e0d247777bb7d762">numShadowCameras_</a></td></tr>
+<tr class="memdesc:a64242d0fd8685a99e0d247777bb7d762"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of temporary shadow cameras in use. <br/></td></tr>
+<tr class="separator:a64242d0fd8685a99e0d247777bb7d762"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a355e32f194ab93f8ce86a70b980c2795"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a355e32f194ab93f8ce86a70b980c2795"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a355e32f194ab93f8ce86a70b980c2795">numPrimitives_</a></td></tr>
+<tr class="memdesc:a355e32f194ab93f8ce86a70b980c2795"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of primitives (3D geometry only.) <br/></td></tr>
+<tr class="separator:a355e32f194ab93f8ce86a70b980c2795"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb6308918f5dc498d37d38fddb88c8c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb6308918f5dc498d37d38fddb88c8c6"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#abb6308918f5dc498d37d38fddb88c8c6">numBatches_</a></td></tr>
+<tr class="memdesc:abb6308918f5dc498d37d38fddb88c8c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of batches (3D geometry only.) <br/></td></tr>
+<tr class="separator:abb6308918f5dc498d37d38fddb88c8c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34bd74acb709df4bdc4f436c4b224b8b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34bd74acb709df4bdc4f436c4b224b8b"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a34bd74acb709df4bdc4f436c4b224b8b">shadersChangedFrameNumber_</a></td></tr>
+<tr class="memdesc:a34bd74acb709df4bdc4f436c4b224b8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frame number on which shaders last changed. <br/></td></tr>
+<tr class="separator:a34bd74acb709df4bdc4f436c4b224b8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadfbf3d4fd0bdf3845ae9d38c3736989"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aadfbf3d4fd0bdf3845ae9d38c3736989"></a>
+unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#aadfbf3d4fd0bdf3845ae9d38c3736989">lightStencilValue_</a></td></tr>
+<tr class="memdesc:aadfbf3d4fd0bdf3845ae9d38c3736989"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current stencil value for light optimization. <br/></td></tr>
+<tr class="separator:aadfbf3d4fd0bdf3845ae9d38c3736989"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c78f6308d4784d3f85ad839a483ed84"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c78f6308d4784d3f85ad839a483ed84"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a8c78f6308d4784d3f85ad839a483ed84">hdrRendering_</a></td></tr>
+<tr class="memdesc:a8c78f6308d4784d3f85ad839a483ed84"><td class="mdescLeft">&#160;</td><td class="mdescRight">HDR rendering flag. <br/></td></tr>
+<tr class="separator:a8c78f6308d4784d3f85ad839a483ed84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f5e813636b61c572778d2a5681b29ee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f5e813636b61c572778d2a5681b29ee"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a3f5e813636b61c572778d2a5681b29ee">specularLighting_</a></td></tr>
+<tr class="memdesc:a3f5e813636b61c572778d2a5681b29ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specular lighting flag. <br/></td></tr>
+<tr class="separator:a3f5e813636b61c572778d2a5681b29ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb85a9c8df99589179ae59a8269b38bf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb85a9c8df99589179ae59a8269b38bf"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#acb85a9c8df99589179ae59a8269b38bf">drawShadows_</a></td></tr>
+<tr class="memdesc:acb85a9c8df99589179ae59a8269b38bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw shadows flag. <br/></td></tr>
+<tr class="separator:acb85a9c8df99589179ae59a8269b38bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05ccfe5b4f61cd36de93d33946f2b83b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05ccfe5b4f61cd36de93d33946f2b83b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#a05ccfe5b4f61cd36de93d33946f2b83b">reuseShadowMaps_</a></td></tr>
+<tr class="memdesc:a05ccfe5b4f61cd36de93d33946f2b83b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shadow map reuse flag. <br/></td></tr>
+<tr class="separator:a05ccfe5b4f61cd36de93d33946f2b83b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae39627e4cb9059d27df4c00ae872f3e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae39627e4cb9059d27df4c00ae872f3e5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#ae39627e4cb9059d27df4c00ae872f3e5">dynamicInstancing_</a></td></tr>
+<tr class="memdesc:ae39627e4cb9059d27df4c00ae872f3e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dynamic instancing flag. <br/></td></tr>
+<tr class="separator:ae39627e4cb9059d27df4c00ae872f3e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af87b33b1aa1fd46a404210ad1adbae26"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af87b33b1aa1fd46a404210ad1adbae26"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#af87b33b1aa1fd46a404210ad1adbae26">shadersDirty_</a></td></tr>
+<tr class="memdesc:af87b33b1aa1fd46a404210ad1adbae26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shaders need reloading flag. <br/></td></tr>
+<tr class="separator:af87b33b1aa1fd46a404210ad1adbae26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affe5a1cbf23909eb8df2b3d5f38833b3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="affe5a1cbf23909eb8df2b3d5f38833b3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00285.html#affe5a1cbf23909eb8df2b3d5f38833b3">initialized_</a></td></tr>
+<tr class="memdesc:affe5a1cbf23909eb8df2b3d5f38833b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialized flag. <br/></td></tr>
+<tr class="separator:affe5a1cbf23909eb8df2b3d5f38833b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_a00241"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_a00241')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="a00241.html">Urho3D::Object</a></td></tr>
+<tr class="memitem:a3a7df857ddaa8c3e218c3645152dc23d inherit pro_attribs_a00241"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a7df857ddaa8c3e218c3645152dc23d"></a>
+<a class="el" href="a00125.html">Context</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00241.html#a3a7df857ddaa8c3e218c3645152dc23d">context_</a></td></tr>
+<tr class="memdesc:a3a7df857ddaa8c3e218c3645152dc23d inherit pro_attribs_a00241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execution context. <br/></td></tr>
+<tr class="separator:a3a7df857ddaa8c3e218c3645152dc23d inherit pro_attribs_a00241"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Queued remote event. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Network/Connection.h</li>
+<div class="textblock"><p>High-level rendering subsystem. Manages drawing of 3D views. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a2edda10af9679e17b00db07891945c73"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::Renderer::DrawDebugGeometry </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>depthTest</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add debug geometry to the debug renderer. </p>
+<dl class="todo"><dt><b><a class="el" href="a00872.html#_todo000011">Todo:</a></b></dt><dd>Because debug geometry is per-scene, if two cameras show views of the same area, occlusion is not shown correctly </dd></dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a00285_a2edda10af9679e17b00db07891945c73_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7d4509e32b17bff5f3069f8fe6fd448d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00353.html">Texture2D</a> * Urho3D::Renderer::GetShadowMap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00198.html">Light</a> *&#160;</td>
+          <td class="paramname"><em>light</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00088.html">Camera</a> *&#160;</td>
+          <td class="paramname"><em>camera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>viewWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>viewHeight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allocate a shadow map. If shadow map reuse is disabled, a different map is returned each time. </p>
+<dl class="todo"><dt><b><a class="el" href="a00872.html#_todo000012">Todo:</a></b></dt><dd>Allow to specify maximum shadow maps per resolution, as smaller shadow maps take less memory </dd></dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a00285_a7d4509e32b17bff5f3069f8fe6fd448d_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a993f63f35d27a9ea6df861962018f354"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::Renderer::Update </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>timeStep</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update for rendering. Called by <a class="el" href="a00285.html#adf594e7a524f6e003e8370cf23dbee13" title="Handle render update event.">HandleRenderUpdate()</a>. </p>
+<dl class="todo"><dt><b><a class="el" href="a00872.html#_todo000010">Todo:</a></b></dt><dd>May result in incorrect debug geometry culling if the same scene is drawn from multiple viewports </dd></dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a00285_a993f63f35d27a9ea6df861962018f354_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a00285_a993f63f35d27a9ea6df861962018f354_icgraph.svg" width="100%" height="408"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/Renderer.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/Renderer.cpp</li>
 </ul>
 </div><!-- contents -->
