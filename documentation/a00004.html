@@ -28,9 +28,9 @@ title: Documentation
 <h1><a class="anchor" id="UsingLibraryFromProjectRootTree"></a>
 From Urho3D project root tree</h1>
 <p>This section assumes that you have already successfully build a static or shared library in the Urho3D project (separately from your own project). In order to find Urho3D library in Urho3D project library output directory, specify an environment variable called "URHO3D_HOME" which points to a Urho3D project root directory that you want to use (if you have more than one).</p>
-<p>In your own project Source/ directory, create a new CMakeLists.txt file and add the following lines:</p>
+<p>In your own project Source/ directory, create a new CMakeLists.txt file and add the following lines: (replace MyProjectName and MyExecutableName with the actual names you want)</p>
 <div class="fragment"><div class="line"><span class="preprocessor"># Set project name</span></div>
-<div class="line"><span class="preprocessor"></span>project (MySuperDuperGame)</div>
+<div class="line"><span class="preprocessor"></span>project (MyProjectName)</div>
 <div class="line"></div>
 <div class="line"><span class="preprocessor"># Set minimum version</span></div>
 <div class="line"><span class="preprocessor"></span>cmake_minimum_required (VERSION 2.8.6)</div>
@@ -50,7 +50,7 @@ From Urho3D project root tree</h1>
 <div class="line">include_directories (${URHO3D_INCLUDE_DIRS})</div>
 <div class="line"></div>
 <div class="line"># Define target name</div>
-<div class="line"><span class="keyword">set</span> (TARGET_NAME Main)</div>
+<div class="line"><span class="keyword">set</span> (TARGET_NAME MyExecutableName)</div>
 <div class="line"></div>
 <div class="line"><span class="preprocessor"># Define source files</span></div>
 <div class="line"><span class="preprocessor"></span>define_source_files ()</div>
