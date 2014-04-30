@@ -2833,16 +2833,12 @@ Classes</h1>
 <li>void SetName(const String name)</li>
 <li>void SetPosition(const Vector3&amp; position)</li>
 <li>void SetPosition(const Vector2&amp; position)</li>
-<li>void SetPositionXYZ(float x, float y, float z)</li>
 <li>void SetRotation(const Quaternion&amp; rotation)</li>
 <li>void SetRotation(float rotation)</li>
-<li>void SetRotationXYZ(float x, float y, float z)</li>
 <li>void SetDirection(const Vector3&amp; direction)</li>
-<li>void SetDirectionXYZ(float x, float y, float z)</li>
 <li>void SetScale(float scale)</li>
 <li>void SetScale(const Vector3&amp; scale)</li>
 <li>void SetScale(const Vector2&amp; scale)</li>
-<li>void SetScaleXYZ(float x, float y, float z)</li>
 <li>void SetTransform(const Vector3&amp; position, const Quaternion&amp; rotation)</li>
 <li>void SetTransform(const Vector2&amp; position, float rotation)</li>
 <li>void SetTransform(const Vector3&amp; position, const Quaternion&amp; rotation, float scale)</li>
@@ -2851,16 +2847,12 @@ Classes</h1>
 <li>void SetTransform(const Vector2&amp; position, float rotation, const Vector2&amp; scale)</li>
 <li>void SetWorldPosition(const Vector3&amp; position)</li>
 <li>void SetWorldPosition(const Vector2&amp; position)</li>
-<li>void SetWorldPositionXYZ(float x, float y, float z)</li>
 <li>void SetWorldRotation(const Quaternion&amp; rotation)</li>
 <li>void SetWorldRotation(float rotation)</li>
-<li>void SetWorldRotationXYZ(float x, float y, float z)</li>
 <li>void SetWorldDirection(const Vector3&amp; direction)</li>
-<li>void SetWorldDirectionXYZ(float x, float y, float z)</li>
 <li>void SetWorldScale(float scale)</li>
 <li>void SetWorldScale(const Vector3&amp; scale)</li>
 <li>void SetWorldScale(const Vector2&amp; scale)</li>
-<li>void SetWorldScaleXYZ(float x, float y, float z)</li>
 <li>void SetWorldTransform(const Vector3&amp; position, const Quaternion&amp; rotation)</li>
 <li>void SetWorldTransform(const Vector2&amp; position, float rotation)</li>
 <li>void SetWorldTransform(const Vector3&amp; position, const Quaternion&amp; rotation, float scale)</li>
@@ -2869,23 +2861,18 @@ Classes</h1>
 <li>void SetWorldTransform(const Vector2&amp; position, float rotation, const Vector3&amp; scale)</li>
 <li>void Translate(const <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a>&amp; delta, TransformSpace space = TS_LOCAL)</li>
 <li>void Translate(const <a class="el" href="a00376.html" title="Two-dimensional vector.">Vector2</a>&amp; delta, TransformSpace space = TS_LOCAL)</li>
-<li>void TranslateXYZ(float x, float y, float z, TransformSpace space = TS_LOCAL)</li>
 <li>void Rotate(const <a class="el" href="a00274.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; delta, TransformSpace space = TS_LOCAL)</li>
 <li>void Rotate(float delta, TransformSpace space = TS_LOCAL)</li>
-<li>void RotateXYZ(float x, float y, float z, TransformSpace space = TS_LOCAL)</li>
 <li>void RotateAround(const <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a>&amp; point, const <a class="el" href="a00274.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; delta, TransformSpace space = TS_LOCAL)</li>
 <li>void RotateAround(const <a class="el" href="a00376.html" title="Two-dimensional vector.">Vector2</a>&amp; point, float delta, TransformSpace space = TS_LOCAL)</li>
-<li>void RotateAroundXYZ(float pX, float pY, float pZ, float dX, float dY, float dZ, TransformSpace space = TS_LOCAL)</li>
 <li>void Pitch(float angle, TransformSpace space = TS_LOCAL)</li>
 <li>void Yaw(float angle, TransformSpace space = TS_LOCAL)</li>
 <li>void Roll(float angle, TransformSpace space = TS_LOCAL)</li>
 <li>bool LookAt(const Vector3&amp; target)</li>
 <li>bool LookAt(const <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a>&amp; target, const <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a>&amp; upAxis, TransformSpace space = TS_WORLD)</li>
-<li>bool LookAtXYZ(float x, float y, float z, float upX = 0.0f, float upY = 1.0f, float upZ = 0.0f, TransformSpace space = TS_WORLD)</li>
 <li>void Scale(float scale)</li>
 <li>void Scale(const Vector3&amp; scale)</li>
 <li>void Scale(const Vector2&amp; scale)</li>
-<li>void ScaleXYZ(float x, float y, float z)</li>
 <li>void SetEnabled(bool enable)</li>
 <li>void SetEnabled(bool enable, bool recursive)</li>
 <li>void SetOwner(Connection* owner)</li>
@@ -2919,32 +2906,18 @@ Classes</h1>
 <li>bool IsEnabled() const</li>
 <li>Connection* GetOwner() const</li>
 <li>const <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a>&amp; GetPosition() const</li>
-<li>void GetPositionXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
 <li>const <a class="el" href="a00274.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; GetRotation() const</li>
-<li>void GetRotationXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
-<li>void GetRotationWXYZ(float w = 0.0f, float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
 <li><a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> GetDirection() const</li>
-<li>void GetDirectionXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
 <li><a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> GetUp() const</li>
-<li>void GetUpXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
 <li><a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> GetRight() const</li>
-<li>void GetRightXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
 <li>const <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a>&amp; GetScale() const</li>
-<li>void GetScaleXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
 <li><a class="el" href="a00219.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> GetTransform() const</li>
 <li><a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> GetWorldPosition() const</li>
-<li>void GetWorldPositionXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
 <li><a class="el" href="a00274.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> GetWorldRotation() const</li>
-<li>void GetWorldRotationXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
-<li>void GetWorldRotationWXYZ(float w = 0.0f, float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
 <li><a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> GetWorldDirection() const</li>
-<li>void GetWorldDirectionXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
 <li><a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> GetWorldUp() const</li>
-<li>void GetWorldUpXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
 <li><a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> GetWorldRight() const</li>
-<li>void GetWorldRightXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
 <li><a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> GetWorldScale() const</li>
-<li>void GetWorldScaleXYZ(float x = 0.0f, float y = 0.0f, float z = 0.0f) const</li>
 <li>const <a class="el" href="a00219.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a>&amp; GetWorldTransform() const</li>
 <li><a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> LocalToWorld(const Vector3&amp; position) const</li>
 <li><a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> LocalToWorld(const Vector4&amp; vector) const</li>
