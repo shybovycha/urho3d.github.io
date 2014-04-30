@@ -4644,6 +4644,7 @@ Classes</h1>
 <li>bool HasComponent(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
+<li><a class="el" href="a00376.html" title="Two-dimensional vector.">Vector2</a> LocalToWorld(const Vector2&amp;) const</li>
 <li><a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> LocalToWorld(const Vector3&amp;) const</li>
 <li><a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> LocalToWorld(const Vector4&amp;) const</li>
 <li>bool LookAt(const <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a>&amp; = <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> ( 0 , 1 , 0 ), TransformSpace = TS_WORLD)</li>
@@ -4661,10 +4662,13 @@ Classes</h1>
 <li>void ResetToDefault()</li>
 <li>void Roll(float, TransformSpace = TS_LOCAL)</li>
 <li>void Rotate(const <a class="el" href="a00274.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp;, TransformSpace = TS_LOCAL)</li>
+<li>void Rotate(float, TransformSpace = TS_LOCAL)</li>
+<li>void RotateAround(const <a class="el" href="a00376.html" title="Two-dimensional vector.">Vector2</a>&amp;, float, TransformSpace = TS_LOCAL)</li>
 <li>void RotateAround(const <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="a00274.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp;, TransformSpace = TS_LOCAL)</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
 <li>bool SaveXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
+<li>void Scale(const Vector2&amp;)</li>
 <li>void Scale(const Vector3&amp;)</li>
 <li>void Scale(float)</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
@@ -4673,14 +4677,28 @@ Classes</h1>
 <li>void SetAttributeAnimationSpeed(const String&amp;, float)</li>
 <li>void SetAttributeAnimationWrapMode(const String&amp;, WrapMode)</li>
 <li>void SetEnabled(bool, bool)</li>
+<li>void SetPosition(const Vector2&amp;)</li>
+<li>void SetRotation(float)</li>
+<li>void SetScale(const Vector2&amp;)</li>
 <li>void SetScale(float)</li>
+<li>void SetTransform(const Vector2&amp;, float)</li>
+<li>void SetTransform(const Vector2&amp;, float, const Vector2&amp;)</li>
+<li>void SetTransform(const Vector2&amp;, float, float)</li>
 <li>void SetTransform(const Vector3&amp;, const Quaternion&amp;)</li>
 <li>void SetTransform(const Vector3&amp;, const Quaternion&amp;, const Vector3&amp;)</li>
 <li>void SetTransform(const Vector3&amp;, const Quaternion&amp;, float)</li>
+<li>void SetWorldPosition(const Vector2&amp;)</li>
+<li>void SetWorldRotation(float)</li>
+<li>void SetWorldScale(const Vector2&amp;)</li>
+<li>void SetWorldTransform(const Vector2&amp;, float)</li>
+<li>void SetWorldTransform(const Vector2&amp;, float, const Vector2&amp;)</li>
+<li>void SetWorldTransform(const Vector2&amp;, float, float)</li>
 <li>void SetWorldTransform(const Vector3&amp;, const Quaternion&amp;)</li>
 <li>void SetWorldTransform(const Vector3&amp;, const Quaternion&amp;, const Vector3&amp;)</li>
 <li>void SetWorldTransform(const Vector3&amp;, const Quaternion&amp;, float)</li>
+<li>void Translate(const <a class="el" href="a00376.html" title="Two-dimensional vector.">Vector2</a>&amp;, TransformSpace = TS_LOCAL)</li>
 <li>void Translate(const <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a>&amp;, TransformSpace = TS_LOCAL)</li>
+<li><a class="el" href="a00376.html" title="Two-dimensional vector.">Vector2</a> WorldToLocal(const Vector2&amp;) const</li>
 <li><a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> WorldToLocal(const Vector3&amp;) const</li>
 <li><a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> WorldToLocal(const Vector4&amp;) const</li>
 <li>void Yaw(float, TransformSpace = TS_LOCAL)</li>
@@ -5778,6 +5796,7 @@ Classes</h1>
 <li>bool LoadAsyncXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
 <li>bool LoadXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
+<li><a class="el" href="a00376.html" title="Two-dimensional vector.">Vector2</a> LocalToWorld(const Vector2&amp;) const</li>
 <li><a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> LocalToWorld(const Vector3&amp;) const</li>
 <li><a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> LocalToWorld(const Vector4&amp;) const</li>
 <li>bool LookAt(const <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a>&amp; = <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> ( 0 , 1 , 0 ), TransformSpace = TS_WORLD)</li>
@@ -5796,10 +5815,13 @@ Classes</h1>
 <li>void ResetToDefault()</li>
 <li>void Roll(float, TransformSpace = TS_LOCAL)</li>
 <li>void Rotate(const <a class="el" href="a00274.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp;, TransformSpace = TS_LOCAL)</li>
+<li>void Rotate(float, TransformSpace = TS_LOCAL)</li>
+<li>void RotateAround(const <a class="el" href="a00376.html" title="Two-dimensional vector.">Vector2</a>&amp;, float, TransformSpace = TS_LOCAL)</li>
 <li>void RotateAround(const <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="a00274.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp;, TransformSpace = TS_LOCAL)</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
 <li>bool SaveXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
+<li>void Scale(const Vector2&amp;)</li>
 <li>void Scale(const Vector3&amp;)</li>
 <li>void Scale(float)</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
@@ -5807,19 +5829,33 @@ Classes</h1>
 <li>void SetAttributeAnimation(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, <a class="el" href="a00368.html" title="Value animation class.">ValueAnimation</a>@, WrapMode = WM_LOOP, float = 1.0f)</li>
 <li>void SetAttributeAnimationSpeed(const String&amp;, float)</li>
 <li>void SetAttributeAnimationWrapMode(const String&amp;, WrapMode)</li>
+<li>void SetPosition(const Vector2&amp;)</li>
+<li>void SetRotation(float)</li>
+<li>void SetScale(const Vector2&amp;)</li>
 <li>void SetScale(float)</li>
+<li>void SetTransform(const Vector2&amp;, float)</li>
+<li>void SetTransform(const Vector2&amp;, float, const Vector2&amp;)</li>
+<li>void SetTransform(const Vector2&amp;, float, float)</li>
 <li>void SetTransform(const Vector3&amp;, const Quaternion&amp;)</li>
 <li>void SetTransform(const Vector3&amp;, const Quaternion&amp;, const Vector3&amp;)</li>
 <li>void SetTransform(const Vector3&amp;, const Quaternion&amp;, float)</li>
+<li>void SetWorldPosition(const Vector2&amp;)</li>
+<li>void SetWorldRotation(float)</li>
+<li>void SetWorldScale(const Vector2&amp;)</li>
+<li>void SetWorldTransform(const Vector2&amp;, float)</li>
+<li>void SetWorldTransform(const Vector2&amp;, float, const Vector2&amp;)</li>
+<li>void SetWorldTransform(const Vector2&amp;, float, float)</li>
 <li>void SetWorldTransform(const Vector3&amp;, const Quaternion&amp;)</li>
 <li>void SetWorldTransform(const Vector3&amp;, const Quaternion&amp;, const Vector3&amp;)</li>
 <li>void SetWorldTransform(const Vector3&amp;, const Quaternion&amp;, float)</li>
 <li>void StopAsyncLoading()</li>
 <li>const <a class="el" href="a00344.html" title="String class.">String</a>&amp; GetVarName(ShortStringHash) const</li>
+<li>void Translate(const <a class="el" href="a00376.html" title="Two-dimensional vector.">Vector2</a>&amp;, TransformSpace = TS_LOCAL)</li>
 <li>void Translate(const <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a>&amp;, TransformSpace = TS_LOCAL)</li>
 <li>void UnregisterAllVars(const String&amp;)</li>
 <li>void UnregisterVar(const String&amp;)</li>
 <li>void Update(float)</li>
+<li><a class="el" href="a00376.html" title="Two-dimensional vector.">Vector2</a> WorldToLocal(const Vector2&amp;) const</li>
 <li><a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> WorldToLocal(const Vector3&amp;) const</li>
 <li><a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> WorldToLocal(const Vector4&amp;) const</li>
 <li>void Yaw(float, TransformSpace = TS_LOCAL)</li>
