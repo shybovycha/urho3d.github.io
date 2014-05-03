@@ -17,74 +17,98 @@ title: Documentation
 <div class="title">Urho2D </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>In order to make 2D Game in Urho3D, Urho2D is provided. Urho2D include 2D graphics and 2D physics. The classes provide are:</p>
+<div class="textblock"><p>In order to make 2D games in Urho3D, Urho2D is provided. Urho2D includes 2D graphics and 2D physics. Provided classes are:</p>
+<h1><a class="anchor" id="Drawable_Components"></a>
+Drawable components</h1>
 <ul>
-<li><a class="el" href="a00338.html" title="Sprite.">Sprite2D</a>: a sprite is defined with texture and texture rectangle and hot spot.</li>
-<li><a class="el" href="a00339.html" title="Sprite sheet.">SpriteSheet2D</a>: a sprite sheet(texture atlas) include some sprites in it.</li>
-<li><a class="el" href="a00343.html" title="Static sprite component.">StaticSprite2D</a>: a drawable component to display a sprite.</li>
-<li><a class="el" href="a00058.html" title="2D animation.">Animation2D</a>: 2D animation with some frames, a frame include duration and a sprite.</li>
-<li><a class="el" href="a00056.html" title="Animated sprite component.">AnimatedSprite2D</a> : a drawable component to display an animation.</li>
-<li><a class="el" href="a00259.html" title="2D particle effect resource.">ParticleEffect2D</a>: 2D particle model file.</li>
-<li><a class="el" href="a00261.html" title="2D particle emitter component.">ParticleEmitter2D</a>: a 2D particle effect.</li>
-<li><a class="el" href="a00267.html" title="2D physics simulation world component. Should be added only to the root scene node.">PhysicsWorld2D</a>: implements 2D physics simulation. 2D physics components such as <a class="el" href="a00297.html" title="2D rigid body component.">RigidBody2D</a> or <a class="el" href="a00099.html" title="2D collision shape component.">CollisionShape2D</a> can not function properly without this.</li>
-<li><a class="el" href="a00297.html" title="2D rigid body component.">RigidBody2D</a>: a 2D physics object instance.</li>
-<li><a class="el" href="a00099.html" title="2D collision shape component.">CollisionShape2D</a>: base class for 2D physics collision shape.</li>
-<li><a class="el" href="a00092.html" title="2D box collision component.">CollisionBox2D</a>: defines 2D physics collision box.</li>
-<li><a class="el" href="a00094.html" title="2D circle collision component.">CollisionCircle2D</a>: defines 2D physics collision circle.</li>
-<li><a class="el" href="a00095.html" title="2D edge collision component.">CollisionEdge2D</a>: defines 2D physics collision edge.</li>
-<li><a class="el" href="a00093.html" title="2D chain collision component.">CollisionChain2D</a>: defines 2D physics collision chain.</li>
-<li><a class="el" href="a00097.html" title="2D polygon collision component.">CollisionPolygon2D</a>: defines 2D physics collision polygon.</li>
-<li><a class="el" href="a00112.html" title="2D physics constraint component.">Constraint2D</a>: base class for 2D physics constraint.</li>
-<li><a class="el" href="a00113.html" title="2D distance constraint component.">ConstraintDistance2D</a>: define 2D physics distance constraint.</li>
-<li><a class="el" href="a00114.html" title="2D friction constraint component.">ConstraintFriction2D</a>: define 2D physics friction constraint.</li>
-<li><a class="el" href="a00115.html" title="2D gear constraint component.">ConstraintGear2D</a>: define 2D physics gear constraint.</li>
-<li><a class="el" href="a00116.html" title="2D motor constraint component.">ConstraintMotor2D</a>: define 2D physics motor constraint.</li>
-<li><a class="el" href="a00117.html" title="2D mouse constraint component.">ConstraintMouse2D</a>: define 2D physics mouse constraint.</li>
-<li><a class="el" href="a00118.html" title="2D prismatic constraint component.">ConstraintPrismatic2D</a>: define 2D physics prismatic constraint.</li>
-<li><a class="el" href="a00119.html" title="2D pulley constraint component.">ConstraintPulley2D</a>: define 2D physics pulley constraint.</li>
-<li><a class="el" href="a00120.html" title="2D revolute constraint component.">ConstraintRevolute2D</a>: define 2D physics revolute constraint.</li>
-<li><a class="el" href="a00121.html" title="2D rope constraint component.">ConstraintRope2D</a>: define 2D physics rope constraint.</li>
-<li><a class="el" href="a00122.html" title="2D weld constraint component.">ConstraintWeld2D</a>: define 2D physics weld constraint.</li>
-<li><a class="el" href="a00123.html" title="2D wheel constraint component.">ConstraintWheel2D</a>: define 2D physics wheel constraint.</li>
+<li><a class="el" href="a00056.html" title="Animated sprite component.">AnimatedSprite2D</a> : used to display an <a class="el" href="a00058.html" title="2D animation.">Animation2D</a>.</li>
+<li><a class="el" href="a00261.html" title="2D particle emitter component.">ParticleEmitter2D</a>: used to display a <a class="el" href="a00259.html" title="2D particle effect resource.">ParticleEffect2D</a>.</li>
+<li><a class="el" href="a00343.html" title="Static sprite component.">StaticSprite2D</a>: used to display a <a class="el" href="a00338.html" title="Sprite.">Sprite2D</a>.</li>
 </ul>
-<p>In order to use Urho2D, it is need set camera to orthographic mode first, it can be done with following code:</p>
+<h1><a class="anchor" id="Resources"></a>
+Resources</h1>
+<ul>
+<li><a class="el" href="a00058.html" title="2D animation.">Animation2D</a>: a *.anm file defining a sequence of <a class="el" href="a00338.html" title="Sprite.">Sprite2D</a> frames (retrieved from one or more Sprite2Ds/SpriteSheet2Ds) to play. For an example using a <a class="el" href="a00339.html" title="Sprite sheet.">SpriteSheet2D</a>, see Bin/Data/Urho2D/GoldIcon.anm</li>
+<li><a class="el" href="a00259.html" title="2D particle effect resource.">ParticleEffect2D</a>: a *.xml file defining the behavior and texture of a 2D particle. For an example, see Bin/Data/Urho2D/greenspiral.pex</li>
+<li><a class="el" href="a00338.html" title="Sprite.">Sprite2D</a>: an image defined with texture, texture rectangle and hot spot.</li>
+<li><a class="el" href="a00339.html" title="Sprite sheet.">SpriteSheet2D</a>: a texture atlas image (that packs multiple <a class="el" href="a00338.html" title="Sprite.">Sprite2D</a> images).</li>
+</ul>
+<p>To create an <a class="el" href="a00058.html" title="2D animation.">Animation2D</a> from multiple images:</p>
+<ul>
+<li>Pack all your individual images into a texture atlas using tools like ShoeBox (<a href="http://renderhjs.net/shoebox/">http://renderhjs.net/shoebox/</a>) or TexturePacker (<a href="http://www.codeandweb.com/texturepacker">http://www.codeandweb.com/texturepacker</a>) or .... This will generate an image file and a xml file mapping coordinates and size for each individual image. Note that Urho2D uses same xml file format as Sparrow/Starling engines.</li>
+<li>Create an <a class="el" href="a00058.html" title="2D animation.">Animation2D</a> xml file from scratch or using ShoeBox. For an example, see rotating coin in example 24_Urho2DSprite and resources located in Bin/Data/Urho2D : GoldIcon.png is the texture atlas image, GoldIcon.xml is the external file storing sprites' coordinates and size and GoldIcon.anm is the <a class="el" href="a00058.html" title="2D animation.">Animation2D</a> file.</li>
+</ul>
+<h1><a class="anchor" id="Physics"></a>
+Physics</h1>
+<p>Physics in Urho2D uses Box2D. You can refer to Box2D manual at <a href="http://www.box2d.org/manual.html">http://www.box2d.org/manual.html</a> for full reference.</p>
+<ul>
+<li><a class="el" href="a00267.html" title="2D physics simulation world component. Should be added only to the root scene node.">PhysicsWorld2D</a>: implements 2D physics simulation. Mandatory for 2D physics components such as <a class="el" href="a00297.html" title="2D rigid body component.">RigidBody2D</a>, <a class="el" href="a00099.html" title="2D collision shape component.">CollisionShape2D</a> or <a class="el" href="a00112.html" title="2D physics constraint component.">Constraint2D</a>.</li>
+</ul>
+<h1><a class="anchor" id="Rigid_Bodies_Components"></a>
+Rigid bodies components</h1>
+<ul>
+<li><a class="el" href="a00297.html" title="2D rigid body component.">RigidBody2D</a>: a 2D physics object instance. Available BodyType2Ds are: (SetBodyType)</li>
+<li>BT_STATIC: A static body does not move under simulation and behaves as if it has infinite mass. Internally, Box2D stores zero for the mass and the inverse mass. Static bodies can be moved manually by the user. A static body has zero velocity. Static bodies do not collide with other static or kinematic bodies.</li>
+<li>BT_DYNAMIC: A dynamic body is fully simulated. They can be moved manually by the user, but normally they move according to forces. A dynamic body can collide with all body types. A dynamic body always has finite, non-zero mass. If you try to set the mass of a dynamic body to zero, it will automatically acquire a mass of one kilogram.</li>
+<li>BT_KINEMATIC: A kinematic body moves under simulation according to its velocity. Kinematic bodies do not respond to forces. They can be moved manually by the user, but normally a kinematic body is moved by setting its velocity. A kinematic body behaves as if it has infinite mass, however, Box2D stores zero for the mass and the inverse mass. Kinematic bodies do not collide with other static or kinematic bodies. You should establish the body type at creation because changing the body type later is expensive.</li>
+</ul>
+<h1><a class="anchor" id="Collision_Shapes_Components"></a>
+Collision shapes components</h1>
+<p>Use DrawDebugGeometry() to display the shapes.</p>
+<ul>
+<li><a class="el" href="a00099.html" title="2D collision shape component.">CollisionShape2D</a>: base class for 2D physics collision shapes.</li>
+<li><a class="el" href="a00092.html" title="2D box collision component.">CollisionBox2D</a>: defines 2D physics collision box.</li>
+<li><a class="el" href="a00094.html" title="2D circle collision component.">CollisionCircle2D</a>: defines 2D physics collision circle. Circle shapes have a position (SetCenter) and radius (SetRadius). Circles are solid, you cannot make a hollow circle using the circle shape.</li>
+<li><a class="el" href="a00095.html" title="2D edge collision component.">CollisionEdge2D</a>: defines 2D physics collision edge. Edge shapes are line segments (SetVertex1 and SetVertex2 or SetVertices). They are provided to assist in making a free-form static environment for your game. A major limitation of edge shapes is that they can collide with circles and polygons but not with themselves. The collision algorithms used by Box2D require that at least one of two colliding shapes have volume. Edge shapes have no volume, so edge-edge collision is not possible.</li>
+<li><a class="el" href="a00093.html" title="2D chain collision component.">CollisionChain2D</a>: defines 2D physics collision chain. The chain shape provides an efficient way to connect many edges together (SetVertices) to construct your static game worlds. You can connect chains together using ghost vertices. Self-intersection of chain shapes is not supported.</li>
+<li><a class="el" href="a00097.html" title="2D polygon collision component.">CollisionPolygon2D</a>: defines 2D physics collision polygon. Polygon shapes are solid convex polygons. A polygon is convex when all line segments connecting two points in the interior do not cross any edge of the polygon. A polygon must have 3 or more vertices (SetVertices). Polygons vertices are stored with a counter clockwise winding.</li>
+</ul>
+<h1><a class="anchor" id="Constraints_Components"></a>
+Constraints components</h1>
+<p>Apply a constraint to a node (called 'ownerBody') and use SetOtherBody() to set the other node's body to be constrained to the ownerBody. Use SetCollideConnected() to switch collision between the bodies. Use SetDrawJoint(true) in combination with DrawDebugGeometry() to display the joints. See 29_Urho2DConstraints for detailed examples and to help selecting the appropriate constraint.</p>
+<ul>
+<li><a class="el" href="a00112.html" title="2D physics constraint component.">Constraint2D</a>: base class for 2D physics constraints.</li>
+<li><a class="el" href="a00113.html" title="2D distance constraint component.">ConstraintDistance2D</a>: define 2D physics distance constraint. The distance between two anchor points (SetOwnerBodyAnchor and SetOtherBodyAnchor) on two bodies is kept constant. The constraint can also be made soft, like a spring-damper connection. Softness is achieved by tuning frequency (SetFrequencyHz is below half of the timestep) and damping ratio (SetDampingRatio).</li>
+<li><a class="el" href="a00114.html" title="2D friction constraint component.">ConstraintFriction2D</a>: This constraint is used for top-down friction. It provides 2D translational friction (SetMaxForce) and angular friction (SetMaxTorque).</li>
+<li><a class="el" href="a00115.html" title="2D gear constraint component.">ConstraintGear2D</a>: define 2D physics gear constraint. Used to create sophisticated mechanisms and saves from using compound shapes. This constraint can only connect ConstraintRevolute2Ds and/or ConstraintPrismatic2Ds (SetOwnerConstraint and SetOtherConstraint). Like the pulley ratio, you can specify a gear ratio (SetRatio). However, in this case the gear ratio can be negative.</li>
+<li><a class="el" href="a00116.html" title="2D motor constraint component.">ConstraintMotor2D</a>: define 2D physics motor constraint. This constraint lets you control the motion of a body by specifying target position (SetLinearOffset) and rotation offsets (SetAngularOffset). You can set the maximum motor force (SetMaxForce) and torque (SetMaxTorque) that will be applied to reach the target position and rotation. If the body is blocked, it will stop and the contact forces will be proportional to the maximum motor force and torque.</li>
+<li><a class="el" href="a00117.html" title="2D mouse constraint component.">ConstraintMouse2D</a>: define 2D physics mouse constraint. Used to manipulate bodies with the mouse. It attempts to drive a point on a body towards the current position of the cursor. There is no restriction on rotation. This constraint has a target point, maximum force, frequency, and damping ratio. The target point (SetTarget) initially coincides with the body’s anchor point. The maximum force (SetMaxForce) is used to prevent violent reactions when multiple dynamic bodies interact. You can make this as large as you like. The frequency (SetFrequencyHz) and damping ratio (SetDampingRatio) are used to create a spring/damper effect similar to the <a class="el" href="a00113.html" title="2D distance constraint component.">ConstraintDistance2D</a>. Many users have tried to adapt the <a class="el" href="a00117.html" title="2D mouse constraint component.">ConstraintMouse2D</a> for game play. Users often want to achieve precise positioning and instantaneous response. The <a class="el" href="a00117.html" title="2D mouse constraint component.">ConstraintMouse2D</a> doesn’t work very well in that context. You may wish to consider using kinematic bodies instead.</li>
+<li><a class="el" href="a00118.html" title="2D prismatic constraint component.">ConstraintPrismatic2D</a>: define 2D physics prismatic constraint. This constraint allows for relative translation of two bodies along a specified axis (SetAxis). There's no rotation applied. This constraint definition is similar to <a class="el" href="a00120.html" title="2D revolute constraint component.">ConstraintRevolute2D</a> description; just substitute translation for angle and force for torque.</li>
+<li><a class="el" href="a00119.html" title="2D pulley constraint component.">ConstraintPulley2D</a>: define 2D physics pulley constraint. The pulley connects two bodies to ground (SetOwnerBodyGroundAnchor and SetOtherBodyGroundAnchor) and to each other (SetOwnerBodyAnchor and SetOtherBodyAnchor). As one body goes up, the other goes down. You can supply a ratio (SetRatio) that simulates a block and tackle. This causes one side of the pulley to extend faster than the other. At the same time the constraint force is smaller on one side than the other. You can use this to create mechanical leverage.</li>
+<li><a class="el" href="a00120.html" title="2D revolute constraint component.">ConstraintRevolute2D</a>: define 2D physics revolute constraint. define 2D physics friction constraint. This constraint forces two bodies to share a common hinge anchor point (SetAnchor). You can control the relative rotation of the two bodies (the constraint angle) using a limit and/or a motor. A limit (SetEnableLimit) forces the joint angle to remain between a lower (SetLowerAngle) and upper (SetUpperAngle) bound. The limit will apply as much torque as needed to make this happen. The limit range should include zero, otherwise the constraint will lurch when the simulation begins. A motor (SetEnableMotor) allows you to specify the constraint speed (the time derivative of the angle). The speed (SetMotorSpeed) can be negative or positive. When the maximum torque (SetMaxMotorTorque) is exceeded, the joint will slow down and can even reverse. You can use a motor to simulate friction. Just set the joint speed to zero, and set the maximum torque to some small, but significant value. The motor will try to prevent the constraint from rotating, but will yield to a significant load.</li>
+<li><a class="el" href="a00121.html" title="2D rope constraint component.">ConstraintRope2D</a>: define 2D physics rope constraint. This constraint restricts the maximum distance (SetMaxLength) between two points (SetOwnerBodyAnchor and SetOtherBodyAnchor). This can be useful to prevent chains of bodies from stretching, even under high load.</li>
+<li><a class="el" href="a00122.html" title="2D weld constraint component.">ConstraintWeld2D</a>: define 2D physics weld constraint. This constraint attempts to constrain all relative motion between two bodies.</li>
+<li><a class="el" href="a00123.html" title="2D wheel constraint component.">ConstraintWheel2D</a>: define 2D physics wheel constraint. This constraint restricts a point on bodyB (SetAnchor) to a line on bodyA (SetAxis). It also provides a suspension spring.</li>
+</ul>
+<p>In order to use Urho2D we need to set camera to orthographic mode first; it can be done with following code:</p>
 <p>C++: </p>
 <div class="fragment"><div class="line"><span class="comment">// Create camera node</span></div>
 <div class="line">Node* cameraNode = scene_-&gt;CreateChild(<span class="stringliteral">&quot;Camera&quot;</span>);</div>
-<div class="line"><span class="comment">// Set camera node&#39;s position</span></div>
-<div class="line">cameraNode-&gt;SetPosition(Vector3(0.0f, 0.0f, -10.0f));</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Create camera</span></div>
 <div class="line">Camera* camera = cameraNode-&gt;CreateComponent&lt;Camera&gt;();</div>
 <div class="line"><span class="comment">// Set camera orthographic</span></div>
 <div class="line">camera-&gt;SetOrthographic(<span class="keyword">true</span>);</div>
-<div class="line"></div>
 <div class="line"><span class="comment">// Set camera ortho size (the value of PIXEL_SIZE is 0.01)</span></div>
-<div class="line">camera-&gt;SetOrthoSize(Vector2(graphics.width, graphics.height) * PIXEL_SIZE);</div>
+<div class="line">camera-&gt;SetOrthoSize((<span class="keywordtype">float</span>)graphics-&gt;GetHeight() * PIXEL_SIZE);</div>
 </div><!-- fragment --><p>AngelScript: </p>
 <div class="fragment"><div class="line"><span class="comment">// Create camera node</span></div>
 <div class="line">Node@ cameraNode = scene_.CreateChild(<span class="stringliteral">&quot;Camera&quot;</span>);</div>
-<div class="line"><span class="comment">// Set camera node&#39;s position</span></div>
-<div class="line">cameraNode.SetPosition(Vector3(0.0f, 0.0f, -10.0f));</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Create camera</span></div>
 <div class="line">Camera@ camera = cameraNode.CreateComponent(<span class="stringliteral">&quot;Camera&quot;</span>);</div>
 <div class="line"><span class="comment">// Set camera orthographic</span></div>
 <div class="line">camera.orthographic = <span class="keyword">true</span>;</div>
-<div class="line"></div>
 <div class="line"><span class="comment">// Set camera ortho size (the value of PIXEL_SIZE is 0.01)</span></div>
-<div class="line">camera.SetOrthoSize(Vector2(graphics.width, graphics.height) * PIXEL_SIZE);</div>
+<div class="line">camera.orthoSize = graphics.height * PIXEL_SIZE;</div>
 </div><!-- fragment --><p>Lua: </p>
 <div class="fragment"><div class="line">-- Create camera node</div>
 <div class="line">cameraNode = scene_:CreateChild(<span class="stringliteral">&quot;Camera&quot;</span>)</div>
-<div class="line">-- Set camera node<span class="stringliteral">&#39;s position</span></div>
-<div class="line"><span class="stringliteral">cameraNode.position = Vector3(0.0, 0.0, -10.0)</span></div>
-<div class="line"><span class="stringliteral"></span></div>
-<div class="line"><span class="stringliteral">-- Create camera</span></div>
-<div class="line"><span class="stringliteral">local camera = cameraNode:CreateComponent(&quot;Camera&quot;)</span></div>
-<div class="line"><span class="stringliteral">-- Set camera orthographic</span></div>
-<div class="line"><span class="stringliteral">camera.orthographic = true</span></div>
-<div class="line"><span class="stringliteral"></span></div>
-<div class="line"><span class="stringliteral">-- Set camera ortho size (the value of PIXEL_SIZE is 0.01)</span></div>
-<div class="line"><span class="stringliteral">camera:SetOrthoSize(Vector2(graphics.width, graphics.height) * PIXEL_SIZE)</span></div>
+<div class="line"></div>
+<div class="line">-- Create camera</div>
+<div class="line">local camera = cameraNode:CreateComponent(<span class="stringliteral">&quot;Camera&quot;</span>)</div>
+<div class="line">-- Set camera orthographic</div>
+<div class="line">camera.orthographic = <span class="keyword">true</span></div>
+<div class="line">-- Set camera ortho size (the value of PIXEL_SIZE is 0.01)</div>
+<div class="line">camera.orthoSize = graphics.height * PIXEL_SIZE</div>
 </div><!-- fragment --> </div></div><!-- contents -->
