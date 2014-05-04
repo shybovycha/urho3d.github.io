@@ -17,7 +17,7 @@ title: Documentation
 <div class="title">Urho2D </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>In order to make 2D games in Urho3D, Urho2D is provided. Urho2D includes 2D graphics and 2D physics. Provided classes are:</p>
+<div class="textblock"><p>In order to make 2D games in Urho3D, the Urho2D sublibrary is provided. Urho2D includes 2D graphics and 2D physics. Provided classes are:</p>
 <h1><a class="anchor" id="Drawable_Components"></a>
 Drawable components</h1>
 <ul>
@@ -38,13 +38,13 @@ Resources</h1>
 <li>Pack all your individual images into a texture atlas using tools like ShoeBox (<a href="http://renderhjs.net/shoebox/">http://renderhjs.net/shoebox/</a>) or TexturePacker (<a href="http://www.codeandweb.com/texturepacker">http://www.codeandweb.com/texturepacker</a>) or .... This will generate an image file and a xml file mapping coordinates and size for each individual image. Note that Urho2D uses same xml file format as Sparrow/Starling engines.</li>
 <li>Create an <a class="el" href="a00058.html" title="2D animation.">Animation2D</a> xml file from scratch or using ShoeBox. For an example, see rotating coin in example 24_Urho2DSprite and resources located in Bin/Data/Urho2D : GoldIcon.png is the texture atlas image, GoldIcon.xml is the external file storing sprites' coordinates and size and GoldIcon.anm is the <a class="el" href="a00058.html" title="2D animation.">Animation2D</a> file.</li>
 </ul>
-<h1><a class="anchor" id="Physics"></a>
+<h1><a class="anchor" id="Urho2D_Physics"></a>
 Physics</h1>
 <p>Physics in Urho2D uses Box2D. You can refer to Box2D manual at <a href="http://www.box2d.org/manual.html">http://www.box2d.org/manual.html</a> for full reference.</p>
 <ul>
 <li><a class="el" href="a00267.html" title="2D physics simulation world component. Should be added only to the root scene node.">PhysicsWorld2D</a>: implements 2D physics simulation. Mandatory for 2D physics components such as <a class="el" href="a00297.html" title="2D rigid body component.">RigidBody2D</a>, <a class="el" href="a00099.html" title="2D collision shape component.">CollisionShape2D</a> or <a class="el" href="a00112.html" title="2D physics constraint component.">Constraint2D</a>.</li>
 </ul>
-<h1><a class="anchor" id="Rigid_Bodies_Components"></a>
+<h1><a class="anchor" id="Urho2D_Rigidbodies_Components"></a>
 Rigid bodies components</h1>
 <ul>
 <li><a class="el" href="a00297.html" title="2D rigid body component.">RigidBody2D</a>: a 2D physics object instance. Available BodyType2Ds are: (SetBodyType)</li>
@@ -52,7 +52,7 @@ Rigid bodies components</h1>
 <li>BT_DYNAMIC: A dynamic body is fully simulated. They can be moved manually by the user, but normally they move according to forces. A dynamic body can collide with all body types. A dynamic body always has finite, non-zero mass. If you try to set the mass of a dynamic body to zero, it will automatically acquire a mass of one kilogram.</li>
 <li>BT_KINEMATIC: A kinematic body moves under simulation according to its velocity. Kinematic bodies do not respond to forces. They can be moved manually by the user, but normally a kinematic body is moved by setting its velocity. A kinematic body behaves as if it has infinite mass, however, Box2D stores zero for the mass and the inverse mass. Kinematic bodies do not collide with other static or kinematic bodies. You should establish the body type at creation because changing the body type later is expensive.</li>
 </ul>
-<h1><a class="anchor" id="Collision_Shapes_Components"></a>
+<h1><a class="anchor" id="Urho2D_Collision_Shapes_Components"></a>
 Collision shapes components</h1>
 <p>Use DrawDebugGeometry() to display the shapes.</p>
 <ul>
@@ -63,7 +63,7 @@ Collision shapes components</h1>
 <li><a class="el" href="a00093.html" title="2D chain collision component.">CollisionChain2D</a>: defines 2D physics collision chain. The chain shape provides an efficient way to connect many edges together (SetVertices) to construct your static game worlds. You can connect chains together using ghost vertices. Self-intersection of chain shapes is not supported.</li>
 <li><a class="el" href="a00097.html" title="2D polygon collision component.">CollisionPolygon2D</a>: defines 2D physics collision polygon. Polygon shapes are solid convex polygons. A polygon is convex when all line segments connecting two points in the interior do not cross any edge of the polygon. A polygon must have 3 or more vertices (SetVertices). Polygons vertices are stored with a counter clockwise winding.</li>
 </ul>
-<h1><a class="anchor" id="Constraints_Components"></a>
+<h1><a class="anchor" id="Urho2D_Constraints_Components"></a>
 Constraints components</h1>
 <p>Apply a constraint to a node (called 'ownerBody') and use SetOtherBody() to set the other node's body to be constrained to the ownerBody. Use SetCollideConnected() to switch collision between the bodies. Use SetDrawJoint(true) in combination with DrawDebugGeometry() to display the joints. See 29_Urho2DConstraints for detailed examples and to help selecting the appropriate constraint.</p>
 <ul>
