@@ -29,11 +29,13 @@ Classes</h1>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -74,6 +76,7 @@ Classes</h1>
 <li>float GetMorphWeight(uint) const</li>
 <li>bool IsInView(<a class="el" href="a00088.html" title="Camera component.">Camera</a>@) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
@@ -86,6 +89,7 @@ Classes</h1>
 <li>void ResetMorphWeights()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -153,12 +157,14 @@ Classes</h1>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool IsInView(<a class="el" href="a00088.html" title="Camera component.">Camera</a>@) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -217,9 +223,11 @@ Classes</h1>
 <ul>
 <li>void AddTrigger(float, bool, const Variant&amp;)</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool Load(VectorBuffer&amp;)</li>
 <li>void RemoveAllTriggers()</li>
 <li>void RemoveTrigger(uint)</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 </ul>
 <p>Properties:</p>
@@ -245,7 +253,9 @@ Classes</h1>
 <li><a class="el" href="a00337.html" title="UI element which allows sub-pixel positioning and size, as well as rotation. Only other Sprites shoul...">Sprite</a>@ GetFrameSprite(uint) const</li>
 <li><a class="el" href="a00337.html" title="UI element which allows sub-pixel positioning and size, as well as rotation. Only other Sprites shoul...">Sprite</a>@ GetFrameSpriteByTime(float) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool Load(VectorBuffer&amp;)</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 </ul>
 <p>Properties:</p>
@@ -288,6 +298,7 @@ Classes</h1>
 <li>bool IsFadingOut(const String&amp;) const</li>
 <li>bool IsPlaying(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>bool Play(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, uint8, bool, float = 0.0f)</li>
@@ -296,6 +307,7 @@ Classes</h1>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -455,12 +467,14 @@ Classes</h1>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool IsInView(<a class="el" href="a00088.html" title="Camera component.">Camera</a>@) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -548,9 +562,11 @@ Classes</h1>
 <li>bool IsInside(IntVector2, bool)</li>
 <li>bool IsInsideCombined(IntVector2, bool)</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadChildXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null)</li>
 <li>bool LoadChildXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null, bool = false)</li>
 <li>bool LoadXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool LoadXML(VectorBuffer&amp;)</li>
 <li>bool LoadXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
@@ -562,7 +578,9 @@ Classes</h1>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool SaveXML(VectorBuffer&amp;)</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li><a class="el" href="a00190.html" title="Two-dimensional vector with integer values.">IntVector2</a> ScreenToElement(const IntVector2&amp;)</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
@@ -728,9 +746,11 @@ Classes</h1>
 <li>bool IsInside(IntVector2, bool)</li>
 <li>bool IsInsideCombined(IntVector2, bool)</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadChildXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null)</li>
 <li>bool LoadChildXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null, bool = false)</li>
 <li>bool LoadXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool LoadXML(VectorBuffer&amp;)</li>
 <li>bool LoadXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
@@ -742,7 +762,9 @@ Classes</h1>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool SaveXML(VectorBuffer&amp;)</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li><a class="el" href="a00190.html" title="Two-dimensional vector with integer values.">IntVector2</a> ScreenToElement(const IntVector2&amp;)</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
@@ -870,12 +892,14 @@ Classes</h1>
 <li><a class="el" href="a00277.html" title="Infinite straight line in three-dimensional space.">Ray</a> GetScreenRay(float, float) const</li>
 <li><a class="el" href="a00167.html" title="Convex constructed of 6 planes.">Frustum</a> GetSplitFrustum(float, float) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li><a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> ScreenToWorldPoint(const Vector3&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
@@ -964,9 +988,11 @@ Classes</h1>
 <li>bool IsInside(IntVector2, bool)</li>
 <li>bool IsInsideCombined(IntVector2, bool)</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadChildXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null)</li>
 <li>bool LoadChildXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null, bool = false)</li>
 <li>bool LoadXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool LoadXML(VectorBuffer&amp;)</li>
 <li>bool LoadXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
@@ -978,7 +1004,9 @@ Classes</h1>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool SaveXML(VectorBuffer&amp;)</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li><a class="el" href="a00190.html" title="Two-dimensional vector with integer values.">IntVector2</a> ScreenToElement(const IntVector2&amp;)</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
@@ -1097,12 +1125,14 @@ Classes</h1>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -1157,12 +1187,14 @@ Classes</h1>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li><a class="el" href="a00376.html" title="Two-dimensional vector.">Vector2</a>[]@ GetVertices() const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -1216,12 +1248,14 @@ Classes</h1>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -1273,12 +1307,14 @@ Classes</h1>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -1331,12 +1367,14 @@ Classes</h1>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li><a class="el" href="a00376.html" title="Two-dimensional vector.">Vector2</a>[]@ GetVertices() const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -1389,12 +1427,14 @@ Classes</h1>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -1452,12 +1492,14 @@ Classes</h1>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -1549,12 +1591,14 @@ Classes</h1>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -1656,12 +1700,14 @@ Classes</h1>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -1715,12 +1761,14 @@ Classes</h1>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -1762,12 +1810,14 @@ Classes</h1>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -1813,12 +1863,14 @@ Classes</h1>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -1863,12 +1915,14 @@ Classes</h1>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -1913,12 +1967,14 @@ Classes</h1>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -1965,12 +2021,14 @@ Classes</h1>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -2016,12 +2074,14 @@ Classes</h1>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -2071,12 +2131,14 @@ Classes</h1>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -2123,12 +2185,14 @@ Classes</h1>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -2177,12 +2241,14 @@ Classes</h1>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -2227,12 +2293,14 @@ Classes</h1>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -2277,12 +2345,14 @@ Classes</h1>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -2361,9 +2431,11 @@ Classes</h1>
 <li>bool IsInside(IntVector2, bool)</li>
 <li>bool IsInsideCombined(IntVector2, bool)</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadChildXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null)</li>
 <li>bool LoadChildXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null, bool = false)</li>
 <li>bool LoadXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool LoadXML(VectorBuffer&amp;)</li>
 <li>bool LoadXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
@@ -2375,7 +2447,9 @@ Classes</h1>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool SaveXML(VectorBuffer&amp;)</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li><a class="el" href="a00190.html" title="Two-dimensional vector with integer values.">IntVector2</a> ScreenToElement(const IntVector2&amp;)</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
@@ -2502,12 +2576,14 @@ Classes</h1>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool IsInView(<a class="el" href="a00088.html" title="Camera component.">Camera</a>@) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -2600,12 +2676,14 @@ Classes</h1>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -2646,6 +2724,7 @@ Classes</h1>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool IsInView(<a class="el" href="a00088.html" title="Camera component.">Camera</a>@) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
@@ -2654,6 +2733,7 @@ Classes</h1>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -2777,12 +2857,14 @@ Classes</h1>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool IsInView(<a class="el" href="a00088.html" title="Camera component.">Camera</a>@) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -2836,12 +2918,14 @@ Classes</h1>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool IsInView(<a class="el" href="a00088.html" title="Camera component.">Camera</a>@) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -2916,9 +3000,11 @@ Classes</h1>
 <li>bool IsInside(IntVector2, bool)</li>
 <li>bool IsInsideCombined(IntVector2, bool)</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadChildXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null)</li>
 <li>bool LoadChildXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null, bool = false)</li>
 <li>bool LoadXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool LoadXML(VectorBuffer&amp;)</li>
 <li>bool LoadXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
@@ -2933,7 +3019,9 @@ Classes</h1>
 <li>void RemoveItem(uint)</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool SaveXML(VectorBuffer&amp;)</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li><a class="el" href="a00190.html" title="Two-dimensional vector with integer values.">IntVector2</a> ScreenToElement(const IntVector2&amp;)</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
@@ -3252,8 +3340,11 @@ Classes</h1>
 <p>Methods:</p>
 <ul>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool Load(VectorBuffer&amp;)</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, int, bool = false)</li>
+<li>bool SaveXML(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, int, bool = false)</li>
 <li>bool SaveXML(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, int, bool = false)</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 </ul>
@@ -3298,6 +3389,7 @@ Classes</h1>
 <li>void Maximize()</li>
 <li>void Minimize()</li>
 <li>void PrecacheShaders(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>void PrecacheShaders(VectorBuffer&amp;)</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetMode(int, int)</li>
 <li>bool SetMode(int, int, bool, bool, bool, bool, bool, int)</li>
@@ -3406,9 +3498,12 @@ Classes</h1>
 <li><a class="el" href="a00100.html" title="RGBA color.">Color</a> GetPixelTrilinear(float, float, float) const</li>
 <li><a class="el" href="a00185.html" title="Image resource.">Image</a>@ GetSubimage(const IntRect&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool Load(VectorBuffer&amp;)</li>
 <li>bool LoadColorLUT(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool LoadColorLUT(VectorBuffer&amp;)</li>
 <li>void Resize(int, int)</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>void SaveBMP(const String&amp;) const</li>
 <li>void SaveJPG(const String&amp;, int) const</li>
 <li>void SavePNG(const String&amp;) const</li>
@@ -3447,10 +3542,13 @@ Classes</h1>
 <li>int GetScancodeFromName(const String&amp;) const</li>
 <li><a class="el" href="a00344.html" title="String class.">String</a> GetScancodeName(int) const</li>
 <li>uint LoadGestures(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>uint LoadGestures(VectorBuffer&amp;)</li>
 <li>bool RecordGesture()</li>
 <li>bool RemoveScreenJoystick(int)</li>
 <li>bool SaveGesture(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, uint)</li>
+<li>bool SaveGesture(VectorBuffer&amp;, uint)</li>
 <li>bool SaveGestures(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool SaveGestures(VectorBuffer&amp;)</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 </ul>
 <p>Properties:</p>
@@ -3523,7 +3621,9 @@ Classes</h1>
 <li><a class="el" href="a00196.html" title="JSON value class.">JSONValue</a> CreateRoot(JSONValueType = JSON_ANY)</li>
 <li><a class="el" href="a00196.html" title="JSON value class.">JSONValue</a> GetRoot(JSONValueType = JSON_ANY)</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool Load(VectorBuffer&amp;)</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 </ul>
 <p>Properties:</p>
@@ -3657,12 +3757,14 @@ Classes</h1>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool IsInView(<a class="el" href="a00088.html" title="Camera component.">Camera</a>@) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -3752,9 +3854,11 @@ Classes</h1>
 <li>bool IsInside(IntVector2, bool)</li>
 <li>bool IsInsideCombined(IntVector2, bool)</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadChildXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null)</li>
 <li>bool LoadChildXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null, bool = false)</li>
 <li>bool LoadXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool LoadXML(VectorBuffer&amp;)</li>
 <li>bool LoadXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
@@ -3766,7 +3870,9 @@ Classes</h1>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool SaveXML(VectorBuffer&amp;)</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li><a class="el" href="a00190.html" title="Two-dimensional vector with integer values.">IntVector2</a> ScreenToElement(const IntVector2&amp;)</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
@@ -3917,9 +4023,11 @@ Classes</h1>
 <li>bool IsInsideCombined(IntVector2, bool)</li>
 <li>bool IsSelected(uint) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadChildXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null)</li>
 <li>bool LoadChildXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null, bool = false)</li>
 <li>bool LoadXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool LoadXML(VectorBuffer&amp;)</li>
 <li>bool LoadXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
@@ -3935,7 +4043,9 @@ Classes</h1>
 <li>void RemoveSelection(uint)</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool SaveXML(VectorBuffer&amp;)</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li><a class="el" href="a00190.html" title="Two-dimensional vector with integer values.">IntVector2</a> ScreenToElement(const IntVector2&amp;)</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
@@ -4089,9 +4199,11 @@ Classes</h1>
 <li>float GetShaderParameterAnimationSpeed(const String&amp;) const</li>
 <li>WrapMode GetShaderParameterAnimationWrapMode(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool Load(VectorBuffer&amp;)</li>
 <li>bool Load(const XMLElement&amp;)</li>
 <li>void RemoveShaderParameter(const String&amp;)</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool Save(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>void SetShaderParameterAnimation(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, <a class="el" href="a00368.html" title="Value animation class.">ValueAnimation</a>@, WrapMode = WM_LOOP, float = 1.0f)</li>
@@ -4243,9 +4355,11 @@ Classes</h1>
 <li>bool IsInside(IntVector2, bool)</li>
 <li>bool IsInsideCombined(IntVector2, bool)</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadChildXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null)</li>
 <li>bool LoadChildXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null, bool = false)</li>
 <li>bool LoadXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool LoadXML(VectorBuffer&amp;)</li>
 <li>bool LoadXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
@@ -4257,7 +4371,9 @@ Classes</h1>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool SaveXML(VectorBuffer&amp;)</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li><a class="el" href="a00190.html" title="Two-dimensional vector with integer values.">IntVector2</a> ScreenToElement(const IntVector2&amp;)</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
@@ -4398,7 +4514,9 @@ Classes</h1>
 <p>Methods:</p>
 <ul>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool Load(VectorBuffer&amp;)</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 </ul>
 <p>Properties:</p>
@@ -4429,12 +4547,14 @@ Classes</h1>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -4482,6 +4602,7 @@ Classes</h1>
 <li><a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> GetRandomPoint()</li>
 <li><a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> GetRandomPointInCircle(const <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a>&amp;, float, const <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a>&amp; = <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> ( 1.0 , 1.0 , 1.0 ))</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li><a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> MoveAlongSurface(const <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a>&amp; = <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> ( 1.0 , 1.0 , 1.0 ), uint = 3)</li>
@@ -4490,6 +4611,7 @@ Classes</h1>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -4578,12 +4700,14 @@ Classes</h1>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -4645,6 +4769,7 @@ Classes</h1>
 <li>ScriptObject@ GetScriptObject(const String&amp;) const</li>
 <li>bool HasComponent(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li><a class="el" href="a00376.html" title="Two-dimensional vector.">Vector2</a> LocalToWorld(const Vector2&amp;) const</li>
 <li><a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> LocalToWorld(const Vector3&amp;) const</li>
@@ -4668,7 +4793,9 @@ Classes</h1>
 <li>void RotateAround(const <a class="el" href="a00376.html" title="Two-dimensional vector.">Vector2</a>&amp;, float, TransformSpace = TS_LOCAL)</li>
 <li>void RotateAround(const <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="a00274.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp;, TransformSpace = TS_LOCAL)</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool SaveXML(VectorBuffer&amp;)</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void Scale(const Vector2&amp;)</li>
 <li>void Scale(const Vector3&amp;)</li>
@@ -4770,9 +4897,11 @@ Classes</h1>
 <li>float GetAttributeAnimationSpeed(const String&amp;) const</li>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool Load(VectorBuffer&amp;)</li>
 <li>void RemoveAttributeAnimation(<a class="el" href="a00368.html" title="Value animation class.">ValueAnimation</a>@)</li>
 <li>void RemoveAttributeAnimation(const String&amp;)</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 </ul>
 <p>Properties:</p>
@@ -4807,6 +4936,7 @@ Classes</h1>
 <li><a class="el" href="a00236.html" title="Scene node that may contain components and child nodes.">Node</a>@[]@ GetDrawables(const <a class="el" href="a00333.html" title="Sphere in three-dimensional space.">Sphere</a>&amp;, uint8 = DRAWABLE_ANY, uint = DEFAULT_VIEWMASK)</li>
 <li><a class="el" href="a00236.html" title="Scene node that may contain components and child nodes.">Node</a>@[]@ GetDrawables(const <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a>&amp;, uint8 = DRAWABLE_ANY, uint = DEFAULT_VIEWMASK)</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li><a class="el" href="a00279.html" title="Raycast result.">RayQueryResult</a>[]@ Raycast(const <a class="el" href="a00277.html" title="Infinite straight line in three-dimensional space.">Ray</a>&amp;, RayQueryLevel = RAY_TRIANGLE, float = M_INFINITY, uint8 = DRAWABLE_ANY, uint = DEFAULT_VIEWMASK) const</li>
@@ -4816,6 +4946,7 @@ Classes</h1>
 <li>void RemoveManualDrawable(<a class="el" href="a00146.html" title="Base class for visible components.">Drawable</a>@)</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -4857,12 +4988,14 @@ Classes</h1>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -4919,7 +5052,9 @@ Classes</h1>
 <p>Methods:</p>
 <ul>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool Load(VectorBuffer&amp;)</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 </ul>
 <p>Properties:</p>
@@ -4946,6 +5081,7 @@ Classes</h1>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool IsInView(<a class="el" href="a00088.html" title="Camera component.">Camera</a>@) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool Load(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
@@ -4953,6 +5089,7 @@ Classes</h1>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool Save(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@)</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
@@ -5051,12 +5188,14 @@ Classes</h1>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool IsInView(<a class="el" href="a00088.html" title="Camera component.">Camera</a>@) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -5151,6 +5290,7 @@ Classes</h1>
 <li><a class="el" href="a00296.html" title="Physics rigid body component.">RigidBody</a>@[]@ GetRigidBodies(const <a class="el" href="a00084.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a>&amp;, uint = 0xffff)</li>
 <li><a class="el" href="a00296.html" title="Physics rigid body component.">RigidBody</a>@[]@ GetRigidBodies(const <a class="el" href="a00333.html" title="Sphere in three-dimensional space.">Sphere</a>&amp;, uint = 0xffff)</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li><a class="el" href="a00264.html" title="Physics raycast hit.">PhysicsRaycastResult</a>[]@ Raycast(const <a class="el" href="a00277.html" title="Infinite straight line in three-dimensional space.">Ray</a>&amp;, float = M_INFINITY, uint = 0xffff)</li>
@@ -5160,6 +5300,7 @@ Classes</h1>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -5211,6 +5352,7 @@ Classes</h1>
 <li><a class="el" href="a00297.html" title="2D rigid body component.">RigidBody2D</a>@ GetRigidBody(const <a class="el" href="a00376.html" title="Two-dimensional vector.">Vector2</a>&amp;, uint = 0xffff)</li>
 <li><a class="el" href="a00297.html" title="2D rigid body component.">RigidBody2D</a>@ GetRigidBody(int, int, uint = 0xffff, <a class="el" href="a00088.html" title="Camera component.">Camera</a>@ = 0)</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li><a class="el" href="a00265.html" title="2D Physics raycast hit.">PhysicsRaycastResult2D</a>[]@ Raycast(const <a class="el" href="a00376.html" title="Two-dimensional vector.">Vector2</a>&amp;, const <a class="el" href="a00376.html" title="Two-dimensional vector.">Vector2</a>&amp;, uint = 0xffff)</li>
@@ -5219,6 +5361,7 @@ Classes</h1>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -5535,7 +5678,9 @@ Classes</h1>
 <p>Methods:</p>
 <ul>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool Load(VectorBuffer&amp;)</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 </ul>
 <p>Properties:</p>
@@ -5630,6 +5775,7 @@ Classes</h1>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li><a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> GetVelocityAtPoint(const Vector3&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void ReAddBodyToWorld()</li>
@@ -5638,6 +5784,7 @@ Classes</h1>
 <li>void ResetForces()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -5711,12 +5858,14 @@ Classes</h1>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -5791,13 +5940,17 @@ Classes</h1>
 <li>ScriptObject@ GetScriptObject(const String&amp;) const</li>
 <li>bool HasComponent(const String&amp;) const</li>
 <li><a class="el" href="a00236.html" title="Scene node that may contain components and child nodes.">Node</a>@ Instantiate(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, const <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="a00274.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp;, CreateMode = REPLICATED)</li>
+<li><a class="el" href="a00236.html" title="Scene node that may contain components and child nodes.">Node</a>@ Instantiate(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, const <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="a00274.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp;, CreateMode = REPLICATED)</li>
 <li><a class="el" href="a00236.html" title="Scene node that may contain components and child nodes.">Node</a>@ InstantiateXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, const <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="a00274.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp;, CreateMode = REPLICATED)</li>
+<li><a class="el" href="a00236.html" title="Scene node that may contain components and child nodes.">Node</a>@ InstantiateXML(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, const <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="a00274.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp;, CreateMode = REPLICATED)</li>
 <li><a class="el" href="a00236.html" title="Scene node that may contain components and child nodes.">Node</a>@ InstantiateXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, const <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="a00274.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp;, CreateMode = REPLICATED)</li>
 <li><a class="el" href="a00236.html" title="Scene node that may contain components and child nodes.">Node</a>@ InstantiateXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, const <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="a00274.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp;, CreateMode = REPLICATED)</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadAsync(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
 <li>bool LoadAsyncXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
 <li>bool LoadXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool LoadXML(VectorBuffer&amp;)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li><a class="el" href="a00376.html" title="Two-dimensional vector.">Vector2</a> LocalToWorld(const Vector2&amp;) const</li>
 <li><a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> LocalToWorld(const Vector3&amp;) const</li>
@@ -5822,7 +5975,9 @@ Classes</h1>
 <li>void RotateAround(const <a class="el" href="a00376.html" title="Two-dimensional vector.">Vector2</a>&amp;, float, TransformSpace = TS_LOCAL)</li>
 <li>void RotateAround(const <a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="a00274.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp;, TransformSpace = TS_LOCAL)</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool SaveXML(VectorBuffer&amp;)</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void Scale(const Vector2&amp;)</li>
 <li>void Scale(const Vector3&amp;)</li>
@@ -5944,7 +6099,9 @@ Classes</h1>
 <li>void DelayedExecute(float, bool, const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, const <a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a>[]@)</li>
 <li>bool Execute(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, const <a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a>[]@)</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool Load(VectorBuffer&amp;)</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 </ul>
 <p>Properties:</p>
@@ -5977,12 +6134,14 @@ Classes</h1>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -6040,9 +6199,11 @@ Classes</h1>
 <li>bool IsInside(IntVector2, bool)</li>
 <li>bool IsInsideCombined(IntVector2, bool)</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadChildXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null)</li>
 <li>bool LoadChildXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null, bool = false)</li>
 <li>bool LoadXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool LoadXML(VectorBuffer&amp;)</li>
 <li>bool LoadXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
@@ -6054,7 +6215,9 @@ Classes</h1>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool SaveXML(VectorBuffer&amp;)</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li><a class="el" href="a00190.html" title="Two-dimensional vector with integer values.">IntVector2</a> ScreenToElement(const IntVector2&amp;)</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
@@ -6186,9 +6349,11 @@ Classes</h1>
 <li>bool IsInside(IntVector2, bool)</li>
 <li>bool IsInsideCombined(IntVector2, bool)</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadChildXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null)</li>
 <li>bool LoadChildXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null, bool = false)</li>
 <li>bool LoadXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool LoadXML(VectorBuffer&amp;)</li>
 <li>bool LoadXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
@@ -6200,7 +6365,9 @@ Classes</h1>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool SaveXML(VectorBuffer&amp;)</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li><a class="el" href="a00190.html" title="Two-dimensional vector with integer values.">IntVector2</a> ScreenToElement(const IntVector2&amp;)</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
@@ -6313,11 +6480,13 @@ Classes</h1>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttribute(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -6405,12 +6574,14 @@ Classes</h1>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool IsInView(<a class="el" href="a00088.html" title="Camera component.">Camera</a>@) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -6483,9 +6654,11 @@ Classes</h1>
 <li>bool IsInside(IntVector2, bool)</li>
 <li>bool IsInsideCombined(IntVector2, bool)</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadChildXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null)</li>
 <li>bool LoadChildXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null, bool = false)</li>
 <li>bool LoadXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool LoadXML(VectorBuffer&amp;)</li>
 <li>bool LoadXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
@@ -6497,7 +6670,9 @@ Classes</h1>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool SaveXML(VectorBuffer&amp;)</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li><a class="el" href="a00190.html" title="Two-dimensional vector with integer values.">IntVector2</a> ScreenToElement(const IntVector2&amp;)</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
@@ -6618,12 +6793,14 @@ Classes</h1>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -6661,7 +6838,9 @@ Classes</h1>
 <p>Methods:</p>
 <ul>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool Load(VectorBuffer&amp;)</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 </ul>
 <p>Properties:</p>
@@ -6694,12 +6873,14 @@ Classes</h1>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -6738,6 +6919,7 @@ Classes</h1>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Play(<a class="el" href="a00327.html" title="Sound resource.">Sound</a>@)</li>
@@ -6748,6 +6930,7 @@ Classes</h1>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -6796,6 +6979,7 @@ Classes</h1>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Play(<a class="el" href="a00327.html" title="Sound resource.">Sound</a>@)</li>
@@ -6806,6 +6990,7 @@ Classes</h1>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>void SetAngleAttenuation(float, float)</li>
@@ -6904,6 +7089,7 @@ Classes</h1>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li><a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> GetPoint(float) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Move(float)</li>
@@ -6913,6 +7099,7 @@ Classes</h1>
 <li>void Reset()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -6965,9 +7152,11 @@ Classes</h1>
 <li>uint GetNumChildren(bool) const</li>
 <li>void InsertChild(uint, <a class="el" href="a00365.html" title="Base class for UI elements.">UIElement</a>@)</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadChildXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null)</li>
 <li>bool LoadChildXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null, bool = false)</li>
 <li>bool LoadXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool LoadXML(VectorBuffer&amp;)</li>
 <li>bool LoadXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
@@ -6979,7 +7168,9 @@ Classes</h1>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool SaveXML(VectorBuffer&amp;)</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>void SetAlignment(HorizontalAlignment, VerticalAlignment)</li>
@@ -7057,7 +7248,9 @@ Classes</h1>
 <p>Methods:</p>
 <ul>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool Load(VectorBuffer&amp;)</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 </ul>
 <p>Properties:</p>
@@ -7081,7 +7274,9 @@ Classes</h1>
 <li>void DefineSprite(const String&amp;, const IntRect&amp;, const Vector2&amp;)</li>
 <li><a class="el" href="a00338.html" title="Sprite.">Sprite2D</a>@ GetSprite(const String&amp;)</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool Load(VectorBuffer&amp;)</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>void UpdateSprite(const String&amp;, const IntRect&amp;, const Vector2&amp;)</li>
 </ul>
@@ -7113,12 +7308,14 @@ Classes</h1>
 <li>bool IsInside(const Vector3&amp;) const</li>
 <li>bool IsInsideLocal(const Vector3&amp;) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -7179,6 +7376,7 @@ Classes</h1>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool IsInView(<a class="el" href="a00088.html" title="Camera component.">Camera</a>@) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
@@ -7187,6 +7385,7 @@ Classes</h1>
 <li>void RemoveInstanceNode(<a class="el" href="a00236.html" title="Scene node that may contain components and child nodes.">Node</a>@)</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -7248,12 +7447,14 @@ Classes</h1>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool IsInView(<a class="el" href="a00088.html" title="Camera component.">Camera</a>@) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -7374,8 +7575,10 @@ Classes</h1>
 <li><a class="el" href="a00262.html" title="Material rendering pass, which defines shaders and render state.">Pass</a>@ CreatePass(StringHash)</li>
 <li>bool HasPass(StringHash) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool Load(VectorBuffer&amp;)</li>
 <li>void RemovePass(StringHash)</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 </ul>
 <p>Properties:</p>
@@ -7413,12 +7616,14 @@ Classes</h1>
 <li><a class="el" href="a00377.html" title="Three-dimensional vector.">Vector3</a> GetNormal(const Vector3&amp;) const</li>
 <li><a class="el" href="a00349.html" title="Individually rendered part of a heightmap terrain.">TerrainPatch</a>@ GetPatch(int, int) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -7477,12 +7682,14 @@ Classes</h1>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool IsInView(<a class="el" href="a00088.html" title="Camera component.">Camera</a>@) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
@@ -7550,9 +7757,11 @@ Classes</h1>
 <li>bool IsInside(IntVector2, bool)</li>
 <li>bool IsInsideCombined(IntVector2, bool)</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadChildXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null)</li>
 <li>bool LoadChildXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null, bool = false)</li>
 <li>bool LoadXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool LoadXML(VectorBuffer&amp;)</li>
 <li>bool LoadXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
@@ -7564,7 +7773,9 @@ Classes</h1>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool SaveXML(VectorBuffer&amp;)</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li><a class="el" href="a00190.html" title="Two-dimensional vector with integer values.">IntVector2</a> ScreenToElement(const IntVector2&amp;)</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
@@ -7693,12 +7904,14 @@ Classes</h1>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool IsInView(<a class="el" href="a00088.html" title="Camera component.">Camera</a>@) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>void SetAlignment(HorizontalAlignment, VerticalAlignment)</li>
@@ -7771,7 +7984,9 @@ Classes</h1>
 <ul>
 <li>void ClearDataLost()</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool Load(VectorBuffer&amp;)</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>void SetNumLevels(uint)</li>
 </ul>
@@ -7808,7 +8023,9 @@ Classes</h1>
 <li>void ClearDataLost()</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
 <li>bool Load(<a class="el" href="a00185.html" title="Image resource.">Image</a>@, bool = false)</li>
+<li>bool Load(VectorBuffer&amp;)</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>void SetNumLevels(uint)</li>
 <li>bool SetSize(int, int, uint, TextureUsage = TEXTURE_STATIC)</li>
@@ -7847,7 +8064,9 @@ Classes</h1>
 <li>void ClearDataLost()</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
 <li>bool Load(<a class="el" href="a00185.html" title="Image resource.">Image</a>@, bool = false)</li>
+<li>bool Load(VectorBuffer&amp;)</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>void SetNumLevels(uint)</li>
 <li>bool SetSize(int, int, uint, TextureUsage = TEXTURE_STATIC)</li>
@@ -7886,7 +8105,9 @@ Classes</h1>
 <li>void ClearDataLost()</li>
 <li>bool Load(CubeMapFace, <a class="el" href="a00185.html" title="Image resource.">Image</a>@, bool = false)</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool Load(VectorBuffer&amp;)</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>void SetNumLevels(uint)</li>
 <li>bool SetSize(int, uint, TextureUsage = TEXTURE_STATIC)</li>
@@ -7975,9 +8196,11 @@ Classes</h1>
 <li>bool IsInside(IntVector2, bool)</li>
 <li>bool IsInsideCombined(IntVector2, bool)</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadChildXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null)</li>
 <li>bool LoadChildXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null, bool = false)</li>
 <li>bool LoadXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool LoadXML(VectorBuffer&amp;)</li>
 <li>bool LoadXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
@@ -7989,7 +8212,9 @@ Classes</h1>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool SaveXML(VectorBuffer&amp;)</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li><a class="el" href="a00190.html" title="Two-dimensional vector with integer values.">IntVector2</a> ScreenToElement(const IntVector2&amp;)</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
@@ -8106,9 +8331,12 @@ Classes</h1>
 <li>bool HasModalElement() const</li>
 <li><a class="el" href="a00365.html" title="Base class for UI elements.">UIElement</a>@ LoadLayout(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
 <li><a class="el" href="a00365.html" title="Base class for UI elements.">UIElement</a>@ LoadLayout(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@)</li>
+<li><a class="el" href="a00365.html" title="Base class for UI elements.">UIElement</a>@ LoadLayout(VectorBuffer&amp;)</li>
+<li><a class="el" href="a00365.html" title="Base class for UI elements.">UIElement</a>@ LoadLayout(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@)</li>
 <li><a class="el" href="a00365.html" title="Base class for UI elements.">UIElement</a>@ LoadLayout(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@)</li>
 <li><a class="el" href="a00365.html" title="Base class for UI elements.">UIElement</a>@ LoadLayout(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@)</li>
 <li>bool SaveLayout(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, <a class="el" href="a00365.html" title="Base class for UI elements.">UIElement</a>@)</li>
+<li>bool SaveLayout(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, <a class="el" href="a00365.html" title="Base class for UI elements.">UIElement</a>@)</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>void SetFocusElement(<a class="el" href="a00365.html" title="Base class for UI elements.">UIElement</a>@, bool = false)</li>
 </ul>
@@ -8164,9 +8392,11 @@ Classes</h1>
 <li>bool IsInside(IntVector2, bool)</li>
 <li>bool IsInsideCombined(IntVector2, bool)</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadChildXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null)</li>
 <li>bool LoadChildXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null, bool = false)</li>
 <li>bool LoadXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool LoadXML(VectorBuffer&amp;)</li>
 <li>bool LoadXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
@@ -8178,7 +8408,9 @@ Classes</h1>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool SaveXML(VectorBuffer&amp;)</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li><a class="el" href="a00190.html" title="Two-dimensional vector with integer values.">IntVector2</a> ScreenToElement(const IntVector2&amp;)</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
@@ -8278,7 +8510,9 @@ Classes</h1>
 <p>Methods:</p>
 <ul>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool Load(VectorBuffer&amp;)</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>void SetEventFrame(float, const String&amp;, const Variant&amp;)</li>
 <li>void SetKeyFrame(float, const Variant&amp;)</li>
@@ -8514,9 +8748,11 @@ Classes</h1>
 <li>bool IsInside(IntVector2, bool)</li>
 <li>bool IsInsideCombined(IntVector2, bool)</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadChildXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null)</li>
 <li>bool LoadChildXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null, bool = false)</li>
 <li>bool LoadXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool LoadXML(VectorBuffer&amp;)</li>
 <li>bool LoadXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
@@ -8529,7 +8765,9 @@ Classes</h1>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool SaveXML(VectorBuffer&amp;)</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li><a class="el" href="a00190.html" title="Two-dimensional vector with integer values.">IntVector2</a> ScreenToElement(const IntVector2&amp;)</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
@@ -8697,9 +8935,11 @@ Classes</h1>
 <li>bool IsInside(IntVector2, bool)</li>
 <li>bool IsInsideCombined(IntVector2, bool)</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadChildXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null)</li>
 <li>bool LoadChildXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@ = null, bool = false)</li>
 <li>bool LoadXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool LoadXML(VectorBuffer&amp;)</li>
 <li>bool LoadXML(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, <a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
@@ -8711,7 +8951,9 @@ Classes</h1>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool SaveXML(VectorBuffer&amp;)</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li><a class="el" href="a00190.html" title="Two-dimensional vector with integer values.">IntVector2</a> ScreenToElement(const IntVector2&amp;)</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
@@ -8894,11 +9136,14 @@ Classes</h1>
 <p>Methods:</p>
 <ul>
 <li><a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a> CreateRoot(const String&amp;)</li>
+<li>bool FromString(const String&amp;)</li>
 <li><a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a> GetRoot(const <a class="el" href="a00344.html" title="String class.">String</a>&amp; = <a class="el" href="a00344.html" title="String class.">String</a> ( ))</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool Load(VectorBuffer&amp;)</li>
 <li>void Patch(XMLElement)</li>
 <li>void Patch(<a class="el" href="a00394.html" title="XML document resource.">XMLFile</a>@)</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 </ul>
 <p>Properties:</p>
@@ -8952,12 +9197,14 @@ Classes</h1>
 <li><a class="el" href="a00373.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li>bool IsInView(<a class="el" href="a00088.html" title="Camera component.">Camera</a>@) const</li>
 <li>bool Load(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="a00380.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="a00393.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="a00154.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00344.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
