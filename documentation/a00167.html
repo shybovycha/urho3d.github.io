@@ -20,124 +20,51 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00167.html">Frustum</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00167.html">FrameInfo</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01361.html">List of all members</a>  </div>
+<a href="a01144.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::Frustum Class Reference</div>  </div>
+<div class="title">Urho3D::FrameInfo Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Convex constructed of 6 planes.  
+<p>Rendering frame update parameters.  
  <a href="a00167.html#details">More...</a></p>
 
-<p><code>#include &lt;Frustum.h&gt;</code></p>
+<p><code>#include &lt;Drawable.h&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for Urho3D::Frustum:</div>
+Collaboration diagram for Urho3D::FrameInfo:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a01362.svg" width="276" height="358"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01145.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:ad56dc96d7233aa8dbbe53c1da415321a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad56dc96d7233aa8dbbe53c1da415321a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#ad56dc96d7233aa8dbbe53c1da415321a">Frustum</a> ()</td></tr>
-<tr class="memdesc:ad56dc96d7233aa8dbbe53c1da415321a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a degenerate frustum with all points at origin. <br/></td></tr>
-<tr class="separator:ad56dc96d7233aa8dbbe53c1da415321a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11cda273088aa1005c01452aa37f3988"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11cda273088aa1005c01452aa37f3988"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#a11cda273088aa1005c01452aa37f3988">Frustum</a> (const <a class="el" href="a00167.html">Frustum</a> &amp;frustum)</td></tr>
-<tr class="memdesc:a11cda273088aa1005c01452aa37f3988"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy-construct from another frustum. <br/></td></tr>
-<tr class="separator:a11cda273088aa1005c01452aa37f3988"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6adc3e6a1411604ffe26996547e773a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6adc3e6a1411604ffe26996547e773a6"></a>
-<a class="el" href="a00167.html">Frustum</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#a6adc3e6a1411604ffe26996547e773a6">operator=</a> (const <a class="el" href="a00167.html">Frustum</a> &amp;rhs)</td></tr>
-<tr class="memdesc:a6adc3e6a1411604ffe26996547e773a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign from another frustum. <br/></td></tr>
-<tr class="separator:a6adc3e6a1411604ffe26996547e773a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3bb6685c4a3500651952fe03e6442ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3bb6685c4a3500651952fe03e6442ae"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#ae3bb6685c4a3500651952fe03e6442ae">Define</a> (float fov, float aspectRatio, float zoom, float nearZ, float farZ, const <a class="el" href="a00219.html">Matrix3x4</a> &amp;transform=<a class="el" href="a00219.html#a65b89ad9e47464af65f0aab7fe97925e">Matrix3x4::IDENTITY</a>)</td></tr>
-<tr class="memdesc:ae3bb6685c4a3500651952fe03e6442ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define with projection parameters and a transform matrix. <br/></td></tr>
-<tr class="separator:ae3bb6685c4a3500651952fe03e6442ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fcfe23df000e5b21b13388bf73c6317"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4fcfe23df000e5b21b13388bf73c6317"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#a4fcfe23df000e5b21b13388bf73c6317">Define</a> (const <a class="el" href="a00377.html">Vector3</a> &amp;near, const <a class="el" href="a00377.html">Vector3</a> &amp;far, const <a class="el" href="a00219.html">Matrix3x4</a> &amp;transform=<a class="el" href="a00219.html#a65b89ad9e47464af65f0aab7fe97925e">Matrix3x4::IDENTITY</a>)</td></tr>
-<tr class="memdesc:a4fcfe23df000e5b21b13388bf73c6317"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define with near and far dimension vectors and a transform matrix. <br/></td></tr>
-<tr class="separator:a4fcfe23df000e5b21b13388bf73c6317"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa154760635981c73c7675510183a1ad1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa154760635981c73c7675510183a1ad1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#aa154760635981c73c7675510183a1ad1">Define</a> (const <a class="el" href="a00084.html">BoundingBox</a> &amp;box, const <a class="el" href="a00219.html">Matrix3x4</a> &amp;transform=<a class="el" href="a00219.html#a65b89ad9e47464af65f0aab7fe97925e">Matrix3x4::IDENTITY</a>)</td></tr>
-<tr class="memdesc:aa154760635981c73c7675510183a1ad1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define with a bounding box and a transform matrix. <br/></td></tr>
-<tr class="separator:aa154760635981c73c7675510183a1ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca09b9b4205607926beb618374834762"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca09b9b4205607926beb618374834762"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#aca09b9b4205607926beb618374834762">DefineOrtho</a> (float orthoSize, float aspectRatio, float zoom, float nearZ, float farZ, const <a class="el" href="a00219.html">Matrix3x4</a> &amp;transform=<a class="el" href="a00219.html#a65b89ad9e47464af65f0aab7fe97925e">Matrix3x4::IDENTITY</a>)</td></tr>
-<tr class="memdesc:aca09b9b4205607926beb618374834762"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define with orthographic projection parameters and a transform matrix. <br/></td></tr>
-<tr class="separator:aca09b9b4205607926beb618374834762"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dead6563421f64027342b6467424ff5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9dead6563421f64027342b6467424ff5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#a9dead6563421f64027342b6467424ff5">Transform</a> (const <a class="el" href="a00218.html">Matrix3</a> &amp;transform)</td></tr>
-<tr class="memdesc:a9dead6563421f64027342b6467424ff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform by a 3x3 matrix. <br/></td></tr>
-<tr class="separator:a9dead6563421f64027342b6467424ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae01df4b2f60fae6e716ebf5df506426c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae01df4b2f60fae6e716ebf5df506426c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#ae01df4b2f60fae6e716ebf5df506426c">Transform</a> (const <a class="el" href="a00219.html">Matrix3x4</a> &amp;transform)</td></tr>
-<tr class="memdesc:ae01df4b2f60fae6e716ebf5df506426c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform by a 3x4 matrix. <br/></td></tr>
-<tr class="separator:ae01df4b2f60fae6e716ebf5df506426c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab17e3ded4330a24676ab8ffcfd42c3b7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab17e3ded4330a24676ab8ffcfd42c3b7"></a>
-Intersection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#ab17e3ded4330a24676ab8ffcfd42c3b7">IsInside</a> (const <a class="el" href="a00377.html">Vector3</a> &amp;point) const </td></tr>
-<tr class="memdesc:ab17e3ded4330a24676ab8ffcfd42c3b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if a point is inside or outside. <br/></td></tr>
-<tr class="separator:ab17e3ded4330a24676ab8ffcfd42c3b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a301a50ae5506bc672e396f4cefbefd79"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a301a50ae5506bc672e396f4cefbefd79"></a>
-Intersection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#a301a50ae5506bc672e396f4cefbefd79">IsInside</a> (const <a class="el" href="a00333.html">Sphere</a> &amp;sphere) const </td></tr>
-<tr class="memdesc:a301a50ae5506bc672e396f4cefbefd79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if a sphere is inside, outside or intersects. <br/></td></tr>
-<tr class="separator:a301a50ae5506bc672e396f4cefbefd79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48df64ed4b98657647b45a96e293cd97"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a48df64ed4b98657647b45a96e293cd97"></a>
-Intersection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#a48df64ed4b98657647b45a96e293cd97">IsInsideFast</a> (const <a class="el" href="a00333.html">Sphere</a> &amp;sphere) const </td></tr>
-<tr class="memdesc:a48df64ed4b98657647b45a96e293cd97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if a sphere if (partially) inside or outside. <br/></td></tr>
-<tr class="separator:a48df64ed4b98657647b45a96e293cd97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae756b6d93575d58546ec6d3baf2590ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae756b6d93575d58546ec6d3baf2590ba"></a>
-Intersection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#ae756b6d93575d58546ec6d3baf2590ba">IsInside</a> (const <a class="el" href="a00084.html">BoundingBox</a> &amp;box) const </td></tr>
-<tr class="memdesc:ae756b6d93575d58546ec6d3baf2590ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if a bounding box is inside, outside or intersects. <br/></td></tr>
-<tr class="separator:ae756b6d93575d58546ec6d3baf2590ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2339261ab11f940f481ac3cf95915867"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2339261ab11f940f481ac3cf95915867"></a>
-Intersection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#a2339261ab11f940f481ac3cf95915867">IsInsideFast</a> (const <a class="el" href="a00084.html">BoundingBox</a> &amp;box) const </td></tr>
-<tr class="memdesc:a2339261ab11f940f481ac3cf95915867"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if a bounding box is (partially) inside or outside. <br/></td></tr>
-<tr class="separator:a2339261ab11f940f481ac3cf95915867"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83ec1c0d1884707c7894a5c99851eb69"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a83ec1c0d1884707c7894a5c99851eb69"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#a83ec1c0d1884707c7894a5c99851eb69">Distance</a> (const <a class="el" href="a00377.html">Vector3</a> &amp;point) const </td></tr>
-<tr class="memdesc:a83ec1c0d1884707c7894a5c99851eb69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return distance of a point to the frustum, or 0 if inside. <br/></td></tr>
-<tr class="separator:a83ec1c0d1884707c7894a5c99851eb69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d92b5a77b61ecfe80b3e1294656c6ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d92b5a77b61ecfe80b3e1294656c6ad"></a>
-<a class="el" href="a00167.html">Frustum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#a6d92b5a77b61ecfe80b3e1294656c6ad">Transformed</a> (const <a class="el" href="a00218.html">Matrix3</a> &amp;transform) const </td></tr>
-<tr class="memdesc:a6d92b5a77b61ecfe80b3e1294656c6ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return transformed by a 3x3 matrix. <br/></td></tr>
-<tr class="separator:a6d92b5a77b61ecfe80b3e1294656c6ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a231c45c6c6c814fff5b7ffae06c47cfb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a231c45c6c6c814fff5b7ffae06c47cfb"></a>
-<a class="el" href="a00167.html">Frustum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#a231c45c6c6c814fff5b7ffae06c47cfb">Transformed</a> (const <a class="el" href="a00219.html">Matrix3x4</a> &amp;transform) const </td></tr>
-<tr class="memdesc:a231c45c6c6c814fff5b7ffae06c47cfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return transformed by a 3x4 matrix. <br/></td></tr>
-<tr class="separator:a231c45c6c6c814fff5b7ffae06c47cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51deaeeee32310d4bec6d95ab59111be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a51deaeeee32310d4bec6d95ab59111be"></a>
-<a class="el" href="a00280.html">Rect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#a51deaeeee32310d4bec6d95ab59111be">Projected</a> (const <a class="el" href="a00220.html">Matrix4</a> &amp;transform) const </td></tr>
-<tr class="memdesc:a51deaeeee32310d4bec6d95ab59111be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return projected by a 4x4 projection matrix. <br/></td></tr>
-<tr class="separator:a51deaeeee32310d4bec6d95ab59111be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07e681ce8be0bf8746b0e2630bf38582"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a07e681ce8be0bf8746b0e2630bf38582"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#a07e681ce8be0bf8746b0e2630bf38582">UpdatePlanes</a> ()</td></tr>
-<tr class="memdesc:a07e681ce8be0bf8746b0e2630bf38582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the planes. Called internally. <br/></td></tr>
-<tr class="separator:a07e681ce8be0bf8746b0e2630bf38582"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ab58d2be5045f5ebaed8ee3eb8264bb7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab58d2be5045f5ebaed8ee3eb8264bb7d"></a>
-<a class="el" href="a00268.html">Plane</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#ab58d2be5045f5ebaed8ee3eb8264bb7d">planes_</a> [NUM_FRUSTUM_PLANES]</td></tr>
-<tr class="memdesc:ab58d2be5045f5ebaed8ee3eb8264bb7d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00167.html" title="Convex constructed of 6 planes.">Frustum</a> planes. <br/></td></tr>
-<tr class="separator:ab58d2be5045f5ebaed8ee3eb8264bb7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1aec29ebcd80924df428000f1fde0e3f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1aec29ebcd80924df428000f1fde0e3f"></a>
-<a class="el" href="a00377.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#a1aec29ebcd80924df428000f1fde0e3f">vertices_</a> [NUM_FRUSTUM_VERTICES]</td></tr>
-<tr class="memdesc:a1aec29ebcd80924df428000f1fde0e3f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00167.html" title="Convex constructed of 6 planes.">Frustum</a> vertices. <br/></td></tr>
-<tr class="separator:a1aec29ebcd80924df428000f1fde0e3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcd8002822f1cb69e41a72eb59dae5c5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afcd8002822f1cb69e41a72eb59dae5c5"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#afcd8002822f1cb69e41a72eb59dae5c5">frameNumber_</a></td></tr>
+<tr class="memdesc:afcd8002822f1cb69e41a72eb59dae5c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frame number. <br/></td></tr>
+<tr class="separator:afcd8002822f1cb69e41a72eb59dae5c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9212e7671479eb7f97e69358bb7a3db0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9212e7671479eb7f97e69358bb7a3db0"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#a9212e7671479eb7f97e69358bb7a3db0">timeStep_</a></td></tr>
+<tr class="memdesc:a9212e7671479eb7f97e69358bb7a3db0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00361.html" title="Time and frame counter subsystem.">Time</a> elapsed since last frame. <br/></td></tr>
+<tr class="separator:a9212e7671479eb7f97e69358bb7a3db0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66e844e35fa048ab078722a35a0166f6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66e844e35fa048ab078722a35a0166f6"></a>
+<a class="el" href="a00191.html">IntVector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#a66e844e35fa048ab078722a35a0166f6">viewSize_</a></td></tr>
+<tr class="memdesc:a66e844e35fa048ab078722a35a0166f6"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00393.html" title="Viewport definition either for a render surface or the backbuffer.">Viewport</a> size. <br/></td></tr>
+<tr class="separator:a66e844e35fa048ab078722a35a0166f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43162edfd843638976fb85fef034d021"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43162edfd843638976fb85fef034d021"></a>
+<a class="el" href="a00089.html">Camera</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00167.html#a43162edfd843638976fb85fef034d021">camera_</a></td></tr>
+<tr class="memdesc:a43162edfd843638976fb85fef034d021"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00089.html" title="Camera component.">Camera</a> being used. <br/></td></tr>
+<tr class="separator:a43162edfd843638976fb85fef034d021"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Convex constructed of 6 planes. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Math/Frustum.h</li>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Math/Frustum.cpp</li>
+<div class="textblock"><p>Rendering frame update parameters. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/Drawable.h</li>
 </ul>
 </div><!-- contents -->

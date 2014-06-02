@@ -20,84 +20,136 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00270.html">PointOctreeQuery</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00270.html">Plane</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01184.html">List of all members</a>  </div>
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="a01378.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::PointOctreeQuery Class Reference</div>  </div>
+<div class="title">Urho3D::Plane Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Point octree query.  
+<p>Surface in three-dimensional space.  
  <a href="a00270.html#details">More...</a></p>
 
-<p><code>#include &lt;OctreeQuery.h&gt;</code></p>
+<p><code>#include &lt;Plane.h&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Urho3D::PointOctreeQuery:</div>
+Collaboration diagram for Urho3D::Plane:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a01185.svg" width="203" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for Urho3D::PointOctreeQuery:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a01186.svg" width="412" height="440"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a01379.svg" width="224" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a64d25a35849bb5fbde7b395f5b6134bf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a64d25a35849bb5fbde7b395f5b6134bf"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00270.html#a64d25a35849bb5fbde7b395f5b6134bf">PointOctreeQuery</a> (<a class="el" href="a00269.html">PODVector</a>&lt; <a class="el" href="a00146.html">Drawable</a> * &gt; &amp;result, const <a class="el" href="a00377.html">Vector3</a> &amp;point, unsigned char drawableFlags=DRAWABLE_ANY, unsigned viewMask=DEFAULT_VIEWMASK)</td></tr>
-<tr class="memdesc:a64d25a35849bb5fbde7b395f5b6134bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with point and query parameters. <br/></td></tr>
-<tr class="separator:a64d25a35849bb5fbde7b395f5b6134bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e2f980cf4389ebce09bb11975212654"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e2f980cf4389ebce09bb11975212654"></a>
-virtual Intersection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00270.html#a9e2f980cf4389ebce09bb11975212654">TestOctant</a> (const <a class="el" href="a00084.html">BoundingBox</a> &amp;box, bool inside)</td></tr>
-<tr class="memdesc:a9e2f980cf4389ebce09bb11975212654"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intersection test for an octant. <br/></td></tr>
-<tr class="separator:a9e2f980cf4389ebce09bb11975212654"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a459ca545fae688f439e680dfa93171"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a459ca545fae688f439e680dfa93171"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00270.html#a2a459ca545fae688f439e680dfa93171">TestDrawables</a> (<a class="el" href="a00146.html">Drawable</a> **start, <a class="el" href="a00146.html">Drawable</a> **end, bool inside)</td></tr>
-<tr class="memdesc:a2a459ca545fae688f439e680dfa93171"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intersection test for drawables. <br/></td></tr>
-<tr class="separator:a2a459ca545fae688f439e680dfa93171"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_a00248"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00248')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="a00248.html">Urho3D::OctreeQuery</a></td></tr>
-<tr class="memitem:a263ee40b401403b8a2ab69cb0526dbb4 inherit pub_methods_a00248"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a263ee40b401403b8a2ab69cb0526dbb4"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00248.html#a263ee40b401403b8a2ab69cb0526dbb4">OctreeQuery</a> (<a class="el" href="a00269.html">PODVector</a>&lt; <a class="el" href="a00146.html">Drawable</a> * &gt; &amp;result, unsigned char drawableFlags, unsigned viewMask)</td></tr>
-<tr class="memdesc:a263ee40b401403b8a2ab69cb0526dbb4 inherit pub_methods_a00248"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with query parameters. <br/></td></tr>
-<tr class="separator:a263ee40b401403b8a2ab69cb0526dbb4 inherit pub_methods_a00248"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0862c34a9759d51f96cc0d715e5815e inherit pub_methods_a00248"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab0862c34a9759d51f96cc0d715e5815e"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00248.html#ab0862c34a9759d51f96cc0d715e5815e">~OctreeQuery</a> ()</td></tr>
-<tr class="memdesc:ab0862c34a9759d51f96cc0d715e5815e inherit pub_methods_a00248"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
-<tr class="separator:ab0862c34a9759d51f96cc0d715e5815e inherit pub_methods_a00248"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42b4409b9fa7346e2dbd863afdf5a55a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42b4409b9fa7346e2dbd863afdf5a55a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00270.html#a42b4409b9fa7346e2dbd863afdf5a55a">Plane</a> ()</td></tr>
+<tr class="memdesc:a42b4409b9fa7346e2dbd863afdf5a55a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a degenerate plane with zero normal and parameter. <br/></td></tr>
+<tr class="separator:a42b4409b9fa7346e2dbd863afdf5a55a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b90a082228acde2335c2f42dee83cb7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b90a082228acde2335c2f42dee83cb7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00270.html#a4b90a082228acde2335c2f42dee83cb7">Plane</a> (const <a class="el" href="a00270.html">Plane</a> &amp;plane)</td></tr>
+<tr class="memdesc:a4b90a082228acde2335c2f42dee83cb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy-construct from another plane. <br/></td></tr>
+<tr class="separator:a4b90a082228acde2335c2f42dee83cb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad589c09c6d20eb31936a6d43950f7ead"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad589c09c6d20eb31936a6d43950f7ead"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00270.html#ad589c09c6d20eb31936a6d43950f7ead">Plane</a> (const <a class="el" href="a00384.html">Vector3</a> &amp;v0, const <a class="el" href="a00384.html">Vector3</a> &amp;v1, const <a class="el" href="a00384.html">Vector3</a> &amp;v2)</td></tr>
+<tr class="memdesc:ad589c09c6d20eb31936a6d43950f7ead"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from 3 vertices. <br/></td></tr>
+<tr class="separator:ad589c09c6d20eb31936a6d43950f7ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b5d090633d2289b1575cb839841a6ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b5d090633d2289b1575cb839841a6ed"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00270.html#a3b5d090633d2289b1575cb839841a6ed">Plane</a> (const <a class="el" href="a00384.html">Vector3</a> &amp;normal, const <a class="el" href="a00384.html">Vector3</a> &amp;point)</td></tr>
+<tr class="memdesc:a3b5d090633d2289b1575cb839841a6ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a normal vector and a point on the plane. <br/></td></tr>
+<tr class="separator:a3b5d090633d2289b1575cb839841a6ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae812dfcc8c99d9e9fe5dfe3f14c950d6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae812dfcc8c99d9e9fe5dfe3f14c950d6"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00270.html#ae812dfcc8c99d9e9fe5dfe3f14c950d6">Plane</a> (const <a class="el" href="a00385.html">Vector4</a> &amp;plane)</td></tr>
+<tr class="memdesc:ae812dfcc8c99d9e9fe5dfe3f14c950d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a 4-dimensional vector, where the w coordinate is the plane parameter. <br/></td></tr>
+<tr class="separator:ae812dfcc8c99d9e9fe5dfe3f14c950d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17f585cedc9d8957198ae2d8990d4029"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a17f585cedc9d8957198ae2d8990d4029"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00270.html#a17f585cedc9d8957198ae2d8990d4029">Define</a> (const <a class="el" href="a00384.html">Vector3</a> &amp;v0, const <a class="el" href="a00384.html">Vector3</a> &amp;v1, const <a class="el" href="a00384.html">Vector3</a> &amp;v2)</td></tr>
+<tr class="memdesc:a17f585cedc9d8957198ae2d8990d4029"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define from 3 vertices. <br/></td></tr>
+<tr class="separator:a17f585cedc9d8957198ae2d8990d4029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04b7ece87109cca95aa9bcaaac23b2b5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04b7ece87109cca95aa9bcaaac23b2b5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00270.html#a04b7ece87109cca95aa9bcaaac23b2b5">Define</a> (const <a class="el" href="a00384.html">Vector3</a> &amp;normal, const <a class="el" href="a00384.html">Vector3</a> &amp;point)</td></tr>
+<tr class="memdesc:a04b7ece87109cca95aa9bcaaac23b2b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define from a normal vector and a point on the plane. <br/></td></tr>
+<tr class="separator:a04b7ece87109cca95aa9bcaaac23b2b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e5a1ef3f7a13c983b64e36258ce5e24"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e5a1ef3f7a13c983b64e36258ce5e24"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00270.html#a8e5a1ef3f7a13c983b64e36258ce5e24">Define</a> (const <a class="el" href="a00385.html">Vector4</a> &amp;plane)</td></tr>
+<tr class="memdesc:a8e5a1ef3f7a13c983b64e36258ce5e24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define from a 4-dimensional vector, where the w coordinate is the plane parameter. <br/></td></tr>
+<tr class="separator:a8e5a1ef3f7a13c983b64e36258ce5e24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a761daf44d0c41f59aa2f853d7615e6ef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a761daf44d0c41f59aa2f853d7615e6ef"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00270.html#a761daf44d0c41f59aa2f853d7615e6ef">Transform</a> (const <a class="el" href="a00220.html">Matrix3</a> &amp;transform)</td></tr>
+<tr class="memdesc:a761daf44d0c41f59aa2f853d7615e6ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform with a 3x3 matrix. <br/></td></tr>
+<tr class="separator:a761daf44d0c41f59aa2f853d7615e6ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a755d98999dad8822740c040148aaae82"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a755d98999dad8822740c040148aaae82"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00270.html#a755d98999dad8822740c040148aaae82">Transform</a> (const <a class="el" href="a00221.html">Matrix3x4</a> &amp;transform)</td></tr>
+<tr class="memdesc:a755d98999dad8822740c040148aaae82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform with a 3x4 matrix. <br/></td></tr>
+<tr class="separator:a755d98999dad8822740c040148aaae82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90dc59c663add20eeef3603118962dac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a90dc59c663add20eeef3603118962dac"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00270.html#a90dc59c663add20eeef3603118962dac">Transform</a> (const <a class="el" href="a00222.html">Matrix4</a> &amp;transform)</td></tr>
+<tr class="memdesc:a90dc59c663add20eeef3603118962dac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform with a 4x4 matrix. <br/></td></tr>
+<tr class="separator:a90dc59c663add20eeef3603118962dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63ffa2cecab56dc4ead126228d8a7279"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a63ffa2cecab56dc4ead126228d8a7279"></a>
+<a class="el" href="a00384.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00270.html#a63ffa2cecab56dc4ead126228d8a7279">Project</a> (const <a class="el" href="a00384.html">Vector3</a> &amp;point) const </td></tr>
+<tr class="memdesc:a63ffa2cecab56dc4ead126228d8a7279"><td class="mdescLeft">&#160;</td><td class="mdescRight">Project a point on the plane. <br/></td></tr>
+<tr class="separator:a63ffa2cecab56dc4ead126228d8a7279"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab13cad813bb6b01a7731d1abb48f969b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab13cad813bb6b01a7731d1abb48f969b"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00270.html#ab13cad813bb6b01a7731d1abb48f969b">Distance</a> (const <a class="el" href="a00384.html">Vector3</a> &amp;point) const </td></tr>
+<tr class="memdesc:ab13cad813bb6b01a7731d1abb48f969b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return signed distance to a point. <br/></td></tr>
+<tr class="separator:ab13cad813bb6b01a7731d1abb48f969b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02b857796559a3e71b353a523caa1efd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02b857796559a3e71b353a523caa1efd"></a>
+<a class="el" href="a00384.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00270.html#a02b857796559a3e71b353a523caa1efd">Reflect</a> (const <a class="el" href="a00384.html">Vector3</a> &amp;direction) const </td></tr>
+<tr class="memdesc:a02b857796559a3e71b353a523caa1efd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reflect a normalized direction vector. <br/></td></tr>
+<tr class="separator:a02b857796559a3e71b353a523caa1efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea1ba03805cc4efc20dc7e5b1029f907"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea1ba03805cc4efc20dc7e5b1029f907"></a>
+<a class="el" href="a00221.html">Matrix3x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00270.html#aea1ba03805cc4efc20dc7e5b1029f907">ReflectionMatrix</a> () const </td></tr>
+<tr class="memdesc:aea1ba03805cc4efc20dc7e5b1029f907"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a reflection matrix. <br/></td></tr>
+<tr class="separator:aea1ba03805cc4efc20dc7e5b1029f907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8a00ce4735b9e7ca07660977ca43bb8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac8a00ce4735b9e7ca07660977ca43bb8"></a>
+<a class="el" href="a00270.html">Plane</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00270.html#ac8a00ce4735b9e7ca07660977ca43bb8">Transformed</a> (const <a class="el" href="a00220.html">Matrix3</a> &amp;transform) const </td></tr>
+<tr class="memdesc:ac8a00ce4735b9e7ca07660977ca43bb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return transformed by a 3x3 matrix. <br/></td></tr>
+<tr class="separator:ac8a00ce4735b9e7ca07660977ca43bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55e9749660597a49949c453750b1d2a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a55e9749660597a49949c453750b1d2a3"></a>
+<a class="el" href="a00270.html">Plane</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00270.html#a55e9749660597a49949c453750b1d2a3">Transformed</a> (const <a class="el" href="a00221.html">Matrix3x4</a> &amp;transform) const </td></tr>
+<tr class="memdesc:a55e9749660597a49949c453750b1d2a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return transformed by a 3x4 matrix. <br/></td></tr>
+<tr class="separator:a55e9749660597a49949c453750b1d2a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5a311e1e763bc4937efb52cde9a6fd4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5a311e1e763bc4937efb52cde9a6fd4"></a>
+<a class="el" href="a00270.html">Plane</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00270.html#ad5a311e1e763bc4937efb52cde9a6fd4">Transformed</a> (const <a class="el" href="a00222.html">Matrix4</a> &amp;transform) const </td></tr>
+<tr class="memdesc:ad5a311e1e763bc4937efb52cde9a6fd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return transformed by a 4x4 matrix. <br/></td></tr>
+<tr class="separator:ad5a311e1e763bc4937efb52cde9a6fd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab38abc4442b4d84a11f06ad82921da9f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab38abc4442b4d84a11f06ad82921da9f"></a>
+<a class="el" href="a00385.html">Vector4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00270.html#ab38abc4442b4d84a11f06ad82921da9f">ToVector4</a> () const </td></tr>
+<tr class="memdesc:ab38abc4442b4d84a11f06ad82921da9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return as a vector. <br/></td></tr>
+<tr class="separator:ab38abc4442b4d84a11f06ad82921da9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ac4d90b504e19a0b016779da242b8a4d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac4d90b504e19a0b016779da242b8a4d1"></a>
-<a class="el" href="a00377.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00270.html#ac4d90b504e19a0b016779da242b8a4d1">point_</a></td></tr>
-<tr class="memdesc:ac4d90b504e19a0b016779da242b8a4d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Point. <br/></td></tr>
-<tr class="separator:ac4d90b504e19a0b016779da242b8a4d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_a00248"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a00248')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="a00248.html">Urho3D::OctreeQuery</a></td></tr>
-<tr class="memitem:aa57c45fc937d6f1336f788361e82fdeb inherit pub_attribs_a00248"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa57c45fc937d6f1336f788361e82fdeb"></a>
-<a class="el" href="a00269.html">PODVector</a>&lt; <a class="el" href="a00146.html">Drawable</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00248.html#aa57c45fc937d6f1336f788361e82fdeb">result_</a></td></tr>
-<tr class="memdesc:aa57c45fc937d6f1336f788361e82fdeb inherit pub_attribs_a00248"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result vector reference. <br/></td></tr>
-<tr class="separator:aa57c45fc937d6f1336f788361e82fdeb inherit pub_attribs_a00248"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a3608064b9da6320a62b2c0db7b32e3 inherit pub_attribs_a00248"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a3608064b9da6320a62b2c0db7b32e3"></a>
-unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00248.html#a4a3608064b9da6320a62b2c0db7b32e3">drawableFlags_</a></td></tr>
-<tr class="memdesc:a4a3608064b9da6320a62b2c0db7b32e3 inherit pub_attribs_a00248"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00146.html" title="Base class for visible components.">Drawable</a> flags to include. <br/></td></tr>
-<tr class="separator:a4a3608064b9da6320a62b2c0db7b32e3 inherit pub_attribs_a00248"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e6e7966103b4a5482ea36829027e2cd inherit pub_attribs_a00248"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e6e7966103b4a5482ea36829027e2cd"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00248.html#a8e6e7966103b4a5482ea36829027e2cd">viewMask_</a></td></tr>
-<tr class="memdesc:a8e6e7966103b4a5482ea36829027e2cd inherit pub_attribs_a00248"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00146.html" title="Base class for visible components.">Drawable</a> layers to include. <br/></td></tr>
-<tr class="separator:a8e6e7966103b4a5482ea36829027e2cd inherit pub_attribs_a00248"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba49f4c2645945fb023d6ae85386ff5b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba49f4c2645945fb023d6ae85386ff5b"></a>
+<a class="el" href="a00384.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00270.html#aba49f4c2645945fb023d6ae85386ff5b">normal_</a></td></tr>
+<tr class="memdesc:aba49f4c2645945fb023d6ae85386ff5b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00270.html" title="Surface in three-dimensional space.">Plane</a> normal. <br/></td></tr>
+<tr class="separator:aba49f4c2645945fb023d6ae85386ff5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ad901fb08eeb0cf18bf4a2cc3ad2749"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ad901fb08eeb0cf18bf4a2cc3ad2749"></a>
+<a class="el" href="a00384.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00270.html#a3ad901fb08eeb0cf18bf4a2cc3ad2749">absNormal_</a></td></tr>
+<tr class="memdesc:a3ad901fb08eeb0cf18bf4a2cc3ad2749"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00270.html" title="Surface in three-dimensional space.">Plane</a> absolute normal. <br/></td></tr>
+<tr class="separator:a3ad901fb08eeb0cf18bf4a2cc3ad2749"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af68b1ab45b3b18258c8a70cebc177204"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af68b1ab45b3b18258c8a70cebc177204"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00270.html#af68b1ab45b3b18258c8a70cebc177204">d_</a></td></tr>
+<tr class="memdesc:af68b1ab45b3b18258c8a70cebc177204"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00270.html" title="Surface in three-dimensional space.">Plane</a> constant. <br/></td></tr>
+<tr class="separator:af68b1ab45b3b18258c8a70cebc177204"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a1839b8c4cee79fb51b197991b77124fc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1839b8c4cee79fb51b197991b77124fc"></a>
+static const <a class="el" href="a00270.html">Plane</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00270.html#a1839b8c4cee79fb51b197991b77124fc">UP</a></td></tr>
+<tr class="memdesc:a1839b8c4cee79fb51b197991b77124fc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00270.html" title="Surface in three-dimensional space.">Plane</a> at origin with normal pointing up. <br/></td></tr>
+<tr class="separator:a1839b8c4cee79fb51b197991b77124fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Point octree query. </p>
+<div class="textblock"><p>Surface in three-dimensional space. </p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/OctreeQuery.h</li>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/OctreeQuery.cpp</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Math/Plane.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Math/Plane.cpp</li>
 </ul>
 </div><!-- contents -->
