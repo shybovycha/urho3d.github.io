@@ -4493,10 +4493,12 @@ Classes</h1>
 <li>void SetTexture(Texture2D* texture)</li>
 <li>void SetRectangle(const IntRect&amp; rectangle)</li>
 <li>void SetHotSpot(const Vector2&amp; hotSpot)</li>
+<li>void SetOffset(const IntVector2&amp; offset)</li>
 <li>void SetSpriteSheet(SpriteSheet2D* spriteSheet)</li>
 <li>Texture2D* GetTexture() const</li>
 <li>const <a class="el" href="a00190.html" title="Two-dimensional bounding rectangle with integer values.">IntRect</a>&amp; GetRectangle() const</li>
 <li>const <a class="el" href="a00383.html" title="Two-dimensional vector.">Vector2</a>&amp; GetHotSpot() const</li>
+<li>const <a class="el" href="a00191.html" title="Two-dimensional vector with integer values.">IntVector2</a>&amp; GetOffset() const</li>
 <li>SpriteSheet2D* GetSpriteSheet() const</li>
 </ul>
 <p>Properties:</p>
@@ -4504,6 +4506,7 @@ Classes</h1>
 <li>Texture2D* texture</li>
 <li><a class="el" href="a00190.html" title="Two-dimensional bounding rectangle with integer values.">IntRect</a> rectangle</li>
 <li><a class="el" href="a00383.html" title="Two-dimensional vector.">Vector2</a> hotSpot</li>
+<li><a class="el" href="a00191.html" title="Two-dimensional vector with integer values.">IntVector2</a> offset</li>
 <li>SpriteSheet2D* spriteSheet</li>
 </ul>
 <h3><a class="el" href="a00342.html" title="Sprite sheet.">SpriteSheet2D</a> : <a class="el" href="a00294.html" title="Base class for resources.">Resource</a></h3>
@@ -4513,8 +4516,7 @@ Classes</h1>
 <li>Sprite2D* GetSprite(const String name) const</li>
 <li>void DefineSprite(const String name, const IntRect&amp; rectangle)</li>
 <li>void DefineSprite(const String name, const IntRect&amp; rectangle, const Vector2&amp; hotSpot)</li>
-<li>void UpdateSprite(const String name, const IntRect&amp; rectangle)</li>
-<li>void UpdateSprite(const String name, const IntRect&amp; rectangle, const Vector2&amp; hotSpot)</li>
+<li>void DefineSprite(const String name, const IntRect&amp; rectangle, const Vector2&amp; hotSpot, const IntVector2&amp; originSize)</li>
 </ul>
 <h3><a class="el" href="a00343.html" title="Static model component.">StaticModel</a> : <a class="el" href="a00147.html" title="Base class for visible components.">Drawable</a></h3>
 <p>Methods:</p>
