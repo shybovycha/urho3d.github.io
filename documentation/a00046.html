@@ -4817,9 +4817,6 @@ Classes</h1>
 <li>void SetAttributeAnimationSpeed(const String&amp;, float)</li>
 <li>void SetAttributeAnimationWrapMode(const String&amp;, WrapMode)</li>
 <li>void SetEnabled(bool, bool)</li>
-<li>void SetPosition(const Vector2&amp;)</li>
-<li>void SetRotation(float)</li>
-<li>void SetScale(const Vector2&amp;)</li>
 <li>void SetScale(float)</li>
 <li>void SetTransform(const Vector2&amp;, float)</li>
 <li>void SetTransform(const Vector2&amp;, float, const Vector2&amp;)</li>
@@ -4827,9 +4824,6 @@ Classes</h1>
 <li>void SetTransform(const Vector3&amp;, const Quaternion&amp;)</li>
 <li>void SetTransform(const Vector3&amp;, const Quaternion&amp;, const Vector3&amp;)</li>
 <li>void SetTransform(const Vector3&amp;, const Quaternion&amp;, float)</li>
-<li>void SetWorldPosition(const Vector2&amp;)</li>
-<li>void SetWorldRotation(float)</li>
-<li>void SetWorldScale(const Vector2&amp;)</li>
 <li>void SetWorldTransform(const Vector2&amp;, float)</li>
 <li>void SetWorldTransform(const Vector2&amp;, float, const Vector2&amp;)</li>
 <li>void SetWorldTransform(const Vector2&amp;, float, float)</li>
@@ -4865,10 +4859,13 @@ Classes</h1>
 <li><a class="el" href="a00107.html" title="Connection to a remote network host.">Connection</a>@ owner</li>
 <li><a class="el" href="a00238.html" title="Scene node that may contain components and child nodes.">Node</a>@ parent</li>
 <li><a class="el" href="a00384.html" title="Three-dimensional vector.">Vector3</a> position</li>
+<li><a class="el" href="a00383.html" title="Two-dimensional vector.">Vector2</a> position2D</li>
 <li>int refs // readonly</li>
 <li><a class="el" href="a00384.html" title="Three-dimensional vector.">Vector3</a> right // readonly</li>
 <li><a class="el" href="a00276.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> rotation</li>
+<li>float rotation2D</li>
 <li><a class="el" href="a00384.html" title="Three-dimensional vector.">Vector3</a> scale</li>
+<li><a class="el" href="a00383.html" title="Two-dimensional vector.">Vector2</a> scale2D</li>
 <li><a class="el" href="a00302.html" title="Root scene node, represents the whole scene.">Scene</a>@ scene // readonly</li>
 <li>ScriptObject@ scriptObject // readonly</li>
 <li>bool temporary</li>
@@ -4880,9 +4877,12 @@ Classes</h1>
 <li>int weakRefs // readonly</li>
 <li><a class="el" href="a00384.html" title="Three-dimensional vector.">Vector3</a> worldDirection</li>
 <li><a class="el" href="a00384.html" title="Three-dimensional vector.">Vector3</a> worldPosition</li>
+<li><a class="el" href="a00383.html" title="Two-dimensional vector.">Vector2</a> worldPosition2D</li>
 <li><a class="el" href="a00384.html" title="Three-dimensional vector.">Vector3</a> worldRight // readonly</li>
 <li><a class="el" href="a00276.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> worldRotation</li>
+<li>float worldRotation2D</li>
 <li><a class="el" href="a00384.html" title="Three-dimensional vector.">Vector3</a> worldScale</li>
+<li><a class="el" href="a00383.html" title="Two-dimensional vector.">Vector2</a> worldScale2D</li>
 <li><a class="el" href="a00221.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> worldTransform // readonly</li>
 <li><a class="el" href="a00384.html" title="Three-dimensional vector.">Vector3</a> worldUp // readonly</li>
 </ul>
@@ -6000,9 +6000,6 @@ Classes</h1>
 <li>void SetAttributeAnimation(const <a class="el" href="a00347.html" title="String class.">String</a>&amp;, <a class="el" href="a00375.html" title="Value animation class.">ValueAnimation</a>@, WrapMode = WM_LOOP, float = 1.0f)</li>
 <li>void SetAttributeAnimationSpeed(const String&amp;, float)</li>
 <li>void SetAttributeAnimationWrapMode(const String&amp;, WrapMode)</li>
-<li>void SetPosition(const Vector2&amp;)</li>
-<li>void SetRotation(float)</li>
-<li>void SetScale(const Vector2&amp;)</li>
 <li>void SetScale(float)</li>
 <li>void SetTransform(const Vector2&amp;, float)</li>
 <li>void SetTransform(const Vector2&amp;, float, const Vector2&amp;)</li>
@@ -6010,9 +6007,6 @@ Classes</h1>
 <li>void SetTransform(const Vector3&amp;, const Quaternion&amp;)</li>
 <li>void SetTransform(const Vector3&amp;, const Quaternion&amp;, const Vector3&amp;)</li>
 <li>void SetTransform(const Vector3&amp;, const Quaternion&amp;, float)</li>
-<li>void SetWorldPosition(const Vector2&amp;)</li>
-<li>void SetWorldRotation(float)</li>
-<li>void SetWorldScale(const Vector2&amp;)</li>
 <li>void SetWorldTransform(const Vector2&amp;, float)</li>
 <li>void SetWorldTransform(const Vector2&amp;, float, const Vector2&amp;)</li>
 <li>void SetWorldTransform(const Vector2&amp;, float, float)</li>
@@ -6060,11 +6054,14 @@ Classes</h1>
 <li><a class="el" href="a00268.html" title="Physics simulation world component. Should be added only to the root scene node.">PhysicsWorld</a>@ physicsWorld // readonly</li>
 <li><a class="el" href="a00269.html" title="2D physics simulation world component. Should be added only to the root scene node.">PhysicsWorld2D</a>@ physicsWorld2D // readonly</li>
 <li><a class="el" href="a00384.html" title="Three-dimensional vector.">Vector3</a> position</li>
+<li><a class="el" href="a00383.html" title="Two-dimensional vector.">Vector2</a> position2D</li>
 <li>int refs // readonly</li>
 <li><a class="el" href="a00256.html" title="Stores files of a directory tree sequentially for convenient access.">PackageFile</a>@[]@ requiredPackageFiles // readonly</li>
 <li><a class="el" href="a00384.html" title="Three-dimensional vector.">Vector3</a> right // readonly</li>
 <li><a class="el" href="a00276.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> rotation</li>
+<li>float rotation2D</li>
 <li><a class="el" href="a00384.html" title="Three-dimensional vector.">Vector3</a> scale</li>
+<li><a class="el" href="a00383.html" title="Two-dimensional vector.">Vector2</a> scale2D</li>
 <li>ScriptObject@ scriptObject // readonly</li>
 <li>float smoothingConstant</li>
 <li>float snapThreshold</li>
@@ -6079,9 +6076,12 @@ Classes</h1>
 <li>int weakRefs // readonly</li>
 <li><a class="el" href="a00384.html" title="Three-dimensional vector.">Vector3</a> worldDirection</li>
 <li><a class="el" href="a00384.html" title="Three-dimensional vector.">Vector3</a> worldPosition</li>
+<li><a class="el" href="a00383.html" title="Two-dimensional vector.">Vector2</a> worldPosition2D</li>
 <li><a class="el" href="a00384.html" title="Three-dimensional vector.">Vector3</a> worldRight // readonly</li>
 <li><a class="el" href="a00276.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> worldRotation</li>
+<li>float worldRotation2D</li>
 <li><a class="el" href="a00384.html" title="Three-dimensional vector.">Vector3</a> worldScale</li>
+<li><a class="el" href="a00383.html" title="Two-dimensional vector.">Vector2</a> worldScale2D</li>
 <li><a class="el" href="a00221.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> worldTransform // readonly</li>
 <li><a class="el" href="a00384.html" title="Three-dimensional vector.">Vector3</a> worldUp // readonly</li>
 </ul>
