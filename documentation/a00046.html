@@ -167,7 +167,8 @@ Classes</h1>
 <li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="a00347.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
-<li>void SetAnimation(<a class="el" href="a00062.html" title="Spriter animation set, it includes one or more animations, for more information please refer to http:...">AnimationSet2D</a>@, const <a class="el" href="a00347.html" title="String class.">String</a>&amp;)</li>
+<li>void SetAnimation(<a class="el" href="a00062.html" title="Spriter animation set, it includes one or more animations, for more information please refer to http:...">AnimationSet2D</a>@, const <a class="el" href="a00347.html" title="String class.">String</a>&amp;, LoopMode2D = LM_DEFAULT)</li>
+<li>void SetAnimation(const <a class="el" href="a00347.html" title="String class.">String</a>&amp;, LoopMode2D = LM_DEFAULT)</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
 <li>void SetAttributeAnimation(const <a class="el" href="a00347.html" title="String class.">String</a>&amp;, <a class="el" href="a00375.html" title="Value animation class.">ValueAnimation</a>@, WrapMode = WM_LOOP, float = 1.0f)</li>
 <li>void SetAttributeAnimationSpeed(const String&amp;, float)</li>
@@ -198,6 +199,7 @@ Classes</h1>
 <li>int layer</li>
 <li>uint lightMask</li>
 <li>float lodBias</li>
+<li>LoopMode2D loopMode</li>
 <li>uint maxLights</li>
 <li><a class="el" href="a00238.html" title="Scene node that may contain components and child nodes.">Node</a>@ node // readonly</li>
 <li>uint numAttributes // readonly</li>
@@ -9446,6 +9448,12 @@ Enumerations</h1>
 <li>LIGHT_DIRECTIONAL</li>
 <li>LIGHT_SPOT</li>
 <li>LIGHT_POINT</li>
+</ul>
+<h3>LoopMode2D</h3>
+<ul>
+<li>LM_DEFAULT</li>
+<li>LM_FORCE_LOOPED</li>
+<li>LM_FORCE_CLAMPED</li>
 </ul>
 <h3>Orientation</h3>
 <ul>

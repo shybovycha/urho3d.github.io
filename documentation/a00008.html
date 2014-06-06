@@ -90,9 +90,10 @@ Classes</h1>
 <li>void SetFlipY(bool flipY)</li>
 <li>void SetColor(const Color&amp; color)</li>
 <li>void SetSpeed(float speed)</li>
-<li>void SetAnimation(const String name)</li>
-<li>void SetAnimation(AnimationSet2D* animationSet, const String name)</li>
+<li>void SetAnimation(AnimationSet2D* animationSet, const <a class="el" href="a00347.html" title="String class.">String</a> name, LoopMode2D loopMode = LM_DEFAULT)</li>
+<li>void SetAnimation(const <a class="el" href="a00347.html" title="String class.">String</a> name, LoopMode2D loopMode = LM_DEFAULT)</li>
 <li>void SetAnimationSet(AnimationSet2D* animationSet)</li>
+<li>void SetLoopMode(LoopMode2D loopMode)</li>
 <li>int GetLayer() const</li>
 <li>int GetOrderInLayer() const</li>
 <li>BlendMode GetBlendMode() const</li>
@@ -100,8 +101,9 @@ Classes</h1>
 <li>bool GetFlipY() const</li>
 <li>const <a class="el" href="a00101.html" title="RGBA color.">Color</a>&amp; GetColor() const</li>
 <li>float GetSpeed() const</li>
-<li>AnimationSet2D* GetAnimationSet() const</li>
 <li>const <a class="el" href="a00347.html" title="String class.">String</a> GetAnimation() const</li>
+<li>AnimationSet2D* GetAnimationSet() const</li>
+<li>LoopMode2D GetLoopMode() const</li>
 </ul>
 <p>Properties:</p>
 <ul>
@@ -112,8 +114,9 @@ Classes</h1>
 <li>bool flipY</li>
 <li><a class="el" href="a00101.html" title="RGBA color.">Color</a>&amp; color</li>
 <li>float speed</li>
-<li>AnimationSet2D* animationSet</li>
 <li><a class="el" href="a00347.html" title="String class.">String</a> animation</li>
+<li>AnimationSet2D* animationSet</li>
+<li>LoopMode2D loopMode</li>
 </ul>
 <h3><a class="el" href="a00057.html" title="Skeletal animation resource.">Animation</a> : <a class="el" href="a00294.html" title="Base class for resources.">Resource</a></h3>
 <p>Methods:</p>
@@ -6118,6 +6121,12 @@ Enumerations</h1>
 <li>int LOCK_HARDWARE</li>
 <li>int LOCK_SHADOW</li>
 <li>int LOCK_SCRATCH</li>
+</ul>
+<h3>LoopMode2D</h3>
+<ul>
+<li>int LM_DEFAULT</li>
+<li>int LM_FORCE_LOOPED</li>
+<li>int LM_FORCE_CLAMPED</li>
 </ul>
 <h3>Orientation</h3>
 <ul>
