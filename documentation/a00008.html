@@ -2897,45 +2897,43 @@ Classes</h1>
 <li>bool SaveXML(File* dest) const</li>
 <li>void SetName(const String name)</li>
 <li>void SetPosition(const Vector3&amp; position)</li>
-<li>void SetPosition(const Vector2&amp; position)</li>
 <li>void SetPosition2D(const Vector2&amp; position)</li>
+<li>void SetPosition2D(float x, float y)</li>
 <li>void SetRotation(const Quaternion&amp; rotation)</li>
-<li>void SetRotation(float rotation)</li>
 <li>void SetRotation2D(float rotation)</li>
 <li>void SetDirection(const Vector3&amp; direction)</li>
 <li>void SetScale(float scale)</li>
 <li>void SetScale(const Vector3&amp; scale)</li>
-<li>void SetScale(const Vector2&amp; scale)</li>
 <li>void SetScale2D(const Vector2&amp; scale)</li>
+<li>void SetScale2D(float x, float y)</li>
 <li>void SetTransform(const Vector3&amp; position, const Quaternion&amp; rotation)</li>
-<li>void SetTransform(const Vector2&amp; position, float rotation)</li>
-<li>void SetTransform(const Vector3&amp; position, const Quaternion&amp; rotation, float scale)</li>
-<li>void SetTransform(const Vector2&amp; position, float rotation, float scale)</li>
 <li>void SetTransform(const Vector3&amp; position, const Quaternion&amp; rotation, const Vector3&amp; scale)</li>
-<li>void SetTransform(const Vector2&amp; position, float rotation, const Vector2&amp; scale)</li>
+<li>void SetTransform(const Vector3&amp; position, const Quaternion&amp; rotation, float scale)</li>
+<li>void SetTransform2D(const Vector2&amp; position, float rotation)</li>
+<li>void SetTransform2D(const Vector2&amp; position, float rotation, const Vector2&amp; scale)</li>
+<li>void SetTransform2D(const Vector2&amp; position, float rotation, float scale)</li>
 <li>void SetWorldPosition(const Vector3&amp; position)</li>
-<li>void SetWorldPosition(const Vector2&amp; position)</li>
 <li>void SetWorldPosition2D(const Vector2&amp; position)</li>
+<li>void SetWorldPosition2D(float x, float y)</li>
 <li>void SetWorldRotation(const Quaternion&amp; rotation)</li>
-<li>void SetWorldRotation(float rotation)</li>
 <li>void SetWorldRotation2D(float rotation)</li>
 <li>void SetWorldDirection(const Vector3&amp; direction)</li>
 <li>void SetWorldScale(float scale)</li>
 <li>void SetWorldScale(const Vector3&amp; scale)</li>
-<li>void SetWorldScale(const Vector2&amp; scale)</li>
 <li>void SetWorldScale2D(const Vector2&amp; scale)</li>
+<li>void SetWorldScale2D(float x, float y)</li>
 <li>void SetWorldTransform(const Vector3&amp; position, const Quaternion&amp; rotation)</li>
-<li>void SetWorldTransform(const Vector2&amp; position, float rotation)</li>
-<li>void SetWorldTransform(const Vector3&amp; position, const Quaternion&amp; rotation, float scale)</li>
-<li>void SetWorldTransform(const Vector2&amp; position, float rotation, float scale)</li>
 <li>void SetWorldTransform(const Vector3&amp; position, const Quaternion&amp; rotation, const Vector3&amp; scale)</li>
-<li>void SetWorldTransform(const Vector2&amp; position, float rotation, const Vector3&amp; scale)</li>
+<li>void SetWorldTransform(const Vector3&amp; position, const Quaternion&amp; rotation, float scale)</li>
+<li>void SetWorldTransform2D(const Vector2&amp; position, float rotation)</li>
+<li>void SetWorldTransform2D(const Vector2&amp; position, float rotation, const Vector2&amp; scale)</li>
+<li>void SetWorldTransform2D(const Vector2&amp; position, float rotation, float scale)</li>
 <li>void Translate(const <a class="el" href="a00384.html" title="Three-dimensional vector.">Vector3</a>&amp; delta, TransformSpace space = TS_LOCAL)</li>
-<li>void Translate(const <a class="el" href="a00383.html" title="Two-dimensional vector.">Vector2</a>&amp; delta, TransformSpace space = TS_LOCAL)</li>
+<li>void Translate2D(const <a class="el" href="a00383.html" title="Two-dimensional vector.">Vector2</a>&amp; delta, TransformSpace space = TS_LOCAL)</li>
 <li>void Rotate(const <a class="el" href="a00276.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; delta, TransformSpace space = TS_LOCAL)</li>
-<li>void Rotate(float delta, TransformSpace space = TS_LOCAL)</li>
+<li>void Rotate2D(float delta, TransformSpace space = TS_LOCAL)</li>
 <li>void RotateAround(const <a class="el" href="a00384.html" title="Three-dimensional vector.">Vector3</a>&amp; point, const <a class="el" href="a00276.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; delta, TransformSpace space = TS_LOCAL)</li>
-<li>void RotateAround(const <a class="el" href="a00383.html" title="Two-dimensional vector.">Vector2</a>&amp; point, float delta, TransformSpace space = TS_LOCAL)</li>
+<li>void RotateAround2D(const <a class="el" href="a00383.html" title="Two-dimensional vector.">Vector2</a>&amp; point, float delta, TransformSpace space = TS_LOCAL)</li>
 <li>void Pitch(float angle, TransformSpace space = TS_LOCAL)</li>
 <li>void Yaw(float angle, TransformSpace space = TS_LOCAL)</li>
 <li>void Roll(float angle, TransformSpace space = TS_LOCAL)</li>
@@ -2943,7 +2941,7 @@ Classes</h1>
 <li>bool LookAt(const <a class="el" href="a00384.html" title="Three-dimensional vector.">Vector3</a>&amp; target, const <a class="el" href="a00384.html" title="Three-dimensional vector.">Vector3</a>&amp; upAxis, TransformSpace space = TS_WORLD)</li>
 <li>void Scale(float scale)</li>
 <li>void Scale(const Vector3&amp; scale)</li>
-<li>void Scale(const Vector2&amp; scale)</li>
+<li>void Scale2D(const Vector2&amp; scale)</li>
 <li>void SetEnabled(bool enable)</li>
 <li>void SetEnabled(bool enable, bool recursive)</li>
 <li>void SetOwner(Connection* owner)</li>
@@ -3000,10 +2998,10 @@ Classes</h1>
 <li>const <a class="el" href="a00221.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a>&amp; GetWorldTransform() const</li>
 <li><a class="el" href="a00384.html" title="Three-dimensional vector.">Vector3</a> LocalToWorld(const Vector3&amp; position) const</li>
 <li><a class="el" href="a00384.html" title="Three-dimensional vector.">Vector3</a> LocalToWorld(const Vector4&amp; vector) const</li>
-<li><a class="el" href="a00383.html" title="Two-dimensional vector.">Vector2</a> LocalToWorld(const Vector2&amp; vector) const</li>
+<li><a class="el" href="a00383.html" title="Two-dimensional vector.">Vector2</a> LocalToWorld2D(const Vector2&amp; vector) const</li>
 <li><a class="el" href="a00384.html" title="Three-dimensional vector.">Vector3</a> WorldToLocal(const Vector3&amp; position) const</li>
 <li><a class="el" href="a00384.html" title="Three-dimensional vector.">Vector3</a> WorldToLocal(const Vector4&amp; vector) const</li>
-<li><a class="el" href="a00383.html" title="Two-dimensional vector.">Vector2</a> WorldToLocal(const Vector2&amp; vector) const</li>
+<li><a class="el" href="a00383.html" title="Two-dimensional vector.">Vector2</a> WorldToLocal2D(const Vector2&amp; vector) const</li>
 <li>bool IsDirty() const</li>
 <li>unsigned GetNumChildren(bool recursive = false) const</li>
 <li>Node* GetChild(const <a class="el" href="a00347.html" title="String class.">String</a> name, bool recursive = false) const</li>
