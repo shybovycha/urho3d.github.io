@@ -3095,8 +3095,8 @@ Classes</h1>
 <li>const PODVector&lt;OctreeQueryResult&gt;&amp; GetDrawables(const <a class="el" href="a00085.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a>&amp; box, char drawableFlags = DRAWABLE_ANY, unsigned viewMask = DEFAULT_VIEWMASK) const</li>
 <li>const PODVector&lt;OctreeQueryResult&gt;&amp; GetDrawables(const <a class="el" href="a00168.html" title="Convex constructed of 6 planes.">Frustum</a>&amp; frustum, char drawableFlags = DRAWABLE_ANY, unsigned viewMask = DEFAULT_VIEWMASK) const</li>
 <li>const PODVector&lt;OctreeQueryResult&gt;&amp; GetDrawables(const <a class="el" href="a00336.html" title="Sphere in three-dimensional space.">Sphere</a>&amp; sphere, char drawableFlags = DRAWABLE_ANY, unsigned viewMask = DEFAULT_VIEWMASK) const</li>
-<li>const PODVector&lt;RayQueryResult&gt;&amp; Raycast(const Ray&amp; ray, RayQueryLevel level, float maxDistance, char drawableFlags) const</li>
-<li><a class="el" href="a00281.html" title="Raycast result.">RayQueryResult</a> RaycastSingle(const Ray&amp; ray, RayQueryLevel level, float maxDistance, char drawableFlags) const</li>
+<li>const PODVector&lt;RayQueryResult&gt;&amp; Raycast(const <a class="el" href="a00279.html" title="Infinite straight line in three-dimensional space.">Ray</a>&amp; ray, RayQueryLevel level, float maxDistance, char drawableFlags, unsigned viewMask = DEFAULT_VIEWMASK) const</li>
+<li><a class="el" href="a00281.html" title="Raycast result.">RayQueryResult</a> RaycastSingle(const <a class="el" href="a00279.html" title="Infinite straight line in three-dimensional space.">Ray</a>&amp; ray, RayQueryLevel level, float maxDistance, char drawableFlags, unsigned viewMask = DEFAULT_VIEWMASK) const</li>
 <li>unsigned GetNumLevels() const</li>
 <li>void QueueUpdate(Drawable* drawable)</li>
 <li>void DrawDebugGeometry(bool depthTest)</li>

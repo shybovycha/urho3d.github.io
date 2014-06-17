@@ -99,6 +99,7 @@ Though Urho3D already contains several useful features and implements a framewor
 - amadeus_osa
 - atship
 - mightyCelu
+- ninjastone
 - reattiva
 - skaiware
 - szamq
