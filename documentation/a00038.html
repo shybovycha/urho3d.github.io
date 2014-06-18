@@ -17,7 +17,7 @@ title: Documentation
 <div class="title">Attribute animation </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Attribute animation is a new system for Urho3D, With it user can apply animation to object’s attribute. All object derived from <a class="el" href="a00054.html" title="Base class for animatable object, an animatable object can be set animation on it&#39;s attributes...">Animatable</a> can use attribute animation, currently these classes include <a class="el" href="a00238.html" title="Scene node that may contain components and child nodes.">Node</a>, <a class="el" href="a00103.html" title="Base class for components. Components can be created to scene nodes.">Component</a> and <a class="el" href="a00372.html" title="Base class for UI elements.">UIElement</a>.</p>
+<div class="textblock"><p>Attribute animation is a new system for Urho3D, With it user can apply animation to object’s attribute. All object derived from <a class="el" href="a00054.html" title="Base class for animatable object, an animatable object can be set animation on it&#39;s attributes...">Animatable</a> can use attribute animation, currently these classes include <a class="el" href="a00238.html" title="Scene node that may contain components and child nodes.">Node</a>, <a class="el" href="a00103.html" title="Base class for components. Components can be created to scene nodes.">Component</a> and <a class="el" href="a00373.html" title="Base class for UI elements.">UIElement</a>.</p>
 <p>These are two way to use use attribute animation. First user can create attribute animation with code, and then apply it to object’s attribute. Here is a simple code for light color animation: </p>
 <div class="fragment"><div class="line">SharedPtr&lt;ValueAnimation&gt; colorAnimation(<span class="keyword">new</span> ValueAnimation(context_));</div>
 <div class="line">colorAnimation-&gt;SetKeyFrame(0.0f, <a class="code" href="a00101.html#a42aad3adf983cede243a815e0cccd76f" title="Opaque white color.">Color::WHITE</a>);</div>
@@ -25,7 +25,7 @@ title: Documentation
 <div class="line">colorAnimation-&gt;SetKeyFrame(4.0f, <a class="code" href="a00101.html#a42aad3adf983cede243a815e0cccd76f" title="Opaque white color.">Color::WHITE</a>);</div>
 <div class="line"></div>
 <div class="line">light-&gt;SetAttributeAnimation(<span class="stringliteral">&quot;Color&quot;</span>, colorAnimation, WM_LOOP); </div>
-</div><!-- fragment --><p>On above code, we first create an <a class="el" href="a00375.html" title="Value animation class.">ValueAnimation</a> object call colorAnimation, and set it’s key frame value, then apply it to light’s color attribute. (Note here: in order to make animation look correct, the last key frame must equal to the first key frame for loop mode).</p>
+</div><!-- fragment --><p>On above code, we first create an <a class="el" href="a00376.html" title="Value animation class.">ValueAnimation</a> object call colorAnimation, and set it’s key frame value, then apply it to light’s color attribute. (Note here: in order to make animation look correct, the last key frame must equal to the first key frame for loop mode).</p>
 <p>Another way is load attribute animation from resource, here is a simple sample: </p>
 <div class="fragment"><div class="line">ValueAnimation* colorAnimation = cache-&gt;GetResource&lt;ValueAnimation&gt;(<span class="stringliteral">&quot;Scene/LightColorAnimation.xml&quot;</span>);</div>
 <div class="line">light-&gt;SetAttributeAnimation(<span class="stringliteral">&quot;Color&quot;</span>, colorAnimation, WM_LOOP);</div>
@@ -42,9 +42,9 @@ title: Documentation
 <div class="line"></div>
 <div class="line"><span class="comment">// Create position animation</span></div>
 <div class="line">SharedPtr&lt;ValueAnimation&gt; positionAnimation(<span class="keyword">new</span> ValueAnimation(context_));</div>
-<div class="line">positionAnimation-&gt;SetKeyFrame(0.0f, <a class="code" href="a00384.html#ad412e0011a7987f2b91c530158f19f16" title="Zero vector.">Vector3::ZERO</a>);</div>
+<div class="line">positionAnimation-&gt;SetKeyFrame(0.0f, <a class="code" href="a00385.html#ad412e0011a7987f2b91c530158f19f16" title="Zero vector.">Vector3::ZERO</a>);</div>
 <div class="line">positionAnimation-&gt;SetKeyFrame(1.0f, Vector3(1.0f, 1.0f, 1.0f));</div>
-<div class="line">positionAnimation-&gt;SetKeyFrame(4.0f, <a class="code" href="a00384.html#ad412e0011a7987f2b91c530158f19f16" title="Zero vector.">Vector3::ZERO</a>);</div>
+<div class="line">positionAnimation-&gt;SetKeyFrame(4.0f, <a class="code" href="a00385.html#ad412e0011a7987f2b91c530158f19f16" title="Zero vector.">Vector3::ZERO</a>);</div>
 <div class="line"><span class="comment">// Add position animation</span></div>
 <div class="line">lightAnimation-&gt;AddAttributeAnimation(<span class="stringliteral">&quot;Position&quot;</span>, positionAnimation, WM_LOOP); </div>
 <div class="line"></div>
@@ -61,15 +61,15 @@ title: Documentation
 </div><!-- fragment --><p>Also user can load object animation from file, like: </p>
 <div class="fragment"><div class="line">ObjectAnimation * lightAnimation = cache-&gt;GetResource&lt;ObjectAnimation&gt;(<span class="stringliteral">&quot;Scene/LightAnimation.xml&quot;</span>);</div>
 <div class="line">light-&gt; SetObjectAnimation (lightAnimation);</div>
-</div><!-- fragment --><p>Current attribute animation use linear interpolation for numeric value type (like float, <a class="el" href="a00383.html" title="Two-dimensional vector.">Vector2</a>, <a class="el" href="a00384.html" title="Three-dimensional vector.">Vector3</a> etc), and these is no interpolation for non-numeric type (like int, bool).</p>
+</div><!-- fragment --><p>Current attribute animation use linear interpolation for numeric value type (like float, <a class="el" href="a00384.html" title="Two-dimensional vector.">Vector2</a>, <a class="el" href="a00385.html" title="Three-dimensional vector.">Vector3</a> etc), and these is no interpolation for non-numeric type (like int, bool).</p>
 <p>Attribute animation and object animation can be save to scene file, Someday if our editor support edit animation, we can create animation in editor and save it to scene file.</p>
 <h1><a class="anchor" id="AttributeAnimation_Classes"></a>
 Classes of attribute animation:</h1>
 <ul>
 <li><a class="el" href="a00054.html" title="Base class for animatable object, an animatable object can be set animation on it&#39;s attributes...">Animatable</a>: Base class for animatable object, an animatable object can be set animation on it's attributes, or can be set an object animation to it.</li>
-<li><a class="el" href="a00375.html" title="Value animation class.">ValueAnimation</a>: <a class="el" href="a00057.html" title="Skeletal animation resource.">Animation</a> class, include some key frame in it.</li>
+<li><a class="el" href="a00376.html" title="Value animation class.">ValueAnimation</a>: <a class="el" href="a00057.html" title="Skeletal animation resource.">Animation</a> class, include some key frame in it.</li>
 <li><a class="el" href="a00244.html" title="Object animation class, an object animation include one or more attribute animations and theirs wrap ...">ObjectAnimation</a>: <a class="el" href="a00243.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a> animation class, an object animation include one or more attribute animations and theirs wrap mode and speed for an <a class="el" href="a00054.html" title="Base class for animatable object, an animatable object can be set animation on it&#39;s attributes...">Animatable</a> object.</li>
-<li><a class="el" href="a00376.html" title="Base class for a value animation instance, which includes animation runtime information and updates t...">ValueAnimationInfo</a>: <a class="el" href="a00057.html" title="Skeletal animation resource.">Animation</a> info, it include attribute animation, wrap mode and animation speed.</li>
-<li>AttributeAnimationInstance: Attribute animation instance, it is derived from <a class="el" href="a00376.html" title="Base class for a value animation instance, which includes animation runtime information and updates t...">ValueAnimationInfo</a>. and include animation runtime information, when animation playing it will update the object's attribute value automatically. </li>
+<li><a class="el" href="a00377.html" title="Base class for a value animation instance, which includes animation runtime information and updates t...">ValueAnimationInfo</a>: <a class="el" href="a00057.html" title="Skeletal animation resource.">Animation</a> info, it include attribute animation, wrap mode and animation speed.</li>
+<li>AttributeAnimationInstance: Attribute animation instance, it is derived from <a class="el" href="a00377.html" title="Base class for a value animation instance, which includes animation runtime information and updates t...">ValueAnimationInfo</a>. and include animation runtime information, when animation playing it will update the object's attribute value automatically. </li>
 </ul>
 </div></div><!-- contents -->
