@@ -1977,17 +1977,22 @@ Classes</h1>
 <li>bool SetSize(int width, int height, int depth, unsigned components)</li>
 <li>void SetPixel(int x, int y, const Color&amp; color)</li>
 <li>void SetPixel(int x, int y, int z, const Color&amp; color)</li>
+<li>void SetPixelInt(int x, int y, unsigned uintColor)</li>
+<li>void SetPixelInt(int x, int y, int z, unsigned uintColor)</li>
 <li>bool LoadColorLUT(Deserializer&amp; source)</li>
 <li>bool LoadColorLUT(const String fileName)</li>
 <li>void FlipVertical()</li>
 <li>bool Resize(int width, int height)</li>
 <li>void Clear(const Color&amp; color)</li>
+<li>void ClearInt(unsigned uintColor)</li>
 <li>bool SaveBMP(const String fileName) const</li>
 <li>bool SavePNG(const String fileName) const</li>
 <li>bool SaveTGA(const String fileName) const</li>
 <li>bool SaveJPG(const String fileName, int quality) const</li>
 <li><a class="el" href="a00101.html" title="RGBA color.">Color</a> GetPixel(int x, int y) const</li>
 <li><a class="el" href="a00101.html" title="RGBA color.">Color</a> GetPixel(int x, int y, int z) const</li>
+<li>unsigned GetPixelInt(int x, int y) const</li>
+<li>unsigned GetPixelInt(int x, int y, int z) const</li>
 <li><a class="el" href="a00101.html" title="RGBA color.">Color</a> GetPixelBilinear(float x, float y) const</li>
 <li><a class="el" href="a00101.html" title="RGBA color.">Color</a> GetPixelTrilinear(float x, float y, float z) const</li>
 <li>int GetWidth() const</li>
