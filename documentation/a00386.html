@@ -20,184 +20,63 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00386.html">Vector4</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00386.html">VectorBase</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
-<a href="a01408.html">List of all members</a>  </div>
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="a01006.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::Vector4 Class Reference</div>  </div>
+<div class="title">Urho3D::VectorBase Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Four-dimensional vector.  
+<p>Vector base class.  
  <a href="a00386.html#details">More...</a></p>
 
-<p><code>#include &lt;Vector4.h&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for Urho3D::Vector4:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a01409.svg" width="200" height="46"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<p><code>#include &lt;VectorBase.h&gt;</code></p>
+
+<p>Inherited by <a class="el" href="a00272.html">Urho3D::PODVector&lt; bool &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; float &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; int &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; PrimitiveType &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; unsigned &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; unsigned char &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; unsigned short &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::Batch * &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::Batch &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::BatchGroup * &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::Billboard &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::CharLocation &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::CollisionShape * &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::Component * &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::Constraint * &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::DebugLine &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::DebugTriangle &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::DecalVertex &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::Drawable * &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::Drawable2D * &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::HashMap * &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::InstanceData &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::IntRect &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::Light * &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::Matrix3x4 &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::Node * &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::Object * &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::Pair&lt; unsigned, unsigned &gt; &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::Particle &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::PhysicsRaycastResult2D &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::ProfilerBlock * &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::RayQueryResult &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::ReplicationState * &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::RigidBody * &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::RigidBody2D * &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::SoundSource * &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::StaticModelGeometryData &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::StringHash &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::UIBatch &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::UIElement * &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::Vector2 &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::Vector3 &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; Urho3D::Zone * &gt;</a>, <a class="el" href="a00272.html">Urho3D::PODVector&lt; T &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; T &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; asIScriptContext * &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::AnimatedSprite2D::TransformInfo &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::AnimationControl &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::AnimationKeyFrame &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::AnimationStateTrack &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::AnimationTrack &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::AnimationTriggerPoint &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::AttributeInfo &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::Billboard * &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::Bone &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::ColorFrame &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::DelayedCall &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::FileSelectorEntry &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::GPUObject * &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::LightBatchQueue &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::LightQueryResult &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::MainlineKey2D &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::ModelMorph &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::Pair&lt; int, Urho3D::String &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::Pair&lt; Urho3D::WeakPtr&lt; Urho3D::RenderSurface &gt;, Urho3D::WeakPtr&lt; Urho3D::Viewport &gt; &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::Particle2D &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::PerThreadSceneResult &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::PhysicsWorld2D::ContactInfo &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::PODVector&lt; unsigned &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::PODVector&lt; Urho3D::CustomGeometryVertex &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::PODVector&lt; Urho3D::Drawable * &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::PODVector&lt; Urho3D::GlyphLocation &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::PODVector&lt; Urho3D::Matrix3x4 * &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::PODVector&lt; Urho3D::Matrix3x4 &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::PODVector&lt; Urho3D::RayQueryResult &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::PODVector&lt; Urho3D::Vector3 &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::Reference2D &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::RemoteEvent &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::RenderPathCommand &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::RenderTargetInfo &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::ScenePassInfo &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::ScratchBuffer &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::ShadowBatchQueue &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::SharedArrayPtr&lt; unsigned char &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::SharedArrayPtr&lt; Urho3D::DepthValue &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::SharedPtr&lt; Urho3D::Animation2D &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::SharedPtr&lt; Urho3D::AnimationState &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::SharedPtr&lt; Urho3D::Component &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::SharedPtr&lt; Urho3D::FileWatcher &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::SharedPtr&lt; Urho3D::Geometry &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::SharedPtr&lt; Urho3D::IndexBuffer &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::SharedPtr&lt; Urho3D::Material &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::SharedPtr&lt; Urho3D::Node &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::SharedPtr&lt; Urho3D::OcclusionBuffer &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::SharedPtr&lt; Urho3D::PackageFile &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::SharedPtr&lt; Urho3D::ShaderVariation &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::SharedPtr&lt; Urho3D::Texture2D &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::SharedPtr&lt; Urho3D::UIElement &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::SharedPtr&lt; Urho3D::VertexBuffer &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::SharedPtr&lt; Urho3D::View &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::SharedPtr&lt; Urho3D::Viewport &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::SharedPtr&lt; WorkerThread &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::SourceBatch &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::String &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::TechniqueEntry &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::TextureFrame &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::Timeline2D &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::TimelineKey2D &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::VAnimEventFrame &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::VAnimKeyFrame &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::Variant &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::Vector&lt; Urho3D::SharedPtr&lt; Urho3D::Geometry &gt; &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::Vertex2D &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::WeakPtr&lt; Urho3D::CollisionShape2D &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::WeakPtr&lt; Urho3D::Component &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::WeakPtr&lt; Urho3D::Constraint2D &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::WeakPtr&lt; Urho3D::Node &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::WeakPtr&lt; Urho3D::RigidBody2D &gt; &gt;</a>, <a class="el" href="a00382.html">Urho3D::Vector&lt; Urho3D::WeakPtr&lt; Urho3D::TerrainPatch &gt; &gt;</a>, and <a class="el" href="a00382.html">Urho3D::Vector&lt; Variant &gt;</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aae632fd4bcbb328a9e7c489d2abee10b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae632fd4bcbb328a9e7c489d2abee10b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#aae632fd4bcbb328a9e7c489d2abee10b">Vector4</a> ()</td></tr>
-<tr class="memdesc:aae632fd4bcbb328a9e7c489d2abee10b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a zero vector. <br/></td></tr>
-<tr class="separator:aae632fd4bcbb328a9e7c489d2abee10b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38dd599956945fbfe559765319e12050"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38dd599956945fbfe559765319e12050"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#a38dd599956945fbfe559765319e12050">Vector4</a> (const <a class="el" href="a00386.html">Vector4</a> &amp;vector)</td></tr>
-<tr class="memdesc:a38dd599956945fbfe559765319e12050"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy-construct from another vector. <br/></td></tr>
-<tr class="separator:a38dd599956945fbfe559765319e12050"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab931241cfa39e51a4926a6469d4a0a0d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab931241cfa39e51a4926a6469d4a0a0d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#ab931241cfa39e51a4926a6469d4a0a0d">Vector4</a> (const <a class="el" href="a00385.html">Vector3</a> &amp;vector, float w)</td></tr>
-<tr class="memdesc:ab931241cfa39e51a4926a6469d4a0a0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a 3-dimensional vector and the W coordinate. <br/></td></tr>
-<tr class="separator:ab931241cfa39e51a4926a6469d4a0a0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d856a60d9dd153cb96ae7bd6a4ab0c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d856a60d9dd153cb96ae7bd6a4ab0c3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#a2d856a60d9dd153cb96ae7bd6a4ab0c3">Vector4</a> (float x, float y, float z, float w)</td></tr>
-<tr class="memdesc:a2d856a60d9dd153cb96ae7bd6a4ab0c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from coordinates. <br/></td></tr>
-<tr class="separator:a2d856a60d9dd153cb96ae7bd6a4ab0c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e5117d1a5e5447aff7099343eac57d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e5117d1a5e5447aff7099343eac57d8"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#a1e5117d1a5e5447aff7099343eac57d8">Vector4</a> (const float *data)</td></tr>
-<tr class="memdesc:a1e5117d1a5e5447aff7099343eac57d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a float array. <br/></td></tr>
-<tr class="separator:a1e5117d1a5e5447aff7099343eac57d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1f5d2630435bd3038c3497be5acbb18"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1f5d2630435bd3038c3497be5acbb18"></a>
-<a class="el" href="a00386.html">Vector4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#af1f5d2630435bd3038c3497be5acbb18">operator=</a> (const <a class="el" href="a00386.html">Vector4</a> &amp;rhs)</td></tr>
-<tr class="memdesc:af1f5d2630435bd3038c3497be5acbb18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign from another vector. <br/></td></tr>
-<tr class="separator:af1f5d2630435bd3038c3497be5acbb18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95914096526187bd1a5a5404f2ea725e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a95914096526187bd1a5a5404f2ea725e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#a95914096526187bd1a5a5404f2ea725e">operator==</a> (const <a class="el" href="a00386.html">Vector4</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:a95914096526187bd1a5a5404f2ea725e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for equality with another vector without epsilon. <br/></td></tr>
-<tr class="separator:a95914096526187bd1a5a5404f2ea725e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1dc13556ee2464caf4bdae5d9eceed42"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1dc13556ee2464caf4bdae5d9eceed42"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#a1dc13556ee2464caf4bdae5d9eceed42">operator!=</a> (const <a class="el" href="a00386.html">Vector4</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:a1dc13556ee2464caf4bdae5d9eceed42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for inequality with another vector without epsilon. <br/></td></tr>
-<tr class="separator:a1dc13556ee2464caf4bdae5d9eceed42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60435ec5c46906dc3ac965e046ffdfe9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60435ec5c46906dc3ac965e046ffdfe9"></a>
-<a class="el" href="a00386.html">Vector4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#a60435ec5c46906dc3ac965e046ffdfe9">operator+</a> (const <a class="el" href="a00386.html">Vector4</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:a60435ec5c46906dc3ac965e046ffdfe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a vector. <br/></td></tr>
-<tr class="separator:a60435ec5c46906dc3ac965e046ffdfe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19dd851c9f9b8696b44466d16a138311"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19dd851c9f9b8696b44466d16a138311"></a>
-<a class="el" href="a00386.html">Vector4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#a19dd851c9f9b8696b44466d16a138311">operator-</a> () const </td></tr>
-<tr class="memdesc:a19dd851c9f9b8696b44466d16a138311"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return negation. <br/></td></tr>
-<tr class="separator:a19dd851c9f9b8696b44466d16a138311"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad570ec8744603ccd5639039226f182c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad570ec8744603ccd5639039226f182c6"></a>
-<a class="el" href="a00386.html">Vector4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#ad570ec8744603ccd5639039226f182c6">operator-</a> (const <a class="el" href="a00386.html">Vector4</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:ad570ec8744603ccd5639039226f182c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtract a vector. <br/></td></tr>
-<tr class="separator:ad570ec8744603ccd5639039226f182c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2576c2205323bd25f1f449946904e8f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2576c2205323bd25f1f449946904e8f"></a>
-<a class="el" href="a00386.html">Vector4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#ad2576c2205323bd25f1f449946904e8f">operator*</a> (float rhs) const </td></tr>
-<tr class="memdesc:ad2576c2205323bd25f1f449946904e8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply with a scalar. <br/></td></tr>
-<tr class="separator:ad2576c2205323bd25f1f449946904e8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0228f22f66a6cbb7225b4c1a39ce80e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0228f22f66a6cbb7225b4c1a39ce80e2"></a>
-<a class="el" href="a00386.html">Vector4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#a0228f22f66a6cbb7225b4c1a39ce80e2">operator*</a> (const <a class="el" href="a00386.html">Vector4</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:a0228f22f66a6cbb7225b4c1a39ce80e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply with a vector. <br/></td></tr>
-<tr class="separator:a0228f22f66a6cbb7225b4c1a39ce80e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:accf3001cbf79ae0d053aec55c7b3df86"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="accf3001cbf79ae0d053aec55c7b3df86"></a>
-<a class="el" href="a00386.html">Vector4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#accf3001cbf79ae0d053aec55c7b3df86">operator/</a> (float rhs) const </td></tr>
-<tr class="memdesc:accf3001cbf79ae0d053aec55c7b3df86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divide by a scalar. <br/></td></tr>
-<tr class="separator:accf3001cbf79ae0d053aec55c7b3df86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08b194a7b1055fcfdd9cb446bc46ab4a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08b194a7b1055fcfdd9cb446bc46ab4a"></a>
-<a class="el" href="a00386.html">Vector4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#a08b194a7b1055fcfdd9cb446bc46ab4a">operator/</a> (const <a class="el" href="a00386.html">Vector4</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:a08b194a7b1055fcfdd9cb446bc46ab4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divide by a vector. <br/></td></tr>
-<tr class="separator:a08b194a7b1055fcfdd9cb446bc46ab4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae21438c4a17c7b1d0859af455afb1d7b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae21438c4a17c7b1d0859af455afb1d7b"></a>
-<a class="el" href="a00386.html">Vector4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#ae21438c4a17c7b1d0859af455afb1d7b">operator+=</a> (const <a class="el" href="a00386.html">Vector4</a> &amp;rhs)</td></tr>
-<tr class="memdesc:ae21438c4a17c7b1d0859af455afb1d7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add-assign a vector. <br/></td></tr>
-<tr class="separator:ae21438c4a17c7b1d0859af455afb1d7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a144e43c7c4aaaad01a2c9df3a9ae81e9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a144e43c7c4aaaad01a2c9df3a9ae81e9"></a>
-<a class="el" href="a00386.html">Vector4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#a144e43c7c4aaaad01a2c9df3a9ae81e9">operator-=</a> (const <a class="el" href="a00386.html">Vector4</a> &amp;rhs)</td></tr>
-<tr class="memdesc:a144e43c7c4aaaad01a2c9df3a9ae81e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtract-assign a vector. <br/></td></tr>
-<tr class="separator:a144e43c7c4aaaad01a2c9df3a9ae81e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af085782529d991fe482604fd4e48bc7b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af085782529d991fe482604fd4e48bc7b"></a>
-<a class="el" href="a00386.html">Vector4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#af085782529d991fe482604fd4e48bc7b">operator*=</a> (float rhs)</td></tr>
-<tr class="memdesc:af085782529d991fe482604fd4e48bc7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply-assign a scalar. <br/></td></tr>
-<tr class="separator:af085782529d991fe482604fd4e48bc7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac41012c7554457c414f668dddeba7add"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac41012c7554457c414f668dddeba7add"></a>
-<a class="el" href="a00386.html">Vector4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#ac41012c7554457c414f668dddeba7add">operator*=</a> (const <a class="el" href="a00386.html">Vector4</a> &amp;rhs)</td></tr>
-<tr class="memdesc:ac41012c7554457c414f668dddeba7add"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply-assign a vector. <br/></td></tr>
-<tr class="separator:ac41012c7554457c414f668dddeba7add"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5ef996b9490e500594a31d9ee39351e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa5ef996b9490e500594a31d9ee39351e"></a>
-<a class="el" href="a00386.html">Vector4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#aa5ef996b9490e500594a31d9ee39351e">operator/=</a> (float rhs)</td></tr>
-<tr class="memdesc:aa5ef996b9490e500594a31d9ee39351e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divide-assign a scalar. <br/></td></tr>
-<tr class="separator:aa5ef996b9490e500594a31d9ee39351e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a761a8e16ab6963c329c10f92b7d6c9a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a761a8e16ab6963c329c10f92b7d6c9a5"></a>
-<a class="el" href="a00386.html">Vector4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#a761a8e16ab6963c329c10f92b7d6c9a5">operator/=</a> (const <a class="el" href="a00386.html">Vector4</a> &amp;rhs)</td></tr>
-<tr class="memdesc:a761a8e16ab6963c329c10f92b7d6c9a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divide-assign a vector. <br/></td></tr>
-<tr class="separator:a761a8e16ab6963c329c10f92b7d6c9a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00555c5e2f86b8c94502229b3eac4280"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a00555c5e2f86b8c94502229b3eac4280"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#a00555c5e2f86b8c94502229b3eac4280">DotProduct</a> (const <a class="el" href="a00386.html">Vector4</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:a00555c5e2f86b8c94502229b3eac4280"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate dot product. <br/></td></tr>
-<tr class="separator:a00555c5e2f86b8c94502229b3eac4280"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85c8fa24a2d8b02608d068964a6677e7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85c8fa24a2d8b02608d068964a6677e7"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#a85c8fa24a2d8b02608d068964a6677e7">AbsDotProduct</a> (const <a class="el" href="a00386.html">Vector4</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:a85c8fa24a2d8b02608d068964a6677e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate absolute dot product. <br/></td></tr>
-<tr class="separator:a85c8fa24a2d8b02608d068964a6677e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe06adc3de42deffbb0d6f84e1eb760c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe06adc3de42deffbb0d6f84e1eb760c"></a>
-<a class="el" href="a00386.html">Vector4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#afe06adc3de42deffbb0d6f84e1eb760c">Abs</a> () const </td></tr>
-<tr class="memdesc:afe06adc3de42deffbb0d6f84e1eb760c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return absolute vector. <br/></td></tr>
-<tr class="separator:afe06adc3de42deffbb0d6f84e1eb760c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f4193d6064f48a57c5e6ac79790e7b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f4193d6064f48a57c5e6ac79790e7b0"></a>
-<a class="el" href="a00386.html">Vector4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#a1f4193d6064f48a57c5e6ac79790e7b0">Lerp</a> (const <a class="el" href="a00386.html">Vector4</a> &amp;rhs, float t) const </td></tr>
-<tr class="memdesc:a1f4193d6064f48a57c5e6ac79790e7b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linear interpolation with another vector. <br/></td></tr>
-<tr class="separator:a1f4193d6064f48a57c5e6ac79790e7b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c40b40d0a76da2afc3df3371dbac1c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c40b40d0a76da2afc3df3371dbac1c7"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#a6c40b40d0a76da2afc3df3371dbac1c7">Equals</a> (const <a class="el" href="a00386.html">Vector4</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:a6c40b40d0a76da2afc3df3371dbac1c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for equality with another vector with epsilon. <br/></td></tr>
-<tr class="separator:a6c40b40d0a76da2afc3df3371dbac1c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6c2e74c6d64031a5d3ad9fb46f01de0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae6c2e74c6d64031a5d3ad9fb46f01de0"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#ae6c2e74c6d64031a5d3ad9fb46f01de0">IsNaN</a> () const </td></tr>
-<tr class="memdesc:ae6c2e74c6d64031a5d3ad9fb46f01de0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether is NaN. <br/></td></tr>
-<tr class="separator:ae6c2e74c6d64031a5d3ad9fb46f01de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15115516341ebacefb1012933a90c79b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a15115516341ebacefb1012933a90c79b"></a>
-const float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#a15115516341ebacefb1012933a90c79b">Data</a> () const </td></tr>
-<tr class="memdesc:a15115516341ebacefb1012933a90c79b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return float data. <br/></td></tr>
-<tr class="separator:a15115516341ebacefb1012933a90c79b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d9928406bbc9f5b94353506bd617304"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d9928406bbc9f5b94353506bd617304"></a>
-<a class="el" href="a00348.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#a4d9928406bbc9f5b94353506bd617304">ToString</a> () const </td></tr>
-<tr class="memdesc:a4d9928406bbc9f5b94353506bd617304"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return as string. <br/></td></tr>
-<tr class="separator:a4d9928406bbc9f5b94353506bd617304"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c04a2c59333c7b3db74ec6ab7c34667"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c04a2c59333c7b3db74ec6ab7c34667"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#a1c04a2c59333c7b3db74ec6ab7c34667">VectorBase</a> ()</td></tr>
+<tr class="memdesc:a1c04a2c59333c7b3db74ec6ab7c34667"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
+<tr class="separator:a1c04a2c59333c7b3db74ec6ab7c34667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec648d72344954c3be22218eb180f6a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec648d72344954c3be22218eb180f6a4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#aec648d72344954c3be22218eb180f6a4">Swap</a> (<a class="el" href="a00386.html">VectorBase</a> &amp;rhs)</td></tr>
+<tr class="memdesc:aec648d72344954c3be22218eb180f6a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swap with another vector. <br/></td></tr>
+<tr class="separator:aec648d72344954c3be22218eb180f6a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:aa7ce15bb6c9ec513d01a12a526f04378"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa7ce15bb6c9ec513d01a12a526f04378"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#aa7ce15bb6c9ec513d01a12a526f04378">x_</a></td></tr>
-<tr class="memdesc:aa7ce15bb6c9ec513d01a12a526f04378"><td class="mdescLeft">&#160;</td><td class="mdescRight">X coordinate. <br/></td></tr>
-<tr class="separator:aa7ce15bb6c9ec513d01a12a526f04378"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7384db566d40344e76b215db238df749"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7384db566d40344e76b215db238df749"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#a7384db566d40344e76b215db238df749">y_</a></td></tr>
-<tr class="memdesc:a7384db566d40344e76b215db238df749"><td class="mdescLeft">&#160;</td><td class="mdescRight">Y coordinate. <br/></td></tr>
-<tr class="separator:a7384db566d40344e76b215db238df749"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca500dadd920b0fea6f0a71bf54306d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca500dadd920b0fea6f0a71bf54306d8"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#aca500dadd920b0fea6f0a71bf54306d8">z_</a></td></tr>
-<tr class="memdesc:aca500dadd920b0fea6f0a71bf54306d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Z coordinate. <br/></td></tr>
-<tr class="separator:aca500dadd920b0fea6f0a71bf54306d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa09ccbbba8f1e5f9a463394ea2a271b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa09ccbbba8f1e5f9a463394ea2a271b"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#aaa09ccbbba8f1e5f9a463394ea2a271b">w_</a></td></tr>
-<tr class="memdesc:aaa09ccbbba8f1e5f9a463394ea2a271b"><td class="mdescLeft">&#160;</td><td class="mdescRight">W coordinate. <br/></td></tr>
-<tr class="separator:aaa09ccbbba8f1e5f9a463394ea2a271b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:a209ff87da8834b64ebc776bf394baba4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a209ff87da8834b64ebc776bf394baba4"></a>
+static unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><b>AllocateBuffer</b> (unsigned size)</td></tr>
+<tr class="separator:a209ff87da8834b64ebc776bf394baba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:ac7fefce6ed234d88ab6367c8475a4def"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac7fefce6ed234d88ab6367c8475a4def"></a>
-static const <a class="el" href="a00386.html">Vector4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#ac7fefce6ed234d88ab6367c8475a4def">ZERO</a></td></tr>
-<tr class="memdesc:ac7fefce6ed234d88ab6367c8475a4def"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zero vector. <br/></td></tr>
-<tr class="separator:ac7fefce6ed234d88ab6367c8475a4def"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e4bd8e8ec5ffc46b6a8d4447ab6e0e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e4bd8e8ec5ffc46b6a8d4447ab6e0e2"></a>
-static const <a class="el" href="a00386.html">Vector4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#a3e4bd8e8ec5ffc46b6a8d4447ab6e0e2">ONE</a></td></tr>
-<tr class="memdesc:a3e4bd8e8ec5ffc46b6a8d4447ab6e0e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">(1,1,1) vector. <br/></td></tr>
-<tr class="separator:a3e4bd8e8ec5ffc46b6a8d4447ab6e0e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a0efc5997a021bf780cef0ee164ab3ba1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0efc5997a021bf780cef0ee164ab3ba1"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#a0efc5997a021bf780cef0ee164ab3ba1">size_</a></td></tr>
+<tr class="memdesc:a0efc5997a021bf780cef0ee164ab3ba1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of vector. <br/></td></tr>
+<tr class="separator:a0efc5997a021bf780cef0ee164ab3ba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c6636e4f7393750bbc602b84a9634f3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c6636e4f7393750bbc602b84a9634f3"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#a6c6636e4f7393750bbc602b84a9634f3">capacity_</a></td></tr>
+<tr class="memdesc:a6c6636e4f7393750bbc602b84a9634f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer capacity. <br/></td></tr>
+<tr class="separator:a6c6636e4f7393750bbc602b84a9634f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2b0ea7304bbdfb42865c28ab6e573b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2b0ea7304bbdfb42865c28ab6e573b4"></a>
+unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00386.html#ad2b0ea7304bbdfb42865c28ab6e573b4">buffer_</a></td></tr>
+<tr class="memdesc:ad2b0ea7304bbdfb42865c28ab6e573b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer. <br/></td></tr>
+<tr class="separator:ad2b0ea7304bbdfb42865c28ab6e573b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Four-dimensional vector. </p>
+<div class="textblock"><p>Vector base class. </p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Math/Vector4.h</li>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Math/Vector4.cpp</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Container/VectorBase.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Container/VectorBase.cpp</li>
 </ul>
 </div><!-- contents -->
