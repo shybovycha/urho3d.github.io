@@ -37,6 +37,12 @@ From Urho3D project root tree</h1>
 <div class="line"></div>
 <div class="line">if (COMMAND cmake_policy)</div>
 <div class="line">    cmake_policy (SET CMP0003 NEW)</div>
+<div class="line">    if (CMAKE_VERSION VERSION_GREATER 2.8.12 OR CMAKE_VERSION VERSION_EQUAL 2.8.12)</div>
+<div class="line">        cmake_policy (SET CMP0022 NEW) <span class="preprocessor"># INTERFACE_LINK_LIBRARIES defines the link interface</span></div>
+<div class="line"><span class="preprocessor"></span>    endif ()</div>
+<div class="line">    if (CMAKE_VERSION VERSION_GREATER 3.0.0 OR CMAKE_VERSION VERSION_EQUAL 3.0.0)</div>
+<div class="line">        cmake_policy (SET CMP0026 OLD) <span class="preprocessor"># Disallow use of the LOCATION target property - therefore we set to OLD as we still need it</span></div>
+<div class="line"><span class="preprocessor"></span>    endif ()</div>
 <div class="line">endif ()</div>
 <div class="line"></div>
 <div class="line"><span class="preprocessor"># Set CMake modules search path</span></div>
@@ -66,13 +72,13 @@ From Urho3D project root tree</h1>
 </div><!-- fragment --><p>The setup_main_executable() macro then uses SOURCE_FILES and TARGET_NAME variables to setup a new CMake target that would work on ALL platforms supported by Urho3D. Make sure both your project name and target name are not called 'Urho3D', as this name is already reserved by Urho3D project.</p>
 <h1><a class="anchor" id="UsingLibraryFromSDK"></a>
 From Urho3D SDK installation</h1>
-<p>This section assumes that you have already installed Urho3D SDK into your system. If you have installed the SDK in a non-default location then you need to use "URHO3D_INSTALL_PREFIX" environment variable to specify the prefix path of the non-default installation location.</p>
+<p>This section assumes that you have already installed Urho3D SDK into your system. If you have installed the SDK in a non-default location then you need to use "CMAKE_PREFIX_PATH" environment variable to specify the prefix path of the non-default installation location.</p>
 <p>In your own project Source/ directory, create a new CMakeLists.txt file similar to the first approach but change the CMake module search path setup to read as follows on Windows platform:</p>
 <div class="fragment"><div class="line"><span class="preprocessor"># Set CMake modules search path</span></div>
-<div class="line"><span class="preprocessor">set (CMAKE_MODULE_PATH $ENV{URHO3D_INSTALL_PREFIX}/share/CMake/Modules ${CMAKE_INSTALL_PREFIX}/share/CMake/Modules CACHE PATH &quot;Path to Urho3D-specific CMake modules&quot;)</span></div>
+<div class="line"><span class="preprocessor">set (CMAKE_MODULE_PATH $ENV{CMAKE_PREFIX_PATH}/share/CMake/Modules CACHE PATH &quot;Path to Urho3D-specific CMake modules&quot;)</span></div>
 </div><!-- fragment --><p>On non-Windows platform:</p>
 <div class="fragment"><div class="line"><span class="preprocessor"># Set CMake modules search path</span></div>
-<div class="line"><span class="preprocessor">set (CMAKE_MODULE_PATH $ENV{URHO3D_INSTALL_PREFIX}/share/Urho3D/CMake/Modules ${CMAKE_INSTALL_PREFIX}/share/Urho3D/CMake/Modules CACHE PATH &quot;Path to Urho3D-specific CMake modules&quot;)</span></div>
+<div class="line"><span class="preprocessor">set (CMAKE_MODULE_PATH $ENV{CMAKE_PREFIX_PATH}/share/Urho3D/CMake/Modules CACHE PATH &quot;Path to Urho3D-specific CMake modules&quot;)</span></div>
 </div><!-- fragment --><h2><a class="anchor" id="UsingLibraryFromSDKWithPkgConfig"></a>
 Using pkg-config instead of CMake</h2>
 <p>If for some reason you could not use CMake in your project, you could configure your project to compile and link against Urho3D library from SDK installation using 'pkg-config' tool with the help of Urho3D.pc configuration file (which is installed as part of the SDK installation). If the Urho3D SDK is being installed into a local location (such as /usr/local) or a non-default location, then most likely you would need to specify PKG_CONFIG_PATH environment variable to point to the location of the configuration file for this to work. Below are a few invocation examples on a 64-bit RedHat-based distro with local installation:</p>
