@@ -42,6 +42,7 @@ From Urho3D project root tree</h1>
 <div class="line"><span class="preprocessor"></span>    endif ()</div>
 <div class="line">    if (CMAKE_VERSION VERSION_GREATER 3.0.0 OR CMAKE_VERSION VERSION_EQUAL 3.0.0)</div>
 <div class="line">        cmake_policy (SET CMP0026 OLD) <span class="preprocessor"># Disallow use of the LOCATION target property - therefore we set to OLD as we still need it</span></div>
+<div class="line"><span class="preprocessor"></span>        cmake_policy (SET CMP0042 NEW) <span class="preprocessor"># MACOSX_RPATH is enabled by default</span></div>
 <div class="line"><span class="preprocessor"></span>    endif ()</div>
 <div class="line">endif ()</div>
 <div class="line"></div>
