@@ -137,6 +137,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a002
 <a class="el" href="a00295.html">Resource</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00296.html#abd6b7c8b876d13d89db4e83449dd88c8">GetResource</a> (<a class="el" href="a00348.html">StringHash</a> type, const char *name, bool sendEventOnFailure=true)</td></tr>
 <tr class="memdesc:abd6b7c8b876d13d89db4e83449dd88c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a resource by type and name. Load if not loaded yet. Return null if not found or if fails, unless SetReturnFailedResources(true) has been called. <br/></td></tr>
 <tr class="separator:abd6b7c8b876d13d89db4e83449dd88c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a722ee073d9964dc6fae99041013d930b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a722ee073d9964dc6fae99041013d930b"></a>
+<a class="el" href="a00325.html">SharedPtr</a>&lt; <a class="el" href="a00295.html">Resource</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00296.html#a722ee073d9964dc6fae99041013d930b">GetTempResource</a> (<a class="el" href="a00348.html">StringHash</a> type, const <a class="el" href="a00347.html">String</a> &amp;name, bool sendEventOnFailure=true)</td></tr>
+<tr class="memdesc:a722ee073d9964dc6fae99041013d930b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a resource without storing it in the resource cache. Return null if not found or if fails. <br/></td></tr>
+<tr class="separator:a722ee073d9964dc6fae99041013d930b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada668dffb5057808c40306ffc26ff6d2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada668dffb5057808c40306ffc26ff6d2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00296.html#ada668dffb5057808c40306ffc26ff6d2">GetResources</a> (<a class="el" href="a00272.html">PODVector</a>&lt; <a class="el" href="a00295.html">Resource</a> * &gt; &amp;result, <a class="el" href="a00348.html">StringHash</a> type) const </td></tr>
 <tr class="memdesc:ada668dffb5057808c40306ffc26ff6d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return all loaded resources of a specific type. <br/></td></tr>
@@ -165,6 +169,11 @@ template&lt;class T &gt; </td></tr>
 <tr class="memitem:a2dadd380409210b603751fde40d411fd"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00296.html#a2dadd380409210b603751fde40d411fd">GetResource</a> (const char *name, bool sendEventOnFailure=true)</td></tr>
 <tr class="memdesc:a2dadd380409210b603751fde40d411fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template version of returning a resource by name. <br/></td></tr>
 <tr class="separator:a2dadd380409210b603751fde40d411fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae968ed9a0868e45fd3ca83acc5d1fdff"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae968ed9a0868e45fd3ca83acc5d1fdff"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:ae968ed9a0868e45fd3ca83acc5d1fdff"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00325.html">SharedPtr</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00296.html#ae968ed9a0868e45fd3ca83acc5d1fdff">GetTempResource</a> (const <a class="el" href="a00347.html">String</a> &amp;name, bool sendEventOnFailure=true)</td></tr>
+<tr class="memdesc:ae968ed9a0868e45fd3ca83acc5d1fdff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template version of loading a resource without storing it to the cache. <br/></td></tr>
+<tr class="separator:ae968ed9a0868e45fd3ca83acc5d1fdff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c22b31a1dedf21ff4efbb9e5f2ea875"><td class="memTemplParams" colspan="2"><a class="anchor" id="a2c22b31a1dedf21ff4efbb9e5f2ea875"></a>
 template&lt;class T &gt; </td></tr>
 <tr class="memitem:a2c22b31a1dedf21ff4efbb9e5f2ea875"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00296.html#a2c22b31a1dedf21ff4efbb9e5f2ea875">GetResources</a> (<a class="el" href="a00272.html">PODVector</a>&lt; T * &gt; &amp;result) const </td></tr>
