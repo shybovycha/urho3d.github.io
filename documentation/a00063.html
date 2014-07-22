@@ -207,7 +207,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a0028
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a09d3f8acf5b318a2a5ad9f1816a1073c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a09d3f8acf5b318a2a5ad9f1816a1073c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00063.html#a09d3f8acf5b318a2a5ad9f1816a1073c">ApplyToModel</a> ()</td></tr>
-<tr class="memdesc:a09d3f8acf5b318a2a5ad9f1816a1073c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply animation to a skeleton. <br/></td></tr>
+<tr class="memdesc:a09d3f8acf5b318a2a5ad9f1816a1073c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply animation to a skeleton. Transform changes are applied silently, so the model needs to dirty its root model afterward. <br/></td></tr>
 <tr class="separator:a09d3f8acf5b318a2a5ad9f1816a1073c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ebbb3962edd5a28f17fc54151a341e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ebbb3962edd5a28f17fc54151a341e4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00063.html#a4ebbb3962edd5a28f17fc54151a341e4">ApplyToNodes</a> ()</td></tr>
@@ -217,10 +217,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a000
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00063.html#a0eb63565a750213182ab2260e5ad28e9">ApplyTrackFullWeight</a> (<a class="el" href="a00064.html">AnimationStateTrack</a> &amp;stateTrack)</td></tr>
 <tr class="memdesc:a0eb63565a750213182ab2260e5ad28e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply animation track to a scene node, full weight. <br/></td></tr>
 <tr class="separator:a0eb63565a750213182ab2260e5ad28e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2be4992fd3a504a43955dee26e12266"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2be4992fd3a504a43955dee26e12266"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00063.html#ac2be4992fd3a504a43955dee26e12266">ApplyTrackBlended</a> (<a class="el" href="a00064.html">AnimationStateTrack</a> &amp;stateTrack, float weight)</td></tr>
-<tr class="memdesc:ac2be4992fd3a504a43955dee26e12266"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply animation track to a scene node, blended with current node transform. <br/></td></tr>
-<tr class="separator:ac2be4992fd3a504a43955dee26e12266"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dc518982c716f540bd5360973c15371"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2dc518982c716f540bd5360973c15371"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00063.html#a2dc518982c716f540bd5360973c15371">ApplyTrackFullWeightSilent</a> (<a class="el" href="a00064.html">AnimationStateTrack</a> &amp;stateTrack)</td></tr>
+<tr class="memdesc:a2dc518982c716f540bd5360973c15371"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply animation track to a scene node, full weight. Apply transform changes silently without marking the node dirty. <br/></td></tr>
+<tr class="separator:a2dc518982c716f540bd5360973c15371"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41fc9d97b3526ed4bda10e3bcfd86c6d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41fc9d97b3526ed4bda10e3bcfd86c6d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00063.html#a41fc9d97b3526ed4bda10e3bcfd86c6d">ApplyTrackBlendedSilent</a> (<a class="el" href="a00064.html">AnimationStateTrack</a> &amp;stateTrack, float weight)</td></tr>
+<tr class="memdesc:a41fc9d97b3526ed4bda10e3bcfd86c6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply animation track to a scene node, blended with current node transform. Apply transform changes silently without marking the node dirty. <br/></td></tr>
+<tr class="separator:a41fc9d97b3526ed4bda10e3bcfd86c6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
