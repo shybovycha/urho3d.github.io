@@ -28,6 +28,7 @@ title: About
 - Hierarchical performance profiler
 - Scene and object load/save in binary and XML format
 - Keyframe animation of object attributes<font color="green"><sup>new</sup></font>
+- Background loading of resources<font color="green"><sup>new</sup></font>
 - Keyboard, mouse, joystick and touch input (if available)
 - Cross-platform support using [SDL 2.0](http://www.libsdl.org/) (currently runs on Windows, Linux, Mac OS X, Android, iOS, and [Raspberry Pi](http://www.raspberrypi.org/)<font color="olive"><sup>v1.3</sup></font>)
 - Physics using [Bullet](http://www.bulletphysics.org/)
