@@ -20,58 +20,58 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00106.html">Condition</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00106.html">ComponentReplicationState</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="a01012.html">List of all members</a>  </div>
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="a01536.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::Condition Class Reference</div>  </div>
+<div class="title">Urho3D::ComponentReplicationState Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Condition on which a thread can wait.  
+<p>Per-user component network replication state.  
  <a href="a00106.html#details">More...</a></p>
 
-<p><code>#include &lt;Condition.h&gt;</code></p>
+<p><code>#include &lt;ReplicationState.h&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Urho3D::ComponentReplicationState:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a01537.svg" width="232" height="136"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for Urho3D::ComponentReplicationState:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01538.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:ad42f3e306f1fd9a8c1f724617710e259"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad42f3e306f1fd9a8c1f724617710e259"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00106.html#ad42f3e306f1fd9a8c1f724617710e259">Condition</a> ()</td></tr>
-<tr class="memdesc:ad42f3e306f1fd9a8c1f724617710e259"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
-<tr class="separator:ad42f3e306f1fd9a8c1f724617710e259"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ca517258bdc9ad2352088f1d42755e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ca517258bdc9ad2352088f1d42755e0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00106.html#a1ca517258bdc9ad2352088f1d42755e0">~Condition</a> ()</td></tr>
-<tr class="memdesc:a1ca517258bdc9ad2352088f1d42755e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
-<tr class="separator:a1ca517258bdc9ad2352088f1d42755e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cc6e3671e577bfff2f50da29f753fcb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7cc6e3671e577bfff2f50da29f753fcb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00106.html#a7cc6e3671e577bfff2f50da29f753fcb">Set</a> ()</td></tr>
-<tr class="memdesc:a7cc6e3671e577bfff2f50da29f753fcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the condition. Will be automatically reset once a waiting thread wakes up. <br/></td></tr>
-<tr class="separator:a7cc6e3671e577bfff2f50da29f753fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa10966c62b4190071c3b42834b4bfa78"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa10966c62b4190071c3b42834b4bfa78"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00106.html#aa10966c62b4190071c3b42834b4bfa78">Wait</a> ()</td></tr>
-<tr class="memdesc:aa10966c62b4190071c3b42834b4bfa78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait on the condition. <br/></td></tr>
-<tr class="separator:aa10966c62b4190071c3b42834b4bfa78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:af9128ee9ad30c6250874c6397969de16"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9128ee9ad30c6250874c6397969de16"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00106.html#af9128ee9ad30c6250874c6397969de16">mutex_</a></td></tr>
-<tr class="memdesc:af9128ee9ad30c6250874c6397969de16"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00229.html" title="Operating system mutual exclusion primitive.">Mutex</a> for the event, necessary for pthreads-based implementation. <br/></td></tr>
-<tr class="separator:af9128ee9ad30c6250874c6397969de16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98b69f2f52304c55d126cb2ecbb44e6f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98b69f2f52304c55d126cb2ecbb44e6f"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00106.html#a98b69f2f52304c55d126cb2ecbb44e6f">event_</a></td></tr>
-<tr class="memdesc:a98b69f2f52304c55d126cb2ecbb44e6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operating system specific event. <br/></td></tr>
-<tr class="separator:a98b69f2f52304c55d126cb2ecbb44e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ad1f4246e36f02a4930e73880574553a8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad1f4246e36f02a4930e73880574553a8"></a>
+<a class="el" href="a00246.html">NodeReplicationState</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00106.html#ad1f4246e36f02a4930e73880574553a8">nodeState_</a></td></tr>
+<tr class="memdesc:ad1f4246e36f02a4930e73880574553a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parent node replication state. <br/></td></tr>
+<tr class="separator:ad1f4246e36f02a4930e73880574553a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f032894dab261621b8e97f2a098223a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f032894dab261621b8e97f2a098223a"></a>
+<a class="el" href="a00401.html">WeakPtr</a>&lt; <a class="el" href="a00105.html">Component</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00106.html#a7f032894dab261621b8e97f2a098223a">component_</a></td></tr>
+<tr class="memdesc:a7f032894dab261621b8e97f2a098223a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Link to the actual component. <br/></td></tr>
+<tr class="separator:a7f032894dab261621b8e97f2a098223a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac538ddba9d8c0b8d741bcaa7307faee7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac538ddba9d8c0b8d741bcaa7307faee7"></a>
+<a class="el" href="a00148.html">DirtyBits</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00106.html#ac538ddba9d8c0b8d741bcaa7307faee7">dirtyAttributes_</a></td></tr>
+<tr class="memdesc:ac538ddba9d8c0b8d741bcaa7307faee7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dirty attribute bits. <br/></td></tr>
+<tr class="separator:ac538ddba9d8c0b8d741bcaa7307faee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_a00298"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a00298')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="a00298.html">Urho3D::ReplicationState</a></td></tr>
+<tr class="memitem:a1b0371a8418b54342ffdd20319e9acd7 inherit pub_attribs_a00298"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b0371a8418b54342ffdd20319e9acd7"></a>
+<a class="el" href="a00109.html">Connection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html#a1b0371a8418b54342ffdd20319e9acd7">connection_</a></td></tr>
+<tr class="memdesc:a1b0371a8418b54342ffdd20319e9acd7 inherit pub_attribs_a00298"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parent network connection. <br/></td></tr>
+<tr class="separator:a1b0371a8418b54342ffdd20319e9acd7 inherit pub_attribs_a00298"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Condition on which a thread can wait. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Core/Condition.h</li>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Core/Condition.cpp</li>
+<div class="textblock"><p>Per-user component network replication state. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Scene/ReplicationState.h</li>
 </ul>
 </div><!-- contents -->

@@ -20,51 +20,74 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00143.html">DelayedWorldTransform</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00143.html">DecalVertex</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a01459.html">List of all members</a>  </div>
+<a href="a01147.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::DelayedWorldTransform Struct Reference</div>  </div>
+<div class="title">Urho3D::DecalVertex Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Delayed world transform assignment for parented rigidbodies.  
+<p>Decal vertex.  
  <a href="a00143.html#details">More...</a></p>
 
-<p><code>#include &lt;PhysicsWorld.h&gt;</code></p>
+<p><code>#include &lt;DecalSet.h&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for Urho3D::DelayedWorldTransform:</div>
+Collaboration diagram for Urho3D::DecalVertex:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01460.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a01148.svg" width="655" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a10a4482e844f3e40a940876ca009d54d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a10a4482e844f3e40a940876ca009d54d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a10a4482e844f3e40a940876ca009d54d">DecalVertex</a> ()</td></tr>
+<tr class="memdesc:a10a4482e844f3e40a940876ca009d54d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with defaults. <br/></td></tr>
+<tr class="separator:a10a4482e844f3e40a940876ca009d54d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38f0fc0e0bfeef075090398ca448b451"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38f0fc0e0bfeef075090398ca448b451"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a38f0fc0e0bfeef075090398ca448b451">DecalVertex</a> (const <a class="el" href="a00389.html">Vector3</a> &amp;position, const <a class="el" href="a00389.html">Vector3</a> &amp;normal)</td></tr>
+<tr class="memdesc:a38f0fc0e0bfeef075090398ca448b451"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with position and normal. <br/></td></tr>
+<tr class="separator:a38f0fc0e0bfeef075090398ca448b451"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e89743a735cd84a785c4c599ead4459"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e89743a735cd84a785c4c599ead4459"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DecalVertex</b> (const <a class="el" href="a00389.html">Vector3</a> &amp;position, const <a class="el" href="a00389.html">Vector3</a> &amp;normal, const float *blendWeights, const unsigned char *blendIndices)</td></tr>
+<tr class="separator:a4e89743a735cd84a785c4c599ead4459"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ab09836c962c84f1894292afe55602af1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab09836c962c84f1894292afe55602af1"></a>
-<a class="el" href="a00300.html">RigidBody</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#ab09836c962c84f1894292afe55602af1">rigidBody_</a></td></tr>
-<tr class="memdesc:ab09836c962c84f1894292afe55602af1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rigid body. <br/></td></tr>
-<tr class="separator:ab09836c962c84f1894292afe55602af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0131b2d35075c061ff2062eada5f804b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0131b2d35075c061ff2062eada5f804b"></a>
-<a class="el" href="a00300.html">RigidBody</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a0131b2d35075c061ff2062eada5f804b">parentRigidBody_</a></td></tr>
-<tr class="memdesc:a0131b2d35075c061ff2062eada5f804b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parent rigid body. <br/></td></tr>
-<tr class="separator:a0131b2d35075c061ff2062eada5f804b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a812ef515b451f8a029e086aeed2b9580"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a812ef515b451f8a029e086aeed2b9580"></a>
-<a class="el" href="a00384.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a812ef515b451f8a029e086aeed2b9580">worldPosition_</a></td></tr>
-<tr class="memdesc:a812ef515b451f8a029e086aeed2b9580"><td class="mdescLeft">&#160;</td><td class="mdescRight">New world position. <br/></td></tr>
-<tr class="separator:a812ef515b451f8a029e086aeed2b9580"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad49b084e556469f0b2e3ac52cd37c8ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad49b084e556469f0b2e3ac52cd37c8ca"></a>
-<a class="el" href="a00277.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#ad49b084e556469f0b2e3ac52cd37c8ca">worldRotation_</a></td></tr>
-<tr class="memdesc:ad49b084e556469f0b2e3ac52cd37c8ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">New world rotation. <br/></td></tr>
-<tr class="separator:ad49b084e556469f0b2e3ac52cd37c8ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d1778c08524a3b372578f43b0ee888c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d1778c08524a3b372578f43b0ee888c"></a>
+<a class="el" href="a00389.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a6d1778c08524a3b372578f43b0ee888c">position_</a></td></tr>
+<tr class="memdesc:a6d1778c08524a3b372578f43b0ee888c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position. <br/></td></tr>
+<tr class="separator:a6d1778c08524a3b372578f43b0ee888c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea7223797d2b166173d687f1a40470c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea7223797d2b166173d687f1a40470c7"></a>
+<a class="el" href="a00389.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#aea7223797d2b166173d687f1a40470c7">normal_</a></td></tr>
+<tr class="memdesc:aea7223797d2b166173d687f1a40470c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normal. <br/></td></tr>
+<tr class="separator:aea7223797d2b166173d687f1a40470c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6bcbb759e982b5bbcd6e46b03216240"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6bcbb759e982b5bbcd6e46b03216240"></a>
+<a class="el" href="a00388.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#ad6bcbb759e982b5bbcd6e46b03216240">texCoord_</a></td></tr>
+<tr class="memdesc:ad6bcbb759e982b5bbcd6e46b03216240"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00360.html" title="Base class for texture resources.">Texture</a> coordinates. <br/></td></tr>
+<tr class="separator:ad6bcbb759e982b5bbcd6e46b03216240"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0d33f8c2f9cca0054c52c28a6119ffb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae0d33f8c2f9cca0054c52c28a6119ffb"></a>
+<a class="el" href="a00390.html">Vector4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#ae0d33f8c2f9cca0054c52c28a6119ffb">tangent_</a></td></tr>
+<tr class="memdesc:ae0d33f8c2f9cca0054c52c28a6119ffb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tangent. <br/></td></tr>
+<tr class="separator:ae0d33f8c2f9cca0054c52c28a6119ffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f141477e4ac46b9525030c74e02805b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8f141477e4ac46b9525030c74e02805b"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a8f141477e4ac46b9525030c74e02805b">blendWeights_</a> [4]</td></tr>
+<tr class="memdesc:a8f141477e4ac46b9525030c74e02805b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blend weights. <br/></td></tr>
+<tr class="separator:a8f141477e4ac46b9525030c74e02805b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23aa3f4af4ddaf9beaa1530818d581d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23aa3f4af4ddaf9beaa1530818d581d3"></a>
+unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00143.html#a23aa3f4af4ddaf9beaa1530818d581d3">blendIndices_</a> [4]</td></tr>
+<tr class="memdesc:a23aa3f4af4ddaf9beaa1530818d581d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blend indices. <br/></td></tr>
+<tr class="separator:a23aa3f4af4ddaf9beaa1530818d581d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Delayed world transform assignment for parented rigidbodies. </p>
+<div class="textblock"><p>Decal vertex. </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Physics/PhysicsWorld.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/DecalSet.h</li>
 </ul>
 </div><!-- contents -->

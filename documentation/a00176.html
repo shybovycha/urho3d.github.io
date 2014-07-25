@@ -20,96 +20,54 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00176.html">GraphicsImpl</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00176.html">GlyphLocation</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="#friends">Friends</a> &#124;
-<a href="a01223.html">List of all members</a>  </div>
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="a01664.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::GraphicsImpl Class Reference</div>  </div>
+<div class="title">Urho3D::GlyphLocation Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Graphics subsystem implementation. Holds API-specific objects.  
+<p>Glyph and its location within the text. Used when preparing text rendering.  
  <a href="a00176.html#details">More...</a></p>
 
-<p><code>#include &lt;OGLGraphicsImpl.h&gt;</code></p>
+<p><code>#include &lt;Text.h&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for Urho3D::GraphicsImpl:</div>
+Collaboration diagram for Urho3D::GlyphLocation:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a01224.svg" width="511" height="499"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a01665.svg" width="179" height="136"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5d9ca44f230629dad1691a8f06f13e83"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d9ca44f230629dad1691a8f06f13e83"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#a5d9ca44f230629dad1691a8f06f13e83">GraphicsImpl</a> ()</td></tr>
-<tr class="memdesc:a5d9ca44f230629dad1691a8f06f13e83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
-<tr class="separator:a5d9ca44f230629dad1691a8f06f13e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a1d076963965a3cd80c70564461e366"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a1d076963965a3cd80c70564461e366"></a>
-SDL_Window *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#a2a1d076963965a3cd80c70564461e366">GetWindow</a> () const </td></tr>
-<tr class="memdesc:a2a1d076963965a3cd80c70564461e366"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the SDL window. <br/></td></tr>
-<tr class="separator:a2a1d076963965a3cd80c70564461e366"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6123e1a5562d91e3394724694a10c5d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6123e1a5562d91e3394724694a10c5d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>GlyphLocation</b> (int x, int y, const <a class="el" href="a00167.html">FontGlyph</a> *glyph)</td></tr>
+<tr class="separator:ac6123e1a5562d91e3394724694a10c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:ae67ebfb1ac3c71dee287cd2672c4f2b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae67ebfb1ac3c71dee287cd2672c4f2b8"></a>
-SDL_Window *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#ae67ebfb1ac3c71dee287cd2672c4f2b8">window_</a></td></tr>
-<tr class="memdesc:ae67ebfb1ac3c71dee287cd2672c4f2b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDL window. <br/></td></tr>
-<tr class="separator:ae67ebfb1ac3c71dee287cd2672c4f2b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af774063b57fa547640653734de6cdee6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af774063b57fa547640653734de6cdee6"></a>
-SDL_GLContext&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#af774063b57fa547640653734de6cdee6">context_</a></td></tr>
-<tr class="memdesc:af774063b57fa547640653734de6cdee6"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDL OpenGL context. <br/></td></tr>
-<tr class="separator:af774063b57fa547640653734de6cdee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9edfeab528141f2e148a540feff0de6e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9edfeab528141f2e148a540feff0de6e"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#a9edfeab528141f2e148a540feff0de6e">systemFbo_</a></td></tr>
-<tr class="memdesc:a9edfeab528141f2e148a540feff0de6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">IOS system framebuffer handle. <br/></td></tr>
-<tr class="separator:a9edfeab528141f2e148a540feff0de6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f5b4d3c670a6e2a41fb9eef3efb34b6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f5b4d3c670a6e2a41fb9eef3efb34b6"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#a2f5b4d3c670a6e2a41fb9eef3efb34b6">activeTexture_</a></td></tr>
-<tr class="memdesc:a2f5b4d3c670a6e2a41fb9eef3efb34b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Active texture unit. <br/></td></tr>
-<tr class="separator:a2f5b4d3c670a6e2a41fb9eef3efb34b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4eca6e0f64f45ebf7d858c302d48f7b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac4eca6e0f64f45ebf7d858c302d48f7b"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#ac4eca6e0f64f45ebf7d858c302d48f7b">enabledAttributes_</a></td></tr>
-<tr class="memdesc:ac4eca6e0f64f45ebf7d858c302d48f7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex attributes in use. <br/></td></tr>
-<tr class="separator:ac4eca6e0f64f45ebf7d858c302d48f7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fefd07accc911d9f9fb418409852a56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4fefd07accc911d9f9fb418409852a56"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#a4fefd07accc911d9f9fb418409852a56">boundFbo_</a></td></tr>
-<tr class="memdesc:a4fefd07accc911d9f9fb418409852a56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Currently bound frame buffer object. <br/></td></tr>
-<tr class="separator:a4fefd07accc911d9f9fb418409852a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae71f3d6cd662597b086a8f9cff3e7061"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae71f3d6cd662597b086a8f9cff3e7061"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#ae71f3d6cd662597b086a8f9cff3e7061">pixelFormat_</a></td></tr>
-<tr class="memdesc:ae71f3d6cd662597b086a8f9cff3e7061"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current pixel format. <br/></td></tr>
-<tr class="separator:ae71f3d6cd662597b086a8f9cff3e7061"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94a65920103f9d6fe4c0ad2353d5be45"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a94a65920103f9d6fe4c0ad2353d5be45"></a>
-<a class="el" href="a00179.html">HashMap</a>&lt; unsigned long long, <br class="typebreak"/>
-<a class="el" href="a00166.html">FrameBufferObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#a94a65920103f9d6fe4c0ad2353d5be45">frameBuffers_</a></td></tr>
-<tr class="memdesc:a94a65920103f9d6fe4c0ad2353d5be45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map for FBO's per resolution and format. <br/></td></tr>
-<tr class="separator:a94a65920103f9d6fe4c0ad2353d5be45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8fa8288faf79bbeb2b98c6299093760"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad8fa8288faf79bbeb2b98c6299093760"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#ad8fa8288faf79bbeb2b98c6299093760">fboDirty_</a></td></tr>
-<tr class="memdesc:ad8fa8288faf79bbeb2b98c6299093760"><td class="mdescLeft">&#160;</td><td class="mdescRight">Need FBO commit flag. <br/></td></tr>
-<tr class="separator:ad8fa8288faf79bbeb2b98c6299093760"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf88c7641d643ee5ffde6fd6cb78131e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf88c7641d643ee5ffde6fd6cb78131e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#adf88c7641d643ee5ffde6fd6cb78131e">sRGBWrite_</a></td></tr>
-<tr class="memdesc:adf88c7641d643ee5ffde6fd6cb78131e"><td class="mdescLeft">&#160;</td><td class="mdescRight">sRGB write mode flag. <br/></td></tr>
-<tr class="separator:adf88c7641d643ee5ffde6fd6cb78131e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:ae5cfe0c0e0b06d536d5814bd1ff4818f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5cfe0c0e0b06d536d5814bd1ff4818f"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>Graphics</b></td></tr>
-<tr class="separator:ae5cfe0c0e0b06d536d5814bd1ff4818f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a9db32f16f8d4f5b41cd9d66b130ad980"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9db32f16f8d4f5b41cd9d66b130ad980"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#a9db32f16f8d4f5b41cd9d66b130ad980">x_</a></td></tr>
+<tr class="memdesc:a9db32f16f8d4f5b41cd9d66b130ad980"><td class="mdescLeft">&#160;</td><td class="mdescRight">X coordinate. <br/></td></tr>
+<tr class="separator:a9db32f16f8d4f5b41cd9d66b130ad980"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abec1ef8a1037c5794f429250a3aa2587"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abec1ef8a1037c5794f429250a3aa2587"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#abec1ef8a1037c5794f429250a3aa2587">y_</a></td></tr>
+<tr class="memdesc:abec1ef8a1037c5794f429250a3aa2587"><td class="mdescLeft">&#160;</td><td class="mdescRight">Y coordinate. <br/></td></tr>
+<tr class="separator:abec1ef8a1037c5794f429250a3aa2587"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d17f5e562260b89d4723f671a054a1c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d17f5e562260b89d4723f671a054a1c"></a>
+const <a class="el" href="a00167.html">FontGlyph</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00176.html#a6d17f5e562260b89d4723f671a054a1c">glyph_</a></td></tr>
+<tr class="memdesc:a6d17f5e562260b89d4723f671a054a1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Glyph. <br/></td></tr>
+<tr class="separator:a6d17f5e562260b89d4723f671a054a1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Graphics subsystem implementation. Holds API-specific objects. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/OpenGL/OGLGraphicsImpl.h</li>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/OpenGL/OGLGraphicsImpl.cpp</li>
+<div class="textblock"><p>Glyph and its location within the text. Used when preparing text rendering. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/UI/Text.h</li>
 </ul>
 </div><!-- contents -->
