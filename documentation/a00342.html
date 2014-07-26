@@ -20,136 +20,168 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00342.html">Spline</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00342.html">Sphere</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="a01048.html">List of all members</a>  </div>
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="a01411.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::Spline Class Reference</div>  </div>
+<div class="title">Urho3D::Sphere Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="a00342.html" title="Spline class to get a point on it based off the interpolation mode.">Spline</a> class to get a point on it based off the interpolation mode.  
+<p>Sphere in three-dimensional space.  
  <a href="a00342.html#details">More...</a></p>
 
-<p><code>#include &lt;Spline.h&gt;</code></p>
+<p><code>#include &lt;Sphere.h&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for Urho3D::Spline:</div>
+Collaboration diagram for Urho3D::Sphere:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a01049.svg" width="206" height="216"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a01412.svg" width="224" height="246"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac53bf81997466016d00ed1e94500c4ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac53bf81997466016d00ed1e94500c4ea"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#ac53bf81997466016d00ed1e94500c4ea">Spline</a> ()</td></tr>
-<tr class="memdesc:ac53bf81997466016d00ed1e94500c4ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. <br/></td></tr>
-<tr class="separator:ac53bf81997466016d00ed1e94500c4ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6713729fcc73642aa7ad7e7433e18c0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6713729fcc73642aa7ad7e7433e18c0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#ad6713729fcc73642aa7ad7e7433e18c0">Spline</a> (InterpolationMode mode)</td></tr>
-<tr class="memdesc:ad6713729fcc73642aa7ad7e7433e18c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor setting InterpolationMode. <br/></td></tr>
-<tr class="separator:ad6713729fcc73642aa7ad7e7433e18c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1e1a1469b2e32c5216961a2c95b5b80"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1e1a1469b2e32c5216961a2c95b5b80"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#aa1e1a1469b2e32c5216961a2c95b5b80">Spline</a> (const <a class="el" href="a00387.html">Vector</a>&lt; <a class="el" href="a00385.html">Variant</a> &gt; &amp;knots, InterpolationMode mode=BEZIER_CURVE)</td></tr>
-<tr class="memdesc:aa1e1a1469b2e32c5216961a2c95b5b80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor setting Knots and InterpolationMode. <br/></td></tr>
-<tr class="separator:aa1e1a1469b2e32c5216961a2c95b5b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08d2835e6c28d8fecfef91f6d4da63bf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08d2835e6c28d8fecfef91f6d4da63bf"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a08d2835e6c28d8fecfef91f6d4da63bf">Spline</a> (const <a class="el" href="a00342.html">Spline</a> &amp;rhs)</td></tr>
-<tr class="memdesc:a08d2835e6c28d8fecfef91f6d4da63bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor. <br/></td></tr>
-<tr class="separator:a08d2835e6c28d8fecfef91f6d4da63bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57318bc693071d27e73720792bc18040"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57318bc693071d27e73720792bc18040"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a57318bc693071d27e73720792bc18040">operator=</a> (const <a class="el" href="a00342.html">Spline</a> &amp;rhs)</td></tr>
-<tr class="memdesc:a57318bc693071d27e73720792bc18040"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy operator. <br/></td></tr>
-<tr class="separator:a57318bc693071d27e73720792bc18040"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d8aa3ead2efb35e2fb0f6c09225de53"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d8aa3ead2efb35e2fb0f6c09225de53"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a0d8aa3ead2efb35e2fb0f6c09225de53">operator==</a> (const <a class="el" href="a00342.html">Spline</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:a0d8aa3ead2efb35e2fb0f6c09225de53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equality operator. <br/></td></tr>
-<tr class="separator:a0d8aa3ead2efb35e2fb0f6c09225de53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28f3f34d158e4acd514a92ab7b328f0a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a28f3f34d158e4acd514a92ab7b328f0a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a28f3f34d158e4acd514a92ab7b328f0a">operator!=</a> (const <a class="el" href="a00342.html">Spline</a> &amp;rhs) const </td></tr>
-<tr class="memdesc:a28f3f34d158e4acd514a92ab7b328f0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non Equality operator. <br/></td></tr>
-<tr class="separator:a28f3f34d158e4acd514a92ab7b328f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae72846e35cb7f8967e7021f98a2807da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae72846e35cb7f8967e7021f98a2807da"></a>
-InterpolationMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#ae72846e35cb7f8967e7021f98a2807da">GetInterpolationMode</a> () const </td></tr>
-<tr class="memdesc:ae72846e35cb7f8967e7021f98a2807da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the ImplementationMode. <br/></td></tr>
-<tr class="separator:ae72846e35cb7f8967e7021f98a2807da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c2f80a42a367960b386ed7465d2560c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c2f80a42a367960b386ed7465d2560c"></a>
-const <a class="el" href="a00387.html">VariantVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a5c2f80a42a367960b386ed7465d2560c">GetKnots</a> () const </td></tr>
-<tr class="memdesc:a5c2f80a42a367960b386ed7465d2560c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the Knots of the <a class="el" href="a00342.html" title="Spline class to get a point on it based off the interpolation mode.">Spline</a>. <br/></td></tr>
-<tr class="separator:a5c2f80a42a367960b386ed7465d2560c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a569bf2f9c5906ddc49527094794b3f12"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a569bf2f9c5906ddc49527094794b3f12"></a>
-<a class="el" href="a00385.html">Variant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a569bf2f9c5906ddc49527094794b3f12">GetKnot</a> (unsigned index) const </td></tr>
-<tr class="memdesc:a569bf2f9c5906ddc49527094794b3f12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the Knot at the specific index. <br/></td></tr>
-<tr class="separator:a569bf2f9c5906ddc49527094794b3f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a797a4db283284031153a6dd1b6a9ded9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a797a4db283284031153a6dd1b6a9ded9"></a>
-<a class="el" href="a00385.html">Variant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a797a4db283284031153a6dd1b6a9ded9">GetPoint</a> (float f) const </td></tr>
-<tr class="memdesc:a797a4db283284031153a6dd1b6a9ded9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the T of the point of the <a class="el" href="a00342.html" title="Spline class to get a point on it based off the interpolation mode.">Spline</a> at f from 0.f - 1.f. <br/></td></tr>
-<tr class="separator:a797a4db283284031153a6dd1b6a9ded9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54065e0455f38df16ca0e4d965bc978a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54065e0455f38df16ca0e4d965bc978a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a54065e0455f38df16ca0e4d965bc978a">SetInterpolationMode</a> (InterpolationMode interpolationMode)</td></tr>
-<tr class="memdesc:a54065e0455f38df16ca0e4d965bc978a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the InterpolationMode of the <a class="el" href="a00342.html" title="Spline class to get a point on it based off the interpolation mode.">Spline</a>. <br/></td></tr>
-<tr class="separator:a54065e0455f38df16ca0e4d965bc978a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46456817e28e5850767742369d157778"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46456817e28e5850767742369d157778"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a46456817e28e5850767742369d157778">SetKnots</a> (const <a class="el" href="a00387.html">Vector</a>&lt; <a class="el" href="a00385.html">Variant</a> &gt; &amp;knots)</td></tr>
-<tr class="memdesc:a46456817e28e5850767742369d157778"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Knots of the <a class="el" href="a00342.html" title="Spline class to get a point on it based off the interpolation mode.">Spline</a>. <br/></td></tr>
-<tr class="separator:a46456817e28e5850767742369d157778"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5a5477e8dd8bd471c6a00e508cfc399"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5a5477e8dd8bd471c6a00e508cfc399"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#ad5a5477e8dd8bd471c6a00e508cfc399">SetKnot</a> (const <a class="el" href="a00385.html">Variant</a> &amp;knot, unsigned index)</td></tr>
-<tr class="memdesc:ad5a5477e8dd8bd471c6a00e508cfc399"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Knot value of an existing Knot. <br/></td></tr>
-<tr class="separator:ad5a5477e8dd8bd471c6a00e508cfc399"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa77a744c301a9c7475d635d00b4df2e7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa77a744c301a9c7475d635d00b4df2e7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#aa77a744c301a9c7475d635d00b4df2e7">AddKnot</a> (const <a class="el" href="a00385.html">Variant</a> &amp;knot)</td></tr>
-<tr class="memdesc:aa77a744c301a9c7475d635d00b4df2e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a Knot to the end of the <a class="el" href="a00342.html" title="Spline class to get a point on it based off the interpolation mode.">Spline</a>. <br/></td></tr>
-<tr class="separator:aa77a744c301a9c7475d635d00b4df2e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7be487029e035f59f9acc214414a8a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa7be487029e035f59f9acc214414a8a3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#aa7be487029e035f59f9acc214414a8a3">AddKnot</a> (const <a class="el" href="a00385.html">Variant</a> &amp;knot, unsigned index)</td></tr>
-<tr class="memdesc:aa7be487029e035f59f9acc214414a8a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a Knot to the <a class="el" href="a00342.html" title="Spline class to get a point on it based off the interpolation mode.">Spline</a> at a specific index. <br/></td></tr>
-<tr class="separator:aa7be487029e035f59f9acc214414a8a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba4c008df1cac89a3b9b876184e6ad0a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba4c008df1cac89a3b9b876184e6ad0a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#aba4c008df1cac89a3b9b876184e6ad0a">RemoveKnot</a> ()</td></tr>
-<tr class="memdesc:aba4c008df1cac89a3b9b876184e6ad0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the last Knot on the <a class="el" href="a00342.html" title="Spline class to get a point on it based off the interpolation mode.">Spline</a>. <br/></td></tr>
-<tr class="separator:aba4c008df1cac89a3b9b876184e6ad0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcdb84d33afd31139089a98079afe19d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afcdb84d33afd31139089a98079afe19d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#afcdb84d33afd31139089a98079afe19d">RemoveKnot</a> (unsigned index)</td></tr>
-<tr class="memdesc:afcdb84d33afd31139089a98079afe19d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the Knot at the specific index. <br/></td></tr>
-<tr class="separator:afcdb84d33afd31139089a98079afe19d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b405174354c875bd7d0623385626f67"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b405174354c875bd7d0623385626f67"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a0b405174354c875bd7d0623385626f67">Clear</a> ()</td></tr>
-<tr class="memdesc:a0b405174354c875bd7d0623385626f67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the <a class="el" href="a00342.html" title="Spline class to get a point on it based off the interpolation mode.">Spline</a>. <br/></td></tr>
-<tr class="separator:a0b405174354c875bd7d0623385626f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e0816e008011eb7e006ccfa845b2e46"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e0816e008011eb7e006ccfa845b2e46"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a1e0816e008011eb7e006ccfa845b2e46">Sphere</a> ()</td></tr>
+<tr class="memdesc:a1e0816e008011eb7e006ccfa845b2e46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct undefined. <br/></td></tr>
+<tr class="separator:a1e0816e008011eb7e006ccfa845b2e46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add0241cc80c6bf676182fd86065b5dd9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add0241cc80c6bf676182fd86065b5dd9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#add0241cc80c6bf676182fd86065b5dd9">Sphere</a> (const <a class="el" href="a00342.html">Sphere</a> &amp;sphere)</td></tr>
+<tr class="memdesc:add0241cc80c6bf676182fd86065b5dd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy-construct from another sphere. <br/></td></tr>
+<tr class="separator:add0241cc80c6bf676182fd86065b5dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7103b3daf655e0243658df2e413ffd5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac7103b3daf655e0243658df2e413ffd5"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#ac7103b3daf655e0243658df2e413ffd5">Sphere</a> (const <a class="el" href="a00390.html">Vector3</a> &amp;center, float radius)</td></tr>
+<tr class="memdesc:ac7103b3daf655e0243658df2e413ffd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from center and radius. <br/></td></tr>
+<tr class="separator:ac7103b3daf655e0243658df2e413ffd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a6507c315906c22b18b4c991d4e0427"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a6507c315906c22b18b4c991d4e0427"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a6a6507c315906c22b18b4c991d4e0427">Sphere</a> (const <a class="el" href="a00390.html">Vector3</a> *vertices, unsigned count)</td></tr>
+<tr class="memdesc:a6a6507c315906c22b18b4c991d4e0427"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from an array of vertices. <br/></td></tr>
+<tr class="separator:a6a6507c315906c22b18b4c991d4e0427"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20df45cc6979726d4535f6cb5f8c5f2d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20df45cc6979726d4535f6cb5f8c5f2d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a20df45cc6979726d4535f6cb5f8c5f2d">Sphere</a> (const <a class="el" href="a00087.html">BoundingBox</a> &amp;box)</td></tr>
+<tr class="memdesc:a20df45cc6979726d4535f6cb5f8c5f2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a bounding box. <br/></td></tr>
+<tr class="separator:a20df45cc6979726d4535f6cb5f8c5f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c0961e80cee0e23063bd0b534a53556"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9c0961e80cee0e23063bd0b534a53556"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a9c0961e80cee0e23063bd0b534a53556">Sphere</a> (const <a class="el" href="a00172.html">Frustum</a> &amp;frustum)</td></tr>
+<tr class="memdesc:a9c0961e80cee0e23063bd0b534a53556"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a frustum. <br/></td></tr>
+<tr class="separator:a9c0961e80cee0e23063bd0b534a53556"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade91e8c08b0cb5478a9ded4f0ce13c87"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade91e8c08b0cb5478a9ded4f0ce13c87"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#ade91e8c08b0cb5478a9ded4f0ce13c87">Sphere</a> (const <a class="el" href="a00280.html">Polyhedron</a> &amp;poly)</td></tr>
+<tr class="memdesc:ade91e8c08b0cb5478a9ded4f0ce13c87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a polyhedron. <br/></td></tr>
+<tr class="separator:ade91e8c08b0cb5478a9ded4f0ce13c87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a254838bc3db33b19b5ad8a3bded3e4f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a254838bc3db33b19b5ad8a3bded3e4f7"></a>
+<a class="el" href="a00342.html">Sphere</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a254838bc3db33b19b5ad8a3bded3e4f7">operator=</a> (const <a class="el" href="a00342.html">Sphere</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a254838bc3db33b19b5ad8a3bded3e4f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign from another sphere. <br/></td></tr>
+<tr class="separator:a254838bc3db33b19b5ad8a3bded3e4f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53e982ee4c7f4d7c998f142b6d736de4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53e982ee4c7f4d7c998f142b6d736de4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a53e982ee4c7f4d7c998f142b6d736de4">operator==</a> (const <a class="el" href="a00342.html">Sphere</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:a53e982ee4c7f4d7c998f142b6d736de4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for equality with another sphere. <br/></td></tr>
+<tr class="separator:a53e982ee4c7f4d7c998f142b6d736de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a689605300a79246ac610a16f2e1a52f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a689605300a79246ac610a16f2e1a52f8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a689605300a79246ac610a16f2e1a52f8">operator!=</a> (const <a class="el" href="a00342.html">Sphere</a> &amp;rhs) const </td></tr>
+<tr class="memdesc:a689605300a79246ac610a16f2e1a52f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for inequality with another sphere. <br/></td></tr>
+<tr class="separator:a689605300a79246ac610a16f2e1a52f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a605a559ba1b2eec5e65d17a39b849b60"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a605a559ba1b2eec5e65d17a39b849b60"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a605a559ba1b2eec5e65d17a39b849b60">Define</a> (const <a class="el" href="a00342.html">Sphere</a> &amp;sphere)</td></tr>
+<tr class="memdesc:a605a559ba1b2eec5e65d17a39b849b60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define from another sphere. <br/></td></tr>
+<tr class="separator:a605a559ba1b2eec5e65d17a39b849b60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b245e02d04bf7109c1f61c8f9c280d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b245e02d04bf7109c1f61c8f9c280d7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a4b245e02d04bf7109c1f61c8f9c280d7">Define</a> (const <a class="el" href="a00390.html">Vector3</a> &amp;center, float radius)</td></tr>
+<tr class="memdesc:a4b245e02d04bf7109c1f61c8f9c280d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define from center and radius. <br/></td></tr>
+<tr class="separator:a4b245e02d04bf7109c1f61c8f9c280d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6de05290d5055a082e3d9b43655336f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6de05290d5055a082e3d9b43655336f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#ad6de05290d5055a082e3d9b43655336f">Define</a> (const <a class="el" href="a00390.html">Vector3</a> *vertices, unsigned count)</td></tr>
+<tr class="memdesc:ad6de05290d5055a082e3d9b43655336f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define from an array of vertices. <br/></td></tr>
+<tr class="separator:ad6de05290d5055a082e3d9b43655336f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a874cb74998723002fcffbc591313de5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a874cb74998723002fcffbc591313de5f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a874cb74998723002fcffbc591313de5f">Define</a> (const <a class="el" href="a00087.html">BoundingBox</a> &amp;box)</td></tr>
+<tr class="memdesc:a874cb74998723002fcffbc591313de5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define from a bounding box. <br/></td></tr>
+<tr class="separator:a874cb74998723002fcffbc591313de5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1077254c9dabc3cfb7953719068fd369"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1077254c9dabc3cfb7953719068fd369"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a1077254c9dabc3cfb7953719068fd369">Define</a> (const <a class="el" href="a00172.html">Frustum</a> &amp;frustum)</td></tr>
+<tr class="memdesc:a1077254c9dabc3cfb7953719068fd369"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define from a frustum. <br/></td></tr>
+<tr class="separator:a1077254c9dabc3cfb7953719068fd369"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0412fa9e0c6c54d3ece0f6f7c9d2dcb9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0412fa9e0c6c54d3ece0f6f7c9d2dcb9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a0412fa9e0c6c54d3ece0f6f7c9d2dcb9">Define</a> (const <a class="el" href="a00280.html">Polyhedron</a> &amp;poly)</td></tr>
+<tr class="memdesc:a0412fa9e0c6c54d3ece0f6f7c9d2dcb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define from a polyhedron. <br/></td></tr>
+<tr class="separator:a0412fa9e0c6c54d3ece0f6f7c9d2dcb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b5d4b9d99b9b4b158ca504a4e7a5b93"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b5d4b9d99b9b4b158ca504a4e7a5b93"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a7b5d4b9d99b9b4b158ca504a4e7a5b93">Merge</a> (const <a class="el" href="a00390.html">Vector3</a> &amp;point)</td></tr>
+<tr class="memdesc:a7b5d4b9d99b9b4b158ca504a4e7a5b93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Merge a point. <br/></td></tr>
+<tr class="separator:a7b5d4b9d99b9b4b158ca504a4e7a5b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a486bfd22bdd03c4e3f2a32a82b7e1553"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a486bfd22bdd03c4e3f2a32a82b7e1553"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a486bfd22bdd03c4e3f2a32a82b7e1553">Merge</a> (const <a class="el" href="a00390.html">Vector3</a> *vertices, unsigned count)</td></tr>
+<tr class="memdesc:a486bfd22bdd03c4e3f2a32a82b7e1553"><td class="mdescLeft">&#160;</td><td class="mdescRight">Merge an array of vertices. <br/></td></tr>
+<tr class="separator:a486bfd22bdd03c4e3f2a32a82b7e1553"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97d624c4eb77e300556222e5e5898821"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97d624c4eb77e300556222e5e5898821"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a97d624c4eb77e300556222e5e5898821">Merge</a> (const <a class="el" href="a00087.html">BoundingBox</a> &amp;box)</td></tr>
+<tr class="memdesc:a97d624c4eb77e300556222e5e5898821"><td class="mdescLeft">&#160;</td><td class="mdescRight">Merge a bounding box. <br/></td></tr>
+<tr class="separator:a97d624c4eb77e300556222e5e5898821"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a790a7e9c6d43465a1ed5f9115daf805d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a790a7e9c6d43465a1ed5f9115daf805d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a790a7e9c6d43465a1ed5f9115daf805d">Merge</a> (const <a class="el" href="a00172.html">Frustum</a> &amp;frustum)</td></tr>
+<tr class="memdesc:a790a7e9c6d43465a1ed5f9115daf805d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Merge a frustum. <br/></td></tr>
+<tr class="separator:a790a7e9c6d43465a1ed5f9115daf805d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86aa6ab6cbb630ebdf16ee8c4ac834f9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86aa6ab6cbb630ebdf16ee8c4ac834f9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a86aa6ab6cbb630ebdf16ee8c4ac834f9">Merge</a> (const <a class="el" href="a00280.html">Polyhedron</a> &amp;poly)</td></tr>
+<tr class="memdesc:a86aa6ab6cbb630ebdf16ee8c4ac834f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Merge a polyhedron. <br/></td></tr>
+<tr class="separator:a86aa6ab6cbb630ebdf16ee8c4ac834f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7420edaf1d8d1850a794c3f885c60a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac7420edaf1d8d1850a794c3f885c60a6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#ac7420edaf1d8d1850a794c3f885c60a6">Merge</a> (const <a class="el" href="a00342.html">Sphere</a> &amp;sphere)</td></tr>
+<tr class="memdesc:ac7420edaf1d8d1850a794c3f885c60a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Merge a sphere. <br/></td></tr>
+<tr class="separator:ac7420edaf1d8d1850a794c3f885c60a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6437c8b116f63a6d3fcbf996a49a34b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6437c8b116f63a6d3fcbf996a49a34b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#ac6437c8b116f63a6d3fcbf996a49a34b">Clear</a> ()</td></tr>
+<tr class="memdesc:ac6437c8b116f63a6d3fcbf996a49a34b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear to undefined state. <br/></td></tr>
+<tr class="separator:ac6437c8b116f63a6d3fcbf996a49a34b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ec9fa86b2e8630a7d285f4d9eee6227"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ec9fa86b2e8630a7d285f4d9eee6227"></a>
+Intersection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a8ec9fa86b2e8630a7d285f4d9eee6227">IsInside</a> (const <a class="el" href="a00390.html">Vector3</a> &amp;point) const </td></tr>
+<tr class="memdesc:a8ec9fa86b2e8630a7d285f4d9eee6227"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if a point is inside. <br/></td></tr>
+<tr class="separator:a8ec9fa86b2e8630a7d285f4d9eee6227"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0fefc454ea18c44b5f08510fb12fded"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab0fefc454ea18c44b5f08510fb12fded"></a>
+Intersection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#ab0fefc454ea18c44b5f08510fb12fded">IsInside</a> (const <a class="el" href="a00342.html">Sphere</a> &amp;sphere) const </td></tr>
+<tr class="memdesc:ab0fefc454ea18c44b5f08510fb12fded"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if another sphere is inside, outside or intersects. <br/></td></tr>
+<tr class="separator:ab0fefc454ea18c44b5f08510fb12fded"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9bdab6691b5614918d332f2ab4b8110"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9bdab6691b5614918d332f2ab4b8110"></a>
+Intersection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#af9bdab6691b5614918d332f2ab4b8110">IsInsideFast</a> (const <a class="el" href="a00342.html">Sphere</a> &amp;sphere) const </td></tr>
+<tr class="memdesc:af9bdab6691b5614918d332f2ab4b8110"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if another sphere is (partially) inside or outside. <br/></td></tr>
+<tr class="separator:af9bdab6691b5614918d332f2ab4b8110"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64b3945246b85e7adc0825c62f7c6f06"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a64b3945246b85e7adc0825c62f7c6f06"></a>
+Intersection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a64b3945246b85e7adc0825c62f7c6f06">IsInside</a> (const <a class="el" href="a00087.html">BoundingBox</a> &amp;box) const </td></tr>
+<tr class="memdesc:a64b3945246b85e7adc0825c62f7c6f06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if a bounding box is inside, outside or intersects. <br/></td></tr>
+<tr class="separator:a64b3945246b85e7adc0825c62f7c6f06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b369dcff2f32bc523fa550acef38d58"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b369dcff2f32bc523fa550acef38d58"></a>
+Intersection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a9b369dcff2f32bc523fa550acef38d58">IsInsideFast</a> (const <a class="el" href="a00087.html">BoundingBox</a> &amp;box) const </td></tr>
+<tr class="memdesc:a9b369dcff2f32bc523fa550acef38d58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if a bounding box is (partially) inside or outside. <br/></td></tr>
+<tr class="separator:a9b369dcff2f32bc523fa550acef38d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bb41a663363888183521b7f73e5630a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7bb41a663363888183521b7f73e5630a"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a7bb41a663363888183521b7f73e5630a">Distance</a> (const <a class="el" href="a00390.html">Vector3</a> &amp;point) const </td></tr>
+<tr class="memdesc:a7bb41a663363888183521b7f73e5630a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return distance of a point to the surface, or 0 if inside. <br/></td></tr>
+<tr class="separator:a7bb41a663363888183521b7f73e5630a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a8efd8706f6896bf30783ede383993fcb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8efd8706f6896bf30783ede383993fcb"></a>
-<a class="el" href="a00385.html">Variant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a8efd8706f6896bf30783ede383993fcb">BezierInterpolation</a> (const <a class="el" href="a00387.html">Vector</a>&lt; <a class="el" href="a00385.html">Variant</a> &gt; &amp;knots, float t) const </td></tr>
-<tr class="memdesc:a8efd8706f6896bf30783ede383993fcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform Bezier Interpolation on the <a class="el" href="a00342.html" title="Spline class to get a point on it based off the interpolation mode.">Spline</a>. <br/></td></tr>
-<tr class="separator:a8efd8706f6896bf30783ede383993fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbd24ee371b597f045b6974172c08d18"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abbd24ee371b597f045b6974172c08d18"></a>
-<a class="el" href="a00385.html">Variant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#abbd24ee371b597f045b6974172c08d18">LinearInterpolation</a> (const <a class="el" href="a00385.html">Variant</a> &amp;lhs, const <a class="el" href="a00385.html">Variant</a> &amp;rhs, float t) const </td></tr>
-<tr class="memdesc:abbd24ee371b597f045b6974172c08d18"><td class="mdescLeft">&#160;</td><td class="mdescRight">LinearInterpolation between two Variants based on underlying type. <br/></td></tr>
-<tr class="separator:abbd24ee371b597f045b6974172c08d18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a42093a07b9949bcd1c402621e1dad080"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42093a07b9949bcd1c402621e1dad080"></a>
-InterpolationMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a42093a07b9949bcd1c402621e1dad080">interpolationMode_</a></td></tr>
-<tr class="memdesc:a42093a07b9949bcd1c402621e1dad080"><td class="mdescLeft">&#160;</td><td class="mdescRight">InterpolationMode. <br/></td></tr>
-<tr class="separator:a42093a07b9949bcd1c402621e1dad080"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cdddea8ecb5db6129aeccb11ddfb72f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6cdddea8ecb5db6129aeccb11ddfb72f"></a>
-<a class="el" href="a00387.html">VariantVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a6cdddea8ecb5db6129aeccb11ddfb72f">knots_</a></td></tr>
-<tr class="memdesc:a6cdddea8ecb5db6129aeccb11ddfb72f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Knots on the <a class="el" href="a00342.html" title="Spline class to get a point on it based off the interpolation mode.">Spline</a>. <br/></td></tr>
-<tr class="separator:a6cdddea8ecb5db6129aeccb11ddfb72f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ac5d5f99064023816b297780fcab85109"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5d5f99064023816b297780fcab85109"></a>
+<a class="el" href="a00390.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#ac5d5f99064023816b297780fcab85109">center_</a></td></tr>
+<tr class="memdesc:ac5d5f99064023816b297780fcab85109"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00342.html" title="Sphere in three-dimensional space.">Sphere</a> center. <br/></td></tr>
+<tr class="separator:ac5d5f99064023816b297780fcab85109"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97194148abd15ecea37c417304c1173c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97194148abd15ecea37c417304c1173c"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a97194148abd15ecea37c417304c1173c">radius_</a></td></tr>
+<tr class="memdesc:a97194148abd15ecea37c417304c1173c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00342.html" title="Sphere in three-dimensional space.">Sphere</a> radius. <br/></td></tr>
+<tr class="separator:a97194148abd15ecea37c417304c1173c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09d6bdb1bc6377bd9b7bf46a792d9a30"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a09d6bdb1bc6377bd9b7bf46a792d9a30"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00342.html#a09d6bdb1bc6377bd9b7bf46a792d9a30">defined_</a></td></tr>
+<tr class="memdesc:a09d6bdb1bc6377bd9b7bf46a792d9a30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defined flag. <br/></td></tr>
+<tr class="separator:a09d6bdb1bc6377bd9b7bf46a792d9a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="a00342.html" title="Spline class to get a point on it based off the interpolation mode.">Spline</a> class to get a point on it based off the interpolation mode. </p>
+<div class="textblock"><p>Sphere in three-dimensional space. </p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Core/Spline.h</li>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Core/Spline.cpp</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Math/Sphere.h</li>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Math/Sphere.cpp</li>
 </ul>
 </div><!-- contents -->

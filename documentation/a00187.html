@@ -20,81 +20,85 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00187.html">HiresTimer</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00187.html">HashTable</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
-<a href="#friends">Friends</a> &#124;
-<a href="a01056.html">List of all members</a>  </div>
+<a href="a00962.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::HiresTimer Class Reference</div>  </div>
+<div class="title">Urho3D::HashTable&lt; T, U &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>High-resolution operating system timer used in profiling.  
+<p>Hash table with fixed bucket count. Does not support iteration. Should only be used when performance is critical, as <a class="el" href="a00184.html" title="Hash map template class.">HashMap</a> is much more user-friendly.  
  <a href="a00187.html#details">More...</a></p>
 
-<p><code>#include &lt;Timer.h&gt;</code></p>
+<p><code>#include &lt;HashTable.h&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Urho3D::HashTable&lt; T, U &gt;:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00963.svg" width="486" height="270"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00247.html">Node</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hash table node.  <a href="a00247.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a029b1057bc8d9d7ddfe0c1c9ac1a6986"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a029b1057bc8d9d7ddfe0c1c9ac1a6986"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00187.html#a029b1057bc8d9d7ddfe0c1c9ac1a6986">HiresTimer</a> ()</td></tr>
-<tr class="memdesc:a029b1057bc8d9d7ddfe0c1c9ac1a6986"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. Get the starting high-resolution clock value. <br/></td></tr>
-<tr class="separator:a029b1057bc8d9d7ddfe0c1c9ac1a6986"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1318b8d783b6c773813903a18e41da23"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1318b8d783b6c773813903a18e41da23"></a>
-long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00187.html#a1318b8d783b6c773813903a18e41da23">GetUSec</a> (bool reset)</td></tr>
-<tr class="memdesc:a1318b8d783b6c773813903a18e41da23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return elapsed microseconds and optionally reset. <br/></td></tr>
-<tr class="separator:a1318b8d783b6c773813903a18e41da23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c6750e57273c407b7bfa1395b70a738"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c6750e57273c407b7bfa1395b70a738"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00187.html#a8c6750e57273c407b7bfa1395b70a738">Reset</a> ()</td></tr>
-<tr class="memdesc:a8c6750e57273c407b7bfa1395b70a738"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the timer. <br/></td></tr>
-<tr class="separator:a8c6750e57273c407b7bfa1395b70a738"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a3f2546fa091586f1ed07582a815b5ace"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f2546fa091586f1ed07582a815b5ace"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00187.html#a3f2546fa091586f1ed07582a815b5ace">IsSupported</a> ()</td></tr>
-<tr class="memdesc:a3f2546fa091586f1ed07582a815b5ace"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return if high-resolution timer is supported. <br/></td></tr>
-<tr class="separator:a3f2546fa091586f1ed07582a815b5ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a7c9dd70306ccee6dd2cf9d4172f8a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a7c9dd70306ccee6dd2cf9d4172f8a6"></a>
-static long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00187.html#a1a7c9dd70306ccee6dd2cf9d4172f8a6">GetFrequency</a> ()</td></tr>
-<tr class="memdesc:a1a7c9dd70306ccee6dd2cf9d4172f8a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return high-resolution timer frequency if supported. <br/></td></tr>
-<tr class="separator:a1a7c9dd70306ccee6dd2cf9d4172f8a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20b263962f4059d8255df1f8675f42db"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20b263962f4059d8255df1f8675f42db"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00187.html#a20b263962f4059d8255df1f8675f42db">HashTable</a> ()</td></tr>
+<tr class="memdesc:a20b263962f4059d8255df1f8675f42db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct empty. <br/></td></tr>
+<tr class="separator:a20b263962f4059d8255df1f8675f42db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adae78c2b4122840dcb84cb5072c05670"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adae78c2b4122840dcb84cb5072c05670"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00187.html#adae78c2b4122840dcb84cb5072c05670">~HashTable</a> ()</td></tr>
+<tr class="memdesc:adae78c2b4122840dcb84cb5072c05670"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
+<tr class="separator:adae78c2b4122840dcb84cb5072c05670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a138c0087db5bd9b619846e567e02af6c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a138c0087db5bd9b619846e567e02af6c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00187.html#a138c0087db5bd9b619846e567e02af6c">Insert</a> (unsigned hash, const T &amp;value)</td></tr>
+<tr class="memdesc:a138c0087db5bd9b619846e567e02af6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert by hash value. If value with same hash already exists, it is replaced. <br/></td></tr>
+<tr class="separator:a138c0087db5bd9b619846e567e02af6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a896eb133917f137f39786997a8fe0786"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a896eb133917f137f39786997a8fe0786"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00187.html#a896eb133917f137f39786997a8fe0786">Erase</a> (unsigned hash)</td></tr>
+<tr class="memdesc:a896eb133917f137f39786997a8fe0786"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove by hash value. Return true if was found and removed. <br/></td></tr>
+<tr class="separator:a896eb133917f137f39786997a8fe0786"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad42e0a41481fe63041f53504577a81b6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad42e0a41481fe63041f53504577a81b6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00187.html#ad42e0a41481fe63041f53504577a81b6">Clear</a> ()</td></tr>
+<tr class="memdesc:ad42e0a41481fe63041f53504577a81b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all values. <br/></td></tr>
+<tr class="separator:ad42e0a41481fe63041f53504577a81b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bfc5f792d9edb7732561af252222e14"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5bfc5f792d9edb7732561af252222e14"></a>
+T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00187.html#a5bfc5f792d9edb7732561af252222e14">Find</a> (unsigned hash) const </td></tr>
+<tr class="memdesc:a5bfc5f792d9edb7732561af252222e14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find by hash value. Return pointer if was found or null if not found. <br/></td></tr>
+<tr class="separator:a5bfc5f792d9edb7732561af252222e14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0803906c984c9c6e618a474121bde129"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0803906c984c9c6e618a474121bde129"></a>
+<a class="el" href="a00278.html">PODVector</a>&lt; T * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00187.html#a0803906c984c9c6e618a474121bde129">Values</a> () const </td></tr>
+<tr class="memdesc:a0803906c984c9c6e618a474121bde129"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return pointers to all values. <br/></td></tr>
+<tr class="separator:a0803906c984c9c6e618a474121bde129"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:ad7204789394157e2878147df2183632c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad7204789394157e2878147df2183632c"></a>
-long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00187.html#ad7204789394157e2878147df2183632c">startTime_</a></td></tr>
-<tr class="memdesc:ad7204789394157e2878147df2183632c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starting clock value in CPU ticks. <br/></td></tr>
-<tr class="separator:ad7204789394157e2878147df2183632c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
-Static Private Attributes</h2></td></tr>
-<tr class="memitem:a70e7e1dafe3c82a43e28012378790aac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70e7e1dafe3c82a43e28012378790aac"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00187.html#a70e7e1dafe3c82a43e28012378790aac">supported</a></td></tr>
-<tr class="memdesc:a70e7e1dafe3c82a43e28012378790aac"><td class="mdescLeft">&#160;</td><td class="mdescRight">High-resolution timer support flag. <br/></td></tr>
-<tr class="separator:a70e7e1dafe3c82a43e28012378790aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a994e2e1324f3ad1cbfad4050b59077ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a994e2e1324f3ad1cbfad4050b59077ab"></a>
-static long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00187.html#a994e2e1324f3ad1cbfad4050b59077ab">frequency</a></td></tr>
-<tr class="memdesc:a994e2e1324f3ad1cbfad4050b59077ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">High-resolution timer frequency. <br/></td></tr>
-<tr class="separator:a994e2e1324f3ad1cbfad4050b59077ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:a4638b7e7c4a9d32a59f736fe6e5ff8a2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4638b7e7c4a9d32a59f736fe6e5ff8a2"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>Time</b></td></tr>
-<tr class="separator:a4638b7e7c4a9d32a59f736fe6e5ff8a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcc63584be6b0b17ca89d0053fd621ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afcc63584be6b0b17ca89d0053fd621ad"></a>
+<a class="el" href="a00052.html">AllocatorBlock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00187.html#afcc63584be6b0b17ca89d0053fd621ad">allocator_</a></td></tr>
+<tr class="memdesc:afcc63584be6b0b17ca89d0053fd621ad"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00051.html" title="Allocator template class. Allocates objects of a specific class.">Allocator</a>. <br/></td></tr>
+<tr class="separator:afcc63584be6b0b17ca89d0053fd621ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c3feb00a984325db05714c5791df1c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9c3feb00a984325db05714c5791df1c6"></a>
+<a class="el" href="a00247.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00187.html#a9c3feb00a984325db05714c5791df1c6">ptrs_</a> [U]</td></tr>
+<tr class="memdesc:a9c3feb00a984325db05714c5791df1c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bucket pointers, fixed size. <br/></td></tr>
+<tr class="separator:a9c3feb00a984325db05714c5791df1c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>High-resolution operating system timer used in profiling. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Core/Timer.h</li>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Core/Timer.cpp</li>
+<div class="textblock"><h3>template&lt;class T, unsigned U&gt;<br/>
+class Urho3D::HashTable&lt; T, U &gt;</h3>
+
+<p>Hash table with fixed bucket count. Does not support iteration. Should only be used when performance is critical, as <a class="el" href="a00184.html" title="Hash map template class.">HashMap</a> is much more user-friendly. </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Container/HashTable.h</li>
 </ul>
 </div><!-- contents -->

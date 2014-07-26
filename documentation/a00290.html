@@ -20,90 +20,78 @@ title: Documentation
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00290.html">RefCounted</a></li>  </ul>
+<li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="a00290.html">RefAttributeAccessorImpl</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="a00997.html">List of all members</a>  </div>
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="a01559.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::RefCounted Class Reference</div>  </div>
+<div class="title">Urho3D::RefAttributeAccessorImpl&lt; T, U &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Base class for intrusively reference-counted objects. These are noncopyable and non-assignable.  
+<p>Template implementation of the attribute accessor invoke helper class using const references.  
  <a href="a00290.html#details">More...</a></p>
 
-<p><code>#include &lt;RefCounted.h&gt;</code></p>
+<p><code>#include &lt;Serializable.h&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Urho3D::RefCounted:</div>
+Inheritance diagram for Urho3D::RefAttributeAccessorImpl&lt; T, U &gt;:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a01001.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a01560.svg" width="222" height="214"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
-Collaboration diagram for Urho3D::RefCounted:</div>
+Collaboration diagram for Urho3D::RefAttributeAccessorImpl&lt; T, U &gt;:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="a01002.svg" width="163" height="136"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="a01561.svg" width="222" height="315"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:aaabc112103f5d014b7eba06f041e17c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaabc112103f5d014b7eba06f041e17c9"></a>
+typedef const U &amp;(T::*&#160;</td><td class="memItemRight" valign="bottom"><b>GetFunctionPtr</b> )() const </td></tr>
+<tr class="separator:aaabc112103f5d014b7eba06f041e17c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0aed983c8ebf16443bd099072bc5c28"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae0aed983c8ebf16443bd099072bc5c28"></a>
+typedef void(T::*&#160;</td><td class="memItemRight" valign="bottom"><b>SetFunctionPtr</b> )(const U &amp;)</td></tr>
+<tr class="separator:ae0aed983c8ebf16443bd099072bc5c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aad6e2ac9e97ca71b28c47248a9aad9b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad6e2ac9e97ca71b28c47248a9aad9b9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00290.html#aad6e2ac9e97ca71b28c47248a9aad9b9">RefCounted</a> ()</td></tr>
-<tr class="memdesc:aad6e2ac9e97ca71b28c47248a9aad9b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. Allocate the reference count structure and set an initial self weak reference. <br/></td></tr>
-<tr class="separator:aad6e2ac9e97ca71b28c47248a9aad9b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1f332b55c08fd702f2c7ebb18e42a90"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1f332b55c08fd702f2c7ebb18e42a90"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00290.html#aa1f332b55c08fd702f2c7ebb18e42a90">~RefCounted</a> ()</td></tr>
-<tr class="memdesc:aa1f332b55c08fd702f2c7ebb18e42a90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. Mark as expired and also delete the reference count structure if no outside weak references exist. <br/></td></tr>
-<tr class="separator:aa1f332b55c08fd702f2c7ebb18e42a90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d857f439bb5a7935199a8e4fdb8f2c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d857f439bb5a7935199a8e4fdb8f2c8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00290.html#a0d857f439bb5a7935199a8e4fdb8f2c8">AddRef</a> ()</td></tr>
-<tr class="memdesc:a0d857f439bb5a7935199a8e4fdb8f2c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment reference count. Can also be called outside of a <a class="el" href="a00329.html" title="Shared pointer template class with intrusive reference counting.">SharedPtr</a> for traditional reference counting. <br/></td></tr>
-<tr class="separator:a0d857f439bb5a7935199a8e4fdb8f2c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59e95fecbcbc560f81f0bdd52306cc1d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59e95fecbcbc560f81f0bdd52306cc1d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00290.html#a59e95fecbcbc560f81f0bdd52306cc1d">ReleaseRef</a> ()</td></tr>
-<tr class="memdesc:a59e95fecbcbc560f81f0bdd52306cc1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrement reference count and delete self if no more references. Can also be called outside of a <a class="el" href="a00329.html" title="Shared pointer template class with intrusive reference counting.">SharedPtr</a> for traditional reference counting. <br/></td></tr>
-<tr class="separator:a59e95fecbcbc560f81f0bdd52306cc1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5ac3cb7e5f64c056351e15d3a30b4ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5ac3cb7e5f64c056351e15d3a30b4ba"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00290.html#ad5ac3cb7e5f64c056351e15d3a30b4ba">Refs</a> () const </td></tr>
-<tr class="memdesc:ad5ac3cb7e5f64c056351e15d3a30b4ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return reference count. <br/></td></tr>
-<tr class="separator:ad5ac3cb7e5f64c056351e15d3a30b4ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab05087f4c487de02faed7411bbcf9df1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab05087f4c487de02faed7411bbcf9df1"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00290.html#ab05087f4c487de02faed7411bbcf9df1">WeakRefs</a> () const </td></tr>
-<tr class="memdesc:ab05087f4c487de02faed7411bbcf9df1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return weak reference count. <br/></td></tr>
-<tr class="separator:ab05087f4c487de02faed7411bbcf9df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0eb5281d7e6cfd7e729ae0d07ca0da92"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0eb5281d7e6cfd7e729ae0d07ca0da92"></a>
-<a class="el" href="a00289.html">RefCount</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00290.html#a0eb5281d7e6cfd7e729ae0d07ca0da92">RefCountPtr</a> ()</td></tr>
-<tr class="memdesc:a0eb5281d7e6cfd7e729ae0d07ca0da92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return pointer to the reference count structure. <br/></td></tr>
-<tr class="separator:a0eb5281d7e6cfd7e729ae0d07ca0da92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e1bd4958a0e608c9bd87300d8c58efc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e1bd4958a0e608c9bd87300d8c58efc"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00290.html#a2e1bd4958a0e608c9bd87300d8c58efc">RefAttributeAccessorImpl</a> (GetFunctionPtr getFunction, SetFunctionPtr setFunction)</td></tr>
+<tr class="memdesc:a2e1bd4958a0e608c9bd87300d8c58efc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with function pointers. <br/></td></tr>
+<tr class="separator:a2e1bd4958a0e608c9bd87300d8c58efc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a1da3ae1aa36467c07eda7693234caf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5a1da3ae1aa36467c07eda7693234caf"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00290.html#a5a1da3ae1aa36467c07eda7693234caf">Get</a> (const <a class="el" href="a00321.html">Serializable</a> *ptr, <a class="el" href="a00386.html">Variant</a> &amp;dest) const </td></tr>
+<tr class="memdesc:a5a1da3ae1aa36467c07eda7693234caf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke getter function. <br/></td></tr>
+<tr class="separator:a5a1da3ae1aa36467c07eda7693234caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9355bf96cbcc869d0fa7d7c8d82177c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae9355bf96cbcc869d0fa7d7c8d82177c"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00290.html#ae9355bf96cbcc869d0fa7d7c8d82177c">Set</a> (<a class="el" href="a00321.html">Serializable</a> *ptr, const <a class="el" href="a00386.html">Variant</a> &amp;value)</td></tr>
+<tr class="memdesc:ae9355bf96cbcc869d0fa7d7c8d82177c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke setter function. <br/></td></tr>
+<tr class="separator:ae9355bf96cbcc869d0fa7d7c8d82177c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:af6051db5b61338d07bbf3bcdfe27c018"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af6051db5b61338d07bbf3bcdfe27c018"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00290.html#af6051db5b61338d07bbf3bcdfe27c018">RefCounted</a> (const <a class="el" href="a00290.html">RefCounted</a> &amp;rhs)</td></tr>
-<tr class="memdesc:af6051db5b61338d07bbf3bcdfe27c018"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prevent copy construction. <br/></td></tr>
-<tr class="separator:af6051db5b61338d07bbf3bcdfe27c018"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1765c1277591d31e8a789826fbeda3b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1765c1277591d31e8a789826fbeda3b1"></a>
-<a class="el" href="a00290.html">RefCounted</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00290.html#a1765c1277591d31e8a789826fbeda3b1">operator=</a> (const <a class="el" href="a00290.html">RefCounted</a> &amp;rhs)</td></tr>
-<tr class="memdesc:a1765c1277591d31e8a789826fbeda3b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prevent assignment. <br/></td></tr>
-<tr class="separator:a1765c1277591d31e8a789826fbeda3b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a30b71da1409381e23230d9a33f23d625"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30b71da1409381e23230d9a33f23d625"></a>
-<a class="el" href="a00289.html">RefCount</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00290.html#a30b71da1409381e23230d9a33f23d625">refCount_</a></td></tr>
-<tr class="memdesc:a30b71da1409381e23230d9a33f23d625"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the reference count structure. <br/></td></tr>
-<tr class="separator:a30b71da1409381e23230d9a33f23d625"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a2866190736d006914a4262a88995de6e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2866190736d006914a4262a88995de6e"></a>
+GetFunctionPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00290.html#a2866190736d006914a4262a88995de6e">getFunction_</a></td></tr>
+<tr class="memdesc:a2866190736d006914a4262a88995de6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class-specific pointer to getter function. <br/></td></tr>
+<tr class="separator:a2866190736d006914a4262a88995de6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cb8e0a37103db6935f7a90e7987de69"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2cb8e0a37103db6935f7a90e7987de69"></a>
+SetFunctionPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00290.html#a2cb8e0a37103db6935f7a90e7987de69">setFunction_</a></td></tr>
+<tr class="memdesc:a2cb8e0a37103db6935f7a90e7987de69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class-specific pointer to setter function. <br/></td></tr>
+<tr class="separator:a2cb8e0a37103db6935f7a90e7987de69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Base class for intrusively reference-counted objects. These are noncopyable and non-assignable. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Container/RefCounted.h</li>
-<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Container/RefCounted.cpp</li>
+<div class="textblock"><h3>template&lt;class T, class U&gt;<br/>
+class Urho3D::RefAttributeAccessorImpl&lt; T, U &gt;</h3>
+
+<p>Template implementation of the attribute accessor invoke helper class using const references. </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
+<li>/home/travis/build/urho3d/Urho3D/Source/Engine/Scene/Serializable.h</li>
 </ul>
 </div><!-- contents -->
