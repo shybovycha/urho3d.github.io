@@ -1316,22 +1316,37 @@ Classes</h1>
 <ul>
 <li>void Clear()</li>
 <li>void SetNumGeometries(unsigned num)</li>
+<li>void SetDynamic(bool enable)</li>
 <li>void BeginGeometry(unsigned index, PrimitiveType type)</li>
 <li>void DefineVertex(const Vector3&amp; position)</li>
 <li>void DefineNormal(const Vector3&amp; normal)</li>
 <li>void DefineTangent(const Vector4&amp; tangent)</li>
 <li>void DefineColor(const Color&amp; color)</li>
 <li>void DefineTexCoord(const Vector2&amp; texCoord)</li>
+<li>void DefineGeometry(unsigned index, PrimitiveType type, unsigned numVertices, bool hasNormals, bool hasColors, bool hasTexCoords, bool hasTangents)</li>
 <li>void Commit()</li>
 <li>void SetMaterial(Material* material)</li>
 <li>bool SetMaterial(unsigned index, Material* material)</li>
-<li>unsigned GetNumGeometries()</li>
+<li>unsigned GetNumGeometries() const</li>
+<li>unsigned GetNumVertices(unsigned index) const</li>
+<li>bool IsDynamic() const</li>
 <li>Material* GetMaterial(unsigned index = 0)</li>
+<li>CustomGeometryVertex* GetVertex(unsigned geometryIndex, unsigned vertexNum)</li>
 </ul>
 <p>Properties:</p>
 <ul>
 <li>Material* material</li>
 <li>unsigned numGeometries</li>
+<li>bool dynamic</li>
+</ul>
+<h3><a class="el" href="a00138.html" title="Custom geometry vertex.">CustomGeometryVertex</a></h3>
+<p>Properties:</p>
+<ul>
+<li><a class="el" href="a00390.html" title="Three-dimensional vector.">Vector3</a> position</li>
+<li><a class="el" href="a00390.html" title="Three-dimensional vector.">Vector3</a> normal</li>
+<li>unsigned color</li>
+<li><a class="el" href="a00389.html" title="Two-dimensional vector.">Vector2</a> texCoord</li>
+<li><a class="el" href="a00391.html" title="Four-dimensional vector.">Vector4</a> tangent</li>
 </ul>
 <h3><a class="el" href="a00139.html" title="Displays rendering stats and profiling information.">DebugHud</a> : <a class="el" href="a00249.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
 <p>Methods:</p>
@@ -5856,7 +5871,7 @@ Classes</h1>
 <li>void Patch(XMLFile* patchFile)</li>
 <li>void Patch(XMLElement patchElement)</li>
 </ul>
-<h3><a class="el" href="a00411.html" title="Component that describes global rendering properties">Zone</a> : <a class="el" href="a00151.html" title="Base class for visible components.">Drawable</a></h3>
+<h3><a class="el" href="a00411.html" title="Component that describes global rendering properties.">Zone</a> : <a class="el" href="a00151.html" title="Base class for visible components.">Drawable</a></h3>
 <p>Methods:</p>
 <ul>
 <li>void SetBoundingBox(const BoundingBox&amp; box)</li>

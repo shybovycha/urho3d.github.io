@@ -87,9 +87,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#ab143825781ee67635f1f104d54813bae">SetNumGeometries</a> (unsigned num)</td></tr>
 <tr class="memdesc:ab143825781ee67635f1f104d54813bae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set number of geometries. <br/></td></tr>
 <tr class="separator:ab143825781ee67635f1f104d54813bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae568824fcea52aa839b295035d67197f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae568824fcea52aa839b295035d67197f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#ae568824fcea52aa839b295035d67197f">SetDynamic</a> (bool enable)</td></tr>
+<tr class="memdesc:ae568824fcea52aa839b295035d67197f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set vertex buffer dynamic mode. A dynamic buffer should be faster to update frequently. Effective at the next <a class="el" href="a00137.html#ae453635272313cff9ce8f5cd50e01ad7" title="Update vertex buffer and calculate the bounding box. Call after finishing defining geometry...">Commit()</a> call. <br/></td></tr>
+<tr class="separator:ae568824fcea52aa839b295035d67197f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a891f1248a25d6d41b707355591830be9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a891f1248a25d6d41b707355591830be9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#a891f1248a25d6d41b707355591830be9">BeginGeometry</a> (unsigned index, PrimitiveType type)</td></tr>
-<tr class="memdesc:a891f1248a25d6d41b707355591830be9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin defining a geometry. Clears existing geometry in that index. <br/></td></tr>
+<tr class="memdesc:a891f1248a25d6d41b707355591830be9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin defining a geometry. Clears existing vertices in that index. <br/></td></tr>
 <tr class="separator:a891f1248a25d6d41b707355591830be9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab424213edf5041c1936cf5e8cdb0972d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab424213edf5041c1936cf5e8cdb0972d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#ab424213edf5041c1936cf5e8cdb0972d">DefineVertex</a> (const <a class="el" href="a00390.html">Vector3</a> &amp;position)</td></tr>
@@ -99,10 +103,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#aebc98f8024ffc28fc7afc725846bded2">DefineNormal</a> (const <a class="el" href="a00390.html">Vector3</a> &amp;normal)</td></tr>
 <tr class="memdesc:aebc98f8024ffc28fc7afc725846bded2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a vertex normal. <br/></td></tr>
 <tr class="separator:aebc98f8024ffc28fc7afc725846bded2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfd86ca1586d6840d4e96a08b1ad3d56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adfd86ca1586d6840d4e96a08b1ad3d56"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#adfd86ca1586d6840d4e96a08b1ad3d56">DefineTangent</a> (const <a class="el" href="a00391.html">Vector4</a> &amp;tangent)</td></tr>
-<tr class="memdesc:adfd86ca1586d6840d4e96a08b1ad3d56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a vertex tangent. <br/></td></tr>
-<tr class="separator:adfd86ca1586d6840d4e96a08b1ad3d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2fed3fc9c89303868c70010af841635"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af2fed3fc9c89303868c70010af841635"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#af2fed3fc9c89303868c70010af841635">DefineColor</a> (const <a class="el" href="a00104.html">Color</a> &amp;color)</td></tr>
 <tr class="memdesc:af2fed3fc9c89303868c70010af841635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a vertex color. <br/></td></tr>
@@ -111,6 +111,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#af69852c915b4a0afc91b7c7de44bde99">DefineTexCoord</a> (const <a class="el" href="a00389.html">Vector2</a> &amp;texCoord)</td></tr>
 <tr class="memdesc:af69852c915b4a0afc91b7c7de44bde99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a vertex UV coordinate. <br/></td></tr>
 <tr class="separator:af69852c915b4a0afc91b7c7de44bde99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfd86ca1586d6840d4e96a08b1ad3d56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adfd86ca1586d6840d4e96a08b1ad3d56"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#adfd86ca1586d6840d4e96a08b1ad3d56">DefineTangent</a> (const <a class="el" href="a00391.html">Vector4</a> &amp;tangent)</td></tr>
+<tr class="memdesc:adfd86ca1586d6840d4e96a08b1ad3d56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a vertex tangent. <br/></td></tr>
+<tr class="separator:adfd86ca1586d6840d4e96a08b1ad3d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8c6464d130c7203fb41ee6f9d2e809f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8c6464d130c7203fb41ee6f9d2e809f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#af8c6464d130c7203fb41ee6f9d2e809f">DefineGeometry</a> (unsigned index, PrimitiveType type, unsigned numVertices, bool hasNormals, bool hasColors, bool hasTexCoords, bool hasTangents)</td></tr>
+<tr class="memdesc:af8c6464d130c7203fb41ee6f9d2e809f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the primitive type, number of vertices and elements in a geometry, after which the vertices can be edited with <a class="el" href="a00137.html#a12072862c20b3355fd98c598de789cfa" title="Return a vertex in a geometry for editing, or null if out of bounds. After the edits are finished...">GetVertex()</a>. An alternative to <a class="el" href="a00137.html#a891f1248a25d6d41b707355591830be9" title="Begin defining a geometry. Clears existing vertices in that index.">BeginGeometry()</a> / <a class="el" href="a00137.html#ab424213edf5041c1936cf5e8cdb0972d" title="Define a vertex position. This begins a new vertex.">DefineVertex()</a>. <br/></td></tr>
+<tr class="separator:af8c6464d130c7203fb41ee6f9d2e809f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae453635272313cff9ce8f5cd50e01ad7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae453635272313cff9ce8f5cd50e01ad7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#ae453635272313cff9ce8f5cd50e01ad7">Commit</a> ()</td></tr>
 <tr class="memdesc:ae453635272313cff9ce8f5cd50e01ad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update vertex buffer and calculate the bounding box. Call after finishing defining geometry. <br/></td></tr>
@@ -127,15 +135,27 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a001
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#aa9ee27f34768ce0af4a6614348bdbac3">GetNumGeometries</a> () const </td></tr>
 <tr class="memdesc:aa9ee27f34768ce0af4a6614348bdbac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of geometries. <br/></td></tr>
 <tr class="separator:aa9ee27f34768ce0af4a6614348bdbac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9cf55129320e514e573380640ce6455"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9cf55129320e514e573380640ce6455"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#ac9cf55129320e514e573380640ce6455">GetNumVertices</a> (unsigned index) const </td></tr>
+<tr class="memdesc:ac9cf55129320e514e573380640ce6455"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of vertices in a geometry. <br/></td></tr>
+<tr class="separator:ac9cf55129320e514e573380640ce6455"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0cf4d418b627e7110c9d36c87d8d963"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0cf4d418b627e7110c9d36c87d8d963"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#af0cf4d418b627e7110c9d36c87d8d963">IsDynamic</a> () const </td></tr>
+<tr class="memdesc:af0cf4d418b627e7110c9d36c87d8d963"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether vertex buffer dynamic mode is enabled. <br/></td></tr>
+<tr class="separator:af0cf4d418b627e7110c9d36c87d8d963"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2ebf0d931ea5688786287566037f14d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae2ebf0d931ea5688786287566037f14d"></a>
 <a class="el" href="a00223.html">Material</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#ae2ebf0d931ea5688786287566037f14d">GetMaterial</a> (unsigned index=0) const </td></tr>
 <tr class="memdesc:ae2ebf0d931ea5688786287566037f14d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return material by geometry index. <br/></td></tr>
 <tr class="separator:ae2ebf0d931ea5688786287566037f14d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabb85bc348471fa445b98896a05a0acf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aabb85bc348471fa445b98896a05a0acf"></a>
-const <a class="el" href="a00388.html">Vector</a>&lt; <a class="el" href="a00278.html">PODVector</a><br class="typebreak"/>
-&lt; <a class="el" href="a00138.html">CustomGeometryVertex</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#aabb85bc348471fa445b98896a05a0acf">GetVertices</a> ()</td></tr>
-<tr class="memdesc:aabb85bc348471fa445b98896a05a0acf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return all vertices. <br/></td></tr>
-<tr class="separator:aabb85bc348471fa445b98896a05a0acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5c90c7ac2f53da8b137fbf3149c7b51"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5c90c7ac2f53da8b137fbf3149c7b51"></a>
+<a class="el" href="a00388.html">Vector</a>&lt; <a class="el" href="a00278.html">PODVector</a><br class="typebreak"/>
+&lt; <a class="el" href="a00138.html">CustomGeometryVertex</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#ac5c90c7ac2f53da8b137fbf3149c7b51">GetVertices</a> ()</td></tr>
+<tr class="memdesc:ac5c90c7ac2f53da8b137fbf3149c7b51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return all vertices. These can be edited; calling <a class="el" href="a00137.html#ae453635272313cff9ce8f5cd50e01ad7" title="Update vertex buffer and calculate the bounding box. Call after finishing defining geometry...">Commit()</a> updates the vertex buffer. <br/></td></tr>
+<tr class="separator:ac5c90c7ac2f53da8b137fbf3149c7b51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12072862c20b3355fd98c598de789cfa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12072862c20b3355fd98c598de789cfa"></a>
+<a class="el" href="a00138.html">CustomGeometryVertex</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#a12072862c20b3355fd98c598de789cfa">GetVertex</a> (unsigned geometryIndex, unsigned vertexNum)</td></tr>
+<tr class="memdesc:a12072862c20b3355fd98c598de789cfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a vertex in a geometry for editing, or null if out of bounds. After the edits are finished, calling <a class="el" href="a00137.html#ae453635272313cff9ce8f5cd50e01ad7" title="Update vertex buffer and calculate the bounding box. Call after finishing defining geometry...">Commit()</a> updates the vertex buffer. <br/></td></tr>
+<tr class="separator:a12072862c20b3355fd98c598de789cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15ea3ec598d2a7105bef2b06374640b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a15ea3ec598d2a7105bef2b06374640b4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#a15ea3ec598d2a7105bef2b06374640b4">SetGeometryDataAttr</a> (<a class="el" href="a00278.html">PODVector</a>&lt; unsigned char &gt; value)</td></tr>
 <tr class="memdesc:a15ea3ec598d2a7105bef2b06374640b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set geometry data attribute. <br/></td></tr>
@@ -303,7 +323,7 @@ const <a class="el" href="a00388.html">Vector</a>&lt; <a class="el" href="a00341
 <tr class="separator:ae95a836fc2a0cc7c66d6ff2e4417e22b inherit pub_methods_a00151"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3181013d83f6d1b3110abe34316fe435 inherit pub_methods_a00151"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3181013d83f6d1b3110abe34316fe435"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00151.html#a3181013d83f6d1b3110abe34316fe435">SetZone</a> (<a class="el" href="a00411.html">Zone</a> *zone, bool temporary=false)</td></tr>
-<tr class="memdesc:a3181013d83f6d1b3110abe34316fe435 inherit pub_methods_a00151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set new zone. <a class="el" href="a00411.html" title="Component that describes global rendering properties">Zone</a> assignment may optionally be temporary, meaning it needs to be re-evaluated on the next frame. <br/></td></tr>
+<tr class="memdesc:a3181013d83f6d1b3110abe34316fe435 inherit pub_methods_a00151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set new zone. <a class="el" href="a00411.html" title="Component that describes global rendering properties.">Zone</a> assignment may optionally be temporary, meaning it needs to be re-evaluated on the next frame. <br/></td></tr>
 <tr class="separator:a3181013d83f6d1b3110abe34316fe435 inherit pub_methods_a00151"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5234fbefdcf8dc01cc296e18f3b2c916 inherit pub_methods_a00151"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5234fbefdcf8dc01cc296e18f3b2c916"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00151.html#a5234fbefdcf8dc01cc296e18f3b2c916">SetSortValue</a> (float value)</td></tr>
@@ -911,6 +931,10 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <a class="el" href="a00305.html">ResourceRefList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#aeeb8ecf62f54d5fcb3f11786b65ca749">materialsAttr_</a></td></tr>
 <tr class="memdesc:aeeb8ecf62f54d5fcb3f11786b65ca749"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00223.html" title="Describes how to render 3D geometries.">Material</a> list attribute. <br/></td></tr>
 <tr class="separator:aeeb8ecf62f54d5fcb3f11786b65ca749"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a545439e64e55fa7efba01ef25f032367"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a545439e64e55fa7efba01ef25f032367"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00137.html#a545439e64e55fa7efba01ef25f032367">dynamic_</a></td></tr>
+<tr class="memdesc:a545439e64e55fa7efba01ef25f032367"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex buffer dynamic flag. <br/></td></tr>
+<tr class="separator:a545439e64e55fa7efba01ef25f032367"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -965,7 +989,7 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <tr class="separator:a9640ac3a553bc15bfc1826317df39631 inherit pro_attribs_a00151"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a5536a40728f773e36238bfe67b3958 inherit pro_attribs_a00151"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a5536a40728f773e36238bfe67b3958"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00151.html#a2a5536a40728f773e36238bfe67b3958">zoneMask_</a></td></tr>
-<tr class="memdesc:a2a5536a40728f773e36238bfe67b3958 inherit pro_attribs_a00151"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00411.html" title="Component that describes global rendering properties">Zone</a> mask. <br/></td></tr>
+<tr class="memdesc:a2a5536a40728f773e36238bfe67b3958 inherit pro_attribs_a00151"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00411.html" title="Component that describes global rendering properties.">Zone</a> mask. <br/></td></tr>
 <tr class="separator:a2a5536a40728f773e36238bfe67b3958 inherit pro_attribs_a00151"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0be4e0aacab060480d106a4a39d24a26 inherit pro_attribs_a00151"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0be4e0aacab060480d106a4a39d24a26"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00151.html#a0be4e0aacab060480d106a4a39d24a26">viewFrameNumber_</a></td></tr>
@@ -1033,7 +1057,7 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <tr class="separator:af251651fa16a666b0ec11af053bf80aa inherit pro_attribs_a00151"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7871920deb048d9d675ad34c5874a00 inherit pro_attribs_a00151"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac7871920deb048d9d675ad34c5874a00"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00151.html#ac7871920deb048d9d675ad34c5874a00">zoneDirty_</a></td></tr>
-<tr class="memdesc:ac7871920deb048d9d675ad34c5874a00 inherit pro_attribs_a00151"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00411.html" title="Component that describes global rendering properties">Zone</a> inconclusive or dirtied flag. <br/></td></tr>
+<tr class="memdesc:ac7871920deb048d9d675ad34c5874a00 inherit pro_attribs_a00151"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00411.html" title="Component that describes global rendering properties.">Zone</a> inconclusive or dirtied flag. <br/></td></tr>
 <tr class="separator:ac7871920deb048d9d675ad34c5874a00 inherit pro_attribs_a00151"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a405f8bb83f4d67e5c5f9af162175d7ec inherit pro_attribs_a00151"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a405f8bb83f4d67e5c5f9af162175d7ec"></a>
 <a class="el" href="a00186.html">HashSet</a>&lt; <a class="el" href="a00091.html">Camera</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00151.html#a405f8bb83f4d67e5c5f9af162175d7ec">viewCameras_</a></td></tr>

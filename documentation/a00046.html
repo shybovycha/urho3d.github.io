@@ -142,7 +142,7 @@ Classes</h1>
 <li>uint viewMask</li>
 <li>int weakRefs // readonly</li>
 <li><a class="el" href="a00087.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a> worldBoundingBox // readonly</li>
-<li><a class="el" href="a00411.html" title="Component that describes global rendering properties">Zone</a>@ zone // readonly</li>
+<li><a class="el" href="a00411.html" title="Component that describes global rendering properties.">Zone</a>@ zone // readonly</li>
 <li>uint zoneMask</li>
 </ul>
 <h3><a class="el" href="a00056.html" title="Spriter animation component.">AnimatedSprite2D</a></h3>
@@ -534,7 +534,7 @@ Classes</h1>
 <li>uint viewMask</li>
 <li>int weakRefs // readonly</li>
 <li><a class="el" href="a00087.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a> worldBoundingBox // readonly</li>
-<li><a class="el" href="a00411.html" title="Component that describes global rendering properties">Zone</a>@ zone // readonly</li>
+<li><a class="el" href="a00411.html" title="Component that describes global rendering properties.">Zone</a>@ zone // readonly</li>
 <li>uint zoneMask</li>
 </ul>
 <h3><a class="el" href="a00085.html" title="Bone in a skeleton.">Bone</a></h3>
@@ -2577,6 +2577,7 @@ Classes</h1>
 <li>void Clear()</li>
 <li>void Commit()</li>
 <li>void DefineColor(const Color&amp;)</li>
+<li>void DefineGeometry(uint, PrimitiveType, uint, bool, bool, bool, bool)</li>
 <li>void DefineNormal(const Vector3&amp;)</li>
 <li>void DefineTangent(const Vector4&amp;)</li>
 <li>void DefineTexCoord(const Vector2&amp;)</li>
@@ -2587,6 +2588,7 @@ Classes</h1>
 <li>float GetAttributeAnimationSpeed(const String&amp;) const</li>
 <li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
 <li><a class="el" href="a00386.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
+<li><a class="el" href="a00138.html" title="Custom geometry vertex.">CustomGeometryVertex</a>@ GetVertex(uint, uint)</li>
 <li>bool IsInView(<a class="el" href="a00091.html" title="Camera component.">Camera</a>@) const</li>
 <li>bool Load(<a class="el" href="a00159.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
 <li>bool Load(<a class="el" href="a00393.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
@@ -2615,6 +2617,7 @@ Classes</h1>
 <li>bool castShadows</li>
 <li><a class="el" href="a00354.html" title="String class.">String</a> category // readonly</li>
 <li>float drawDistance</li>
+<li>bool dynamic</li>
 <li>bool enabled</li>
 <li>bool enabledEffective // readonly</li>
 <li>uint id // readonly</li>
@@ -2627,6 +2630,7 @@ Classes</h1>
 <li><a class="el" href="a00244.html" title="Scene node that may contain components and child nodes.">Node</a>@ node // readonly</li>
 <li>uint numAttributes // readonly</li>
 <li>uint numGeometries</li>
+<li>uint[] numVertices // readonly</li>
 <li><a class="el" href="a00250.html" title="Object animation class, an object animation include one or more attribute animations and theirs wrap ...">ObjectAnimation</a>@ objectAnimation</li>
 <li>bool occludee</li>
 <li>bool occluder</li>
@@ -2639,8 +2643,17 @@ Classes</h1>
 <li>uint viewMask</li>
 <li>int weakRefs // readonly</li>
 <li><a class="el" href="a00087.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a> worldBoundingBox // readonly</li>
-<li><a class="el" href="a00411.html" title="Component that describes global rendering properties">Zone</a>@ zone // readonly</li>
+<li><a class="el" href="a00411.html" title="Component that describes global rendering properties.">Zone</a>@ zone // readonly</li>
 <li>uint zoneMask</li>
+</ul>
+<h3><a class="el" href="a00138.html" title="Custom geometry vertex.">CustomGeometryVertex</a></h3>
+<p>Properties:</p>
+<ul>
+<li>uint color</li>
+<li><a class="el" href="a00390.html" title="Three-dimensional vector.">Vector3</a> normal</li>
+<li><a class="el" href="a00390.html" title="Three-dimensional vector.">Vector3</a> position</li>
+<li><a class="el" href="a00391.html" title="Four-dimensional vector.">Vector4</a> tangent</li>
+<li><a class="el" href="a00389.html" title="Two-dimensional vector.">Vector2</a> texCoord</li>
 </ul>
 <h3><a class="el" href="a00139.html" title="Displays rendering stats and profiling information.">DebugHud</a></h3>
 <p>Methods:</p>
@@ -2792,7 +2805,7 @@ Classes</h1>
 <li>uint viewMask</li>
 <li>int weakRefs // readonly</li>
 <li><a class="el" href="a00087.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a> worldBoundingBox // readonly</li>
-<li><a class="el" href="a00411.html" title="Component that describes global rendering properties">Zone</a>@ zone // readonly</li>
+<li><a class="el" href="a00411.html" title="Component that describes global rendering properties.">Zone</a>@ zone // readonly</li>
 <li>uint zoneMask</li>
 </ul>
 <h3><a class="el" href="a00149.html" title="Abstract stream for reading.">Deserializer</a></h3>
@@ -5221,7 +5234,7 @@ Classes</h1>
 <li>uint viewMask</li>
 <li>int weakRefs // readonly</li>
 <li><a class="el" href="a00087.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a> worldBoundingBox // readonly</li>
-<li><a class="el" href="a00411.html" title="Component that describes global rendering properties">Zone</a>@ zone // readonly</li>
+<li><a class="el" href="a00411.html" title="Component that describes global rendering properties.">Zone</a>@ zone // readonly</li>
 <li>uint zoneMask</li>
 </ul>
 <h3><a class="el" href="a00270.html" title="2D particle emitter component.">ParticleEmitter2D</a></h3>
@@ -5687,7 +5700,7 @@ Classes</h1>
 <li><a class="el" href="a00223.html" title="Describes how to render 3D geometries.">Material</a>@ defaultLightSpot // readonly</li>
 <li><a class="el" href="a00223.html" title="Describes how to render 3D geometries.">Material</a>@ defaultMaterial // readonly</li>
 <li><a class="el" href="a00296.html" title="Rendering path definition.">RenderPath</a>@ defaultRenderPath</li>
-<li><a class="el" href="a00411.html" title="Component that describes global rendering properties">Zone</a>@ defaultZone // readonly</li>
+<li><a class="el" href="a00411.html" title="Component that describes global rendering properties.">Zone</a>@ defaultZone // readonly</li>
 <li>bool drawShadows</li>
 <li>bool dynamicInstancing</li>
 <li>bool hdrRendering</li>
@@ -6670,7 +6683,7 @@ Classes</h1>
 <li>uint viewMask</li>
 <li>int weakRefs // readonly</li>
 <li><a class="el" href="a00087.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a> worldBoundingBox // readonly</li>
-<li><a class="el" href="a00411.html" title="Component that describes global rendering properties">Zone</a>@ zone // readonly</li>
+<li><a class="el" href="a00411.html" title="Component that describes global rendering properties.">Zone</a>@ zone // readonly</li>
 <li>uint zoneMask</li>
 </ul>
 <h3><a class="el" href="a00334.html" title="Slider bar UI element.">Slider</a></h3>
@@ -7477,7 +7490,7 @@ Classes</h1>
 <li>uint viewMask</li>
 <li>int weakRefs // readonly</li>
 <li><a class="el" href="a00087.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a> worldBoundingBox // readonly</li>
-<li><a class="el" href="a00411.html" title="Component that describes global rendering properties">Zone</a>@ zone // readonly</li>
+<li><a class="el" href="a00411.html" title="Component that describes global rendering properties.">Zone</a>@ zone // readonly</li>
 <li>uint zoneMask</li>
 </ul>
 <h3><a class="el" href="a00352.html" title="Static sprite component.">StaticSprite2D</a></h3>
@@ -9229,7 +9242,7 @@ Classes</h1>
 <li><a class="el" href="a00407.html" title="Element in an XML file.">XMLElement</a> firstResult // readonly</li>
 <li>uint size // readonly</li>
 </ul>
-<h3><a class="el" href="a00411.html" title="Component that describes global rendering properties">Zone</a></h3>
+<h3><a class="el" href="a00411.html" title="Component that describes global rendering properties.">Zone</a></h3>
 <p>Methods:</p>
 <ul>
 <li>void ApplyAttributes()</li>
