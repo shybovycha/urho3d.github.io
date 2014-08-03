@@ -82,11 +82,11 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="separator:ad6b9bdb62b646dd0b1cfae74a51623e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65adc6542bb694c0d75dc60641180744"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65adc6542bb694c0d75dc60641180744"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00360.html#a65adc6542bb694c0d75dc60641180744">SetFont</a> (const <a class="el" href="a00354.html">String</a> &amp;fontName, int size=DEFAULT_FONT_SIZE)</td></tr>
-<tr class="memdesc:a65adc6542bb694c0d75dc60641180744"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set font and font size. <br/></td></tr>
+<tr class="memdesc:a65adc6542bb694c0d75dc60641180744"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set font and font size and use signed distance field. <br/></td></tr>
 <tr class="separator:a65adc6542bb694c0d75dc60641180744"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5a2a56ca1160f73ee257db6168fa95a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5a2a56ca1160f73ee257db6168fa95a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00360.html#ac5a2a56ca1160f73ee257db6168fa95a">SetFont</a> (<a class="el" href="a00165.html">Font</a> *font, int size=DEFAULT_FONT_SIZE)</td></tr>
-<tr class="memdesc:ac5a2a56ca1160f73ee257db6168fa95a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set font and font size. <br/></td></tr>
+<tr class="memdesc:ac5a2a56ca1160f73ee257db6168fa95a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set font and font size and use signed distance field. <br/></td></tr>
 <tr class="separator:ac5a2a56ca1160f73ee257db6168fa95a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ac758326e2b948758d1f6ddd17a73e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ac758326e2b948758d1f6ddd17a73e6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00360.html#a7ac758326e2b948758d1f6ddd17a73e6">SetText</a> (const <a class="el" href="a00354.html">String</a> &amp;text)</td></tr>
@@ -200,6 +200,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a0036
 <a class="el" href="a00197.html">IntVector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00360.html#ae46c846242bc708d079a621c72dd36ba">GetCharSize</a> (unsigned index)</td></tr>
 <tr class="memdesc:ae46c846242bc708d079a621c72dd36ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return size of character by index. <br/></td></tr>
 <tr class="separator:ae46c846242bc708d079a621c72dd36ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed06a7bd4fef3d1e0745a1ae59efd76d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aed06a7bd4fef3d1e0745a1ae59efd76d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00360.html#aed06a7bd4fef3d1e0745a1ae59efd76d">SetUsedInText3D</a> (bool usedInText3D)</td></tr>
+<tr class="memdesc:aed06a7bd4fef3d1e0745a1ae59efd76d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set used in <a class="el" href="a00361.html" title="3D text component.">Text3D</a>. <br/></td></tr>
+<tr class="separator:aed06a7bd4fef3d1e0745a1ae59efd76d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a464d74e6f4bdad5fa5c19da8c21170ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a464d74e6f4bdad5fa5c19da8c21170ea"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00360.html#a464d74e6f4bdad5fa5c19da8c21170ea">SetEffectDepthBias</a> (float bias)</td></tr>
 <tr class="memdesc:a464d74e6f4bdad5fa5c19da8c21170ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set text effect Z bias. Zero by default, adjusted only in 3D mode. <br/></td></tr>
@@ -1278,6 +1282,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a000
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:a0b2451ee9c4a49bfcb3b4ef15a470ce7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b2451ee9c4a49bfcb3b4ef15a470ce7"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00360.html#a0b2451ee9c4a49bfcb3b4ef15a470ce7">usedInText3D_</a></td></tr>
+<tr class="memdesc:a0b2451ee9c4a49bfcb3b4ef15a470ce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used in <a class="el" href="a00361.html" title="3D text component.">Text3D</a>. <br/></td></tr>
+<tr class="separator:a0b2451ee9c4a49bfcb3b4ef15a470ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3867eb56247f750225279b58676deee4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3867eb56247f750225279b58676deee4"></a>
 <a class="el" href="a00331.html">SharedPtr</a>&lt; <a class="el" href="a00165.html">Font</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00360.html#a3867eb56247f750225279b58676deee4">font_</a></td></tr>
 <tr class="memdesc:a3867eb56247f750225279b58676deee4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00165.html" title="Font resource.">Font</a>. <br/></td></tr>
