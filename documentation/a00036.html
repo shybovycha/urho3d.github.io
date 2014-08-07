@@ -34,6 +34,9 @@ Scene replication</h1>
 <p>The server can be made to transmit needed resource <a class="el" href="a00262.html">packages</a> to the client. This requires attaching the package files to the <a class="el" href="a00309.html" title="Root scene node, represents the whole scene.">Scene</a> by calling <a class="el" href="a00309.html#adb229515c3873cb6dbafe3ac58ab2053">AddRequiredPackageFile()</a>. On the client, a cache directory for the packages must be chosen before receiving them is possible: see <a class="el" href="a00240.html#a57b30be42b797f89acad15c24e5adcfe">SetPackageCacheDir()</a>.</p>
 <p>There are some things to watch out for:</p>
 <ul>
+<li>When a client is assigned to a scene, the client will first remove all existing replicated scene nodes from the scene, to prepare for receiving objects from the server. This means that for example a client's camera should be created into a local node, otherwise it will be removed when connecting.</li>
+</ul>
+<ul>
 <li>After connecting to a server, the client should not create, update or remove non-local nodes or components on its own. However, to create client-side special effects and such, the client can freely manipulate local nodes.</li>
 </ul>
 <ul>
