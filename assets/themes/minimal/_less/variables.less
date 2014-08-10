@@ -13,7 +13,7 @@
 @gray-light:             lighten(#000, 46.7%); // #777
 @gray-lighter:           lighten(#000, 93.5%); // #eee
 
-@brand-primary:         #428bca;
+@brand-primary:         #39c;
 @brand-success:         #5cb85c;
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
@@ -27,19 +27,19 @@
 //** Background color for `<body>`.
 @body-bg:               #fff;
 //** Global text color on `<body>`.
-@text-color:            @gray-dark;
+@text-color:            @gray-light;
 
 //** Global textual link color.
 @link-color:            @brand-primary;
 //** Link hover color set via `darken()` function.
-@link-hover-color:      darken(@link-color, 15%);
+@link-hover-color:      #069; // darken(@link-color, 15%);
 
 
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-sans-serif:  Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -63,9 +63,9 @@
 
 //** By default, this inherits from the `<body>`.
 @headings-font-family:    inherit;
-@headings-font-weight:    500;
+@headings-font-weight:    700;
 @headings-line-height:    1.1;
-@headings-color:          inherit;
+@headings-color:          @gray-darker;
 
 
 //== Iconography
@@ -134,6 +134,7 @@
 //** Border color for table and cell borders.
 @table-border-color:            #ddd;
 
+@table-header-color:            #444;
 
 //== Buttons
 //
@@ -812,9 +813,9 @@
 @kbd-color:                   #fff;
 @kbd-bg:                      #333;
 
-@pre-bg:                      #f5f5f5;
+@pre-bg:                      #f8f8f8;
 @pre-color:                   @gray-dark;
-@pre-border-color:            #ccc;
+@pre-border-color:            #e5e5e5;
 @pre-scrollable-max-height:   340px;
 
 
@@ -835,12 +836,12 @@
 //** Blockquote font size
 @blockquote-font-size:        (@font-size-base * 1.25);
 //** Blockquote border color
-@blockquote-border-color:     @gray-lighter;
+@blockquote-border-color:     @pre-border-color;
 //** Page header border color
 @page-header-border-color:    @gray-lighter;
 //** Width of horizontal description list titles
 @dl-horizontal-offset:        @component-offset-horizontal;
 //** Horizontal line color.
-@hr-border:                   @gray-lighter;
+@hr-border:                   @pre-border-color;
 
 

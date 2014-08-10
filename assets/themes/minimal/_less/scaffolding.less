@@ -27,9 +27,11 @@ html {
 body {
   font-family: @font-family-base;
   font-size: @font-size-base;
+  font-weight: 400;
   line-height: @line-height-base;
   color: @text-color;
   background-color: @body-bg;
+  padding: 50px;
 }
 
 // Reset fonts for relevant elements
@@ -52,7 +54,6 @@ a {
   &:hover,
   &:focus {
     color: @link-hover-color;
-    text-decoration: underline;
   }
 
   &:focus {
@@ -75,6 +76,7 @@ figure {
 
 img {
   vertical-align: middle;
+  max-width: 100%;
 }
 
 // Responsive images (ensure images don't scale beyond their parents)
@@ -111,10 +113,11 @@ img {
 // Horizontal rules
 
 hr {
-  margin-top:    @line-height-computed;
+  margin-top: @line-height-computed;
   margin-bottom: @line-height-computed;
   border: 0;
-  border-top: 1px solid @hr-border;
+  background-color: @hr-border;
+  height: 1px;
 }
 
 

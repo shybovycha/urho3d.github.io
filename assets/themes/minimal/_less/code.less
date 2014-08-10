@@ -39,16 +39,16 @@ kbd {
 // Blocks of code
 pre {
   display: block;
-  padding: ((@line-height-computed - 1) / 2);
-  margin: 0 0 (@line-height-computed / 2);
-  font-size: (@font-size-base - 1); // 14px to 13px
+  padding: 8px 15px;
+  margin: 0 0 @line-height-computed;
+  font-size: (@font-size-base - 2); // 14px to 12px
   line-height: @line-height-base;
   word-break: break-all;
   word-wrap: break-word;
   color: @pre-color;
   background-color: @pre-bg;
   border: 1px solid @pre-border-color;
-  border-radius: @border-radius-base;
+  border-radius: (@border-radius-base + 1);
 
   // Account for some code outputs that place code tags in pre tags
   code {

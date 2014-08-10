@@ -5,9 +5,18 @@
 
 table {
   background-color: @table-bg;
+  margin: 0 0 @line-height-computed;
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  text-align: left;
+  padding: (@line-height-computed / 4) (@line-height-computed / 2);
+  border-bottom: 1px solid @pre-border-color;
 }
 th {
-  text-align: left;
+  color: @table-header-color;
 }
 
 
