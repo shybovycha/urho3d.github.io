@@ -1,11 +1,12 @@
 ---
 layout: page
 title: Pages 
-group: navigation
+group: pages
 ---
 {% include JB/setup %}
 
 <ul>
-{% assign pages_list = site.pages |sort:'name' %}
-{% include JB/pages_list %}
+  {% assign group_exclude = 'pages' %}
+  {% assign pages_list = site.pages |sort:'name' %}
+  {% include JB/pages_list %}
 </ul>
