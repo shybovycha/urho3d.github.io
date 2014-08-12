@@ -1,14 +1,16 @@
-<div class="post-meta">
-  <p class="date">{{ page.date | date: "<i>%d</i><b>%b</b>" }}</p>
-</div>
-<h1 class="post-title">{{ page.title }}
-  <div class="post-title-sub">
-      tags: {% for tag in page.tags %} <a href="{{ BASE_PATH }}{{ site.JB.tags_path }}" rel="tag"><i class="hash">#</i>{{tag}}</a>{% if forloop.last != true %},{% endif %}{% endfor %}
+{% unless post %}
+  {% assign post = page %}
+{% endunless %}
+<article>
+  <div class="post-meta">
+    <p class="date">{{ post.date | date: "<i>%d</i><b>%b</b>" }}</p>
   </div>
-</h1>
-<div class="posts">
-  {{ content }}
-</div>
-<div class="comments">
-  {% include JB/comments %}
-</div>
+  <h2 class="post-title">{{ post.title }}
+    <small>
+      tags: {% for tag in post.tags %} <a href="{{ BASE_PATH }}{{ site.JB.tags_path }}" rel="tag"><i class="hash">#</i>{{tag}}</a>{% if forloop.last != true %},{% endif %}{% endfor %}
+    </small>
+  </h2>
+  <div class="post">
+    {% if post.layout == 'default' %}{{ content }}{% else %}{{ post.content }}{% endif %}
+  </div>
+</article>

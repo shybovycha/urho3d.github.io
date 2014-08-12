@@ -3,22 +3,7 @@ Show content of top N posts consecutively.
 -->{% endcomment %}
 
 {% for post in top_n_posts limit:top_n_posts_limit %}
-  <div class="post-meta">
-    <p class="date">{{ post.date | date: "<i>%d</i><b>%b</b>" }}</p>
-  </div>
-  <h1 class="post-title">{{ post.title }}
-    <div class="post-title-sub">
-      tags: {% for tag in post.tags %} <a href="{{ BASE_PATH }}{{ site.JB.tags_path }}" rel="tag"><i class="hash">#</i>{{tag}}</a>{% if forloop.last != true %},{% endif %}{% endfor %}
-    </div>
-  </h1>
-  <div class="posts">
-    {{ post.content }}
-  </div>
-  {% unless forloop.last %}
-  <br />
-  <hr />
-  <br />
-  {% endunless %}
+  {% include themes/minimal/post.html %}
 {% endfor %}
 {% assign top_n_posts = nil %}
 {% assign top_n_posts_limit = nil %}
