@@ -61,6 +61,13 @@ pre {
   }
 }
 
+@media print, screen and (max-width: @screen-xs-max) {
+  pre,
+  code {
+    word-wrap: normal;
+  }
+}
+
 // Enable scrollable blocks of code
 .pre-scrollable {
   max-height: @pre-scrollable-max-height;

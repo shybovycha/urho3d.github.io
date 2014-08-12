@@ -31,7 +31,21 @@ body {
   line-height: @line-height-base;
   color: @text-color;
   background-color: @body-bg;
-  padding: 50px;
+  padding: @panel-body-padding;
+
+  @media screen and (min-width: @screen-xs-min) {
+    padding: @body-padding;
+  }
+
+  @media print {
+    padding: 0.4in;
+    font-size: 12pt;
+    color: #444;
+  }
+
+  @media print, screen and (max-width: @screen-xs-max) {
+    word-wrap: break-word;
+  }
 }
 
 // Reset fonts for relevant elements
