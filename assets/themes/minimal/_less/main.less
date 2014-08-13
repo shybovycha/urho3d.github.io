@@ -222,25 +222,24 @@ article:not(:last-of-type) {
   border-bottom: 1px solid @pre-border-color;
 }
 
-.tag_box {
-  overflow: hidden;
-  padding: 5px 5px;
+.tags-list {
+  padding: 0 0 @line-height-computed 0;
+  margin-bottom: @line-height-computed;
+  border-bottom: 1px solid @pre-border-color;
+
+  > li {
+    line-height: (@line-height-computed * 1.5);
+  }
 
   a {
-    padding: 3px 6px;
-    margin: 2px;
-    background: rgb(241, 241, 241);
-    border-radius: 3px;
+    padding: 6px 6px 3px 6px;
+    background-color: @gray-lighter;
+    border-radius: @border-radius-base;
 
     span {
       vertical-align: super;
       font-size: 0.8em;
     }
-  }
-
-  &.inline li {
-    float: left;
-    list-style: none;
   }
 }
 
