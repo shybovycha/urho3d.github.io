@@ -5413,7 +5413,7 @@ Classes</h1>
 <li><a class="el" href="class_urho3_d_1_1_variant.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
 <li><a class="el" href="class_urho3_d_1_1_rigid_body2_d.html" title="2D rigid body component.">RigidBody2D</a>@[]@ GetRigidBodies(const <a class="el" href="class_urho3_d_1_1_rect.html" title="Two-dimensional bounding rectangle.">Rect</a>&amp;, uint = 0xffff)</li>
 <li><a class="el" href="class_urho3_d_1_1_rigid_body2_d.html" title="2D rigid body component.">RigidBody2D</a>@ GetRigidBody(const <a class="el" href="class_urho3_d_1_1_vector2.html" title="Two-dimensional vector.">Vector2</a>&amp;, uint = 0xffff)</li>
-<li><a class="el" href="class_urho3_d_1_1_rigid_body2_d.html" title="2D rigid body component.">RigidBody2D</a>@ GetRigidBody(int, int, uint = 0xffff, <a class="el" href="class_urho3_d_1_1_camera.html" title="Camera component.">Camera</a>@ = 0)</li>
+<li><a class="el" href="class_urho3_d_1_1_rigid_body2_d.html" title="2D rigid body component.">RigidBody2D</a>@ GetRigidBody(int, int, uint = 0xffff)</li>
 <li>bool Load(<a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
 <li>bool Load(<a class="el" href="class_urho3_d_1_1_vector_buffer.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
 <li>bool LoadXML(const <a class="el" href="class_urho3_d_1_1_x_m_l_element.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
@@ -8942,8 +8942,11 @@ Classes</h1>
 <h3><a class="el" href="class_urho3_d_1_1_viewport.html" title="Viewport definition either for a render surface or the backbuffer.">Viewport</a></h3>
 <p>Methods:</p>
 <ul>
+<li><a class="el" href="class_urho3_d_1_1_ray.html" title="Infinite straight line in three-dimensional space.">Ray</a> GetScreenRay(int, int) const</li>
+<li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> ScreenToWorldPoint(int, int, float) const</li>
 <li>void SendEvent(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>void SetRenderPath(<a class="el" href="class_urho3_d_1_1_x_m_l_file.html" title="XML document resource.">XMLFile</a>@)</li>
+<li><a class="el" href="class_urho3_d_1_1_vector2.html" title="Two-dimensional vector.">Vector2</a> WorldToScreenPoint(const Vector3&amp;) const</li>
 </ul>
 <p>Properties:</p>
 <ul>
