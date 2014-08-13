@@ -28,11 +28,7 @@ Usage:
 {% elsif category == null and page.previous %}
   <li><a href="{{ BASE_PATH }}{{ page.previous.url }}">&laquo; Prev</a></li>
 {% else %}
-  {% if category %}
-  <li class="disabled"><a>&laquo; Prev <small>{{ category }}</small></a></li>
-  {% else %}
-  <li class="disabled"><a>&laquo; Prev</a></li>
-  {% endif %}
+  <li class="disabled"><a>&laquo; Prev{% if category %} <small>{{ category }}{% endif %}</small></a></li>
 {% endif %}
 {% if category and index < sizemin1  %}
   {% assign next = index |plus:1 %}
@@ -40,10 +36,7 @@ Usage:
 {% elsif category == null and page.next %}
   <li><a href="{{ BASE_PATH }}{{ page.next.url }}">Next &raquo;</a></li>
 {% else %}
-  {% if category %}
-  <li class="disabled"><a>Next &raquo; <small>{{ category }}</small></a></li>
-  {% else %}
-  <li class="disabled"><a>Next &raquo;</a></li>
-  {% endif %}
+  <li class="disabled"><a>Next &raquo;{% if category %} <small>{{ category }}{% endif %}</small></a></li>
 {% endif %}
 </ul>
+{% assign category = nil %}
