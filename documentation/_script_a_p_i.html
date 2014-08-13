@@ -5510,6 +5510,17 @@ Classes</h1>
 <li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>[]@[] face // readonly</li>
 <li>uint numFaces // readonly</li>
 </ul>
+<h3><a class="el" href="class_urho3_d_1_1_property_set2_d.html" title="Property set.">PropertySet2D</a></h3>
+<p>Methods:</p>
+<ul>
+<li>bool HasProperty(const String&amp;) const</li>
+<li>const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp; GetProperty(const String&amp;) const</li>
+</ul>
+<p>Properties:</p>
+<ul>
+<li>int refs // readonly</li>
+<li>int weakRefs // readonly</li>
+</ul>
 <h3><a class="el" href="class_urho3_d_1_1_quaternion.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a></h3>
 <p>Methods:</p>
 <ul>
@@ -8208,6 +8219,151 @@ Classes</h1>
 <li>float time</li>
 <li><a class="el" href="class_urho3_d_1_1_rect.html" title="Two-dimensional bounding rectangle.">Rect</a> uv</li>
 </ul>
+<h3><a class="el" href="class_urho3_d_1_1_tile2_d.html" title="Tile define.">Tile2D</a></h3>
+<p>Methods:</p>
+<ul>
+<li>bool HasProperty(const String&amp;) const</li>
+<li>const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp; GetProperty(const String&amp;) const</li>
+</ul>
+<p>Properties:</p>
+<ul>
+<li>int gid // readonly</li>
+<li>int refs // readonly</li>
+<li><a class="el" href="class_urho3_d_1_1_sprite2_d.html" title="Sprite.">Sprite2D</a>@ sprite // readonly</li>
+<li>int weakRefs // readonly</li>
+</ul>
+<h3><a class="el" href="class_urho3_d_1_1_tile_map2_d.html" title="Tile map component.">TileMap2D</a></h3>
+<p>Methods:</p>
+<ul>
+<li>void ApplyAttributes()</li>
+<li>void DrawDebugGeometry(<a class="el" href="class_urho3_d_1_1_debug_renderer.html" title="Debug geometry rendering component. Should be added only to the root scene node.">DebugRenderer</a>@, bool)</li>
+<li><a class="el" href="class_urho3_d_1_1_variant.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttribute(const String&amp;) const</li>
+<li><a class="el" href="class_urho3_d_1_1_value_animation.html" title="Value animation class.">ValueAnimation</a>@ GetAttributeAnimation(const String&amp;) const</li>
+<li>float GetAttributeAnimationSpeed(const String&amp;) const</li>
+<li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
+<li><a class="el" href="class_urho3_d_1_1_variant.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
+<li><a class="el" href="class_urho3_d_1_1_tile_map_layer2_d.html" title="Tile map component.">TileMapLayer2D</a>@ GetLayer(uint) const</li>
+<li>bool Load(<a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="class_urho3_d_1_1_vector_buffer.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
+<li>bool LoadXML(const <a class="el" href="class_urho3_d_1_1_x_m_l_element.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
+<li>void MarkNetworkUpdate() const</li>
+<li>void Remove()</li>
+<li>void RemoveInstanceDefault()</li>
+<li>void ResetToDefault()</li>
+<li>bool Save(<a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
+<li>bool SaveXML(XMLElement&amp;) const</li>
+<li>void SendEvent(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
+<li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
+<li>void SetAttributeAnimation(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, <a class="el" href="class_urho3_d_1_1_value_animation.html" title="Value animation class.">ValueAnimation</a>@, WrapMode = WM_LOOP, float = 1.0f)</li>
+<li>void SetAttributeAnimationSpeed(const String&amp;, float)</li>
+<li>void SetAttributeAnimationWrapMode(const String&amp;, WrapMode)</li>
+</ul>
+<p>Properties:</p>
+<ul>
+<li>bool animationEnabled</li>
+<li><a class="el" href="class_urho3_d_1_1_variant.html" title="Variable that supports a fixed set of types.">Variant</a>[] attributeDefaults // readonly</li>
+<li><a class="el" href="struct_urho3_d_1_1_attribute_info.html" title="Description of an automatically serializable variable.">AttributeInfo</a>[] attributeInfos // readonly</li>
+<li><a class="el" href="class_urho3_d_1_1_variant.html" title="Variable that supports a fixed set of types.">Variant</a>[] attributes</li>
+<li><a class="el" href="class_urho3_d_1_1_string_hash.html" title="32-bit hash value for a string.">StringHash</a> baseType // readonly</li>
+<li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> category // readonly</li>
+<li>bool enabled</li>
+<li>bool enabledEffective // readonly</li>
+<li>int height // readonly</li>
+<li>uint id // readonly</li>
+<li><a class="el" href="class_urho3_d_1_1_node.html" title="Scene node that may contain components and child nodes.">Node</a>@ node // readonly</li>
+<li>uint numAttributes // readonly</li>
+<li>uint numLayers // readonly</li>
+<li><a class="el" href="class_urho3_d_1_1_object_animation.html" title="Object animation class, an object animation include one or more attribute animations and theirs wrap ...">ObjectAnimation</a>@ objectAnimation</li>
+<li>Orientation2D orientation // readonly</li>
+<li>int refs // readonly</li>
+<li>bool temporary</li>
+<li>float tileHeight // readonly</li>
+<li>float tileWidth // readonly</li>
+<li><a class="el" href="class_urho3_d_1_1_tmx_file2_d.html" title="Tile map file.">TmxFile2D</a>@ tmxFile</li>
+<li><a class="el" href="class_urho3_d_1_1_string_hash.html" title="32-bit hash value for a string.">StringHash</a> type // readonly</li>
+<li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> typeName // readonly</li>
+<li>int weakRefs // readonly</li>
+<li>int width // readonly</li>
+</ul>
+<h3><a class="el" href="class_urho3_d_1_1_tile_map_layer2_d.html" title="Tile map component.">TileMapLayer2D</a></h3>
+<p>Methods:</p>
+<ul>
+<li>void ApplyAttributes()</li>
+<li>void DrawDebugGeometry(<a class="el" href="class_urho3_d_1_1_debug_renderer.html" title="Debug geometry rendering component. Should be added only to the root scene node.">DebugRenderer</a>@, bool)</li>
+<li><a class="el" href="class_urho3_d_1_1_variant.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttribute(const String&amp;) const</li>
+<li><a class="el" href="class_urho3_d_1_1_value_animation.html" title="Value animation class.">ValueAnimation</a>@ GetAttributeAnimation(const String&amp;) const</li>
+<li>float GetAttributeAnimationSpeed(const String&amp;) const</li>
+<li>WrapMode GetAttributeAnimationWrapMode(const String&amp;) const</li>
+<li><a class="el" href="class_urho3_d_1_1_variant.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttributeDefault(const String&amp;) const</li>
+<li><a class="el" href="class_urho3_d_1_1_tile_object2_d.html" title="Tile map object.">TileObject2D</a>@ GetObject(uint) const</li>
+<li><a class="el" href="class_urho3_d_1_1_node.html" title="Scene node that may contain components and child nodes.">Node</a>@ GetObjectNode(uint) const</li>
+<li><a class="el" href="class_urho3_d_1_1_tile2_d.html" title="Tile define.">Tile2D</a>@ GetTile(int, int) const</li>
+<li><a class="el" href="class_urho3_d_1_1_node.html" title="Scene node that may contain components and child nodes.">Node</a>@ GetTileNode(int, int) const</li>
+<li>bool HasProperty(const String&amp;) const</li>
+<li>bool Load(<a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>@, bool = false)</li>
+<li>bool Load(<a class="el" href="class_urho3_d_1_1_vector_buffer.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a>&amp;, bool = false)</li>
+<li>bool LoadXML(const <a class="el" href="class_urho3_d_1_1_x_m_l_element.html" title="Element in an XML file.">XMLElement</a>&amp;, bool = false)</li>
+<li>void MarkNetworkUpdate() const</li>
+<li>void Remove()</li>
+<li>void RemoveInstanceDefault()</li>
+<li>void ResetToDefault()</li>
+<li>bool Save(<a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
+<li>bool SaveXML(XMLElement&amp;) const</li>
+<li>void SendEvent(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
+<li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
+<li>void SetAttributeAnimation(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, <a class="el" href="class_urho3_d_1_1_value_animation.html" title="Value animation class.">ValueAnimation</a>@, WrapMode = WM_LOOP, float = 1.0f)</li>
+<li>void SetAttributeAnimationSpeed(const String&amp;, float)</li>
+<li>void SetAttributeAnimationWrapMode(const String&amp;, WrapMode)</li>
+<li>const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp; GetProperty(const String&amp;) const</li>
+</ul>
+<p>Properties:</p>
+<ul>
+<li>bool animationEnabled</li>
+<li><a class="el" href="class_urho3_d_1_1_variant.html" title="Variable that supports a fixed set of types.">Variant</a>[] attributeDefaults // readonly</li>
+<li><a class="el" href="struct_urho3_d_1_1_attribute_info.html" title="Description of an automatically serializable variable.">AttributeInfo</a>[] attributeInfos // readonly</li>
+<li><a class="el" href="class_urho3_d_1_1_variant.html" title="Variable that supports a fixed set of types.">Variant</a>[] attributes</li>
+<li><a class="el" href="class_urho3_d_1_1_string_hash.html" title="32-bit hash value for a string.">StringHash</a> baseType // readonly</li>
+<li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> category // readonly</li>
+<li>int drawOrder // writeonly</li>
+<li>bool enabled</li>
+<li>bool enabledEffective // readonly</li>
+<li>int height // readonly</li>
+<li>uint id // readonly</li>
+<li><a class="el" href="class_urho3_d_1_1_node.html" title="Scene node that may contain components and child nodes.">Node</a>@ imageNode // readonly</li>
+<li>TileMapLayerType2D layerType // readonly</li>
+<li><a class="el" href="class_urho3_d_1_1_node.html" title="Scene node that may contain components and child nodes.">Node</a>@ node // readonly</li>
+<li>uint numAttributes // readonly</li>
+<li>uint numObjects // readonly</li>
+<li><a class="el" href="class_urho3_d_1_1_object_animation.html" title="Object animation class, an object animation include one or more attribute animations and theirs wrap ...">ObjectAnimation</a>@ objectAnimation</li>
+<li>int refs // readonly</li>
+<li>int rrawOrder // readonly</li>
+<li>bool temporary</li>
+<li><a class="el" href="class_urho3_d_1_1_string_hash.html" title="32-bit hash value for a string.">StringHash</a> type // readonly</li>
+<li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> typeName // readonly</li>
+<li>bool visible</li>
+<li>int weakRefs // readonly</li>
+<li>int width // readonly</li>
+</ul>
+<h3><a class="el" href="class_urho3_d_1_1_tile_object2_d.html" title="Tile map object.">TileObject2D</a></h3>
+<p>Methods:</p>
+<ul>
+<li>bool HasProperty(const String&amp;) const</li>
+<li>const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp; GetProperty(const String&amp;) const</li>
+<li>const <a class="el" href="class_urho3_d_1_1_vector2.html" title="Two-dimensional vector.">Vector2</a>&amp; GetPoint(uint) const</li>
+</ul>
+<p>Properties:</p>
+<ul>
+<li>uint numPoints // readonly</li>
+<li><a class="el" href="class_urho3_d_1_1_vector2.html" title="Two-dimensional vector.">Vector2</a> position // readonly</li>
+<li>int refs // readonly</li>
+<li><a class="el" href="class_urho3_d_1_1_vector2.html" title="Two-dimensional vector.">Vector2</a> size // readonly</li>
+<li>int tileGid // readonly</li>
+<li><a class="el" href="class_urho3_d_1_1_sprite2_d.html" title="Sprite.">Sprite2D</a>@ tileSprite // readonly</li>
+<li>TileObjectType2D type // readonly</li>
+<li>int weakRefs // readonly</li>
+</ul>
 <h3><a class="el" href="class_urho3_d_1_1_time.html" title="Time and frame counter subsystem.">Time</a></h3>
 <p>Methods:</p>
 <ul>
@@ -8232,6 +8388,27 @@ Classes</h1>
 <ul>
 <li>uint GetMSec(bool)</li>
 <li>void Reset()</li>
+</ul>
+<h3><a class="el" href="class_urho3_d_1_1_tmx_file2_d.html" title="Tile map file.">TmxFile2D</a></h3>
+<p>Methods:</p>
+<ul>
+<li>bool Load(<a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
+<li>bool Load(VectorBuffer&amp;)</li>
+<li>bool Save(<a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
+<li>bool Save(VectorBuffer&amp;) const</li>
+<li>void SendEvent(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
+</ul>
+<p>Properties:</p>
+<ul>
+<li><a class="el" href="class_urho3_d_1_1_string_hash.html" title="32-bit hash value for a string.">StringHash</a> baseType // readonly</li>
+<li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> category // readonly</li>
+<li>uint memoryUse // readonly</li>
+<li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> name</li>
+<li>int refs // readonly</li>
+<li><a class="el" href="class_urho3_d_1_1_string_hash.html" title="32-bit hash value for a string.">StringHash</a> type // readonly</li>
+<li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> typeName // readonly</li>
+<li>uint useTimer // readonly</li>
+<li>int weakRefs // readonly</li>
 </ul>
 <h3><a class="el" href="class_urho3_d_1_1_tool_tip.html" title="Tooltip UI element.">ToolTip</a></h3>
 <p>Methods:</p>
@@ -9514,6 +9691,11 @@ Enumerations</h1>
 <li>O_HORIZONTAL</li>
 <li>O_VERTICAL</li>
 </ul>
+<h3>Orientation2D</h3>
+<ul>
+<li>O_ORTHOGONAL</li>
+<li>O_ISOMETRIC</li>
+</ul>
 <h3>PassLightingMode</h3>
 <ul>
 <li>LIGHTING_UNLIT</li>
@@ -9635,6 +9817,22 @@ Enumerations</h1>
 <li>TEXTURE_DYNAMIC</li>
 <li>TEXTURE_RENDERTARGET</li>
 <li>TEXTURE_DEPTHSTENCIL</li>
+</ul>
+<h3>TileMapLayerType2D</h3>
+<ul>
+<li>LT_TILE_LAYER</li>
+<li>LT_OBJECT_GROUP</li>
+<li>LT_IMAGE_LAYER</li>
+<li>LT_INVALID</li>
+</ul>
+<h3>TileObjectType2D</h3>
+<ul>
+<li>OT_RECTANGLE</li>
+<li>OT_ELLIPSE</li>
+<li>OT_POLYGON</li>
+<li>OT_POLYLINE</li>
+<li>OT_TILE</li>
+<li>OT_INVALID</li>
 </ul>
 <h3>TransformSpace</h3>
 <ul>
