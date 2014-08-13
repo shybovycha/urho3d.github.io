@@ -243,6 +243,17 @@ article:not(:last-of-type) {
   }
 }
 
+@media print, screen and (min-width: @screen-lg-min) {
+  .col2 {
+    width: 100%;
+
+    li {
+      width: 50%;
+      float: left;
+    }
+  }
+}
+
 .embed-container {
   position: relative;
   padding-bottom: 56.25%; /* 16/9 ratio */
