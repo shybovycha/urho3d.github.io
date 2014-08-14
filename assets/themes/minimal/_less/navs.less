@@ -60,6 +60,10 @@
     .nav-divider();
   }
 
+  .divider {
+    margin: @line-height-computed;
+  }
+
   // Prevent IE8 from misplacing imgs
   //
   // See https://github.com/h5bp/html5-boilerplate/issues/984#issuecomment-3985989
@@ -121,6 +125,11 @@
     // Links rendered as pills
     > a {
       border-radius: @nav-pills-border-radius;
+
+      small {
+        padding-top: 2px;
+        padding-left: 5px;
+      }
     }
     + li {
       margin-left: 2px;
@@ -133,6 +142,10 @@
       &:focus {
         color: @nav-pills-active-link-hover-color;
         background-color: @nav-pills-active-link-hover-bg;
+
+        small {
+          color: darken(@nav-pills-active-link-hover-color, 15%);
+        }
       }
     }
   }

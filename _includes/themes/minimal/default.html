@@ -31,26 +31,43 @@
 
     <div class="container">
       <header role="banner">
-        <a href="{{ HOME_PATH }}" title="{{ site.title }} Homepage"><img src="{{ BASE_PATH }}/assets/images/logo.png" alt="link to {{ HOME_PATH }}" /></a>
-        <p class="tagline">{{ site.tagline }}</p>
-        {% assign last_release = site.data.urho3d.release |last %}
-        <ul>
-          <li><a href="https://github.com/{{ site.organization.name }}/{{ site.organization.project }}/archive/{{ last_release }}.zip">Download {{ last_release }}<strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/{{ site.organization.name }}/{{ site.organization.project }}/archive/{{ last_release }}.tar.gz">Download {{ last_release }}<strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/{{ site.organization.name }}/{{ site.organization.project }}">View On <strong>GitHub</strong></a></li>
-        </ul>
-        <p role="navigation">
-          <div><a href="{{ BASE_PATH }}/about.html">About<small>&nbsp;&nbsp;{{ site.title }}</small></a></div>
-          <div><a href="{{ BASE_PATH }}/documentation/index.html">Documentation<small>&nbsp;&nbsp;Manual and Scripting APIs</small></a></div>
-          <!--div><a href="https://github.com/{{ site.organization.name }}/{{ site.organization.project }}/wiki" target="_blank">Wiki<small>&nbsp;&nbsp;Guides and Tutorials</small></a></div-->
-          <div><a href="http://urho3d.prophpbb.com/" target="_blank">Discussion<small>&nbsp;&nbsp;Forum</small></a></div>
-          <div><a href="http://sourceforge.net/projects/urho3d/files/Urho3D/" target="_blank">Downloads<small>&nbsp;&nbsp;File Releases</small></a></div>
-          <br>
-          <div><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></div>
-          <div><a href="{{ BASE_PATH }}{{ site.JB.categories_path }}">Categories</a></div>
-          <div><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}">Tags</a></div>
-          <div><a href="{{ BASE_PATH }}{{ site.JB.pages_path }}">Pages</a></div>
-        </p>
+        <div class="row">
+          <div class="col-sm-6 col-md-12">
+            <a href="{{ HOME_PATH }}" title="{{ site.title }} Homepage"><img src="{{ BASE_PATH }}/assets/images/logo.png" alt="link to {{ HOME_PATH }}" /></a>
+            <div class="dummy navbar navbar-default">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".header-nav">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <p class="tagline">{{ site.tagline }}</p>
+                {% assign last_release = site.data.urho3d.release |last %}
+                <ul class="github-links">
+                  <li><a href="https://github.com/{{ site.organization.name }}/{{ site.organization.project }}/archive/{{ last_release }}.zip">Download {{ last_release }}<strong>ZIP File</strong></a></li>
+                  <li><a href="https://github.com/{{ site.organization.name }}/{{ site.organization.project }}/archive/{{ last_release }}.tar.gz">Download {{ last_release }}<strong>TAR Ball</strong></a></li>
+                  <li><a href="https://github.com/{{ site.organization.name }}/{{ site.organization.project }}">View On <strong>GitHub</strong></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div col class="col-sm-6 col-md-12">
+            <nav class="navbar navbar-default" role="navigation">
+              <div class="header-nav collapse navbar-collapse">
+                <ul class="nav nav-pills nav-stacked">
+                {% for nav in site.data.header_navs %}
+                  {% if nav.title == '---' %}
+                  <li class="divider"></li>
+                  {% else %}
+                  <li{% if page.title == nav.title %} class="active"{% endif %}><a href={% if nav.url contains 'http' %}"{{ nav.url }}" target="_blank"{% else %}"{{ BASE_PATH }}{% if nav.url contains '_path' %}{{ site.JB[nav.url] }}{% else %}{{ nav.url }}{% endif %}"{% endif %}>{{ nav.title }}{% if nav.subtitle %}<small>{{ nav.subtitle }}</small>{% endif %}</a></li>
+                  {% endif %}
+                {% endfor %}
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
       </header>
       <main role="main">
         {{ content }}

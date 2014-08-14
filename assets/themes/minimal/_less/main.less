@@ -12,12 +12,13 @@ header {
   float: left;
   position: fixed;
 
-  ul {
+  .github-links {
     list-style: none;
     height: 40px;
     
     padding: 0;
     .box-sizing(content-box);
+    margin-left: -1px;
     
     background: #eee;
     background: -moz-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
@@ -128,16 +129,12 @@ footer {
   }
 
   header {
-    padding-right: (@side-width + @side-gutter);
+    .header-nav {
+      padding-left: 50px;
+    }
 
     a small {
       display: inline;
-    }
-
-    ul {
-      position: absolute;
-      right: @body-padding;
-      top: @body-padding;
     }
   }
   
@@ -155,15 +152,26 @@ footer {
   header {
     padding: 0;
 
-    ul {
-      position: static;
+    .github-links {
+      margin-bottom: 0;
+    }
+
+    .header-nav {
+      margin-top: @line-height-computed;
+      padding-left: 0;
     }
   }
 }
 
 @media print, screen and (max-width: (@screen-xs-min - 1)) {
-  header ul {
-    display: none;
+  header {
+    .github-links {
+      display: none;
+    }
+
+    .tagline {
+      margin-bottom: 0;
+    }
   }
 }
 

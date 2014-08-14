@@ -10,9 +10,13 @@
 
 .navbar {
   position: relative;
-  min-height: @navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
   margin-bottom: @navbar-margin-bottom;
   border: 1px solid transparent;
+
+  .dummy& {
+    min-height: @navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
+    margin-bottom: 0;
+  }
 
   // Prevent floats from breaking the navbar
   &:extend(.clearfix all);
