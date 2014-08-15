@@ -31,10 +31,10 @@ body {
   line-height: @line-height-base;
   color: @text-color;
   background-color: @body-bg;
-  padding: @panel-body-padding;
+  padding: @body-padding;
 
-  @media screen and (min-width: @screen-xs-min) {
-    padding: @body-padding;
+  @media screen and (max-width: @screen-xs-min) {
+    padding: @panel-body-padding;
   }
 
   @media print {

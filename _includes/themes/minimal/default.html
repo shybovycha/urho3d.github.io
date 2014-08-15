@@ -56,13 +56,16 @@
             <nav class="navbar navbar-default" role="navigation">
               <div class="header-nav collapse navbar-collapse">
                 <ul class="nav nav-pills nav-stacked">
-                {% for nav in site.data.header_navs %}
-                  {% if nav.title == '---' %}
-                  <li class="divider"></li>
-                  {% else %}
-                  <li{% if page.title == nav.title %} class="active"{% endif %}><a href={% if nav.url contains 'http' %}"{{ nav.url }}" target="_blank"{% else %}"{{ BASE_PATH }}{% if nav.url contains '_path' %}{{ site.JB[nav.url] }}{% else %}{{ nav.url }}{% endif %}"{% endif %}>{{ nav.title }}{% if nav.subtitle %}<small>{{ nav.subtitle }}</small>{% endif %}</a></li>
-                  {% endif %}
-                {% endfor %}
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Site navigation <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                    {% assign group = 'navigation' %}
+                    {% assign pages_list = site.pages |sort:'name' %}
+                    {% include JB/pages_list %}
+                    </ul>
+                  </li>
+                  {% assign navs_list = site.data.header_navs %}
+                  {% include custom/navs_list %}
                 </ul>
               </div>
             </nav>

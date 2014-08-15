@@ -97,7 +97,7 @@ header {
 }
 
 main {
-  padding-left: (@side-width + @side-gutter);
+  margin-left: (@side-width + @side-gutter);
 }
 
 footer {
@@ -115,6 +115,21 @@ footer {
   }
 }
 
+@media print, screen and (max-height: 620px) {
+  main {
+    border-bottom: 1px solid @pre-border-color;
+    padding-bottom: @line-height-computed;
+    margin-bottom: @line-height-computed;
+  }
+
+  footer {
+    margin-left: (@side-width + @side-gutter);
+    float: none;
+    position: static;
+    width: auto;
+  }
+}
+
 @media print, screen and (max-width: @screen-sm-max) {
   .container {
     width: auto;
@@ -123,6 +138,7 @@ footer {
 
   header,
   footer {
+    margin-left: 0;
     float: none;
     position: static;
     width: auto;
@@ -142,7 +158,7 @@ footer {
     border: 1px solid @pre-border-color;
     border-width: 1px 0;
     padding-top: @line-height-computed;
-    padding-left: 0;
+    margin-left: 0;
     padding-bottom: @line-height-computed;
     margin-bottom: @line-height-computed;
   }
@@ -163,7 +179,7 @@ footer {
   }
 }
 
-@media print, screen and (max-width: (@screen-xs-min - 1)) {
+@media print, screen and (max-width: @screen-xs-min) {
   header {
     .github-links {
       display: none;
