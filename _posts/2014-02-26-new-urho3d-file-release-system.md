@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "New Urho3D File Release System"
-description: ""
 category: announcements
 tags: [frs]
 ---

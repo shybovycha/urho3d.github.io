@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Urho3D 1.3 Release"
-description: ""
 category: "releases"
 tags: [1.3]
 ---

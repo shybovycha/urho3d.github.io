@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Unity3D to Urho3D Exporter"
-description: ""
 category: "showcases"
 tags: [Unity3D, exporter]
 ---

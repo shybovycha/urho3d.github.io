@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Urho3D New Website"
-description: ""
 category: announcements
 tags: [website]
 ---
@@ -9,8 +8,8 @@ tags: [website]
 
 Welcome to Urho3D new website!
 
-Old
+### Old
 ![old-site.png]({{ BASE_PATH }}/assets/images/old-site.png)
 
-New
+### New
 ![new-site.png]({{ BASE_PATH }}/assets/images/new-site.png)

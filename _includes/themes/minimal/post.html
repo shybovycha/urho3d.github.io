@@ -7,7 +7,8 @@
   </div>
   <h2 class="post-title">{{ post.title }}
     <small>
-      tags: {% for tag in post.tags %} <a href="{{ BASE_PATH }}{{ site.JB.tags_path }}" rel="tag"><i class="hash">#</i>{{tag}}</a>{% if forloop.last != true %},{% endif %}{% endfor %}
+      <span>category: <a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ post.category }}-ref" rel="tag"><i class="hash">#</i>{{ post.category }}</a></span>
+      <span class="hidden-xs">tags: {% for tag in post.tags %} <a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref" rel="tag"><i class="hash">#</i>{{ tag }}</a>{% if forloop.last != true %},{% endif %}{% endfor %}</span>
     </small>
   </h2>
   <div class="post">

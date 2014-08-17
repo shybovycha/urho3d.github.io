@@ -4,9 +4,6 @@
 @import "pygments-default.less";
 @import "webkit-scrollbar.less";
 
-@side-width: 270px;
-@side-gutter: 90px;
-
 header {
   width: @side-width;
   float: left;
@@ -240,10 +237,20 @@ footer {
   }
 }
 
-article:not(:last-of-type) {
-  padding-bottom: @line-height-computed;
-  margin-bottom: (@line-height-computed * 2);
-  border-bottom: 1px solid @pre-border-color;
+article {
+  &:not(:last-of-type) {
+    padding-bottom: @line-height-computed;
+    margin-bottom: (@line-height-computed * 2);
+    border-bottom: 1px solid @pre-border-color;
+  }
+
+  img {
+    .img-responsive();
+
+    @media print, screen and (min-width: @screen-md-min - (@body-padding * 2)) {
+      max-width: @article-media-max-width;
+    }
+  }
 }
 
 .tags-list {
@@ -272,8 +279,10 @@ article:not(:last-of-type) {
     width: 100%;
 
     > li {
-      width: 50%;
+      width: 45%;
       float: left;
+      word-wrap: break-word;
+      margin-left: 30px;
     }
   }
 }

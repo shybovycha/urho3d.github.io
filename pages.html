@@ -5,8 +5,9 @@ group: navigation
 ---
 {% include JB/setup %}
 
-<ul class="col2">
+<ul class="clearfix col2">
   {% assign show_name = true %}
+  {% assign groups_exclude = site.data.urho3d.releases |join:',' |append:',' %}
   {% assign title_exclude = 'Pages' %}
   {% assign pages_list = site.pages |sort:'name' %}
   {% include JB/pages_list %}

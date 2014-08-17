@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Urho3D new discussion forum opened"
-description: ""
 category: announcements
 tags: [forum, discussion]
 ---
