@@ -1,0 +1,9 @@
+{% comment %}<!--
+Show content of top N posts consecutively.
+-->{% endcomment %}
+
+{% for post in top_n_posts limit:top_n_posts_limit %}
+  {% include themes/minimal/post.html %}
+{% endfor %}
+{% assign top_n_posts = nil %}
+{% assign top_n_posts_limit = nil %}

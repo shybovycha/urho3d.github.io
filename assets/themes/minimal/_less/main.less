@@ -1,0 +1,288 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400italic,700italic,400,700);
+
+@import "bootstrap.less";
+@import "pygments-default.less";
+@import "webkit-scrollbar.less";
+
+header {
+  width: @side-width;
+  float: left;
+  position: fixed;
+
+  .github-links {
+    list-style: none;
+    height: 40px;
+    
+    padding: 0;
+    .box-sizing(content-box);
+    margin-left: -1px;
+    
+    background: #eee;
+    background: -moz-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#dddddd));
+    background: -webkit-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
+    background: -o-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
+    background: -ms-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
+    background: linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
+    
+    border-radius: 5px;
+    border: 1px solid #d2d2d2;
+    box-shadow: inset #fff 0 1px 0, inset rgba(0,0,0,0.03) 0 -1px 0;
+    width: @side-width;
+
+    li {
+      width: 89px;
+      float: left;
+      border-right: 1px solid #d2d2d2;
+      height: 40px;
+
+      &:first-child a {
+        border-radius: 5px 0 0 5px;
+      }
+
+      &:last-child a {
+        border-radius: 0 5px 5px 0;
+      }
+
+      &+li {
+        width: 88px;
+        border-left: 1px solid #fff;
+
+        &+li {
+          border-right: none;
+          width: 89px;
+        }
+      }
+    }
+
+    a {
+      line-height: 1;
+      font-size: 11px;
+      color: #999;
+      display: block;
+      text-align: center;
+      padding-top: 6px;
+      height: 34px;
+
+      &:hover {
+        color: #999;
+        background: -moz-linear-gradient(top, #fff 0%, #ddd 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#ddd));
+        background: -webkit-linear-gradient(top, #fff 0%,#ddd 100%);
+        background: -o-linear-gradient(top, #fff 0%,#ddd 100%);
+        background: -ms-linear-gradient(top, #fff 0%,#ddd 100%);
+        background: linear-gradient(top, #fff 0%,#ddd 100%);
+      }
+
+      &:active {
+        -webkit-box-shadow: inset 0px 2px 2px 0px #ddd;
+        -moz-box-shadow: inset 0px 2px 2px 0px #ddd;
+        box-shadow: inset 0px 2px 2px 0px #ddd;
+      }
+
+      strong {
+        font-size: 14px;
+        display: block;
+        color: #222;
+      }
+    }
+  }
+
+  .tagline {
+    margin-top: (@line-height-computed / 4);
+  }
+}
+
+main {
+  margin-left: (@side-width + @side-gutter);
+}
+
+footer {
+  width: @side-width;
+  float: left;
+  position: fixed;
+  bottom: @body-padding;
+
+  p {
+    margin-bottom: (@line-height-computed / 2);
+  }
+
+  small p {
+    margin-bottom: 0;
+  }
+}
+
+@media print, screen and (max-height: 620px) {
+  main {
+    border-bottom: 1px solid @pre-border-color;
+    padding-bottom: @line-height-computed;
+    margin-bottom: @line-height-computed;
+  }
+
+  footer {
+    margin-left: (@side-width + @side-gutter);
+    float: none;
+    position: static;
+    width: auto;
+  }
+}
+
+@media print, screen and (max-width: @screen-sm-max) {
+  .container {
+    width: auto;
+    margin: 0;
+  }
+
+  header,
+  footer {
+    margin-left: 0;
+    float: none;
+    position: static;
+    width: auto;
+  }
+
+  header {
+    .header-nav {
+      padding-left: 50px;
+    }
+
+    a small {
+      display: inline;
+    }
+  }
+  
+  main {
+    border: 1px solid @pre-border-color;
+    border-width: 1px 0;
+    padding-top: @line-height-computed;
+    margin-left: 0;
+    padding-bottom: @line-height-computed;
+    margin-bottom: @line-height-computed;
+  }
+}
+
+@media print, screen and (max-width: @screen-xs-max) {
+  header {
+    padding: 0;
+
+    .github-links {
+      margin-bottom: 0;
+    }
+
+    .header-nav {
+      margin-top: @line-height-computed;
+      padding-left: 0;
+    }
+  }
+}
+
+@media print, screen and (max-width: @screen-xs-min) {
+  header {
+    .github-links {
+      display: none;
+    }
+
+    .tagline {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.post-meta {
+  float: left;
+  width: 40px;
+  margin-left: -50px;
+  border-right: 1px solid @pre-border-color;
+  .box-sizing(content-box);
+
+  @media print, screen and (max-width: (@screen-xs-min - 1)) {
+    float: right;
+    margin-left: 0;
+    border-right: none;
+    border-left: 1px solid @pre-border-color;
+  }
+
+  .date {
+    text-align: center;
+    line-height: 1.1em;
+    margin: 6px 0 6px;
+
+    i {
+      font-style: normal;
+      font-size: @font-size-h3;
+      display: block;
+    }
+
+    b {
+      font-family: 'ColaborateLightRegular', 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
+      font-weight: normal;
+      font-size: @font-size-base;
+      display: block;
+    }
+  }
+}
+
+.post-title {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: (@line-height-computed * 2);
+
+  small {
+    color: @gray-light;
+    font-size: (@font-size-base - 1);
+    font-weight: normal;
+    position: absolute;
+    bottom: -13px;
+    left: 0;
+  }
+}
+
+article {
+  &:not(:last-of-type) {
+    padding-bottom: @line-height-computed;
+    margin-bottom: (@line-height-computed * 2);
+    border-bottom: 1px solid @pre-border-color;
+  }
+
+  img {
+    .img-responsive();
+
+    @media print, screen and (min-width: @screen-md-min - (@body-padding * 2)) {
+      max-width: @article-media-max-width;
+    }
+  }
+}
+
+.tags-list {
+  padding: 0 0 @line-height-computed 0;
+  margin-bottom: @line-height-computed;
+  border-bottom: 1px solid @pre-border-color;
+
+  > li {
+    line-height: (@line-height-computed * 1.5);
+  }
+
+  a {
+    padding: 6px 6px 3px 6px;
+    background-color: @gray-lighter;
+    border-radius: @border-radius-base;
+
+    span {
+      vertical-align: super;
+      font-size: 0.8em;
+    }
+  }
+}
+
+@media print, screen and (min-width: @screen-lg-min) {
+  .col2 {
+    width: 100%;
+
+    > li {
+      width: 45%;
+      float: left;
+      word-wrap: break-word;
+      margin-right: 30px;
+    }
+  }
+}

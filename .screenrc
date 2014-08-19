@@ -1,0 +1,36 @@
+# Only for screen users
+# Usage: screen -c .screenrc
+
+# Screen options
+vbell off
+
+# In case vi is in autoindent mode, prepend :set paste and append :set nopaste using register [ and register ] so the F8 below paste correctly.
+register [ "\033:se paste\015a"
+register ] "\033:se nopaste\015a"
+
+# Keybindings
+bindkey -k k1 select 1
+bindkey -k k2 select 2
+bindkey -k k3 select 3
+bindkey -k k4 select 4
+#
+bindkey -k k5 exec bash -c "lessc _less/main.less -x --clean-css >css/main-min.css || echo \007"
+bindkey -k k6 screen
+bindkey -k k7 copy
+bindkey -k k8 paste [.]
+#
+bindkey -k k9 prev
+bindkey -k k; next
+bindkey -k F1 windowlist -b
+bindkey -k F2 other
+
+# Workspaces
+screen -t Jekyll bash -c 'echo "Starting Jekyll in quiet mode but monitoring its error stream" && jekyll serve --watch >/dev/null'
+monitor
+activity "Activity in window %n"
+screen
+screen
+chdir assets/themes/minimal
+screen
+screen
+select 1

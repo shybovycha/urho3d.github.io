@@ -1,0 +1,8 @@
+{% comment %}<!--
+List navigation item from an array of hash with the following keys: title, subtitle, url.
+-->{% endcomment %}
+
+{% for nav in navs_list %}
+  <li{% if page.title == nav.title %} class="active"{% endif %}><a href={% if nav.url contains 'http' %}"{{ nav.url }}" target="_blank"{% else %}"{{ BASE_PATH }}{% if nav.url contains '_path' %}{{ site.JB[nav.url] }}{% else %}{{ nav.url }}{% endif %}"{% endif %}>{{ nav.title }}{% if nav.subtitle %}<small>{{ nav.subtitle }}</small>{% endif %}</a></li>
+{% endfor %}
+{% assign navs_list = nil %}

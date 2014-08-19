@@ -1,12 +1,15 @@
 ---
 layout: page
 title: Pages 
-header: Pages
 group: navigation
 ---
 {% include JB/setup %}
 
-<ul>
-{% assign pages_list = site.pages %}
-{% include JB/pages_list %}
+<ul class="clearfix col2">
+  {% assign show_name = true %}
+  {% assign group_sentinel = ',' %}
+  {% capture groups_exclude %}{{ group_sentinel }}{{ site.data.urho3d.releases |join:group_sentinel }}{{ group_sentinel }}{% endcapture %}
+  {% assign title_exclude = 'Pages' %}
+  {% assign pages_list = site.pages |sort:'name' %}
+  {% include JB/pages_list %}
 </ul>

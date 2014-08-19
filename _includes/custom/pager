@@ -1,0 +1,42 @@
+{% comment %}<!--
+Category-aware pager without using any Jekyll plugins.
+Created by: Yao Wei Tjong
+Usage:
+  1) assign the 'category' variable to a valid post's category or leave it as nil for paging without taking category into consideration
+  2) include custom/pager
+  example:
+    {% assign category = page.category %}
+    {% include custom/pager %}
+-->{% endcomment %}
+
+{% if category %}
+  {% assign array = site.categories[category] |sort:'date', 'last' %}
+  {% assign index = 0 %}
+  {% for post in array %}
+    {% if post.id == page.id %}
+      {% break %}
+    {% endif %}
+    {% assign index = index |plus:1 %}
+  {% endfor %}
+  {% assign sizemin1 = array.size |minus:1 %}
+{% endif %}
+
+<ul class="pager">
+{% if category and index > 0 %}
+  {% assign prev = index |minus:1 %}
+  <li><a href="{{ BASE_PATH }}{{ array[prev].url }}">&laquo; Prev <small>{{ category }}</small></a></li>
+{% elsif category == null and page.previous %}
+  <li><a href="{{ BASE_PATH }}{{ page.previous.url }}">&laquo; Prev</a></li>
+{% else %}
+  <li class="disabled"><a>&laquo; Prev{% if category %} <small>{{ category }}{% endif %}</small></a></li>
+{% endif %}
+{% if category and index < sizemin1  %}
+  {% assign next = index |plus:1 %}
+  <li><a href="{{ BASE_PATH }}{{ array[next].url }}">Next &raquo; <small>{{ category }}</small></a></li>
+{% elsif category == null and page.next %}
+  <li><a href="{{ BASE_PATH }}{{ page.next.url }}">Next &raquo;</a></li>
+{% else %}
+  <li class="disabled"><a>Next &raquo;{% if category %} <small>{{ category }}{% endif %}</small></a></li>
+{% endif %}
+</ul>
+{% assign category = nil %}

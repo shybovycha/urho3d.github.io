@@ -1,17 +1,16 @@
 ---
 layout: post
 title: "Urho3D 1.3 Release"
-description: ""
 category: "releases"
 tags: [1.3]
 ---
 {% include JB/setup %}
 
-## Source code
+### Source code
 - [ZIP File](https://github.com/{{ site.organization.name }}/{{ site.organization.project }}/archive/{{ page.tags[0] }}.zip)
 - [TAR Ball](https://github.com/{{ site.organization.name }}/{{ site.organization.project }}/archive/{{ page.tags[0] }}.tar.gz)
 
-## ChangeLog
+### ChangeLog
 - Lua scripting support.
 - Optional build as a single external library, static or dynamic.
 - Raspberry Pi support.

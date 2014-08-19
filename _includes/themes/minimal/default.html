@@ -1,63 +1,81 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="no-js" lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="{{ site.author.name }}">
-    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{{ site.title }} - {{ page.title }}</title>
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5.0">
     
-    <!-- Fav and touch icons -->
-    <link rel="shortcut icon" href="{{ BASE_PATH }}/assets/images/Urho3D_favicon.png">
-    <link rel="apple-touch-icon" href="{{ BASE_PATH }}/assets/images/Urho3D_favicon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ BASE_PATH }}/assets/images/Urho3D_favicon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ BASE_PATH }}/assets/images/Urho3D_favicon-114x114.png">
+    <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
 
     <!-- atom & rss feed -->
     <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
     <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="{{ ASSET_PATH }}/css/styles.css">
-    <link rel="stylesheet" href="{{ ASSET_PATH }}/css/pygment_trac.css">
-    <link rel="stylesheet" href="{{ ASSET_PATH }}/css/webkit-scrollbar.css">
-    <link rel="stylesheet" href="{{ BASE_PATH }}/documentation/HEAD/tabs.css">
-    <link rel="stylesheet" href="{{ BASE_PATH }}/documentation/HEAD/minimal-doxygen.css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script type="text/javascript" src="{{ ASSET_PATH }}/javascripts/webkit-scrollbar.js"></script>
-    <script type="text/javascript" src="{{ BASE_PATH }}/documentation/HEAD/dynsections.js"></script>
-    
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    {% if DOXYGEN_PATH %}
+    <!-- Doxygen Style Sheet -->
+    <link rel="stylesheet" href="{{ DOXYGEN_PATH }}/tabs.css">
+    <link rel="stylesheet" href="{{ DOXYGEN_PATH }}/minimal-doxygen.css">
+    {% endif %}
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="{{ ASSET_PATH }}/css/main-min.css">
+    <!-- Modernizr -->
+    <script src="{{ ASSET_PATH }}/js/vendor/modernizr-2.8.0.min.js"></script>
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1><a href="{{ HOME_PATH }}" title="{{ site.title }} Homepage"><img src="{{ BASE_PATH }}/assets/images/Urho3D_logo.jpg" alt="Urho3D_logo.jpg" height="42" width="153" /></a></h1>
-        <p>{{ site.tagline }}</p>
-        <ul>
-            <li><a href="https://github.com/{{ site.organization.name }}/{{ site.organization.project }}/zipball/master">Download Latest <strong>ZIP File</strong></a></li>
-            <li><a href="https://github.com/{{ site.organization.name }}/{{ site.organization.project }}/tarball/master">Download Latest<strong>TAR Ball</strong></a></li>
-            <li><a href="https://github.com/{{ site.organization.name }}/{{ site.organization.project }}">View On <strong>GitHub</strong></a></li>
-        </ul>
-        <p class="view">
-          <div><a href="{{ BASE_PATH }}/about.html">About<small>&nbsp;&nbsp;{{ site.title }}</small></a></div>
-          <div><a href="{{ BASE_PATH }}/documentation/HEAD/index.html">Documentation<small>&nbsp;&nbsp;Manual and Scripting APIs</small></a></div>
-          <!--div><a href="https://github.com/{{ site.organization.name }}/{{ site.organization.project }}/wiki" target="_blank">Wiki<small>&nbsp;&nbsp;Guides and Tutorials</small></a></div-->
-          <div><a href="http://urho3d.prophpbb.com/" target="_blank">Discussion<small>&nbsp;&nbsp;Forum</small></a></div>
-          <div><a href="http://sourceforge.net/projects/urho3d/files/Urho3D/" target="_blank">Downloads<small>&nbsp;&nbsp;File Releases</small></a></div>
-          <br>
-          <div><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></div>
-          <div><a href="{{ BASE_PATH }}{{ site.JB.categories_path }}">Categories</a></div>
-          <div><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}">Tags</a></div>
-        </p>
+    <!--[if lt IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="container">
+      <header role="banner">
+        <div class="row">
+          <div class="col-sm-6 col-md-12">
+            <a href="{{ HOME_PATH }}" title="{{ site.title }} Homepage"><img src="{{ BASE_PATH }}/assets/images/logo.png" alt="link to {{ HOME_PATH }}" /></a>
+            <div class="dummy navbar navbar-default">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".header-nav">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <p class="tagline">{{ site.tagline }}</p>
+                {% assign last_release = site.data.urho3d.releases |last %}
+                <ul class="github-links">
+                  <li><a href="https://github.com/{{ site.organization.name }}/{{ site.organization.project }}/archive/{{ last_release }}.zip">Download {{ last_release }}<strong>ZIP File</strong></a></li>
+                  <li><a href="https://github.com/{{ site.organization.name }}/{{ site.organization.project }}/archive/{{ last_release }}.tar.gz">Download {{ last_release }}<strong>TAR Ball</strong></a></li>
+                  <li><a href="https://github.com/{{ site.organization.name }}/{{ site.organization.project }}">View On <strong>GitHub</strong></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div col class="col-sm-6 col-md-12">
+            <nav class="navbar navbar-default" role="navigation">
+              <div class="header-nav collapse navbar-collapse">
+                <ul class="nav nav-pills nav-stacked">
+                  <li class="dropdown{% if page.group == 'navigation' %} active{% endif %}">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Site navigation <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                    {% assign navs_list = site.data.header_navs.dropdowns %}
+                    {% include custom/navs_list %}
+                    </ul>
+                  </li>
+                  {% assign navs_list = site.data.header_navs.pills %}
+                  {% include custom/navs_list %}
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
       </header>
-      <section>
+      <main role="main">
         {{ content }}
-      </section>
-      <footer>
+      </main>
+      <footer role="contentinfo">
         <p><small>
           <a href="{{ BASE_PATH }}{{ site.JB.atom_path }}"><img src="{{ BASE_PATH }}/assets/images/feeds.jpg" alt="feeds.jpg" />ATOM</a>&nbsp;
           <a href="{{ BASE_PATH }}{{ site.JB.rss_path }}"><img src="{{ BASE_PATH }}/assets/images/feeds.jpg" alt="feeds.jpg" />RSS</a>
@@ -73,8 +91,17 @@
         </small>
       </footer>
     </div>
-    <script src="{{ ASSET_PATH }}/javascripts/scale.fix.js"></script>
     
     {% include JB/analytics %}
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{ ASSET_PATH }}/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+    <script src="{{ ASSET_PATH }}/js/vendor/bootstrap-3.2.0.min.js"></script>
+    <script src="{{ ASSET_PATH }}/js/main.js"></script>
+    {% if DOXYGEN_PATH %}
+    <!-- Doxygen Javascript -->
+    <script src="{{ DOXYGEN_PATH }}/dynsections.js"></script>
+    {% endif %}
   </body>
 </html>
