@@ -237,20 +237,10 @@ footer {
   }
 }
 
-article {
-  &:not(:last-of-type) {
-    padding-bottom: @line-height-computed;
-    margin-bottom: (@line-height-computed * 2);
-    border-bottom: 1px solid @pre-border-color;
-  }
-
-  img {
-    .img-responsive();
-
-    @media print, screen and (min-width: @screen-md-min - (@body-padding * 2)) {
-      max-width: @article-media-max-width;
-    }
-  }
+article:not(:last-of-type) {
+  padding-bottom: @line-height-computed;
+  margin-bottom: (@line-height-computed * 2);
+  border-bottom: 1px solid @pre-border-color;
 }
 
 .tags-list {
