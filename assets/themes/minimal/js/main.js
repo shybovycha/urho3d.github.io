@@ -24,7 +24,7 @@
 // Place any jQuery/helper plugins in here.
 $(document).ready(function() {
   $('#document-switcher + .dropdown-menu [href]').each(function(i, elem) {
-    $.ajax({ url: elem, statusCode: {
+    $.ajax({ url: elem, type: 'HEAD', statusCode: {
       404: function() {
         $(elem).removeAttr('href').parent().addClass("disabled");
       }
