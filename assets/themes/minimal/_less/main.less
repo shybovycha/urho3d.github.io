@@ -4,17 +4,30 @@
 @import "pygments-default.less";
 @import "webkit-scrollbar.less";
 
+article {
+  &:not(:last-of-type) {
+    padding-bottom: @line-height-computed;
+    margin-bottom: (@line-height-computed * 2);
+    border-bottom: 1px solid @pre-border-color;
+  }
+
+  img {
+    .img-responsive();
+    width: 100%;
+  }
+}
+
 header {
   width: @side-width;
   float: left;
   position: fixed;
 
   .github-links {
+    .box-sizing(content-box);
     list-style: none;
     height: 40px;
     
     padding: 0;
-    .box-sizing(content-box);
     margin-left: -1px;
     
     background: #eee;
@@ -235,12 +248,6 @@ footer {
     bottom: -13px;
     left: 0;
   }
-}
-
-article:not(:last-of-type) {
-  padding-bottom: @line-height-computed;
-  margin-bottom: (@line-height-computed * 2);
-  border-bottom: 1px solid @pre-border-color;
 }
 
 .tags-list {
