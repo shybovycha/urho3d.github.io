@@ -286,12 +286,10 @@ footer {
 
 #document-switcher {
   &.deprecated-page {
-    color: #fff;
-    background-color: #cc6600;
+    .button-variant(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
   }
 
   &.new-page {
-    color: #fff;
-    background-color: #66cc00;
+    .button-variant(@btn-success-color; @btn-success-bg; @btn-success-border);
   }
 }
