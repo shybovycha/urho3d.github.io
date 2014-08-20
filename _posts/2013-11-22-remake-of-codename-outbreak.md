@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Remake of Codename: Outbreak"
+title: "Remake of codename: Outbreak"
 category: "showcases"
 tags: [FPS, remake]
 ---

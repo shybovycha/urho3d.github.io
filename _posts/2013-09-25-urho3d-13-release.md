@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "Urho3D 1.3 Release"
+title: "Urho3D 1.3 release"
 category: "releases"
 tags: [1.3]
 ---
 {% include JB/setup %}
 
 ### Source code
-- [ZIP File](https://github.com/{{ site.organization.name }}/{{ site.organization.project }}/archive/{{ page.tags[0] }}.zip)
-- [TAR Ball](https://github.com/{{ site.organization.name }}/{{ site.organization.project }}/archive/{{ page.tags[0] }}.tar.gz)
+- [ZIP file](https://github.com/{{ site.organization.name }}/{{ site.organization.project }}/archive/{{ page.tags[0] }}.zip)
+- [TAR ball](https://github.com/{{ site.organization.name }}/{{ site.organization.project }}/archive/{{ page.tags[0] }}.tar.gz)
 
 ### ChangeLog
 - Lua scripting support.

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "New Urho3D File Release System"
+title: "New Urho3D file release system"
 category: announcements
-tags: [frs]
+tags: [SourceForge]
 ---
 {% include JB/setup %}
 

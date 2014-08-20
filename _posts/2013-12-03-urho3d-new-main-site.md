@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Urho3D New Website"
+title: "Urho3D new website"
 category: announcements
 tags: [website]
 ---

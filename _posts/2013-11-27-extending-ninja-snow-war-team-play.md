@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Extending Ninja Snow War (Team Play)"
+title: "Extending Ninja Snow War (team play)"
 category: "showcases"
 tags: [FPS, NinjaSnowWar, network]
 ---
