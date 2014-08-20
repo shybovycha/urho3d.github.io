@@ -23,11 +23,19 @@
 
 // Place any jQuery/helper plugins in here.
 $(document).ready(function() {
-  $('#document-switcher + .dropdown-menu [href]').each(function(i, elem) {
-    $.ajax({ url: elem, type: 'HEAD', statusCode: {
-      404: function() {
-        $(elem).removeAttr('href').parent().addClass("disabled");
-      }
-    }});
-  });
+  var $documentSwitcher = $('#document-switcher');
+  if ($documentSwitcher) {
+    $('+ .dropdown-menu [href]', $documentSwitcher).each(function(i, elem) {
+      $.ajax({ url: elem, type: 'HEAD', async: false, statusCode: {
+        200: function() {
+          $documentSwitcher.data('new', i == 0);
+        },
+        404: function() {
+          if (i == 0) $documentSwitcher.addClass('deprecated-page');
+          $(elem).removeAttr('href').parent().addClass("disabled");
+        }
+      }});
+    });
+    if ($documentSwitcher.data('new')) $documentSwitcher.addClass('new-page');
+  }
 });
