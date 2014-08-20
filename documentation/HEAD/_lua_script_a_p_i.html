@@ -18,8 +18,21 @@ group: HEAD
 <div class="title">Lua Scripting API </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2><a class="anchor" id="LuaScriptAPI_Classes"></a>
+<div class="textblock"><h2><a class="anchor" id="LuaScriptAPI_TableOfContents"></a>
+Table of Contents</h2>
+<p><a class="el" href="_lua_script_a_p_i.html#LuaScriptAPI_ClassList">Class list</a><br/>
+ <a class="el" href="_lua_script_a_p_i.html#LuaScriptAPI_Classes">Classes</a><br/>
+ <a class="el" href="_lua_script_a_p_i.html#LuaScriptAPI_Enums">Enumerations</a><br/>
+ <a class="el" href="_lua_script_a_p_i.html#LuaScriptAPI_GlobalFunctions">Global functions</a><br/>
+ <a class="el" href="_lua_script_a_p_i.html#LuaScriptAPI_GlobalProperties">Global properties</a><br/>
+ <a class="el" href="_lua_script_a_p_i.html#LuaScriptAPI_GlobalConstants">Global constants</a><br/>
+</p>
+<h2><a class="anchor" id="LuaScriptAPI_ClassList"></a>
+Class list</h2>
+<p><a href="#Class_Animatable"><b>Animatable</b></a> <a href="#Class_AnimatedModel"><b>AnimatedModel</b></a> <a href="#Class_AnimatedSprite2D"><b>AnimatedSprite2D</b></a> <a href="#Class_Animation"><b>Animation</b></a> <a href="#Class_Animation2D"><b>Animation2D</b></a> <a href="#Class_AnimationControl"><b>AnimationControl</b></a> <a href="#Class_AnimationController"><b>AnimationController</b></a> <a href="#Class_AnimationKeyFrame"><b>AnimationKeyFrame</b></a> <a href="#Class_AnimationSet2D"><b>AnimationSet2D</b></a> <a href="#Class_AnimationState"><b>AnimationState</b></a> <a href="#Class_Audio"><b>Audio</b></a> <a href="#Class_BiasParameters"><b>BiasParameters</b></a> <a href="#Class_Billboard"><b>Billboard</b></a> <a href="#Class_BillboardSet"><b>BillboardSet</b></a> <a href="#Class_Bone"><b>Bone</b></a> <a href="#Class_BorderImage"><b>BorderImage</b></a> <a href="#Class_BoundingBox"><b>BoundingBox</b></a> <a href="#Class_Button"><b>Button</b></a> <a href="#Class_Camera"><b>Camera</b></a> <a href="#Class_CascadeParameters"><b>CascadeParameters</b></a> <a href="#Class_CheckBox"><b>CheckBox</b></a> <a href="#Class_CollisionBox2D"><b>CollisionBox2D</b></a> <a href="#Class_CollisionChain2D"><b>CollisionChain2D</b></a> <a href="#Class_CollisionCircle2D"><b>CollisionCircle2D</b></a> <a href="#Class_CollisionEdge2D"><b>CollisionEdge2D</b></a> <a href="#Class_CollisionPolygon2D"><b>CollisionPolygon2D</b></a> <a href="#Class_CollisionShape"><b>CollisionShape</b></a> <a href="#Class_CollisionShape2D"><b>CollisionShape2D</b></a> <a href="#Class_Color"><b>Color</b></a> <a href="#Class_ColorFrame"><b>ColorFrame</b></a> <a href="#Class_Component"><b>Component</b></a> <a href="#Class_Connection"><b>Connection</b></a> <a href="#Class_Console"><b>Console</b></a> <a href="#Class_Constraint"><b>Constraint</b></a> <a href="#Class_Constraint2D"><b>Constraint2D</b></a> <a href="#Class_ConstraintDistance2D"><b>ConstraintDistance2D</b></a> <a href="#Class_ConstraintFriction2D"><b>ConstraintFriction2D</b></a> <a href="#Class_ConstraintGear2D"><b>ConstraintGear2D</b></a> <a href="#Class_ConstraintMotor2D"><b>ConstraintMotor2D</b></a> <a href="#Class_ConstraintMouse2D"><b>ConstraintMouse2D</b></a> <a href="#Class_ConstraintPrismatic2D"><b>ConstraintPrismatic2D</b></a> <a href="#Class_ConstraintPulley2D"><b>ConstraintPulley2D</b></a> <a href="#Class_ConstraintRevolute2D"><b>ConstraintRevolute2D</b></a> <a href="#Class_ConstraintRope2D"><b>ConstraintRope2D</b></a> <a href="#Class_ConstraintWeld2D"><b>ConstraintWeld2D</b></a> <a href="#Class_ConstraintWheel2D"><b>ConstraintWheel2D</b></a> <a href="#Class_Context"><b>Context</b></a> <a href="#Class_Controls"><b>Controls</b></a> <a href="#Class_Cursor"><b>Cursor</b></a> <a href="#Class_CustomGeometry"><b>CustomGeometry</b></a> <a href="#Class_CustomGeometryVertex"><b>CustomGeometryVertex</b></a> <a href="#Class_DebugHud"><b>DebugHud</b></a> <a href="#Class_DebugRenderer"><b>DebugRenderer</b></a> <a href="#Class_DecalSet"><b>DecalSet</b></a> <a href="#Class_Deserializer"><b>Deserializer</b></a> <a href="#Class_Drawable"><b>Drawable</b></a> <a href="#Class_Drawable2D"><b>Drawable2D</b></a> <a href="#Class_DropDownList"><b>DropDownList</b></a> <a href="#Class_Engine"><b>Engine</b></a> <a href="#Class_File"><b>File</b></a> <a href="#Class_FileSelector"><b>FileSelector</b></a> <a href="#Class_FileSelectorEntry"><b>FileSelectorEntry</b></a> <a href="#Class_FileSystem"><b>FileSystem</b></a> <a href="#Class_FileWatcher"><b>FileWatcher</b></a> <a href="#Class_FocusParameters"><b>FocusParameters</b></a> <a href="#Class_Font"><b>Font</b></a> <a href="#Class_Frustum"><b>Frustum</b></a> <a href="#Class_Graphics"><b>Graphics</b></a> <a href="#Class_HttpRequest"><b>HttpRequest</b></a> <a href="#Class_Image"><b>Image</b></a> <a href="#Class_Input"><b>Input</b></a> <a href="#Class_IntRect"><b>IntRect</b></a> <a href="#Class_IntVector2"><b>IntVector2</b></a> <a href="#Class_JSONFile"><b>JSONFile</b></a> <a href="#Class_JSONValue"><b>JSONValue</b></a> <a href="#Class_JoystickState"><b>JoystickState</b></a> <a href="#Class_Light"><b>Light</b></a> <a href="#Class_LineEdit"><b>LineEdit</b></a> <a href="#Class_ListView"><b>ListView</b></a> <a href="#Class_Log"><b>Log</b></a> <a href="#Class_LuaScriptInstance"><b>LuaScriptInstance</b></a> <a href="#Class_Material"><b>Material</b></a> <a href="#Class_Matrix3"><b>Matrix3</b></a> <a href="#Class_Matrix3x4"><b>Matrix3x4</b></a> <a href="#Class_Matrix4"><b>Matrix4</b></a> <a href="#Class_Menu"><b>Menu</b></a> <a href="#Class_MessageBox"><b>MessageBox</b></a> <a href="#Class_Model"><b>Model</b></a> <a href="#Class_Navigable"><b>Navigable</b></a> <a href="#Class_NavigationGeometryInfo"><b>NavigationGeometryInfo</b></a> <a href="#Class_NavigationMesh"><b>NavigationMesh</b></a> <a href="#Class_Network"><b>Network</b></a> <a href="#Class_NetworkPriority"><b>NetworkPriority</b></a> <a href="#Class_Node"><b>Node</b></a> <a href="#Class_Object"><b>Object</b></a> <a href="#Class_ObjectAnimation"><b>ObjectAnimation</b></a> <a href="#Class_Octree"><b>Octree</b></a> <a href="#Class_OctreeQueryResult"><b>OctreeQueryResult</b></a> <a href="#Class_OffMeshConnection"><b>OffMeshConnection</b></a> <a href="#Class_PackageEntry"><b>PackageEntry</b></a> <a href="#Class_PackageFile"><b>PackageFile</b></a> <a href="#Class_ParticleEffect"><b>ParticleEffect</b></a> <a href="#Class_ParticleEffect2D"><b>ParticleEffect2D</b></a> <a href="#Class_ParticleEmitter"><b>ParticleEmitter</b></a> <a href="#Class_ParticleEmitter2D"><b>ParticleEmitter2D</b></a> <a href="#Class_Pass"><b>Pass</b></a> <a href="#Class_PhysicsRaycastResult"><b>PhysicsRaycastResult</b></a> <a href="#Class_PhysicsRaycastResult2D"><b>PhysicsRaycastResult2D</b></a> <a href="#Class_PhysicsWorld"><b>PhysicsWorld</b></a> <a href="#Class_PhysicsWorld2D"><b>PhysicsWorld2D</b></a> <a href="#Class_Plane"><b>Plane</b></a> <a href="#Class_Polyhedron"><b>Polyhedron</b></a> <a href="#Class_PropertySet2D"><b>PropertySet2D</b></a> <a href="#Class_Quaternion"><b>Quaternion</b></a> <a href="#Class_Ray"><b>Ray</b></a> <a href="#Class_RayQueryResult"><b>RayQueryResult</b></a> <a href="#Class_Rect"><b>Rect</b></a> <a href="#Class_RemoteEvent"><b>RemoteEvent</b></a> <a href="#Class_RenderPath"><b>RenderPath</b></a> <a href="#Class_RenderSurface"><b>RenderSurface</b></a> <a href="#Class_Renderer"><b>Renderer</b></a> <a href="#Class_Resource"><b>Resource</b></a> <a href="#Class_ResourceCache"><b>ResourceCache</b></a> <a href="#Class_ResourceRef"><b>ResourceRef</b></a> <a href="#Class_ResourceRefList"><b>ResourceRefList</b></a> <a href="#Class_RigidBody"><b>RigidBody</b></a> <a href="#Class_RigidBody2D"><b>RigidBody2D</b></a> <a href="#Class_Scene"><b>Scene</b></a> <a href="#Class_ScrollBar"><b>ScrollBar</b></a> <a href="#Class_ScrollView"><b>ScrollView</b></a> <a href="#Class_Serializable"><b>Serializable</b></a> <a href="#Class_Serializer"><b>Serializer</b></a> <a href="#Class_Skeleton"><b>Skeleton</b></a> <a href="#Class_Skybox"><b>Skybox</b></a> <a href="#Class_Slider"><b>Slider</b></a> <a href="#Class_Sound"><b>Sound</b></a> <a href="#Class_SoundListener"><b>SoundListener</b></a> <a href="#Class_SoundSource"><b>SoundSource</b></a> <a href="#Class_SoundSource3D"><b>SoundSource3D</b></a> <a href="#Class_Sphere"><b>Sphere</b></a> <a href="#Class_Spline"><b>Spline</b></a> <a href="#Class_SplinePath"><b>SplinePath</b></a> <a href="#Class_Sprite"><b>Sprite</b></a> <a href="#Class_Sprite2D"><b>Sprite2D</b></a> <a href="#Class_SpriteSheet2D"><b>SpriteSheet2D</b></a> <a href="#Class_StaticModel"><b>StaticModel</b></a> <a href="#Class_StaticModelGroup"><b>StaticModelGroup</b></a> <a href="#Class_StaticSprite2D"><b>StaticSprite2D</b></a> <a href="#Class_StringHash"><b>StringHash</b></a> <a href="#Class_Technique"><b>Technique</b></a> <a href="#Class_Terrain"><b>Terrain</b></a> <a href="#Class_TerrainPatch"><b>TerrainPatch</b></a> <a href="#Class_Text"><b>Text</b></a> <a href="#Class_Text3D"><b>Text3D</b></a> <a href="#Class_Texture"><b>Texture</b></a> <a href="#Class_Texture2D"><b>Texture2D</b></a> <a href="#Class_TextureCube"><b>TextureCube</b></a> <a href="#Class_TextureFrame"><b>TextureFrame</b></a> <a href="#Class_Tile2D"><b>Tile2D</b></a> <a href="#Class_TileMap2D"><b>TileMap2D</b></a> <a href="#Class_TileMapLayer2D"><b>TileMapLayer2D</b></a> <a href="#Class_TileObject2D"><b>TileObject2D</b></a> <a href="#Class_Time"><b>Time</b></a> <a href="#Class_TmxFile2D"><b>TmxFile2D</b></a> <a href="#Class_ToolTip"><b>ToolTip</b></a> <a href="#Class_TouchState"><b>TouchState</b></a> <a href="#Class_UI"><b>UI</b></a> <a href="#Class_UIElement"><b>UIElement</b></a> <a href="#Class_ValueAnimation"><b>ValueAnimation</b></a> <a href="#Class_Variant"><b>Variant</b></a> <a href="#Class_VariantMap"><b>VariantMap</b></a> <a href="#Class_Vector2"><b>Vector2</b></a> <a href="#Class_Vector3"><b>Vector3</b></a> <a href="#Class_Vector4"><b>Vector4</b></a> <a href="#Class_VectorBuffer"><b>VectorBuffer</b></a> <a href="#Class_View3D"><b>View3D</b></a> <a href="#Class_Viewport"><b>Viewport</b></a> <a href="#Class_Window"><b>Window</b></a> <a href="#Class_XMLElement"><b>XMLElement</b></a> <a href="#Class_XMLFile"><b>XMLFile</b></a> <a href="#Class_Zone"><b>Zone</b></a></p>
+<h2><a class="anchor" id="LuaScriptAPI_Classes"></a>
 Classes</h2>
+<p><a class="anchor" id="Class_Animatable"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_animatable.html" title="Base class for animatable object, an animatable object can be set animation on it&#39;s attributes...">Animatable</a> : <a class="el" href="class_urho3_d_1_1_serializable.html" title="Base class for objects with automatic serialization through attributes.">Serializable</a></h3>
 <p>Methods:</p>
 <ul>
@@ -39,6 +52,7 @@ Classes</h2>
 <li>bool animationEnabled</li>
 <li>ObjectAnimation* objectAnimation</li>
 </ul>
+<p><a class="anchor" id="Class_AnimatedModel"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_animated_model.html" title="Animated model component.">AnimatedModel</a> : <a class="el" href="class_urho3_d_1_1_static_model.html" title="Static model component.">StaticModel</a></h3>
 <p>Methods:</p>
 <ul>
@@ -80,6 +94,7 @@ Classes</h2>
 <li>unsigned numMorphs (readonly)</li>
 <li>bool master (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_AnimatedSprite2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_animated_sprite2_d.html" title="Spriter animation component.">AnimatedSprite2D</a> : <a class="el" href="class_urho3_d_1_1_drawable.html" title="Base class for visible components.">Drawable</a></h3>
 <p>Methods:</p>
 <ul>
@@ -119,6 +134,7 @@ Classes</h2>
 <li>AnimationSet2D* animationSet</li>
 <li>LoopMode2D loopMode</li>
 </ul>
+<p><a class="anchor" id="Class_Animation"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_animation.html" title="Skeletal animation resource.">Animation</a> : <a class="el" href="class_urho3_d_1_1_resource.html" title="Base class for resources.">Resource</a></h3>
 <p>Methods:</p>
 <ul>
@@ -139,6 +155,7 @@ Classes</h2>
 <li>unsigned numTracks (readonly)</li>
 <li>unsigned numTriggers (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_Animation2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_animation2_d.html" title="Spriter animation. for more information please refer to http://www.brashmonkey.com/spriter.htm.">Animation2D</a> : <a class="el" href="class_urho3_d_1_1_ref_counted.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable.">RefCounted</a></h3>
 <p>Methods:</p>
 <ul>
@@ -152,6 +169,7 @@ Classes</h2>
 <li>float length (readonly)</li>
 <li>bool looped (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_AnimationControl"></a> </p>
 <h3><a class="el" href="struct_urho3_d_1_1_animation_control.html" title="Control data for an animation.">AnimationControl</a></h3>
 <p>Methods:</p>
 <ul>
@@ -173,6 +191,7 @@ Classes</h2>
 <li>char setTimeRev_</li>
 <li>char setWeightRev_</li>
 </ul>
+<p><a class="anchor" id="Class_AnimationController"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_animation_controller.html" title="Component that drives an AnimatedModel&#39;s animations.">AnimationController</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h3>
 <p>Methods:</p>
 <ul>
@@ -207,6 +226,7 @@ Classes</h2>
 <li>AnimationState* GetAnimationState(const String name) const</li>
 <li>AnimationState* GetAnimationState(StringHash nameHash) const</li>
 </ul>
+<p><a class="anchor" id="Class_AnimationKeyFrame"></a> </p>
 <h3><a class="el" href="struct_urho3_d_1_1_animation_key_frame.html" title="Skeletal animation keyframe.">AnimationKeyFrame</a></h3>
 <p>Properties:</p>
 <ul>
@@ -215,6 +235,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_quaternion.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> rotation</li>
 <li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> scale</li>
 </ul>
+<p><a class="anchor" id="Class_AnimationSet2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_animation_set2_d.html" title="Spriter animation set, it includes one or more animations, for more information please refer to http:...">AnimationSet2D</a> : <a class="el" href="class_urho3_d_1_1_resource.html" title="Base class for resources.">Resource</a></h3>
 <p>Methods:</p>
 <ul>
@@ -226,6 +247,7 @@ Classes</h2>
 <ul>
 <li>unsigned numAnimations (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_AnimationState"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_animation_state.html" title="Animation instance.">AnimationState</a></h3>
 <p>Methods:</p>
 <ul>
@@ -269,6 +291,7 @@ Classes</h2>
 <li>float length (readonly)</li>
 <li>char layer</li>
 </ul>
+<p><a class="anchor" id="Class_Audio"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_audio.html" title="Audio subsystem.">Audio</a> : <a class="el" href="class_urho3_d_1_1_object.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
 <p>Methods:</p>
 <ul>
@@ -302,6 +325,7 @@ Classes</h2>
 <li>bool initialized (readonly)</li>
 <li>SoundListener* listener</li>
 </ul>
+<p><a class="anchor" id="Class_BiasParameters"></a> </p>
 <h3><a class="el" href="struct_urho3_d_1_1_bias_parameters.html" title="Shadow depth bias parameters.">BiasParameters</a></h3>
 <p>Methods:</p>
 <ul>
@@ -311,6 +335,7 @@ Classes</h2>
 <li>BiasParameters* new(float constantBias, float slopeScaledBias)</li>
 <li>void delete()</li>
 </ul>
+<p><a class="anchor" id="Class_Billboard"></a> </p>
 <h3><a class="el" href="struct_urho3_d_1_1_billboard.html" title="One billboard in the billboard set.">Billboard</a></h3>
 <p>Properties:</p>
 <ul>
@@ -322,6 +347,7 @@ Classes</h2>
 <li>bool enabled</li>
 <li>float sortDistance</li>
 </ul>
+<p><a class="anchor" id="Class_BillboardSet"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_billboard_set.html" title="Billboard component.">BillboardSet</a> : <a class="el" href="class_urho3_d_1_1_drawable.html" title="Base class for visible components.">Drawable</a></h3>
 <p>Methods:</p>
 <ul>
@@ -352,6 +378,7 @@ Classes</h2>
 <li>FaceCameraMode faceCameraMode</li>
 <li>float animationLodBias</li>
 </ul>
+<p><a class="anchor" id="Class_Bone"></a> </p>
 <h3><a class="el" href="struct_urho3_d_1_1_bone.html" title="Bone in a skeleton.">Bone</a></h3>
 <p>Methods:</p>
 <ul>
@@ -374,6 +401,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_bounding_box.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a> boundingBox</li>
 <li>Node* node</li>
 </ul>
+<p><a class="anchor" id="Class_BorderImage"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_border_image.html" title="Image UI element with optional border.">BorderImage</a> : <a class="el" href="class_urho3_d_1_1_u_i_element.html" title="Base class for UI elements.">UIElement</a></h3>
 <p>Methods:</p>
 <ul>
@@ -407,6 +435,7 @@ Classes</h2>
 <li>BlendMode blendMode</li>
 <li>bool tiled</li>
 </ul>
+<p><a class="anchor" id="Class_BoundingBox"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_bounding_box.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a></h3>
 <p>Methods:</p>
 <ul>
@@ -467,6 +496,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> size (readonly)</li>
 <li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> halfSize (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_Button"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_button.html" title="Pushbutton UI element.">Button</a> : <a class="el" href="class_urho3_d_1_1_border_image.html" title="Image UI element with optional border.">BorderImage</a></h3>
 <p>Methods:</p>
 <ul>
@@ -494,6 +524,7 @@ Classes</h2>
 <li>float repeatRate</li>
 <li>bool pressed (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_Camera"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_camera.html" title="Camera component.">Camera</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h3>
 <p>Methods:</p>
 <ul>
@@ -576,6 +607,7 @@ Classes</h2>
 <li>bool projectionValid (readonly)</li>
 <li><a class="el" href="class_urho3_d_1_1_matrix3x4.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> effectiveWorldTransform (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_CascadeParameters"></a> </p>
 <h3><a class="el" href="struct_urho3_d_1_1_cascade_parameters.html" title="Cascaded shadow map parameters.">CascadeParameters</a></h3>
 <p>Methods:</p>
 <ul>
@@ -585,6 +617,7 @@ Classes</h2>
 <li>CascadeParameters* new(float split1, float split2, float split3, float split4, float fadeStart, float biasAutoAdjust = 1.0f)</li>
 <li>void delete()</li>
 </ul>
+<p><a class="anchor" id="Class_CheckBox"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_check_box.html" title="UI element that can be toggled between unchecked and checked state.">CheckBox</a> : <a class="el" href="class_urho3_d_1_1_border_image.html" title="Image UI element with optional border.">BorderImage</a></h3>
 <p>Methods:</p>
 <ul>
@@ -602,6 +635,7 @@ Classes</h2>
 <li>bool checked</li>
 <li><a class="el" href="class_urho3_d_1_1_int_vector2.html" title="Two-dimensional vector with integer values.">IntVector2</a>&amp; checkedOffset</li>
 </ul>
+<p><a class="anchor" id="Class_CollisionBox2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_collision_box2_d.html" title="2D box collision component.">CollisionBox2D</a> : <a class="el" href="class_urho3_d_1_1_collision_shape2_d.html" title="2D collision shape component.">CollisionShape2D</a></h3>
 <p>Methods:</p>
 <ul>
@@ -620,6 +654,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_vector2.html" title="Two-dimensional vector.">Vector2</a>&amp; center</li>
 <li>float angle</li>
 </ul>
+<p><a class="anchor" id="Class_CollisionChain2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_collision_chain2_d.html" title="2D chain collision component.">CollisionChain2D</a> : <a class="el" href="class_urho3_d_1_1_collision_shape2_d.html" title="2D collision shape component.">CollisionShape2D</a></h3>
 <p>Methods:</p>
 <ul>
@@ -636,6 +671,7 @@ Classes</h2>
 <li>bool loop</li>
 <li>unsigned vertexCount</li>
 </ul>
+<p><a class="anchor" id="Class_CollisionCircle2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_collision_circle2_d.html" title="2D circle collision component.">CollisionCircle2D</a> : <a class="el" href="class_urho3_d_1_1_collision_shape2_d.html" title="2D collision shape component.">CollisionShape2D</a></h3>
 <p>Methods:</p>
 <ul>
@@ -650,6 +686,7 @@ Classes</h2>
 <li>float radius</li>
 <li><a class="el" href="class_urho3_d_1_1_vector2.html" title="Two-dimensional vector.">Vector2</a>&amp; center</li>
 </ul>
+<p><a class="anchor" id="Class_CollisionEdge2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_collision_edge2_d.html" title="2D edge collision component.">CollisionEdge2D</a> : <a class="el" href="class_urho3_d_1_1_collision_shape2_d.html" title="2D collision shape component.">CollisionShape2D</a></h3>
 <p>Methods:</p>
 <ul>
@@ -664,6 +701,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_vector2.html" title="Two-dimensional vector.">Vector2</a>&amp; vertex1</li>
 <li><a class="el" href="class_urho3_d_1_1_vector2.html" title="Two-dimensional vector.">Vector2</a>&amp; vertex2</li>
 </ul>
+<p><a class="anchor" id="Class_CollisionPolygon2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_collision_polygon2_d.html" title="2D polygon collision component.">CollisionPolygon2D</a> : <a class="el" href="class_urho3_d_1_1_collision_shape2_d.html" title="2D collision shape component.">CollisionShape2D</a></h3>
 <p>Methods:</p>
 <ul>
@@ -677,6 +715,7 @@ Classes</h2>
 <ul>
 <li>unsigned vertexCount</li>
 </ul>
+<p><a class="anchor" id="Class_CollisionShape"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_collision_shape.html" title="Physics collision shape component.">CollisionShape</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h3>
 <p>Methods:</p>
 <ul>
@@ -746,6 +785,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_bounding_box.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a> worldBoundingBox (readonly)</li>
 <li><a class="el" href="struct_urho3_d_1_1_resource_ref.html" title="Typed resource reference.">ResourceRef</a> modelAttr</li>
 </ul>
+<p><a class="anchor" id="Class_CollisionShape2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_collision_shape2_d.html" title="2D collision shape component.">CollisionShape2D</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h3>
 <p>Methods:</p>
 <ul>
@@ -780,6 +820,7 @@ Classes</h2>
 <li>float inertia (readonly)</li>
 <li><a class="el" href="class_urho3_d_1_1_vector2.html" title="Two-dimensional vector.">Vector2</a> massCenter (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_Color"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_color.html" title="RGBA color.">Color</a></h3>
 <p>Methods:</p>
 <ul>
@@ -840,6 +881,7 @@ Classes</h2>
 <li>const <a class="el" href="class_urho3_d_1_1_color.html" title="RGBA color.">Color</a> YELLOW</li>
 <li>const <a class="el" href="class_urho3_d_1_1_color.html" title="RGBA color.">Color</a> TRANSPARENT</li>
 </ul>
+<p><a class="anchor" id="Class_ColorFrame"></a> </p>
 <h3><a class="el" href="struct_urho3_d_1_1_color_frame.html" title="Color animation frame definition.">ColorFrame</a></h3>
 <p>Methods:</p>
 <ul>
@@ -857,6 +899,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_color.html" title="RGBA color.">Color</a> color</li>
 <li>float time</li>
 </ul>
+<p><a class="anchor" id="Class_Component"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a> : <a class="el" href="class_urho3_d_1_1_animatable.html" title="Base class for animatable object, an animatable object can be set animation on it&#39;s attributes...">Animatable</a></h3>
 <p>Methods:</p>
 <ul>
@@ -870,6 +913,7 @@ Classes</h2>
 <li>Component* GetComponent(StringHash type) const</li>
 <li>Component* GetComponent(const String type) const</li>
 </ul>
+<p><a class="anchor" id="Class_Connection"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_connection.html" title="Connection to a remote network host.">Connection</a> : <a class="el" href="class_urho3_d_1_1_object.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
 <p>Methods:</p>
 <ul>
@@ -928,6 +972,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> downloadName (readonly)</li>
 <li>float downloadProgress (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_Console"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_console.html" title="Console window with log history and command line prompt.">Console</a> : <a class="el" href="class_urho3_d_1_1_object.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
 <p>Methods:</p>
 <ul>
@@ -971,6 +1016,7 @@ Classes</h2>
 <li>unsigned historyPosition (readonly)</li>
 <li>bool focusOnShow</li>
 </ul>
+<p><a class="anchor" id="Class_Constraint"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_constraint.html" title="Physics constraint component. Connects two rigid bodies together, or one rigid body to a static point...">Constraint</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1022,6 +1068,7 @@ Classes</h2>
 <li>float CFM</li>
 <li>bool disableCollision</li>
 </ul>
+<p><a class="anchor" id="Class_Constraint2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_constraint2_d.html" title="2D physics constraint component.">Constraint2D</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1037,6 +1084,7 @@ Classes</h2>
 <li>RigidBody2D* otherBody</li>
 <li>bool collideConnected</li>
 </ul>
+<p><a class="anchor" id="Class_ConstraintDistance2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_constraint_distance2_d.html" title="2D distance constraint component.">ConstraintDistance2D</a> : <a class="el" href="class_urho3_d_1_1_constraint2_d.html" title="2D physics constraint component.">Constraint2D</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1056,6 +1104,7 @@ Classes</h2>
 <li>float frequencyHz</li>
 <li>float dampingRatio</li>
 </ul>
+<p><a class="anchor" id="Class_ConstraintFriction2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_constraint_friction2_d.html" title="2D friction constraint component.">ConstraintFriction2D</a> : <a class="el" href="class_urho3_d_1_1_constraint2_d.html" title="2D physics constraint component.">Constraint2D</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1072,6 +1121,7 @@ Classes</h2>
 <li>float maxForce</li>
 <li>float maxTorque</li>
 </ul>
+<p><a class="anchor" id="Class_ConstraintGear2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_constraint_gear2_d.html" title="2D gear constraint component.">ConstraintGear2D</a> : <a class="el" href="class_urho3_d_1_1_constraint2_d.html" title="2D physics constraint component.">Constraint2D</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1088,6 +1138,7 @@ Classes</h2>
 <li>Constraint2D* otherConstraint</li>
 <li>float ratio</li>
 </ul>
+<p><a class="anchor" id="Class_ConstraintMotor2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_constraint_motor2_d.html" title="2D motor constraint component.">ConstraintMotor2D</a> : <a class="el" href="class_urho3_d_1_1_constraint2_d.html" title="2D physics constraint component.">Constraint2D</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1110,6 +1161,7 @@ Classes</h2>
 <li>float maxTorque</li>
 <li>float correctionFactor</li>
 </ul>
+<p><a class="anchor" id="Class_ConstraintMouse2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_constraint_mouse2_d.html" title="2D mouse constraint component.">ConstraintMouse2D</a> : <a class="el" href="class_urho3_d_1_1_constraint2_d.html" title="2D physics constraint component.">Constraint2D</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1129,6 +1181,7 @@ Classes</h2>
 <li>float frequencyHz</li>
 <li>float dampingRatio</li>
 </ul>
+<p><a class="anchor" id="Class_ConstraintPrismatic2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_constraint_prismatic2_d.html" title="2D prismatic constraint component.">ConstraintPrismatic2D</a> : <a class="el" href="class_urho3_d_1_1_constraint2_d.html" title="2D physics constraint component.">Constraint2D</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1160,6 +1213,7 @@ Classes</h2>
 <li>float maxMotorForce</li>
 <li>float motorSpeed</li>
 </ul>
+<p><a class="anchor" id="Class_ConstraintPulley2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_constraint_pulley2_d.html" title="2D pulley constraint component.">ConstraintPulley2D</a> : <a class="el" href="class_urho3_d_1_1_constraint2_d.html" title="2D physics constraint component.">Constraint2D</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1182,6 +1236,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_vector2.html" title="Two-dimensional vector.">Vector2</a>&amp; otherBodyAnchor</li>
 <li>float ratio</li>
 </ul>
+<p><a class="anchor" id="Class_ConstraintRevolute2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_constraint_revolute2_d.html" title="2D revolute constraint component.">ConstraintRevolute2D</a> : <a class="el" href="class_urho3_d_1_1_constraint2_d.html" title="2D physics constraint component.">Constraint2D</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1210,6 +1265,7 @@ Classes</h2>
 <li>float motorSpeed</li>
 <li>float maxMotorTorque</li>
 </ul>
+<p><a class="anchor" id="Class_ConstraintRope2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_constraint_rope2_d.html" title="2D rope constraint component.">ConstraintRope2D</a> : <a class="el" href="class_urho3_d_1_1_constraint2_d.html" title="2D physics constraint component.">Constraint2D</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1226,6 +1282,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_vector2.html" title="Two-dimensional vector.">Vector2</a>&amp; otherBodyAnchor</li>
 <li>float maxLength</li>
 </ul>
+<p><a class="anchor" id="Class_ConstraintWeld2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_constraint_weld2_d.html" title="2D weld constraint component.">ConstraintWeld2D</a> : <a class="el" href="class_urho3_d_1_1_constraint2_d.html" title="2D physics constraint component.">Constraint2D</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1242,6 +1299,7 @@ Classes</h2>
 <li>float frequencyHz</li>
 <li>float dampingRatio</li>
 </ul>
+<p><a class="anchor" id="Class_ConstraintWheel2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_constraint_wheel2_d.html" title="2D wheel constraint component.">ConstraintWheel2D</a> : <a class="el" href="class_urho3_d_1_1_constraint2_d.html" title="2D physics constraint component.">Constraint2D</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1270,6 +1328,7 @@ Classes</h2>
 <li>float frequencyHz</li>
 <li>float dampingRatio</li>
 </ul>
+<p><a class="anchor" id="Class_Context"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_context.html" title="Urho3D execution context. Provides access to subsystems, object factories and attributes, and event receivers.">Context</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1277,6 +1336,7 @@ Classes</h2>
 <li>EventHandler* GetEventHandler() const</li>
 <li>const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> GetTypeName(StringHash objectType) const</li>
 </ul>
+<p><a class="anchor" id="Class_Controls"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_controls.html" title="Controls sent over the network.">Controls</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1295,6 +1355,7 @@ Classes</h2>
 <li>float pitch</li>
 <li>VariantMap extraData</li>
 </ul>
+<p><a class="anchor" id="Class_Cursor"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_cursor.html" title="Mouse cursor UI element.">Cursor</a> : <a class="el" href="class_urho3_d_1_1_border_image.html" title="Image UI element with optional border.">BorderImage</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1312,6 +1373,7 @@ Classes</h2>
 <li>CursorShape shape</li>
 <li>bool useSystemShapes</li>
 </ul>
+<p><a class="anchor" id="Class_CustomGeometry"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_custom_geometry.html" title="Custom geometry component.">CustomGeometry</a> : <a class="el" href="class_urho3_d_1_1_drawable.html" title="Base class for visible components.">Drawable</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1340,6 +1402,7 @@ Classes</h2>
 <li>unsigned numGeometries</li>
 <li>bool dynamic</li>
 </ul>
+<p><a class="anchor" id="Class_CustomGeometryVertex"></a> </p>
 <h3><a class="el" href="struct_urho3_d_1_1_custom_geometry_vertex.html" title="Custom geometry vertex.">CustomGeometryVertex</a></h3>
 <p>Properties:</p>
 <ul>
@@ -1349,6 +1412,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_vector2.html" title="Two-dimensional vector.">Vector2</a> texCoord</li>
 <li><a class="el" href="class_urho3_d_1_1_vector4.html" title="Four-dimensional vector.">Vector4</a> tangent</li>
 </ul>
+<p><a class="anchor" id="Class_DebugHud"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_debug_hud.html" title="Displays rendering stats and profiling information.">DebugHud</a> : <a class="el" href="class_urho3_d_1_1_object.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1383,6 +1447,7 @@ Classes</h2>
 <li>float profilerInterval</li>
 <li>bool useRendererStats</li>
 </ul>
+<p><a class="anchor" id="Class_DebugRenderer"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_debug_renderer.html" title="Debug geometry rendering component. Should be added only to the root scene node.">DebugRenderer</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1411,6 +1476,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_matrix4.html" title="4x4 matrix for arbitrary linear transforms including projection.">Matrix4</a>&amp; projection (readonly)</li>
 <li><a class="el" href="class_urho3_d_1_1_frustum.html" title="Convex constructed of 6 planes.">Frustum</a>&amp; frustum (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_DecalSet"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_decal_set.html" title="Decal renderer component.">DecalSet</a> : <a class="el" href="class_urho3_d_1_1_drawable.html" title="Base class for visible components.">Drawable</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1436,6 +1502,7 @@ Classes</h2>
 <li>unsigned maxVertices</li>
 <li>unsigned maxIndices</li>
 </ul>
+<p><a class="anchor" id="Class_Deserializer"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_deserializer.html" title="Abstract stream for reading.">Deserializer</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1490,6 +1557,7 @@ Classes</h2>
 <li>unsigned size (readonly)</li>
 <li>bool eof (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_Drawable"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_drawable.html" title="Base class for visible components.">Drawable</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1541,6 +1609,7 @@ Classes</h2>
 <li>bool inView (readonly)</li>
 <li>Zone* zone (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_Drawable2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_drawable2_d.html" title="Base class for 2D visible components.">Drawable2D</a> : <a class="el" href="class_urho3_d_1_1_drawable.html" title="Base class for visible components.">Drawable</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1565,6 +1634,7 @@ Classes</h2>
 <li>BlendMode blendMode</li>
 <li>Material* material</li>
 </ul>
+<p><a class="anchor" id="Class_DropDownList"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_drop_down_list.html" title="Menu UI element that displays a popup list view.">DropDownList</a> : <a class="el" href="class_urho3_d_1_1_menu.html" title="Menu UI element that optionally shows a popup.">Menu</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1599,6 +1669,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> placeholderText</li>
 <li>bool resizePopup</li>
 </ul>
+<p><a class="anchor" id="Class_Engine"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_engine.html" title="Urho3D engine. Creates the other subsystems.">Engine</a> : <a class="el" href="class_urho3_d_1_1_object.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1637,6 +1708,7 @@ Classes</h2>
 <li>bool exiting (readonly)</li>
 <li>bool headless (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_File"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a> : <a class="el" href="class_urho3_d_1_1_object.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1746,6 +1818,7 @@ Classes</h2>
 <li>unsigned size (readonly)</li>
 <li>bool eof (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_FileSelector"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_file_selector.html" title="File selector dialog.">FileSelector</a> : <a class="el" href="class_urho3_d_1_1_object.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1796,12 +1869,14 @@ Classes</h2>
 <li>unsigned filterIndex (readonly)</li>
 <li>bool directoryMode</li>
 </ul>
+<p><a class="anchor" id="Class_FileSelectorEntry"></a> </p>
 <h3><a class="el" href="struct_urho3_d_1_1_file_selector_entry.html" title="File selector&#39;s list entry (file or directory.)">FileSelectorEntry</a></h3>
 <p>Properties:</p>
 <ul>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> name</li>
 <li>bool directory</li>
 </ul>
+<p><a class="anchor" id="Class_FileSystem"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_file_system.html" title="Subsystem for file and directory operations and access control.">FileSystem</a> : <a class="el" href="class_urho3_d_1_1_object.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1829,6 +1904,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> GetUserDocumentsDir() const</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> GetAppPreferencesDir(const String org, const String app) const</li>
 </ul>
+<p><a class="anchor" id="Class_FileWatcher"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_file_watcher.html" title="Watches a directory and its subdirectories for files being modified.">FileWatcher</a> : <a class="el" href="class_urho3_d_1_1_object.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1837,6 +1913,7 @@ Classes</h2>
 <li>void AddChange(const String fileName)</li>
 <li>const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> GetPath() const</li>
 </ul>
+<p><a class="anchor" id="Class_FocusParameters"></a> </p>
 <h3><a class="el" href="struct_urho3_d_1_1_focus_parameters.html" title="Shadow map focusing parameters.">FocusParameters</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1846,7 +1923,9 @@ Classes</h2>
 <li>FocusParameters* new(bool focus, bool nonUniform, bool autoSize, float quantize, float minView)</li>
 <li>void delete()</li>
 </ul>
+<p><a class="anchor" id="Class_Font"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_font.html" title="Font resource.">Font</a> : <a class="el" href="class_urho3_d_1_1_resource.html" title="Base class for resources.">Resource</a></h3>
+<p><a class="anchor" id="Class_Frustum"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_frustum.html" title="Convex constructed of 6 planes.">Frustum</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1876,6 +1955,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_rect.html" title="Two-dimensional bounding rectangle.">Rect</a> Projected(const Matrix4&amp; transform) const</li>
 <li>void UpdatePlanes()</li>
 </ul>
+<p><a class="anchor" id="Class_Graphics"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_graphics.html" title="Graphics subsystem. Manages the application window, rendering state and GPU resources.">Graphics</a> : <a class="el" href="class_urho3_d_1_1_object.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1961,6 +2041,7 @@ Classes</h2>
 <li>bool sRGBWriteSupport (readonly)</li>
 <li><a class="el" href="class_urho3_d_1_1_int_vector2.html" title="Two-dimensional vector with integer values.">IntVector2</a> desktopResolution (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_HttpRequest"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_http_request.html" title="An HTTP connection with response data stream.">HttpRequest</a> : <a class="el" href="class_urho3_d_1_1_deserializer.html" title="Abstract stream for reading.">Deserializer</a></h3>
 <p>Methods:</p>
 <ul>
@@ -1980,6 +2061,7 @@ Classes</h2>
 <li>unsigned availableSize (readonly)</li>
 <li>bool open (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_Image"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_image.html" title="Image resource.">Image</a> : <a class="el" href="class_urho3_d_1_1_resource.html" title="Base class for resources.">Resource</a></h3>
 <p>Methods:</p>
 <ul>
@@ -2028,6 +2110,7 @@ Classes</h2>
 <li>CompressedFormat compressedFormat (readonly)</li>
 <li>unsigned numCompressedLevels (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_Input"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_input.html" title="Input subsystem. Converts operating system window messages to input state and events.">Input</a> : <a class="el" href="class_urho3_d_1_1_object.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
 <p>Methods:</p>
 <ul>
@@ -2102,6 +2185,7 @@ Classes</h2>
 <li>bool focus (readonly)</li>
 <li>bool minimized (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_IntRect"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_int_rect.html" title="Two-dimensional bounding rectangle with integer values.">IntRect</a></h3>
 <p>Methods:</p>
 <ul>
@@ -2127,6 +2211,7 @@ Classes</h2>
 <li>int width (readonly)</li>
 <li>int height (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_IntVector2"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_int_vector2.html" title="Two-dimensional vector with integer values.">IntVector2</a></h3>
 <p>Methods:</p>
 <ul>
@@ -2152,6 +2237,7 @@ Classes</h2>
 <li>int y</li>
 <li>const <a class="el" href="class_urho3_d_1_1_int_vector2.html" title="Two-dimensional vector with integer values.">IntVector2</a> ZERO</li>
 </ul>
+<p><a class="anchor" id="Class_JSONFile"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_j_s_o_n_file.html" title="JSON document resource.">JSONFile</a> : <a class="el" href="class_urho3_d_1_1_resource.html" title="Base class for resources.">Resource</a></h3>
 <p>Methods:</p>
 <ul>
@@ -2161,6 +2247,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_j_s_o_n_value.html" title="JSON value class.">JSONValue</a> CreateRoot(JSONValueType valueType = JSON_OBJECT)</li>
 <li><a class="el" href="class_urho3_d_1_1_j_s_o_n_value.html" title="JSON value class.">JSONValue</a> GetRoot(JSONValueType valueType = JSON_ANY)</li>
 </ul>
+<p><a class="anchor" id="Class_JSONValue"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_j_s_o_n_value.html" title="JSON value class.">JSONValue</a></h3>
 <p>Methods:</p>
 <ul>
@@ -2262,6 +2349,7 @@ Classes</h2>
 <li>bool object (readonly)</li>
 <li>bool array (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_JoystickState"></a> </p>
 <h3><a class="el" href="struct_urho3_d_1_1_joystick_state.html" title="Input state for a joystick.">JoystickState</a></h3>
 <p>Methods:</p>
 <ul>
@@ -2283,6 +2371,7 @@ Classes</h2>
 <li>unsigned numAxes (readonly)</li>
 <li>unsigned numHats (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_Light"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_light.html" title="Light component.">Light</a> : <a class="el" href="class_urho3_d_1_1_drawable.html" title="Base class for visible components.">Drawable</a></h3>
 <p>Methods:</p>
 <ul>
@@ -2354,6 +2443,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_color.html" title="RGBA color.">Color</a> effectiveColor (readonly)</li>
 <li>float effectiveSpecularIntensity (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_LineEdit"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_line_edit.html" title="Single-line text editor UI element.">LineEdit</a> : <a class="el" href="class_urho3_d_1_1_border_image.html" title="Image UI element with optional border.">BorderImage</a></h3>
 <p>Methods:</p>
 <ul>
@@ -2392,6 +2482,7 @@ Classes</h2>
 <li>Text* textElement (readonly)</li>
 <li>BorderImage* cursor (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_ListView"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_list_view.html" title="Scrollable list UI element.">ListView</a> : <a class="el" href="class_urho3_d_1_1_scroll_view.html" title="Scrollable UI element for showing a (possibly large) child element.">ScrollView</a></h3>
 <p>Methods:</p>
 <ul>
@@ -2448,6 +2539,7 @@ Classes</h2>
 <li>bool hierarchyMode</li>
 <li>int baseIndent</li>
 </ul>
+<p><a class="anchor" id="Class_Log"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_log.html" title="Logging subsystem.">Log</a> : <a class="el" href="class_urho3_d_1_1_object.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
 <p>Methods:</p>
 <ul>
@@ -2469,6 +2561,7 @@ Classes</h2>
 <li>bool timeStamp</li>
 <li>bool quiet</li>
 </ul>
+<p><a class="anchor" id="Class_LuaScriptInstance"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_lua_script_instance.html" title="Lua script object component.">LuaScriptInstance</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h3>
 <p>Methods:</p>
 <ul>
@@ -2490,6 +2583,7 @@ Classes</h2>
 <li>const LuaFile* scriptFile</li>
 <li>const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> scriptObjectType</li>
 </ul>
+<p><a class="anchor" id="Class_Material"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_material.html" title="Describes how to render 3D geometries.">Material</a> : <a class="el" href="class_urho3_d_1_1_resource.html" title="Base class for resources.">Resource</a></h3>
 <p>Methods:</p>
 <ul>
@@ -2536,6 +2630,7 @@ Classes</h2>
 <li>bool occlusion (readonly)</li>
 <li>bool specular (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_Matrix3"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_matrix3.html" title="3x3 matrix for rotation and scaling.">Matrix3</a></h3>
 <p>Methods:</p>
 <ul>
@@ -2575,6 +2670,7 @@ Classes</h2>
 <li>const <a class="el" href="class_urho3_d_1_1_matrix3.html" title="3x3 matrix for rotation and scaling.">Matrix3</a> ZERO</li>
 <li>const <a class="el" href="class_urho3_d_1_1_matrix3.html" title="3x3 matrix for rotation and scaling.">Matrix3</a> IDENTITY</li>
 </ul>
+<p><a class="anchor" id="Class_Matrix3x4"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_matrix3x4.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a></h3>
 <p>Methods:</p>
 <ul>
@@ -2633,6 +2729,7 @@ Classes</h2>
 <li>const <a class="el" href="class_urho3_d_1_1_matrix3x4.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> ZERO</li>
 <li>const <a class="el" href="class_urho3_d_1_1_matrix3x4.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> IDENTITY</li>
 </ul>
+<p><a class="anchor" id="Class_Matrix4"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_matrix4.html" title="4x4 matrix for arbitrary linear transforms including projection.">Matrix4</a></h3>
 <p>Methods:</p>
 <ul>
@@ -2688,6 +2785,7 @@ Classes</h2>
 <li>const <a class="el" href="class_urho3_d_1_1_matrix4.html" title="4x4 matrix for arbitrary linear transforms including projection.">Matrix4</a> ZERO</li>
 <li>const <a class="el" href="class_urho3_d_1_1_matrix4.html" title="4x4 matrix for arbitrary linear transforms including projection.">Matrix4</a> IDENTITY</li>
 </ul>
+<p><a class="anchor" id="Class_Menu"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_menu.html" title="Menu UI element that optionally shows a popup.">Menu</a> : <a class="el" href="class_urho3_d_1_1_button.html" title="Pushbutton UI element.">Button</a></h3>
 <p>Methods:</p>
 <ul>
@@ -2713,6 +2811,7 @@ Classes</h2>
 <li>int acceleratorKey (readonly)</li>
 <li>int acceleratorQualifiers (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_MessageBox"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_message_box.html" title="Message box dialog.">MessageBox</a> : <a class="el" href="class_urho3_d_1_1_object.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
 <p>Methods:</p>
 <ul>
@@ -2731,6 +2830,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> message</li>
 <li>UIElement* window (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_Model"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_model.html" title="3D model resource.">Model</a> : <a class="el" href="class_urho3_d_1_1_resource.html" title="Base class for resources.">Resource</a></h3>
 <p>Methods:</p>
 <ul>
@@ -2754,6 +2854,7 @@ Classes</h2>
 <li>unsigned numGeometries (readonly)</li>
 <li>unsigned numMorphs (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_Navigable"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_navigable.html" title="Component which tags geometry for inclusion in the navigation mesh. Optionally auto-includes geometry...">Navigable</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h3>
 <p>Methods:</p>
 <ul>
@@ -2764,6 +2865,7 @@ Classes</h2>
 <ul>
 <li>bool recursive</li>
 </ul>
+<p><a class="anchor" id="Class_NavigationGeometryInfo"></a> </p>
 <h3><a class="el" href="struct_urho3_d_1_1_navigation_geometry_info.html" title="Description of a navigation mesh geometry component, with transform and bounds information.">NavigationGeometryInfo</a></h3>
 <p>Properties:</p>
 <ul>
@@ -2772,6 +2874,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_matrix3x4.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> transform</li>
 <li><a class="el" href="class_urho3_d_1_1_bounding_box.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a> boundingBox</li>
 </ul>
+<p><a class="anchor" id="Class_NavigationMesh"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_navigation_mesh.html" title="Navigation mesh component. Collects the navigation geometry from child nodes with the Navigable compo...">NavigationMesh</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h3>
 <p>Methods:</p>
 <ul>
@@ -2845,6 +2948,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_bounding_box.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a> worldBoundingBox (readonly)</li>
 <li><a class="el" href="class_urho3_d_1_1_int_vector2.html" title="Two-dimensional vector with integer values.">IntVector2</a> numTiles (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_Network"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_network.html" title="Network subsystem. Manages client-server communications using the UDP protocol.">Network</a></h3>
 <p>Methods:</p>
 <ul>
@@ -2888,6 +2992,7 @@ Classes</h2>
 <li>bool serverRunning (readonly)</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> packageCacheDir</li>
 </ul>
+<p><a class="anchor" id="Class_NetworkPriority"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_network_priority.html" title="Network interest management settings component.">NetworkPriority</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h3>
 <p>Methods:</p>
 <ul>
@@ -2908,6 +3013,7 @@ Classes</h2>
 <li>float minPriority</li>
 <li>bool alwaysUpdateOwner</li>
 </ul>
+<p><a class="anchor" id="Class_Node"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_node.html" title="Scene node that may contain components and child nodes.">Node</a> : <a class="el" href="class_urho3_d_1_1_animatable.html" title="Base class for animatable object, an animatable object can be set animation on it&#39;s attributes...">Animatable</a></h3>
 <p>Methods:</p>
 <ul>
@@ -3075,6 +3181,7 @@ Classes</h2>
 <li>unsigned numComponents (readonly)</li>
 <li>unsigned numNetworkComponents (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_Object"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_object.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a> : <a class="el" href="class_urho3_d_1_1_ref_counted.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable.">RefCounted</a></h3>
 <p>Methods:</p>
 <ul>
@@ -3091,6 +3198,7 @@ Classes</h2>
 <li>const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> typeName (readonly)</li>
 <li>const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> category (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_ObjectAnimation"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_object_animation.html" title="Object animation class, an object animation include one or more attribute animations and theirs wrap ...">ObjectAnimation</a> : <a class="el" href="class_urho3_d_1_1_resource.html" title="Base class for resources.">Resource</a></h3>
 <p>Methods:</p>
 <ul>
@@ -3104,6 +3212,7 @@ Classes</h2>
 <li>WrapMode GetAttributeAnimationWrapMode(const String name) const</li>
 <li>float GetAttributeAnimationSpeed(const String name) const</li>
 </ul>
+<p><a class="anchor" id="Class_Octree"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_octree.html" title="Octree component. Should be added only to the root scene node">Octree</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h3>
 <p>Methods:</p>
 <ul>
@@ -3125,6 +3234,7 @@ Classes</h2>
 <ul>
 <li>unsigned numLevels (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_OctreeQueryResult"></a> </p>
 <h3><a class="el" href="struct_urho3_d_1_1_octree_query_result.html" title="General octree query result. Used for Lua bindings only.">OctreeQueryResult</a></h3>
 <p>Methods:</p>
 <ul>
@@ -3137,6 +3247,7 @@ Classes</h2>
 <li>Drawable* drawable</li>
 <li>Node* node</li>
 </ul>
+<p><a class="anchor" id="Class_OffMeshConnection"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_off_mesh_connection.html" title="A link between otherwise unconnected regions of the navigation mesh.">OffMeshConnection</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h3>
 <p>Methods:</p>
 <ul>
@@ -3153,6 +3264,7 @@ Classes</h2>
 <li>float radius</li>
 <li>bool bidirectional</li>
 </ul>
+<p><a class="anchor" id="Class_PackageEntry"></a> </p>
 <h3><a class="el" href="struct_urho3_d_1_1_package_entry.html" title="File entry within the package file.">PackageEntry</a></h3>
 <p>Properties:</p>
 <ul>
@@ -3160,6 +3272,7 @@ Classes</h2>
 <li>unsigned size</li>
 <li>unsigned checksum</li>
 </ul>
+<p><a class="anchor" id="Class_PackageFile"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_package_file.html" title="Stores files of a directory tree sequentially for convenient access.">PackageFile</a> : <a class="el" href="class_urho3_d_1_1_object.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
 <p>Methods:</p>
 <ul>
@@ -3188,6 +3301,7 @@ Classes</h2>
 <li>unsigned checksum (readonly)</li>
 <li>bool compressed (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_ParticleEffect"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_particle_effect.html" title="Particle effect definition.">ParticleEffect</a> : <a class="el" href="class_urho3_d_1_1_resource.html" title="Base class for resources.">Resource</a></h3>
 <p>Methods:</p>
 <ul>
@@ -3290,7 +3404,9 @@ Classes</h2>
 <li>unsigned numColorFrames</li>
 <li>unsigned numTextureFrames</li>
 </ul>
+<p><a class="anchor" id="Class_ParticleEffect2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_particle_effect2_d.html" title="2D particle effect resource.">ParticleEffect2D</a> : <a class="el" href="class_urho3_d_1_1_resource.html" title="Base class for resources.">Resource</a></h3>
+<p><a class="anchor" id="Class_ParticleEmitter"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_particle_emitter.html" title="Particle emitter component.">ParticleEmitter</a> : <a class="el" href="class_urho3_d_1_1_billboard_set.html" title="Billboard component.">BillboardSet</a></h3>
 <p>Methods:</p>
 <ul>
@@ -3311,6 +3427,7 @@ Classes</h2>
 <li>unsigned numParticles</li>
 <li>bool emitting</li>
 </ul>
+<p><a class="anchor" id="Class_ParticleEmitter2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_particle_emitter2_d.html" title="2D particle emitter component.">ParticleEmitter2D</a> : <a class="el" href="class_urho3_d_1_1_drawable2_d.html" title="Base class for 2D visible components.">Drawable2D</a></h3>
 <p>Methods:</p>
 <ul>
@@ -3321,6 +3438,7 @@ Classes</h2>
 <ul>
 <li>ParticleEffect2D* effect</li>
 </ul>
+<p><a class="anchor" id="Class_Pass"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_pass.html" title="Material rendering pass, which defines shaders and render state.">Pass</a> : <a class="el" href="class_urho3_d_1_1_ref_counted.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable.">RefCounted</a></h3>
 <p>Methods:</p>
 <ul>
@@ -3330,6 +3448,7 @@ Classes</h2>
 <ul>
 <li>bool SM3 (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_PhysicsRaycastResult"></a> </p>
 <h3><a class="el" href="struct_urho3_d_1_1_physics_raycast_result.html" title="Physics raycast hit.">PhysicsRaycastResult</a></h3>
 <p>Methods:</p>
 <ul>
@@ -3344,6 +3463,7 @@ Classes</h2>
 <li>float distance</li>
 <li>RigidBody* body</li>
 </ul>
+<p><a class="anchor" id="Class_PhysicsRaycastResult2D"></a> </p>
 <h3><a class="el" href="struct_urho3_d_1_1_physics_raycast_result2_d.html" title="2D Physics raycast hit.">PhysicsRaycastResult2D</a></h3>
 <p>Methods:</p>
 <ul>
@@ -3358,6 +3478,7 @@ Classes</h2>
 <li>float distance</li>
 <li>RigidBody2D* body</li>
 </ul>
+<p><a class="anchor" id="Class_PhysicsWorld"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_physics_world.html" title="Physics simulation world component. Should be added only to the root scene node.">PhysicsWorld</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h3>
 <p>Methods:</p>
 <ul>
@@ -3398,6 +3519,7 @@ Classes</h2>
 <li>float maxNetworkAngularVelocity</li>
 <li>bool applyingTransforms</li>
 </ul>
+<p><a class="anchor" id="Class_PhysicsWorld2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_physics_world2_d.html" title="2D physics simulation world component. Should be added only to the root scene node.">PhysicsWorld2D</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h3>
 <p>Methods:</p>
 <ul>
@@ -3450,6 +3572,7 @@ Classes</h2>
 <li>int velocityIterations</li>
 <li>int positionIterations</li>
 </ul>
+<p><a class="anchor" id="Class_Plane"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_plane.html" title="Surface in three-dimensional space.">Plane</a></h3>
 <p>Methods:</p>
 <ul>
@@ -3486,6 +3609,7 @@ Classes</h2>
 <li>float d</li>
 <li>const <a class="el" href="class_urho3_d_1_1_plane.html" title="Surface in three-dimensional space.">Plane</a> UP</li>
 </ul>
+<p><a class="anchor" id="Class_Polyhedron"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_polyhedron.html" title="A convex volume built from polygon faces.">Polyhedron</a></h3>
 <p>Methods:</p>
 <ul>
@@ -3516,12 +3640,14 @@ Classes</h2>
 <ul>
 <li>bool empty (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_PropertySet2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_property_set2_d.html" title="Property set.">PropertySet2D</a></h3>
 <p>Methods:</p>
 <ul>
 <li>bool HasProperty(const String name) const</li>
 <li>const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> GetProperty(const String name) const</li>
 </ul>
+<p><a class="anchor" id="Class_Quaternion"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_quaternion.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a></h3>
 <p>Methods:</p>
 <ul>
@@ -3585,6 +3711,7 @@ Classes</h2>
 <li>float z</li>
 <li>const <a class="el" href="class_urho3_d_1_1_quaternion.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a> IDENTITY</li>
 </ul>
+<p><a class="anchor" id="Class_Ray"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_ray.html" title="Infinite straight line in three-dimensional space.">Ray</a></h3>
 <p>Methods:</p>
 <ul>
@@ -3612,6 +3739,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> origin</li>
 <li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> direction</li>
 </ul>
+<p><a class="anchor" id="Class_RayQueryResult"></a> </p>
 <h3><a class="el" href="struct_urho3_d_1_1_ray_query_result.html" title="Raycast result.">RayQueryResult</a></h3>
 <p>Methods:</p>
 <ul>
@@ -3628,6 +3756,7 @@ Classes</h2>
 <li>Node* node</li>
 <li>unsigned subObject</li>
 </ul>
+<p><a class="anchor" id="Class_Rect"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_rect.html" title="Two-dimensional bounding rectangle.">Rect</a></h3>
 <p>Methods:</p>
 <ul>
@@ -3669,6 +3798,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_vector2.html" title="Two-dimensional vector.">Vector2</a> size (readonly)</li>
 <li><a class="el" href="class_urho3_d_1_1_vector2.html" title="Two-dimensional vector.">Vector2</a> halfSize (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_RemoteEvent"></a> </p>
 <h3><a class="el" href="struct_urho3_d_1_1_remote_event.html" title="Queued remote event.">RemoteEvent</a></h3>
 <p>Properties:</p>
 <ul>
@@ -3677,6 +3807,7 @@ Classes</h2>
 <li>VariantMap eventData</li>
 <li>bool inOrder</li>
 </ul>
+<p><a class="anchor" id="Class_RenderPath"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_render_path.html" title="Rendering path definition.">RenderPath</a></h3>
 <p>Methods:</p>
 <ul>
@@ -3700,6 +3831,7 @@ Classes</h2>
 <li>unsigned GetNumCommands() const</li>
 <li>const <a class="el" href="class_urho3_d_1_1_variant.html" title="Variable that supports a fixed set of types.">Variant</a>&amp; GetShaderParameter(const String name) const</li>
 </ul>
+<p><a class="anchor" id="Class_RenderSurface"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_render_surface.html" title="Color or depth-stencil surface that can be rendered into.">RenderSurface</a></h3>
 <p>Methods:</p>
 <ul>
@@ -3734,6 +3866,7 @@ Classes</h2>
 <li>RenderSurface* linkedRenderTarget</li>
 <li>RenderSurface* linkedDepthStencil</li>
 </ul>
+<p><a class="anchor" id="Class_Renderer"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_renderer.html" title="High-level rendering subsystem. Manages drawing of 3D views.">Renderer</a></h3>
 <p>Methods:</p>
 <ul>
@@ -3830,6 +3963,7 @@ Classes</h2>
 <li>Texture2D* defaultLightRamp (readonly)</li>
 <li>Texture2D* defaultLightSpot (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_Resource"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_resource.html" title="Base class for resources.">Resource</a></h3>
 <p>Methods:</p>
 <ul>
@@ -3847,6 +3981,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_string_hash.html" title="32-bit hash value for a string.">StringHash</a> nameHash (readonly)</li>
 <li>unsigned memoryUse (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_ResourceCache"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_resource_cache.html" title="Resource cache subsystem. Loads resources on demand and stores them for later access.">ResourceCache</a></h3>
 <p>Methods:</p>
 <ul>
@@ -3884,6 +4019,7 @@ Classes</h2>
 <li>unsigned numBackgroundLoadResources (readonly)</li>
 <li>int finishBackgroundResourcesMs</li>
 </ul>
+<p><a class="anchor" id="Class_ResourceRef"></a> </p>
 <h3><a class="el" href="struct_urho3_d_1_1_resource_ref.html" title="Typed resource reference.">ResourceRef</a></h3>
 <p>Methods:</p>
 <ul>
@@ -3903,6 +4039,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_string_hash.html" title="32-bit hash value for a string.">StringHash</a> type</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> name</li>
 </ul>
+<p><a class="anchor" id="Class_ResourceRefList"></a> </p>
 <h3><a class="el" href="struct_urho3_d_1_1_resource_ref_list.html" title="List of typed resource references.">ResourceRefList</a></h3>
 <p>Methods:</p>
 <ul>
@@ -3917,6 +4054,7 @@ Classes</h2>
 <ul>
 <li><a class="el" href="class_urho3_d_1_1_string_hash.html" title="32-bit hash value for a string.">StringHash</a> type</li>
 </ul>
+<p><a class="anchor" id="Class_RigidBody"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_rigid_body.html" title="Physics rigid body component.">RigidBody</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4017,6 +4155,7 @@ Classes</h2>
 <li>unsigned collisionMask</li>
 <li>CollisionEventMode collisionEventMode</li>
 </ul>
+<p><a class="anchor" id="Class_RigidBody2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_rigid_body2_d.html" title="2D rigid body component.">RigidBody2D</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4071,6 +4210,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_vector2.html" title="Two-dimensional vector.">Vector2</a> linearVelocity</li>
 <li>float angularVelocity</li>
 </ul>
+<p><a class="anchor" id="Class_Scene"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_scene.html" title="Root scene node, represents the whole scene.">Scene</a> : <a class="el" href="class_urho3_d_1_1_node.html" title="Scene node that may contain components and child nodes.">Node</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4149,6 +4289,7 @@ Classes</h2>
 <li>bool threadedUpdate (readonly)</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> varNamesAttr</li>
 </ul>
+<p><a class="anchor" id="Class_ScrollBar"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_scroll_bar.html" title="Scroll bar UI element with forward and back buttons.">ScrollBar</a> : <a class="el" href="class_urho3_d_1_1_u_i_element.html" title="Base class for UI elements.">UIElement</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4185,6 +4326,7 @@ Classes</h2>
 <li>Button* forwardButton (readonly)</li>
 <li>Slider* slider (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_ScrollView"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_scroll_view.html" title="Scrollable UI element for showing a (possibly large) child element.">ScrollView</a> : <a class="el" href="class_urho3_d_1_1_u_i_element.html" title="Base class for UI elements.">UIElement</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4218,6 +4360,7 @@ Classes</h2>
 <li>float scrollStep</li>
 <li>float pageStep</li>
 </ul>
+<p><a class="anchor" id="Class_Serializable"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_serializable.html" title="Base class for objects with automatic serialization through attributes.">Serializable</a> : <a class="el" href="class_urho3_d_1_1_object.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4228,6 +4371,7 @@ Classes</h2>
 <ul>
 <li>bool temporary</li>
 </ul>
+<p><a class="anchor" id="Class_Serializer"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_serializer.html" title="Abstract stream for writing.">Serializer</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4268,6 +4412,7 @@ Classes</h2>
 <li>bool WriteNetID(unsigned value)</li>
 <li>bool WriteLine(const String value)</li>
 </ul>
+<p><a class="anchor" id="Class_Skeleton"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_skeleton.html" title="Hierarchical collection of bones.">Skeleton</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4281,7 +4426,9 @@ Classes</h2>
 <li>unsigned numBones (readonly)</li>
 <li>Bone* rootBone (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_Skybox"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_skybox.html" title="Static model component with fixed position in relation to the camera.">Skybox</a> : <a class="el" href="class_urho3_d_1_1_static_model.html" title="Static model component.">StaticModel</a></h3>
+<p><a class="anchor" id="Class_Slider"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_slider.html" title="Slider bar UI element.">Slider</a> : <a class="el" href="class_urho3_d_1_1_border_image.html" title="Image UI element with optional border.">BorderImage</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4307,6 +4454,7 @@ Classes</h2>
 <li>BorderImage* knob (readonly)</li>
 <li>float repeatRate</li>
 </ul>
+<p><a class="anchor" id="Class_Sound"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_sound.html" title="Sound resource.">Sound</a> : <a class="el" href="class_urho3_d_1_1_resource.html" title="Base class for resources.">Resource</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4347,7 +4495,9 @@ Classes</h2>
 <li>bool stereo (readonly)</li>
 <li>bool compressed (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_SoundListener"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_sound_listener.html" title="Sound listener component">SoundListener</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h3>
+<p><a class="anchor" id="Class_SoundSource"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_sound_source.html" title="Sound source component with stereo position.">SoundSource</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4384,6 +4534,7 @@ Classes</h2>
 <li>bool autoRemove</li>
 <li>bool playing (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_SoundSource3D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_sound_source3_d.html" title="Sound source component with three-dimensional position.">SoundSource3D</a> : <a class="el" href="class_urho3_d_1_1_sound_source.html" title="Sound source component with stereo position.">SoundSource</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4409,6 +4560,7 @@ Classes</h2>
 <li>float outerAngle</li>
 <li>float rolloffFactor</li>
 </ul>
+<p><a class="anchor" id="Class_Sphere"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_sphere.html" title="Sphere in three-dimensional space.">Sphere</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4450,6 +4602,7 @@ Classes</h2>
 <li>float radius</li>
 <li>bool defined</li>
 </ul>
+<p><a class="anchor" id="Class_Spline"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_spline.html" title="Spline class to get a point on it based off the interpolation mode.">Spline</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4474,6 +4627,7 @@ Classes</h2>
 <ul>
 <li>InterpolationMode interpolationMode</li>
 </ul>
+<p><a class="anchor" id="Class_SplinePath"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_spline_path.html" title="Spline for creating smooth movement based on Speed along a set of Control Points modified by the Inte...">SplinePath</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4494,6 +4648,7 @@ Classes</h2>
 <li>float speed</li>
 <li>Node* controlledNode</li>
 </ul>
+<p><a class="anchor" id="Class_Sprite"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_sprite.html" title="UI element which allows sub-pixel positioning and size, as well as rotation. Only other Sprites shoul...">Sprite</a> : <a class="el" href="class_urho3_d_1_1_u_i_element.html" title="Base class for UI elements.">UIElement</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4532,6 +4687,7 @@ Classes</h2>
 <li>BlendMode blendMode</li>
 <li><a class="el" href="class_urho3_d_1_1_matrix3x4.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a>&amp; transform (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_Sprite2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_sprite2_d.html" title="Sprite.">Sprite2D</a> : <a class="el" href="class_urho3_d_1_1_resource.html" title="Base class for resources.">Resource</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4554,6 +4710,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_int_vector2.html" title="Two-dimensional vector with integer values.">IntVector2</a> offset</li>
 <li>SpriteSheet2D* spriteSheet</li>
 </ul>
+<p><a class="anchor" id="Class_SpriteSheet2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_sprite_sheet2_d.html" title="Sprite sheet.">SpriteSheet2D</a> : <a class="el" href="class_urho3_d_1_1_resource.html" title="Base class for resources.">Resource</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4563,6 +4720,7 @@ Classes</h2>
 <li>void DefineSprite(const String name, const IntRect&amp; rectangle, const Vector2&amp; hotSpot)</li>
 <li>void DefineSprite(const String name, const IntRect&amp; rectangle, const Vector2&amp; hotSpot, const IntVector2&amp; originSize)</li>
 </ul>
+<p><a class="anchor" id="Class_StaticModel"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_static_model.html" title="Static model component.">StaticModel</a> : <a class="el" href="class_urho3_d_1_1_drawable.html" title="Base class for visible components.">Drawable</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4586,6 +4744,7 @@ Classes</h2>
 <li>unsigned numGeometries (readonly)</li>
 <li>unsigned occlusionLodLevel</li>
 </ul>
+<p><a class="anchor" id="Class_StaticModelGroup"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_static_model_group.html" title="Renders several object instances while culling and receiving light as one unit. Can be used as a CPU-...">StaticModelGroup</a> : <a class="el" href="class_urho3_d_1_1_static_model.html" title="Static model component.">StaticModel</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4599,6 +4758,7 @@ Classes</h2>
 <ul>
 <li>unsigned numInstanceNodes (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_StaticSprite2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_static_sprite2_d.html" title="Static sprite component.">StaticSprite2D</a> : <a class="el" href="class_urho3_d_1_1_drawable2_d.html" title="Base class for 2D visible components.">Drawable2D</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4616,6 +4776,7 @@ Classes</h2>
 <li>bool flipY</li>
 <li><a class="el" href="class_urho3_d_1_1_color.html" title="RGBA color.">Color</a>&amp; color</li>
 </ul>
+<p><a class="anchor" id="Class_StringHash"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_string_hash.html" title="32-bit hash value for a string.">StringHash</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4642,6 +4803,7 @@ Classes</h2>
 <li>const <a class="el" href="class_urho3_d_1_1_string_hash.html" title="32-bit hash value for a string.">StringHash</a> ZERO</li>
 <li>unsigned value (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_Technique"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_technique.html" title="Material technique. Consists of several passes.">Technique</a> : <a class="el" href="class_urho3_d_1_1_resource.html" title="Base class for resources.">Resource</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4653,6 +4815,7 @@ Classes</h2>
 <ul>
 <li>bool SM3 (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_Terrain"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_terrain.html" title="Heightmap terrain component.">Terrain</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4721,6 +4884,7 @@ Classes</h2>
 <li>bool occluder</li>
 <li>bool occludee</li>
 </ul>
+<p><a class="anchor" id="Class_TerrainPatch"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_terrain_patch.html" title="Individually rendered part of a heightmap terrain.">TerrainPatch</a> : <a class="el" href="class_urho3_d_1_1_drawable.html" title="Base class for visible components.">Drawable</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4760,6 +4924,7 @@ Classes</h2>
 <li>unsigned lodLevel (readonly)</li>
 <li>float occlusionOffset</li>
 </ul>
+<p><a class="anchor" id="Class_Text"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_text.html" title="Text UI element.">Text</a> : <a class="el" href="class_urho3_d_1_1_u_i_element.html" title="Base class for UI elements.">UIElement</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4817,6 +4982,7 @@ Classes</h2>
 <li>unsigned numRows (readonly)</li>
 <li>unsigned numChars (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_Text3D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_text3_d.html" title="3D text component.">Text3D</a> : <a class="el" href="class_urho3_d_1_1_drawable.html" title="Base class for visible components.">Drawable</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4886,6 +5052,7 @@ Classes</h2>
 <li>float opacity</li>
 <li>FaceCameraMode faceCameraMode</li>
 </ul>
+<p><a class="anchor" id="Class_Texture"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_texture.html" title="Base class for texture resources.">Texture</a> : <a class="el" href="class_urho3_d_1_1_resource.html" title="Base class for resources.">Resource</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4926,6 +5093,7 @@ Classes</h2>
 <li>Texture* backupTexture</li>
 <li>TextureUsage usage (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_Texture2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_texture2_d.html" title="2D texture resource.">Texture2D</a> : <a class="el" href="class_urho3_d_1_1_texture.html" title="Base class for texture resources.">Texture</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4940,11 +5108,13 @@ Classes</h2>
 <ul>
 <li>RenderSurface* renderSurface (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_TextureCube"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_texture_cube.html" title="Cube texture resource.">TextureCube</a> : <a class="el" href="class_urho3_d_1_1_texture.html" title="Base class for texture resources.">Texture</a></h3>
 <p>Methods:</p>
 <ul>
 <li>RenderSurface* GetRenderSurface(CubeMapFace face) const</li>
 </ul>
+<p><a class="anchor" id="Class_TextureFrame"></a> </p>
 <h3><a class="el" href="struct_urho3_d_1_1_texture_frame.html" title="Texture animation frame definition.">TextureFrame</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4957,6 +5127,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_rect.html" title="Two-dimensional bounding rectangle.">Rect</a> uv</li>
 <li>float time</li>
 </ul>
+<p><a class="anchor" id="Class_Tile2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_tile2_d.html" title="Tile define.">Tile2D</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4970,6 +5141,7 @@ Classes</h2>
 <li>int gid (readonly)</li>
 <li>Sprite2D* sprite (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_TileMap2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_tile_map2_d.html" title="Tile map component.">TileMap2D</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h3>
 <p>Methods:</p>
 <ul>
@@ -4993,6 +5165,7 @@ Classes</h2>
 <li>float tileHeight (readonly)</li>
 <li>unsigned numLayers (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_TileMapLayer2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_tile_map_layer2_d.html" title="Tile map component.">TileMapLayer2D</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h3>
 <p>Methods:</p>
 <ul>
@@ -5022,6 +5195,7 @@ Classes</h2>
 <li>unsigned numObjects (readonly)</li>
 <li>Node* imageNode (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_TileObject2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_tile_object2_d.html" title="Tile map object.">TileObject2D</a></h3>
 <p>Methods:</p>
 <ul>
@@ -5044,6 +5218,7 @@ Classes</h2>
 <li>int tileGid (readonly)</li>
 <li>Sprite2D* tileSprite (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_Time"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_time.html" title="Time and frame counter subsystem.">Time</a> : <a class="el" href="class_urho3_d_1_1_object.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
 <p>Methods:</p>
 <ul>
@@ -5062,7 +5237,9 @@ Classes</h2>
 <li>unsigned timerPeriod (readonly)</li>
 <li>float elapsedTime (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_TmxFile2D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_tmx_file2_d.html" title="Tile map file.">TmxFile2D</a> : <a class="el" href="class_urho3_d_1_1_resource.html" title="Base class for resources.">Resource</a></h3>
+<p><a class="anchor" id="Class_ToolTip"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_tool_tip.html" title="Tooltip UI element.">ToolTip</a> : <a class="el" href="class_urho3_d_1_1_u_i_element.html" title="Base class for UI elements.">UIElement</a></h3>
 <p>Methods:</p>
 <ul>
@@ -5076,6 +5253,7 @@ Classes</h2>
 <ul>
 <li>float delay</li>
 </ul>
+<p><a class="anchor" id="Class_TouchState"></a> </p>
 <h3><a class="el" href="struct_urho3_d_1_1_touch_state.html" title="Input state for a finger touch.">TouchState</a></h3>
 <p>Methods:</p>
 <ul>
@@ -5090,6 +5268,7 @@ Classes</h2>
 <li>float pressure</li>
 <li>UIElement* touchedElement (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_UI"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_u_i.html" title="UI subsystem. Manages the graphical user interface.">UI</a> : <a class="el" href="class_urho3_d_1_1_object.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h3>
 <p>Methods:</p>
 <ul>
@@ -5160,6 +5339,7 @@ Classes</h2>
 <li>bool forceAutoHint</li>
 <li>bool modalElement (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_UIElement"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_u_i_element.html" title="Base class for UI elements.">UIElement</a> : <a class="el" href="class_urho3_d_1_1_animatable.html" title="Base class for animatable object, an animatable object can be set animation on it&#39;s attributes...">Animatable</a></h3>
 <p>Methods:</p>
 <ul>
@@ -5363,6 +5543,7 @@ Classes</h2>
 <li>TraversalMode traversalMode</li>
 <li>bool elementEventSender</li>
 </ul>
+<p><a class="anchor" id="Class_ValueAnimation"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_value_animation.html" title="Value animation class.">ValueAnimation</a> : <a class="el" href="class_urho3_d_1_1_resource.html" title="Base class for resources.">Resource</a></h3>
 <p>Methods:</p>
 <ul>
@@ -5385,6 +5566,7 @@ Classes</h2>
 <li>float splineTension</li>
 <li>VariantType valueType</li>
 </ul>
+<p><a class="anchor" id="Class_Variant"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_variant.html" title="Variable that supports a fixed set of types.">Variant</a></h3>
 <p>Methods:</p>
 <ul>
@@ -5508,6 +5690,7 @@ Classes</h2>
 <li>bool zero (readonly)</li>
 <li>bool empty (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_VariantMap"></a> </p>
 <h3>VariantMap</h3>
 <p>Methods:</p>
 <ul>
@@ -5555,6 +5738,7 @@ Classes</h2>
 <li>const <a class="el" href="class_urho3_d_1_1_matrix3x4.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a>&amp; GetMatrix3x4(const String key)</li>
 <li>const <a class="el" href="class_urho3_d_1_1_matrix4.html" title="4x4 matrix for arbitrary linear transforms including projection.">Matrix4</a>&amp; GetMatrix4(const String key)</li>
 </ul>
+<p><a class="anchor" id="Class_Vector2"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_vector2.html" title="Two-dimensional vector.">Vector2</a></h3>
 <p>Methods:</p>
 <ul>
@@ -5597,6 +5781,7 @@ Classes</h2>
 <li>const <a class="el" href="class_urho3_d_1_1_vector2.html" title="Two-dimensional vector.">Vector2</a> DOWN</li>
 <li>const <a class="el" href="class_urho3_d_1_1_vector2.html" title="Two-dimensional vector.">Vector2</a> ONE</li>
 </ul>
+<p><a class="anchor" id="Class_Vector3"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a></h3>
 <p>Methods:</p>
 <ul>
@@ -5649,6 +5834,7 @@ Classes</h2>
 <li>const <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> BACK</li>
 <li>const <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> ONE</li>
 </ul>
+<p><a class="anchor" id="Class_Vector4"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_vector4.html" title="Four-dimensional vector.">Vector4</a></h3>
 <p>Methods:</p>
 <ul>
@@ -5687,6 +5873,7 @@ Classes</h2>
 <li>const <a class="el" href="class_urho3_d_1_1_vector4.html" title="Four-dimensional vector.">Vector4</a> ZERO</li>
 <li>const <a class="el" href="class_urho3_d_1_1_vector4.html" title="Four-dimensional vector.">Vector4</a> ONE</li>
 </ul>
+<p><a class="anchor" id="Class_VectorBuffer"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_vector_buffer.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a></h3>
 <p>Methods:</p>
 <ul>
@@ -5787,6 +5974,7 @@ Classes</h2>
 <li>unsigned size (readonly)</li>
 <li>bool eof (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_View3D"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_view3_d.html" title="UI element which renders a 3D scene.">View3D</a> : <a class="el" href="class_urho3_d_1_1_window.html" title="Window UI element that can optionally by moved or resized.">Window</a></h3>
 <p>Methods:</p>
 <ul>
@@ -5810,6 +5998,7 @@ Classes</h2>
 <li>unsigned format</li>
 <li>bool autoUpdate</li>
 </ul>
+<p><a class="anchor" id="Class_Viewport"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_viewport.html" title="Viewport definition either for a render surface or the backbuffer.">Viewport</a></h3>
 <p>Methods:</p>
 <ul>
@@ -5840,6 +6029,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_int_rect.html" title="Two-dimensional bounding rectangle with integer values.">IntRect</a>&amp; rect</li>
 <li>RenderPath* renderPath</li>
 </ul>
+<p><a class="anchor" id="Class_Window"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_window.html" title="Window UI element that can optionally by moved or resized.">Window</a> : <a class="el" href="class_urho3_d_1_1_border_image.html" title="Image UI element with optional border.">BorderImage</a></h3>
 <p>Methods:</p>
 <ul>
@@ -5877,6 +6067,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_color.html" title="RGBA color.">Color</a>&amp; modalFrameColor</li>
 <li><a class="el" href="class_urho3_d_1_1_int_vector2.html" title="Two-dimensional vector with integer values.">IntVector2</a>&amp; modalFrameSize</li>
 </ul>
+<p><a class="anchor" id="Class_XMLElement"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_x_m_l_element.html" title="Element in an XML file.">XMLElement</a></h3>
 <p>Methods:</p>
 <ul>
@@ -5959,6 +6150,7 @@ Classes</h2>
 <li>unsigned numAttributes (readonly)</li>
 <li>XMLFile* file (readonly)</li>
 </ul>
+<p><a class="anchor" id="Class_XMLFile"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_x_m_l_file.html" title="XML document resource.">XMLFile</a> : <a class="el" href="class_urho3_d_1_1_resource.html" title="Base class for resources.">Resource</a></h3>
 <p>Methods:</p>
 <ul>
@@ -5971,6 +6163,7 @@ Classes</h2>
 <li>void Patch(XMLFile* patchFile)</li>
 <li>void Patch(XMLElement patchElement)</li>
 </ul>
+<p><a class="anchor" id="Class_Zone"></a> </p>
 <h3><a class="el" href="class_urho3_d_1_1_zone.html" title="Component that describes global rendering properties.">Zone</a> : <a class="el" href="class_urho3_d_1_1_drawable.html" title="Base class for visible components.">Drawable</a></h3>
 <p>Methods:</p>
 <ul>
