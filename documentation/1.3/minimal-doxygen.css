@@ -352,8 +352,10 @@ table.memberdecls {
         padding: 0px;
 }
 
-.memItemLeft, .memTemplItemLeft {
+@media print, screen and (min-width: 480px) {
+  .memItemLeft, .memTemplItemLeft {
         white-space: nowrap;
+  }
 }
 
 .memItemRight {
@@ -577,7 +579,6 @@ div.directory {
 .directory td.entry {
         white-space: nowrap;
         padding-right: 6px;
-        width: 50%;
 }
 
 .directory td.entry a {
@@ -589,7 +590,6 @@ div.directory {
 }
 
 .directory td.desc {
-        width: 100%;
         padding-left: 6px;
 	padding-right: 6px;
 	padding-top: 3px;
