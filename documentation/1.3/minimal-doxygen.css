@@ -1,8 +1,10 @@
 /* The standard CSS for doxygen 1.8.3.1 */
-/* Styles are modified to match orderedlist/minimal theme */
+/* Styles are generated to match orderedlist/minimal theme */
 
-div.textblock h3 a {
-  font-weight: bold;
+/* @group Heading Levels */
+
+h1.glow, h2.glow, h3.glow, h4.glow, h5.glow, h6.glow {
+	text-shadow: 0 0 15px cyan;
 }
 
 div.multicol {
@@ -352,10 +354,8 @@ table.memberdecls {
         padding: 0px;
 }
 
-@media print, screen and (min-width: 480px) {
-  .memItemLeft, .memTemplItemLeft {
+.memItemLeft, .memTemplItemLeft {
         white-space: nowrap;
-  }
 }
 
 .memItemRight {
@@ -590,6 +590,7 @@ div.directory {
 }
 
 .directory td.desc {
+        width: 100%;
         padding-left: 6px;
 	padding-right: 6px;
 	padding-top: 3px;

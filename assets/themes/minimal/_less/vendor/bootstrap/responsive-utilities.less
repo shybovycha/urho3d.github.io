@@ -32,6 +32,9 @@
   .responsive-invisibility();
 }
 
+.visible-xxs-block,
+.visible-xxs-inline,
+.visible-xxs-inline-block,
 .visible-xs-block,
 .visible-xs-inline,
 .visible-xs-inline-block,
@@ -45,6 +48,22 @@
 .visible-lg-inline,
 .visible-lg-inline-block {
   display: none !important;
+}
+
+.visible-xxs-block {
+  @media (max-width: @screen-xs-min) {
+    display: block !important;
+  }
+}
+.visible-xxs-inline {
+  @media (max-width: @screen-xs-min) {
+    display: inline !important;
+  }
+}
+.visible-xxs-inline-block {
+  @media (max-width: @screen-xs-min) {
+    display: inline-block !important;
+  }
 }
 
 .visible-xs {
@@ -131,6 +150,11 @@
   }
 }
 
+.hidden-xxs {
+  @media (max-width: (@screen-xs-min - 1)) {
+    .responsive-invisibility();
+  }
+}
 .hidden-xs {
   @media (max-width: @screen-xs-max) {
     .responsive-invisibility();

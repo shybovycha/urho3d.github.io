@@ -9,16 +9,13 @@ table {
   width: 100%;
   border-collapse: collapse;
 }
-th,
-td {
-  text-align: left;
-  padding: (@line-height-computed / 4) (@line-height-computed / 2);
-  border-bottom: 1px solid @pre-border-color;
-}
 th {
+  text-align: left;
   color: @table-header-color;
 }
-
+td {
+  border-bottom: 1px solid @pre-border-color;
+}
 
 // Baseline styles
 
@@ -177,8 +174,7 @@ table {
 // by enabling horizontal scrolling. Only applies <768px. Everything above that
 // will display normally.
 
-.table-responsive {
-  @media screen and (max-width: @screen-xs-max) {
+.table-responsive() {
     width: 100%;
     margin-bottom: (@line-height-computed * 0.75);
     overflow-y: hidden;
@@ -238,5 +234,14 @@ table {
       }
 
     }
+}
+
+.table-responsive {
+  @media screen and (max-width: @screen-xs-max) {
+    .table-responsive();
+  }
+
+  &-lg {
+    .table-responsive();
   }
 }

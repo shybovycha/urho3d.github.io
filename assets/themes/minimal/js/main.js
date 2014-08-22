@@ -48,7 +48,7 @@ $(document).ready(function() {
   // This is a documentation page when it contains a document switcher
   var $documentSwitcher = $('#document-switcher');
   if ($documentSwitcher.length) {
-    // Inject font-awesome icons to top navigation, hide the navigation text on extra small viewport
+    // Inject font-awesome icons to top navigation, hide the navigation text on really really small viewport
     $('.tablist [href]').each(function(i, elem) {
       var icon;
       if (/index\.html$/.test(elem)) icon = '<i class="fa fa-home fa-lg"></i>&nbsp;';
@@ -69,10 +69,11 @@ $(document).ready(function() {
       else if (/_eval\.html$/.test(elem)) icon = '<i class="fa fa-square-o"></i>&nbsp;';
       else if (/_prop\.html$/.test(elem)) icon = '<i class="fa fa-cog"></i>&nbsp;';
       else if (/_rela\.html$/.test(elem)) icon = '<i class="fa fa-link"></i>&nbsp;';
-      if (icon) $(elem).prepend(icon).find('span').addClass('hidden-xs');
+      if (icon) $(elem).prepend(icon).find('span').addClass('hidden-xxs');
     });
 
     // Inject responsive behaviour to tables and embedded SVGs
+    $('.textblock [href$="hierarchy.html"]').parents('.contents').find('table').wrap('<div class="table-responsive-lg"></div>').addClass('graphical-class-hierarchy');
     $('.contents table').wrap('<div class="table-responsive"></div>');
     $('.zoom').addClass('embed-responsive embed-responsive-16by9');
 
@@ -96,10 +97,5 @@ $(document).ready(function() {
       }});
     });
     if ($documentSwitcher.data('new')) $documentSwitcher.addClass('new-page');
-  }
-  else {
-    // Inject font-awesome icons to tar ball and zip file links on news post entry
-    $('article li [href^="https://github.com/"][href$=".zip"], article li [href^="https://github.com/"][href$=".tar.gz"]')
-      .prepend('<i class="fa fa-file-archive-o"></i>&nbsp;&nbsp;').parents('ul').css({'list-style': 'none', 'margin-left': '-18px'});
   }
 });

@@ -1,23 +1,36 @@
+//
+// Copyright (c) 2008-2014 the Urho3D project.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
+//
+
 @import url(https://fonts.googleapis.com/css?family=Lato:400italic,700italic,400,700);
 
 @import "vendor/bootstrap/bootstrap.less";
 @import "vendor/font-awesome/font-awesome.less";
+@import "vendor/font-mfizz/font-mfizz.less";
 @import "vendor/pygments/pygments-default.less";
 @import "webkit-scrollbar.less";
 
-article {
-  &:not(:last-of-type) {
-    padding-bottom: @line-height-computed;
-    margin-bottom: (@line-height-computed * 2);
-    border-bottom: 1px solid @pre-border-color;
-  }
+// Site-wide styles
 
-  img {
-    .img-responsive();
-    width: 100%;
-  }
-}
-
+// By default - float header and footer, keep main on the right
 header {
   width: @side-width;
   float: left;
@@ -126,6 +139,7 @@ footer {
   }
 }
 
+// On shorter viewport (e.g. tablet landscape) - unfloat footer and make it align with main
 @media print, screen and (max-height: 620px) {
   main {
     border-bottom: 1px solid @pre-border-color;
@@ -141,6 +155,7 @@ footer {
   }
 }
 
+// On smaller viewport - unfloat both header and footer but the col-sm-6 grid class should make header-nav (bottom part of header) floats to the right of its top part
 @media print, screen and (max-width: @screen-sm-max) {
   .container {
     width: auto;
@@ -175,6 +190,7 @@ footer {
   }
 }
 
+// On extra small viewport - collapse header-nav
 @media print, screen and (max-width: @screen-xs-max) {
   header {
     padding: 0;
@@ -190,6 +206,7 @@ footer {
   }
 }
 
+// On really really small viewport (e.g. iPhone) - hide the GitHub download links to conserve all the space, make view-on link visible on dropdown
 @media print, screen and (max-width: @screen-xs-min) {
   header {
     .github-links {
@@ -202,6 +219,22 @@ footer {
   }
 }
 
+
+// Post entry styles
+
+article {
+  &:not(:last-of-type) {
+    padding-bottom: @line-height-computed;
+    margin-bottom: (@line-height-computed * 2);
+    border-bottom: 1px solid @pre-border-color;
+  }
+
+  img {
+    .img-responsive();
+    width: 100%;
+  }
+}
+
 .post-meta {
   float: left;
   width: 40px;
@@ -209,7 +242,8 @@ footer {
   border-right: 1px solid @pre-border-color;
   .box-sizing(content-box);
 
-  @media print, screen and (max-width: (@screen-xs-min - 1)) {
+  // On really really small viewport (e.g. iPhone) - float the meta information to the right
+  @media print, screen and (max-width: @screen-xs-min) {
     float: right;
     margin-left: 0;
     border-right: none;
@@ -272,6 +306,19 @@ footer {
   }
 }
 
+h4.platform {
+  margin-top: 0;
+}
+
+[class$=-package] {
+  padding-left: 20px;
+  list-style: none;
+
+  .header:not(:first-of-type) {
+    margin-top: (@line-height-computed / 2);
+  }
+}
+
 @media print, screen and (min-width: @screen-lg-min) {
   .col2 {
     width: 100%;
@@ -285,12 +332,30 @@ footer {
   }
 }
 
-#document-switcher {
-  &.deprecated-page {
-    .button-variant(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
-  }
 
+// Documentation styles
+
+#document-switcher {
+  // Inherit from existing button classes
+  &.deprecated-page {
+    &:extend(.btn-warning);
+  }
   &.new-page {
-    .button-variant(@btn-success-color; @btn-success-bg; @btn-success-border);
+    &:extend(.btn-success);
+  }
+}
+
+.textblock h3 a {
+  font-weight: bold;
+}
+
+.graphical-class-hierarchy td {
+  border: none;   // undo border-bottom from orderedlist/minimal theme
+}
+
+// On really really small viewport (e.g. iPhone) - overwrite standard Doxygen style to break the white-space normally to conserve space
+@media print, screen and (max-width: @screen-xs-min) {
+  .memItemLeft, .memTemplItemLeft {
+    white-space: normal;
   }
 }
