@@ -310,12 +310,20 @@ h4.platform {
   margin-top: 0;
 }
 
+.package-filter label {
+  padding-right: 6px;
+}
+
+.item .header {
+  padding-left: 20px;
+}
+
 [class$=-package] {
   padding-left: 20px;
   list-style: none;
 
-  .header:not(:first-of-type) {
-    margin-top: (@line-height-computed / 2);
+  &:not(:last-of-type) {
+    margin-bottom: (@line-height-computed / 2);
   }
 }
 
