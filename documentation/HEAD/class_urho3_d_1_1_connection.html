@@ -92,8 +92,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:af6f9cc80e240c7ceb715bce429703c9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a976ecc08522836ae6fbca11fdf57b753"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a976ecc08522836ae6fbca11fdf57b753"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#a976ecc08522836ae6fbca11fdf57b753">SetPosition</a> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;position)</td></tr>
-<tr class="memdesc:a976ecc08522836ae6fbca11fdf57b753"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the observer position for interest management. <br/></td></tr>
+<tr class="memdesc:a976ecc08522836ae6fbca11fdf57b753"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the observer position for interest management, to be sent to the server. <br/></td></tr>
 <tr class="separator:a976ecc08522836ae6fbca11fdf57b753"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa90c73b3b4114da1f86bf902b999d76a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa90c73b3b4114da1f86bf902b999d76a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#aa90c73b3b4114da1f86bf902b999d76a">SetRotation</a> (const <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;rotation)</td></tr>
+<tr class="memdesc:aa90c73b3b4114da1f86bf902b999d76a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the observer rotation for interest management, to be sent to the server. Note: not used by the <a class="el" href="class_urho3_d_1_1_network_priority.html" title="Network interest management settings component.">NetworkPriority</a> component. <br/></td></tr>
+<tr class="separator:aa90c73b3b4114da1f86bf902b999d76a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3261101dbf2f0671d7f121276848ccdd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3261101dbf2f0671d7f121276848ccdd"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#a3261101dbf2f0671d7f121276848ccdd">SetConnectPending</a> (bool connectPending)</td></tr>
 <tr class="memdesc:a3261101dbf2f0671d7f121276848ccdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the connection pending status. Called by <a class="el" href="class_urho3_d_1_1_network.html" title="Network subsystem. Manages client-server communications using the UDP protocol.">Network</a>. <br/></td></tr>
@@ -148,8 +152,12 @@ const <a class="el" href="class_urho3_d_1_1_controls.html">Controls</a> &amp;&#1
 <tr class="separator:a19197bd80872bda59671e36f91fe8b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21ad7b2fb1adf1a4ab19cebb87fa8b34"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a21ad7b2fb1adf1a4ab19cebb87fa8b34"></a>
 const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#a21ad7b2fb1adf1a4ab19cebb87fa8b34">GetPosition</a> () const </td></tr>
-<tr class="memdesc:a21ad7b2fb1adf1a4ab19cebb87fa8b34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the observer position for interest management. <br/></td></tr>
+<tr class="memdesc:a21ad7b2fb1adf1a4ab19cebb87fa8b34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the observer position sent by the client for interest management. <br/></td></tr>
 <tr class="separator:a21ad7b2fb1adf1a4ab19cebb87fa8b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e0875ed0b21775a55c475995bcb2d43"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e0875ed0b21775a55c475995bcb2d43"></a>
+const <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#a1e0875ed0b21775a55c475995bcb2d43">GetRotation</a> () const </td></tr>
+<tr class="memdesc:a1e0875ed0b21775a55c475995bcb2d43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the observer rotation sent by the client for interest management. <br/></td></tr>
+<tr class="separator:a1e0875ed0b21775a55c475995bcb2d43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82b57acbe1f3fc8e166b20472fce95b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82b57acbe1f3fc8e166b20472fce95b4"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#a82b57acbe1f3fc8e166b20472fce95b4">IsClient</a> () const </td></tr>
 <tr class="memdesc:a82b57acbe1f3fc8e166b20472fce95b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether is a client connection. <br/></td></tr>
@@ -327,10 +335,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a34d2ebad347aa092f2658cf6d7c40e94"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34d2ebad347aa092f2658cf6d7c40e94"></a>
-<a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#a34d2ebad347aa092f2658cf6d7c40e94">position_</a></td></tr>
-<tr class="memdesc:a34d2ebad347aa092f2658cf6d7c40e94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Observer position for interest management. <br/></td></tr>
-<tr class="separator:a34d2ebad347aa092f2658cf6d7c40e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07830e8d8cbc97c1676f0b372b44b6c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a07830e8d8cbc97c1676f0b372b44b6c1"></a>
 <a class="el" href="class_urho3_d_1_1_controls.html">Controls</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#a07830e8d8cbc97c1676f0b372b44b6c1">controls_</a></td></tr>
 <tr class="memdesc:a07830e8d8cbc97c1676f0b372b44b6c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current controls. <br/></td></tr>
@@ -475,6 +479,18 @@ kNet::SharedPtr<br class="typebreak"/>
 unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#a7c8ca16ed539205d5822c83733a660dd">port_</a></td></tr>
 <tr class="memdesc:a7c8ca16ed539205d5822c83733a660dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remote endpoint port. <br/></td></tr>
 <tr class="separator:a7c8ca16ed539205d5822c83733a660dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34d2ebad347aa092f2658cf6d7c40e94"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34d2ebad347aa092f2658cf6d7c40e94"></a>
+<a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#a34d2ebad347aa092f2658cf6d7c40e94">position_</a></td></tr>
+<tr class="memdesc:a34d2ebad347aa092f2658cf6d7c40e94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Observer position for interest management. <br/></td></tr>
+<tr class="separator:a34d2ebad347aa092f2658cf6d7c40e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bd4e213476e037d48a8f131134232ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0bd4e213476e037d48a8f131134232ba"></a>
+<a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#a0bd4e213476e037d48a8f131134232ba">rotation_</a></td></tr>
+<tr class="memdesc:a0bd4e213476e037d48a8f131134232ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Observer rotation for interest management. <br/></td></tr>
+<tr class="separator:a0bd4e213476e037d48a8f131134232ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a164b790b91f1d62242f2556bbd3c2f3c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a164b790b91f1d62242f2556bbd3c2f3c"></a>
+ObserverPositionSendMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#a164b790b91f1d62242f2556bbd3c2f3c">sendMode_</a></td></tr>
+<tr class="memdesc:a164b790b91f1d62242f2556bbd3c2f3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send mode for the observer position &amp; rotation. <br/></td></tr>
+<tr class="separator:a164b790b91f1d62242f2556bbd3c2f3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4c45e011788f6aeda8828445c71902e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac4c45e011788f6aeda8828445c71902e"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#ac4c45e011788f6aeda8828445c71902e">isClient_</a></td></tr>
 <tr class="memdesc:ac4c45e011788f6aeda8828445c71902e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Client connection flag. <br/></td></tr>
