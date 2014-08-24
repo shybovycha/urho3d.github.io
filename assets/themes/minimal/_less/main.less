@@ -357,12 +357,26 @@ h4.platform {
   }
 }
 
-.textblock h3 a {
-  font-weight: bold;
+.contents {
+  margin-top: 20px;
 }
 
-.graphical-class-hierarchy td {
-  border: none;   // undo border-bottom from orderedlist/minimal theme
+.textblock {
+  h3 a {
+    font-weight: bold;
+  }
+
+  // Undo border-bottom from orderedlist/minimal theme for graphical class hierarchy list
+  & + table,
+  & + .table-responsive-lg {
+    td {
+      border-bottom: none;
+    }
+  }
+}
+
+.fragment {
+  &:extend(pre all);
 }
 
 // On really really small viewport (e.g. iPhone) - overwrite standard Doxygen style to break the white-space normally to conserve space

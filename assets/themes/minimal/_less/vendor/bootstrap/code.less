@@ -41,14 +41,14 @@ pre {
   display: block;
   padding: 8px 15px;
   margin: 0 0 @line-height-computed;
-  font-size: (@font-size-base - 2); // 14px to 12px
+  font-size: (@font-size-base - 1); // 14px to 13px
   line-height: @line-height-base;
-  word-break: break-all;
   word-wrap: break-word;
   color: @pre-color;
   background-color: @pre-bg;
   border: 1px solid @pre-border-color;
   border-radius: (@border-radius-base + 1);
+  overflow-x: auto;
 
   // Account for some code outputs that place code tags in pre tags
   code {

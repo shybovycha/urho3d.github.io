@@ -73,8 +73,8 @@ $(document).ready(function() {
     });
 
     // Inject responsive behaviour to tables and embedded SVGs
-    $('.textblock [href$="hierarchy.html"]').parents('.contents').find('table').wrap('<div class="table-responsive-lg"></div>').addClass('graphical-class-hierarchy');
     $('.contents table').wrap('<div class="table-responsive"></div>');
+    $('.textblock + .table-responsive').removeClass('table-responsive').addClass('table-responsive-lg');  // Use large version for graphical class hierarchy list
     $('.zoom').addClass('embed-responsive embed-responsive-16by9');
 
     // Bug fix for WebKit - additional 56px due to WebKit bug not taking the img width into consideration and causing overall td width not wide enough for the text

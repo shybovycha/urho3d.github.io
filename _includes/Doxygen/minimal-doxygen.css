@@ -1,12 +1,55 @@
 /* The standard CSS for doxygen 1.8.3.1 */
-/* Styles are generated to match orderedlist/minimal theme */
+/* Modified by Yao Wei Tjong for Urho3D to match orderedlist/minimal theme */
 
+/* Urho3D
+body, table, div, p, dl {
+	font: 400 14px/19px Roboto,sans-serif;
+}
+*/
 /* @group Heading Levels */
+/*
+h1.groupheader {
+	font-size: 150%;
+}
+
+.title {
+	font-size: 150%;
+	font-weight: bold;
+	margin: 10px 2px;
+}
+
+h2.groupheader {
+	border-bottom: 1px solid #CFCFCF;
+	color: #969696;
+	font-size: 150%;
+	font-weight: normal;
+	margin-top: 1.75em;
+	padding-top: 8px;
+	padding-bottom: 4px;
+	width: 100%;
+}
+
+h3.groupheader {
+	font-size: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	-webkit-transition: text-shadow 0.5s linear;
+	-moz-transition: text-shadow 0.5s linear;
+	-ms-transition: text-shadow 0.5s linear;
+	-o-transition: text-shadow 0.5s linear;
+	transition: text-shadow 0.5s linear;
+	margin-right: 15px;
+}
 
 h1.glow, h2.glow, h3.glow, h4.glow, h5.glow, h6.glow {
 	text-shadow: 0 0 15px cyan;
 }
 
+dt {
+	font-weight: bold;
+}
+*/
 div.multicol {
 	-moz-column-gap: 1em;
 	-webkit-column-gap: 1em;
@@ -61,21 +104,78 @@ div.navtab {
 	margin-right: 15px;
 }
 
+/* @group Link Styling */
+/* Urho3D
+a {
+	color: #A0A0A0;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.contents a:visited {
+	color: #ACACAC;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a.qindex {
+	font-weight: bold;
+}
+
+a.qindexHL {
+	font-weight: bold;
+	background-color: #D8D8D8;
+	color: #ffffff;
+	border: 1px double #CFCFCF;
+}
+
+.contents a.qindexHL:visited {
+        color: #ffffff;
+}
+
+a.el {
+	font-weight: bold;
+}
+
+a.elRef {
+}
+
+a.code, a.code:visited {
+	color: #4665A2; 
+}
+
+a.codeRef, a.codeRef:visited {
+	color: #4665A2; 
+}
+*/
+/* @end */
+/*
 dl.el {
 	margin-left: -1cm;
 }
 
-div.fragment {
-    font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, monospace;
-    color:#333;
-    font-size:12px;
-    margin:0 0 20px;
-    padding:8px 15px;
-    background: #f8f8f8;
-    border-radius:5px;
-    border:1px solid #e5e5e5;
+pre.fragment {
+        border: 1px solid #C4CFE5;
+        background-color: #FBFCFD;
+        padding: 4px 6px;
+        margin: 4px 8px 4px 2px;
+        overflow: auto;
+        word-wrap: break-word;
+        font-size:  9pt;
+        line-height: 125%;
+        font-family: monospace, fixed;
+        font-size: 105%;
 }
 
+div.fragment {
+        padding: 4px;
+        margin: 4px;
+	background-color: #FDFDFD;
+	border: 1px solid #E9E9E9;
+}
+*/
 div.line {
 	font-family: monospace, fixed;
         font-size: 13px;
@@ -152,15 +252,19 @@ div.groupText {
 	margin-left: 16px;
 	font-style: italic;
 }
+/* Urho3D
+body {
+	background-color: white;
+	color: black;
+        margin: 0;
+}
 
 div.contents {
-	margin-top: 20px;
+	margin-top: 10px;
+	margin-left: 12px;
+	margin-right: 8px;
 }
-
-div.textblock+table>tbody>tr>td {
-    border-bottom: none;
-}
-
+*/
 td.indexkey {
 	background-color: #F8F8F8;
 	font-weight: bold;
@@ -260,14 +364,14 @@ span.vhdlkeyword {
 span.vhdllogic { 
 	color: #ff0000 
 }
-
+/* Urho3D
 blockquote {
         background-color: #FCFCFC;
         border-left: 2px solid #D8D8D8;
         margin: 0 24px 0 4px;
         padding: 0 12px 0 16px;
 }
-
+*/
 /* @end */
 
 /*
@@ -303,7 +407,13 @@ th.dirtab {
 	background: #F8F8F8;
 	font-weight: bold;
 }
-
+/* Urho3D
+hr {
+	height: 0px;
+	border: none;
+	border-top: 1px solid #B0B0B0;
+}
+*/
 hr.footer {
 	height: 1px;
 }
@@ -634,7 +744,26 @@ address {
 	font-style: normal;
 	color: #858585;
 }
+/* Urho3D
+table.doxtable {
+	border-collapse:collapse;
+        margin-top: 4px;
+        margin-bottom: 4px;
+}
 
+table.doxtable td, table.doxtable th {
+	border: 1px solid #8A8A8A;
+	padding: 3px 7px 2px;
+}
+
+table.doxtable th {
+	background-color: #989898;
+	color: #FFFFFF;
+	font-size: 110%;
+	padding-bottom: 4px;
+	padding-top: 5px;
+}
+*/
 table.fieldtable {
         /*width: 100%;*/
         margin-bottom: 10px;
@@ -770,11 +899,11 @@ table.fieldtable {
 div.summary
 {
 	float: right;
-	font-size: 6pt;
+	font-size: 8pt;
 	padding-right: 5px;
 	width: 50%;
 	text-align: right;
-}
+}       
 
 div.summary a
 {
@@ -806,12 +935,12 @@ div.headertitle
 {
 	padding: 5px 5px 5px 10px;
 }
-
+/* Urho3D
 dl
 {
         padding: 0 0 0 10px;
 }
-
+*/
 /* dl.note, dl.warning, dl.attention, dl.pre, dl.post, dl.invariant, dl.deprecated, dl.todo, dl.test, dl.bug */
 dl.section
 {
@@ -1055,8 +1184,3 @@ tr.heading h2 {
   }
 }
 
-@media print, screen and (max-width: 720px) {
-  div.fragment {
-    word-wrap:normal;
-  }
-}
