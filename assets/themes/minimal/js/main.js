@@ -48,6 +48,24 @@ $(document).ready(function() {
   // This is a documentation page when it contains a document switcher
   var $documentSwitcher = $('#document-switcher');
   if ($documentSwitcher.length) {
+    // Verify the links in the document switcher
+    $('+ .dropdown-menu [href]', $documentSwitcher).each(function(i, elem) {
+      // i == 0 is /HEAD/
+      // Page is new when only exists in /HEAD/
+      // Page is deprecated when not exists in /HEAD/ anymore
+      $.ajax({ url: elem, type: 'HEAD', async: false, statusCode: {
+        200: function() {
+          $documentSwitcher.data('new', i == 0);
+        },
+        404: function() {
+          // In any case, disable the list item when the link it contained does not exist in server
+          $(elem).removeAttr('href').parent().addClass("disabled");
+          if (i == 0) $documentSwitcher.addClass('deprecated-page');
+        }
+      }});
+    });
+    if ($documentSwitcher.data('new')) $documentSwitcher.addClass('new-page');
+
     // Inject font-awesome icons to top navigation, hide the navigation text on really really small viewport
     $('.tablist [href]').each(function(i, elem) {
       var icon;
@@ -77,26 +95,20 @@ $(document).ready(function() {
     $('.textblock + .table-responsive').removeClass('table-responsive').addClass('table-responsive-lg');  // Use large version for graphical class hierarchy list
     $('.zoom').addClass('embed-responsive embed-responsive-16by9');
 
+    // Inject dropdown class to summary links
+    $('.summary')
+      .addClass('dropdown pull-right')
+      .html(function() {
+        return $(this).html().replace(/\|/g, '');
+      })
+      .prepend('<button class="btn btn-default btn-xs dropdown-toggle" type="button" id="class-summary" data-toggle="dropdown">Summary <span class="caret"></span></button>')
+      .find('a')
+        .wrapAll('<ul class="dropdown-menu" role="menu" aria-labelledby="class-summary"></ul>')
+        .wrap('<li role="presentation"></li>')
+        .attr('role', 'menuitem').attr('tabindex', '-1');
+
     // Bug fix for WebKit - additional 56px due to WebKit bug not taking the img width into consideration and causing overall td width not wide enough for the text
     if (/(chrom(e|ium)|applewebkit)/.test(navigator.userAgent.toLowerCase())) $('.directory td.entry').css('padding-right', '62px'); // 6 + 56
-
-    // Verify the links in the document switcher
-    $('+ .dropdown-menu [href]', $documentSwitcher).each(function(i, elem) {
-      // i == 0 is /HEAD/
-      // Page is new when only exists in /HEAD/
-      // Page is deprecated when not exists in /HEAD/ anymore
-      $.ajax({ url: elem, type: 'HEAD', async: false, statusCode: {
-        200: function() {
-          $documentSwitcher.data('new', i == 0);
-        },
-        404: function() {
-          // In any case, disable the list item when the link it contained does not exist in server
-          $(elem).removeAttr('href').parent().addClass("disabled");
-          if (i == 0) $documentSwitcher.addClass('deprecated-page');
-        }
-      }});
-    });
-    if ($documentSwitcher.data('new')) $documentSwitcher.addClass('new-page');
   }
   else {
     // Show/hide binary packages based on package-filter's criteria
