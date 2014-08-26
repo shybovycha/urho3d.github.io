@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Urho3D website revamp"
-category: "annoucements"
+category: "announcements"
 tags: [website]
 ---
 {% include JB/setup %}
