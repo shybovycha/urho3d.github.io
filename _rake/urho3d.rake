@@ -47,6 +47,6 @@ task :lessc do
     system 'lessc assets/themes/minimal/_less/main.less -x --clean-css >assets/themes/minimal/css/main-min.css' or abort 'Failed to compile main.less'
   end
   if option == 'doxygen' || option == 'all'
-    system 'lessc _includes/Doxygen/doxygen.less -x --clean-css >_includes/Doxygen/minimal-doxygen.css' or abort 'Failed to compile doxygen.less'
+    system 'lessc _includes/Doxygen/doxygen.less -x --clean-css >_includes/Doxygen/minimal-doxygen.css && echo >>_includes/Doxygen/minimal-doxygen.css' or abort 'Failed to compile doxygen.less'
   end
 end # task :lessc
