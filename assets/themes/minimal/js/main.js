@@ -135,5 +135,14 @@ $(document).ready(function() {
       // Ensure package-filter's criterias agree with their default values on page reload
       this.checked = this.defaultChecked;
     });
+
+    // Scroll all the way to the bottom of the page for commenting but give some time for Disqus async content to populate
+    $(window).on("load", function() {
+      if (/disqus_thread$/.test(window.location.hash)) {
+        setTimeout(function() {
+          $('html, body').scrollTop($(document).height());
+        }, 800);
+      }
+    });
   }
 });

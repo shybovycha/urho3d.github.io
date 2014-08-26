@@ -14,4 +14,11 @@
   <div class="post">
     {% if post.layout == 'default' %}{{ content }}{% else %}{{ post.content }}{% endif %}
   </div>
+  {% if post.layout == 'post' %}
+  <div class="comments-count">
+    <div class="pull-right">
+      <a href="{{ BASE_PATH}}{{ post.url }}#comments_disqus_thread"><i class="fa fa-comment-o"></i>&nbsp;</a><a href="{{ BASE_PATH}}{{ post.url }}#disqus_thread"></a>
+    </div>
+  </div>
+  {% endif %}
 </article>
