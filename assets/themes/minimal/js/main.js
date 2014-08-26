@@ -136,11 +136,11 @@ $(document).ready(function() {
       this.checked = this.defaultChecked;
     });
 
-    // Scroll all the way to the bottom of the page for commenting but give some time for Disqus async content to populate
+    // Give some time for Disqus async content to populate then scroll to the anchor one more time
     $(window).on("load", function() {
       if (/disqus_thread$/.test(window.location.hash)) {
         setTimeout(function() {
-          $('html, body').scrollTop($(document).height());
+          $('html, body').scrollTop($(window.location.hash).position().top);
         }, 800);
       }
     });
