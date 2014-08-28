@@ -45,6 +45,12 @@
 
 // Place any jQuery/helper plugins in here.
 $(document).ready(function() {
+  // Bust Travis CI build status image cache
+  $('.build-status img').each(function() {
+    var $this = $(this);
+    $this.attr('src', $this.attr('src') + '&v=' + Math.random());
+  });
+
   // This is a documentation page when it contains a document switcher
   var $documentSwitcher = $('#document-switcher');
   if ($documentSwitcher.length) {
