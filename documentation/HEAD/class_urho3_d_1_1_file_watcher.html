@@ -74,6 +74,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_file_watcher.html#a2b87da74ae7b77636e80c74fe40a18f2">StopWatching</a> ()</td></tr>
 <tr class="memdesc:a2b87da74ae7b77636e80c74fe40a18f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop watching the directory. <br/></td></tr>
 <tr class="separator:a2b87da74ae7b77636e80c74fe40a18f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ceac65d792f82b6f55f85b4736af225"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ceac65d792f82b6f55f85b4736af225"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_file_watcher.html#a8ceac65d792f82b6f55f85b4736af225">SetDelay</a> (float interval)</td></tr>
+<tr class="memdesc:a8ceac65d792f82b6f55f85b4736af225"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the delay in seconds before file changes are notified. This (hopefully) avoids notifying when a file save is still in progress. Default 1 second. <br/></td></tr>
+<tr class="separator:a8ceac65d792f82b6f55f85b4736af225"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b37b969f5507ce20912b110af8e2fc1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b37b969f5507ce20912b110af8e2fc1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_file_watcher.html#a7b37b969f5507ce20912b110af8e2fc1">AddChange</a> (const <a class="el" href="class_urho3_d_1_1_string.html">String</a> &amp;fileName)</td></tr>
 <tr class="memdesc:a7b37b969f5507ce20912b110af8e2fc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a file change into the changes queue. <br/></td></tr>
@@ -86,6 +90,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 const <a class="el" href="class_urho3_d_1_1_string.html">String</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_file_watcher.html#a3aa97671faa14b837040077b7ac316e8">GetPath</a> () const </td></tr>
 <tr class="memdesc:a3aa97671faa14b837040077b7ac316e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the path being watched, or empty if not watching. <br/></td></tr>
 <tr class="separator:a3aa97671faa14b837040077b7ac316e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ed9351fdea30215c43b0de8885b2fcf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5ed9351fdea30215c43b0de8885b2fcf"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_file_watcher.html#a5ed9351fdea30215c43b0de8885b2fcf">GetDelay</a> () const </td></tr>
+<tr class="memdesc:a5ed9351fdea30215c43b0de8885b2fcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the delay in seconds for notifying file changes. <br/></td></tr>
+<tr class="separator:a5ed9351fdea30215c43b0de8885b2fcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a95a6cd1c5c12a458fda4b38f873a334d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a95a6cd1c5c12a458fda4b38f873a334d">Object</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -258,14 +266,18 @@ Private Attributes</h2></td></tr>
 <a class="el" href="class_urho3_d_1_1_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_file_watcher.html#a6853b341801e792a1139f602c449a8c3">path_</a></td></tr>
 <tr class="memdesc:a6853b341801e792a1139f602c449a8c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The path being watched. <br/></td></tr>
 <tr class="separator:a6853b341801e792a1139f602c449a8c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9c297a94d00bf2f7c91fcf80c6c4182"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab9c297a94d00bf2f7c91fcf80c6c4182"></a>
-<a class="el" href="class_urho3_d_1_1_list.html">List</a>&lt; <a class="el" href="class_urho3_d_1_1_string.html">String</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_file_watcher.html#ab9c297a94d00bf2f7c91fcf80c6c4182">changes_</a></td></tr>
-<tr class="memdesc:ab9c297a94d00bf2f7c91fcf80c6c4182"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffered file changes. <br/></td></tr>
-<tr class="separator:ab9c297a94d00bf2f7c91fcf80c6c4182"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade834049e05cee18b4f8fccd5f2b9bdd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade834049e05cee18b4f8fccd5f2b9bdd"></a>
+<a class="el" href="class_urho3_d_1_1_hash_map.html">HashMap</a>&lt; <a class="el" href="class_urho3_d_1_1_string.html">String</a>, <a class="el" href="class_urho3_d_1_1_timer.html">Timer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_file_watcher.html#ade834049e05cee18b4f8fccd5f2b9bdd">changes_</a></td></tr>
+<tr class="memdesc:ade834049e05cee18b4f8fccd5f2b9bdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pending changes. These will be returned and removed from the list when their timer has exceeded the delay. <br/></td></tr>
+<tr class="separator:ade834049e05cee18b4f8fccd5f2b9bdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad40a245e2e679499bc1328e5f1eee6a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad40a245e2e679499bc1328e5f1eee6a3"></a>
 <a class="el" href="class_urho3_d_1_1_mutex.html">Mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_file_watcher.html#ad40a245e2e679499bc1328e5f1eee6a3">changesMutex_</a></td></tr>
 <tr class="memdesc:ad40a245e2e679499bc1328e5f1eee6a3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_mutex.html" title="Operating system mutual exclusion primitive.">Mutex</a> for the change buffer. <br/></td></tr>
 <tr class="separator:ad40a245e2e679499bc1328e5f1eee6a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37a86a2b6c94a35e8b71b9219f46f036"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37a86a2b6c94a35e8b71b9219f46f036"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_file_watcher.html#a37a86a2b6c94a35e8b71b9219f46f036">delay_</a></td></tr>
+<tr class="memdesc:a37a86a2b6c94a35e8b71b9219f46f036"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delay in seconds for notifying changes. <br/></td></tr>
+<tr class="separator:a37a86a2b6c94a35e8b71b9219f46f036"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af23ce744e998dab2ce858e02556646a8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af23ce744e998dab2ce858e02556646a8"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_file_watcher.html#af23ce744e998dab2ce858e02556646a8">watchSubDirs_</a></td></tr>
 <tr class="memdesc:af23ce744e998dab2ce858e02556646a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Watch subdirectories flag. <br/></td></tr>
