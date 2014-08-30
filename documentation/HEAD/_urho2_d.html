@@ -144,5 +144,70 @@ Constraints components</h2>
 Background and Layers</h2>
 <p>To set the background color for the scene, use <a class="el" href="class_urho3_d_1_1_renderer.html#add23f2f9f835ed761827555f746b9658">GetDefaultZone()</a>.fogColor</p>
 <p>You can use different layers in order to simulate perspective. In this case you can use <a class="el" href="class_urho3_d_1_1_drawable2_d.html#ac9f626566fe697b52a9a480124a9d17b">SetLayer()</a> and <a class="el" href="class_urho3_d_1_1_drawable2_d.html#a69a05d67eda14a449c2b793f520d9d5b">SetOrderInLayer()</a> to organise your sprites and arrange thir display order.</p>
-<p>Finally, note that you can easily mix both 2D and 3D resources. 3D assets' position need to be slightly offset on the Z axis (z=1 is enough), <a class="el" href="class_urho3_d_1_1_camera.html" title="Camera component.">Camera</a>'s position needs to be slightly offset (on the Z axis) from 3D assets' max girth and a <a class="el" href="class_urho3_d_1_1_light.html" title="Light component.">Light</a> is required. </p>
+<p>Finally, note that you can easily mix both 2D and 3D resources. 3D assets' position need to be slightly offset on the Z axis (z=1 is enough), <a class="el" href="class_urho3_d_1_1_camera.html" title="Camera component.">Camera</a>'s position needs to be slightly offset (on the Z axis) from 3D assets' max girth and a <a class="el" href="class_urho3_d_1_1_light.html" title="Light component.">Light</a> is required.</p>
+<h2><a class="anchor" id="Urho2D_TileMap"></a>
+Tile Maps</h2>
+<p>Tile maps workflow relies on the tmx file format, which is the native format of Tiled, a free app available at <a href="http://www.mapeditor.org/">http://www.mapeditor.org/</a>. It is strongly recommended to only use the latest stable release (currently 0.9.1). Do not use daily builds or older revisions, otherwise results may be unpredictable.</p>
+<p>Check example 36_Urho2DTileMap for a basic demonstration.</p>
+<p>You can use tile maps for the design of the whole scene/level, or in adjunction to other 2D resources.</p>
+<h2><a class="anchor" id="Urho2D_LoadingTMX"></a>
+"Loading" a Tile Map file</h2>
+<p>A tmx file is loaded using <a class="el" href="class_urho3_d_1_1_tmx_file2_d.html">TmxFile2D resource class</a> and rendered using <a class="el" href="class_urho3_d_1_1_tile_map2_d.html">TileMap2D component class</a>. You just have to create a <a class="el" href="class_urho3_d_1_1_tile_map2_d.html">TileMap2D</a> component inside a node and then assign the tmx resource file to it.</p>
+<p>C++: </p>
+<div class="fragment"><div class="line">SharedPtr&lt;Node&gt; tileMapNode(scene_-&gt;CreateChild(<span class="stringliteral">&quot;TileMap&quot;</span>)); <span class="comment">// Create a standard Urho3D node</span></div>
+<div class="line">tileMapNode-&gt;SetPosition(Vector3(0.0f, 0.0f, -1.0f));</div>
+<div class="line">TileMap2D* tileMap = tileMapNode-&gt;CreateComponent&lt;TileMap2D&gt;(); <span class="comment">// Create the TileMap2D component</span></div>
+<div class="line">tileMap-&gt;SetTmxFile(cache-&gt;GetResource&lt;TmxFile2D&gt;(<span class="stringliteral">&quot;Urho2D/isometric_grass_and_water.tmx&quot;</span>)); <span class="comment">// Assign tmx resource file to component</span></div>
+</div><!-- fragment --><p>AngelScript: </p>
+<div class="fragment"><div class="line">Node@ tileMapNode = scene_.CreateChild(<span class="stringliteral">&quot;TileMap&quot;</span>); <span class="comment">// Create a standard Urho3D node</span></div>
+<div class="line">tileMapNode.position = Vector3(0.0f, 0.0f, -1.0f);</div>
+<div class="line">TileMap2D@ tileMap = tileMapNode.CreateComponent(<span class="stringliteral">&quot;TileMap2D&quot;</span>); <span class="comment">// Create the TileMap2D component</span></div>
+<div class="line">tileMap.tmxFile = cache.GetResource(<span class="stringliteral">&quot;TmxFile2D&quot;</span>, <span class="stringliteral">&quot;Urho2D/isometric_grass_and_water.tmx&quot;</span>); <span class="comment">// Assign the tmx resource file to component</span></div>
+</div><!-- fragment --><p>Lua: </p>
+<div class="fragment"><div class="line">local tileMapNode = scene_:CreateChild(<span class="stringliteral">&quot;TileMap&quot;</span>) -- Create a standard Urho3D node</div>
+<div class="line">tileMapNode.position = Vector3(0, 0, -1)</div>
+<div class="line">local tileMap = tileMapNode:CreateComponent(&quot;TileMap2D&quot;) -- Create the TileMap2D component</div>
+<div class="line">tileMap.tmxFile = cache:GetResource(&quot;TmxFile2D&quot;, &quot;Urho2D/isometric_grass_and_water.tmx&quot;) -- Assign tmx resource file to component</div>
+</div><!-- fragment --><p>Note that currently only XML Layer Format is supported (Base64 and CSV are not). In Tiled, go to Maps &gt; Map Properties to set 'Layer Format' to 'XML'.</p>
+<h2><a class="anchor" id="Urho2D_TMX_maps"></a>
+Tile Maps</h2>
+<p>Once a tmx file is loaded in Urho, use <a class="el" href="class_urho3_d_1_1_tile_map2_d.html#a18e6ecb3f678e9d75b7b91987e02dd36">GetInfo()</a> to access the map properties through <a class="el" href="struct_urho3_d_1_1_tile_map_info2_d.html">TileMapInfo2D</a> class.</p>
+<p>A map is defined by its:</p>
+<ul>
+<li>orientation: Urho2D supports both orthogonal (flat) and isometric (strict iso 2.5D and staggered iso) tile maps. Orientation can be retrieved with <a class="el" href="struct_urho3_d_1_1_tile_map_info2_d.html#a3ee0159983d648eadec68b85eb15f0d5">orientation_</a> attribute (returns 0 for ortho, 1 for iso and 2 for staggered).</li>
+<li>width and height expressed as a number of tiles in the map: use <a class="el" href="struct_urho3_d_1_1_tile_map_info2_d.html#ae0b050e9b24b9e524ac58a55eb77738d">width_</a> and <a class="el" href="struct_urho3_d_1_1_tile_map_info2_d.html#af7f27de70ce63dce0237208323fc930b">height_</a> attributes to access these values</li>
+<li>width and height expressed in Urho2D space: use <a class="el" href="struct_urho3_d_1_1_tile_map_info2_d.html#a65b80cc15e7995d867de0525cefc7e7f">GetMapWidth()</a> and <a class="el" href="struct_urho3_d_1_1_tile_map_info2_d.html#ab8eb07bbd980690e0b21a5d6b1c2ebad">GetMapHeight()</a> to access these values which are useful to set the camera's position for example</li>
+<li>tile width and tile height as the size in pixels of the tiles in the map (expressed a percentage): use <a class="el" href="struct_urho3_d_1_1_tile_map_info2_d.html#ac42e2d2442ee98391913a6f556fd05a8">tileWidth_</a> and <a class="el" href="struct_urho3_d_1_1_tile_map_info2_d.html#a788bf4015bdc4708859ec11f009c3b04">tileHeight_</a> attributes to access these values</li>
+</ul>
+<p>Two convenient functions are provided to convert Tiled index to/from Urho2D space:</p>
+<ul>
+<li><a class="el" href="struct_urho3_d_1_1_tile_map_info2_d.html#ac168f68a67143bc60a37d74188306dc7">TileIndexToPosition()</a> to convert tile index to Urho position</li>
+<li><a class="el" href="struct_urho3_d_1_1_tile_map_info2_d.html#aaa95c81d310dfd5e9068f427a40a7371">PositionToTileIndex()</a> to convert Urho position to tile index (returns false if position is outside of the map)</li>
+</ul>
+<h2><a class="anchor" id="Urho2D_TMX_layers"></a>
+Tile Map Layers</h2>
+<p>A tile map is composed of a mix of ordered <a class="el" href="class_urho3_d_1_1_tile_map_layer2_d.html">layers</a>.</p>
+<p>Accessing layers : from a <a class="el" href="class_urho3_d_1_1_tile_map2_d.html">TileMap2D component</a>, layers are accessed by their index from bottom to top using <a class="el" href="class_urho3_d_1_1_tile_map2_d.html#ad521a0caba0eda8981737286c008e9db">GetLayer()</a> function. <a class="el" href="class_urho3_d_1_1_tile_map2_d.html#aeffe59892b8a40dc8cbf9f2ebd5a201f">GetNumLayers()</a> returns the number of layers contained in the tmx file. <a class="el" href="class_urho3_d_1_1_tile_map_layer2_d.html#a764820e1ae1b9e7080a927877f111759">GetLayerType()</a> returns the type of layer (Tile, <a class="el" href="class_urho3_d_1_1_object.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a> or <a class="el" href="class_urho3_d_1_1_image.html" title="Image resource.">Image</a>).</p>
+<p>A layer is characterized by its:</p>
+<ul>
+<li>name: currently not accessible</li>
+<li>width and height expressed as a number of tiles: use <a class="el" href="class_urho3_d_1_1_tile_map_layer2_d.html#a6b6df8853382ca9ed5dfb9e67720caa6">GetWidth()</a> and <a class="el" href="class_urho3_d_1_1_tile_map_layer2_d.html#ad5262ef97dcb99ccfff442d1785543e2">GetHeight()</a> to access these values</li>
+</ul>
+<p>Layer visibility can be toggled using <a class="el" href="class_urho3_d_1_1_tile_map_layer2_d.html#aa53a92674aca3d23e9927f7909bbd62c">SetVisible()</a> (and visibility state can be accessed with <a class="el" href="class_urho3_d_1_1_tile_map_layer2_d.html#a22047ff3b2f95699cd8bf6b364fefd77">IsVisible()</a>)</p>
+<h2><a class="anchor" id="Urho2D_TMX_Objects"></a>
+Tile Map Objects</h2>
+<p>Tiled <a class="el" href="class_urho3_d_1_1_tile_map_object2_d.html">objects</a> are wire shapes (Rectangle, Ellipse, Polygon, Polyline) and sprites (Tile) that are freely positionable in the tile map.</p>
+<p>Accessing Tiled objects : from a <a class="el" href="class_urho3_d_1_1_tile_map_layer2_d.html">TileMapLayer2D layer</a>, objects are accessed by their index using <a class="el" href="class_urho3_d_1_1_tile_map_layer2_d.html#a77239d3a0643f29bc867e492ba6258e7">GetObject()</a>. <a class="el" href="class_urho3_d_1_1_tile_map_layer2_d.html#ad7f43474c163c1bd143475cb97181239">GetNumObjects()</a> returns the number of objects contained in the object layer (tile and image layers will return 0 as they don't hold objects).</p>
+<p>Use <a class="el" href="class_urho3_d_1_1_tile_map_object2_d.html#a3fe992a8d190440d1096c399cb1a24a6">GetObjectType()</a> to get the nature (TileMapObjectType2D) of the selected object.</p>
+<p>Objects' properties (Name and Type) can be accessed using respectively <a class="el" href="class_urho3_d_1_1_tile_map_object2_d.html#a26b5b04372f28dc91ecead76a420d375">GetName()</a> and <a class="el" href="class_urho3_d_1_1_tile_map_object2_d.html#ae4dafdfcfb8ccd93bbdb749ea0706282">GetType()</a>. Type can be useful to flag categories of objects in Tiled.</p>
+<p>Except Tile, object layers are not visible. They can be used:</p>
+<ul>
+<li>to easily design polygon sprites and Box2D shapes using the object's vertices: use <a class="el" href="class_urho3_d_1_1_tile_map_object2_d.html#a31e989a5a9d40c7fe9ad2053268d9c7e">GetNumPoints()</a> to get the number of vertices and <a class="el" href="class_urho3_d_1_1_tile_map_object2_d.html#a3877905cda01484e2cf7e5254ca238ce">GetPoint()</a> to iterate through the vertices</li>
+<li>as placeholders to easily set the position and size of entities in the world, using <a class="el" href="class_urho3_d_1_1_tile_map_object2_d.html#a62763ee399452d4032b7ec07007de3f4">GetPosition()</a> and <a class="el" href="class_urho3_d_1_1_tile_map_object2_d.html#a5cc497a36634b879ecf7b02affd04127">GetSize()</a></li>
+<li>to display Tile objects as sprites</li>
+<li>to create a background from Tile sprites</li>
+<li>...</li>
+</ul>
+<p>Additionaly <a class="el" href="class_urho3_d_1_1_sprite2_d.html">Sprite2D</a> resource from a Tile object is retrieved using <a class="el" href="class_urho3_d_1_1_tile_map_object2_d.html#ade92e8e70b96b39d6af3300fc345214f">GetTileSprite()</a></p>
+<p>If need be you can access the grid id (relative to the tilesets used) of a Tile object using <a class="el" href="class_urho3_d_1_1_tile_map_object2_d.html#a7cdbd089451f500a838bfa93ca07efca">GetTileGid()</a>. </p>
 </div></div><!-- contents -->
