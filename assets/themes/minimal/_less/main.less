@@ -130,12 +130,12 @@ footer {
   position: fixed;
   bottom: @body-padding;
 
-  p {
-    margin-bottom: (@line-height-computed / 2);
+  .feed {
+    float: left !important;
   }
 
-  small p {
-    margin-bottom: 0;
+  .info {
+    margin: (@line-height-computed / 2) 0;
   }
 }
 
@@ -152,6 +152,10 @@ footer {
     float: none;
     position: static;
     width: auto;
+
+    .feed {
+      float: right !important;
+    }
   }
 }
 
@@ -179,7 +183,11 @@ footer {
       display: inline;
     }
   }
-  
+
+  footer .feed {
+    float: right !important;
+  }
+
   main {
     border: 1px solid @pre-border-color;
     border-width: 1px 0;
@@ -216,6 +224,12 @@ footer {
     .tagline {
       margin-bottom: 0;
     }
+  }
+}
+
+@media print, screen and (max-width: 349px) {
+  footer .feed {
+    float: left !important;
   }
 }
 
