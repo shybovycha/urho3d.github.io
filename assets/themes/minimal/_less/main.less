@@ -130,13 +130,12 @@ footer {
   position: fixed;
   bottom: @body-padding;
 
-  .feed {
-    padding-top: (@line-height-computed / 4);
-    float: left !important;
-  }
-
   .info {
     margin: (@line-height-computed / 2) 0;
+  }
+
+  .build-status div {
+    margin-bottom: (@line-height-computed / 4);
   }
 }
 
@@ -153,10 +152,6 @@ footer {
     float: none;
     position: static;
     width: auto;
-
-    .feed {
-      float: right !important;
-    }
   }
 }
 
@@ -183,10 +178,6 @@ footer {
     a small {
       display: inline;
     }
-  }
-
-  footer .feed {
-    float: right !important;
   }
 
   main {
@@ -225,12 +216,6 @@ footer {
     .tagline {
       margin-bottom: 0;
     }
-  }
-}
-
-@media print, screen and (max-width: 349px) {
-  footer .feed {
-    float: left !important;
   }
 }
 
