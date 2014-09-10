@@ -40,7 +40,7 @@ desc "Compile all less files for main, doxygen, or all (default)"
 task :lessc do
   option = ARGV.last
   if option == 'lessc'
-    option == 'all'
+    option = 'all'
   end
   task option.to_sym do ; end   # No-op hack
   if option == 'main' || option == 'all'
