@@ -103,6 +103,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_engine.html#a2eb82b1d81e9232103d22bbefad8c7a3">SetAutoExit</a> (bool enable)</td></tr>
 <tr class="memdesc:a2eb82b1d81e9232103d22bbefad8c7a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether to exit automatically on exit request (window close button.) <br/></td></tr>
 <tr class="separator:a2eb82b1d81e9232103d22bbefad8c7a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abae24afa5bbfe8775213189ca79f4938"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abae24afa5bbfe8775213189ca79f4938"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_engine.html#abae24afa5bbfe8775213189ca79f4938">SetNextTimeStep</a> (float seconds)</td></tr>
+<tr class="memdesc:abae24afa5bbfe8775213189ca79f4938"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override timestep of the next frame. Should be called in between <a class="el" href="class_urho3_d_1_1_engine.html#a7670e665e72f4efd8426ba7a9559d3b0" title="Run one frame.">RunFrame()</a> calls. <br/></td></tr>
+<tr class="separator:abae24afa5bbfe8775213189ca79f4938"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afeccd853454e5deee375a3570f7bc4b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afeccd853454e5deee375a3570f7bc4b2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_engine.html#afeccd853454e5deee375a3570f7bc4b2">Exit</a> ()</td></tr>
 <tr class="memdesc:afeccd853454e5deee375a3570f7bc4b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close the graphics window and set the exit flag. No-op on iOS, as an iOS application can not legally exit. <br/></td></tr>
@@ -119,6 +123,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_engine.html#a8ca89c7621c8c24944c58ed0ae198d69">DumpMemory</a> ()</td></tr>
 <tr class="memdesc:a8ca89c7621c8c24944c58ed0ae198d69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump information of all memory allocations to the log. Supported in MSVC debug mode only. <br/></td></tr>
 <tr class="separator:a8ca89c7621c8c24944c58ed0ae198d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7249bf8aafb473e6425f0d19f9d52ab2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7249bf8aafb473e6425f0d19f9d52ab2"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_engine.html#a7249bf8aafb473e6425f0d19f9d52ab2">GetNextTimeStep</a> () const </td></tr>
+<tr class="memdesc:a7249bf8aafb473e6425f0d19f9d52ab2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get timestep of the next frame. Updated by <a class="el" href="class_urho3_d_1_1_engine.html#a66664ffe053548c6bfd0d096809f039d" title="Get the timestep for the next frame and sleep for frame limiting if necessary.">ApplyFrameLimit()</a>. <br/></td></tr>
+<tr class="separator:a7249bf8aafb473e6425f0d19f9d52ab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f585670f095bb6584676c26f74182ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f585670f095bb6584676c26f74182ea"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_engine.html#a5f585670f095bb6584676c26f74182ea">GetMinFps</a> () const </td></tr>
 <tr class="memdesc:a5f585670f095bb6584676c26f74182ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the minimum frames per second. <br/></td></tr>
