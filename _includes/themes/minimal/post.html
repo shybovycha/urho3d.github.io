@@ -17,7 +17,7 @@
   {% if post.layout == 'post' %}
   <div class="comments-count">
     <div class="pull-right">
-      <a href="{{ BASE_PATH}}{{ post.url }}#comments_disqus_thread"><i class="fa fa-comment-o"></i>&nbsp;</a>{% if site.safe %}<a href="{{ BASE_PATH}}{{ post.url }}#disqus_thread"></a>{% endif %}
+      <a href="{{ BASE_PATH}}{{ post.url }}#comments_disqus_thread"><i class="fa fa-comment-o"></i>&nbsp;</a>{% if site.safe %}<a href="{{ BASE_PATH}}{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.id }}"></a>{% endif %}
     </div>
   </div>
   {% endif %}
