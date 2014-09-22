@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ site.title }} - {{ page.title }}</title>
+    <title>{{ site.title }} - {% if page.path == 'index.html' %}{{ site.tagline }}{% else %}{{ page.title }}{% endif %}</title>
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
 
     <!-- Enable responsive viewport -->
