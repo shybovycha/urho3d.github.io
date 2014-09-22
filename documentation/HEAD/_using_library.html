@@ -72,7 +72,7 @@ From Urho3D project root tree</h2>
 <div class="line">file (GLOB H_FILES *.h)</div>
 <div class="line"><span class="keyword">set</span> (SOURCE_FILES ${CPP_FILES} ${H_FILES})</div>
 </div><!-- fragment --><p>The setup_main_executable() macro then uses SOURCE_FILES and TARGET_NAME variables to setup a new CMake target that would work on ALL platforms supported by Urho3D. Make sure both your project name and target name are not called 'Urho3D', as this name is already reserved by Urho3D project.</p>
-<h2><a class="anchor" id="UsingLibraryFromSDK"></a>
+<h2><a class="anchor" id="FromSDK"></a>
 From Urho3D SDK installation</h2>
 <p>This section assumes that you have already installed Urho3D SDK into your system. If you have installed the SDK in a non-default location then you need to use "CMAKE_PREFIX_PATH" environment variable to specify the prefix path of the non-default installation location.</p>
 <p>In your own project Source/ directory, create a new CMakeLists.txt file similar to the first approach but change the CMake module search path setup to read as follows on Windows platform:</p>
@@ -81,7 +81,7 @@ From Urho3D SDK installation</h2>
 </div><!-- fragment --><p>On non-Windows platform:</p>
 <div class="fragment"><div class="line"><span class="preprocessor"># Set CMake modules search path</span></div>
 <div class="line"><span class="preprocessor">set (CMAKE_MODULE_PATH $ENV{CMAKE_PREFIX_PATH}/share/Urho3D/CMake/Modules CACHE PATH &quot;Path to Urho3D-specific CMake modules&quot;)</span></div>
-</div><!-- fragment --><h3><a class="anchor" id="UsingLibraryFromSDKWithPkgConfig"></a>
+</div><!-- fragment --><h3><a class="anchor" id="FromSDKWithPkgConfig"></a>
 Using pkg-config instead of CMake</h3>
 <p>If for some reason you could not use CMake in your project, you could configure your project to compile and link against Urho3D library from SDK installation using 'pkg-config' tool with the help of Urho3D.pc configuration file (which is installed as part of the SDK installation). If the Urho3D SDK is being installed into a local location (such as /usr/local) or a non-default location, then most likely you would need to specify PKG_CONFIG_PATH environment variable to point to the location of the configuration file for this to work. Below are a few invocation examples on a 64-bit RedHat-based distro with local installation:</p>
 <div class="fragment"><div class="line"><span class="preprocessor"># To get installed Urho3D version</span></div>
