@@ -3065,7 +3065,9 @@ Classes</h2>
 <li>void Scale(const Vector3&amp; scale)</li>
 <li>void Scale2D(const Vector2&amp; scale)</li>
 <li>void SetEnabled(bool enable)</li>
-<li>void SetEnabled(bool enable, bool recursive)</li>
+<li>void SetDeepEnabled(bool enable)</li>
+<li>void ResetDeepEnabled()</li>
+<li>void SetEnabledRecursive(bool enable)</li>
 <li>void SetOwner(Connection* owner)</li>
 <li>void MarkDirty()</li>
 <li>Node* CreateChild(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> name = <a class="el" href="class_urho3_d_1_1_string.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>, CreateMode mode = REPLICATED, unsigned id = 0)</li>
@@ -3097,6 +3099,7 @@ Classes</h2>
 <li>Node* GetParent() const</li>
 <li>Scene* GetScene() const</li>
 <li>bool IsEnabled() const</li>
+<li>bool IsEnabledSelf() const</li>
 <li>Connection* GetOwner() const</li>
 <li>const <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>&amp; GetPosition() const</li>
 <li><a class="el" href="class_urho3_d_1_1_vector2.html" title="Two-dimensional vector.">Vector2</a> GetPosition2D() const</li>
@@ -3152,6 +3155,7 @@ Classes</h2>
 <li>Node* parent</li>
 <li>Scene* scene</li>
 <li>bool enabled</li>
+<li>bool enabledSelf (readonly)</li>
 <li>Connection* owner</li>
 <li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>&amp; position</li>
 <li><a class="el" href="class_urho3_d_1_1_vector2.html" title="Two-dimensional vector.">Vector2</a> position2D</li>
@@ -5402,6 +5406,9 @@ Classes</h2>
 <li>void SetSortChildren(bool enable)</li>
 <li>void SetUseDerivedOpacity(bool enable)</li>
 <li>void SetEnabled(bool enable)</li>
+<li>void SetDeepEnabled(bool enable)</li>
+<li>void ResetDeepEnabled()</li>
+<li>void SetEnabledRecursive(bool enable)</li>
 <li>void SetEditable(bool enable)</li>
 <li>void SetFocus(bool enable)</li>
 <li>void SetSelected(bool enable)</li>
@@ -5465,6 +5472,7 @@ Classes</h2>
 <li>bool GetUseDerivedOpacity() const</li>
 <li>bool HasFocus() const</li>
 <li>bool IsEnabled() const</li>
+<li>bool IsEnabledSelf() const</li>
 <li>bool IsEditable() const</li>
 <li>bool IsSelected() const</li>
 <li>bool IsVisible() const</li>
@@ -5535,6 +5543,7 @@ Classes</h2>
 <li>bool useDerivedOpacity</li>
 <li>bool focus</li>
 <li>bool enabled</li>
+<li>bool enabledSelf (readonly)</li>
 <li>bool editable</li>
 <li>bool selected</li>
 <li>bool visible</li>

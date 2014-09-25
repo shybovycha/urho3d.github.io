@@ -289,10 +289,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_node.html#aebf77521a93e12e059ce1bb953af5c4f">SetEnabled</a> (bool enable)</td></tr>
 <tr class="memdesc:aebf77521a93e12e059ce1bb953af5c4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set enabled/disabled state without recursion. Components in a disabled node become effectively disabled regardless of their own enable/disable state. <br/></td></tr>
 <tr class="separator:aebf77521a93e12e059ce1bb953af5c4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13ab21aabbf96e20aac91d107c816a4e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a13ab21aabbf96e20aac91d107c816a4e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_node.html#a13ab21aabbf96e20aac91d107c816a4e">SetEnabled</a> (bool enable, bool recursive)</td></tr>
-<tr class="memdesc:a13ab21aabbf96e20aac91d107c816a4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set enabled/disabled state with optional recursion. <br/></td></tr>
-<tr class="separator:a13ab21aabbf96e20aac91d107c816a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1f42604d1e98496753c1e602837c2e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1f42604d1e98496753c1e602837c2e1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_node.html#af1f42604d1e98496753c1e602837c2e1">SetDeepEnabled</a> (bool enable)</td></tr>
+<tr class="memdesc:af1f42604d1e98496753c1e602837c2e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set enabled state on self and child nodes. Nodes' own enabled state is remembered (IsEnabledSelf) and can be restored. <br/></td></tr>
+<tr class="separator:af1f42604d1e98496753c1e602837c2e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acea4b5e5a8f1f46d78c32afee01fd8d4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acea4b5e5a8f1f46d78c32afee01fd8d4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_node.html#acea4b5e5a8f1f46d78c32afee01fd8d4">ResetDeepEnabled</a> ()</td></tr>
+<tr class="memdesc:acea4b5e5a8f1f46d78c32afee01fd8d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset enabled state to the node's remembered state prior to calling SetDeepEnabled. <br/></td></tr>
+<tr class="separator:acea4b5e5a8f1f46d78c32afee01fd8d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3076ab3fed8d3a873149e1a380f79ad0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3076ab3fed8d3a873149e1a380f79ad0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_node.html#a3076ab3fed8d3a873149e1a380f79ad0">SetEnabledRecursive</a> (bool enable)</td></tr>
+<tr class="memdesc:a3076ab3fed8d3a873149e1a380f79ad0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set enabled state on self and child nodes. Unlike SetDeepEnabled this does not remember the nodes' own enabled state, but overwrites it. <br/></td></tr>
+<tr class="separator:a3076ab3fed8d3a873149e1a380f79ad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46a82aa6e1c19b4c0cb532fb38b6b4c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46a82aa6e1c19b4c0cb532fb38b6b4c1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_node.html#a46a82aa6e1c19b4c0cb532fb38b6b4c1">SetOwner</a> (<a class="el" href="class_urho3_d_1_1_connection.html">Connection</a> *owner)</td></tr>
 <tr class="memdesc:a46a82aa6e1c19b4c0cb532fb38b6b4c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set owner connection for networking. <br/></td></tr>
@@ -416,6 +424,10 @@ const <a class="el" href="class_urho3_d_1_1_string.html">String</a> &amp;&#160;<
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_node.html#a8becd372b2db8397831009114dee147f">IsEnabled</a> () const </td></tr>
 <tr class="memdesc:a8becd372b2db8397831009114dee147f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether is enabled. Disables nodes effectively disable all their components. <br/></td></tr>
 <tr class="separator:a8becd372b2db8397831009114dee147f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49313358962002a75fedbf64effe6c3b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a49313358962002a75fedbf64effe6c3b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_node.html#a49313358962002a75fedbf64effe6c3b">IsEnabledSelf</a> () const </td></tr>
+<tr class="memdesc:a49313358962002a75fedbf64effe6c3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the node's last own enabled state. May be different than the value returned by IsEnabled when SetDeepEnabled has been used. <br/></td></tr>
+<tr class="separator:a49313358962002a75fedbf64effe6c3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec36ac3dcd80ab9dba2d2eb221be7706"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec36ac3dcd80ab9dba2d2eb221be7706"></a>
 <a class="el" href="class_urho3_d_1_1_connection.html">Connection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_node.html#aec36ac3dcd80ab9dba2d2eb221be7706">GetOwner</a> () const </td></tr>
 <tr class="memdesc:aec36ac3dcd80ab9dba2d2eb221be7706"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return owner connection in networking. <br/></td></tr>
@@ -1102,6 +1114,10 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:afb8206af1fc2e80f1dc534d0c19add65"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb8206af1fc2e80f1dc534d0c19add65"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>BASEOBJECT</b> (<a class="el" href="class_urho3_d_1_1_node.html">Node</a>)</td></tr>
 <tr class="separator:afb8206af1fc2e80f1dc534d0c19add65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34e18d709fe99b03eaa56bc1ef202059"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34e18d709fe99b03eaa56bc1ef202059"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_node.html#a34e18d709fe99b03eaa56bc1ef202059">SetEnabled</a> (bool enable, bool recursive, bool storeSelf)</td></tr>
+<tr class="memdesc:a34e18d709fe99b03eaa56bc1ef202059"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set enabled/disabled state with optional recursion. Optionally affect the remembered enable state. <br/></td></tr>
+<tr class="separator:a34e18d709fe99b03eaa56bc1ef202059"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d5ace493b64e225e28101f4f8c697ee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d5ace493b64e225e28101f4f8c697ee"></a>
 <a class="el" href="class_urho3_d_1_1_component.html">Component</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_node.html#a7d5ace493b64e225e28101f4f8c697ee">SafeCreateComponent</a> (const <a class="el" href="class_urho3_d_1_1_string.html">String</a> &amp;typeName, <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> type, CreateMode mode, unsigned id)</td></tr>
 <tr class="memdesc:a7d5ace493b64e225e28101f4f8c697ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create component, allowing <a class="el" href="class_urho3_d_1_1_unknown_component.html" title="Placeholder for allowing unregistered components to be loaded &amp; saved along with scenes.">UnknownComponent</a> if actual type is not supported. Leave typeName empty if not known. <br/></td></tr>
@@ -1153,6 +1169,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_node.html#ae802bfbedf79542dbea10337ee06ac0d">enabled_</a></td></tr>
 <tr class="memdesc:ae802bfbedf79542dbea10337ee06ac0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enabled flag. <br/></td></tr>
 <tr class="separator:ae802bfbedf79542dbea10337ee06ac0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad028f9bc4a61317a022e3add608df298"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad028f9bc4a61317a022e3add608df298"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_node.html#ad028f9bc4a61317a022e3add608df298">enabledPrev_</a></td></tr>
+<tr class="memdesc:ad028f9bc4a61317a022e3add608df298"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last SetEnabled flag before any SetDeepEnabled. <br/></td></tr>
+<tr class="separator:ad028f9bc4a61317a022e3add608df298"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97b348aea2db8aa3635fb58b8a21fafd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97b348aea2db8aa3635fb58b8a21fafd"></a>
 <a class="el" href="class_urho3_d_1_1_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_node.html#a97b348aea2db8aa3635fb58b8a21fafd">parent_</a></td></tr>
 <tr class="memdesc:a97b348aea2db8aa3635fb58b8a21fafd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parent scene node. <br/></td></tr>

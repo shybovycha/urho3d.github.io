@@ -617,6 +617,7 @@ Classes</h2>
 <li>void RemoveChild(<a class="el" href="class_urho3_d_1_1_u_i_element.html" title="Base class for UI elements.">UIElement</a>@, uint = 0)</li>
 <li>void RemoveChild(uint)</li>
 <li>void RemoveInstanceDefault()</li>
+<li>void ResetDeepEnabled()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
 <li>bool Save(VectorBuffer&amp;) const</li>
@@ -630,6 +631,8 @@ Classes</h2>
 <li>void SetAttributeAnimation(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, <a class="el" href="class_urho3_d_1_1_value_animation.html" title="Value animation class.">ValueAnimation</a>@, WrapMode = WM_LOOP, float = 1.0f)</li>
 <li>void SetAttributeAnimationSpeed(const String&amp;, float)</li>
 <li>void SetAttributeAnimationWrapMode(const String&amp;, WrapMode)</li>
+<li>void SetDeepEnabled(bool)</li>
+<li>void SetEnabledRecursive(bool)</li>
 <li>void SetFixedHeight(int)</li>
 <li>void SetFixedSize(int, int)</li>
 <li>void SetFixedWidth(int)</li>
@@ -673,6 +676,7 @@ Classes</h2>
 <li>bool editable</li>
 <li>bool elementEventSender</li>
 <li>bool enabled</li>
+<li>bool enabledSelf // readonly</li>
 <li>bool fixedHeight // readonly</li>
 <li>bool fixedSize // readonly</li>
 <li>bool fixedWidth // readonly</li>
@@ -803,6 +807,7 @@ Classes</h2>
 <li>void RemoveChild(<a class="el" href="class_urho3_d_1_1_u_i_element.html" title="Base class for UI elements.">UIElement</a>@, uint = 0)</li>
 <li>void RemoveChild(uint)</li>
 <li>void RemoveInstanceDefault()</li>
+<li>void ResetDeepEnabled()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
 <li>bool Save(VectorBuffer&amp;) const</li>
@@ -816,6 +821,8 @@ Classes</h2>
 <li>void SetAttributeAnimation(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, <a class="el" href="class_urho3_d_1_1_value_animation.html" title="Value animation class.">ValueAnimation</a>@, WrapMode = WM_LOOP, float = 1.0f)</li>
 <li>void SetAttributeAnimationSpeed(const String&amp;, float)</li>
 <li>void SetAttributeAnimationWrapMode(const String&amp;, WrapMode)</li>
+<li>void SetDeepEnabled(bool)</li>
+<li>void SetEnabledRecursive(bool)</li>
 <li>void SetFixedHeight(int)</li>
 <li>void SetFixedSize(int, int)</li>
 <li>void SetFixedWidth(int)</li>
@@ -862,6 +869,7 @@ Classes</h2>
 <li>bool editable</li>
 <li>bool elementEventSender</li>
 <li>bool enabled</li>
+<li>bool enabledSelf // readonly</li>
 <li>bool fixedHeight // readonly</li>
 <li>bool fixedSize // readonly</li>
 <li>bool fixedWidth // readonly</li>
@@ -1048,6 +1056,7 @@ Classes</h2>
 <li>void RemoveChild(<a class="el" href="class_urho3_d_1_1_u_i_element.html" title="Base class for UI elements.">UIElement</a>@, uint = 0)</li>
 <li>void RemoveChild(uint)</li>
 <li>void RemoveInstanceDefault()</li>
+<li>void ResetDeepEnabled()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
 <li>bool Save(VectorBuffer&amp;) const</li>
@@ -1062,6 +1071,8 @@ Classes</h2>
 <li>void SetAttributeAnimationSpeed(const String&amp;, float)</li>
 <li>void SetAttributeAnimationWrapMode(const String&amp;, WrapMode)</li>
 <li>void SetCheckedOffset(int, int)</li>
+<li>void SetDeepEnabled(bool)</li>
+<li>void SetEnabledRecursive(bool)</li>
 <li>void SetFixedHeight(int)</li>
 <li>void SetFixedSize(int, int)</li>
 <li>void SetFixedWidth(int)</li>
@@ -1107,6 +1118,7 @@ Classes</h2>
 <li>bool editable</li>
 <li>bool elementEventSender</li>
 <li>bool enabled</li>
+<li>bool enabledSelf // readonly</li>
 <li>bool fixedHeight // readonly</li>
 <li>bool fixedSize // readonly</li>
 <li>bool fixedWidth // readonly</li>
@@ -2520,6 +2532,7 @@ Classes</h2>
 <li>void RemoveChild(<a class="el" href="class_urho3_d_1_1_u_i_element.html" title="Base class for UI elements.">UIElement</a>@, uint = 0)</li>
 <li>void RemoveChild(uint)</li>
 <li>void RemoveInstanceDefault()</li>
+<li>void ResetDeepEnabled()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
 <li>bool Save(VectorBuffer&amp;) const</li>
@@ -2533,6 +2546,8 @@ Classes</h2>
 <li>void SetAttributeAnimation(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, <a class="el" href="class_urho3_d_1_1_value_animation.html" title="Value animation class.">ValueAnimation</a>@, WrapMode = WM_LOOP, float = 1.0f)</li>
 <li>void SetAttributeAnimationSpeed(const String&amp;, float)</li>
 <li>void SetAttributeAnimationWrapMode(const String&amp;, WrapMode)</li>
+<li>void SetDeepEnabled(bool)</li>
+<li>void SetEnabledRecursive(bool)</li>
 <li>void SetFixedHeight(int)</li>
 <li>void SetFixedSize(int, int)</li>
 <li>void SetFixedWidth(int)</li>
@@ -2576,6 +2591,7 @@ Classes</h2>
 <li>bool editable</li>
 <li>bool elementEventSender</li>
 <li>bool enabled</li>
+<li>bool enabledSelf // readonly</li>
 <li>bool fixedHeight // readonly</li>
 <li>bool fixedSize // readonly</li>
 <li>bool fixedWidth // readonly</li>
@@ -3117,6 +3133,7 @@ Classes</h2>
 <li>void RemoveInstanceDefault()</li>
 <li>void RemoveItem(<a class="el" href="class_urho3_d_1_1_u_i_element.html" title="Base class for UI elements.">UIElement</a>@)</li>
 <li>void RemoveItem(uint)</li>
+<li>void ResetDeepEnabled()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
 <li>bool Save(VectorBuffer&amp;) const</li>
@@ -3131,6 +3148,8 @@ Classes</h2>
 <li>void SetAttributeAnimation(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, <a class="el" href="class_urho3_d_1_1_value_animation.html" title="Value animation class.">ValueAnimation</a>@, WrapMode = WM_LOOP, float = 1.0f)</li>
 <li>void SetAttributeAnimationSpeed(const String&amp;, float)</li>
 <li>void SetAttributeAnimationWrapMode(const String&amp;, WrapMode)</li>
+<li>void SetDeepEnabled(bool)</li>
+<li>void SetEnabledRecursive(bool)</li>
 <li>void SetFixedHeight(int)</li>
 <li>void SetFixedSize(int, int)</li>
 <li>void SetFixedWidth(int)</li>
@@ -3180,6 +3199,7 @@ Classes</h2>
 <li>bool editable</li>
 <li>bool elementEventSender</li>
 <li>bool enabled</li>
+<li>bool enabledSelf // readonly</li>
 <li>bool fixedHeight // readonly</li>
 <li>bool fixedSize // readonly</li>
 <li>bool fixedWidth // readonly</li>
@@ -3993,6 +4013,7 @@ Classes</h2>
 <li>void RemoveChild(<a class="el" href="class_urho3_d_1_1_u_i_element.html" title="Base class for UI elements.">UIElement</a>@, uint = 0)</li>
 <li>void RemoveChild(uint)</li>
 <li>void RemoveInstanceDefault()</li>
+<li>void ResetDeepEnabled()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
 <li>bool Save(VectorBuffer&amp;) const</li>
@@ -4006,6 +4027,8 @@ Classes</h2>
 <li>void SetAttributeAnimation(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, <a class="el" href="class_urho3_d_1_1_value_animation.html" title="Value animation class.">ValueAnimation</a>@, WrapMode = WM_LOOP, float = 1.0f)</li>
 <li>void SetAttributeAnimationSpeed(const String&amp;, float)</li>
 <li>void SetAttributeAnimationWrapMode(const String&amp;, WrapMode)</li>
+<li>void SetDeepEnabled(bool)</li>
+<li>void SetEnabledRecursive(bool)</li>
 <li>void SetFixedHeight(int)</li>
 <li>void SetFixedSize(int, int)</li>
 <li>void SetFixedWidth(int)</li>
@@ -4054,6 +4077,7 @@ Classes</h2>
 <li>bool editable</li>
 <li>bool elementEventSender</li>
 <li>bool enabled</li>
+<li>bool enabledSelf // readonly</li>
 <li>bool fixedHeight // readonly</li>
 <li>bool fixedSize // readonly</li>
 <li>bool fixedWidth // readonly</li>
@@ -4167,6 +4191,7 @@ Classes</h2>
 <li>void RemoveItem(<a class="el" href="class_urho3_d_1_1_u_i_element.html" title="Base class for UI elements.">UIElement</a>@, uint = 0)</li>
 <li>void RemoveItem(uint)</li>
 <li>void RemoveSelection(uint)</li>
+<li>void ResetDeepEnabled()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
 <li>bool Save(VectorBuffer&amp;) const</li>
@@ -4180,6 +4205,8 @@ Classes</h2>
 <li>void SetAttributeAnimation(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, <a class="el" href="class_urho3_d_1_1_value_animation.html" title="Value animation class.">ValueAnimation</a>@, WrapMode = WM_LOOP, float = 1.0f)</li>
 <li>void SetAttributeAnimationSpeed(const String&amp;, float)</li>
 <li>void SetAttributeAnimationWrapMode(const String&amp;, WrapMode)</li>
+<li>void SetDeepEnabled(bool)</li>
+<li>void SetEnabledRecursive(bool)</li>
 <li>void SetFixedHeight(int)</li>
 <li>void SetFixedSize(int, int)</li>
 <li>void SetFixedWidth(int)</li>
@@ -4227,6 +4254,7 @@ Classes</h2>
 <li>bool editable</li>
 <li>bool elementEventSender</li>
 <li>bool enabled</li>
+<li>bool enabledSelf // readonly</li>
 <li>bool fixedHeight // readonly</li>
 <li>bool fixedSize // readonly</li>
 <li>bool fixedWidth // readonly</li>
@@ -4503,6 +4531,7 @@ Classes</h2>
 <li>void RemoveChild(<a class="el" href="class_urho3_d_1_1_u_i_element.html" title="Base class for UI elements.">UIElement</a>@, uint = 0)</li>
 <li>void RemoveChild(uint)</li>
 <li>void RemoveInstanceDefault()</li>
+<li>void ResetDeepEnabled()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
 <li>bool Save(VectorBuffer&amp;) const</li>
@@ -4517,6 +4546,8 @@ Classes</h2>
 <li>void SetAttributeAnimation(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, <a class="el" href="class_urho3_d_1_1_value_animation.html" title="Value animation class.">ValueAnimation</a>@, WrapMode = WM_LOOP, float = 1.0f)</li>
 <li>void SetAttributeAnimationSpeed(const String&amp;, float)</li>
 <li>void SetAttributeAnimationWrapMode(const String&amp;, WrapMode)</li>
+<li>void SetDeepEnabled(bool)</li>
+<li>void SetEnabledRecursive(bool)</li>
 <li>void SetFixedHeight(int)</li>
 <li>void SetFixedSize(int, int)</li>
 <li>void SetFixedWidth(int)</li>
@@ -4566,6 +4597,7 @@ Classes</h2>
 <li>bool editable</li>
 <li>bool elementEventSender</li>
 <li>bool enabled</li>
+<li>bool enabledSelf // readonly</li>
 <li>bool fixedHeight // readonly</li>
 <li>bool fixedSize // readonly</li>
 <li>bool fixedWidth // readonly</li>
@@ -4928,6 +4960,7 @@ Classes</h2>
 <li>void RemoveComponent(const String&amp;)</li>
 <li>void RemoveComponents(bool, bool)</li>
 <li>void RemoveInstanceDefault()</li>
+<li>void ResetDeepEnabled()</li>
 <li>void ResetToDefault()</li>
 <li>void Roll(float, TransformSpace = TS_LOCAL)</li>
 <li>void Rotate(const <a class="el" href="class_urho3_d_1_1_quaternion.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp;, TransformSpace = TS_LOCAL)</li>
@@ -4947,7 +4980,8 @@ Classes</h2>
 <li>void SetAttributeAnimation(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, <a class="el" href="class_urho3_d_1_1_value_animation.html" title="Value animation class.">ValueAnimation</a>@, WrapMode = WM_LOOP, float = 1.0f)</li>
 <li>void SetAttributeAnimationSpeed(const String&amp;, float)</li>
 <li>void SetAttributeAnimationWrapMode(const String&amp;, WrapMode)</li>
-<li>void SetEnabled(bool, bool)</li>
+<li>void SetDeepEnabled(bool)</li>
+<li>void SetEnabledRecursive(bool)</li>
 <li>void SetPosition2D(float, float)</li>
 <li>void SetScale(float)</li>
 <li>void SetScale2D(float, float)</li>
@@ -4982,6 +5016,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a>@[] components // readonly</li>
 <li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> direction</li>
 <li>bool enabled</li>
+<li>bool enabledSelf // readonly</li>
 <li>uint id // readonly</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> name</li>
 <li>uint numAllChildren // readonly</li>
@@ -6442,6 +6477,7 @@ Classes</h2>
 <li>void RemoveChild(<a class="el" href="class_urho3_d_1_1_u_i_element.html" title="Base class for UI elements.">UIElement</a>@, uint = 0)</li>
 <li>void RemoveChild(uint)</li>
 <li>void RemoveInstanceDefault()</li>
+<li>void ResetDeepEnabled()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
 <li>bool Save(VectorBuffer&amp;) const</li>
@@ -6455,6 +6491,8 @@ Classes</h2>
 <li>void SetAttributeAnimation(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, <a class="el" href="class_urho3_d_1_1_value_animation.html" title="Value animation class.">ValueAnimation</a>@, WrapMode = WM_LOOP, float = 1.0f)</li>
 <li>void SetAttributeAnimationSpeed(const String&amp;, float)</li>
 <li>void SetAttributeAnimationWrapMode(const String&amp;, WrapMode)</li>
+<li>void SetDeepEnabled(bool)</li>
+<li>void SetEnabledRecursive(bool)</li>
 <li>void SetFixedHeight(int)</li>
 <li>void SetFixedSize(int, int)</li>
 <li>void SetFixedWidth(int)</li>
@@ -6498,6 +6536,7 @@ Classes</h2>
 <li>float effectiveScrollStep // readonly</li>
 <li>bool elementEventSender</li>
 <li>bool enabled</li>
+<li>bool enabledSelf // readonly</li>
 <li>bool fixedHeight // readonly</li>
 <li>bool fixedSize // readonly</li>
 <li>bool fixedWidth // readonly</li>
@@ -6593,6 +6632,7 @@ Classes</h2>
 <li>void RemoveChild(<a class="el" href="class_urho3_d_1_1_u_i_element.html" title="Base class for UI elements.">UIElement</a>@, uint = 0)</li>
 <li>void RemoveChild(uint)</li>
 <li>void RemoveInstanceDefault()</li>
+<li>void ResetDeepEnabled()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
 <li>bool Save(VectorBuffer&amp;) const</li>
@@ -6606,6 +6646,8 @@ Classes</h2>
 <li>void SetAttributeAnimation(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, <a class="el" href="class_urho3_d_1_1_value_animation.html" title="Value animation class.">ValueAnimation</a>@, WrapMode = WM_LOOP, float = 1.0f)</li>
 <li>void SetAttributeAnimationSpeed(const String&amp;, float)</li>
 <li>void SetAttributeAnimationWrapMode(const String&amp;, WrapMode)</li>
+<li>void SetDeepEnabled(bool)</li>
+<li>void SetEnabledRecursive(bool)</li>
 <li>void SetFixedHeight(int)</li>
 <li>void SetFixedSize(int, int)</li>
 <li>void SetFixedWidth(int)</li>
@@ -6648,6 +6690,7 @@ Classes</h2>
 <li>bool editable</li>
 <li>bool elementEventSender</li>
 <li>bool enabled</li>
+<li>bool enabledSelf // readonly</li>
 <li>bool fixedHeight // readonly</li>
 <li>bool fixedSize // readonly</li>
 <li>bool fixedWidth // readonly</li>
@@ -6895,6 +6938,7 @@ Classes</h2>
 <li>void RemoveChild(<a class="el" href="class_urho3_d_1_1_u_i_element.html" title="Base class for UI elements.">UIElement</a>@, uint = 0)</li>
 <li>void RemoveChild(uint)</li>
 <li>void RemoveInstanceDefault()</li>
+<li>void ResetDeepEnabled()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
 <li>bool Save(VectorBuffer&amp;) const</li>
@@ -6908,6 +6952,8 @@ Classes</h2>
 <li>void SetAttributeAnimation(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, <a class="el" href="class_urho3_d_1_1_value_animation.html" title="Value animation class.">ValueAnimation</a>@, WrapMode = WM_LOOP, float = 1.0f)</li>
 <li>void SetAttributeAnimationSpeed(const String&amp;, float)</li>
 <li>void SetAttributeAnimationWrapMode(const String&amp;, WrapMode)</li>
+<li>void SetDeepEnabled(bool)</li>
+<li>void SetEnabledRecursive(bool)</li>
 <li>void SetFixedHeight(int)</li>
 <li>void SetFixedSize(int, int)</li>
 <li>void SetFixedWidth(int)</li>
@@ -6951,6 +6997,7 @@ Classes</h2>
 <li>bool editable</li>
 <li>bool elementEventSender</li>
 <li>bool enabled</li>
+<li>bool enabledSelf // readonly</li>
 <li>bool fixedHeight // readonly</li>
 <li>bool fixedSize // readonly</li>
 <li>bool fixedWidth // readonly</li>
@@ -8021,6 +8068,7 @@ Classes</h2>
 <li>void RemoveChild(<a class="el" href="class_urho3_d_1_1_u_i_element.html" title="Base class for UI elements.">UIElement</a>@, uint = 0)</li>
 <li>void RemoveChild(uint)</li>
 <li>void RemoveInstanceDefault()</li>
+<li>void ResetDeepEnabled()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
 <li>bool Save(VectorBuffer&amp;) const</li>
@@ -8034,6 +8082,8 @@ Classes</h2>
 <li>void SetAttributeAnimation(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, <a class="el" href="class_urho3_d_1_1_value_animation.html" title="Value animation class.">ValueAnimation</a>@, WrapMode = WM_LOOP, float = 1.0f)</li>
 <li>void SetAttributeAnimationSpeed(const String&amp;, float)</li>
 <li>void SetAttributeAnimationWrapMode(const String&amp;, WrapMode)</li>
+<li>void SetDeepEnabled(bool)</li>
+<li>void SetEnabledRecursive(bool)</li>
 <li>void SetFixedHeight(int)</li>
 <li>void SetFixedSize(int, int)</li>
 <li>void SetFixedWidth(int)</li>
@@ -8079,6 +8129,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_color.html" title="RGBA color.">Color</a> effectColor</li>
 <li>bool elementEventSender</li>
 <li>bool enabled</li>
+<li>bool enabledSelf // readonly</li>
 <li>bool fixedHeight // readonly</li>
 <li>bool fixedSize // readonly</li>
 <li>bool fixedWidth // readonly</li>
@@ -8652,6 +8703,7 @@ Classes</h2>
 <li>void RemoveChild(<a class="el" href="class_urho3_d_1_1_u_i_element.html" title="Base class for UI elements.">UIElement</a>@, uint = 0)</li>
 <li>void RemoveChild(uint)</li>
 <li>void RemoveInstanceDefault()</li>
+<li>void ResetDeepEnabled()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
 <li>bool Save(VectorBuffer&amp;) const</li>
@@ -8665,6 +8717,8 @@ Classes</h2>
 <li>void SetAttributeAnimation(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, <a class="el" href="class_urho3_d_1_1_value_animation.html" title="Value animation class.">ValueAnimation</a>@, WrapMode = WM_LOOP, float = 1.0f)</li>
 <li>void SetAttributeAnimationSpeed(const String&amp;, float)</li>
 <li>void SetAttributeAnimationWrapMode(const String&amp;, WrapMode)</li>
+<li>void SetDeepEnabled(bool)</li>
+<li>void SetEnabledRecursive(bool)</li>
 <li>void SetFixedHeight(int)</li>
 <li>void SetFixedSize(int, int)</li>
 <li>void SetFixedWidth(int)</li>
@@ -8705,6 +8759,7 @@ Classes</h2>
 <li>bool editable</li>
 <li>bool elementEventSender</li>
 <li>bool enabled</li>
+<li>bool enabledSelf // readonly</li>
 <li>bool fixedHeight // readonly</li>
 <li>bool fixedSize // readonly</li>
 <li>bool fixedWidth // readonly</li>
@@ -8851,6 +8906,7 @@ Classes</h2>
 <li>void RemoveChild(<a class="el" href="class_urho3_d_1_1_u_i_element.html" title="Base class for UI elements.">UIElement</a>@, uint = 0)</li>
 <li>void RemoveChild(uint)</li>
 <li>void RemoveInstanceDefault()</li>
+<li>void ResetDeepEnabled()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
 <li>bool Save(VectorBuffer&amp;) const</li>
@@ -8864,6 +8920,8 @@ Classes</h2>
 <li>void SetAttributeAnimation(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, <a class="el" href="class_urho3_d_1_1_value_animation.html" title="Value animation class.">ValueAnimation</a>@, WrapMode = WM_LOOP, float = 1.0f)</li>
 <li>void SetAttributeAnimationSpeed(const String&amp;, float)</li>
 <li>void SetAttributeAnimationWrapMode(const String&amp;, WrapMode)</li>
+<li>void SetDeepEnabled(bool)</li>
+<li>void SetEnabledRecursive(bool)</li>
 <li>void SetFixedHeight(int)</li>
 <li>void SetFixedSize(int, int)</li>
 <li>void SetFixedWidth(int)</li>
@@ -8903,6 +8961,7 @@ Classes</h2>
 <li>bool editable</li>
 <li>bool elementEventSender</li>
 <li>bool enabled</li>
+<li>bool enabledSelf // readonly</li>
 <li>bool fixedHeight // readonly</li>
 <li>bool fixedSize // readonly</li>
 <li>bool fixedWidth // readonly</li>
@@ -9213,6 +9272,7 @@ Classes</h2>
 <li>void RemoveChild(<a class="el" href="class_urho3_d_1_1_u_i_element.html" title="Base class for UI elements.">UIElement</a>@, uint = 0)</li>
 <li>void RemoveChild(uint)</li>
 <li>void RemoveInstanceDefault()</li>
+<li>void ResetDeepEnabled()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
 <li>bool Save(VectorBuffer&amp;) const</li>
@@ -9226,6 +9286,8 @@ Classes</h2>
 <li>void SetAttributeAnimation(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, <a class="el" href="class_urho3_d_1_1_value_animation.html" title="Value animation class.">ValueAnimation</a>@, WrapMode = WM_LOOP, float = 1.0f)</li>
 <li>void SetAttributeAnimationSpeed(const String&amp;, float)</li>
 <li>void SetAttributeAnimationWrapMode(const String&amp;, WrapMode)</li>
+<li>void SetDeepEnabled(bool)</li>
+<li>void SetEnabledRecursive(bool)</li>
 <li>void SetFixedHeight(int)</li>
 <li>void SetFixedSize(int, int)</li>
 <li>void SetFixedWidth(int)</li>
@@ -9269,6 +9331,7 @@ Classes</h2>
 <li>bool editable</li>
 <li>bool elementEventSender</li>
 <li>bool enabled</li>
+<li>bool enabledSelf // readonly</li>
 <li>bool fixedHeight // readonly</li>
 <li>bool fixedHeightResizing</li>
 <li>bool fixedSize // readonly</li>
@@ -9405,6 +9468,7 @@ Classes</h2>
 <li>void RemoveChild(<a class="el" href="class_urho3_d_1_1_u_i_element.html" title="Base class for UI elements.">UIElement</a>@, uint = 0)</li>
 <li>void RemoveChild(uint)</li>
 <li>void RemoveInstanceDefault()</li>
+<li>void ResetDeepEnabled()</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
 <li>bool Save(VectorBuffer&amp;) const</li>
@@ -9418,6 +9482,8 @@ Classes</h2>
 <li>void SetAttributeAnimation(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, <a class="el" href="class_urho3_d_1_1_value_animation.html" title="Value animation class.">ValueAnimation</a>@, WrapMode = WM_LOOP, float = 1.0f)</li>
 <li>void SetAttributeAnimationSpeed(const String&amp;, float)</li>
 <li>void SetAttributeAnimationWrapMode(const String&amp;, WrapMode)</li>
+<li>void SetDeepEnabled(bool)</li>
+<li>void SetEnabledRecursive(bool)</li>
 <li>void SetFixedHeight(int)</li>
 <li>void SetFixedSize(int, int)</li>
 <li>void SetFixedWidth(int)</li>
@@ -9457,6 +9523,7 @@ Classes</h2>
 <li>bool editable</li>
 <li>bool elementEventSender</li>
 <li>bool enabled</li>
+<li>bool enabledSelf // readonly</li>
 <li>bool fixedHeight // readonly</li>
 <li>bool fixedHeightResizing</li>
 <li>bool fixedSize // readonly</li>
