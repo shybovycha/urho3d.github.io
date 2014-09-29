@@ -122,7 +122,7 @@ MinGW cross-compile build process</h2>
 <p>Running cmake_gcc.sh with the MINGW_PREFIX environment variable set, produces an additional mingw-Build directory. Go to this directory and execute make to start the build process. When the build is complete, the Windows executables can be found in the mingw-Bin output directory.</p>
 <h2><a class="anchor" id="Building_64bit"></a>
 Desktop 64bit build</h2>
-<p>Currently CMake build configuration has been set to compile Urho3D as 32bit by default. To enable 64bit build, run the provided cmake_xxxx.bat or cmake_xxxx.sh by passing the option "-DURHO3D_64BIT=1" explicitly. For Visual Studio on Windows platform, this option also overrides CMake to use a 64bit solution generator.</p>
+<p>When using MSVC compiler, the Urho3D CMake build script will configure the Urho3D project to be built in 32-bit by default. When using other non-MSVC compilers (like GCC or clang), the CMake build script will set the default to 32-bit or 64-bit based on the installed toolchain in the host system. You can use the build option "URHO3D_64BIT" to override the default, by setting the option to '0' (for 32-bit) and '1' (for 64-bit) explicitly. For MSVC on Windows platform, setting the option to '1' also instructs the build script to use a 64-bit solution generator.</p>
 <h2><a class="anchor" id="Building_Library"></a>
 Library build</h2>
 <p>As of V1.31, the build process first builds the Urho3D library target (either static or shared). The library is then linked against by other targets like tools and samples that reference Urho3D as one of the external libraries. The Urho3D library type is defaulted to static, so the build process would generate standalone executables as previous releases. The Urho3D library type can be changed using "URHO3D_LIB_TYPE" build option.</p>
@@ -144,7 +144,7 @@ Build options</h2>
 <tr>
 <th>Build Option </th><th>V</th><th>Description </th></tr>
 <tr>
-<td>URHO3D_64BIT </td><td>0</td><td>Enable 64bit build </td></tr>
+<td>URHO3D_64BIT </td><td>-</td><td>Enable 64bit build, on MSVC default to 0, on other compilers the default is set based on the installed toolchain on host system </td></tr>
 <tr>
 <td>URHO3D_ANGELSCRIPT </td><td>1</td><td>Enable AngelScript scripting support </td></tr>
 <tr>
