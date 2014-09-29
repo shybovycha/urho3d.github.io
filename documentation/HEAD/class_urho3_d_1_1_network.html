@@ -119,15 +119,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a0d52fe80951ec39ef880bfe771e37e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f4cfd09d02c0b1180b6eb4d9e9b7f62"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f4cfd09d02c0b1180b6eb4d9e9b7f62"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network.html#a9f4cfd09d02c0b1180b6eb4d9e9b7f62">RegisterRemoteEvent</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType)</td></tr>
-<tr class="memdesc:a9f4cfd09d02c0b1180b6eb4d9e9b7f62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a remote event as allowed to be sent and received. If no events are registered, all are allowed. <br/></td></tr>
+<tr class="memdesc:a9f4cfd09d02c0b1180b6eb4d9e9b7f62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a remote event as allowed to be received. There is also a fixed blacklist of events that can not be allowed in any case, such as ConsoleCommand. <br/></td></tr>
 <tr class="separator:a9f4cfd09d02c0b1180b6eb4d9e9b7f62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcb84d8b0348205ebf412d45fc779d00"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afcb84d8b0348205ebf412d45fc779d00"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network.html#afcb84d8b0348205ebf412d45fc779d00">UnregisterRemoteEvent</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType)</td></tr>
-<tr class="memdesc:afcb84d8b0348205ebf412d45fc779d00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregister a remote event as allowed to be sent and received. <br/></td></tr>
+<tr class="memdesc:afcb84d8b0348205ebf412d45fc779d00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregister a remote event as allowed to received. <br/></td></tr>
 <tr class="separator:afcb84d8b0348205ebf412d45fc779d00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39f53aaccf9fa6280a49ab641f04196f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a39f53aaccf9fa6280a49ab641f04196f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network.html#a39f53aaccf9fa6280a49ab641f04196f">UnregisterAllRemoteEvents</a> ()</td></tr>
-<tr class="memdesc:a39f53aaccf9fa6280a49ab641f04196f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregister all remote events. This results in all being allowed. <br/></td></tr>
+<tr class="memdesc:a39f53aaccf9fa6280a49ab641f04196f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregister all remote events. <br/></td></tr>
 <tr class="separator:a39f53aaccf9fa6280a49ab641f04196f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57b30be42b797f89acad15c24e5adcfe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57b30be42b797f89acad15c24e5adcfe"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network.html#a57b30be42b797f89acad15c24e5adcfe">SetPackageCacheDir</a> (const <a class="el" href="class_urho3_d_1_1_string.html">String</a> &amp;path)</td></tr>
@@ -346,6 +346,10 @@ kNet::Network *&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
 <a class="el" href="class_urho3_d_1_1_hash_set.html">HashSet</a>&lt; <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network.html#af9672da271199e1f2e90b35e29bef9ee">allowedRemoteEvents_</a></td></tr>
 <tr class="memdesc:af9672da271199e1f2e90b35e29bef9ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allowed remote events. <br/></td></tr>
 <tr class="separator:af9672da271199e1f2e90b35e29bef9ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5b0f18acfc448a6ea80dc5a6d6952c4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5b0f18acfc448a6ea80dc5a6d6952c4"></a>
+<a class="el" href="class_urho3_d_1_1_hash_set.html">HashSet</a>&lt; <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network.html#ac5b0f18acfc448a6ea80dc5a6d6952c4">blacklistedRemoteEvents_</a></td></tr>
+<tr class="memdesc:ac5b0f18acfc448a6ea80dc5a6d6952c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remote event fixed blacklist. <br/></td></tr>
+<tr class="separator:ac5b0f18acfc448a6ea80dc5a6d6952c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5674b33f08a6feeb3d2cfcf8fac83842"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5674b33f08a6feeb3d2cfcf8fac83842"></a>
 <a class="el" href="class_urho3_d_1_1_hash_set.html">HashSet</a>&lt; <a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network.html#a5674b33f08a6feeb3d2cfcf8fac83842">networkScenes_</a></td></tr>
 <tr class="memdesc:a5674b33f08a6feeb3d2cfcf8fac83842"><td class="mdescLeft">&#160;</td><td class="mdescRight">Networked scenes. <br/></td></tr>
