@@ -59,6 +59,7 @@ Renderer</h2>
 <li>Check the influence of each visible light on the objects. If the light casts shadows, query the octree for shadowcaster objects.</li>
 <li>Construct render operations (batches) for the visible objects, according to the scene passes in the render path command sequence.</li>
 <li>Perform the render path command sequence during the rendering step at the end of the frame.</li>
+<li>If the scene has a <a class="el" href="class_urho3_d_1_1_debug_renderer.html" title="Debug geometry rendering component. Should be added only to the root scene node.">DebugRenderer</a> component and the viewport has debug rendering enabled, render debug geometry last. Can be controlled with <a class="el" href="class_urho3_d_1_1_viewport.html#a463ebb4f490c112393a3ac573c74cd84">SetDrawDebug()</a>, default is enabled.</li>
 </ul>
 <p>In the default render paths, the rendering operations proceed in the following order:</p>
 <ul>
