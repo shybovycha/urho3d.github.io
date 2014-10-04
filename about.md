@@ -100,6 +100,7 @@ Though Urho3D already contains several useful features and implements a framewor
 - amadeus_osa
 - atship
 - att
+- celeron55
 - hdunderscore
 - mightyCelu
 - ninjastone
