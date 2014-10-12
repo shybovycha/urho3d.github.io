@@ -54,10 +54,6 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_hash_base.html#a531e375a95ac79b4ee296bb35ad1d300">HashBase</a> ()</td></tr>
 <tr class="memdesc:a531e375a95ac79b4ee296bb35ad1d300"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br/></td></tr>
 <tr class="separator:a531e375a95ac79b4ee296bb35ad1d300"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4874a70b0b8a004d8f0c84295ebb75e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4874a70b0b8a004d8f0c84295ebb75e4"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_hash_base.html#a4874a70b0b8a004d8f0c84295ebb75e4">~HashBase</a> ()</td></tr>
-<tr class="memdesc:a4874a70b0b8a004d8f0c84295ebb75e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
-<tr class="separator:a4874a70b0b8a004d8f0c84295ebb75e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37ba30adba5ba7be5c286a46afcfbbc0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37ba30adba5ba7be5c286a46afcfbbc0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_hash_base.html#a37ba30adba5ba7be5c286a46afcfbbc0">Swap</a> (<a class="el" href="class_urho3_d_1_1_hash_base.html">HashBase</a> &amp;rhs)</td></tr>
 <tr class="memdesc:a37ba30adba5ba7be5c286a46afcfbbc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swap with another hash set or map. <br/></td></tr>
@@ -126,6 +122,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Hash set/map base class. </p>
+<p>Note that to prevent extra memory use due to vtable pointer, HashBase intentionally does not declare a virtual destructor and therefore HashBase pointers should never be used. </p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/travis/build/urho3d/Urho3D/Source/Engine/Container/HashBase.h</li>
 <li>/home/travis/build/urho3d/Urho3D/Source/Engine/Container/HashBase.cpp</li>
