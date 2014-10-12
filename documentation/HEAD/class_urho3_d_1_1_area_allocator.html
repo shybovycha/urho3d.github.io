@@ -26,6 +26,7 @@ group: HEAD
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_urho3_d_1_1_area_allocator-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -50,20 +51,21 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_area_allocator.html#a616d7f8982858359e03002663a118511">AreaAllocator</a> ()</td></tr>
 <tr class="memdesc:a616d7f8982858359e03002663a118511"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default construct with empty size. <br/></td></tr>
 <tr class="separator:a616d7f8982858359e03002663a118511"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf8860893809636bf207711602912219"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf8860893809636bf207711602912219"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_area_allocator.html#acf8860893809636bf207711602912219">AreaAllocator</a> (int width, int height)</td></tr>
-<tr class="memdesc:acf8860893809636bf207711602912219"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with given width and height. <br/></td></tr>
-<tr class="separator:acf8860893809636bf207711602912219"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60b2a5aed465efc79f7c8562f7f82882"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60b2a5aed465efc79f7c8562f7f82882"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_area_allocator.html#a60b2a5aed465efc79f7c8562f7f82882">AreaAllocator</a> (int width, int height, int maxWidth, int maxHeight)</td></tr>
-<tr class="memdesc:a60b2a5aed465efc79f7c8562f7f82882"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with given width and height, and set the maximum it allows to grow. <br/></td></tr>
-<tr class="separator:a60b2a5aed465efc79f7c8562f7f82882"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a22db2797358d5ca75608683124112c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5a22db2797358d5ca75608683124112c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_area_allocator.html#a5a22db2797358d5ca75608683124112c">Reset</a> (int width, int height, int maxWidth=0, int maxHeight=0)</td></tr>
-<tr class="memdesc:a5a22db2797358d5ca75608683124112c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset to given width and height and remove all previous allocations. <br/></td></tr>
-<tr class="separator:a5a22db2797358d5ca75608683124112c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b6949e6fedd21c43be6182af876bce0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_area_allocator.html#a6b6949e6fedd21c43be6182af876bce0">Allocate</a> (int width, int height, int &amp;x, int &amp;y)</td></tr>
-<tr class="memdesc:a6b6949e6fedd21c43be6182af876bce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to allocate an area. Return true if successful, with x &amp; y coordinates filled.  <a href="#a6b6949e6fedd21c43be6182af876bce0">More...</a><br/></td></tr>
+<tr class="memitem:a7d419c98fbce83fa0b106202dffe46e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d419c98fbce83fa0b106202dffe46e2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_area_allocator.html#a7d419c98fbce83fa0b106202dffe46e2">AreaAllocator</a> (int width, int height, bool fastMode=true)</td></tr>
+<tr class="memdesc:a7d419c98fbce83fa0b106202dffe46e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with given width and height. <br/></td></tr>
+<tr class="separator:a7d419c98fbce83fa0b106202dffe46e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa363c8e94933422b5947ca23aec24ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa363c8e94933422b5947ca23aec24ca"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_area_allocator.html#afa363c8e94933422b5947ca23aec24ca">AreaAllocator</a> (int width, int height, int maxWidth, int maxHeight, bool fastMode=true)</td></tr>
+<tr class="memdesc:afa363c8e94933422b5947ca23aec24ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with given width and height, and set the maximum it allows to grow. <br/></td></tr>
+<tr class="separator:afa363c8e94933422b5947ca23aec24ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a953aa6cd0bb52a869726d9ebb484fe7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a953aa6cd0bb52a869726d9ebb484fe7d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_area_allocator.html#a953aa6cd0bb52a869726d9ebb484fe7d">Reset</a> (int width, int height, int maxWidth=0, int maxHeight=0, bool fastMode=true)</td></tr>
+<tr class="memdesc:a953aa6cd0bb52a869726d9ebb484fe7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset to given width and height and remove all previous allocations. <br/></td></tr>
+<tr class="separator:a953aa6cd0bb52a869726d9ebb484fe7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b6949e6fedd21c43be6182af876bce0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b6949e6fedd21c43be6182af876bce0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_area_allocator.html#a6b6949e6fedd21c43be6182af876bce0">Allocate</a> (int width, int height, int &amp;x, int &amp;y)</td></tr>
+<tr class="memdesc:a6b6949e6fedd21c43be6182af876bce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to allocate an area. Return true if successful, with x &amp; y coordinates filled. <br/></td></tr>
 <tr class="separator:a6b6949e6fedd21c43be6182af876bce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0b9961d35c15a51409386d6f35a2517"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0b9961d35c15a51409386d6f35a2517"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_area_allocator.html#af0b9961d35c15a51409386d6f35a2517">GetWidth</a> () const </td></tr>
@@ -73,6 +75,21 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_area_allocator.html#a0125ce5db92c12d7e7745bed7467910f">GetHeight</a> () const </td></tr>
 <tr class="memdesc:a0125ce5db92c12d7e7745bed7467910f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current height. <br/></td></tr>
 <tr class="separator:a0125ce5db92c12d7e7745bed7467910f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f0d56c84e32046cdc462c4a8eb1efd4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f0d56c84e32046cdc462c4a8eb1efd4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_area_allocator.html#a7f0d56c84e32046cdc462c4a8eb1efd4">GetFastMode</a> () const </td></tr>
+<tr class="memdesc:a7f0d56c84e32046cdc462c4a8eb1efd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether uses fast mode. Fast mode uses a simpler allocation scheme which may waste free space, but is OK for eg. fonts. <br/></td></tr>
+<tr class="separator:a7f0d56c84e32046cdc462c4a8eb1efd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a55192b4d3fd22992f06eead2982816f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a55192b4d3fd22992f06eead2982816f7"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_area_allocator.html#a55192b4d3fd22992f06eead2982816f7">SplitRect</a> (<a class="el" href="class_urho3_d_1_1_int_rect.html">IntRect</a> original, const <a class="el" href="class_urho3_d_1_1_int_rect.html">IntRect</a> &amp;reserve)</td></tr>
+<tr class="memdesc:a55192b4d3fd22992f06eead2982816f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove space from a free rectangle. Return true if the original rectangle should be erased from the free list. Not called in fast mode. <br/></td></tr>
+<tr class="separator:a55192b4d3fd22992f06eead2982816f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd0045fee4148a332b3d28b2cbcefe6d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd0045fee4148a332b3d28b2cbcefe6d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_area_allocator.html#acd0045fee4148a332b3d28b2cbcefe6d">Cleanup</a> ()</td></tr>
+<tr class="memdesc:acd0045fee4148a332b3d28b2cbcefe6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clean up redundant free space. Not called in fast mode. <br/></td></tr>
+<tr class="separator:acd0045fee4148a332b3d28b2cbcefe6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -90,62 +107,16 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a00f0065f43d4b8efedaf7f7763db59c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ca78b3d9778a1851942f7748d4a55f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5ca78b3d9778a1851942f7748d4a55f7"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_area_allocator.html#a5ca78b3d9778a1851942f7748d4a55f7">doubleWidth_</a></td></tr>
-<tr class="memdesc:a5ca78b3d9778a1851942f7748d4a55f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The dimension use for next growth. Use internally. <br/></td></tr>
+<tr class="memdesc:a5ca78b3d9778a1851942f7748d4a55f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The dimension use for next growth. Used internally. <br/></td></tr>
 <tr class="separator:a5ca78b3d9778a1851942f7748d4a55f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf864d1a9f039a855d9bb3679c29fa54"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf864d1a9f039a855d9bb3679c29fa54"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_area_allocator.html#adf864d1a9f039a855d9bb3679c29fa54">fastMode_</a></td></tr>
+<tr class="memdesc:adf864d1a9f039a855d9bb3679c29fa54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fast mode flag. <br/></td></tr>
+<tr class="separator:adf864d1a9f039a855d9bb3679c29fa54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Rectangular area allocator. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a6b6949e6fedd21c43be6182af876bce0"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Urho3D::AreaAllocator::Allocate </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>width</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>height</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int &amp;&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int &amp;&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Try to allocate an area. Return true if successful, with x &amp; y coordinates filled. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000023">Todo:</a></b></dt><dd>Reimplement a high-quality but slower mode; the algorithm here is not sufficient for offline packing (atlases) </dd></dl>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_urho3_d_1_1_area_allocator_a6b6949e6fedd21c43be6182af876bce0_icgraph.svg" width="656" height="195"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-</p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/travis/build/urho3d/Urho3D/Source/Engine/Math/AreaAllocator.h</li>
 <li>/home/travis/build/urho3d/Urho3D/Source/Engine/Math/AreaAllocator.cpp</li>
 </ul>
