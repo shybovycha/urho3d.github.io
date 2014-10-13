@@ -231,6 +231,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rigid_body.html#ab383b16970f61b3d10f776ce6d616abf">ReAddBodyToWorld</a> ()</td></tr>
 <tr class="memdesc:ab383b16970f61b3d10f776ce6d616abf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Readd rigid body to the physics world to clean up internal state like stale contacts. <br/></td></tr>
 <tr class="separator:ab383b16970f61b3d10f776ce6d616abf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae8dd89a7f79cd9d547f0b55ca53ce22"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae8dd89a7f79cd9d547f0b55ca53ce22"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rigid_body.html#aae8dd89a7f79cd9d547f0b55ca53ce22">DisableMassUpdate</a> ()</td></tr>
+<tr class="memdesc:aae8dd89a7f79cd9d547f0b55ca53ce22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable mass update. Call this to optimize performance when adding or editing multiple collision shapes in the same node. <br/></td></tr>
+<tr class="separator:aae8dd89a7f79cd9d547f0b55ca53ce22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b76b3006a5e7581803f173616c91976"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b76b3006a5e7581803f173616c91976"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rigid_body.html#a2b76b3006a5e7581803f173616c91976">EnableMassUpdate</a> ()</td></tr>
+<tr class="memdesc:a2b76b3006a5e7581803f173616c91976"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-enable mass update and recalculate the mass/inertia by calling <a class="el" href="class_urho3_d_1_1_rigid_body.html#a1207bc70121deacf2aa07fde3c2731df" title="Update mass and inertia to the Bullet rigid body.">UpdateMass()</a>. Call when collision shape changes are finished. <br/></td></tr>
+<tr class="separator:a2b76b3006a5e7581803f173616c91976"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0117dde54b30f58df46fa0ee88ae389"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab0117dde54b30f58df46fa0ee88ae389"></a>
 <a class="el" href="class_urho3_d_1_1_physics_world.html">PhysicsWorld</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rigid_body.html#ab0117dde54b30f58df46fa0ee88ae389">GetPhysicsWorld</a> () const </td></tr>
 <tr class="memdesc:ab0117dde54b30f58df46fa0ee88ae389"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return physics world. <br/></td></tr>
@@ -941,6 +949,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rigid_body.html#afd22fac126ab0c5598c6c0ecc57f59fc">inWorld_</a></td></tr>
 <tr class="memdesc:afd22fac126ab0c5598c6c0ecc57f59fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Body exists in world flag. <br/></td></tr>
 <tr class="separator:afd22fac126ab0c5598c6c0ecc57f59fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6f2dd2e67ea306a24464de74bb89018"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6f2dd2e67ea306a24464de74bb89018"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rigid_body.html#ac6f2dd2e67ea306a24464de74bb89018">enableMassUpdate_</a></td></tr>
+<tr class="memdesc:ac6f2dd2e67ea306a24464de74bb89018"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mass update enable flag. <br/></td></tr>
+<tr class="separator:ac6f2dd2e67ea306a24464de74bb89018"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
