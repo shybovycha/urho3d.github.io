@@ -933,12 +933,7 @@ Classes</h2>
 <li>void SetConnectPending(bool connectPending)</li>
 <li>void SetLogStatistics(bool enable)</li>
 <li>void Disconnect(int waitMSec = 0)</li>
-<li>void SendServerUpdate()</li>
-<li>void SendClientUpdate()</li>
-<li>void SendRemoteEvents()</li>
-<li>void SendPackages()</li>
-<li>void ProcessPendingLatestData()</li>
-<li>bool ProcessMessage(int msgID, MemoryBuffer&amp; msg)</li>
+<li>void SendPackageToClient(PackageFile* package)</li>
 <li>VariantMap&amp; GetIdentity()</li>
 <li>Scene* GetScene() const</li>
 <li>const <a class="el" href="class_urho3_d_1_1_controls.html" title="Controls sent over the network.">Controls</a>&amp; GetControls() const</li>
@@ -2973,6 +2968,7 @@ Classes</h2>
 <li>void UnregisterRemoteEvent(const String eventType)</li>
 <li>void UnregisterAllRemoteEvents()</li>
 <li>void SetPackageCacheDir(const String path)</li>
+<li>void SendPackageToClients(Scene* scene, PackageFile* package)</li>
 <li>HttpRequest* MakeHttpRequest(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> url, const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> verb = <a class="el" href="class_urho3_d_1_1_string.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>)</li>
 <li>HttpRequest* MakeHttpRequest(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> url, const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> verb, const Vector&lt;String&gt;&amp; headers, const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> postData = <a class="el" href="class_urho3_d_1_1_string.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>)</li>
 <li>int GetUpdateFps() const</li>
