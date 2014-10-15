@@ -43,7 +43,7 @@ Deferred rendering</h2>
 <li>DS: Hardware depth and lightmask (D3DFMT_D24S8)</li>
 </ul>
 <p>After the G-buffer has been rendered, light volumes will be rendered into the final rendertarget to accumulate per-pixel lighting. As the material albedo is available, all lighting calculations are final and output both the diffuse and specular color at the same time. After light accumulation rendering proceeds to post-opaque, refract, transparent, and post-alpha passes, as in other rendering modes.</p>
-<h2><a class="anchor" id="RenderingModes_Comparision"></a>
+<h2><a class="anchor" id="RenderingModes_Comparison"></a>
 Advantages and disadvantages</h2>
 <p>Whether using forward or deferred rendering modes is more advantageous depends on the scene and lighting complexity.</p>
 <p>If the scene contains a large number of complex objects lit by multiple lights, forward rendering quickly increases the total draw call and vertex count due to re-rendering the objects for each light. However, light pre-pass and deferred rendering have a higher fixed cost due to the generation of the G-buffer. Also, in forward per-pixel lighting more calculations (such as light direction and shadow map coordinates) can be done at the vertex shader level, while in deferred all calculations need to happen per-pixel. This means that for a low light count, for example 1-2 per object, forward rendering will run faster based on the more efficient lighting calculations alone.</p>
