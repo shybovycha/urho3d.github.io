@@ -4,7 +4,7 @@ title: About
 ---
 {% include JB/setup %}
 
-**Urho3D** is a lightweight, cross-platform 2D and 3D game engine implemented in C++ and released under the MIT license. Greatly inspired by [OGRE](http://www.ogre3d.org/) and [Horde3D](http://www.horde3d.org/).
+**Urho3D** is a free lightweight, cross-platform 2D and 3D game engine implemented in C++ and released under the MIT license. Greatly inspired by [OGRE](http://www.ogre3d.org/) and [Horde3D](http://www.horde3d.org/).
 
 ## Features
 - Direct3D9 or OpenGL rendering (Shader Model 2, OpenGL 2.0 or OpenGL ES 2.0 required as minimum)
