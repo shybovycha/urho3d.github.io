@@ -3453,10 +3453,14 @@ Classes</h2>
 <p>Methods:</p>
 <ul>
 <li>bool IsSM3() const</li>
+<li>const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> GetVertexShader() const</li>
+<li>const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> GetPixelShader() const</li>
 </ul>
 <p>Properties:</p>
 <ul>
 <li>bool SM3 (readonly)</li>
+<li>const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> vertexShader (readonly)</li>
+<li>const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> pixelShader (readonly)</li>
 </ul>
 <p><a class="anchor" id="Class_PhysicsRaycastResult"></a> </p>
 <h4><a class="el" href="struct_urho3_d_1_1_physics_raycast_result.html" title="Physics raycast hit.">PhysicsRaycastResult</a></h4>
@@ -4826,13 +4830,18 @@ Classes</h2>
 <h4><a class="el" href="class_urho3_d_1_1_technique.html" title="Material technique. Consists of several passes.">Technique</a> : <a class="el" href="class_urho3_d_1_1_resource.html" title="Base class for resources.">Resource</a></h4>
 <p>Methods:</p>
 <ul>
-<li>bool HasPass(const String type) const</li>
-<li>Pass* GetPass(const String type) const</li>
+<li>bool HasPass(const StringHash type) const</li>
+<li>Pass* GetPass(const StringHash type) const</li>
+<li>Pass* GetSupportedPass(const StringHash type) const</li>
 <li>bool IsSM3() const</li>
+<li>unsigned GetNumPasses() const</li>
+<li>const Vector&lt;StringHash&gt;&amp; GetPassTypes() const</li>
+<li>const PODVector&lt;Pass*&gt;&amp; GetPasses() const</li>
 </ul>
 <p>Properties:</p>
 <ul>
 <li>bool SM3 (readonly)</li>
+<li>unsigned numPasses (readonly)</li>
 </ul>
 <p><a class="anchor" id="Class_Terrain"></a> </p>
 <h4><a class="el" href="class_urho3_d_1_1_terrain.html" title="Heightmap terrain component.">Terrain</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h4>

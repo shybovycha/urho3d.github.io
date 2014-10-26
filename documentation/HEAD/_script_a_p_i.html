@@ -7872,6 +7872,8 @@ Classes</h2>
 <p>Methods:</p>
 <ul>
 <li><a class="el" href="class_urho3_d_1_1_pass.html" title="Material rendering pass, which defines shaders and render state.">Pass</a>@ CreatePass(StringHash)</li>
+<li><a class="el" href="class_urho3_d_1_1_pass.html" title="Material rendering pass, which defines shaders and render state.">Pass</a>@ GetPass(StringHash)</li>
+<li><a class="el" href="class_urho3_d_1_1_pass.html" title="Material rendering pass, which defines shaders and render state.">Pass</a>@ GetSupportedPass(StringHash)</li>
 <li>bool HasPass(StringHash) const</li>
 <li>bool Load(<a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
 <li>bool Load(VectorBuffer&amp;)</li>
@@ -7886,7 +7888,9 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> category // readonly</li>
 <li>uint memoryUse // readonly</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> name</li>
-<li><a class="el" href="class_urho3_d_1_1_pass.html" title="Material rendering pass, which defines shaders and render state.">Pass</a>@[] passes // readonly</li>
+<li>uint numPasses // readonly</li>
+<li><a class="el" href="class_urho3_d_1_1_string_hash.html" title="32-bit hash value for a string.">StringHash</a>[]@ passTypes // readonly</li>
+<li><a class="el" href="class_urho3_d_1_1_pass.html" title="Material rendering pass, which defines shaders and render state.">Pass</a>@[]@ passes // readonly</li>
 <li>int refs // readonly</li>
 <li>bool sm3</li>
 <li><a class="el" href="class_urho3_d_1_1_string_hash.html" title="32-bit hash value for a string.">StringHash</a> type // readonly</li>
