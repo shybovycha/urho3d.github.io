@@ -81,6 +81,7 @@ Though Urho3D already contains several useful features and implements a framewor
 - Gunnar Kriik
 - Ali Kämäräinen
 - Pete Leigh
+- Jonne Nauha
 - Paul Noome
 - David Palacios
 - Alex Parlett
