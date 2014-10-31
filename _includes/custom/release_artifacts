@@ -16,14 +16,16 @@
 </div>
 <div class="package-grid js-masonry row">
   {% for platform in site.data.release_artifacts.platforms %}
-    {% unless excluded_platforms contains platform[0] %}
+    {% unless page.excluded_platforms contains platform[0] %}
       <div class="item col-xs-6 col-sm-4">
         <h4 class="platform"><i class="{{ platform[1].icon }}"></i>&nbsp;&nbsp;{{ platform[0] }}</h4>
         {% for arch in platform[1].archs %}
           <div class="header">{{ arch[0] }}</div>
           <ul class="{{ platform[0] }} {{ arch[0] }} binary-package">
             {% for artifact in arch[1] %}
-              <li class="{{ arch[0] }} {{ artifact |split:'.' |first }}"><a href="https://downloads.sourceforge.net/project/urho3d/Urho3D/{{ release }}/Urho3D-{{ release }}-{{ platform[0] }}-{% if arch[0] == '64-bit' %}64bit-{% endif %}{{ artifact }}" target="_blank"><i class="fa fa-file-archive-o"></i>&nbsp;&nbsp;{{ artifact }}</a></li>
+              {% unless page.excluded_artifacts contains artifact %}
+                <li class="{{ arch[0] }} {{ artifact |split:'.' |first }}"><a href="https://downloads.sourceforge.net/project/urho3d/Urho3D/{{ release }}/Urho3D-{{ release }}-{{ platform[0] }}-{% if arch[0] == '64-bit' %}64bit-{% endif %}{{ artifact }}" target="_blank"><i class="fa fa-file-archive-o"></i>&nbsp;&nbsp;{{ artifact }}</a></li>
+              {% endunless %}
             {% endfor %}
           </ul>
         {% endfor %}
