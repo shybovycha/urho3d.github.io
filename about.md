@@ -45,7 +45,7 @@ title: About
 - Scene editor and UI-layout editor implemented in script with undo & redo capabilities
 - Model/scene/animation/material import from formats supported by [Open Asset Import Library](http://assimp.sourceforge.net)
 - Alternative model/animation import from OGRE mesh.xml and skeleton.xml files
-- Supported build tools and IDEs: Visual Studio, Xcode, Eclipse, CodeBlocks, GCC, LLVM/Clang, MinGW-W64
+- Supported build tools and IDEs: Visual Studio, Xcode, Eclipse, CodeBlocks, QtCreator, GCC, LLVM/Clang, MinGW
 - Supports both 32-bit and 64-bit<font color="olive"><sup>v1.3</sup></font> build
 - Build as single external library<font color="olive"><sup>v1.3</sup></font> (can be linked against statically or dynamically)
 
