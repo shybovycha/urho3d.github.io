@@ -106,12 +106,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a7301bf7355ad0be5080fa441f952213d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34fd73b93bf6a8f6a8ba24c7fb8e52a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34fd73b93bf6a8f6a8ba24c7fb8e52a6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_physics_world.html#a34fd73b93bf6a8f6a8ba24c7fb8e52a6">SetFps</a> (int fps)</td></tr>
-<tr class="memdesc:a34fd73b93bf6a8f6a8ba24c7fb8e52a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set simulation steps per second. <br/></td></tr>
+<tr class="memdesc:a34fd73b93bf6a8f6a8ba24c7fb8e52a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set simulation substeps per second. <br/></td></tr>
 <tr class="separator:a34fd73b93bf6a8f6a8ba24c7fb8e52a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc891935f4172b4f97fdff062afdc146"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc891935f4172b4f97fdff062afdc146"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_physics_world.html#abc891935f4172b4f97fdff062afdc146">SetGravity</a> (<a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> gravity)</td></tr>
 <tr class="memdesc:abc891935f4172b4f97fdff062afdc146"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set gravity. <br/></td></tr>
 <tr class="separator:abc891935f4172b4f97fdff062afdc146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d5c83640cf870a7b81a7bc7bb77bf0e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d5c83640cf870a7b81a7bc7bb77bf0e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_physics_world.html#a1d5c83640cf870a7b81a7bc7bb77bf0e">SetMaxSubSteps</a> (int num)</td></tr>
+<tr class="memdesc:a1d5c83640cf870a7b81a7bc7bb77bf0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set maximum number of physics substeps per frame. 0 (default) is unlimited. Positive values cap the amount. Use a negative value to enable an adaptive timestep. This may cause inconsistent physics behavior. <br/></td></tr>
+<tr class="separator:a1d5c83640cf870a7b81a7bc7bb77bf0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1db39ea4c68531cec61b44ee5d7c460d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1db39ea4c68531cec61b44ee5d7c460d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_physics_world.html#a1db39ea4c68531cec61b44ee5d7c460d">SetNumIterations</a> (int num)</td></tr>
 <tr class="memdesc:a1db39ea4c68531cec61b44ee5d7c460d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set number of constraint solver iterations. <br/></td></tr>
@@ -172,6 +176,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_physics_world.html#a8e43045c1ea414600b00ad76c1b146cd">GetGravity</a> () const </td></tr>
 <tr class="memdesc:a8e43045c1ea414600b00ad76c1b146cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return gravity. <br/></td></tr>
 <tr class="separator:a8e43045c1ea414600b00ad76c1b146cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41c5225acb8e2eb4b805a6ce53c003cd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41c5225acb8e2eb4b805a6ce53c003cd"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_physics_world.html#a41c5225acb8e2eb4b805a6ce53c003cd">GetMaxSubSteps</a> () const </td></tr>
+<tr class="memdesc:a41c5225acb8e2eb4b805a6ce53c003cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return maximum number of physics substeps per frame. <br/></td></tr>
+<tr class="separator:a41c5225acb8e2eb4b805a6ce53c003cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af86ad0f5ca1df06c7eb80ddca55d49c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af86ad0f5ca1df06c7eb80ddca55d49c7"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_physics_world.html#af86ad0f5ca1df06c7eb80ddca55d49c7">GetNumIterations</a> () const </td></tr>
 <tr class="memdesc:af86ad0f5ca1df06c7eb80ddca55d49c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of constraint solver iterations. <br/></td></tr>
@@ -831,8 +839,12 @@ btDiscreteDynamicsWorld *&#160;</td><td class="memItemRight" valign="bottom"><a 
 <tr class="separator:aa32601e266c44247dc08404ba8c942a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58fe7902f6d857f847c1adea036ded27"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58fe7902f6d857f847c1adea036ded27"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_physics_world.html#a58fe7902f6d857f847c1adea036ded27">fps_</a></td></tr>
-<tr class="memdesc:a58fe7902f6d857f847c1adea036ded27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulation steps per second. <br/></td></tr>
+<tr class="memdesc:a58fe7902f6d857f847c1adea036ded27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulation substeps per second. <br/></td></tr>
 <tr class="separator:a58fe7902f6d857f847c1adea036ded27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eb875f6f33235263468ddc2dda7e488"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0eb875f6f33235263468ddc2dda7e488"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_physics_world.html#a0eb875f6f33235263468ddc2dda7e488">maxSubSteps_</a></td></tr>
+<tr class="memdesc:a0eb875f6f33235263468ddc2dda7e488"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of simulation substeps per frame. 0 (default) unlimited, or negative values for adaptive timestep. <br/></td></tr>
+<tr class="separator:a0eb875f6f33235263468ddc2dda7e488"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7899d31be76dff57a8881bbb26723710"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7899d31be76dff57a8881bbb26723710"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_physics_world.html#a7899d31be76dff57a8881bbb26723710">timeAcc_</a></td></tr>
 <tr class="memdesc:a7899d31be76dff57a8881bbb26723710"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_time.html" title="Time and frame counter subsystem.">Time</a> accumulator for non-interpolated mode. <br/></td></tr>
