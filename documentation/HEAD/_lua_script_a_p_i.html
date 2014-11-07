@@ -5360,7 +5360,7 @@ Classes</h2>
 <li>UIElement* GetElementAt(int x, int y, bool enabledOnly = true)</li>
 <li>UIElement* GetFocusElement() const</li>
 <li>UIElement* GetFrontElement() const</li>
-<li>UIElement* GetDragElement() const</li>
+<li>UIElement* GetDragElement(unsigned index)</li>
 <li>const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> GetClipboardText() const</li>
 <li>float GetDoubleClickInterval() const</li>
 <li>float GetDragBeginInterval() const</li>
@@ -5373,6 +5373,7 @@ Classes</h2>
 <li>bool GetUseMutableGlyphs() const</li>
 <li>bool GetForceAutoHint() const</li>
 <li>bool HasModalElement() const</li>
+<li>bool IsDragging() const</li>
 </ul>
 <p>Properties:</p>
 <ul>
@@ -5382,7 +5383,6 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_int_vector2.html" title="Two-dimensional vector with integer values.">IntVector2</a> cursorPosition (readonly)</li>
 <li>UIElement* focusElement (readonly)</li>
 <li>UIElement* frontElement (readonly)</li>
-<li>UIElement* dragElement (readonly)</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> clipboardText</li>
 <li>float doubleClickInterval</li>
 <li>float dragBeginInterval</li>
@@ -5523,6 +5523,8 @@ Classes</h2>
 <li>int GetLayoutSpacing() const</li>
 <li>const <a class="el" href="class_urho3_d_1_1_int_rect.html" title="Two-dimensional bounding rectangle with integer values.">IntRect</a>&amp; GetLayoutBorder() const</li>
 <li>unsigned GetNumChildren(bool recursive = false) const</li>
+<li>int GetDragButtonCombo() const</li>
+<li>unsigned GetDragButtonCount() const</li>
 <li>UIElement* GetChild(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> name, bool recursive = false) const</li>
 <li>UIElement* GetChild(unsigned index) const</li>
 <li>UIElement* GetParent() const</li>
@@ -6766,6 +6768,7 @@ Global functions</h2>
 <li>int ClampInt(int value, int min, int max)</li>
 <li><a class="el" href="class_urho3_d_1_1_vector_buffer.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a> CompressVectorBuffer(VectorBuffer&amp; src)</li>
 <li>float Cos(float angle)</li>
+<li>unsigned CountSetBits(unsigned value)</li>
 <li><a class="el" href="class_urho3_d_1_1_vector_buffer.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a> DecompressVectorBuffer(VectorBuffer&amp; src)</li>
 <li>bool Equals(float lhs, float rhs)</li>
 <li>void ErrorDialog(const String title, const String message)</li>
@@ -6815,11 +6818,11 @@ Global functions</h2>
 <li>void PrintLine(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> str, bool error = false)</li>
 <li>int Rand()</li>
 <li>float RandStandardNormal()</li>
-<li>float Random(float range)</li>
 <li>float Random(float min, float max)</li>
+<li>float Random(float range)</li>
 <li>float Random()</li>
-<li>int RandomInt(int min, int max)</li>
 <li>int RandomInt(int range)</li>
+<li>int RandomInt(int min, int max)</li>
 <li>float RandomNormal(float meanValue, float variance)</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> RemoveTrailingSlash(const String pathName)</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> ReplaceExtension(const String fullPath, const String newExtension)</li>
@@ -6830,8 +6833,8 @@ Global functions</h2>
 <li>float Sign(float value)</li>
 <li>float Sin(float angle)</li>
 <li>float SmoothStep(float lhs, float rhs, float t)</li>
-<li>void SubscribeToEvent(void* sender, const String eventName, const String functionName)</li>
 <li>void SubscribeToEvent(const String eventName, const String functionName)</li>
+<li>void SubscribeToEvent(void* sender, const String eventName, const String functionName)</li>
 <li>float Tan(float angle)</li>
 <li>bool ToBool(const String source)</li>
 <li><a class="el" href="class_urho3_d_1_1_color.html" title="RGBA color.">Color</a> ToColor(const String source)</li>
@@ -6853,8 +6856,8 @@ Global functions</h2>
 <li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> ToVector3(const String source)</li>
 <li><a class="el" href="class_urho3_d_1_1_vector4.html" title="Four-dimensional vector.">Vector4</a> ToVector4(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> source, bool allowMissingCoords = false)</li>
 <li>void UnsubscribeFromAllEvents()</li>
-<li>void UnsubscribeFromEvent(void* sender, const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> eventName, const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> functionName = <a class="el" href="class_urho3_d_1_1_string.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>)</li>
 <li>void UnsubscribeFromEvent(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> eventName, const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> functionName = <a class="el" href="class_urho3_d_1_1_string.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>)</li>
+<li>void UnsubscribeFromEvent(void* sender, const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> eventName, const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> functionName = <a class="el" href="class_urho3_d_1_1_string.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>)</li>
 <li>void UnsubscribeFromEvents(void* sender)</li>
 </ul>
 <h2><a class="anchor" id="LuaScriptAPI_GlobalProperties"></a>
