@@ -35,7 +35,7 @@ group: HEAD
 </div><!--header-->
 <div class="contents">
 
-<p>3D rendering view. Includes the main view(s) and any auxiliary views, but not shadow cameras.  
+<p>Internal structure for 3D rendering work. Created for each backbuffer and texture viewport, but not for shadow cameras.  
  <a href="class_urho3_d_1_1_view.html#details">More...</a></p>
 
 <p><code>#include &lt;View.h&gt;</code></p>
@@ -124,15 +124,15 @@ const <a class="el" href="class_urho3_d_1_1_vector.html">Vector</a>&lt; <a class
 <tr class="separator:a874a9dcf069bcc62d02b108e99d4bf29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5121071c672db6986aa3fba4e116be0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5121071c672db6986aa3fba4e116be0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#ab5121071c672db6986aa3fba4e116be0">SetGlobalShaderParameters</a> ()</td></tr>
-<tr class="memdesc:ab5121071c672db6986aa3fba4e116be0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set global (per-frame) shader parameters. Called by <a class="el" href="struct_urho3_d_1_1_batch.html" title="Queued 3D geometry draw call.">Batch</a> and internally by <a class="el" href="class_urho3_d_1_1_view.html" title="3D rendering view. Includes the main view(s) and any auxiliary views, but not shadow cameras...">View</a>. <br/></td></tr>
+<tr class="memdesc:ab5121071c672db6986aa3fba4e116be0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set global (per-frame) shader parameters. Called by <a class="el" href="struct_urho3_d_1_1_batch.html" title="Queued 3D geometry draw call.">Batch</a> and internally by <a class="el" href="class_urho3_d_1_1_view.html" title="Internal structure for 3D rendering work. Created for each backbuffer and texture viewport...">View</a>. <br/></td></tr>
 <tr class="separator:ab5121071c672db6986aa3fba4e116be0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67a7530de1420cd59ebeea52cff0bce3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a67a7530de1420cd59ebeea52cff0bce3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#a67a7530de1420cd59ebeea52cff0bce3">SetCameraShaderParameters</a> (<a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *camera, bool setProjectionMatrix, bool overrideView)</td></tr>
-<tr class="memdesc:a67a7530de1420cd59ebeea52cff0bce3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set camera-specific shader parameters. Called by <a class="el" href="struct_urho3_d_1_1_batch.html" title="Queued 3D geometry draw call.">Batch</a> and internally by <a class="el" href="class_urho3_d_1_1_view.html" title="3D rendering view. Includes the main view(s) and any auxiliary views, but not shadow cameras...">View</a>. <br/></td></tr>
+<tr class="memdesc:a67a7530de1420cd59ebeea52cff0bce3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set camera-specific shader parameters. Called by <a class="el" href="struct_urho3_d_1_1_batch.html" title="Queued 3D geometry draw call.">Batch</a> and internally by <a class="el" href="class_urho3_d_1_1_view.html" title="Internal structure for 3D rendering work. Created for each backbuffer and texture viewport...">View</a>. <br/></td></tr>
 <tr class="separator:a67a7530de1420cd59ebeea52cff0bce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8780a9f8ed62181090adf6d0f71e2e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8780a9f8ed62181090adf6d0f71e2e8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#af8780a9f8ed62181090adf6d0f71e2e8">SetGBufferShaderParameters</a> (const <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a> &amp;texSize, const <a class="el" href="class_urho3_d_1_1_int_rect.html">IntRect</a> &amp;viewRect)</td></tr>
-<tr class="memdesc:af8780a9f8ed62181090adf6d0f71e2e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set G-buffer offset and inverse size shader parameters. Called by <a class="el" href="struct_urho3_d_1_1_batch.html" title="Queued 3D geometry draw call.">Batch</a> and internally by <a class="el" href="class_urho3_d_1_1_view.html" title="3D rendering view. Includes the main view(s) and any auxiliary views, but not shadow cameras...">View</a>. <br/></td></tr>
+<tr class="memdesc:af8780a9f8ed62181090adf6d0f71e2e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set G-buffer offset and inverse size shader parameters. Called by <a class="el" href="struct_urho3_d_1_1_batch.html" title="Queued 3D geometry draw call.">Batch</a> and internally by <a class="el" href="class_urho3_d_1_1_view.html" title="Internal structure for 3D rendering work. Created for each backbuffer and texture viewport...">View</a>. <br/></td></tr>
 <tr class="separator:af8780a9f8ed62181090adf6d0f71e2e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a95a6cd1c5c12a458fda4b38f873a334d"></a>
@@ -665,7 +665,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a3a7df857ddaa8c3e218c3645152dc23d inherit pro_attribs_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>3D rendering view. Includes the main view(s) and any auxiliary views, but not shadow cameras. </p>
+<div class="textblock"><p>Internal structure for 3D rendering work. Created for each backbuffer and texture viewport, but not for shadow cameras. </p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/View.h</li>
 <li>/home/travis/build/urho3d/Urho3D/Source/Engine/Graphics/View.cpp</li>

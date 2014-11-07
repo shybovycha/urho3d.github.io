@@ -101,6 +101,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_viewport.html#aa09a004f072d387b6c57474f3b2229a7">GetCamera</a> () const </td></tr>
 <tr class="memdesc:aa09a004f072d387b6c57474f3b2229a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return camera. <br/></td></tr>
 <tr class="separator:aa09a004f072d387b6c57474f3b2229a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad37817ba2390e7c3deeccdb2bbc5d703"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad37817ba2390e7c3deeccdb2bbc5d703"></a>
+<a class="el" href="class_urho3_d_1_1_view.html">View</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_viewport.html#ad37817ba2390e7c3deeccdb2bbc5d703">GetView</a> () const </td></tr>
+<tr class="memdesc:ad37817ba2390e7c3deeccdb2bbc5d703"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the internal rendering structure. May be null if the viewport has not been rendered yet. <br/></td></tr>
+<tr class="separator:ad37817ba2390e7c3deeccdb2bbc5d703"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b11a34faeae6959741dd919ed7ed3a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b11a34faeae6959741dd919ed7ed3a4"></a>
 const <a class="el" href="class_urho3_d_1_1_int_rect.html">IntRect</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_viewport.html#a5b11a34faeae6959741dd919ed7ed3a4">GetRect</a> () const </td></tr>
 <tr class="memdesc:a5b11a34faeae6959741dd919ed7ed3a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return rectangle. <br/></td></tr>
@@ -123,6 +127,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a03a1325f33ff1ef8b3af90fade4bdbc9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a03a1325f33ff1ef8b3af90fade4bdbc9"></a>
 <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ScreenToWorldPoint</b> (int x, int y, float depth) const </td></tr>
 <tr class="separator:a03a1325f33ff1ef8b3af90fade4bdbc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90420e62386ac8b50fd35d33a07784b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a90420e62386ac8b50fd35d33a07784b0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_viewport.html#a90420e62386ac8b50fd35d33a07784b0">AllocateView</a> ()</td></tr>
+<tr class="memdesc:a90420e62386ac8b50fd35d33a07784b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate the view structure. Called by <a class="el" href="class_urho3_d_1_1_renderer.html" title="High-level rendering subsystem. Manages drawing of 3D views.">Renderer</a>. <br/></td></tr>
+<tr class="separator:a90420e62386ac8b50fd35d33a07784b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a95a6cd1c5c12a458fda4b38f873a334d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a95a6cd1c5c12a458fda4b38f873a334d">Object</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -278,6 +286,10 @@ Private Attributes</h2></td></tr>
 <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_render_path.html">RenderPath</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_viewport.html#aee075d03a4b3ec13a0328b96eb1be5be">renderPath_</a></td></tr>
 <tr class="memdesc:aee075d03a4b3ec13a0328b96eb1be5be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rendering path. <br/></td></tr>
 <tr class="separator:aee075d03a4b3ec13a0328b96eb1be5be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2824ab5524aebc02eba89c92efbef09d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2824ab5524aebc02eba89c92efbef09d"></a>
+<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_view.html">View</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_viewport.html#a2824ab5524aebc02eba89c92efbef09d">view_</a></td></tr>
+<tr class="memdesc:a2824ab5524aebc02eba89c92efbef09d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal rendering structure. <br/></td></tr>
+<tr class="separator:a2824ab5524aebc02eba89c92efbef09d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae77cb162865a6fa07a3380ba3e169a19"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae77cb162865a6fa07a3380ba3e169a19"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_viewport.html#ae77cb162865a6fa07a3380ba3e169a19">drawDebug_</a></td></tr>
 <tr class="memdesc:ae77cb162865a6fa07a3380ba3e169a19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Debug draw flag. <br/></td></tr>
