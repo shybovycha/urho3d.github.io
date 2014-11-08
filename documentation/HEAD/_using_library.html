@@ -104,7 +104,7 @@ Using pkg-config instead of CMake</h3>
 <div class="line"><span class="preprocessor"></span>export CC=${MINGW_PREFIX}-c++</div>
 <div class="line">export PKG_CONFIG_SYSROOT_DIR=${MINGW_ROOT}</div>
 <div class="line">export PKG_CONFIG_PATH=${MINGW_ROOT}/usr/local/lib/pkgconfig</div>
-<div class="line">$CC -o Urho3DPlayer.exe Urho3DPlayer.cpp `pkg-config --cflags --libs Urho3D |sed <span class="stringliteral">&#39;s/-lUrho3D/-lUrho3D_d.dll/g&#39;</span>`</div>
+<div class="line">$CC -o Urho3DPlayer_d.exe Urho3DPlayer.cpp `pkg-config --cflags --libs Urho3D |sed <span class="stringliteral">&#39;s/-lUrho3D/-lUrho3D_d.dll/g&#39;</span>`</div>
 </div><!-- fragment --><h2><a class="anchor" id="Scaffolding"></a>
 Project scaffolding</h2>
 <p>On Unix-like build/host system (Linux, Mac, Raspberry-Pi) with <a href="https://rubygems.org/gems/rake">Rake</a> ruby gem installed, you can quickly setup all the above by simply using the 'scaffolding' rake task. </p>
