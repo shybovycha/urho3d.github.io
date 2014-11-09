@@ -24,7 +24,7 @@
           <ul class="{{ platform[0] }} {{ arch[0] }} binary-package">
             {% for artifact in arch[1] %}
               {% unless page.excluded_artifacts contains artifact %}
-                <li class="{{ arch[0] }} {{ artifact |split:'.' |first }}"><a href="https://downloads.sourceforge.net/project/urho3d/Urho3D/{{ release }}/Urho3D-{{ release }}-{{ platform[0] }}-{% if arch[0] == '64-bit' %}64bit-{% endif %}{{ artifact }}" target="_blank"><i class="fa fa-file-archive-o"></i>&nbsp;&nbsp;{{ artifact }}</a></li>
+                <li class="{{ arch[0] }} {{ artifact |split:'.' |first |split:'-' |first }}"><a href="https://downloads.sourceforge.net/project/urho3d/Urho3D/{{ release }}/Urho3D-{{ release }}-{{ platform[0] }}-{% if arch[0] == '64-bit' %}64bit-{% endif %}{{ artifact }}" target="_blank"><i class="fa fa-file-archive-o"></i>&nbsp;&nbsp;{{ artifact }}</a></li>
               {% endunless %}
             {% endfor %}
           </ul>
