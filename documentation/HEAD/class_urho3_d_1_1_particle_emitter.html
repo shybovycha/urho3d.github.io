@@ -83,6 +83,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_particle_emitter.html#aad036d748e8fcd0c5aced83a6b0c1c76">SetEmitting</a> (bool enable)</td></tr>
 <tr class="memdesc:aad036d748e8fcd0c5aced83a6b0c1c76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether should be emitting. If the state was changed, also resets the emission period timer. <br/></td></tr>
 <tr class="separator:aad036d748e8fcd0c5aced83a6b0c1c76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f10a06943f22e5ccaa4be0d74eaa162"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f10a06943f22e5ccaa4be0d74eaa162"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_particle_emitter.html#a9f10a06943f22e5ccaa4be0d74eaa162">SetSerializeParticles</a> (bool enable)</td></tr>
+<tr class="memdesc:a9f10a06943f22e5ccaa4be0d74eaa162"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether particles should be serialized. Default true, set false to reduce scene file size. <br/></td></tr>
+<tr class="separator:a9f10a06943f22e5ccaa4be0d74eaa162"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac61e2bdd8719946a586ae73f1082f2f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac61e2bdd8719946a586ae73f1082f2f2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_particle_emitter.html#ac61e2bdd8719946a586ae73f1082f2f2">ResetEmissionTimer</a> ()</td></tr>
 <tr class="memdesc:ac61e2bdd8719946a586ae73f1082f2f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the emission period timer. <br/></td></tr>
@@ -111,6 +115,10 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_particle_emitter.html#a26f628d83e1754fd7058aec1e03e8105">IsEmitting</a> () const </td></tr>
 <tr class="memdesc:a26f628d83e1754fd7058aec1e03e8105"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether is currently emitting. <br/></td></tr>
 <tr class="separator:a26f628d83e1754fd7058aec1e03e8105"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a395f61158125afa65314a5ed3f018940"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a395f61158125afa65314a5ed3f018940"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_particle_emitter.html#a395f61158125afa65314a5ed3f018940">GetSerializeParticles</a> () const </td></tr>
+<tr class="memdesc:a395f61158125afa65314a5ed3f018940"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether particles are to be serialized. <br/></td></tr>
+<tr class="separator:a395f61158125afa65314a5ed3f018940"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f96f37f8ad13cd88dab71779f03d542"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f96f37f8ad13cd88dab71779f03d542"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_particle_emitter.html#a2f96f37f8ad13cd88dab71779f03d542">SetEffectAttr</a> (<a class="el" href="struct_urho3_d_1_1_resource_ref.html">ResourceRef</a> value)</td></tr>
 <tr class="memdesc:a2f96f37f8ad13cd88dab71779f03d542"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set particles effect attribute. <br/></td></tr>
@@ -125,8 +133,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:ad9d9122ffc8b3e2528e11d603d175aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5db8f7af17342ff549eed858a4ba4990"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5db8f7af17342ff549eed858a4ba4990"></a>
 <a class="el" href="class_urho3_d_1_1_vector.html">VariantVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_particle_emitter.html#a5db8f7af17342ff549eed858a4ba4990">GetParticlesAttr</a> () const </td></tr>
-<tr class="memdesc:a5db8f7af17342ff549eed858a4ba4990"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return particles attribute. <br/></td></tr>
+<tr class="memdesc:a5db8f7af17342ff549eed858a4ba4990"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return particles attribute. Returns particle amount only if particles are not to be serialized. <br/></td></tr>
 <tr class="separator:a5db8f7af17342ff549eed858a4ba4990"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a616e6bbad47587c0c32c379a919298c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a616e6bbad47587c0c32c379a919298c1"></a>
+<a class="el" href="class_urho3_d_1_1_vector.html">VariantVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_particle_emitter.html#a616e6bbad47587c0c32c379a919298c1">GetParticleBillboardsAttr</a> () const </td></tr>
+<tr class="memdesc:a616e6bbad47587c0c32c379a919298c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return billboards attribute. Returns billboard amount only if particles are not to be serialized. <br/></td></tr>
+<tr class="separator:a616e6bbad47587c0c32c379a919298c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_billboard_set"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_billboard_set')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_billboard_set.html">Urho3D::BillboardSet</a></td></tr>
 <tr class="memitem:a2079979a4db32da8a41e748893187e8a inherit pub_methods_class_urho3_d_1_1_billboard_set"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2079979a4db32da8a41e748893187e8a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_billboard_set.html#a2079979a4db32da8a41e748893187e8a">BillboardSet</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -1024,6 +1036,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_particle_emitter.html#a22b556ce95550b8b6bdb0f2601ee32bb">needUpdate_</a></td></tr>
 <tr class="memdesc:a22b556ce95550b8b6bdb0f2601ee32bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Need update flag. <br/></td></tr>
 <tr class="separator:a22b556ce95550b8b6bdb0f2601ee32bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a497b7e1b76d81d7cfd4a09185aed6a58"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a497b7e1b76d81d7cfd4a09185aed6a58"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_particle_emitter.html#a497b7e1b76d81d7cfd4a09185aed6a58">serializeParticles_</a></td></tr>
+<tr class="memdesc:a497b7e1b76d81d7cfd4a09185aed6a58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize particles flag. <br/></td></tr>
+<tr class="separator:a497b7e1b76d81d7cfd4a09185aed6a58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
