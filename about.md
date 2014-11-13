@@ -104,6 +104,7 @@ Though Urho3D already contains several useful features and implements a framewor
 - celeron55
 - hdunderscore
 - mightyCelu
+- nemerle
 - ninjastone
 - rasteron
 - reattiva
