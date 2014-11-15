@@ -418,6 +418,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_input.html#a217821ddb7741352962e19c43bf9c148">ResetTouches</a> ()</td></tr>
 <tr class="memdesc:a217821ddb7741352962e19c43bf9c148"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear touch states and send touch end events. <br/></td></tr>
 <tr class="separator:a217821ddb7741352962e19c43bf9c148"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0671358fe8e978e96b1dafe7ccb456ce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0671358fe8e978e96b1dafe7ccb456ce"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_input.html#a0671358fe8e978e96b1dafe7ccb456ce">GetTouchIndexFromID</a> (int touchID)</td></tr>
+<tr class="memdesc:a0671358fe8e978e96b1dafe7ccb456ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the index of a touch based on the touch ID. <br/></td></tr>
+<tr class="separator:a0671358fe8e978e96b1dafe7ccb456ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3aa1eba7f93eff398596fb9af66148a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3aa1eba7f93eff398596fb9af66148a9"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_input.html#a3aa1eba7f93eff398596fb9af66148a9">PopTouchIndex</a> ()</td></tr>
+<tr class="memdesc:a3aa1eba7f93eff398596fb9af66148a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used internally to return and remove the next available touch index. <br/></td></tr>
+<tr class="separator:a3aa1eba7f93eff398596fb9af66148a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3eb63e531e66c25887f5f45e933caee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad3eb63e531e66c25887f5f45e933caee"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_input.html#ad3eb63e531e66c25887f5f45e933caee">PushTouchIndex</a> (int touchID)</td></tr>
+<tr class="memdesc:ad3eb63e531e66c25887f5f45e933caee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push a touch index back into the list of available when finished with it. <br/></td></tr>
+<tr class="separator:ad3eb63e531e66c25887f5f45e933caee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62f0700878de37c1964cc3f057287718"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62f0700878de37c1964cc3f057287718"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_input.html#a62f0700878de37c1964cc3f057287718">SendInputFocusEvent</a> ()</td></tr>
 <tr class="memdesc:a62f0700878de37c1964cc3f057287718"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send an input focus or window minimization change event. <br/></td></tr>
@@ -481,6 +493,14 @@ Private Attributes</h2></td></tr>
 <a class="el" href="class_urho3_d_1_1_hash_map.html">HashMap</a>&lt; int, <a class="el" href="struct_urho3_d_1_1_touch_state.html">TouchState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_input.html#a4086d7000999d4a1fd8697cea8e49653">touches_</a></td></tr>
 <tr class="memdesc:a4086d7000999d4a1fd8697cea8e49653"><td class="mdescLeft">&#160;</td><td class="mdescRight">Active finger touches. <br/></td></tr>
 <tr class="separator:a4086d7000999d4a1fd8697cea8e49653"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f96022bd4221a6198788133fd64e56f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f96022bd4221a6198788133fd64e56f"></a>
+<a class="el" href="class_urho3_d_1_1_list.html">List</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_input.html#a4f96022bd4221a6198788133fd64e56f">availableTouchIDs_</a></td></tr>
+<tr class="memdesc:a4f96022bd4221a6198788133fd64e56f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_list.html" title="Doubly-linked list template class.">List</a> that maps between event touch IDs and normalised touch IDs. <br/></td></tr>
+<tr class="separator:a4f96022bd4221a6198788133fd64e56f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc9b896b9ef29f12e27f8563530d3513"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc9b896b9ef29f12e27f8563530d3513"></a>
+<a class="el" href="class_urho3_d_1_1_hash_map.html">HashMap</a>&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_input.html#abc9b896b9ef29f12e27f8563530d3513">touchIDMap_</a></td></tr>
+<tr class="memdesc:abc9b896b9ef29f12e27f8563530d3513"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mapping of touch indicies. <br/></td></tr>
+<tr class="separator:abc9b896b9ef29f12e27f8563530d3513"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5972050012f6676cd6cce4c867775a5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5972050012f6676cd6cce4c867775a5f"></a>
 <a class="el" href="class_urho3_d_1_1_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_input.html#a5972050012f6676cd6cce4c867775a5f">textInput_</a></td></tr>
 <tr class="memdesc:a5972050012f6676cd6cce4c867775a5f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> for text input. <br/></td></tr>
@@ -657,7 +677,7 @@ Here is the call graph for this function:</div>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_urho3_d_1_1_input_a0131572cfae7e4fc8d150c6efae41f72_cgraph.svg" width="100%" height="456"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_urho3_d_1_1_input_a0131572cfae7e4fc8d150c6efae41f72_cgraph.svg" width="100%" height="540"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </p>
