@@ -2121,6 +2121,7 @@ Classes</h2>
 <li>void SetToggleFullscreen(bool enable)</li>
 <li>void SetMouseVisible(bool enable)</li>
 <li>void SetMouseGrabbed(bool grab)</li>
+<li>void SetMouseMode(MouseMode mode)</li>
 <li>int AddScreenJoystick(XMLFile* layoutFile = 0, XMLFile* styleFile = 0)</li>
 <li>bool RemoveScreenJoystick(int id)</li>
 <li>void SetScreenJoystickVisible(int id, bool enable)</li>
@@ -2167,6 +2168,7 @@ Classes</h2>
 <li>bool GetTouchEmulation() const</li>
 <li>bool IsMouseVisible() const</li>
 <li>bool IsMouseGrabbed() const</li>
+<li>MouseMode GetMouseMode() const</li>
 <li>bool HasFocus()</li>
 <li>bool IsMinimized() const</li>
 </ul>
@@ -6517,6 +6519,12 @@ Enumerations</h2>
 <li>int LM_DEFAULT</li>
 <li>int LM_FORCE_LOOPED</li>
 <li>int LM_FORCE_CLAMPED</li>
+</ul>
+<h4>MouseMode</h4>
+<ul>
+<li>int MM_ABSOLUTE</li>
+<li>int MM_RELATIVE</li>
+<li>int MM_WRAP</li>
 </ul>
 <h4>Orientation</h4>
 <ul>
