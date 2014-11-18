@@ -17,7 +17,166 @@ group: HEAD
 <div class="title">History </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>V1.31</p>
+<div class="textblock"><p>V1.32</p>
+<ul>
+<li>Finalized Urho2D functionality, including 2D physics using Box2D, sprite animation and tile maps</li>
+<li>Threaded background resource loading. Must be manually triggered via ResourceCache or by loading a scene asynchronously</li>
+<li>Attribute and material shader parameter animation system</li>
+<li>Customizable onscreen joystick for mobile platforms. Used in examples</li>
+<li>Touch camera control in examples on mobile platforms</li>
+<li>Touch emulation by mouse</li>
+<li>Multi-touch <a class="el" href="class_urho3_d_1_1_u_i.html" title="UI subsystem. Manages the graphical user interface.">UI</a> drag support</li>
+<li>Consistent touch ID's across platforms</li>
+<li>Absolute, relative and wrap modes for the operating system mouse cursor</li>
+<li>Support for connecting &amp; removing joysticks during runtime</li>
+<li>Negative light &amp; light brightness multiplier support</li>
+<li>Transform spaces for Node's translate, rotate &amp; lookat functions</li>
+<li>Scrollable console</li>
+<li>Selectable console command interpreter (AngelScript, Lua, FileSystem)</li>
+<li>Touch scroll in ScrollView &amp; ListView</li>
+<li>UI layout flex scale mode</li>
+<li>Custom sound streams from C++</li>
+<li>LogicComponent C++ base class with virtual update functions similar to ScriptObject</li>
+<li>Signed distance field font support</li>
+<li>JSON data support</li>
+<li>Matrix types in Variant &amp; XML data</li>
+<li>Intermediate rendertarget refactoring: use viewport size to allow consistent UV addressing</li>
+<li>ParticleEmitter refactoring: use ParticleEffect resource for consistency with ParticleEmitter2D and more optimal net replication</li>
+<li>Expose LZ4 compression functions</li>
+<li>Support various cube map layouts contained in a single image file</li>
+<li>Configurable Bullet physics stepping behavior. Can use elapsed time limiting, or a variable timestep to use less CPU</li>
+<li>Default construct math objects to zero / identity</li>
+<li>Mandatory registration for remote events. Check allowed event only when receiving</li>
+<li>Teapot &amp; torus builtin objects</li>
+<li>FXAA 3.11 shader</li>
+<li>Triangle rendering in DebugRenderer (more efficient than 3 lines)</li>
+<li>Material/texture quality and anisotropy as command line options and engine startup parameters</li>
+<li>Spline math class, which the SplinePath component uses</li>
+<li>Console auto-show on error</li>
+<li>DrawableProxy2D system for optimizing 2D sprite drawing</li>
+<li>Possibility to decouple BorderImage border UV's from element size</li>
+<li>Editor &amp; NinjaSnowWar resources split into subdirectories</li>
+<li>UI hover start &amp; end events</li>
+<li>UI drag cancel by pressing ESC</li>
+<li>Allowed screen orientations can be controlled. Effective only on iOS</li>
+<li>Rendering sceneless renderpaths</li>
+<li>Define individual material passes as SM3-only</li>
+<li>Support for copying ListView text to system clipboard</li>
+<li>Async system command execution</li>
+<li>Generic attribute access for Lua script objects</li>
+<li>Touch gesture recording and load/save</li>
+<li>AssetImporter option to allow multiple import of identical meshes</li>
+<li>Automatically create a physics world component to scene when necessary</li>
+<li>GetSubimage function in the Image class</li>
+<li>Possibility to clone existing components from another scene node</li>
+<li>Improve terrain rendering on mobile devices</li>
+<li>Refactoring of camera facing modes in BillboardSet &amp; Text3D</li>
+<li>Additive alpha techniques for particle rendering</li>
+<li>Possibility to use CustomGeometry component for physics triangle mesh collision</li>
+<li>Access to 2D node coordinates for convenience when using 2D graphics features</li>
+<li>Save embedded textures in AssetImporter</li>
+<li>Use best matching fullscreen resolution if no exact match</li>
+<li>Use SDL_iPhoneSetAnimationCallback instead of blocking main loop</li>
+<li>Allow fast partial terrain updates by modifying the heightmap image</li>
+<li>API for setting image pixels by integer colors</li>
+<li>Refactor to remove the separate ShortStringHash class</li>
+<li>Deep clone functionality in Model resource</li>
+<li>Zone can define a texture which is available to shaders. Not used by default</li>
+<li>Allow logging from outside the main thread</li>
+<li>Log warnings for improper attempts to use events from outside main thread</li>
+<li>Improved CustomGeometry dynamic updates</li>
+<li>ConvexCast function in PhysicsWorld</li>
+<li>Screen to world space conversion functions in Viewport class</li>
+<li>Allow sending client rotation to server in addition to position</li>
+<li>Allow accessing and modifying the engine's next timestep</li>
+<li>DeepEnabled mechanism for disabling node or <a class="el" href="class_urho3_d_1_1_u_i.html" title="UI subsystem. Manages the graphical user interface.">UI</a> element hierarchies and then restoring their own enabled state</li>
+<li>Allow to prevent closing a modal window with ESC</li>
+<li>Per-viewport control of whether debug geometry should render</li>
+<li>Optional interception of resource requests</li>
+<li>Readded optional slow &amp; robust mode to AreaAllocator</li>
+<li>Optionally disable RigidBody mass update to allow fast adding of several CollisionShape components to the same node</li>
+<li>Runtime synchronization of resource packages from server to client</li>
+<li>Disable multisample antialiasing momentarily during rendering. Used by default for <a class="el" href="class_urho3_d_1_1_u_i.html" title="UI subsystem. Manages the graphical user interface.">UI</a> &amp; quad rendering</li>
+<li>Glyph offset support in Font class</li>
+<li>Font class internal refactoring</li>
+<li>Allow to create AngelScript script objects by specifying the interface it implements</li>
+<li>Window position startup parameters</li>
+<li>Functions to get time since epoch &amp; modify file's last modified time</li>
+<li>Optionally auto-disable child elements of a scroll view when touch scrolling</li>
+<li>Allocate views permanently per viewport to allow querying for drawables, lights etc. reliably</li>
+<li>Allow to specify material techniques/passes that should not be used on mobile devices</li>
+<li>Reduced default shadow mapping issues on mobile devices</li>
+<li>Minor rendering optimizations</li>
+<li>Build system: possibility to build Urho3D without networking or 2D graphics functionality</li>
+<li>Build system: improved generated scripting documentation</li>
+<li>Build system: improved support for IDE's in CMake scripts</li>
+<li>Build system: support up to Android NDK r10c</li>
+<li>Build system: numerous other improvements</li>
+<li>Editor: resource browser</li>
+<li>Editor: spawn window for random-generating objects</li>
+<li>Editor: allow either zoom or move from mouse wheel</li>
+<li>Editor: locate object by doubleclicking node in hierarchy</li>
+<li>Editor: take screenshots with F11, camera panning</li>
+<li>Editor: button in value edit fields that allows editing by mouse drag</li>
+<li>Updated SDL to 2.0.3.</li>
+<li>Updated AngelScript to 2.29.1</li>
+<li>Updated assimp</li>
+<li>Updated Recast/Detour</li>
+<li>Fix MinGW build issues</li>
+<li>Fix techniques referring to wrong shaders</li>
+<li>Fix Node::LookAt() misbehaving in certain situations</li>
+<li>Fix resize event not reporting correct window size if window is maximized at start</li>
+<li>Fix PhysicsWorld::GetRigidBodies() not using collision mask</li>
+<li>Fix zone misassignment issues</li>
+<li>Fix Lua not returning correctly typed object for UIElement::GetChild() &amp; UIElement::GetParent()</li>
+<li>Fix uninitialized variables in 2D physics components</li>
+<li>Fix quad rendering not updating elapsed time uniform</li>
+<li>Fix forward rendering normal mapping issues by switching calculations back to world space</li>
+<li>Fix wrong logging level on Android</li>
+<li>Fix multiple subscribes to same event on Lua</li>
+<li>Fix missing Octree update in headless mode</li>
+<li>Fix crash when using FreeType to access font kerning tables</li>
+<li>Fix ReadString() endless loop if the string does not end</li>
+<li>Fix shadow mapping on OS X systems with Intel GPU</li>
+<li>Fix manually positioned bones being serialized properly</li>
+<li>Fix file checksum calculation on Android</li>
+<li>Fix accelerometer input on Android when device is flipped 180 degrees</li>
+<li>Fix missing or misbehaving Lua bindings</li>
+<li>Fix crashes in physics collision handling when objects are removed during it</li>
+<li>Fix shader live reload if previous compile resulted in error</li>
+<li>Fix named manual textures not recreating their GPU resource after device loss</li>
+<li>Fix skeleton-only model not importing in AssetImporter</li>
+<li>Fix terrain raycast returning incorrect position/normal</li>
+<li>Fix animation keyframe timing in AssetImporter if start time is not 0</li>
+<li>Fix storing Image resources to memory unnecessarily during cube/3D texture loading</li>
+<li>Fix to node transform dirtying mechanism and the TransformChanged() script function</li>
+<li>Fix returned documents directory not being writable on iOS</li>
+<li>Fix click to emptiness not closing a menu</li>
+<li>Fix FileWatcher notifying when file was still being saved. By default delay notification 1 second</li>
+<li>Fix .txml import in the editor</li>
+<li>Fix erroneous raycast to triangles behind the ray</li>
+<li>Fix crash when multiple AnimatedModels exist in a node and the master model is destroyed</li>
+<li>Fix missing Matrix4 * Matrix3x4 operator in script</li>
+<li>Fix various compile warnings that leak to applications using Urho3D</li>
+<li>Fix DebugHud update possibly being late one frame</li>
+<li>Fix various macros not being usable outside Urho3D namespace</li>
+<li>Fix erroneous layout with wordwrap text elements</li>
+<li>Fix debug geometry rendering on flipped OpenGL viewports</li>
+<li>Fix kNet debug mode assert with zero sized messages</li>
+<li>Fix not being able to stop and restart kNet server</li>
+<li>Fix AreaAllocator operation</li>
+<li>Fix possible crash with parented rigidbodies</li>
+<li>Fix missing network delta update if only user variables in a Node have been modified</li>
+<li>Fix to only search for June 2010 DirectX SDK, as earlier SDK's will fail</li>
+<li>Fix wrong search order of added resource paths</li>
+<li>Fix global anisotropic filtering on OpenGL</li>
+<li>Fix animation triggers not working if trigger is at animation end</li>
+<li>Fix CopyFramebuffer shader name not being used correctly on case-sensitive systems</li>
+<li>Fix UI elements not receiving input when the window containing them is partially outside the screen to the left</li>
+<li>Fix occlusion rendering not working with counterclockwise triangles</li>
+<li>Fix material shader parameter animations going out of sync with other animations when the object using the material is not in view</li>
+</ul>
+<p>V1.31</p>
 <ul>
 <li>Extensive build system improvements, especially for using Urho3D as a library in an external project.</li>
 <li>LuaJIT support.</li>
