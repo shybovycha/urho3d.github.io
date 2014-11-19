@@ -100,7 +100,7 @@ Android build process</h2>
 <p>After the commands finish successfully, the APK should have been generated to the build's "bin" subdirectory, from where it can be installed on a device or an emulator. The command "ant installd" can be used for this.</p>
 <p>For a release build, use the "ant release" command instead of "ant debug" and follow the Android SDK instructions on how to sign your APK properly.</p>
 <p>By default the Android package for Urho3D is com.googlecode.urho3d. For a real application you must replace this with your own package name. The Urho3D activity subclasses the SDLActivity from org.libsdl.app package, whose name (or the JNI code from SDL library) does not have to be changed.</p>
-<p>Note that the native code is built by default for armeabi-v7a ABI. To make your program compatible also with old Android devices, build also an armeabi version by executing the CMake batch file again with the parameter -DANDROID_ABI=armeabi added, then execute make again in the build directory.</p>
+<p>Note that the native code is built by default for armeabi-v7a ABI. To make your program compatible also with old Android devices, build also an armeabi version by executing the CMake batch file again with the build option "-DANDROID_ABI=armeabi" added, then execute make again in the build directory. Similarly, the native code can be built using 64-bit ABI by changing the value of this build option. See <a class="el" href="_building.html#Build_Options">Build options</a> for all the possible values.</p>
 <p>You can also build and deploy using Eclipse IDE with ADT plugin. To do that, after setting the ANDROID_NDK environment variable then run cmake_eclipse.sh. Import "Existing Android Code into Workspace" from the CMake generated Eclipse's project found in the android-Build directory. Switch Eclipse IDE to use Java Perspective. Update project properties to choose the desired Android API target and that's it. Just choose "Run" to let ADT automatically build and deploy the application to Android (virtual) device.</p>
 <h2><a class="anchor" id="Building_Ios"></a>
 iOS build process</h2>
@@ -198,13 +198,15 @@ Build options</h2>
 <tr>
 <td>URHO3D_SCP_TO_TARGET </td><td>-</td><td>Use scp to transfer executables to target system (non-Android cross-compiling build only), SSH digital key must be setup first for this to work, typical value has a pattern of usr:remote-loc </td></tr>
 <tr>
+<td>URHO3D_NDK_GDB </td><td>0</td><td>Enable ndk-gdb for debugging (Android build only) </td></tr>
+<tr>
 <td>CMAKE_BUILD_TYPE </td><td>*</td><td>Specify CMake build configuration to be generated (Makefile generator only), possible values are Release (*default), Debug, and RelWithDebInfo </td></tr>
 <tr>
 <td>CMAKE_OSX_DEPLOYMENT_TARGET</td><td>-</td><td>Specify Mac OS X deployment target (OSX build only); default to current running OS X if not specified </td></tr>
 <tr>
 <td>IPHONEOS_DEPLOYMENT_TARGET</td><td>-</td><td>Specify iPhone OS deployment target (iOS build only); default to latest installed iOS SDK if not specified </td></tr>
 <tr>
-<td>ANDROID_ABI </td><td>*</td><td>Specify target ABI (Android build only), possible values are armeabi-v7a (*default) and armeabi </td></tr>
+<td>ANDROID_ABI </td><td>*</td><td>Specify target ABI (Android build only), possible values are armeabi, armeabi-v7a (*default), armeabi-v7a with NEON, armeabi-v7a with VFPV3, armeabi-v6 with VFP, arm64-v8a, x86, and x86_64 </td></tr>
 </table>
 <p>Note that build option values specified via command line are cached by CMake. The cached values will be used by CMake in the subsequent invocation. That is, the same build options are not required to be specified again and again. Once a non-default build option value is being cached, it can only be reverted back to its default value by explicitly setting it via command line. That is, simply by NOT passing the corresponding build option would not work. One way to revert all the build options to their default values is by clearing the CMake cache by calling cmake_clean.bat or cmake_clean.sh.</p>
 <h2><a class="anchor" id="Using_CMake_GUI"></a>
@@ -236,7 +238,7 @@ Using cmake-gui to configure and generate Urho3D project file</h2>
 <li>In the Urho3D project root directory, invoke "cmake-gui Source".</li>
 <li>Set the build directory name.</li>
 <li>Configure and update the build options as many times as necessary until there are no more new options in red. For the first configuration, choose the generator you like to use. Click the Group check box to group the build options.<ul>
-<li>In the Ungrouped Entries: only check one of these options (ANDROID, IOS, RASPI) when you target the platform, leave them unchecked for dekstop/native build.</li>
+<li>In the Ungrouped Entries: check IOS option when targeting it on Xcode.</li>
 <li>In the URHO3D group: check any of the options you desire. Some of the options when checked may cause new options to be made available in the subsequent configuration loop.</li>
 </ul>
 </li>
