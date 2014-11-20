@@ -2119,7 +2119,7 @@ Classes</h2>
 <p>Methods:</p>
 <ul>
 <li>void SetToggleFullscreen(bool enable)</li>
-<li>void SetMouseVisible(bool enable)</li>
+<li>void SetMouseVisible(bool enable, bool suppressEvent = false)</li>
 <li>void SetMouseGrabbed(bool grab)</li>
 <li>void SetMouseMode(MouseMode mode)</li>
 <li>int AddScreenJoystick(XMLFile* layoutFile = 0, XMLFile* styleFile = 0)</li>
@@ -2184,6 +2184,7 @@ Classes</h2>
 <li>unsigned numJoysticks (readonly)</li>
 <li>bool toggleFullscreen (readonly)</li>
 <li>bool screenKeyboardSupport (readonly)</li>
+<li>MouseMode mouseMode</li>
 <li>bool screenKeyboardVisible</li>
 <li>bool touchEmulation</li>
 <li>bool mouseVisible</li>

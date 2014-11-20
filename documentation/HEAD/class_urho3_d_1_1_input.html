@@ -69,10 +69,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_input.html#a1744c2eeeb52d1722d3c16e208c051c1">SetToggleFullscreen</a> (bool enable)</td></tr>
 <tr class="memdesc:a1744c2eeeb52d1722d3c16e208c051c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether ALT-ENTER fullscreen toggle is enabled. <br/></td></tr>
 <tr class="separator:a1744c2eeeb52d1722d3c16e208c051c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a8edc8ee7876348bfa4e95f9d901805"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5a8edc8ee7876348bfa4e95f9d901805"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_input.html#a5a8edc8ee7876348bfa4e95f9d901805">SetMouseVisible</a> (bool enable)</td></tr>
-<tr class="memdesc:a5a8edc8ee7876348bfa4e95f9d901805"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether the operating system mouse cursor is visible. When not visible (default), is kept centered to prevent leaving the window. <br/></td></tr>
-<tr class="separator:a5a8edc8ee7876348bfa4e95f9d901805"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42f016907a65f849a98e0ad9c24d97ee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42f016907a65f849a98e0ad9c24d97ee"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_input.html#a42f016907a65f849a98e0ad9c24d97ee">SetMouseVisible</a> (bool enable, bool suppressEvent=false)</td></tr>
+<tr class="memdesc:a42f016907a65f849a98e0ad9c24d97ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether the operating system mouse cursor is visible. When not visible (default), is kept centered to prevent leaving the window. Mouse visiblility event can be suppressed&ndash; this also recalls any unsuppressed SetMouseVisible which can be returned by <a class="el" href="class_urho3_d_1_1_input.html#ad12d5ff3951c02df21943b9c4284e30b" title="Reset last mouse visibilty that was not suppressed in SetMouseVisible.">ResetMouseVisible()</a>. <br/></td></tr>
+<tr class="separator:a42f016907a65f849a98e0ad9c24d97ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad12d5ff3951c02df21943b9c4284e30b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad12d5ff3951c02df21943b9c4284e30b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_input.html#ad12d5ff3951c02df21943b9c4284e30b">ResetMouseVisible</a> ()</td></tr>
+<tr class="memdesc:ad12d5ff3951c02df21943b9c4284e30b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset last mouse visibilty that was not suppressed in SetMouseVisible. <br/></td></tr>
+<tr class="separator:ad12d5ff3951c02df21943b9c4284e30b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac28a5fe115e791f3d8ceb695f674914c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac28a5fe115e791f3d8ceb695f674914c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_input.html#ac28a5fe115e791f3d8ceb695f674914c">SetMouseGrabbed</a> (bool grab)</td></tr>
 <tr class="memdesc:ac28a5fe115e791f3d8ceb695f674914c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether the mouse is currently being grabbed by an operation. <br/></td></tr>
@@ -585,10 +589,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_input.html#ac07b8dc69b67cd7c9e7d9f83cdb475ea">suppressNextMouseMove_</a></td></tr>
 <tr class="memdesc:ac07b8dc69b67cd7c9e7d9f83cdb475ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Next mouse move suppress flag. <br/></td></tr>
 <tr class="separator:ac07b8dc69b67cd7c9e7d9f83cdb475ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5068d8f35b54ea7cd61cdc2de3712a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa5068d8f35b54ea7cd61cdc2de3712a3"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_input.html#aa5068d8f35b54ea7cd61cdc2de3712a3">supressNextVisibleChangeEvent_</a></td></tr>
-<tr class="memdesc:aa5068d8f35b54ea7cd61cdc2de3712a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Next visible event suppress flag. <br/></td></tr>
-<tr class="separator:aa5068d8f35b54ea7cd61cdc2de3712a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74ad807d1f7b3312cd0117843f519205"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74ad807d1f7b3312cd0117843f519205"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_input.html#a74ad807d1f7b3312cd0117843f519205">initialized_</a></td></tr>
 <tr class="memdesc:a74ad807d1f7b3312cd0117843f519205"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialized flag. <br/></td></tr>
@@ -731,7 +731,7 @@ Here is the caller graph for this function:</div>
 
 <p>Set the mouse mode. </p>
 <p>Set the mouse mode behaviour. MM_ABSOLUTE is the default behaviour, allowing the toggling of operating system cursor visibility and allowing the cursor to escape the window when visible. When the operating system cursor is invisible in absolute mouse mode, the mouse is confined to the window. If the operating system and <a class="el" href="class_urho3_d_1_1_u_i.html" title="UI subsystem. Manages the graphical user interface.">UI</a> cursors are both invisible, interaction with the Urho <a class="el" href="class_urho3_d_1_1_u_i.html" title="UI subsystem. Manages the graphical user interface.">UI</a> will be limited (eg: drag move / drag end events will not trigger). SetMouseMode(MM_ABSOLUTE) will call SetMouseGrabbed(false).</p>
-<p>MM_RELATIVE sets the operating system cursor to invisible and confines the cursor to the window. The operating system cursor cannot be set to be visible in this mode via <a class="el" href="class_urho3_d_1_1_input.html#a5a8edc8ee7876348bfa4e95f9d901805" title="Set whether the operating system mouse cursor is visible. When not visible (default), is kept centered to prevent leaving the window.">SetMouseVisible()</a>, however changes are tracked and will be restored when another mouse mode is set. When the virtual cursor is also invisible, <a class="el" href="class_urho3_d_1_1_u_i.html" title="UI subsystem. Manages the graphical user interface.">UI</a> interaction will still function as normal (eg: drag events will trigger). SetMouseMode(MM_RELATIVE) will call SetMouseGrabbed(true).</p>
+<p>MM_RELATIVE sets the operating system cursor to invisible and confines the cursor to the window. The operating system cursor cannot be set to be visible in this mode via <a class="el" href="class_urho3_d_1_1_input.html#a42f016907a65f849a98e0ad9c24d97ee" title="Set whether the operating system mouse cursor is visible. When not visible (default), is kept centered to prevent leaving the window. Mouse visiblility event can be suppressed– this also recalls any unsuppressed SetMouseVisible which can be returned by ResetMouseVisible().">SetMouseVisible()</a>, however changes are tracked and will be restored when another mouse mode is set. When the virtual cursor is also invisible, <a class="el" href="class_urho3_d_1_1_u_i.html" title="UI subsystem. Manages the graphical user interface.">UI</a> interaction will still function as normal (eg: drag events will trigger). SetMouseMode(MM_RELATIVE) will call SetMouseGrabbed(true).</p>
 <p>MM_WRAP grabs the mouse from the operating system and confines the operating system cursor to the window, wrapping the cursor when it is near the edges. SetMouseMode(MM_WRAP) will call SetMouseGrabbed(true). </p>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000016">Todo:</a></b></dt><dd>Use SDL_SetRelativeMouseMode() for MM_RELATIVE mode </dd></dl>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000017">Todo:</a></b></dt><dd>When SDL 2.0.4 is integrated, use SDL_CaptureMouse() and global mouse functions for MM_WRAP mode. </dd></dl>
@@ -739,7 +739,7 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_urho3_d_1_1_input_ad79b321231dd2ab853aa7fb9a19bfff4_cgraph.svg" width="100%" height="541"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_urho3_d_1_1_input_ad79b321231dd2ab853aa7fb9a19bfff4_cgraph.svg" width="100%" height="539"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </p>
