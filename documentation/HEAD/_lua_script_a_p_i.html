@@ -3510,7 +3510,7 @@ Classes</h2>
 <li>void Update(float timeStep)</li>
 <li>void UpdateCollisions()</li>
 <li>void SetFps(int fps)</li>
-<li>void SetGravity(Vector3 gravity)</li>
+<li>void SetGravity(const Vector3&amp; gravity)</li>
 <li>void SetMaxSubSteps(int num)</li>
 <li>void SetNumIterations(int num)</li>
 <li>void SetInterpolation(bool enable)</li>
@@ -4088,19 +4088,19 @@ Classes</h2>
 <p>Methods:</p>
 <ul>
 <li>void SetMass(float mass)</li>
-<li>void SetPosition(Vector3 position)</li>
-<li>void SetRotation(Quaternion rotation)</li>
+<li>void SetPosition(const Vector3&amp; position)</li>
+<li>void SetRotation(const Quaternion&amp; rotation)</li>
 <li>void SetTransform(const Vector3&amp; position, const Quaternion&amp; rotation)</li>
-<li>void SetLinearVelocity(Vector3 velocity)</li>
-<li>void SetLinearFactor(Vector3 factor)</li>
+<li>void SetLinearVelocity(const Vector3&amp; velocity)</li>
+<li>void SetLinearFactor(const Vector3&amp; factor)</li>
 <li>void SetLinearRestThreshold(float threshold)</li>
 <li>void SetLinearDamping(float damping)</li>
-<li>void SetAngularVelocity(Vector3 angularVelocity)</li>
-<li>void SetAngularFactor(Vector3 factor)</li>
+<li>void SetAngularVelocity(const Vector3&amp; angularVelocity)</li>
+<li>void SetAngularFactor(const Vector3&amp; factor)</li>
 <li>void SetAngularRestThreshold(float threshold)</li>
 <li>void SetAngularDamping(float factor)</li>
 <li>void SetFriction(float friction)</li>
-<li>void SetAnisotropicFriction(Vector3 friction)</li>
+<li>void SetAnisotropicFriction(const Vector3&amp; friction)</li>
 <li>void SetRollingFriction(float friction)</li>
 <li>void SetRestitution(float restitution)</li>
 <li>void SetContactProcessingThreshold(float threshold)</li>
@@ -4193,7 +4193,7 @@ Classes</h2>
 <li>void SetBodyType(BodyType2D bodyType)</li>
 <li>void SetMass(float mass)</li>
 <li>void SetInertia(float inertia)</li>
-<li>void SetMassCenter(Vector2 center)</li>
+<li>void SetMassCenter(const Vector2&amp; center)</li>
 <li>void SetUseFixtureMass(bool useFixtureMass)</li>
 <li>void SetLinearDamping(float linearDamping)</li>
 <li>void SetAngularDamping(float angularDamping)</li>
@@ -4202,7 +4202,7 @@ Classes</h2>
 <li>void SetBullet(bool bullet)</li>
 <li>void SetGravityScale(float gravityScale)</li>
 <li>void SetAwake(bool awake)</li>
-<li>void SetLinearVelocity(Vector2 linearVelocity)</li>
+<li>void SetLinearVelocity(const Vector2&amp; linearVelocity)</li>
 <li>void SetAngularVelocity(float angularVelocity)</li>
 <li>void ApplyForce(const Vector2&amp; force, const Vector2&amp; point, bool wake)</li>
 <li>void ApplyForceToCenter(const Vector2&amp; force, bool wake)</li>
@@ -4296,7 +4296,7 @@ Classes</h2>
 <li>void NodeRemoved(Node* node)</li>
 <li>void ComponentAdded(Component* component)</li>
 <li>void ComponentRemoved(Component* component)</li>
-<li>void SetVarNamesAttr(String value)</li>
+<li>void SetVarNamesAttr(const String value)</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> GetVarNamesAttr() const</li>
 <li>void PrepareNetworkUpdate()</li>
 <li>void CleanupConnection(Connection* connection)</li>

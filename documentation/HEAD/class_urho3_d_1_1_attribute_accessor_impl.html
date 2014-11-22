@@ -30,7 +30,7 @@ group: HEAD
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_urho3_d_1_1_attribute_accessor_impl-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Urho3D::AttributeAccessorImpl&lt; T, U &gt; Class Template Reference</div>  </div>
+<div class="title">Urho3D::AttributeAccessorImpl&lt; T, U, Trait &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -39,13 +39,13 @@ group: HEAD
 
 <p><code>#include &lt;Serializable.h&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Urho3D::AttributeAccessorImpl&lt; T, U &gt;:</div>
+Inheritance diagram for Urho3D::AttributeAccessorImpl&lt; T, U, Trait &gt;:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="class_urho3_d_1_1_attribute_accessor_impl__inherit__graph.svg" width="203" height="214"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
-Collaboration diagram for Urho3D::AttributeAccessorImpl&lt; T, U &gt;:</div>
+Collaboration diagram for Urho3D::AttributeAccessorImpl&lt; T, U, Trait &gt;:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="class_urho3_d_1_1_attribute_accessor_impl__coll__graph.svg" width="203" height="315"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
@@ -53,42 +53,42 @@ Collaboration diagram for Urho3D::AttributeAccessorImpl&lt; T, U &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a451f240dd7640029278fb4aaf9faa19c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a451f240dd7640029278fb4aaf9faa19c"></a>
-typedef U(T::*&#160;</td><td class="memItemRight" valign="bottom"><b>GetFunctionPtr</b> )() const </td></tr>
-<tr class="separator:a451f240dd7640029278fb4aaf9faa19c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4cb6604811d86a5296cd63552d1b808"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4cb6604811d86a5296cd63552d1b808"></a>
-typedef void(T::*&#160;</td><td class="memItemRight" valign="bottom"><b>SetFunctionPtr</b> )(U)</td></tr>
-<tr class="separator:aa4cb6604811d86a5296cd63552d1b808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a7b7f0d99e95554efd5cac16f9b6506"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a7b7f0d99e95554efd5cac16f9b6506"></a>
+typedef Trait::ReturnType(T::*&#160;</td><td class="memItemRight" valign="bottom"><b>GetFunctionPtr</b> )() const </td></tr>
+<tr class="separator:a7a7b7f0d99e95554efd5cac16f9b6506"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb7450f2863e529e71f78869a8d21764"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb7450f2863e529e71f78869a8d21764"></a>
+typedef void(T::*&#160;</td><td class="memItemRight" valign="bottom"><b>SetFunctionPtr</b> )(typename Trait::ParameterType)</td></tr>
+<tr class="separator:afb7450f2863e529e71f78869a8d21764"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7c960d587b8dd442c67d2a19a733b4ff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c960d587b8dd442c67d2a19a733b4ff"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_attribute_accessor_impl.html#a7c960d587b8dd442c67d2a19a733b4ff">AttributeAccessorImpl</a> (GetFunctionPtr getFunction, SetFunctionPtr setFunction)</td></tr>
-<tr class="memdesc:a7c960d587b8dd442c67d2a19a733b4ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with function pointers. <br/></td></tr>
-<tr class="separator:a7c960d587b8dd442c67d2a19a733b4ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c5da4d15b0926f447a7350a9317c590"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c5da4d15b0926f447a7350a9317c590"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_attribute_accessor_impl.html#a5c5da4d15b0926f447a7350a9317c590">Get</a> (const <a class="el" href="class_urho3_d_1_1_serializable.html">Serializable</a> *ptr, <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;dest) const </td></tr>
-<tr class="memdesc:a5c5da4d15b0926f447a7350a9317c590"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke getter function. <br/></td></tr>
-<tr class="separator:a5c5da4d15b0926f447a7350a9317c590"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a946eafaca92de017e281db282272d6c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a946eafaca92de017e281db282272d6c1"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_attribute_accessor_impl.html#a946eafaca92de017e281db282272d6c1">Set</a> (<a class="el" href="class_urho3_d_1_1_serializable.html">Serializable</a> *ptr, const <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;value)</td></tr>
-<tr class="memdesc:a946eafaca92de017e281db282272d6c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke setter function. <br/></td></tr>
-<tr class="separator:a946eafaca92de017e281db282272d6c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9487543d9f43f20f69084fb110474a8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab9487543d9f43f20f69084fb110474a8"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_attribute_accessor_impl.html#ab9487543d9f43f20f69084fb110474a8">AttributeAccessorImpl</a> (GetFunctionPtr getFunction, SetFunctionPtr setFunction)</td></tr>
+<tr class="memdesc:ab9487543d9f43f20f69084fb110474a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with function pointers. <br/></td></tr>
+<tr class="separator:ab9487543d9f43f20f69084fb110474a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac48ad910434d0bdfde5702c6456582a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac48ad910434d0bdfde5702c6456582a3"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_attribute_accessor_impl.html#ac48ad910434d0bdfde5702c6456582a3">Get</a> (const <a class="el" href="class_urho3_d_1_1_serializable.html">Serializable</a> *ptr, <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;dest) const </td></tr>
+<tr class="memdesc:ac48ad910434d0bdfde5702c6456582a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke getter function. <br/></td></tr>
+<tr class="separator:ac48ad910434d0bdfde5702c6456582a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64bb5b4ea070066601915d566989a555"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a64bb5b4ea070066601915d566989a555"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_attribute_accessor_impl.html#a64bb5b4ea070066601915d566989a555">Set</a> (<a class="el" href="class_urho3_d_1_1_serializable.html">Serializable</a> *ptr, const <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;value)</td></tr>
+<tr class="memdesc:a64bb5b4ea070066601915d566989a555"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke setter function. <br/></td></tr>
+<tr class="separator:a64bb5b4ea070066601915d566989a555"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a66251881fe875080cf8fa8136ce57f8e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66251881fe875080cf8fa8136ce57f8e"></a>
-GetFunctionPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_attribute_accessor_impl.html#a66251881fe875080cf8fa8136ce57f8e">getFunction_</a></td></tr>
-<tr class="memdesc:a66251881fe875080cf8fa8136ce57f8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class-specific pointer to getter function. <br/></td></tr>
-<tr class="separator:a66251881fe875080cf8fa8136ce57f8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a956019ddb323a792a7447f1f36a4f519"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a956019ddb323a792a7447f1f36a4f519"></a>
-SetFunctionPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_attribute_accessor_impl.html#a956019ddb323a792a7447f1f36a4f519">setFunction_</a></td></tr>
-<tr class="memdesc:a956019ddb323a792a7447f1f36a4f519"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class-specific pointer to setter function. <br/></td></tr>
-<tr class="separator:a956019ddb323a792a7447f1f36a4f519"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e66c7023990f9991b47a0a2cec8023f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e66c7023990f9991b47a0a2cec8023f"></a>
+GetFunctionPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_attribute_accessor_impl.html#a6e66c7023990f9991b47a0a2cec8023f">getFunction_</a></td></tr>
+<tr class="memdesc:a6e66c7023990f9991b47a0a2cec8023f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class-specific pointer to getter function. <br/></td></tr>
+<tr class="separator:a6e66c7023990f9991b47a0a2cec8023f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62d5b4e03ab82c0fbb183cb73e1e2c78"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62d5b4e03ab82c0fbb183cb73e1e2c78"></a>
+SetFunctionPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_attribute_accessor_impl.html#a62d5b4e03ab82c0fbb183cb73e1e2c78">setFunction_</a></td></tr>
+<tr class="memdesc:a62d5b4e03ab82c0fbb183cb73e1e2c78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class-specific pointer to setter function. <br/></td></tr>
+<tr class="separator:a62d5b4e03ab82c0fbb183cb73e1e2c78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;class T, class U&gt;<br/>
-class Urho3D::AttributeAccessorImpl&lt; T, U &gt;</h3>
+<div class="textblock"><h3>template&lt;typename T, typename U, typename Trait&gt;<br/>
+class Urho3D::AttributeAccessorImpl&lt; T, U, Trait &gt;</h3>
 
 <p>Template implementation of the attribute accessor invoke helper class. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
