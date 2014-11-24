@@ -1613,24 +1613,19 @@ Classes</h2>
 <ul>
 <li>void SetLayer(int layer)</li>
 <li>void SetOrderInLayer(int orderInLayer)</li>
-<li>void SetSprite(Sprite2D* sprite)</li>
+<li>void SetTexture(Texture2D* texture)</li>
 <li>void SetBlendMode(BlendMode mode)</li>
-<li>void SetMaterial(Material* material)</li>
 <li>int GetLayer() const</li>
 <li>int GetOrderInLayer() const</li>
-<li>Sprite2D* GetSprite() const</li>
 <li>Texture2D* GetTexture() const</li>
 <li>BlendMode GetBlendMode() const</li>
-<li>Material* GetMaterial() const</li>
 </ul>
 <p>Properties:</p>
 <ul>
 <li>int layer</li>
 <li>int orderInLayer</li>
-<li>Sprite2D* sprite</li>
-<li>Texture2D* texture (readonly)</li>
+<li>Texture2D* texture</li>
 <li>BlendMode blendMode</li>
-<li>Material* material</li>
 </ul>
 <p><a class="anchor" id="Class_DropDownList"></a> </p>
 <h4><a class="el" href="class_urho3_d_1_1_drop_down_list.html" title="Menu UI element that displays a popup list view.">DropDownList</a> : <a class="el" href="class_urho3_d_1_1_menu.html" title="Menu UI element that optionally shows a popup.">Menu</a></h4>
@@ -3452,10 +3447,13 @@ Classes</h2>
 <ul>
 <li>void SetEffect(ParticleEffect2D* effect)</li>
 <li>ParticleEffect2D* GetEffect() const</li>
+<li>void SetSprite(Sprite2D* sprite)</li>
+<li>Sprite2D* GetSprite() const</li>
 </ul>
 <p>Properties:</p>
 <ul>
 <li>ParticleEffect2D* effect</li>
+<li>Sprite2D* sprite</li>
 </ul>
 <p><a class="anchor" id="Class_Pass"></a> </p>
 <h4><a class="el" href="class_urho3_d_1_1_pass.html" title="Material rendering pass, which defines shaders and render state.">Pass</a> : <a class="el" href="class_urho3_d_1_1_ref_counted.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable.">RefCounted</a></h4>
@@ -4803,16 +4801,19 @@ Classes</h2>
 <h4><a class="el" href="class_urho3_d_1_1_static_sprite2_d.html" title="Static sprite component.">StaticSprite2D</a> : <a class="el" href="class_urho3_d_1_1_drawable2_d.html" title="Base class for 2D visible components.">Drawable2D</a></h4>
 <p>Methods:</p>
 <ul>
+<li>void SetSprite(Sprite2D* sprite)</li>
 <li>void SetFlip(bool flipX, bool flipY)</li>
 <li>void SetFlipX(bool flipX)</li>
 <li>void SetFlipY(bool flipY)</li>
 <li>void SetColor(const Color&amp; color)</li>
+<li>Sprite2D* GetSprite() const</li>
 <li>bool GetFlipX() const</li>
 <li>bool GetFlipY() const</li>
 <li>const <a class="el" href="class_urho3_d_1_1_color.html" title="RGBA color.">Color</a>&amp; GetColor() const</li>
 </ul>
 <p>Properties:</p>
 <ul>
+<li>Sprite2D* sprite</li>
 <li>bool flipX</li>
 <li>bool flipY</li>
 <li><a class="el" href="class_urho3_d_1_1_color.html" title="RGBA color.">Color</a>&amp; color</li>
@@ -6941,7 +6942,7 @@ Global constants</h2>
 <li>unsigned DRAWABLE_ANY</li>
 <li>unsigned DRAWABLE_GEOMETRY</li>
 <li>unsigned DRAWABLE_LIGHT</li>
-<li>unsigned DRAWABLE_PROXYGEOMETRY</li>
+<li>unsigned DRAWABLE_RENDERER2D</li>
 <li>unsigned DRAWABLE_ZONE</li>
 <li>unsigned FIRST_LOCAL_ID</li>
 <li>unsigned FIRST_REPLICATED_ID</li>
