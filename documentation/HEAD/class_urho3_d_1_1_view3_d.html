@@ -66,10 +66,10 @@ Public Member Functions</h2></td></tr>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view3_d.html#ae3f302c5087e2c47676d0ad1cf7c87bc">OnResize</a> ()</td></tr>
 <tr class="memdesc:ae3f302c5087e2c47676d0ad1cf7c87bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">React to resize. <br/></td></tr>
 <tr class="separator:ae3f302c5087e2c47676d0ad1cf7c87bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af231bc37c6e2c13e96f213494daed8b5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af231bc37c6e2c13e96f213494daed8b5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view3_d.html#af231bc37c6e2c13e96f213494daed8b5">SetView</a> (<a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *scene, <a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *camera)</td></tr>
-<tr class="memdesc:af231bc37c6e2c13e96f213494daed8b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the scene and camera to use in rendering. The <a class="el" href="class_urho3_d_1_1_view3_d.html" title="UI element which renders a 3D scene.">View3D</a> will take ownership of them with shared pointers. <br/></td></tr>
-<tr class="separator:af231bc37c6e2c13e96f213494daed8b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d36ddc63ab180ac825aae19bad7dfce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d36ddc63ab180ac825aae19bad7dfce"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view3_d.html#a4d36ddc63ab180ac825aae19bad7dfce">SetView</a> (<a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *scene, <a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *camera, bool ownScene=true)</td></tr>
+<tr class="memdesc:a4d36ddc63ab180ac825aae19bad7dfce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the scene and camera to use in rendering. When ownScene is true the <a class="el" href="class_urho3_d_1_1_view3_d.html" title="UI element which renders a 3D scene.">View3D</a> will take ownership of them with shared pointers. <br/></td></tr>
+<tr class="separator:a4d36ddc63ab180ac825aae19bad7dfce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa28ee84d605f8d668fbf46f2ec36848"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa28ee84d605f8d668fbf46f2ec36848"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view3_d.html#aaa28ee84d605f8d668fbf46f2ec36848">SetFormat</a> (unsigned format)</td></tr>
 <tr class="memdesc:aaa28ee84d605f8d668fbf46f2ec36848"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set render texture pixel format. Default is RGB. <br/></td></tr>
@@ -1339,14 +1339,22 @@ Public Attributes</h2></td></tr>
 <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_viewport.html">Viewport</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view3_d.html#ab92ddd0ba888db6b66ff175577b9a9b4">viewport_</a></td></tr>
 <tr class="memdesc:ab92ddd0ba888db6b66ff175577b9a9b4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_viewport.html" title="Viewport definition either for a render surface or the backbuffer.">Viewport</a>. <br/></td></tr>
 <tr class="separator:ab92ddd0ba888db6b66ff175577b9a9b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab297fa6628831011334e300ebecab208"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab297fa6628831011334e300ebecab208"></a>
-<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view3_d.html#ab297fa6628831011334e300ebecab208">scene_</a></td></tr>
-<tr class="memdesc:ab297fa6628831011334e300ebecab208"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_scene.html" title="Root scene node, represents the whole scene.">Scene</a>. <br/></td></tr>
-<tr class="separator:ab297fa6628831011334e300ebecab208"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39b05d5b6ee4cba4e04cd32d96e53a11"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a39b05d5b6ee4cba4e04cd32d96e53a11"></a>
-<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_node.html">Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view3_d.html#a39b05d5b6ee4cba4e04cd32d96e53a11">cameraNode_</a></td></tr>
-<tr class="memdesc:a39b05d5b6ee4cba4e04cd32d96e53a11"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_camera.html" title="Camera component.">Camera</a> scene node. <br/></td></tr>
-<tr class="separator:a39b05d5b6ee4cba4e04cd32d96e53a11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae05c460146c839225032992f5d71fdc9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae05c460146c839225032992f5d71fdc9"></a>
+<a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view3_d.html#ae05c460146c839225032992f5d71fdc9">scene_</a></td></tr>
+<tr class="memdesc:ae05c460146c839225032992f5d71fdc9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_scene.html" title="Root scene node, represents the whole scene.">Scene</a>. <br/></td></tr>
+<tr class="separator:ae05c460146c839225032992f5d71fdc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2acee2ac4836c489940bbed07cd91517"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2acee2ac4836c489940bbed07cd91517"></a>
+<a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_node.html">Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view3_d.html#a2acee2ac4836c489940bbed07cd91517">cameraNode_</a></td></tr>
+<tr class="memdesc:a2acee2ac4836c489940bbed07cd91517"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_camera.html" title="Camera component.">Camera</a> scene node. <br/></td></tr>
+<tr class="separator:a2acee2ac4836c489940bbed07cd91517"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac87bc428796f8cadd25112e62cc5f1b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac87bc428796f8cadd25112e62cc5f1b8"></a>
+<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view3_d.html#ac87bc428796f8cadd25112e62cc5f1b8">ownedScene_</a></td></tr>
+<tr class="memdesc:ac87bc428796f8cadd25112e62cc5f1b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Owned scene. <br/></td></tr>
+<tr class="separator:ac87bc428796f8cadd25112e62cc5f1b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac77afc9f925aeae231532cedce42da16"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac77afc9f925aeae231532cedce42da16"></a>
+<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_node.html">Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view3_d.html#ac77afc9f925aeae231532cedce42da16">ownedCameraNode_</a></td></tr>
+<tr class="memdesc:ac77afc9f925aeae231532cedce42da16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Owned camera scene node. <br/></td></tr>
+<tr class="separator:ac77afc9f925aeae231532cedce42da16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77ee5cec241181120eb107560bdb06e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77ee5cec241181120eb107560bdb06e2"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view3_d.html#a77ee5cec241181120eb107560bdb06e2">rttFormat_</a></td></tr>
 <tr class="memdesc:a77ee5cec241181120eb107560bdb06e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render texture format. <br/></td></tr>
