@@ -5269,15 +5269,25 @@ Classes</h2>
 <h4><a class="el" href="class_urho3_d_1_1_particle_effect.html" title="Particle effect definition.">ParticleEffect</a></h4>
 <p>Methods:</p>
 <ul>
+<li>void AddColorFrame(<a class="el" href="struct_urho3_d_1_1_color_frame.html" title="Color animation frame definition.">ColorFrame</a>@)</li>
+<li>void AddColorTime(Color&amp;, float)</li>
+<li>void AddTextureFrame(<a class="el" href="struct_urho3_d_1_1_texture_frame.html" title="Texture animation frame definition.">TextureFrame</a>@)</li>
+<li>void AddTextureTime(Rect&amp;, float)</li>
 <li><a class="el" href="struct_urho3_d_1_1_color_frame.html" title="Color animation frame definition.">ColorFrame</a>@ GetColorFrame(uint) const</li>
 <li><a class="el" href="struct_urho3_d_1_1_texture_frame.html" title="Texture animation frame definition.">TextureFrame</a>@ GetTextureFrame(uint) const</li>
 <li>bool Load(<a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
 <li>bool Load(VectorBuffer&amp;)</li>
+<li>bool Load(const XMLElement&amp;)</li>
+<li>void RemoveColorFrame(uint)</li>
+<li>void RemoveTextureFrame(uint)</li>
 <li>bool Save(<a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
 <li>bool Save(VectorBuffer&amp;) const</li>
+<li>bool Save(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
-<li>void SetColorFrame(uint, <a class="el" href="struct_urho3_d_1_1_color_frame.html" title="Color animation frame definition.">ColorFrame</a>@) const</li>
-<li>void SetTextureFrame(uint, <a class="el" href="struct_urho3_d_1_1_texture_frame.html" title="Texture animation frame definition.">TextureFrame</a>@) const</li>
+<li>void SetColorFrame(uint, <a class="el" href="struct_urho3_d_1_1_color_frame.html" title="Color animation frame definition.">ColorFrame</a>@)</li>
+<li>void SetTextureFrame(uint, <a class="el" href="struct_urho3_d_1_1_texture_frame.html" title="Texture animation frame definition.">TextureFrame</a>@)</li>
+<li>void SortColorFrames()</li>
+<li>void SortTextureFrames()</li>
 </ul>
 <p>Properties:</p>
 <ul>
@@ -5293,7 +5303,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_material.html" title="Describes how to render 3D geometries.">Material</a>@ material</li>
 <li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> maxDirection</li>
 <li>float maxEmissionRate</li>
-<li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> maxParticleSize</li>
+<li><a class="el" href="class_urho3_d_1_1_vector2.html" title="Two-dimensional vector.">Vector2</a> maxParticleSize</li>
 <li>float maxRotation</li>
 <li>float maxRotationSpeed</li>
 <li>float maxTimeToLive</li>
@@ -5307,9 +5317,9 @@ Classes</h2>
 <li>float minTimeToLive</li>
 <li>float minVelocity</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> name</li>
-<li>uint numColorFrames // readonly</li>
+<li>uint numColorFrames</li>
 <li>uint numParticles</li>
-<li>uint numTextureFrames // readonly</li>
+<li>uint numTextureFrames</li>
 <li>int refs // readonly</li>
 <li>bool relative</li>
 <li>bool scaled</li>
