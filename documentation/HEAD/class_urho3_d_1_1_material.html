@@ -229,6 +229,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_material.html#a42ec4cf74dcd4275a716fc6f7d52cce8">GetScene</a> () const </td></tr>
 <tr class="memdesc:a42ec4cf74dcd4275a716fc6f7d52cce8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the scene associated with the material for shader parameter animation updates. <br/></td></tr>
 <tr class="separator:a42ec4cf74dcd4275a716fc6f7d52cce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7796e96cdb03926761aa7b0afaa17a59"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7796e96cdb03926761aa7b0afaa17a59"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_material.html#a7796e96cdb03926761aa7b0afaa17a59">GetNumUsedTextureUnits</a> () const </td></tr>
+<tr class="memdesc:a7796e96cdb03926761aa7b0afaa17a59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the last non-null texture unit + 1. Used as an optimization when applying the material to render state. <br/></td></tr>
+<tr class="separator:a7796e96cdb03926761aa7b0afaa17a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_resource"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_resource')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_resource.html">Urho3D::Resource</a></td></tr>
 <tr class="memitem:ae3e1545370dec17a283705989a1cc682 inherit pub_methods_class_urho3_d_1_1_resource"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3e1545370dec17a283705989a1cc682"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource.html#ae3e1545370dec17a283705989a1cc682">Resource</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -456,10 +460,10 @@ Private Attributes</h2></td></tr>
 <a class="el" href="class_urho3_d_1_1_vector.html">Vector</a>&lt; <a class="el" href="struct_urho3_d_1_1_technique_entry.html">TechniqueEntry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_material.html#af634a5f77f8ed08dbf2341ce0c53c152">techniques_</a></td></tr>
 <tr class="memdesc:af634a5f77f8ed08dbf2341ce0c53c152"><td class="mdescLeft">&#160;</td><td class="mdescRight">Techniques. <br/></td></tr>
 <tr class="separator:af634a5f77f8ed08dbf2341ce0c53c152"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe8b44a11817ed501b4d2f1b1f7c4931"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe8b44a11817ed501b4d2f1b1f7c4931"></a>
-<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_texture.html">Texture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_material.html#abe8b44a11817ed501b4d2f1b1f7c4931">textures_</a> [MAX_MATERIAL_TEXTURE_UNITS]</td></tr>
-<tr class="memdesc:abe8b44a11817ed501b4d2f1b1f7c4931"><td class="mdescLeft">&#160;</td><td class="mdescRight">Textures. <br/></td></tr>
-<tr class="separator:abe8b44a11817ed501b4d2f1b1f7c4931"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a920b3c0e6ec76ed2cd4deac179cb023c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a920b3c0e6ec76ed2cd4deac179cb023c"></a>
+<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_texture.html">Texture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_material.html#a920b3c0e6ec76ed2cd4deac179cb023c">textures_</a> [MAX_TEXTURE_UNITS]</td></tr>
+<tr class="memdesc:a920b3c0e6ec76ed2cd4deac179cb023c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Textures. <br/></td></tr>
+<tr class="separator:a920b3c0e6ec76ed2cd4deac179cb023c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47d4cf8c4ec16895077dec25ca6a7bf2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47d4cf8c4ec16895077dec25ca6a7bf2"></a>
 <a class="el" href="class_urho3_d_1_1_hash_map.html">HashMap</a>&lt; <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>, <br class="typebreak"/>
 <a class="el" href="struct_urho3_d_1_1_material_shader_parameter.html">MaterialShaderParameter</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_material.html#a47d4cf8c4ec16895077dec25ca6a7bf2">shaderParameters_</a></td></tr>
@@ -486,6 +490,10 @@ CullMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_material.html#a41148b9fef801f356ce9ad0bff5402c6">auxViewFrameNumber_</a></td></tr>
 <tr class="memdesc:a41148b9fef801f356ce9ad0bff5402c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last auxiliary view rendered frame number. <br/></td></tr>
 <tr class="separator:a41148b9fef801f356ce9ad0bff5402c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f1bdefe7788724e865ada2a98ca4eb0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f1bdefe7788724e865ada2a98ca4eb0"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_material.html#a4f1bdefe7788724e865ada2a98ca4eb0">numUsedTextureUnits_</a></td></tr>
+<tr class="memdesc:a4f1bdefe7788724e865ada2a98ca4eb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of maximum non-null texture unit + 1. <br/></td></tr>
+<tr class="separator:a4f1bdefe7788724e865ada2a98ca4eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a397b49a6cf3529d208d62d4f966d68b3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a397b49a6cf3529d208d62d4f966d68b3"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_material.html#a397b49a6cf3529d208d62d4f966d68b3">occlusion_</a></td></tr>
 <tr class="memdesc:a397b49a6cf3529d208d62d4f966d68b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render occlusion flag. <br/></td></tr>
