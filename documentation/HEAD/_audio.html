@@ -24,14 +24,8 @@ group: HEAD
 </ul>
 <p>To hear pseudo-3D positional sounds, a <a class="el" href="class_urho3_d_1_1_sound_listener.html" title="Sound listener component">SoundListener</a> component must exist in a scene node and be assigned to the audio subsystem by calling <a class="el" href="class_urho3_d_1_1_audio.html#a87cace304281aa90eadd825ab161db25">SetListener()</a>. If the sound listener's scene node exists within a specific scene, it will only hear sounds from that scene, but if it has been created into a "sceneless" node it will hear sounds from all scenes.</p>
 <p>The output is software mixed for an unlimited amount of simultaneous sounds. Ogg Vorbis sounds are decoded on the fly, and decoding them can be memory- and CPU-intensive, so WAV files are recommended when a large number of short sound effects need to be played.</p>
-<p>For purposes of volume control, each <a class="el" href="class_urho3_d_1_1_sound_source.html" title="Sound source component with stereo position.">SoundSource</a> is classified into one of four categories:</p>
-<ul>
-<li>Sound effects</li>
-<li>Ambient</li>
-<li>Music</li>
-<li>Voice</li>
-</ul>
-<p>A master gain category also exists that affects the final output level. To control the category volumes, use <a class="el" href="class_urho3_d_1_1_audio.html#a6b0d1fc16aed86212b7369529cf47fda">SetMasterGain()</a>.</p>
+<p>For purposes of volume control, each <a class="el" href="class_urho3_d_1_1_sound_source.html" title="Sound source component with stereo position.">SoundSource</a> can be classified into a user defined group which is multiplied with a master category and the individual <a class="el" href="class_urho3_d_1_1_sound_source.html" title="Sound source component with stereo position.">SoundSource</a> gain set using <a class="el" href="class_urho3_d_1_1_sound_source.html#aa57bd728668befb7857ce5dce54e96c6">SetGain()</a> for the final volume level.</p>
+<p>To control the category volumes, use <a class="el" href="class_urho3_d_1_1_audio.html#a2b47694ead30275f9351de2669dd2bfb">SetMasterGain()</a>, which defines the category if it didn't already exist.</p>
 <p>The <a class="el" href="class_urho3_d_1_1_sound_source.html" title="Sound source component with stereo position.">SoundSource</a> components support automatic removal from the node they belong to, once playback is finished. To use, call <a class="el" href="class_urho3_d_1_1_sound_source.html#a9fcef70bd7465973d4a83b9d5d7346a9">SetAutoRemove()</a> on them. This may be useful when a game object plays several "fire and forget" sound effects.</p>
 <h2><a class="anchor" id="Audio_Parameters"></a>
 Sound parameters</h2>

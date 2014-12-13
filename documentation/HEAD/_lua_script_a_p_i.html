@@ -278,7 +278,7 @@ Classes</h2>
 <li>bool SetMode(int bufferLengthMSec, int mixRate, bool stereo, bool interpolation = true)</li>
 <li>bool Play()</li>
 <li>void Stop()</li>
-<li>void SetMasterGain(SoundType type, float gain)</li>
+<li>void SetMasterGain(const String type, float gain)</li>
 <li>void SetListener(SoundListener* listener)</li>
 <li>void StopSound(Sound* sound)</li>
 <li>unsigned GetSampleSize() const</li>
@@ -287,12 +287,12 @@ Classes</h2>
 <li>bool IsStereo() const</li>
 <li>bool IsPlaying() const</li>
 <li>bool IsInitialized() const</li>
-<li>float GetMasterGain(SoundType type) const</li>
+<li>bool HasMasterGain(const String type) const</li>
+<li>float GetMasterGain(const String type) const</li>
 <li>SoundListener* GetListener() const</li>
 <li>const PODVector&lt;SoundSource*&gt;&amp; GetSoundSources() const</li>
 <li>void AddSoundSource(SoundSource* soundSource)</li>
 <li>void RemoveSoundSource(SoundSource* soundSource)</li>
-<li>float GetSoundSourceMasterGain(SoundType type) const</li>
 <li>void MixOutput(void* dest, unsigned samples)</li>
 </ul>
 <p>Properties:</p>
@@ -1340,15 +1340,17 @@ Classes</h2>
 <li>Cursor() (GC)</li>
 <li>Cursor* new()</li>
 <li>void delete()</li>
+<li>void DefineShape(const String shape, Image* image, const IntRect&amp; imageRect, const IntVector2&amp; hotSpot)</li>
 <li>void DefineShape(CursorShape shape, Image* image, const IntRect&amp; imageRect, const IntVector2&amp; hotSpot)</li>
 <li>void SetShape(CursorShape shape)</li>
+<li>void SetShape(const String shape)</li>
 <li>void SetUseSystemShapes(bool enable)</li>
-<li>CursorShape GetShape() const</li>
+<li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> GetShape() const</li>
 <li>bool GetUseSystemShapes() const</li>
 </ul>
 <p>Properties:</p>
 <ul>
-<li>CursorShape shape</li>
+<li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> shape</li>
 <li>bool useSystemShapes</li>
 </ul>
 <p><a class="anchor" id="Class_CustomGeometry"></a> </p>
@@ -4527,14 +4529,14 @@ Classes</h2>
 <li>void Play(Sound* sound, float frequency, float gain)</li>
 <li>void Play(Sound* sound, float frequency, float gain, float panning)</li>
 <li>void Stop()</li>
-<li>void SetSoundType(SoundType type)</li>
+<li>void SetSoundType(const String type)</li>
 <li>void SetFrequency(float frequency)</li>
 <li>void SetGain(float gain)</li>
 <li>void SetAttenuation(float attenuation)</li>
 <li>void SetPanning(float panning)</li>
 <li>void SetAutoRemove(bool enable)</li>
 <li>Sound* GetSound() const</li>
-<li>SoundType GetSoundType() const</li>
+<li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> GetSoundType() const</li>
 <li>float GetTimePosition() const</li>
 <li>float GetFrequency() const</li>
 <li>float GetGain() const</li>
@@ -4546,7 +4548,7 @@ Classes</h2>
 <p>Properties:</p>
 <ul>
 <li>Sound* sound (readonly)</li>
-<li>SoundType soundType</li>
+<li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> soundType</li>
 <li>float timePosition (readonly)</li>
 <li>float frequency</li>
 <li>float gain</li>
@@ -6368,13 +6370,17 @@ Enumerations</h2>
 <h4>CursorShape</h4>
 <ul>
 <li>int CS_NORMAL</li>
+<li>int CS_IBEAM</li>
+<li>int CS_CROSS</li>
 <li>int CS_RESIZEVERTICAL</li>
 <li>int CS_RESIZEDIAGONAL_TOPRIGHT</li>
 <li>int CS_RESIZEHORIZONTAL</li>
 <li>int CS_RESIZEDIAGONAL_TOPLEFT</li>
+<li>int CS_RESIZE_ALL</li>
 <li>int CS_ACCEPTDROP</li>
 <li>int CS_REJECTDROP</li>
 <li>int CS_BUSY</li>
+<li>int CS_BUSY_ARROW</li>
 <li>int CS_MAX_SHAPES</li>
 </ul>
 <h4>EmitterType</h4>
@@ -6583,15 +6589,6 @@ Enumerations</h2>
 <li>int SHAPE_TRIANGLEMESH</li>
 <li>int SHAPE_CONVEXHULL</li>
 <li>int SHAPE_TERRAIN</li>
-</ul>
-<h4>SoundType</h4>
-<ul>
-<li>int SOUND_EFFECT</li>
-<li>int SOUND_AMBIENT</li>
-<li>int SOUND_VOICE</li>
-<li>int SOUND_MUSIC</li>
-<li>int SOUND_MASTER</li>
-<li>int MAX_SOUND_TYPES</li>
 </ul>
 <h4>StencilOp</h4>
 <ul>
@@ -7335,6 +7332,11 @@ Global constants</h2>
 <li>int SHADOWQUALITY_HIGH_24BIT</li>
 <li>int SHADOWQUALITY_LOW_16BIT</li>
 <li>int SHADOWQUALITY_LOW_24BIT</li>
+<li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> SOUND_AMBIENT</li>
+<li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> SOUND_EFFECT</li>
+<li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> SOUND_MASTER</li>
+<li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> SOUND_MUSIC</li>
+<li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> SOUND_VOICE</li>
 <li>unsigned VO_DISABLE_OCCLUSION</li>
 <li>unsigned VO_DISABLE_SHADOWS</li>
 <li>unsigned VO_LOW_MATERIAL_QUALITY</li>

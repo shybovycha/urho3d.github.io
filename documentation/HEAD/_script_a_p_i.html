@@ -454,6 +454,7 @@ Classes</h2>
 <h4><a class="el" href="class_urho3_d_1_1_audio.html" title="Audio subsystem.">Audio</a></h4>
 <p>Methods:</p>
 <ul>
+<li>bool HasMasterGain(const String&amp;) const</li>
 <li>bool Play()</li>
 <li>void SendEvent(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
 <li>void SetMode(int, int, bool, bool = true)</li>
@@ -2512,6 +2513,7 @@ Classes</h2>
 <li>void BringToFront()</li>
 <li><a class="el" href="class_urho3_d_1_1_u_i_element.html" title="Base class for UI elements.">UIElement</a>@ CreateChild(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp; = <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> ( ), uint = M_MAX_UNSIGNED)</li>
 <li>void DefineShape(CursorShape, <a class="el" href="class_urho3_d_1_1_texture.html" title="Base class for texture resources.">Texture</a>@, const <a class="el" href="class_urho3_d_1_1_int_rect.html" title="Two-dimensional bounding rectangle with integer values.">IntRect</a>&amp;, const <a class="el" href="class_urho3_d_1_1_int_vector2.html" title="Two-dimensional vector with integer values.">IntVector2</a>&amp;)</li>
+<li>void DefineShape(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, <a class="el" href="class_urho3_d_1_1_texture.html" title="Base class for texture resources.">Texture</a>@, const <a class="el" href="class_urho3_d_1_1_int_rect.html" title="Two-dimensional bounding rectangle with integer values.">IntRect</a>&amp;, const <a class="el" href="class_urho3_d_1_1_int_vector2.html" title="Two-dimensional vector with integer values.">IntVector2</a>&amp;)</li>
 <li>void DisableLayoutUpdate()</li>
 <li><a class="el" href="class_urho3_d_1_1_int_vector2.html" title="Two-dimensional vector with integer values.">IntVector2</a> ElementToScreen(const IntVector2&amp;)</li>
 <li>void EnableLayoutUpdate()</li>
@@ -2570,6 +2572,8 @@ Classes</h2>
 <li>void SetMinSize(int, int)</li>
 <li>void SetParent(<a class="el" href="class_urho3_d_1_1_u_i_element.html" title="Base class for UI elements.">UIElement</a>@, uint = M_MAX_UNSIGNED)</li>
 <li>void SetPosition(int, int)</li>
+<li>void SetShape(CursorShape)</li>
+<li>void SetShape(const String&amp;)</li>
 <li>void SetSize(int, int)</li>
 <li>bool SetStyle(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, <a class="el" href="class_urho3_d_1_1_x_m_l_file.html" title="XML document resource.">XMLFile</a>@ = null)</li>
 <li>bool SetStyle(const XMLElement&amp;)</li>
@@ -2644,7 +2648,7 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_u_i_element.html" title="Base class for UI elements.">UIElement</a>@ root // readonly</li>
 <li><a class="el" href="class_urho3_d_1_1_int_vector2.html" title="Two-dimensional vector with integer values.">IntVector2</a> screenPosition // readonly</li>
 <li>bool selected</li>
-<li>CursorShape shape</li>
+<li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> shape</li>
 <li><a class="el" href="class_urho3_d_1_1_int_vector2.html" title="Two-dimensional vector with integer values.">IntVector2</a> size</li>
 <li>bool sortChildren</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> style</li>
@@ -7307,7 +7311,7 @@ Classes</h2>
 <li>bool playing // readonly</li>
 <li>int refs // readonly</li>
 <li><a class="el" href="class_urho3_d_1_1_sound.html" title="Sound resource.">Sound</a>@ sound // readonly</li>
-<li>SoundType soundType</li>
+<li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> soundType</li>
 <li>bool temporary</li>
 <li>float timePosition // readonly</li>
 <li><a class="el" href="class_urho3_d_1_1_string_hash.html" title="32-bit hash value for a string.">StringHash</a> type // readonly</li>
@@ -7375,7 +7379,7 @@ Classes</h2>
 <li>int refs // readonly</li>
 <li>float rolloffFactor</li>
 <li><a class="el" href="class_urho3_d_1_1_sound.html" title="Sound resource.">Sound</a>@ sound // readonly</li>
-<li>SoundType soundType</li>
+<li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> soundType</li>
 <li>bool temporary</li>
 <li>float timePosition // readonly</li>
 <li><a class="el" href="class_urho3_d_1_1_string_hash.html" title="32-bit hash value for a string.">StringHash</a> type // readonly</li>
@@ -9972,13 +9976,17 @@ Enumerations</h2>
 <h4>CursorShape</h4>
 <ul>
 <li>CS_NORMAL</li>
+<li>CS_IBEAM</li>
+<li>CS_CROSS</li>
 <li>CS_RESIZEVERTICAL</li>
 <li>CS_RESIZEDIAGONAL_TOPRIGHT</li>
 <li>CS_RESIZEHORIZONTAL</li>
 <li>CS_RESIZEDIAGONAL_TOPLEFT</li>
+<li>CS_RESIZE_ALL</li>
 <li>CS_ACCEPTDROP</li>
 <li>CS_REJECTDROP</li>
 <li>CS_BUSY</li>
+<li>CS_BUSY_ARROW</li>
 </ul>
 <h4>DumpMode</h4>
 <ul>
@@ -10161,14 +10169,6 @@ Enumerations</h2>
 <li>SHAPE_TRIANGLEMESH</li>
 <li>SHAPE_CONVEXHULL</li>
 <li>SHAPE_TERRAIN</li>
-</ul>
-<h4>SoundType</h4>
-<ul>
-<li>SOUND_EFFECT</li>
-<li>SOUND_AMBIENT</li>
-<li>SOUND_VOICE</li>
-<li>SOUND_MUSIC</li>
-<li>SOUND_MASTER</li>
 </ul>
 <h4>TextEffect</h4>
 <ul>
@@ -10880,6 +10880,11 @@ Global constants</h2>
 <li>int SHADOWQUALITY_HIGH_24BIT</li>
 <li>int SHADOWQUALITY_LOW_16BIT</li>
 <li>int SHADOWQUALITY_LOW_24BIT</li>
+<li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> SOUND_AMBIENT</li>
+<li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> SOUND_EFFECT</li>
+<li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> SOUND_MASTER</li>
+<li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> SOUND_MUSIC</li>
+<li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> SOUND_VOICE</li>
 <li><a class="el" href="class_urho3_d_1_1_color.html" title="RGBA color.">Color</a> TRANSPARENT</li>
 <li>uint VO_DISABLE_OCCLUSION</li>
 <li>uint VO_DISABLE_SHADOWS</li>

@@ -83,5 +83,66 @@ Fonts</h2>
 </div><!-- fragment --><h2><a class="anchor" id="UI_Sprites"></a>
 Sprites</h2>
 <p>Sprites are a special kind of UI element that allow subpixel (float) positioning and scaling, as well as rotation, while the other elements use integer positioning for pixel-perfect display. Sprites can be used to implement rotating HUD elements such as minimaps or speedometer needles.</p>
-<p>Due to the free transformability, sprites can not be reliably queried with <a class="el" href="class_urho3_d_1_1_u_i.html#ad6e052c43b7dc743ae7e83df21c75dff">GetElementAt()</a>. Also, only other sprites should be parented to sprites, as the other elements do not support scaling and rotation. </p>
-</div></div><!-- contents -->
+<p>Due to the free transformability, sprites can not be reliably queried with <a class="el" href="class_urho3_d_1_1_u_i.html#ad6e052c43b7dc743ae7e83df21c75dff">GetElementAt()</a>. Also, only other sprites should be parented to sprites, as the other elements do not support scaling and rotation.</p>
+<h2><a class="anchor" id="UI_Cursor_Shapes"></a>
+Cursor Shapes</h2>
+<p>Urho3D supports custom <a class="el" href="class_urho3_d_1_1_cursor.html" title="Mouse cursor UI element.">Cursor</a> Shapes defined from an <a class="el" href="class_urho3_d_1_1_image.html">Image</a>.</p>
+<p>The Shape can be an OS default from the CursorShape enum, which are automatically switched to and from by the <a class="el" href="_u_i.html">UI</a> subsystem, but can be manually switched to using <a class="el" href="class_urho3_d_1_1_cursor.html#a132e53f70b2e45f29a5ead1e5db84bbd">Cursor::SetShape(CursorShape)</a>.</p>
+<p>Alternatively they can be defined using a name in <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> format to identify it, which can only be manually switched to and from using <a class="el" href="class_urho3_d_1_1_cursor.html#a132e53f70b2e45f29a5ead1e5db84bbd">Cursor::SetShape(const String&amp;)</a>.</p>
+<p>There are a number of reserved names that are used for the OS defaults:</p>
+<ul>
+<li>Normal</li>
+<li>IBeam</li>
+<li>Cross</li>
+<li>ResizeVertical</li>
+<li>ResizeDiagonalTopRight</li>
+<li>ResizeHorizontal</li>
+<li>ResizeDiagonalTopLeft</li>
+<li>ResizeAll</li>
+<li>AcceptDrop</li>
+<li>RejectDrop</li>
+<li>Busy</li>
+<li>BusyArrow</li>
+</ul>
+<p><a class="el" href="class_urho3_d_1_1_cursor.html" title="Mouse cursor UI element.">Cursor</a> Shapes can be define in a number of different ways:</p>
+<p>XML: </p>
+<div class="fragment"><div class="line">&lt;element type=<span class="stringliteral">&quot;Cursor&quot;</span>&gt;</div>
+<div class="line">    &lt;attribute name=<span class="stringliteral">&quot;Shapes&quot;</span>&gt;</div>
+<div class="line">        &lt;variant type=<span class="stringliteral">&quot;VariantVector&quot;</span> &gt;</div>
+<div class="line">            &lt;variant type=<span class="stringliteral">&quot;String&quot;</span> value=<span class="stringliteral">&quot;Normal&quot;</span> /&gt;</div>
+<div class="line">            &lt;variant type=<span class="stringliteral">&quot;ResourceRef&quot;</span> value=<span class="stringliteral">&quot;Image;Textures/UI.png&quot;</span> /&gt;</div>
+<div class="line">            &lt;variant type=<span class="stringliteral">&quot;IntRect&quot;</span> value=<span class="stringliteral">&quot;0 0 12 24&quot;</span> /&gt;</div>
+<div class="line">            &lt;variant type=<span class="stringliteral">&quot;IntVector2&quot;</span> value=<span class="stringliteral">&quot;0 0&quot;</span> /&gt;</div>
+<div class="line">        &lt;/variant&gt;  </div>
+<div class="line">        &lt;variant type=<span class="stringliteral">&quot;VariantVector&quot;</span> &gt;</div>
+<div class="line">            &lt;variant type=<span class="stringliteral">&quot;String&quot;</span> value=<span class="stringliteral">&quot;Custom&quot;</span> /&gt;</div>
+<div class="line">            &lt;variant type=<span class="stringliteral">&quot;ResourceRef&quot;</span> value=<span class="stringliteral">&quot;Image;Textures/UI.png&quot;</span> /&gt;</div>
+<div class="line">            &lt;variant type=<span class="stringliteral">&quot;IntRect&quot;</span> value=<span class="stringliteral">&quot;12 0 12 36&quot;</span> /&gt;</div>
+<div class="line">            &lt;variant type=<span class="stringliteral">&quot;IntVector2&quot;</span> value=<span class="stringliteral">&quot;0 0&quot;</span> /&gt;</div>
+<div class="line">        &lt;/variant&gt;  </div>
+<div class="line">    &lt;/atrribute&gt;</div>
+<div class="line">&lt;/element&gt;</div>
+</div><!-- fragment --><p>C++: </p>
+<div class="fragment"><div class="line">UI* ui = GetSubsystem&lt;UI&gt;();</div>
+<div class="line">ResourceCache* rc = GetSubsystem&lt;ResourceCache&gt;();</div>
+<div class="line"></div>
+<div class="line">Cursor* cursor = <span class="keyword">new</span> Cursor(context_);</div>
+<div class="line">Image* image = rc-&gt;GetResource&lt;Image&gt;(<span class="stringliteral">&quot;Textures/UI.png&quot;</span>);</div>
+<div class="line"><span class="keywordflow">if</span> (image)</div>
+<div class="line">{</div>
+<div class="line">    cursor-&gt;DefineShape(CS_NORMAL, image, IntRect(0, 0, 12, 24), IntVector2(0, 0));</div>
+<div class="line">    cursor-&gt;DefineShape(<span class="stringliteral">&quot;Custom&quot;</span>, image, IntRect(12, 0, 12, 36), IntVector2(0, 0));</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line">ui-&gt;SetCursor(cursor);</div>
+</div><!-- fragment --><p>Angelcode: </p>
+<div class="fragment"><div class="line">Cursor@ cursor = <span class="keyword">new</span> Cursor();</div>
+<div class="line">Image@ image = cache.GetResource(<span class="stringliteral">&quot;Image&quot;</span>, <span class="stringliteral">&quot;Textures/UI.png&quot;</span>);</div>
+<div class="line"><span class="keywordflow">if</span> (image !is null)</div>
+<div class="line">{</div>
+<div class="line">    cursor.DefineShape(CS_NORMAL, image, IntRect(0, 0, 12, 24), IntVector2(0, 0));</div>
+<div class="line">    cursor.DefineShape(<span class="stringliteral">&quot;Custom&quot;</span>, image, IntRect(12, 0, 12, 36), IntVector2(0, 0));</div>
+<div class="line">}</div>
+<div class="line">    </div>
+<div class="line">ui.SetCursor(cursor);</div>
+</div><!-- fragment --> </div></div><!-- contents -->
