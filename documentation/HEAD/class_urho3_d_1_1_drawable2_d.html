@@ -63,6 +63,10 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable2_d.html#a35af338d8cba7e36effa1ca64eff73df">~Drawable2D</a> ()</td></tr>
 <tr class="memdesc:a35af338d8cba7e36effa1ca64eff73df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
 <tr class="separator:a35af338d8cba7e36effa1ca64eff73df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12abb94fd54e1ce14781a1aa5e5c40f5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12abb94fd54e1ce14781a1aa5e5c40f5"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable2_d.html#a12abb94fd54e1ce14781a1aa5e5c40f5">OnSetEnabled</a> ()</td></tr>
+<tr class="memdesc:a12abb94fd54e1ce14781a1aa5e5c40f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle enabled/disabled state change. <br/></td></tr>
+<tr class="separator:a12abb94fd54e1ce14781a1aa5e5c40f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9f626566fe697b52a9a480124a9d17b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9f626566fe697b52a9a480124a9d17b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable2_d.html#ac9f626566fe697b52a9a480124a9d17b">SetLayer</a> (int layer)</td></tr>
 <tr class="memdesc:ac9f626566fe697b52a9a480124a9d17b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set layer. <br/></td></tr>
@@ -132,10 +136,6 @@ const <a class="el" href="class_urho3_d_1_1_vector.html">Vector</a>&lt; <a class
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable.html#a7a7f9858c1e0ff7e1dcacfe8f5592065">~Drawable</a> ()</td></tr>
 <tr class="memdesc:a7a7f9858c1e0ff7e1dcacfe8f5592065 inherit pub_methods_class_urho3_d_1_1_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
 <tr class="separator:a7a7f9858c1e0ff7e1dcacfe8f5592065 inherit pub_methods_class_urho3_d_1_1_drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed7ed31779ebd2d0fc3b45166703ae62 inherit pub_methods_class_urho3_d_1_1_drawable"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aed7ed31779ebd2d0fc3b45166703ae62"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable.html#aed7ed31779ebd2d0fc3b45166703ae62">OnSetEnabled</a> ()</td></tr>
-<tr class="memdesc:aed7ed31779ebd2d0fc3b45166703ae62 inherit pub_methods_class_urho3_d_1_1_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle enabled/disabled state change. <br/></td></tr>
-<tr class="separator:aed7ed31779ebd2d0fc3b45166703ae62 inherit pub_methods_class_urho3_d_1_1_drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4a905d66bbec042db227f9b9d791cca inherit pub_methods_class_urho3_d_1_1_drawable"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4a905d66bbec042db227f9b9d791cca"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable.html#ab4a905d66bbec042db227f9b9d791cca">ProcessRayQuery</a> (const <a class="el" href="class_urho3_d_1_1_ray_octree_query.html">RayOctreeQuery</a> &amp;query, <a class="el" href="class_urho3_d_1_1_p_o_d_vector.html">PODVector</a>&lt; <a class="el" href="struct_urho3_d_1_1_ray_query_result.html">RayQueryResult</a> &gt; &amp;results)</td></tr>
 <tr class="memdesc:ab4a905d66bbec042db227f9b9d791cca inherit pub_methods_class_urho3_d_1_1_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process octree raycast. May be called from a worker thread. <br/></td></tr>
@@ -907,6 +907,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_material.html">Material</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable2_d.html#a2420a354a29bc47bf825f9b65296f19d">material_</a></td></tr>
 <tr class="memdesc:a2420a354a29bc47bf825f9b65296f19d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_material.html" title="Describes how to render 3D geometries.">Material</a>. <br/></td></tr>
 <tr class="separator:a2420a354a29bc47bf825f9b65296f19d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2e1e2227674488f0a53e390ab64d042"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2e1e2227674488f0a53e390ab64d042"></a>
+<a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_renderer2_d.html">Renderer2D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable2_d.html#ad2e1e2227674488f0a53e390ab64d042">renderer_</a></td></tr>
+<tr class="memdesc:ad2e1e2227674488f0a53e390ab64d042"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_renderer2_d.html" title="2D renderer components.">Renderer2D</a>. <br/></td></tr>
+<tr class="separator:ad2e1e2227674488f0a53e390ab64d042"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafef90b2d94e82120aefae920316b920"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aafef90b2d94e82120aefae920316b920"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable2_d.html#aafef90b2d94e82120aefae920316b920">visibility_</a></td></tr>
 <tr class="memdesc:aafef90b2d94e82120aefae920316b920"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test visible. <br/></td></tr>

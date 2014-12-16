@@ -62,6 +62,10 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer2_d.html#a055926e77c62cb278eaf063deaefa888">~Renderer2D</a> ()</td></tr>
 <tr class="memdesc:a055926e77c62cb278eaf063deaefa888"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br/></td></tr>
 <tr class="separator:a055926e77c62cb278eaf063deaefa888"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bc0920cc3161f96a10a8aa6f8217b49"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7bc0920cc3161f96a10a8aa6f8217b49"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer2_d.html#a7bc0920cc3161f96a10a8aa6f8217b49">ProcessRayQuery</a> (const <a class="el" href="class_urho3_d_1_1_ray_octree_query.html">RayOctreeQuery</a> &amp;query, <a class="el" href="class_urho3_d_1_1_p_o_d_vector.html">PODVector</a>&lt; <a class="el" href="struct_urho3_d_1_1_ray_query_result.html">RayQueryResult</a> &gt; &amp;results)</td></tr>
+<tr class="memdesc:a7bc0920cc3161f96a10a8aa6f8217b49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process octree raycast. May be called from a worker thread. <br/></td></tr>
+<tr class="separator:a7bc0920cc3161f96a10a8aa6f8217b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70db06da369712657a17546bd7f6a042"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70db06da369712657a17546bd7f6a042"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer2_d.html#a70db06da369712657a17546bd7f6a042">UpdateBatches</a> (const <a class="el" href="struct_urho3_d_1_1_frame_info.html">FrameInfo</a> &amp;frame)</td></tr>
 <tr class="memdesc:a70db06da369712657a17546bd7f6a042"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate distance and prepare batches for rendering. May be called from worker thread(s), possibly re-entrantly. <br/></td></tr>
@@ -74,6 +78,22 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual UpdateGeometryType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer2_d.html#a97cc9aef14b6e948a728b2df499e0b60">GetUpdateGeometryType</a> ()</td></tr>
 <tr class="memdesc:a97cc9aef14b6e948a728b2df499e0b60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether a geometry update is necessary, and if it can happen in a worker thread. <br/></td></tr>
 <tr class="separator:a97cc9aef14b6e948a728b2df499e0b60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6a9c19ee46ebd2ecae0c959da08f221"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6a9c19ee46ebd2ecae0c959da08f221"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer2_d.html#ab6a9c19ee46ebd2ecae0c959da08f221">AddDrawable</a> (<a class="el" href="class_urho3_d_1_1_drawable2_d.html">Drawable2D</a> *drawable)</td></tr>
+<tr class="memdesc:ab6a9c19ee46ebd2ecae0c959da08f221"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add <a class="el" href="class_urho3_d_1_1_drawable2_d.html" title="Base class for 2D visible components.">Drawable2D</a>. <br/></td></tr>
+<tr class="separator:ab6a9c19ee46ebd2ecae0c959da08f221"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74722c75cf10140ac9a16154e2e45e4e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74722c75cf10140ac9a16154e2e45e4e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer2_d.html#a74722c75cf10140ac9a16154e2e45e4e">RemoveDrawable</a> (<a class="el" href="class_urho3_d_1_1_drawable2_d.html">Drawable2D</a> *drawable)</td></tr>
+<tr class="memdesc:a74722c75cf10140ac9a16154e2e45e4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove <a class="el" href="class_urho3_d_1_1_drawable2_d.html" title="Base class for 2D visible components.">Drawable2D</a>. <br/></td></tr>
+<tr class="separator:a74722c75cf10140ac9a16154e2e45e4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01467543c720ed171ef65bf9bac51182"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a01467543c720ed171ef65bf9bac51182"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer2_d.html#a01467543c720ed171ef65bf9bac51182">MarkMaterialDirty</a> (<a class="el" href="class_urho3_d_1_1_drawable2_d.html">Drawable2D</a> *drawable)</td></tr>
+<tr class="memdesc:a01467543c720ed171ef65bf9bac51182"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark material dirty. <br/></td></tr>
+<tr class="separator:a01467543c720ed171ef65bf9bac51182"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30dd1d8fdda8f4d880e5df80f9f599c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30dd1d8fdda8f4d880e5df80f9f599c3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer2_d.html#a30dd1d8fdda8f4d880e5df80f9f599c3">MarkOrderDirty</a> ()</td></tr>
+<tr class="memdesc:a30dd1d8fdda8f4d880e5df80f9f599c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark order dirty. <br/></td></tr>
+<tr class="separator:a30dd1d8fdda8f4d880e5df80f9f599c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a1456e0f4d22c22676c56b3a7ce4cc2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a1456e0f4d22c22676c56b3a7ce4cc2"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer2_d.html#a7a1456e0f4d22c22676c56b3a7ce4cc2">CheckVisibility</a> (<a class="el" href="class_urho3_d_1_1_drawable2_d.html">Drawable2D</a> *drawable) const </td></tr>
 <tr class="memdesc:a7a1456e0f4d22c22676c56b3a7ce4cc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check visibility. <br/></td></tr>
@@ -91,10 +111,6 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable.html#aed7ed31779ebd2d0fc3b45166703ae62">OnSetEnabled</a> ()</td></tr>
 <tr class="memdesc:aed7ed31779ebd2d0fc3b45166703ae62 inherit pub_methods_class_urho3_d_1_1_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle enabled/disabled state change. <br/></td></tr>
 <tr class="separator:aed7ed31779ebd2d0fc3b45166703ae62 inherit pub_methods_class_urho3_d_1_1_drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4a905d66bbec042db227f9b9d791cca inherit pub_methods_class_urho3_d_1_1_drawable"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4a905d66bbec042db227f9b9d791cca"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable.html#ab4a905d66bbec042db227f9b9d791cca">ProcessRayQuery</a> (const <a class="el" href="class_urho3_d_1_1_ray_octree_query.html">RayOctreeQuery</a> &amp;query, <a class="el" href="class_urho3_d_1_1_p_o_d_vector.html">PODVector</a>&lt; <a class="el" href="struct_urho3_d_1_1_ray_query_result.html">RayQueryResult</a> &gt; &amp;results)</td></tr>
-<tr class="memdesc:ab4a905d66bbec042db227f9b9d791cca inherit pub_methods_class_urho3_d_1_1_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process octree raycast. May be called from a worker thread. <br/></td></tr>
-<tr class="separator:ab4a905d66bbec042db227f9b9d791cca inherit pub_methods_class_urho3_d_1_1_drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54c7bed0cfd07a5bf5d674fcfb4cc606 inherit pub_methods_class_urho3_d_1_1_drawable"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54c7bed0cfd07a5bf5d674fcfb4cc606"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable.html#a54c7bed0cfd07a5bf5d674fcfb4cc606">Update</a> (const <a class="el" href="struct_urho3_d_1_1_frame_info.html">FrameInfo</a> &amp;frame)</td></tr>
 <tr class="memdesc:a54c7bed0cfd07a5bf5d674fcfb4cc606 inherit pub_methods_class_urho3_d_1_1_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update before octree reinsertion. Is called from a worker thread. <br/></td></tr>
@@ -766,6 +782,14 @@ Private Attributes</h2></td></tr>
 <a class="el" href="class_urho3_d_1_1_p_o_d_vector.html">PODVector</a>&lt; <a class="el" href="class_urho3_d_1_1_drawable2_d.html">Drawable2D</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer2_d.html#aba72f346592c606a203367db3ba2404d">drawables_</a></td></tr>
 <tr class="memdesc:aba72f346592c606a203367db3ba2404d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drawables. <br/></td></tr>
 <tr class="separator:aba72f346592c606a203367db3ba2404d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac43dbecd88a9992b122672f39f5dddfb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac43dbecd88a9992b122672f39f5dddfb"></a>
+<a class="el" href="class_urho3_d_1_1_p_o_d_vector.html">PODVector</a>&lt; <a class="el" href="class_urho3_d_1_1_drawable2_d.html">Drawable2D</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer2_d.html#ac43dbecd88a9992b122672f39f5dddfb">materialDirtyDrawables_</a></td></tr>
+<tr class="memdesc:ac43dbecd88a9992b122672f39f5dddfb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_material.html" title="Describes how to render 3D geometries.">Material</a> dirty drawables. <br/></td></tr>
+<tr class="separator:ac43dbecd88a9992b122672f39f5dddfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab53436e521920c29fb2906a5b0f33c43"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab53436e521920c29fb2906a5b0f33c43"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer2_d.html#ab53436e521920c29fb2906a5b0f33c43">orderDirty_</a></td></tr>
+<tr class="memdesc:ab53436e521920c29fb2906a5b0f33c43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Order dirty. <br/></td></tr>
+<tr class="separator:ab53436e521920c29fb2906a5b0f33c43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8dbbc99f08b44fc0b347efb6b3fbcbf5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8dbbc99f08b44fc0b347efb6b3fbcbf5"></a>
 <a class="el" href="class_urho3_d_1_1_vector.html">Vector</a>&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_material.html">Material</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer2_d.html#a8dbbc99f08b44fc0b347efb6b3fbcbf5">materials_</a></td></tr>
 <tr class="memdesc:a8dbbc99f08b44fc0b347efb6b3fbcbf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Materials. <br/></td></tr>
