@@ -26,9 +26,10 @@ group: HEAD
 <li>LogName (string) Log filename. Default "Urho3D.log".</li>
 <li>FrameLimiter (bool) Whether to cap maximum framerate to 200 (desktop) or 60 (Android/iOS.) Default true.</li>
 <li>WorkerThreads (bool) Whether to create worker threads for the WorkQueue subsystem according to available CPU cores. Default true.</li>
+<li>ResourcePrefixPath (string) Override the resource prefix path to use. If not specified then the default prefix path is set to URHO3D_PREFIX_PATH environment variable (if defined) or executable path.</li>
 <li>ResourcePaths (string) A semicolon-separated list of resource paths to use. If corresponding packages (ie. Data.pak for Data directory) exist they will be used instead. Default "Data;CoreData".</li>
 <li>ResourcePackages (string) A semicolon-separated list of resource packages to use. Default empty.</li>
-<li>AutoloadPaths (string) A semicolon-separated list of autoload paths to use. Any resource packages and subdirectories inside an autoload path will be added to the resource system. Default "Extra".</li>
+<li>AutoloadPaths (string) A semicolon-separated list of autoload paths to use. Any resource packages and subdirectories inside an autoload path will be added to the resource system. Default "Autoload".</li>
 <li>ForceSM2 (bool) Whether to force Shader Model 2, effective in Direct3D9 mode only. Default false.</li>
 <li>ExternalWindow (void ptr) External window handle to use instead of creating an application window. Default null.</li>
 <li>WindowIcon (string) Window icon image resource name. Default empty (use application default icon.)</li>

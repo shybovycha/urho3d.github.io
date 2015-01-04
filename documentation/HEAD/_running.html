@@ -35,9 +35,11 @@ Command line options</h2>
 -q           Enable quiet mode which does not log to standard output stream
 -b &lt;length&gt;  Sound buffer length in milliseconds
 -r &lt;freq&gt;    Sound mixing frequency in Hz
--p &lt;paths&gt;   Resource path(s) to use, separated by semicolons
--ap &lt;paths&gt;  Autoload resource path(s) to use, separated by semicolons
--log &lt;level&gt; Change the log level, valid 'level' values are 'debug', 'info', 'warning', 'error'
+-pp &lt;path&gt;   Resource prefix path, default to URHO3D_PREFIX_PATH env-var or executable path
+-p &lt;paths&gt;   Resource path(s) to use, separated by semicolons, default to 'Data;CoreData'
+-pf &lt;files&gt;  Resource package file to use, separated by semicolons, default to none
+-ap &lt;paths&gt;  Resource autoload path(s), separated by semicolons, default to 'AutoLoad'
+-log &lt;level&gt; Change the log level, valid 'level' values: 'debug', 'info', 'warning', 'error'
 -ds &lt;file&gt;   Dump used shader variations to a file for precaching
 -mq &lt;level&gt;  Material quality level, default 2 (high)
 -tq &lt;level&gt;  Texture quality level, default 2 (high)
