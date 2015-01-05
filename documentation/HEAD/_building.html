@@ -24,7 +24,7 @@ Building prerequisites</h2>
 <li>For Windows, the June 2010 DirectX SDK needs to be installed.</li>
 </ul>
 <ul>
-<li>For Linux, the following development packages need to be installed: libx11-dev, libxrandr-dev, libasound2-dev on Debian-based distros; libX11-devel, libXrandr-devel, alsa-lib-devel on RedHat-based distros. Also install the package libgl1-mesa-dev (Debian) or mesa-libGL-devel (RH) if your GPU driver does not include OpenGL headers &amp; libs. Building as 32-bit on a 64-bit system requires installing also the 32-bit versions of the development libraries.</li>
+<li>For Linux, the following development packages need to be installed: libx11-dev, libxrandr-dev, libasound2-dev on Debian-based distros; libX11-devel, libXrandr-devel, alsa-lib-devel on RedHat-based distros. Also install the package libgl1-mesa-dev (Debian) or mesa-libGL-devel (RH) if your GPU driver does not include OpenGL headers &amp; libs, but in most of the case it usually does and has better performance than Mesa's OpenGL implementation. Building as 32-bit on a 64-bit system requires installing also the 32-bit versions of the development libraries.</li>
 </ul>
 <ul>
 <li>For Raspberry Pi, the following development packages need to be installed. On Raspbian: libasound2-dev, libudev-dev. On Pidora: alsa-lib-devel, systemd-devel.</li>
@@ -33,7 +33,7 @@ Building prerequisites</h2>
 <li>For Mac OS X, the Xcode developer tools package should include everything necessary.</li>
 </ul>
 <ul>
-<li>For Android, the Android SDK and Android NDK (minimum API level 12) need to be installed. Optionally, also install Eclipse ADT plugin for building and deployment via Eclipse.</li>
+<li>For Android, the Android SDK and Android NDK (minimum API level 12) need to be installed.</li>
 </ul>
 <p>To run Urho3D, the minimum system requirements are:</p>
 <ul>
@@ -52,9 +52,19 @@ Building prerequisites</h2>
 <li>iOS: OpenGL ES 2.0 capable GPU.</li>
 </ul>
 <p>SSE requirement can be eliminated by disabling the use of SSE instruction set, see URHO3D_SSE build option below.</p>
+<h2><a class="anchor" id="Build_Scripts"></a>
+Build scripts</h2>
+<p>As this is a cross-platform project, we have provided a number of build scripts for the most common use cases. The shell scripts end with extension *.sh are meant for building Urho3D project in a Unix-like host system (Linux, Mac, and even Raspberry Pi), while the batch files end with *.bat are meant for Windows host system only. They only provide a convenient way to invoke CMake to process our CMakeLists.txt files. Their usage is not a must as you can also invoke CMake to do the same via cmake-gui or via your IDE when your IDE supports that.</p>
+<p>The basic usage as follows:</p>
+<pre class="fragment">Usage: &lt;script-name&gt; /path/to/build-tree [build-option] [build-option] ...
+</pre><p>Where the &lt;script-name&gt; is one of the provided build script. The /path/to/build-tree is where CMake will be generating the build tree for the project. Both out-of-source build tree and non out-of-source build tree path are now supported. The build options are described in detail in the <a class="el" href="_building.html#Build_Options">next section</a> below.</p>
+<p>After the build tree has been generated, you can use the build script again to reconfigure it by passing different build options. You can do as the basic usage above; or by first change the working directory to the already generated build tree and use the following syntax:</p>
+<pre class="fragment">Usage: &lt;script-name&gt; [build-option] [build-option] ...
+</pre><p>Naturally you have to specify a fully qualified path to the build script for this to work. Alternatively, you can add the path to the Urho3D project root to the PATH environment variable in order to make the build scripts available everywhere.</p>
+<p>Our CMakeLists.txt files are designed to work with most of the generators supported by CMake: Makefile, Xcode, VS, and even Ninja. Though we do not use the latter in any of our build scripts explicitly. Which build script to use is determined by which CMake generator (and toolchain) you intend to use in your build tree. For native build, you can just use cmake_generic.sh or cmake_generic.bat to let CMake to detect and decide which generator to use automatically. CMake should default to use "Unix Makefiles" generator on Linux and Mac host systems and it should default to use 32-bit "Visual Studio" generator on Windows host system when it is installed.</p>
 <h2><a class="anchor" id="Build_Options"></a>
 Build options</h2>
-<p>A number of build options can be defined explicitly when invoking the above cmake_xxxx batch files or shell scripts or when configurating the project interactively using cmake-gui. To use one of these build options on the command line interface, pass it in this format "-DOPTION=VALUE" without the quotes.<br/>
+<p>A number of build options can be defined when invoking the build scripts or when configurating the project interactively using cmake-gui. To use one of these build options on the command line interface, pass it in this format "-DOPTION=VALUE" without the quotes.<br/>
  </p>
 <table class="doxtable">
 <tr>
@@ -64,9 +74,9 @@ Build options</h2>
 <tr>
 <td>RPI </td><td>0</td><td>Configure project using Raspberry Pi cross-compiler toolchain (cmake_generic.sh only) </td></tr>
 <tr>
-<td>WIN32 </td><td>0</td><td>Configure project using MinGW cross-compiler toolchain (cmake_generic.sh only) </td></tr>
+<td>WIN32 </td><td>0</td><td>Configure project using MinGW cross-compiler toolchain (cmake_generic.sh only); also applicable when cross-compiling 64-bit Windows platform </td></tr>
 <tr>
-<td>IOS </td><td>0</td><td>Configure project for targeting iOS platform (cmake_generic.sh and cmake-gui only); use cmake_ios.sh as shortcut </td></tr>
+<td>IOS </td><td>0</td><td>Configure project for targeting iOS platform (cmake_generic.sh and cmake-gui only) </td></tr>
 <tr>
 <td>URHO3D_64BIT </td><td>*</td><td>Enable 64bit build, on MSVC default to 0, on other compilers the default is set based on the 64-bit capability of the chosen toolchain on host system </td></tr>
 <tr>
@@ -120,9 +130,9 @@ Build options</h2>
 <tr>
 <td>URHO3D_SCP_TO_TARGET </td><td>-</td><td>Use scp to transfer executables to target system (non-Android cross-compiling build only), SSH digital key must be setup first for this to work, typical value has a pattern of usr:remote-loc </td></tr>
 <tr>
-<td>URHO3D_USE_LIB64_RPM </td><td>0</td><td>Enable 64-bit RPM CPack generator using /usr/lib64 and disable all other generators (Debian-based host only) </td></tr>
+<td>URHO3D_USE_LIB64_RPM </td><td>0</td><td>Enable 64-bit RPM CPack generator using /usr/lib64 and disable all other generators (Debian-based host only, which uses /usr/lib by default) </td></tr>
 <tr>
-<td>URHO3D_USE_LIB_DEB </td><td>0</td><td>Enable 64-bit DEB CPack generator using /usr/lib and disable all other generators (Redhat-based host only) </td></tr>
+<td>URHO3D_USE_LIB_DEB </td><td>0</td><td>Enable 64-bit DEB CPack generator using /usr/lib and disable all other generators (Redhat-based host only, which uses /usr/lib64 by default) </td></tr>
 <tr>
 <td>URHO3D_HOME </td><td>-</td><td>Path to Urho3D build tree or SDK installation location (external project only) </td></tr>
 <tr>
@@ -148,7 +158,7 @@ Build options</h2>
 <tr>
 <td>RPI_SYSROOT </td><td>-</td><td>Path to Raspberry Pi system root (RPI cross-compiling build only) </td></tr>
 </table>
-<p>Note that the specified build option values are cached by CMake. The cached values will be used by CMake in the subsequent invocation. That is, the same build options are not required to be specified again and again. But once a non-default build option value is being cached, it can only be reverted back to its default value by explicitly resetting it. That is, simply by not passing the corresponding build option would not work. One way to revert all the build options to their default values is by clearing the CMake cache by calling cmake_clean.bat or cmake_clean.sh.</p>
+<p>Note that the specified build option values are cached by CMake after the initial configuration step. The cached values will be used by CMake in the subsequent configuration. The same build options are not required to be specified again and again. But once a non-default build option value is being cached, it can only be reverted back to its default value by explicitly resetting it. That is, simply by not passing the corresponding build option would not revert it back to its default. One way to revert all the build options to their default values is by clearing the CMake cache by calling cmake_clean.bat or cmake_clean.sh.</p>
 <h2><a class="anchor" id="Building_Native"></a>
 Native build process</h2>
 <p>Urho3D uses CMake (<a href="http://www.cmake.org">http://www.cmake.org</a>) to build. The process has two steps:</p>
@@ -228,7 +238,7 @@ Native 64bit build</h2>
 Library build</h2>
 <p>As of V1.31, the build process first builds the Urho3D library target (either static or shared). The library is then linked against by other targets like tools and samples that reference Urho3D as one of the external libraries. The Urho3D library type is defaulted to static, so the build process would generate standalone executables as previous releases. The Urho3D library type can be changed using "URHO3D_LIB_TYPE" build option.</p>
 <p>To install the Urho3D library as an SDK, use the usual 'make install' command. There is an equivalent built-in target called "install" in Visual Studio solution and Xcode project to perform the SDK installation. This could be useful when you want your application to always link against a 'stable' installed version of the Urho3D library, while keeping your Urho3D project root tree in sync with origin/master; or when you want other users in the same host system to use the installed Urho3D SDK instead of them building from source again.</p>
-<p>The default install prefix is 'c:/Program Files/Urho3D' on Windows host and '/usr/local' on all other non-Windows hosts. You can use the CMAKE_INSTALL_PREFIX build option to alter this prefix path. However, when cross-compiling you may actually want to alter the final installation destination by supplying DESDIR environment variable instead of altering the CMAKE_INSTALL_PREFIX variable directly, especially when using Urho3D library as shared library type because the installed executables have their RPATH adjusted relative to CMAKE_INSTALL_PREFIX. The DESTDIR environment variable is not applicable for installation on <a class="el" href="class_urho3_d_1_1_window.html" title="Window UI element that can optionally by moved or resized.">Window</a> host, i.e. it can only use CMAKE_INSTALL_PREFIX variable to alter the final installation destination. There is no RPATH adjustment for Windows platform but as the result the Urho3D.dll will be installed in a same directory as the installed executables.</p>
+<p>The default install prefix is 'c:/Program Files/Urho3D' on Windows host and '/usr/local' on all other non-Windows hosts. You can use the CMAKE_INSTALL_PREFIX build option to alter this prefix path. However, when cross-compiling you may actually want to alter the final installation destination by supplying DESDIR environment variable instead of altering the CMAKE_INSTALL_PREFIX variable directly, especially when using Urho3D library as shared library type because the installed executables have their RPATH adjusted relative to CMAKE_INSTALL_PREFIX. The DESTDIR environment variable is not applicable for installation on Windows host, i.e. it can only use CMAKE_INSTALL_PREFIX variable to alter the final installation destination. This is not a lost, however, because there is no RPATH adjustment for Windows platform, but as the result the Urho3D.dll will be installed in a same directory as the installed executables.</p>
 <p>If the Urho3D SDK is installed to a system-wide default location then the Urho3D library can be found by FindUrho3D CMake module automatically without the help of URHO3D_HOME environment variable or build option. When cross-compiling, the system-wide default location is usually in the system root of the cross-compiling target. To get a corresponding system root path for a cross-compiling build tree, you can use SYSROOT internal variable stored in the CMake cache. You can then use the system root path to set the DESTDIR environment variable in order to stage the Urho3D SDK installation in the corresponding system root. For example:</p>
 <div class="fragment"><div class="line">cd /path/to/your/Urho3D/build-tree</div>
 <div class="line">DESTDIR=$(grep SYSROOT CMakeCache.txt |cut -d<span class="charliteral">&#39;=&#39;</span> -f2) make install</div>
