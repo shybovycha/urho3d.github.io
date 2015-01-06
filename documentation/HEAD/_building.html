@@ -58,7 +58,7 @@ Build scripts</h2>
 <p>The basic usage as follows:</p>
 <pre class="fragment">Usage: &lt;script-name&gt; /path/to/build-tree [build-option] [build-option] ...
 </pre><p>Where the &lt;script-name&gt; is one of the provided build script. The /path/to/build-tree is where CMake will be generating the build tree for the project. Both out-of-source build tree and non out-of-source build tree path are now supported. The build options are described in detail in the <a class="el" href="_building.html#Build_Options">next section</a> below.</p>
-<p>After the build tree has been generated, you can use the build script again to reconfigure it by passing different build options. You can do as the basic usage above; or by first change the working directory to the already generated build tree and use the following syntax:</p>
+<p>After the build tree has been generated, you can use the build script again to reconfigure it by passing different build options. You can do so as the basic usage above; or by first change the working directory to the already generated build tree and use the following syntax:</p>
 <pre class="fragment">Usage: &lt;script-name&gt; [build-option] [build-option] ...
 </pre><p>Naturally you have to specify a fully qualified path to the build script for this to work. Alternatively, you can add the path to the Urho3D project root to the PATH environment variable in order to make the build scripts available everywhere.</p>
 <p>Our CMakeLists.txt files are designed to work with most of the generators supported by CMake: Makefile, Xcode, VS, and even Ninja. Though we do not use the latter in any of our build scripts explicitly. Which build script to use is determined by which CMake generator (and toolchain) you intend to use in your build tree. For native build, you can just use cmake_generic.sh or cmake_generic.bat to let CMake to detect and decide which generator to use automatically. CMake should default to use "Unix Makefiles" generator on Linux and Mac host systems and it should default to use 32-bit "Visual Studio" generator on Windows host system when it is installed.</p>
@@ -165,23 +165,23 @@ Native build process</h2>
 <ol type="1">
 <li>Run CMake in the root directory (which is also CMake's source tree) with your preferred generator and toolchain specified to generate the build tree. You can use cmake-gui or the provided batch files or shell scripts on the respective host system. All the batch files and shell scripts expect the build tree location to be passed as the first argument, or to execute them in the build tree itself when reconfiguring the existing build tree.<br/>
 <ul>
-<li>Windows: cmake_vs2008.bat, cmake_vs2010.bat, cmake_vs2012.bat, cmake_vs2013.bat, or cmake_mingw.bat,<br/>
+<li>Windows: cmake_vs20xx.bat, cmake_mingw.bat, or cmake_generic.bat<br/>
 </li>
-<li>Linux: cmake_generic.sh, cmake_eclipse.sh, or cmake_codeblocks.sh<br/>
+<li>Linux: cmake_eclipse.sh, cmake_codeblocks.sh, or cmake_generic.sh<br/>
 </li>
-<li>Mac OS X: cmake_generic.sh or cmake_macosx.sh.<br/>
+<li>Mac OS X: cmake_macosx.sh or cmake_generic.sh<br/>
 </li>
 </ul>
 </li>
 <li>Use the IDE of your choice to open the CMake's generated project file or solution file in the build tree. Change the build configuration (Debug/Release) and then build all the targets.<br/>
 <ul>
-<li>Visual Studio: open Urho3D.sln.<br/>
+<li>Visual Studio: open Urho3D.sln<br/>
 </li>
-<li>Xcode: open Urho3D.xcodeproj.<br/>
+<li>Xcode: open Urho3D.xcodeproj<br/>
 </li>
-<li>CodeBlocks: open Urho3D.cbp.<br/>
+<li>CodeBlocks: open Urho3D.cbp<br/>
 </li>
-<li>Eclipse: import project using File|Import "Existing Projects into Workspace".<br/>
+<li>Eclipse: import project using File|Import "Existing Projects into Workspace"<br/>
 </li>
 </ul>
 </li>
@@ -194,8 +194,9 @@ Native build process</h2>
 <li>Instead of copying, just create symbolic links in the build tree pointing to the above two directories.</li>
 <li>Or even better, set and export URHO3D_PREFIX_PATH variable in your host environment. The prefix variable must be set to an absolute path which contains the Data and CoreData subdirectories.</li>
 </ul>
-<p>To run the Urho3D player application from the Visual Studio debugger, set the Urho3DPlayer project as the startup project and enter its relative path and filename into Properties -&gt; Debugging -&gt; Command: ../../../Bin/Urho3DPlayer.exe. Additionally, entering -w into Debugging -&gt; Command Arguments is highly recommended. This enables startup in windowed mode: without it running into an exception or breakpoint will be obnoxious as the mouse cursor will likely be hidden. To actually make the Urho3DPlayer application do something useful, it must be supplied with the name of the script file it should load and run. You can try for example the following arguments: Scripts/NinjaSnowWar.as -w</p>
-<p>To run from Eclipse on Linux, locate and select the Urho3DPlayer executable in the Project Explorer. From the menu, choose "Run Configurations" to create a new launch configuration for "C/C++ Application". Switch to "Arguments" tab, specify the argument required by Urho3DPlayer executable.</p>
+<p>To run the Urho3D player application from the Visual Studio debugger, set the Urho3DPlayer project as the startup project and enter its relative path and filename into Properties -&gt; Debugging -&gt; Command: ../../../Bin/Urho3DPlayer.exe. Additionally, entering -w into Debugging -&gt; Command Arguments is highly recommended. This enables startup in windowed mode: without it running into an exception or breakpoint will be obnoxious as the mouse cursor will likely be hidden. To actually make the Urho3DPlayer application do something useful, it must be supplied with the name of the script file it should load and run. You can try for example the following arguments:</p>
+<pre class="fragment">Scripts/NinjaSnowWar.as -w
+</pre><p>To run from Eclipse on Linux, locate and select the Urho3DPlayer executable in the Project Explorer. From the menu, choose "Run Configurations" to create a new launch configuration for "C/C++ Application". Switch to "Arguments" tab, specify the argument required by Urho3DPlayer executable.</p>
 <p>To run from Xcode on Mac OS X, edit the Product Scheme to set "Run" setting to execute "Urho3DPlayer" in the "Info" tab. In the "Arguments" tab, specify the arguments required by Urho3DPlayer executable. Ensure the check boxes are ticked on the argument entries that you want to be active.</p>
 <p>CMake caches some internal variables to speed up the subsequent invocation of the CMake. This is normally a good thing. However, there are cases when this is not desirable, for instance when switching CMake generators or after upgrading development software components. In such cases, it is recomended to first clean the CMake cache by invoking cmake_clean.bat or cmake_clean.sh by passing the location of the build tree to one of these as the first argument or by executing it in the build tree itself.</p>
 <h2><a class="anchor" id="Building_Android"></a>
@@ -203,11 +204,10 @@ Android build process</h2>
 <p>First, if you are building under Windows host without MKLINK support then copy Bin/Data and Bin/CoreData directories to the Android/assets directory (you can use the provided batch file CopyData.bat). This step is not necessary for Windows host with MKLINK support and other non-Windows host systems.</p>
 <p>Set the ANDROID_NDK environment variable to point to your Android NDK. On Windows, ensure that make.exe from the Android NDK is included in the path and is executable from the command line.</p>
 <p>On Windows host, execute cmake_android.bat. On OS X or Linux host, execute cmake_android.sh. Then go to the build tree and execute the below commands to start the build.</p>
-<ul>
-<li>android update project -p . -t 1 (replace id to match the desired target API)</li>
-<li>make -j8 (replace the number to match your host's number of logical CPU cores)</li>
-<li>ant debug</li>
-</ul>
+<pre class="fragment">- android update project -p . -t &lt;target-id&gt;
+- make -j &lt;num_jobs&gt;
+- ant debug
+</pre><p>Where the &lt;target-id&gt; is one of the target id returned by "android list target" command. The &lt;num-jobs&gt; is the number of concurrent compiler jobs to be spawned by make command.</p>
 <p>After the commands finish successfully, the APK should have been generated in the build tree's "bin" subdirectory, from where it can be installed on a device or an emulator. The command "ant installd" can be used for this. Optionally when you have Rake installed, after the debug APK has been installed then you can use "rake android" command to automate the test running of the APK on an attached Android (virtual) device.</p>
 <p>For a release build, use the "ant release" command instead of "ant debug" and follow the Android SDK instructions on how to sign your APK properly.</p>
 <p>By default the Android package for Urho3D is com.googlecode.urho3d. For a real application you must replace this with your own package name. The Urho3D activity subclasses the SDLActivity from org.libsdl.app package, whose name (or the JNI code from SDL library) does not have to be changed.</p>
@@ -240,9 +240,9 @@ Library build</h2>
 <p>To install the Urho3D library as an SDK, use the usual 'make install' command. There is an equivalent built-in target called "install" in Visual Studio solution and Xcode project to perform the SDK installation. This could be useful when you want your application to always link against a 'stable' installed version of the Urho3D library, while keeping your Urho3D project root tree in sync with origin/master; or when you want other users in the same host system to use the installed Urho3D SDK instead of them building from source again.</p>
 <p>The default install prefix is 'c:/Program Files/Urho3D' on Windows host and '/usr/local' on all other non-Windows hosts. You can use the CMAKE_INSTALL_PREFIX build option to alter this prefix path. However, when cross-compiling you may actually want to alter the final installation destination by supplying DESDIR environment variable instead of altering the CMAKE_INSTALL_PREFIX variable directly, especially when using Urho3D library as shared library type because the installed executables have their RPATH adjusted relative to CMAKE_INSTALL_PREFIX. The DESTDIR environment variable is not applicable for installation on Windows host, i.e. it can only use CMAKE_INSTALL_PREFIX variable to alter the final installation destination. This is not a lost, however, because there is no RPATH adjustment for Windows platform, but as the result the Urho3D.dll will be installed in a same directory as the installed executables.</p>
 <p>If the Urho3D SDK is installed to a system-wide default location then the Urho3D library can be found by FindUrho3D CMake module automatically without the help of URHO3D_HOME environment variable or build option. When cross-compiling, the system-wide default location is usually in the system root of the cross-compiling target. To get a corresponding system root path for a cross-compiling build tree, you can use SYSROOT internal variable stored in the CMake cache. You can then use the system root path to set the DESTDIR environment variable in order to stage the Urho3D SDK installation in the corresponding system root. For example:</p>
-<div class="fragment"><div class="line">cd /path/to/your/Urho3D/build-tree</div>
-<div class="line">DESTDIR=$(grep SYSROOT CMakeCache.txt |cut -d<span class="charliteral">&#39;=&#39;</span> -f2) make install</div>
-</div><!-- fragment --><p>Note that SYSROOT variable is empty when the build tree is not setup for cross-compiling.</p>
+<pre class="fragment">cd /path/to/your/Urho3D/build-tree
+DESTDIR=$(grep SYSROOT CMakeCache.txt |cut -d'=' -f2) make install
+</pre><p>Note that SYSROOT variable is empty when the build tree is not setup for cross-compiling.</p>
 <p>Refer to <a class="el" href="_using_library.html">Using Urho3D as external library</a> on how to setup your own project to use Urho3D as external library.</p>
 <p>Urho3D should be built as a shared library if your application consists of multiple modules (main executable + other shared libraries) that all link to Urho3D. The reason for this is that Urho3D contains a few sensitive static data values, such as the main thread's ID, which will not work properly if they are duplicated due to multiple static linkage.</p>
 <h2><a class="anchor" id="Building_Docs"></a>
