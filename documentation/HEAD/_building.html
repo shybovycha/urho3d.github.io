@@ -56,10 +56,10 @@ Building prerequisites</h2>
 Build scripts</h2>
 <p>As this is a cross-platform project, we have provided a number of build scripts for the most common use cases. The shell scripts end with extension *.sh are meant for building Urho3D project in a Unix-like host system (Linux, Mac, and even Raspberry Pi), while the batch files end with *.bat are meant for Windows host system only. They only provide a convenient way to invoke CMake to process our CMakeLists.txt files. Their usage is not a must as you can also invoke CMake to do the same via cmake-gui or via your IDE when your IDE supports that.</p>
 <p>The basic usage as follows:</p>
-<pre class="fragment">Usage: &lt;script-name&gt; /path/to/build-tree [build-option] [build-option] ...
+<pre class="fragment">&lt;script-name&gt; /path/to/build-tree [build-options]
 </pre><p>Where the &lt;script-name&gt; is one of the provided build script. The /path/to/build-tree is where CMake will be generating the build tree for the project. Both out-of-source build tree and non out-of-source build tree path are now supported. The build options are described in detail in the <a class="el" href="_building.html#Build_Options">next section</a> below.</p>
 <p>After the build tree has been generated, you can use the build script again to reconfigure it by passing different build options. You can do so as the basic usage above; or by first change the working directory to the already generated build tree and use the following syntax:</p>
-<pre class="fragment">Usage: &lt;script-name&gt; [build-option] [build-option] ...
+<pre class="fragment">&lt;script-name&gt; [build-options]
 </pre><p>Naturally you have to specify a fully qualified path to the build script for this to work. Alternatively, you can add the path to the Urho3D project root to the PATH environment variable in order to make the build scripts available everywhere.</p>
 <p>Our CMakeLists.txt files are designed to work with most of the generators supported by CMake: Makefile, Xcode, VS, and even Ninja. Though we do not use the latter in any of our build scripts explicitly. Which build script to use is determined by which CMake generator (and toolchain) you intend to use in your build tree. For native build, you can just use cmake_generic.sh or cmake_generic.bat to let CMake to detect and decide which generator to use automatically. CMake should default to use "Unix Makefiles" generator on Linux and Mac host systems and it should default to use 32-bit "Visual Studio" generator on Windows host system when it is installed.</p>
 <h2><a class="anchor" id="Build_Options"></a>
@@ -192,7 +192,7 @@ Native build process</h2>
 <ul>
 <li>Copy both the Bin/Data and Bin/CoreData directories in the source tree to the Bin subdirectory in the build tree.</li>
 <li>Instead of copying, just create symbolic links in the build tree pointing to the above two directories.</li>
-<li>Or even better, set and export URHO3D_PREFIX_PATH variable in your host environment. The prefix variable must be set to an absolute path which contains the Data and CoreData subdirectories.</li>
+<li>Or even better, use the 'resource prefix path' <a class="el" href="_running.html#Running_Commandline">Command line options</a> engine parameter by setting URHO3D_PREFIX_PATH variable in your host environment. The prefix variable must be set to an absolute path which contains the Data and CoreData subdirectories.</li>
 </ul>
 <p>To run the Urho3D player application from the Visual Studio debugger, set the Urho3DPlayer project as the startup project and enter its relative path and filename into Properties -&gt; Debugging -&gt; Command: ../../../Bin/Urho3DPlayer.exe. Additionally, entering -w into Debugging -&gt; Command Arguments is highly recommended. This enables startup in windowed mode: without it running into an exception or breakpoint will be obnoxious as the mouse cursor will likely be hidden. To actually make the Urho3DPlayer application do something useful, it must be supplied with the name of the script file it should load and run. You can try for example the following arguments:</p>
 <pre class="fragment">Scripts/NinjaSnowWar.as -w
