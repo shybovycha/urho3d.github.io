@@ -20,15 +20,12 @@ group: HEAD
 <div class="textblock"><p>This page shows how to create a new C++ project linking against Urho3D library as external library. There are two approaches to do this. The first approach uses Urho3D library directly from the Urho3D project build tree. The second approach uses Urho3D SDK installation. It is imperative to clean the CMake cache when changing from one approach to the other. You should also clean the cache when you change the path in the URHO3D_HOME environment variable.</p>
 <p>First of all, structure your project similar to Urho3D project as below. Although this is not mandatory, it should increase the chance the CMake modules designed for Urho3D project work out of the box for your project too.</p>
 <div class="fragment"><div class="line">PROJECT_ROOT/</div>
-<div class="line"> ├ Android/</div>
 <div class="line"> ├ Bin/</div>
 <div class="line"> │  ├ Data/</div>
 <div class="line"> │  └ CoreData/</div>
 <div class="line"> ├ CMake/</div>
 <div class="line"> │  ├ Modules/</div>
 <div class="line"> │  └ Toolchains/</div>
-<div class="line"> ├ Docs/</div>
-<div class="line"> ├ Source/</div>
 <div class="line"> ├ CMakeListst.txt</div>
 <div class="line"> ├ *.cpp and *.h</div>
 <div class="line"> └ *.bat or *.sh</div>
