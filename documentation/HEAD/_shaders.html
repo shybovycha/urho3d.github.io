@@ -52,6 +52,7 @@ Inbuilt shader uniforms</h2>
 <li>float cNearClip: camera's near clip distance</li>
 <li>float cFarClip: camera's far clip distance</li>
 <li>float cDeltaTime: the timestep of the current frame</li>
+<li>float4 cDepthMode: parameters for calculating a linear depth value between 0-1 to pass to the pixel shader in an interpolator.</li>
 <li>float cElapsedTime: scene's elapsed time value. Can be used to implement animating materials</li>
 <li>float4x3 cModel: the world transform matrix of the object being rendered</li>
 <li>float4x4 cViewProj: the camera's concatenated view and projection matrices</li>
@@ -61,6 +62,7 @@ Inbuilt shader uniforms</h2>
 <ul>
 <li>float3 cAmbientColor: ambient color for a zone with no ambient gradient</li>
 <li>float3 cCameraPosPS: camera's world position</li>
+<li>float4 cDepthReconstruct: parameters for reconstructing a linear depth value between 0-1 from a nonlinear hardware depth texture sample.</li>
 <li>float cDeltaTimePS: the timestep of the current frame</li>
 <li>float cElapsedTimePS: scene's elapsed time value</li>
 <li>float3 cFogColor: the zone's fog color</li>

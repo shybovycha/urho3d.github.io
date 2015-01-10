@@ -294,10 +294,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#aead31506eaa52b206a905888717ac63f">SetRenderTargets</a> (<a class="el" href="struct_urho3_d_1_1_render_path_command.html">RenderPathCommand</a> &amp;command)</td></tr>
 <tr class="memdesc:aead31506eaa52b206a905888717ac63f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set rendertargets for current render command. <br/></td></tr>
 <tr class="separator:aead31506eaa52b206a905888717ac63f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36262a3865ee69e706bf42f2d60bb102"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a36262a3865ee69e706bf42f2d60bb102"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#a36262a3865ee69e706bf42f2d60bb102">SetTextures</a> (<a class="el" href="struct_urho3_d_1_1_render_path_command.html">RenderPathCommand</a> &amp;command)</td></tr>
-<tr class="memdesc:a36262a3865ee69e706bf42f2d60bb102"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set textures for current render command. <br/></td></tr>
-<tr class="separator:a36262a3865ee69e706bf42f2d60bb102"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9621b0cb8221fe59b17a53defc8c0984"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9621b0cb8221fe59b17a53defc8c0984"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#a9621b0cb8221fe59b17a53defc8c0984">SetTextures</a> (<a class="el" href="struct_urho3_d_1_1_render_path_command.html">RenderPathCommand</a> &amp;command)</td></tr>
+<tr class="memdesc:a9621b0cb8221fe59b17a53defc8c0984"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set textures for current render command. Return whether depth write is allowed (depth-stencil not bound as a texture.) <br/></td></tr>
+<tr class="separator:a9621b0cb8221fe59b17a53defc8c0984"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a798fe80282652472bd0fb2c0694bbfb8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a798fe80282652472bd0fb2c0694bbfb8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#a798fe80282652472bd0fb2c0694bbfb8">RenderQuad</a> (<a class="el" href="struct_urho3_d_1_1_render_path_command.html">RenderPathCommand</a> &amp;command)</td></tr>
 <tr class="memdesc:a798fe80282652472bd0fb2c0694bbfb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a quad rendering command. <br/></td></tr>
@@ -477,6 +477,10 @@ Private Attributes</h2></td></tr>
 <a class="el" href="class_urho3_d_1_1_texture2_d.html">Texture2D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#a55e81b633b1da45d7abfcc847bd926dd">currentViewportTexture_</a></td></tr>
 <tr class="memdesc:a55e81b633b1da45d7abfcc847bd926dd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_texture.html" title="Base class for texture resources.">Texture</a> containing the latest viewport texture. <br/></td></tr>
 <tr class="separator:a55e81b633b1da45d7abfcc847bd926dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfb28a00fb9ab1adcb61a93b8a1a7486"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acfb28a00fb9ab1adcb61a93b8a1a7486"></a>
+<a class="el" href="class_urho3_d_1_1_texture2_d.html">Texture2D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#acfb28a00fb9ab1adcb61a93b8a1a7486">depthOnlyDummyTexture_</a></td></tr>
+<tr class="memdesc:acfb28a00fb9ab1adcb61a93b8a1a7486"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dummy texture for D3D9 depth only rendering. <br/></td></tr>
+<tr class="separator:acfb28a00fb9ab1adcb61a93b8a1a7486"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46bbf02fcd252d4c556c60ddef0c3251"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46bbf02fcd252d4c556c60ddef0c3251"></a>
 <a class="el" href="class_urho3_d_1_1_int_rect.html">IntRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#a46bbf02fcd252d4c556c60ddef0c3251">viewRect_</a></td></tr>
 <tr class="memdesc:a46bbf02fcd252d4c556c60ddef0c3251"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_viewport.html" title="Viewport definition either for a render surface or the backbuffer.">Viewport</a> rectangle. <br/></td></tr>
@@ -541,6 +545,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#a03eeacaa1842ea16d9c930325ec06b27">hasScenePasses_</a></td></tr>
 <tr class="memdesc:a03eeacaa1842ea16d9c930325ec06b27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has scene passes flag. If no scene passes, view can be defined without a valid scene or camera to only perform quad rendering. <br/></td></tr>
 <tr class="separator:a03eeacaa1842ea16d9c930325ec06b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee62cd490ab912e6303411c81ef7e205"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee62cd490ab912e6303411c81ef7e205"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#aee62cd490ab912e6303411c81ef7e205">usingCustomDepth_</a></td></tr>
+<tr class="memdesc:aee62cd490ab912e6303411c81ef7e205"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether is using a custom readable depth texture. <br/></td></tr>
+<tr class="separator:aee62cd490ab912e6303411c81ef7e205"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0dc04dc6f04f634f93578926785cbeba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0dc04dc6f04f634f93578926785cbeba"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#a0dc04dc6f04f634f93578926785cbeba">drawDebug_</a></td></tr>
 <tr class="memdesc:a0dc04dc6f04f634f93578926785cbeba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw debug geometry flag. Copied from the viewport. <br/></td></tr>
