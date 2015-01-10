@@ -3858,6 +3858,7 @@ Classes</h2>
 <li>void SetShaderParameter(const String name, const Variant&amp; value)</li>
 <li>unsigned GetNumRenderTargets() const</li>
 <li>unsigned GetNumCommands() const</li>
+<li>RenderPathCommand* GetCommand(unsigned index)</li>
 <li>const <a class="el" href="class_urho3_d_1_1_variant.html" title="Variable that supports a fixed set of types.">Variant</a>&amp; GetShaderParameter(const String name) const</li>
 </ul>
 <p><a class="anchor" id="Class_RenderPathCommand"></a> </p>
@@ -5386,9 +5387,6 @@ Classes</h2>
 <li>void SetFocusElement(UIElement* element, bool byKey = false)</li>
 <li>bool SetModalElement(UIElement* modalElement, bool enable)</li>
 <li>void Clear()</li>
-<li>void Update(float timeStep)</li>
-<li>void RenderUpdate()</li>
-<li>void Render()</li>
 <li>void DebugDraw(UIElement* element)</li>
 <li>UIElement* LoadLayout(File* source, XMLFile* styleFile = 0)</li>
 <li>UIElement* LoadLayout(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> fileName, XMLFile* styleFile = 0)</li>
@@ -6622,6 +6620,7 @@ Enumerations</h2>
 <li>int CMD_QUAD</li>
 <li>int CMD_FORWARDLIGHTS</li>
 <li>int CMD_LIGHTVOLUMES</li>
+<li>int CMD_RENDERUI</li>
 </ul>
 <h4>RenderSurfaceUpdateMode</h4>
 <ul>

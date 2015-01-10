@@ -93,6 +93,7 @@ Though Urho3D already contains several useful features and implements a framewor
 - Daniel Wiberg
 - Steven Zhang
 - AGreatFish
+- Enhex
 - Firegorilla
 - Magic.Lixin
 - Mike3D
