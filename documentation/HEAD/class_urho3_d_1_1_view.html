@@ -545,10 +545,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#a03eeacaa1842ea16d9c930325ec06b27">hasScenePasses_</a></td></tr>
 <tr class="memdesc:a03eeacaa1842ea16d9c930325ec06b27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has scene passes flag. If no scene passes, view can be defined without a valid scene or camera to only perform quad rendering. <br/></td></tr>
 <tr class="separator:a03eeacaa1842ea16d9c930325ec06b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee62cd490ab912e6303411c81ef7e205"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee62cd490ab912e6303411c81ef7e205"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#aee62cd490ab912e6303411c81ef7e205">usingCustomDepth_</a></td></tr>
-<tr class="memdesc:aee62cd490ab912e6303411c81ef7e205"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether is using a custom readable depth texture. <br/></td></tr>
-<tr class="separator:aee62cd490ab912e6303411c81ef7e205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2797fa18f53862123d97272ee5c1738"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa2797fa18f53862123d97272ee5c1738"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#aa2797fa18f53862123d97272ee5c1738">noStencil_</a></td></tr>
+<tr class="memdesc:aa2797fa18f53862123d97272ee5c1738"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether is using a custom readable depth texture without a stencil channel. <br/></td></tr>
+<tr class="separator:aa2797fa18f53862123d97272ee5c1738"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0dc04dc6f04f634f93578926785cbeba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0dc04dc6f04f634f93578926785cbeba"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#a0dc04dc6f04f634f93578926785cbeba">drawDebug_</a></td></tr>
 <tr class="memdesc:a0dc04dc6f04f634f93578926785cbeba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw debug geometry flag. Copied from the viewport. <br/></td></tr>
@@ -642,14 +642,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#a67fe25d20537687c4ccacc71f88d9cfa">litAlphaPassName_</a></td></tr>
 <tr class="memdesc:a67fe25d20537687c4ccacc71f88d9cfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hash of the litalpha pass. <br/></td></tr>
 <tr class="separator:a67fe25d20537687c4ccacc71f88d9cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a744783d8b437d048030a869673ff1c79"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a744783d8b437d048030a869673ff1c79"></a>
-<a class="el" href="class_urho3_d_1_1_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#a744783d8b437d048030a869673ff1c79">lightVolumeVSName_</a></td></tr>
-<tr class="memdesc:a744783d8b437d048030a869673ff1c79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of light volume vertex shader. <br/></td></tr>
-<tr class="separator:a744783d8b437d048030a869673ff1c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad58f41d09009e8eca33d065eb37895d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad58f41d09009e8eca33d065eb37895d1"></a>
-<a class="el" href="class_urho3_d_1_1_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#ad58f41d09009e8eca33d065eb37895d1">lightVolumePSName_</a></td></tr>
-<tr class="memdesc:ad58f41d09009e8eca33d065eb37895d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of light volume pixel shader. <br/></td></tr>
-<tr class="separator:ad58f41d09009e8eca33d065eb37895d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4ab688c249ffc5c9dd45ffac0f8b52f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae4ab688c249ffc5c9dd45ffac0f8b52f"></a>
+const <a class="el" href="struct_urho3_d_1_1_render_path_command.html">RenderPathCommand</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#ae4ab688c249ffc5c9dd45ffac0f8b52f">lightVolumeCommand_</a></td></tr>
+<tr class="memdesc:ae4ab688c249ffc5c9dd45ffac0f8b52f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the light volume command if any. <br/></td></tr>
+<tr class="separator:ae4ab688c249ffc5c9dd45ffac0f8b52f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
