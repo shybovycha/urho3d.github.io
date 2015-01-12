@@ -167,9 +167,11 @@ Native build process</h2>
 <ul>
 <li>Windows: cmake_vs20xx.bat, cmake_mingw.bat, or cmake_generic.bat<br/>
 </li>
+<li>Mac OS X: cmake_macosx.sh or cmake_generic.sh<br/>
+</li>
 <li>Linux: cmake_eclipse.sh, cmake_codeblocks.sh, or cmake_generic.sh<br/>
 </li>
-<li>Mac OS X: cmake_macosx.sh or cmake_generic.sh<br/>
+<li>Raspberry Pi: cmake_rpi.sh, cmake_eclipse.sh, cmake_codeblocks.sh, or cmake_generic.sh<br/>
 </li>
 </ul>
 </li>
@@ -221,7 +223,7 @@ iOS build process</h2>
 <p>To run from Xcode on iPhone/iPad Simulator, edit the Product Scheme to set "Run" destination setting to "iPhone Simulator" or "iPad Simulator", and executable to "Urho3DPlayer.app".</p>
 <h2><a class="anchor" id="Building_RaspberryPi"></a>
 Raspberry Pi build process</h2>
-<p>For native build on Raspberry Pi itself, use the similar process for <a class="el" href="_building.html#Building_Native">Linux native build</a> described above.</p>
+<p>For native build on Raspberry Pi itself, use the similar process for <a class="el" href="_building.html#Building_Native">Native build process</a> described above.</p>
 <p>For cross-compiling build on an Linux host system, firstly set the RPI_PREFIX environment variable or build option to point to your Raspberry Pi Cross-Compiling tool are located. You can setup the tool using <a href="http://crosstool-ng.org/">crosstool-NG</a> or just download one from <a href="https://github.com/raspberrypi/tools">https://github.com/raspberrypi/tools</a>. Secondly, set the RPI_SYSROOT environment variable or build option to point to your Raspbian or Pidora system root. You must install the Urho3D prerequisites software development packages for Raspberry Pi (see <a class="el" href="_building.html#Building_Prerequisites">Building prerequisites</a>) in the system root before attempting to do the Urho3D cross-compiling build. You are recommended to download the Raspbian system root with Urho3D prerequisite software installed from <a href="https://github.com/urho3d/rpi-sysroot">https://github.com/urho3d/rpi-sysroot</a>. You can just download from the "strip" branch to cut down the download time and size.</p>
 <p>Execute cmake_raspi.sh then go to the build tree to execute make command. After the build is complete, the ARM executables can be found in the build tree's "Bin" subdirectory.</p>
 <p>You can also build, deploy, run/debug (as C/C++ Remote Application) using Eclipse IDE. To do that, execute cmake_eclipse.sh with "-DRPI=1" build option set. Import the CMake generated Eclipse project in the build tree into Eclipse's workspace. Build the project as usual. Optionally, use the "URHO3D_SCP_TO_TARGET" build option to automatically deploy the ARM executables to target Raspberry Pi device as part of build process; or configure Eclipse to perform a "download to target path" in the Run/Debug configuration for C/C++ Remote Application. Either way, you have to configure the Run/Debug configuration to let it know how to reach your target Raspberry Pi device.</p>
