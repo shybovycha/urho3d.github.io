@@ -52,6 +52,7 @@ Building prerequisites</h2>
 <li>iOS: OpenGL ES 2.0 capable GPU.</li>
 </ul>
 <p>SSE requirement can be eliminated by disabling the use of SSE instruction set, see URHO3D_SSE build option below.</p>
+<p>CMake is required to configure and generate the Urho3D project build tree. The minimum required version is 2.8.6. However, it is recommended to use the latest CMake version avaiable out there, especially when targeting Mac OS X and iOS platforms using the latest Xcode version available. Apple is known to change the internal working of Xcode with little regards to other third party development tools.</p>
 <h2><a class="anchor" id="Build_Scripts"></a>
 Build scripts</h2>
 <p>As this is a cross-platform project, we have provided a number of build scripts for the most common use cases. The shell scripts end with extension *.sh are meant for building Urho3D project in a Unix-like host system (Linux, Mac, and even Raspberry Pi), while the batch files end with *.bat are meant for Windows host system only. They only provide a convenient way to invoke CMake to process our CMakeLists.txt files. Their usage is not a must as you can also invoke CMake to do the same via cmake-gui or via your IDE when your IDE supports that.</p>
@@ -140,9 +141,9 @@ Build options</h2>
 <tr>
 <td>CMAKE_INSTALL_PREFIX </td><td>*</td><td>Install path prefix, prepended onto install directories; default to 'c:/Program Files/Urho3D' on Windows host and '/usr/local' on all other non-Windows hosts </td></tr>
 <tr>
-<td>CMAKE_OSX_DEPLOYMENT_TARGET</td><td>-</td><td>Specify Mac OS X deployment target (OSX build only); default to current running OS X if not specified </td></tr>
+<td>CMAKE_OSX_DEPLOYMENT_TARGET</td><td>-</td><td>Specify Mac OS X deployment target (OSX build only); default to current running OS X if not specified, the minimum supported target is 10.5 due to constraint from SDL library </td></tr>
 <tr>
-<td>IPHONEOS_DEPLOYMENT_TARGET</td><td>-</td><td>Specify iPhone OS deployment target (iOS build only); default to latest installed iOS SDK if not specified </td></tr>
+<td>IPHONEOS_DEPLOYMENT_TARGET</td><td>-</td><td>Specify iPhone OS deployment target (iOS build only); default to latest installed iOS SDK if not specified, the minimum spported target is 3.0 due to constraint from SDL library </td></tr>
 <tr>
 <td>ANDROID_ABI </td><td>*</td><td>Specify target ABI (Android build only), possible values are arm64-v8a, armeabi, armeabi-v6 with VFP, armeabi-v7a (*default), armeabi-v7a with NEON, armeabi-v7a with VFPV3, mips, mips64, x86, and x86_64 </td></tr>
 <tr>
@@ -175,7 +176,7 @@ Native build process</h2>
 </li>
 </ul>
 </li>
-<li>Use the IDE of your choice to open the CMake's generated project file or solution file in the build tree. Change the build configuration (Debug/Release) and then build all the targets.<br/>
+<li>Use the IDE of your choice to open the CMake's generated project file or solution file in the build tree. Change the build configuration (Debug/Release) and change the built-in target to ALL_BUILD to build all the targets.<br/>
 <ul>
 <li>Visual Studio: open Urho3D.sln<br/>
 </li>
@@ -218,7 +219,7 @@ Android build process</h2>
 <h2><a class="anchor" id="Building_Ios"></a>
 iOS build process</h2>
 <p>Run cmake_ios.sh. This generates an Xcode project named Urho3D.xcodeproj.</p>
-<p>Open the Xcode project and check the properties for the Urho3D project (topmost in the Project Navigator.) In Architectures -&gt; Base SDK, choose your iOS SDK (CMake would automatically select latest iOS when generating the Xcode project). In Code Signing, enter your developer identity as necessary.</p>
+<p>Open the Xcode project and check the properties for the Urho3D project (topmost in the Project Navigator.) In Architectures -&gt; Base SDK, choose your iOS SDK (CMake would automatically select latest iOS when generating the Xcode project). In Code Signing, enter your developer identity as necessary. Also ensure you have changed the built-in target to ALL_BUILD to build all the targets.</p>
 <p>The Urho3DPlayer target will actually build the application bundle and copy resources from Bin/Data and Bin/CoreData directories. Edit its build scheme to choose debug or release mode.</p>
 <p>To run from Xcode on iPhone/iPad Simulator, edit the Product Scheme to set "Run" destination setting to "iPhone Simulator" or "iPad Simulator", and executable to "Urho3DPlayer.app".</p>
 <h2><a class="anchor" id="Building_RaspberryPi"></a>
