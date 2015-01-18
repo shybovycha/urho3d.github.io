@@ -17,11 +17,11 @@ group: HEAD
 <div class="title">Running Urho3D player application </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The Urho3D player application in the Bin directory contains all the engine runtime functionality. However, it does not contain any inbuilt logic, and therefore must be supplied with the name of the application script file it should run:</p>
+<div class="textblock"><p>The Urho3D player application in the bin directory contains all the engine runtime functionality. However, it does not contain any inbuilt logic, and therefore must be supplied with the name of the application script file it should run:</p>
 <pre class="fragment">Urho3DPlayer &lt;scriptfilename&gt; [options]
-</pre><p>The scripting language supported by default is AngelScript (<a href="http://www.angelcode.com/angelscript">http://www.angelcode.com/angelscript</a>); the script files have .as extension and need to be placed under either the Bin/Data or Bin/CoreData subdirectories so that Urho3DPlayer can find them. An application script is required to have the function void Start(), which will be executed before starting the engine main loop. It is this function's responsibility to initialize the application and to hook up to any necessary <a class="el" href="_events.html">events</a>, such as the update that happens every frame.</p>
+</pre><p>The scripting language supported by default is AngelScript (<a href="http://www.angelcode.com/angelscript">http://www.angelcode.com/angelscript</a>); the script files have .as extension and need to be placed under either the bin/Data or bin/CoreData subdirectories so that Urho3DPlayer can find them. An application script is required to have the function void Start(), which will be executed before starting the engine main loop. It is this function's responsibility to initialize the application and to hook up to any necessary <a class="el" href="_events.html">events</a>, such as the update that happens every frame.</p>
 <p>Lua language support can optionally be built in, see <a class="el" href="_building.html#Build_Options">Build options</a>.</p>
-<p>On Android and iOS the command line can not be entered, so it is instead read from the file Bin/Data/CommandLine.txt. By default the NinjaSnowWar example will be run.</p>
+<p>On Android and iOS the command line can not be entered, so it is instead read from the file bin/Data/CommandLine.txt. By default the NinjaSnowWar example will be run.</p>
 <h2><a class="anchor" id="Running_Commandline"></a>
 Command line options</h2>
 <p>The engine can be configured using the following command line options.</p>

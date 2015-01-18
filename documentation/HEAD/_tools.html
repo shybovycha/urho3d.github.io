@@ -85,7 +85,7 @@ PackageTool</h2>
 Options:
 -c      Enable package file LZ4 compression
 </pre><p>When PackageTool runs, it will go inside the source directory, then look for subdirectories and any files. Paths inside the package will by default be relative to the source directory, but if an extra path prefix is desired, it can be specified by the optional basepath argument.</p>
-<p>For example, this would convert all the resource files inside the Urho3D Data directory into a package called Data.pak (execute the command from the Bin directory)</p>
+<p>For example, this would convert all the resource files inside the Urho3D Data directory into a package called Data.pak (execute the command from the bin directory)</p>
 <pre class="fragment">PackageTool Data Data.pak
 </pre><p>The -c option enables LZ4 compression on the files.</p>
 <h2><a class="anchor" id="Tools_RampGenerator"></a>
@@ -99,6 +99,6 @@ ScriptCompiler</h2>
 <p>Compiles AngelScript file(s) to binary bytecode for faster loading. Can also dump the Script API in Doxygen format.</p>
 <p>Usage:</p>
 <pre class="fragment">ScriptCompiler &lt;input file&gt; [resource path for includes]
-ScriptCompiler -dumpapi &lt;Doxygen output file&gt; [C header output file]</pre><p>The output files are saved with the extension .asc (compiled AngelScript.) Binary files are not automatically loaded instead of the text format (.as) script files, instead resource requests and resource references in objects need to point to the compiled files. In a final build of an application it may be convenient to simply replace the text format script files with the compiled scripts.</p>
+ScriptCompiler -dumpapi &lt;Doxygen output file&gt; [C header output file]</pre><p>The output files are saved with the extension .asc (compiled AngelScript.) binary files are not automatically loaded instead of the text format (.as) script files, instead resource requests and resource references in objects need to point to the compiled files. In a final build of an application it may be convenient to simply replace the text format script files with the compiled scripts.</p>
 <p>The script API dump mode can be used to replace the 'ScriptAPI.dox' file in the 'Docs' directory. If the output file name is not provided then the script API would be dumped to standard output (console) instead. </p>
 </div></div><!-- contents -->

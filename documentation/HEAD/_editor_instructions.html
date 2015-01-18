@@ -17,10 +17,10 @@ group: HEAD
 <div class="title">Editor instructions </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The Urho3D editor is a script application that can be run with the Urho3D player application. To start, execute any of these commands: (in the Bin directory) Editor.bat, Editor.sh or Urho3DPlayer Scripts/Editor.as</p>
+<div class="textblock"><p>The Urho3D editor is a script application that can be run with the Urho3D player application. To start, execute any of these commands: (in the bin directory) Editor.bat, Editor.sh or Urho3DPlayer Scripts/Editor.as</p>
 <p>All the <a class="el" href="_running.html#Running_Commandline">command line options</a> supported by Urho3D player application are available for Editor as well. Additionally, Editor also supports the following command line options:</p>
 <pre class="fragment">-scene &lt;/path/to/scene.xml&gt;     Load a scene after starting up
-</pre><p>Hint: to get more content to look at, run the Physics sample application (Bin/Data/Scripts/11_Physics.as), and press F5. This saves a scene file called Physics.xml into the Data/Scenes subdirectory, which can be loaded in the editor. Scenes utilized by the NinjaSnowWar and SceneAndUILoad examples also exist in the Data/Scenes subdirectory, and the NinjaSnowWar object "prefabs" are in the Data/Objects subdirectory.</p>
+</pre><p>Hint: to get more content to look at, run the Physics sample application (bin/Data/Scripts/11_Physics.as), and press F5. This saves a scene file called Physics.xml into the Data/Scenes subdirectory, which can be loaded in the editor. Scenes utilized by the NinjaSnowWar and SceneAndUILoad examples also exist in the Data/Scenes subdirectory, and the NinjaSnowWar object "prefabs" are in the Data/Objects subdirectory.</p>
 <h2><a class="anchor" id="EditorInstructions_Controls"></a>
 Controls</h2>
 <pre class="fragment">Left mouse         - Select nodes or drag the node transform gizmo. Hold Shift to
@@ -92,7 +92,7 @@ Editing</h2>
 <p>While editing, you can execute script files using the "Run script" item in the File menu. These are AngelScript files that are executed in immediate mode ie. you do not need to define a function. The editor's scene will be accessible to the script as the global property "scene."</p>
 <p>Components of same type can be multi-edited. Where attribute values differ, the attribute field will be left blank, but editing the attribute will apply the change to all components.</p>
 <p>In addition to whole scenes, single scene nodes including all their components and child nodes can be loaded and saved (File -&gt; Load node, File -&gt; Save node as.) These can act as "prefabs" for speeding up scene construction. To save a node, it needs first to be selected in the hierarchy window.</p>
-<p>Primitive geometries (boxes, spheres, cylinders) can be instantiated from the Create menu. Note that these are just ordinary model files in the Bin/Data/Models directory; their Blender format source files are in the SourceAssets directory.</p>
+<p>Primitive geometries (boxes, spheres, cylinders) can be instantiated from the Create menu. Note that these are just ordinary model files in the bin/Data/Models directory; their Blender format source files are in the SourceAssets directory.</p>
 <p>Additionally a resource browser is available to access the contents of resource directories. Whenever the editor is opened or a scene is loaded the resource browser scans for resources. If at anytime the resources change the reload button can be pressed at the top-right of the resource browser and the resource browser will rescan. Two methods are provided to find resources. A tree view of the folders and a search bar. The search box utilizes a simple string substring of the filename. Resources can also be filtered by type by opening the filter panel which is toggled by the small filter icon. There are lots of contextual options for each resource type such as dragging a resource into the hierarchy view, a <a class="el" href="class_urho3_d_1_1_line_edit.html" title="Single-line text editor UI element.">LineEdit</a>, or in the viewport. A right click context menu on a resource in the browser will give additional options per resource type.</p>
 <h2><a class="anchor" id="EditorInstructions_Importing"></a>
 Importing</h2>

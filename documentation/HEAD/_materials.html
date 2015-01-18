@@ -17,7 +17,7 @@ group: HEAD
 <div class="title">Materials </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="el" href="class_urho3_d_1_1_material.html" title="Describes how to render 3D geometries.">Material</a> and <a class="el" href="class_urho3_d_1_1_technique.html" title="Material technique. Consists of several passes.">Technique</a> resources define how to render 3D scene geometry. On the disk, they are XML data. Default and example materials exist in the Bin/CoreData/Materials &amp; Bin/Data/Materials subdirectories, and techniques exist in the Bin/CoreData/Techniques subdirectory.</p>
+<div class="textblock"><p><a class="el" href="class_urho3_d_1_1_material.html" title="Describes how to render 3D geometries.">Material</a> and <a class="el" href="class_urho3_d_1_1_technique.html" title="Material technique. Consists of several passes.">Technique</a> resources define how to render 3D scene geometry. On the disk, they are XML data. Default and example materials exist in the bin/CoreData/Materials &amp; bin/Data/Materials subdirectories, and techniques exist in the bin/CoreData/Techniques subdirectory.</p>
 <p>A material defines the textures, shader parameters and culling mode to use, and refers to one or several techniques. A technique defines the actual rendering passes, the shaders to use in each, and all other rendering states such as depth test, depth write, and blending.</p>
 <p>A material definition looks like this:</p>
 <div class="fragment"><div class="line">&lt;material&gt;</div>
@@ -65,7 +65,7 @@ Material textures</h2>
 <h2><a class="anchor" id="Materials_CubeMapTextures"></a>
 Cube map textures</h2>
 <p>Using cube map textures requires an XML file to define the cube map face textures or layout. In this case the XML file <em>is</em> the texture resource name in material scripts or in LoadResource() calls.</p>
-<p>Individual face textures are defined in the XML like this: (see Bin/Data/Textures/Skybox.xml for an example)</p>
+<p>Individual face textures are defined in the XML like this: (see bin/Data/Textures/Skybox.xml for an example)</p>
 <div class="fragment"><div class="line">&lt;cubemap&gt;</div>
 <div class="line">    &lt;face name=<span class="stringliteral">&quot;PositiveX_TextureName&quot;</span> /&gt;</div>
 <div class="line">    &lt;face name=<span class="stringliteral">&quot;NegativeX_TextureName&quot;</span> /&gt;</div>
