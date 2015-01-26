@@ -791,18 +791,26 @@ Private Attributes</h2></td></tr>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer2_d.html#ab53436e521920c29fb2906a5b0f33c43">orderDirty_</a></td></tr>
 <tr class="memdesc:ab53436e521920c29fb2906a5b0f33c43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Order dirty. <br/></td></tr>
 <tr class="separator:ab53436e521920c29fb2906a5b0f33c43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8dbbc99f08b44fc0b347efb6b3fbcbf5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8dbbc99f08b44fc0b347efb6b3fbcbf5"></a>
-<a class="el" href="class_urho3_d_1_1_vector.html">Vector</a>&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_material.html">Material</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer2_d.html#a8dbbc99f08b44fc0b347efb6b3fbcbf5">materials_</a></td></tr>
-<tr class="memdesc:a8dbbc99f08b44fc0b347efb6b3fbcbf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Materials. <br/></td></tr>
-<tr class="separator:a8dbbc99f08b44fc0b347efb6b3fbcbf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaecc17b09379ff2effc9228586d3f4fc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaecc17b09379ff2effc9228586d3f4fc"></a>
-<a class="el" href="class_urho3_d_1_1_vector.html">Vector</a>&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_geometry.html">Geometry</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer2_d.html#aaecc17b09379ff2effc9228586d3f4fc">geometries_</a></td></tr>
-<tr class="memdesc:aaecc17b09379ff2effc9228586d3f4fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geometries. <br/></td></tr>
-<tr class="separator:aaecc17b09379ff2effc9228586d3f4fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b0152ad150882b1a1520d0a96f7f074"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b0152ad150882b1a1520d0a96f7f074"></a>
 <a class="el" href="struct_urho3_d_1_1_frame_info.html">FrameInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer2_d.html#a2b0152ad150882b1a1520d0a96f7f074">frame_</a></td></tr>
 <tr class="memdesc:a2b0152ad150882b1a1520d0a96f7f074"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_view.html" title="Internal structure for 3D rendering work. Created for each backbuffer and texture viewport...">View</a> frameinfo for current frame. <br/></td></tr>
 <tr class="separator:a2b0152ad150882b1a1520d0a96f7f074"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeb8ffad3a91f2adf2834e6e1cb30775"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afeb8ffad3a91f2adf2834e6e1cb30775"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer2_d.html#afeb8ffad3a91f2adf2834e6e1cb30775">geometryCount_</a></td></tr>
+<tr class="memdesc:afeb8ffad3a91f2adf2834e6e1cb30775"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used geometry count. Shared by all views and reset when a new frame begins. <br/></td></tr>
+<tr class="separator:afeb8ffad3a91f2adf2834e6e1cb30775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10a97edb7143eb19965951986655289a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a10a97edb7143eb19965951986655289a"></a>
+<a class="el" href="class_urho3_d_1_1_hash_map.html">HashMap</a>&lt; <a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *, unsigned &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer2_d.html#a10a97edb7143eb19965951986655289a">vertexCount_</a></td></tr>
+<tr class="memdesc:a10a97edb7143eb19965951986655289a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex count by view. <br/></td></tr>
+<tr class="separator:a10a97edb7143eb19965951986655289a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf53bb07edac0b628f4a9eef1ec1adc2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf53bb07edac0b628f4a9eef1ec1adc2"></a>
+<a class="el" href="class_urho3_d_1_1_hash_map.html">HashMap</a>&lt; <a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *, unsigned &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer2_d.html#acf53bb07edac0b628f4a9eef1ec1adc2">indexCount_</a></td></tr>
+<tr class="memdesc:acf53bb07edac0b628f4a9eef1ec1adc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index count by view. <br/></td></tr>
+<tr class="separator:acf53bb07edac0b628f4a9eef1ec1adc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaecc17b09379ff2effc9228586d3f4fc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaecc17b09379ff2effc9228586d3f4fc"></a>
+<a class="el" href="class_urho3_d_1_1_vector.html">Vector</a>&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_geometry.html">Geometry</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer2_d.html#aaecc17b09379ff2effc9228586d3f4fc">geometries_</a></td></tr>
+<tr class="memdesc:aaecc17b09379ff2effc9228586d3f4fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geometries used in all views. <br/></td></tr>
+<tr class="separator:aaecc17b09379ff2effc9228586d3f4fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a385b9494302f9f318a28bf49bb4422b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a385b9494302f9f318a28bf49bb4422b8"></a>
 const <a class="el" href="class_urho3_d_1_1_frustum.html">Frustum</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer2_d.html#a385b9494302f9f318a28bf49bb4422b8">frustum_</a></td></tr>
 <tr class="memdesc:a385b9494302f9f318a28bf49bb4422b8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_frustum.html" title="Convex constructed of 6 planes.">Frustum</a> for current frame. <br/></td></tr>
@@ -811,14 +819,6 @@ const <a class="el" href="class_urho3_d_1_1_frustum.html">Frustum</a> *&#160;</t
 <a class="el" href="class_urho3_d_1_1_bounding_box.html">BoundingBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer2_d.html#ac7b1885089604b27602a4f66a7cebfd1">frustumBoundingBox_</a></td></tr>
 <tr class="memdesc:ac7b1885089604b27602a4f66a7cebfd1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_frustum.html" title="Convex constructed of 6 planes.">Frustum</a> bounding box for current frame. <br/></td></tr>
 <tr class="separator:ac7b1885089604b27602a4f66a7cebfd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5776c673a7726118289173c4f4031f8a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5776c673a7726118289173c4f4031f8a"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer2_d.html#a5776c673a7726118289173c4f4031f8a">indexCount_</a></td></tr>
-<tr class="memdesc:a5776c673a7726118289173c4f4031f8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total index count for the current frame. <br/></td></tr>
-<tr class="separator:a5776c673a7726118289173c4f4031f8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d6fe2c3763f904cedec68cd5f402935"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3d6fe2c3763f904cedec68cd5f402935"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer2_d.html#a3d6fe2c3763f904cedec68cd5f402935">vertexCount_</a></td></tr>
-<tr class="memdesc:a3d6fe2c3763f904cedec68cd5f402935"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total vertex count for the current frame. <br/></td></tr>
-<tr class="separator:a3d6fe2c3763f904cedec68cd5f402935"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fed8af2651540b3413f272da6c5312d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4fed8af2651540b3413f272da6c5312d"></a>
 <a class="el" href="class_urho3_d_1_1_hash_map.html">HashMap</a>&lt; <a class="el" href="class_urho3_d_1_1_texture2_d.html">Texture2D</a> *, <a class="el" href="class_urho3_d_1_1_hash_map.html">HashMap</a><br class="typebreak"/>
 &lt; int, <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_material.html">Material</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer2_d.html#a4fed8af2651540b3413f272da6c5312d">cachedMaterials_</a></td></tr>
