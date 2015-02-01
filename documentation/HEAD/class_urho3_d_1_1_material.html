@@ -233,6 +233,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_material.html#a7796e96cdb03926761aa7b0afaa17a59">GetNumUsedTextureUnits</a> () const </td></tr>
 <tr class="memdesc:a7796e96cdb03926761aa7b0afaa17a59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the last non-null texture unit + 1. Used as an optimization when applying the material to render state. <br/></td></tr>
 <tr class="separator:a7796e96cdb03926761aa7b0afaa17a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af09f1ba16ffe8714b416cecb79f0c6b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af09f1ba16ffe8714b416cecb79f0c6b4"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_material.html#af09f1ba16ffe8714b416cecb79f0c6b4">GetShaderParameterHash</a> () const </td></tr>
+<tr class="memdesc:af09f1ba16ffe8714b416cecb79f0c6b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return shader parameter hash value. Used as an optimization to avoid setting shader parameters unnecessarily. <br/></td></tr>
+<tr class="separator:af09f1ba16ffe8714b416cecb79f0c6b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_resource"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_resource')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_resource.html">Urho3D::Resource</a></td></tr>
 <tr class="memitem:ae3e1545370dec17a283705989a1cc682 inherit pub_methods_class_urho3_d_1_1_resource"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3e1545370dec17a283705989a1cc682"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource.html#ae3e1545370dec17a283705989a1cc682">Resource</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -437,6 +441,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_material.html#a2a6e0e7eae446f7c7513090852aeac21">ResetToDefaults</a> ()</td></tr>
 <tr class="memdesc:a2a6e0e7eae446f7c7513090852aeac21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset to defaults. <br/></td></tr>
 <tr class="separator:a2a6e0e7eae446f7c7513090852aeac21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c262eda9301a091165f9c1c26df060a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9c262eda9301a091165f9c1c26df060a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_material.html#a9c262eda9301a091165f9c1c26df060a">RefreshShaderParameterHash</a> ()</td></tr>
+<tr class="memdesc:a9c262eda9301a091165f9c1c26df060a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recalculate shader parameter hash. <br/></td></tr>
+<tr class="separator:a9c262eda9301a091165f9c1c26df060a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e79bcf19379d52c5057c8a97fdbb288"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e79bcf19379d52c5057c8a97fdbb288"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_material.html#a5e79bcf19379d52c5057c8a97fdbb288">RefreshMemoryUse</a> ()</td></tr>
 <tr class="memdesc:a5e79bcf19379d52c5057c8a97fdbb288"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recalculate the memory used by the material. <br/></td></tr>
@@ -494,6 +502,10 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_material.html#a4f1bdefe7788724e865ada2a98ca4eb0">numUsedTextureUnits_</a></td></tr>
 <tr class="memdesc:a4f1bdefe7788724e865ada2a98ca4eb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of maximum non-null texture unit + 1. <br/></td></tr>
 <tr class="separator:a4f1bdefe7788724e865ada2a98ca4eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c518f1c4f210ca68e8ea07d53eaab2d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9c518f1c4f210ca68e8ea07d53eaab2d"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_material.html#a9c518f1c4f210ca68e8ea07d53eaab2d">shaderParameterHash_</a></td></tr>
+<tr class="memdesc:a9c518f1c4f210ca68e8ea07d53eaab2d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_shader.html" title="Shader resource consisting of several shader variations.">Shader</a> parameter hash value. <br/></td></tr>
+<tr class="separator:a9c518f1c4f210ca68e8ea07d53eaab2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a397b49a6cf3529d208d62d4f966d68b3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a397b49a6cf3529d208d62d4f966d68b3"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_material.html#a397b49a6cf3529d208d62d4f966d68b3">occlusion_</a></td></tr>
 <tr class="memdesc:a397b49a6cf3529d208d62d4f966d68b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render occlusion flag. <br/></td></tr>
@@ -506,6 +518,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_material.html#ace8afb0b822db27d002a1d39f8943840">subscribed_</a></td></tr>
 <tr class="memdesc:ace8afb0b822db27d002a1d39f8943840"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag for whether is subscribed to animation updates. <br/></td></tr>
 <tr class="separator:ace8afb0b822db27d002a1d39f8943840"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84692836e387233e1f42196997b7764c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84692836e387233e1f42196997b7764c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_material.html#a84692836e387233e1f42196997b7764c">batchedParameterUpdate_</a></td></tr>
+<tr class="memdesc:a84692836e387233e1f42196997b7764c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to suppress parameter hash and memory use recalculation when setting multiple shader parameters (loading or resetting the material.) <br/></td></tr>
+<tr class="separator:a84692836e387233e1f42196997b7764c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0822f9ebed0696de903d6284bb2c9ab5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0822f9ebed0696de903d6284bb2c9ab5"></a>
 <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_x_m_l_file.html">XMLFile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_material.html#a0822f9ebed0696de903d6284bb2c9ab5">loadXMLFile_</a></td></tr>
 <tr class="memdesc:a0822f9ebed0696de903d6284bb2c9ab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">XML file used while loading. <br/></td></tr>
