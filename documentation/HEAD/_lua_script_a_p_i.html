@@ -2573,9 +2573,7 @@ Classes</h2>
 <li>void SetScriptObjectType(const String scriptObjectType)</li>
 <li>void SubscribeToEvent(const String eventName, void* functionOrFunctionName)</li>
 <li>void SubscribeToEvent(void* sender, const String eventName, void* functionOrFunctionName)</li>
-<li>void UnsubscribeFromEvent(const String eventName, void* functionOrFunctionName)</li>
 <li>void UnsubscribeFromEvent(const String eventName)</li>
-<li>void UnsubscribeFromEvent(Object* sender, const String eventName, void* functionOrFunctionName)</li>
 <li>void UnsubscribeFromEvent(Object* sender, const String eventName)</li>
 <li>void UnsubscribeFromEvents(Object* sender)</li>
 <li>void UnsubscribeFromAllEvents()</li>
@@ -6899,11 +6897,11 @@ Global functions</h2>
 <li>void PrintLine(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> str, bool error = false)</li>
 <li>int Rand()</li>
 <li>float RandStandardNormal()</li>
-<li>float Random(float range)</li>
 <li>float Random()</li>
 <li>float Random(float min, float max)</li>
-<li>int RandomInt(int range)</li>
+<li>float Random(float range)</li>
 <li>int RandomInt(int min, int max)</li>
+<li>int RandomInt(int range)</li>
 <li>float RandomNormal(float meanValue, float variance)</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> RemoveTrailingSlash(const String pathName)</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> ReplaceExtension(const String fullPath, const String newExtension)</li>
@@ -6914,8 +6912,8 @@ Global functions</h2>
 <li>float Sign(float value)</li>
 <li>float Sin(float angle)</li>
 <li>float SmoothStep(float lhs, float rhs, float t)</li>
-<li>void SubscribeToEvent(const String eventName, void* functionOrFunctionName)</li>
 <li>void SubscribeToEvent(void* sender, const String eventName, void* functionOrFunctionName)</li>
+<li>void SubscribeToEvent(const String eventName, void* functionOrFunctionName)</li>
 <li>float Tan(float angle)</li>
 <li>bool ToBool(const String source)</li>
 <li><a class="el" href="class_urho3_d_1_1_color.html" title="RGBA color.">Color</a> ToColor(const String source)</li>
@@ -6938,10 +6936,8 @@ Global functions</h2>
 <li><a class="el" href="class_urho3_d_1_1_vector4.html" title="Four-dimensional vector.">Vector4</a> ToVector4(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> source, bool allowMissingCoords = false)</li>
 <li>void UnsubscribeFromAllEvents()</li>
 <li>void UnsubscribeFromAllEventsExcept(const Vector&lt;String&gt;&amp; exceptionNames)</li>
-<li>void UnsubscribeFromEvent(const String eventName)</li>
-<li>void UnsubscribeFromEvent(Object* sender, const String eventName, void* functionOrFunctionName)</li>
-<li>void UnsubscribeFromEvent(const String eventName, void* functionOrFunctionName)</li>
 <li>void UnsubscribeFromEvent(Object* sender, const String eventName)</li>
+<li>void UnsubscribeFromEvent(const String eventName)</li>
 <li>void UnsubscribeFromEvents(Object* sender)</li>
 </ul>
 <h2><a class="anchor" id="LuaScriptAPI_GlobalProperties"></a>
