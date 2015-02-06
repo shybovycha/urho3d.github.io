@@ -62,7 +62,7 @@ Build scripts</h2>
 <p>After the build tree has been generated, you can use the build script again to reconfigure it by passing different build options. You can do so as the basic usage above; or by first change the working directory to the already generated build tree and use the following syntax:</p>
 <pre class="fragment">&lt;script-name&gt; [build-options]
 </pre><p>Naturally you have to specify a fully qualified path to the build script for this to work. Alternatively, you can add the path to the Urho3D project root to the PATH environment variable in order to make the build scripts available everywhere.</p>
-<p>Our CMakeLists.txt files are designed to work with most of the generators supported by CMake: Makefile, Xcode, VS, and even Ninja. Though we do not use the latter in any of our build scripts explicitly. Which build script to use is determined by which CMake generator (and toolchain) you intend to use in your build tree. For native build, you can just use cmake_generic.sh or cmake_generic.bat to let CMake to detect and decide which generator to use automatically. CMake should default to use "Unix Makefiles" generator on Linux and Mac host systems and it should default to use 32-bit "Visual Studio" generator on Windows host system when it is installed.</p>
+<p>Our CMakeLists.txt files are designed to work with most of the generators supported by CMake: Makefile, Xcode, VS, and even Ninja. Which build script to use is determined by which CMake generator (and toolchain) you intend to use in your build tree. For native build, you can just use cmake_generic.sh or cmake_generic.bat to let CMake to detect and decide which generator to use automatically. CMake should default to use "Unix Makefiles" generator on Linux and Mac host systems and it should default to use 32-bit "Visual Studio" generator on Windows host system when it is installed.</p>
 <h2><a class="anchor" id="Build_Options"></a>
 Build options</h2>
 <p>A number of build options can be defined when invoking the build scripts or when configurating the project interactively using cmake-gui. To use one of these build options on the command line interface, pass it in this format "-DOPTION=VALUE" without the quotes.<br/>
@@ -170,13 +170,13 @@ Native build process</h2>
 <ol type="1">
 <li>Run CMake in the root directory (which is also CMake's source tree) with your preferred generator and toolchain specified to generate the build tree. You can use cmake-gui or the provided batch files or shell scripts on the respective host system. All the batch files and shell scripts expect the build tree location to be passed as the first argument, or to execute them in the build tree itself when reconfiguring the existing build tree.<br/>
 <ul>
-<li>Windows: cmake_vs20xx.bat, cmake_mingw.bat, or cmake_generic.bat<br/>
+<li>Windows: cmake_vs20xx.bat, cmake_mingw.bat, cmake_codeblock.bat, cmake_ninja.bat, or cmake_generic.bat<br/>
 </li>
-<li>Mac OS X: cmake_macosx.sh or cmake_generic.sh<br/>
+<li>Mac OS X: cmake_macosx.sh, cmake_codeblocks.sh, cmake_ninja.sh, or cmake_generic.sh<br/>
 </li>
-<li>Linux: cmake_eclipse.sh, cmake_codeblocks.sh, or cmake_generic.sh<br/>
+<li>Linux: cmake_eclipse.sh, cmake_codeblocks.sh, cmake_ninja.sh, or cmake_generic.sh<br/>
 </li>
-<li>Raspberry Pi: cmake_rpi.sh, cmake_eclipse.sh, cmake_codeblocks.sh, or cmake_generic.sh<br/>
+<li>Raspberry Pi: cmake_rpi.sh, cmake_eclipse.sh, cmake_codeblocks.sh, cmake_ninja.sh, or cmake_generic.sh<br/>
 </li>
 </ul>
 </li>
