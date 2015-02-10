@@ -68,8 +68,12 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="separator:aefa6f732899a7d9337d60e0cb36901e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98c2a78cddb843cddcea21bddf956b39"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98c2a78cddb843cddcea21bddf956b39"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_x_m_l_file.html#a98c2a78cddb843cddcea21bddf956b39">Save</a> (<a class="el" href="class_urho3_d_1_1_serializer.html">Serializer</a> &amp;dest) const </td></tr>
-<tr class="memdesc:a98c2a78cddb843cddcea21bddf956b39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save resource. Return true if successful. Only supports saving to a <a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>. <br/></td></tr>
+<tr class="memdesc:a98c2a78cddb843cddcea21bddf956b39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save resource with default indentation (one tab). Return true if successful. <br/></td></tr>
 <tr class="separator:a98c2a78cddb843cddcea21bddf956b39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81361f41eca395067fba964142445de3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a81361f41eca395067fba964142445de3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_x_m_l_file.html#a81361f41eca395067fba964142445de3">Save</a> (<a class="el" href="class_urho3_d_1_1_serializer.html">Serializer</a> &amp;dest, const <a class="el" href="class_urho3_d_1_1_string.html">String</a> &amp;indendation) const </td></tr>
+<tr class="memdesc:a81361f41eca395067fba964142445de3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save resource with user-defined indentation. Return true if successful. <br/></td></tr>
+<tr class="separator:a81361f41eca395067fba964142445de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac509f89874d8666f8b757bab006b8986"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac509f89874d8666f8b757bab006b8986"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_x_m_l_file.html#ac509f89874d8666f8b757bab006b8986">FromString</a> (const <a class="el" href="class_urho3_d_1_1_string.html">String</a> &amp;source)</td></tr>
 <tr class="memdesc:ac509f89874d8666f8b757bab006b8986"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deserialize from a string. Return true if successful. <br/></td></tr>
@@ -86,10 +90,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 pugi::xml_document *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_x_m_l_file.html#a3475dcae5a6d39af4330d7bb73f73b87">GetDocument</a> () const </td></tr>
 <tr class="memdesc:a3475dcae5a6d39af4330d7bb73f73b87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the pugixml document. <br/></td></tr>
 <tr class="separator:a3475dcae5a6d39af4330d7bb73f73b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9935de022d881e82f2b76660fbb1320a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9935de022d881e82f2b76660fbb1320a"></a>
-<a class="el" href="class_urho3_d_1_1_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_x_m_l_file.html#a9935de022d881e82f2b76660fbb1320a">ToString</a> () const </td></tr>
-<tr class="memdesc:a9935de022d881e82f2b76660fbb1320a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize the XML content to a string. <br/></td></tr>
-<tr class="separator:a9935de022d881e82f2b76660fbb1320a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a2ee8996e211cc961d6d82766d0c9db"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a2ee8996e211cc961d6d82766d0c9db"></a>
+<a class="el" href="class_urho3_d_1_1_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_x_m_l_file.html#a7a2ee8996e211cc961d6d82766d0c9db">ToString</a> (const <a class="el" href="class_urho3_d_1_1_string.html">String</a> &amp;indendation=&quot;\t&quot;) const </td></tr>
+<tr class="memdesc:a7a2ee8996e211cc961d6d82766d0c9db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize the XML content to a string. <br/></td></tr>
+<tr class="separator:a7a2ee8996e211cc961d6d82766d0c9db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbf90f511e6229965fef7a10d3dc325e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adbf90f511e6229965fef7a10d3dc325e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_x_m_l_file.html#adbf90f511e6229965fef7a10d3dc325e">Patch</a> (<a class="el" href="class_urho3_d_1_1_x_m_l_file.html">XMLFile</a> *patchFile)</td></tr>
 <tr class="memdesc:adbf90f511e6229965fef7a10d3dc325e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Patch the <a class="el" href="class_urho3_d_1_1_x_m_l_file.html" title="XML document resource.">XMLFile</a> with another <a class="el" href="class_urho3_d_1_1_x_m_l_file.html" title="XML document resource.">XMLFile</a>. Based on RFC 5261. <br/></td></tr>

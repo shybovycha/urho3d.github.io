@@ -2248,6 +2248,7 @@ Classes</h2>
 <li>void delete()</li>
 <li><a class="el" href="class_urho3_d_1_1_j_s_o_n_value.html" title="JSON value class.">JSONValue</a> CreateRoot(JSONValueType valueType = JSON_OBJECT)</li>
 <li><a class="el" href="class_urho3_d_1_1_j_s_o_n_value.html" title="JSON value class.">JSONValue</a> GetRoot(JSONValueType valueType = JSON_ANY)</li>
+<li>bool Save(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> fileName, const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> indentation = "\t") const</li>
 </ul>
 <p><a class="anchor" id="Class_JSONValue"></a> </p>
 <h4><a class="el" href="class_urho3_d_1_1_j_s_o_n_value.html" title="JSON value class.">JSONValue</a></h4>
@@ -3030,7 +3031,7 @@ Classes</h2>
 <li>Node() (GC)</li>
 <li>Node* new()</li>
 <li>void delete()</li>
-<li>bool SaveXML(File* dest) const</li>
+<li>bool SaveXML(File* dest, const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> indentation = "\t") const</li>
 <li>void SetName(const String name)</li>
 <li>void SetPosition(const Vector3&amp; position)</li>
 <li>void SetPosition2D(const Vector2&amp; position)</li>
@@ -4298,9 +4299,9 @@ Classes</h2>
 <li>bool Load(const String fileName)</li>
 <li>bool Save(const String fileName) const</li>
 <li>bool LoadXML(File* source)</li>
-<li>bool SaveXML(File* dest) const</li>
+<li>bool SaveXML(File* dest, const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> indentation = "\t") const</li>
 <li>bool LoadXML(const String fileName)</li>
-<li>bool SaveXML(const String fileName) const</li>
+<li>bool SaveXML(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> fileName, const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> indentation = "\t") const</li>
 <li>Node* Instantiate(File* source, const <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>&amp; position, const <a class="el" href="class_urho3_d_1_1_quaternion.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; rotation, CreateMode mode = REPLICATED)</li>
 <li>Node* Instantiate(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> fileName, const <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>&amp; position, const <a class="el" href="class_urho3_d_1_1_quaternion.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; rotation, CreateMode mode = REPLICATED)</li>
 <li>Node* InstantiateXML(File* source, const <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>&amp; position, const <a class="el" href="class_urho3_d_1_1_quaternion.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; rotation, CreateMode mode = REPLICATED)</li>
@@ -5470,9 +5471,9 @@ Classes</h2>
 <li>void delete()</li>
 <li>const <a class="el" href="class_urho3_d_1_1_int_vector2.html" title="Two-dimensional vector with integer values.">IntVector2</a>&amp; GetScreenPosition() const</li>
 <li>bool LoadXML(Deserializer&amp; source)</li>
-<li>bool SaveXML(Serializer&amp; dest) const</li>
+<li>bool SaveXML(<a class="el" href="class_urho3_d_1_1_serializer.html" title="Abstract stream for writing.">Serializer</a>&amp; dest, const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> indentation = "\t") const</li>
 <li>bool LoadXML(const String fileName)</li>
-<li>bool SaveXML(const String fileName) const</li>
+<li>bool SaveXML(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> fileName, const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> indentation = "\t") const</li>
 <li>bool FilterAttributes(XMLElement&amp; dest) const</li>
 <li>void SetName(const String name)</li>
 <li>void SetPosition(const IntVector2&amp; position)</li>
@@ -6296,9 +6297,10 @@ Classes</h2>
 <li>bool FromString(const String source)</li>
 <li><a class="el" href="class_urho3_d_1_1_x_m_l_element.html" title="Element in an XML file.">XMLElement</a> CreateRoot(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> name = <a class="el" href="class_urho3_d_1_1_string.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>)</li>
 <li><a class="el" href="class_urho3_d_1_1_x_m_l_element.html" title="Element in an XML file.">XMLElement</a> GetRoot(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> name = <a class="el" href="class_urho3_d_1_1_string.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>)</li>
-<li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> ToString() const</li>
+<li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> ToString(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> indentation = "\t") const</li>
 <li>void Patch(XMLFile* patchFile)</li>
 <li>void Patch(XMLElement patchElement)</li>
+<li>bool Save(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> fileName, const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> indentation = "\t") const</li>
 </ul>
 <p><a class="anchor" id="Class_Zone"></a> </p>
 <h4><a class="el" href="class_urho3_d_1_1_zone.html" title="Component that describes global rendering properties.">Zone</a> : <a class="el" href="class_urho3_d_1_1_drawable.html" title="Base class for visible components.">Drawable</a></h4>
