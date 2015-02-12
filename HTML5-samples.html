@@ -1,0 +1,10 @@
+---
+layout: page
+title: HTML5 samples
+group: navigation
+---
+<ul class="clearfix col2">
+    {% for sample in site.data.emscripten.samples %}
+    <li><a href="{{ BASE_PATH }}samples/{{ sample }}">{{ sample }}</a></li>
+    {% endfor %}
+</ul>
