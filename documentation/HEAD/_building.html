@@ -35,6 +35,9 @@ Building prerequisites</h2>
 <ul>
 <li>For Android, the Android SDK and Android NDK (minimum API level 12) need to be installed.</li>
 </ul>
+<ul>
+<li>For Emscripten, the Emscripten SDK need to be installed.</li>
+</ul>
 <p>To run Urho3D, the minimum system requirements are:</p>
 <ul>
 <li>Windows: CPU with SSE instructions support, Windows XP or newer, DirectX 9.0c, GPU with Shader Model 2 support (Shader Model 3 recommended.)</li>
@@ -50,6 +53,9 @@ Building prerequisites</h2>
 </ul>
 <ul>
 <li>iOS: OpenGL ES 2.0 capable GPU.</li>
+</ul>
+<ul>
+<li>Emscripten: modern browsers with fast JavaScript engine and HTML5 and WebGL support.</li>
 </ul>
 <p>SSE requirement can be eliminated by disabling the use of SSE instruction set, see URHO3D_SSE build option below.</p>
 <p>CMake is required to configure and generate the Urho3D project build tree. The minimum required version is 2.8.6. However, it is recommended to use the latest CMake version avaiable out there, especially when targeting Mac OS X and iOS platforms using the latest Xcode version available. This is because Apple is known to change the internal working of Xcode with little regards to other third party build tools, such as CMake.</p>
@@ -89,7 +95,7 @@ Build options</h2>
 <tr>
 <td>URHO3D_LUAJIT_AMALG </td><td>0</td><td>Enable LuaJIT amalgamated build (LuaJIT only) </td></tr>
 <tr>
-<td>URHO3D_SAFE_LUA </td><td>0</td><td>Enable Lua C++ wrapper safety checks (when Lua scripting support is enabled only) </td></tr>
+<td>URHO3D_SAFE_LUA </td><td>0</td><td>Enable Lua C++ wrapper safety checks (Lua/LuaJIT only) </td></tr>
 <tr>
 <td>URHO3D_NETWORK </td><td>1</td><td>Enable Networking support </td></tr>
 <tr>
@@ -114,6 +120,8 @@ Build options</h2>
 <td>URHO3D_MINIDUMPS </td><td>1</td><td>Enable minidumps on crash (VS only) </td></tr>
 <tr>
 <td>URHO3D_FILEWATCHER </td><td>1</td><td>Enable filewatcher support </td></tr>
+<tr>
+<td>URHO3D_PACKAGING </td><td>*</td><td>Enable resources packaging support, on Emscripten default to 1, on other platforms default to 0 </td></tr>
 <tr>
 <td>URHO3D_PROFILING </td><td>1</td><td>Enable profiling support </td></tr>
 <tr>
@@ -162,6 +170,14 @@ Build options</h2>
 <td>RPI_PREFIX </td><td>-</td><td>Prefix path to Raspberry Pi cross-compiler tools (RPI cross-compiling build only) </td></tr>
 <tr>
 <td>RPI_SYSROOT </td><td>-</td><td>Path to Raspberry Pi system root (RPI cross-compiling build only) </td></tr>
+<tr>
+<td>EMSCRIPTEN_ROOT_PATH </td><td>-</td><td>Root path to Emscripten cross-compiler tools (Emscripten cross-compiling build only) </td></tr>
+<tr>
+<td>EMSCRIPTEN_SYSROOT </td><td>-</td><td>Path to Emscripten system root (Emscripten cross-compiling build only) </td></tr>
+<tr>
+<td>EMSCRIPTEN_ALLOW_MEMORY_GROWTH</td><td>0</td><td>Enable memory growing based on application demand (Emscripten cross-compiling build only) </td></tr>
+<tr>
+<td>EMSCRIPTEN_TOTAL_MEMORY</td><td>*</td><td>Specify the total size of memory to be used (Emscripten cross-compiling build only); default to 256MB, this option is ignored when EMSCRIPTEN_ALLOW_MEMORY_GROWTH=1 </td></tr>
 </table>
 <p>Note that the specified build option values are cached by CMake after the initial configuration step. The cached values will be used by CMake in the subsequent configuration. The same build options are not required to be specified again and again. But once a non-default build option value is being cached, it can only be reverted back to its default value by explicitly resetting it. That is, simply by not passing the corresponding build option would not revert it back to its default. One way to revert all the build options to their default values is by clearing the CMake cache by calling cmake_clean.bat or cmake_clean.sh.</p>
 <h2><a class="anchor" id="Building_Native"></a>
@@ -199,7 +215,8 @@ Native build process</h2>
 <ul>
 <li>Copy both the bin/Data and bin/CoreData directories in the source tree to the bin subdirectory in the build tree.</li>
 <li>Instead of copying, just create symbolic links in the build tree pointing to the above two directories.</li>
-<li>Or even better, use the 'resource prefix path' <a class="el" href="_running.html#Running_Commandline">engine parameter</a> by setting URHO3D_PREFIX_PATH variable in your host environment. The prefix variable must be set to an absolute path which contains the Data and CoreData subdirectories.</li>
+<li>Or even better, use the 'resource prefix path' <a class="el" href="_running.html#Running_Commandline">engine parameter</a> by setting URHO3D_PREFIX_PATH variable in your host environment. The prefix variable must be set to an absolute path which contains the resource directories.</li>
+<li>Or use the URHO3D_PACKAGING build option which would package the resource directories as *.pak files in the bin subdirectory in the build tree.</li>
 </ul>
 <p>The Mac OS X executables can be built with all the resources bundled into a single app directory. In order to enable this, set the URHO3D_MACOSX_BUNDLE build option when configuring the build tree for the Mac OS X platform. The bundled app can be launched just by double-clicking from the Finder without worrying about setting the 'resource prefix path'. This is because the URHO3D_PREFIX_PATH environment variable has been set internally to point to the resources directory that is already bundled in the app. Note, however, if you do not launch the app via the Apple "Launch Services" (such as when you are debugging or by calling the executable directly inside the bundled app directory via CLI) then you still need to set the 'resource prefix path' manually as described in the previous paragraph.</p>
 <p>The Windows executables are by default built as Windows application instead of console application. You can set the URHO3D_WIN32_CONSOLE build option to override this. As console application, the standard output and standard error streams of the executable are redirected to console.</p>
@@ -240,6 +257,23 @@ MinGW cross-compile build process</h2>
 <p>To cross-compile, the MinGW toolchain (compiler, linker and w32api) needs to be installed on the system. You will also need the DirectX header files, those can be downloaded and installed from the following packet: <a href="http://www.libsdl.org/extras/win32/common/directx-devel.tar.gz">http://www.libsdl.org/extras/win32/common/directx-devel.tar.gz</a>.</p>
 <p>For activating the MinGW toolchain, and to allow it to find the correct compiler, the MINGW_PREFIX environment variable needs to be set. This variable should be set to the prefix of the compiler name, e.g. /usr/bin/x86_64-w64-mingw32 where it would be used to find /usr/bin/x86_64-w64-mingw32-gcc and /usr/bin/x86_64-w64-mingw32-g++, etc. Optionally you can also set MINGW_SYSROOT environment variable or build option to point to your MinGW system root, if it is not installed in a normal expected location.</p>
 <p>Execute cmake_mingw.sh then go to the build tree to execute make command. After the build is complete, the Windows executables can be found in the build tree's "bin" subdirectory.</p>
+<h2><a class="anchor" id="Building_Emscripten"></a>
+Emscripten build process</h2>
+<blockquote class="doxtable">
+<p>WHAT DOESN'T WORK:</p>
+<ul>
+<li>Sound.</li>
+<li>Terrain rendering.</li>
+<li>Networking. Javascript can only use http and websockets protocols so it's not likely that kNet will ever function.</li>
+<li>Mouse locking.</li>
+<li>All the scripting support: AngelScript and Lua/LuaJIT.</li>
+</ul>
+<p></p>
+</blockquote>
+<p>This section assumes you have already updated, installed, and activated the latest Emscripten (trans-)compiler toolchain on your host system as per described in <a href="http://kripken.github.io/emscripten-site/docs/getting_started/downloads.html">http://kripken.github.io/emscripten-site/docs/getting_started/downloads.html</a>.</p>
+<p>Set the EMSCRIPTEN_ROOT_PATH environment variable or build option to point to the root path of Emscripten cross-compiler tools. The Emscripten sysroot path will be derived from the root path, usually from 'system' subdir relative to the root path. However, you can optionally set the EMSCRIPTEN_SYSROOT environment variable or build option to point to another system root path.</p>
+<p>On Windows host, execute cmake_emscripten.bat. On OS X or Linux host, execute cmake_emscripten.sh. Then go to the build tree and execute the 'make' command to start the build as usual. You may want to set the URHO3D_SAMPLES build option to build all the samples.</p>
+<p>After the commands finish successfully, the HTMLs and its correspondng data files should have been generated in the build tree's "bin" subdirectory, from where it can be launched in a browser.</p>
 <h2><a class="anchor" id="Building_64bit"></a>
 Native 64bit build</h2>
 <p>When using MSVC compiler, Urho3D common CMake module configures the build tree to target a 32-bit platform by default. When using other non-MSVC compilers (like GCC or Clang), the module sets the default to 32-bit or 64-bit based on the chosen toolchain in the build tree. You can, however, use the "URHO3D_64BIT" build option to override the default, i.e. by setting the option to '0' (for 32-bit) and '1' (for 64-bit) explicitly.</p>
