@@ -258,14 +258,14 @@ MinGW cross-compile build process</h2>
 <p>For activating the MinGW toolchain, and to allow it to find the correct compiler, the MINGW_PREFIX environment variable needs to be set. This variable should be set to the prefix of the compiler name, e.g. /usr/bin/x86_64-w64-mingw32 where it would be used to find /usr/bin/x86_64-w64-mingw32-gcc and /usr/bin/x86_64-w64-mingw32-g++, etc. Optionally you can also set MINGW_SYSROOT environment variable or build option to point to your MinGW system root, if it is not installed in a normal expected location.</p>
 <p>Execute cmake_mingw.sh then go to the build tree to execute make command. After the build is complete, the Windows executables can be found in the build tree's "bin" subdirectory.</p>
 <h2><a class="anchor" id="Building_Emscripten"></a>
-Emscripten build process</h2>
+Emscripten build process (EXPERIMENTAL)</h2>
 <blockquote class="doxtable">
 <p>WHAT DOESN'T WORK:</p>
 <ul>
-<li>Sound.</li>
+<li>~~Sound.~~</li>
 <li>Terrain rendering.</li>
 <li>Networking. Javascript can only use http and websockets protocols so it's not likely that kNet will ever function.</li>
-<li>Mouse locking.</li>
+<li>~~Mouse locking.~~</li>
 <li>All the scripting support: AngelScript and Lua/LuaJIT.</li>
 </ul>
 <p></p>
