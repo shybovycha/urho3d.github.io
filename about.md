@@ -27,12 +27,12 @@ title: About
 - Task-based multithreading
 - Hierarchical performance profiler
 - Scene and object load/save in binary and XML format
-- Keyframe animation of object attributes<font color="green"><sup>new</sup></font>
-- Background loading of resources<font color="green"><sup>new</sup></font>
+- Keyframe animation of object attributes<font color="olive"><sup>v1.32</sup></font>
+- Background loading of resources<font color="olive"><sup>v1.32</sup></font>
 - Keyboard, mouse, joystick and touch input (if available)
-- Cross-platform support using [SDL 2.0](http://www.libsdl.org/) (currently runs on Windows, Linux, Mac OS X, Android, iOS, and [Raspberry Pi](http://www.raspberrypi.org/)<font color="olive"><sup>v1.3</sup></font>)
+- Cross-platform support using [SDL 2.0](http://www.libsdl.org/) (currently runs on Windows, Linux, Mac OS X, Android, iOS, [Raspberry Pi](http://www.raspberrypi.org/)<font color="olive"><sup>v1.3</sup></font>, and HTML5<font color="green"><sup>new</sup></font> with [Emscripten](http://kripken.github.io/emscripten-site/) toolchain)
 - Physics using [Bullet](http://www.bulletphysics.org/)
-- 2D physics using [Box2D](http://box2d.org/)<font color="green"><sup>new</sup></font>
+- 2D physics using [Box2D](http://box2d.org/)<font color="olive"><sup>v1.32</sup></font>
 - Scripting using [AngelScript](http://www.angelcode.com/angelscript/)
 - Alternative script interface using [Lua](http://www.lua.org/)<font color="olive"><sup>v1.3</sup></font> or [LuaJIT](http://luajit.org/)<font color="olive"><sup>v1.31</sup></font> (on Windows, Linux, Mac OS X, Android, and Raspberry Pi)
 - Networking using [kNet](https://github.com/juj/kNet/) + possibility to make HTTP requests<font color="olive"><sup>v1.3</sup></font>
