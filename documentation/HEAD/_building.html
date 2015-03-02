@@ -167,11 +167,11 @@ Build options</h2>
 <tr>
 <td>MINGW_SYSROOT </td><td>-</td><td>Path to MinGW system root (MinGW cross-compiling build only) </td></tr>
 <tr>
-<td>RPI_ABI </td><td>*</td><td>Specify target ABI (RPI build only), possible values are armeabi-v6 (*default for RPI 1), armeabi-v7a (*default for RPI 2), armeabi-v7a with NEON, and armeabi-v7a with VFPV4 </td></tr>
-<tr>
 <td>RPI_PREFIX </td><td>-</td><td>Prefix path to Raspberry Pi cross-compiler tools (RPI cross-compiling build only) </td></tr>
 <tr>
 <td>RPI_SYSROOT </td><td>-</td><td>Path to Raspberry Pi system root (RPI cross-compiling build only) </td></tr>
+<tr>
+<td>RPI_ABI </td><td>*</td><td>Specify target ABI (RPI build only), possible values are armeabi-v6 (*default for RPI 1), armeabi-v7a (*default for RPI 2), armeabi-v7a with NEON, and armeabi-v7a with VFPV4 </td></tr>
 <tr>
 <td>EMSCRIPTEN_ROOT_PATH </td><td>-</td><td>Root path to Emscripten cross-compiler tools (Emscripten cross-compiling build only) </td></tr>
 <tr>
@@ -179,7 +179,7 @@ Build options</h2>
 <tr>
 <td>EMSCRIPTEN_ALLOW_MEMORY_GROWTH</td><td>0</td><td>Enable memory growing based on application demand (Emscripten cross-compiling build only) </td></tr>
 <tr>
-<td>EMSCRIPTEN_TOTAL_MEMORY</td><td>*</td><td>Specify the total size of memory to be used (Emscripten cross-compiling build only); default to 256MB, this option is ignored when EMSCRIPTEN_ALLOW_MEMORY_GROWTH=1 </td></tr>
+<td>EMSCRIPTEN_TOTAL_MEMORY</td><td>*</td><td>Specify the total size of memory to be used (Emscripten cross-compiling build only); default to 32MB, this option is ignored when EMSCRIPTEN_ALLOW_MEMORY_GROWTH=1 </td></tr>
 </table>
 <p>Note that the specified build option values are cached by CMake after the initial configuration step. The cached values will be used by CMake in the subsequent configuration. The same build options are not required to be specified again and again. But once a non-default build option value is being cached, it can only be reverted back to its default value by explicitly resetting it. That is, simply by not passing the corresponding build option would not revert it back to its default. One way to revert all the build options to their default values is by clearing the CMake cache by calling cmake_clean.bat or cmake_clean.sh.</p>
 <h2><a class="anchor" id="Building_Native"></a>
