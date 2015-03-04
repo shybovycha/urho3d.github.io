@@ -135,10 +135,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:aa78fe611c7cfe04a3912e68a19aae67a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa78fe611c7cfe04a3912e68a19aae67a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_font_face_free_type.html#aa78fe611c7cfe04a3912e68a19aae67a">CanLoadAllGlyphs</a> (unsigned numGlyphs, <a class="el" href="class_urho3_d_1_1_hash_map.html">HashMap</a>&lt; unsigned, unsigned &gt; &amp;indexToCharMapping, int loadMode, int &amp;textureWidth, int &amp;textureHeight) const </td></tr>
-<tr class="memdesc:aa78fe611c7cfe04a3912e68a19aae67a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check can load all glyph in one texture, return true and texture size if can load. <br/></td></tr>
-<tr class="separator:aa78fe611c7cfe04a3912e68a19aae67a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f94ece39969f087b479746be912fc34"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f94ece39969f087b479746be912fc34"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_font_face_free_type.html#a6f94ece39969f087b479746be912fc34">CanLoadAllGlyphs</a> (const <a class="el" href="class_urho3_d_1_1_p_o_d_vector.html">PODVector</a>&lt; unsigned &gt; &amp;charCodes, int &amp;textureWidth, int &amp;textureHeight) const </td></tr>
+<tr class="memdesc:a6f94ece39969f087b479746be912fc34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check can load all glyph in one texture, return true and texture size if can load. <br/></td></tr>
+<tr class="separator:a6f94ece39969f087b479746be912fc34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4729d53682665ade1a3816f33de03c1e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4729d53682665ade1a3816f33de03c1e"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_font_face_free_type.html#a4729d53682665ade1a3816f33de03c1e">SetupNextTexture</a> (int textureWidth, int textureHeight)</td></tr>
 <tr class="memdesc:a4729d53682665ade1a3816f33de03c1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup next texture. <br/></td></tr>
@@ -158,14 +158,18 @@ Private Attributes</h2></td></tr>
 void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_font_face_free_type.html#adaa52ba7bd5da786fd22082c3a98673d">face_</a></td></tr>
 <tr class="memdesc:adaa52ba7bd5da786fd22082c3a98673d"><td class="mdescLeft">&#160;</td><td class="mdescRight">FreeType face. Non-null after creation only in dynamic mode. <br/></td></tr>
 <tr class="separator:adaa52ba7bd5da786fd22082c3a98673d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefd58c485ff27204bf46e50f1210be5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aefd58c485ff27204bf46e50f1210be5f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_font_face_free_type.html#aefd58c485ff27204bf46e50f1210be5f">hasMutableGlyph_</a></td></tr>
-<tr class="memdesc:aefd58c485ff27204bf46e50f1210be5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has mutable glyph. <br/></td></tr>
-<tr class="separator:aefd58c485ff27204bf46e50f1210be5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48f5bd78b33677127d0f147995476d61"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a48f5bd78b33677127d0f147995476d61"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_font_face_free_type.html#a48f5bd78b33677127d0f147995476d61">loadMode_</a></td></tr>
+<tr class="memdesc:a48f5bd78b33677127d0f147995476d61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load mode. <br/></td></tr>
+<tr class="separator:a48f5bd78b33677127d0f147995476d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bc5341acedbbd4e727763e2db93849e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8bc5341acedbbd4e727763e2db93849e"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_font_face_free_type.html#a8bc5341acedbbd4e727763e2db93849e">ascender_</a></td></tr>
 <tr class="memdesc:a8bc5341acedbbd4e727763e2db93849e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ascender. <br/></td></tr>
 <tr class="separator:a8bc5341acedbbd4e727763e2db93849e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefd58c485ff27204bf46e50f1210be5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aefd58c485ff27204bf46e50f1210be5f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_font_face_free_type.html#aefd58c485ff27204bf46e50f1210be5f">hasMutableGlyph_</a></td></tr>
+<tr class="memdesc:aefd58c485ff27204bf46e50f1210be5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has mutable glyph. <br/></td></tr>
+<tr class="separator:aefd58c485ff27204bf46e50f1210be5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad0d96cf852048a60874891103eca1fa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad0d96cf852048a60874891103eca1fa"></a>
 <a class="el" href="class_urho3_d_1_1_area_allocator.html">AreaAllocator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_font_face_free_type.html#aad0d96cf852048a60874891103eca1fa">allocator_</a></td></tr>
 <tr class="memdesc:aad0d96cf852048a60874891103eca1fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Glyph area allocator. <br/></td></tr>
