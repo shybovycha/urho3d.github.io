@@ -149,6 +149,10 @@ kNet::MessageConnection *&#160;</td><td class="memItemRight" valign="bottom"><a 
 const <a class="el" href="class_urho3_d_1_1_controls.html">Controls</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#a19197bd80872bda59671e36f91fe8b5a">GetControls</a> () const </td></tr>
 <tr class="memdesc:a19197bd80872bda59671e36f91fe8b5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the client controls of this connection. <br/></td></tr>
 <tr class="separator:a19197bd80872bda59671e36f91fe8b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a585c4f2d8287bb70925d3fed834fea3c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a585c4f2d8287bb70925d3fed834fea3c"></a>
+unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#a585c4f2d8287bb70925d3fed834fea3c">GetTimeStamp</a> () const </td></tr>
+<tr class="memdesc:a585c4f2d8287bb70925d3fed834fea3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the controls timestamp, sent from client to server along each control update. <br/></td></tr>
+<tr class="separator:a585c4f2d8287bb70925d3fed834fea3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21ad7b2fb1adf1a4ab19cebb87fa8b34"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a21ad7b2fb1adf1a4ab19cebb87fa8b34"></a>
 const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#a21ad7b2fb1adf1a4ab19cebb87fa8b34">GetPosition</a> () const </td></tr>
 <tr class="memdesc:a21ad7b2fb1adf1a4ab19cebb87fa8b34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the observer position sent by the client for interest management. <br/></td></tr>
@@ -205,6 +209,10 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#a6dae739b15dfd75880596f396769f2e8">SendPackageToClient</a> (<a class="el" href="class_urho3_d_1_1_package_file.html">PackageFile</a> *package)</td></tr>
 <tr class="memdesc:a6dae739b15dfd75880596f396769f2e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trigger client connection to download a package file from the server. Can be used to download additional resource packages when client is already joined in a scene. The package must have been added as a requirement to the scene the client is joined in, or else the eventual download will fail. <br/></td></tr>
 <tr class="separator:a6dae739b15dfd75880596f396769f2e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6862a8c6b8a13c3426fb71c5393caaa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae6862a8c6b8a13c3426fb71c5393caaa"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#ae6862a8c6b8a13c3426fb71c5393caaa">ConfigureNetworkSimulator</a> (int latencyMs, float packetLoss)</td></tr>
+<tr class="memdesc:ae6862a8c6b8a13c3426fb71c5393caaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set network simulation parameters. Called by <a class="el" href="class_urho3_d_1_1_network.html" title="Network subsystem. Manages client-server communications using the UDP protocol.">Network</a>. <br/></td></tr>
+<tr class="separator:ae6862a8c6b8a13c3426fb71c5393caaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a95a6cd1c5c12a458fda4b38f873a334d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a95a6cd1c5c12a458fda4b38f873a334d">Object</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -342,6 +350,10 @@ Public Attributes</h2></td></tr>
 <a class="el" href="class_urho3_d_1_1_controls.html">Controls</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#a07830e8d8cbc97c1676f0b372b44b6c1">controls_</a></td></tr>
 <tr class="memdesc:a07830e8d8cbc97c1676f0b372b44b6c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current controls. <br/></td></tr>
 <tr class="separator:a07830e8d8cbc97c1676f0b372b44b6c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02a329ceb19891cefc57575e5715b4f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02a329ceb19891cefc57575e5715b4f1"></a>
+unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#a02a329ceb19891cefc57575e5715b4f1">timeStamp_</a></td></tr>
+<tr class="memdesc:a02a329ceb19891cefc57575e5715b4f1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_controls.html" title="Controls sent over the network.">Controls</a> timestamp. Incremented after each sent update. <br/></td></tr>
+<tr class="separator:a02a329ceb19891cefc57575e5715b4f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a435331fd4e52aa9d6474b47128cad819"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a435331fd4e52aa9d6474b47128cad819"></a>
 <a class="el" href="class_urho3_d_1_1_hash_map.html">VariantMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#a435331fd4e52aa9d6474b47128cad819">identity_</a></td></tr>
 <tr class="memdesc:a435331fd4e52aa9d6474b47128cad819"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identity map. <br/></td></tr>

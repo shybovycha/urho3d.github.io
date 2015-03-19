@@ -918,6 +918,7 @@ Classes</h2>
 <li>VariantMap&amp; GetIdentity()</li>
 <li>Scene* GetScene() const</li>
 <li>const <a class="el" href="class_urho3_d_1_1_controls.html" title="Controls sent over the network.">Controls</a>&amp; GetControls() const</li>
+<li>char GetTimeStamp() const</li>
 <li>const <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>&amp; GetPosition() const</li>
 <li>const <a class="el" href="class_urho3_d_1_1_quaternion.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; GetRotation() const</li>
 <li>bool IsClient() const</li>
@@ -937,6 +938,7 @@ Classes</h2>
 <li>VariantMap&amp; identity</li>
 <li>Scene* scene</li>
 <li><a class="el" href="class_urho3_d_1_1_controls.html" title="Controls sent over the network.">Controls</a>&amp; controls</li>
+<li>char timeStamp (readonly)</li>
 <li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>&amp; position</li>
 <li><a class="el" href="class_urho3_d_1_1_quaternion.html" title="Rotation represented as a four-dimensional normalized vector.">Quaternion</a>&amp; rotation</li>
 <li>bool client (readonly)</li>
@@ -2981,6 +2983,8 @@ Classes</h2>
 <li>void BroadcastRemoteEvent(Node* node, const String eventType, bool inOrder)</li>
 <li>void BroadcastRemoteEvent(Node* node, const String eventType, bool inOrder, const VariantMap&amp; eventData)</li>
 <li>void SetUpdateFps(int fps)</li>
+<li>void SetSimulatedLatency(int ms)</li>
+<li>void SetSimulatedPacketLoss(float loss)</li>
 <li>void RegisterRemoteEvent(StringHash eventType)</li>
 <li>void RegisterRemoteEvent(const String eventType)</li>
 <li>void UnregisterRemoteEvent(StringHash eventType)</li>
@@ -2991,6 +2995,8 @@ Classes</h2>
 <li>HttpRequest* MakeHttpRequest(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> url, const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> verb = <a class="el" href="class_urho3_d_1_1_string.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>)</li>
 <li>HttpRequest* MakeHttpRequest(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> url, const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> verb, const Vector&lt;String&gt;&amp; headers, const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> postData = <a class="el" href="class_urho3_d_1_1_string.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>)</li>
 <li>int GetUpdateFps() const</li>
+<li>int GetSimulatedLatency() const</li>
+<li>float GetSimulatedPacketLoss() const</li>
 <li>Connection* GetServerConnection() const</li>
 <li>bool IsServerRunning() const</li>
 <li>bool CheckRemoteEvent(StringHash eventType) const</li>
@@ -2999,6 +3005,8 @@ Classes</h2>
 <p>Properties:</p>
 <ul>
 <li>int updateFps</li>
+<li>int simulatedLatency</li>
+<li>float simulatedPacketLoss</li>
 <li>Connection* serverConnection (readonly)</li>
 <li>bool serverRunning (readonly)</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> packageCacheDir</li>
@@ -4453,6 +4461,8 @@ Classes</h2>
 <ul>
 <li>void SetTemporary(bool enable)</li>
 <li>bool IsTemporary() const</li>
+<li>void SetInterceptNetworkUpdate(const String attributeName, bool enable)</li>
+<li>bool GetInterceptNetworkUpdate(const String attributeName)</li>
 </ul>
 <p>Properties:</p>
 <ul>

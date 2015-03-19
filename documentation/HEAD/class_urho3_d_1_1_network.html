@@ -117,6 +117,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network.html#a0d52fe80951ec39ef880bfe771e37e29">SetUpdateFps</a> (int fps)</td></tr>
 <tr class="memdesc:a0d52fe80951ec39ef880bfe771e37e29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set network update FPS. <br/></td></tr>
 <tr class="separator:a0d52fe80951ec39ef880bfe771e37e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bbc203114bc4bfd591a06cb1fdcab3e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9bbc203114bc4bfd591a06cb1fdcab3e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network.html#a9bbc203114bc4bfd591a06cb1fdcab3e">SetSimulatedLatency</a> (int ms)</td></tr>
+<tr class="memdesc:a9bbc203114bc4bfd591a06cb1fdcab3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set simulated latency in milliseconds. This adds a delay to sent packets (both client and server.) <br/></td></tr>
+<tr class="separator:a9bbc203114bc4bfd591a06cb1fdcab3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8bf7fdf5397805f747eb15bf142aa58"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8bf7fdf5397805f747eb15bf142aa58"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network.html#af8bf7fdf5397805f747eb15bf142aa58">SetSimulatedPacketLoss</a> (float probability)</td></tr>
+<tr class="memdesc:af8bf7fdf5397805f747eb15bf142aa58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set simulated packet loss probability between 0.0 - 1.0. <br/></td></tr>
+<tr class="separator:af8bf7fdf5397805f747eb15bf142aa58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f4cfd09d02c0b1180b6eb4d9e9b7f62"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f4cfd09d02c0b1180b6eb4d9e9b7f62"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network.html#a9f4cfd09d02c0b1180b6eb4d9e9b7f62">RegisterRemoteEvent</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType)</td></tr>
 <tr class="memdesc:a9f4cfd09d02c0b1180b6eb4d9e9b7f62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a remote event as allowed to be received. There is also a fixed blacklist of events that can not be allowed in any case, such as ConsoleCommand. <br/></td></tr>
@@ -145,6 +153,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network.html#ac3c993dcb51941a8413dd4210a60d3b8">GetUpdateFps</a> () const </td></tr>
 <tr class="memdesc:ac3c993dcb51941a8413dd4210a60d3b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return network update FPS. <br/></td></tr>
 <tr class="separator:ac3c993dcb51941a8413dd4210a60d3b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd5f10bcea219008863b0c20066302ec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd5f10bcea219008863b0c20066302ec"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network.html#acd5f10bcea219008863b0c20066302ec">GetSimulatedLatency</a> () const </td></tr>
+<tr class="memdesc:acd5f10bcea219008863b0c20066302ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return simulated latency in milliseconds. <br/></td></tr>
+<tr class="separator:acd5f10bcea219008863b0c20066302ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bc3c086f8ce693476be1d23db384751"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7bc3c086f8ce693476be1d23db384751"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network.html#a7bc3c086f8ce693476be1d23db384751">GetSimulatedPacketLoss</a> () const </td></tr>
+<tr class="memdesc:a7bc3c086f8ce693476be1d23db384751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return simulated packet loss probability. <br/></td></tr>
+<tr class="separator:a7bc3c086f8ce693476be1d23db384751"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8072b074715114cc0798ac28e2ea36c0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8072b074715114cc0798ac28e2ea36c0"></a>
 <a class="el" href="class_urho3_d_1_1_connection.html">Connection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network.html#a8072b074715114cc0798ac28e2ea36c0">GetConnection</a> (kNet::MessageConnection *connection) const </td></tr>
 <tr class="memdesc:a8072b074715114cc0798ac28e2ea36c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a client or server connection by kNet MessageConnection, or null if none exist. <br/></td></tr>
@@ -329,6 +345,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network.html#a36b8ee247fda12a1b0d3956972177a4b">OnServerDisconnected</a> ()</td></tr>
 <tr class="memdesc:a36b8ee247fda12a1b0d3956972177a4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle server disconnection. <br/></td></tr>
 <tr class="separator:a36b8ee247fda12a1b0d3956972177a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adac5fa1674e39763fbfb4c8301023621"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adac5fa1674e39763fbfb4c8301023621"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network.html#adac5fa1674e39763fbfb4c8301023621">ConfigureNetworkSimulator</a> ()</td></tr>
+<tr class="memdesc:adac5fa1674e39763fbfb4c8301023621"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reconfigure network simulator parameters on all existing connections. <br/></td></tr>
+<tr class="separator:adac5fa1674e39763fbfb4c8301023621"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -362,6 +382,14 @@ kNet::Network *&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network.html#a3b21ca5209ff8e570e30c2b4150cf944">updateFps_</a></td></tr>
 <tr class="memdesc:a3b21ca5209ff8e570e30c2b4150cf944"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update FPS. <br/></td></tr>
 <tr class="separator:a3b21ca5209ff8e570e30c2b4150cf944"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16c5d3667e311b42d676444188f0c7b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a16c5d3667e311b42d676444188f0c7b1"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network.html#a16c5d3667e311b42d676444188f0c7b1">simulatedLatency_</a></td></tr>
+<tr class="memdesc:a16c5d3667e311b42d676444188f0c7b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulated latency (send delay) in milliseconds. <br/></td></tr>
+<tr class="separator:a16c5d3667e311b42d676444188f0c7b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51950e1c2d562f28e478e08e1d4c9a3c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a51950e1c2d562f28e478e08e1d4c9a3c"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network.html#a51950e1c2d562f28e478e08e1d4c9a3c">simulatedPacketLoss_</a></td></tr>
+<tr class="memdesc:a51950e1c2d562f28e478e08e1d4c9a3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulated packet loss probability between 0.0 - 1.0. <br/></td></tr>
+<tr class="separator:a51950e1c2d562f28e478e08e1d4c9a3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af26b95b4b6b053141c6a3faa0eec1504"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af26b95b4b6b053141c6a3faa0eec1504"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network.html#af26b95b4b6b053141c6a3faa0eec1504">updateInterval_</a></td></tr>
 <tr class="memdesc:af26b95b4b6b053141c6a3faa0eec1504"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update time interval. <br/></td></tr>
