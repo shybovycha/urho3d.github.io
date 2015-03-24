@@ -27,8 +27,10 @@ group: HEAD
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="class_urho3_d_1_1_technique-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -67,30 +69,22 @@ Public Member Functions</h2></td></tr>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a88a59d6c02e7e42628cf9a6ec79209f5">BeginLoad</a> (<a class="el" href="class_urho3_d_1_1_deserializer.html">Deserializer</a> &amp;source)</td></tr>
 <tr class="memdesc:a88a59d6c02e7e42628cf9a6ec79209f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load resource from stream. May be called from a worker thread. Return true if successful. <br/></td></tr>
 <tr class="separator:a88a59d6c02e7e42628cf9a6ec79209f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad84bc3b740adc85945e148b4c76557df"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad84bc3b740adc85945e148b4c76557df"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#ad84bc3b740adc85945e148b4c76557df">SetIsSM3</a> (bool enable)</td></tr>
-<tr class="memdesc:ad84bc3b740adc85945e148b4c76557df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether requires Shader Model 3. <br/></td></tr>
-<tr class="separator:ad84bc3b740adc85945e148b4c76557df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab22bafdfa04b26d5134581d79521959d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab22bafdfa04b26d5134581d79521959d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#ab22bafdfa04b26d5134581d79521959d">SetIsDesktop</a> (bool enable)</td></tr>
 <tr class="memdesc:ab22bafdfa04b26d5134581d79521959d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether requires desktop level hardware. <br/></td></tr>
 <tr class="separator:ab22bafdfa04b26d5134581d79521959d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7efca31910fbbbbad6c0e055cc5e4948"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7efca31910fbbbbad6c0e055cc5e4948"></a>
-<a class="el" href="class_urho3_d_1_1_pass.html">Pass</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a7efca31910fbbbbad6c0e055cc5e4948">CreatePass</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> type)</td></tr>
-<tr class="memdesc:a7efca31910fbbbbad6c0e055cc5e4948"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new pass. <br/></td></tr>
-<tr class="separator:a7efca31910fbbbbad6c0e055cc5e4948"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbdd9821ca12fc8d0cc594955a65a28c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abbdd9821ca12fc8d0cc594955a65a28c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#abbdd9821ca12fc8d0cc594955a65a28c">RemovePass</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> type)</td></tr>
-<tr class="memdesc:abbdd9821ca12fc8d0cc594955a65a28c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a pass. <br/></td></tr>
-<tr class="separator:abbdd9821ca12fc8d0cc594955a65a28c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a026a99a14affd8cd99bcaf92c06148bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a026a99a14affd8cd99bcaf92c06148bc"></a>
+<a class="el" href="class_urho3_d_1_1_pass.html">Pass</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a026a99a14affd8cd99bcaf92c06148bc">CreatePass</a> (const <a class="el" href="class_urho3_d_1_1_string.html">String</a> &amp;passName)</td></tr>
+<tr class="memdesc:a026a99a14affd8cd99bcaf92c06148bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new pass. <br/></td></tr>
+<tr class="separator:a026a99a14affd8cd99bcaf92c06148bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa904b47e10c000ba60721dbca20cb2be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa904b47e10c000ba60721dbca20cb2be"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#aa904b47e10c000ba60721dbca20cb2be">RemovePass</a> (const <a class="el" href="class_urho3_d_1_1_string.html">String</a> &amp;passName)</td></tr>
+<tr class="memdesc:aa904b47e10c000ba60721dbca20cb2be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a pass. <br/></td></tr>
+<tr class="separator:aa904b47e10c000ba60721dbca20cb2be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89ef9105e42b2f4ebf620d3021034487"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a89ef9105e42b2f4ebf620d3021034487"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a89ef9105e42b2f4ebf620d3021034487">ReleaseShaders</a> ()</td></tr>
 <tr class="memdesc:a89ef9105e42b2f4ebf620d3021034487"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset shader pointers in all passes. <br/></td></tr>
 <tr class="separator:a89ef9105e42b2f4ebf620d3021034487"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bed4cedf9e2267e054a5112f5eb0418"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8bed4cedf9e2267e054a5112f5eb0418"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a8bed4cedf9e2267e054a5112f5eb0418">IsSM3</a> () const </td></tr>
-<tr class="memdesc:a8bed4cedf9e2267e054a5112f5eb0418"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether requires Shader Model 3. <br/></td></tr>
-<tr class="separator:a8bed4cedf9e2267e054a5112f5eb0418"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a484e60a650815dada37c268af32c634e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a484e60a650815dada37c268af32c634e"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a484e60a650815dada37c268af32c634e">IsDesktop</a> () const </td></tr>
 <tr class="memdesc:a484e60a650815dada37c268af32c634e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether requires desktop level hardware. <br/></td></tr>
@@ -99,29 +93,41 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#ac2785804375243ec78efcb26e68185a8">IsSupported</a> () const </td></tr>
 <tr class="memdesc:ac2785804375243ec78efcb26e68185a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether technique is supported by the current hardware. <br/></td></tr>
 <tr class="separator:ac2785804375243ec78efcb26e68185a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77b7b278a79c3f7612ffb40896f0cb04"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77b7b278a79c3f7612ffb40896f0cb04"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a77b7b278a79c3f7612ffb40896f0cb04">HasPass</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> type) const </td></tr>
-<tr class="memdesc:a77b7b278a79c3f7612ffb40896f0cb04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether has a pass. <br/></td></tr>
-<tr class="separator:a77b7b278a79c3f7612ffb40896f0cb04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d36a8fac4081e01c3e7a26f7e695987"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d36a8fac4081e01c3e7a26f7e695987"></a>
-<a class="el" href="class_urho3_d_1_1_pass.html">Pass</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a4d36a8fac4081e01c3e7a26f7e695987">GetPass</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> type) const </td></tr>
-<tr class="memdesc:a4d36a8fac4081e01c3e7a26f7e695987"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a pass, or null if not found. <br/></td></tr>
-<tr class="separator:a4d36a8fac4081e01c3e7a26f7e695987"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9bd041fbbc4c44dba60380fae62a435"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad9bd041fbbc4c44dba60380fae62a435"></a>
-<a class="el" href="class_urho3_d_1_1_pass.html">Pass</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#ad9bd041fbbc4c44dba60380fae62a435">GetSupportedPass</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> type) const </td></tr>
-<tr class="memdesc:ad9bd041fbbc4c44dba60380fae62a435"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a pass that is supported for rendering, or null if not found. <br/></td></tr>
-<tr class="separator:ad9bd041fbbc4c44dba60380fae62a435"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac115d771a36420d9f0dbf2d099aab067"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac115d771a36420d9f0dbf2d099aab067"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#ac115d771a36420d9f0dbf2d099aab067">HasPass</a> (unsigned passIndex) const </td></tr>
+<tr class="memdesc:ac115d771a36420d9f0dbf2d099aab067"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether has a pass. <br/></td></tr>
+<tr class="separator:ac115d771a36420d9f0dbf2d099aab067"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24ab5ce335de1e4f2e77f54bd7fe5d6a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a24ab5ce335de1e4f2e77f54bd7fe5d6a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a24ab5ce335de1e4f2e77f54bd7fe5d6a">HasPass</a> (const <a class="el" href="class_urho3_d_1_1_string.html">String</a> &amp;passName) const </td></tr>
+<tr class="memdesc:a24ab5ce335de1e4f2e77f54bd7fe5d6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether has a pass by name. This overload should not be called in time-critical rendering loops; use a pre-acquired pass index instead. <br/></td></tr>
+<tr class="separator:a24ab5ce335de1e4f2e77f54bd7fe5d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac50896ff35f595f51d444d577ee61bad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac50896ff35f595f51d444d577ee61bad"></a>
+<a class="el" href="class_urho3_d_1_1_pass.html">Pass</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#ac50896ff35f595f51d444d577ee61bad">GetPass</a> (unsigned passIndex) const </td></tr>
+<tr class="memdesc:ac50896ff35f595f51d444d577ee61bad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a pass, or null if not found. <br/></td></tr>
+<tr class="separator:ac50896ff35f595f51d444d577ee61bad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fd6b129d4591fdd5f8e08b040f28473"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1fd6b129d4591fdd5f8e08b040f28473"></a>
+<a class="el" href="class_urho3_d_1_1_pass.html">Pass</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a1fd6b129d4591fdd5f8e08b040f28473">GetPass</a> (const <a class="el" href="class_urho3_d_1_1_string.html">String</a> &amp;passName) const </td></tr>
+<tr class="memdesc:a1fd6b129d4591fdd5f8e08b040f28473"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a pass by name, or null if not found. This overload should not be called in time-critical rendering loops; use a pre-acquired pass index instead. <br/></td></tr>
+<tr class="separator:a1fd6b129d4591fdd5f8e08b040f28473"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2adf7e719d5eeebd75748bc688c97c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae2adf7e719d5eeebd75748bc688c97c7"></a>
+<a class="el" href="class_urho3_d_1_1_pass.html">Pass</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#ae2adf7e719d5eeebd75748bc688c97c7">GetSupportedPass</a> (unsigned passIndex) const </td></tr>
+<tr class="memdesc:ae2adf7e719d5eeebd75748bc688c97c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a pass that is supported for rendering, or null if not found. <br/></td></tr>
+<tr class="separator:ae2adf7e719d5eeebd75748bc688c97c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3534c8c93b4fe19c766ccd377d78f861"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3534c8c93b4fe19c766ccd377d78f861"></a>
+<a class="el" href="class_urho3_d_1_1_pass.html">Pass</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a3534c8c93b4fe19c766ccd377d78f861">GetSupportedPass</a> (const <a class="el" href="class_urho3_d_1_1_string.html">String</a> &amp;passName) const </td></tr>
+<tr class="memdesc:a3534c8c93b4fe19c766ccd377d78f861"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a supported pass by name. This overload should not be called in time-critical rendering loops; use a pre-acquired pass index instead. <br/></td></tr>
+<tr class="separator:a3534c8c93b4fe19c766ccd377d78f861"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2a26d79696467596741546ca07c7c5e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2a26d79696467596741546ca07c7c5e"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#ac2a26d79696467596741546ca07c7c5e">GetNumPasses</a> () const </td></tr>
 <tr class="memdesc:ac2a26d79696467596741546ca07c7c5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of passes. <br/></td></tr>
 <tr class="separator:ac2a26d79696467596741546ca07c7c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af258df2e2ec565b0c212782d6ef877c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af258df2e2ec565b0c212782d6ef877c6"></a>
-<a class="el" href="class_urho3_d_1_1_vector.html">Vector</a>&lt; <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#af258df2e2ec565b0c212782d6ef877c6">GetPassTypes</a> () const </td></tr>
-<tr class="memdesc:af258df2e2ec565b0c212782d6ef877c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return all the pass types in the hash table. The returned collection is not guaranteed to be in the same order as the hash table insertion order. <br/></td></tr>
-<tr class="separator:af258df2e2ec565b0c212782d6ef877c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35609167a3daa9ef9b3db33edb494ec3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a35609167a3daa9ef9b3db33edb494ec3"></a>
+<a class="el" href="class_urho3_d_1_1_vector.html">Vector</a>&lt; <a class="el" href="class_urho3_d_1_1_string.html">String</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a35609167a3daa9ef9b3db33edb494ec3">GetPassNames</a> () const </td></tr>
+<tr class="memdesc:a35609167a3daa9ef9b3db33edb494ec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return all pass names. <br/></td></tr>
+<tr class="separator:a35609167a3daa9ef9b3db33edb494ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22a50f5fb6c68e5857834fb10eec5287"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a22a50f5fb6c68e5857834fb10eec5287"></a>
 <a class="el" href="class_urho3_d_1_1_p_o_d_vector.html">PODVector</a>&lt; <a class="el" href="class_urho3_d_1_1_pass.html">Pass</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a22a50f5fb6c68e5857834fb10eec5287">GetPasses</a> () const </td></tr>
-<tr class="memdesc:a22a50f5fb6c68e5857834fb10eec5287"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return all the passes in the hash table. The returned collection is not guaranteed to be in the same order as the hash table insertion order. <br/></td></tr>
+<tr class="memdesc:a22a50f5fb6c68e5857834fb10eec5287"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return all passes. <br/></td></tr>
 <tr class="separator:a22a50f5fb6c68e5857834fb10eec5287"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_resource"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_resource')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_resource.html">Urho3D::Resource</a></td></tr>
 <tr class="memitem:ae3e1545370dec17a283705989a1cc682 inherit pub_methods_class_urho3_d_1_1_resource"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3e1545370dec17a283705989a1cc682"></a>
@@ -313,6 +319,45 @@ Static Public Member Functions</h2></td></tr>
 static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a18b550e40df9a0c1fd21d47f01b024a6">RegisterObject</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
 <tr class="memdesc:a18b550e40df9a0c1fd21d47f01b024a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register object factory. <br/></td></tr>
 <tr class="separator:a18b550e40df9a0c1fd21d47f01b024a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ccb22ef2367381c00c4564b2d4b9995"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ccb22ef2367381c00c4564b2d4b9995"></a>
+static unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a1ccb22ef2367381c00c4564b2d4b9995">GetPassIndex</a> (const <a class="el" href="class_urho3_d_1_1_string.html">String</a> &amp;passName)</td></tr>
+<tr class="memdesc:a1ccb22ef2367381c00c4564b2d4b9995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a pass type index by name. Allocate new if not used yet. <br/></td></tr>
+<tr class="separator:a1ccb22ef2367381c00c4564b2d4b9995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a1626ebbdd89bce82f8218cc58e462589"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1626ebbdd89bce82f8218cc58e462589"></a>
+static unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a1626ebbdd89bce82f8218cc58e462589">basePassIndex</a> = 0</td></tr>
+<tr class="memdesc:a1626ebbdd89bce82f8218cc58e462589"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index for base pass. Initialized once <a class="el" href="class_urho3_d_1_1_technique.html#a1ccb22ef2367381c00c4564b2d4b9995" title="Return a pass type index by name. Allocate new if not used yet.">GetPassIndex()</a> has been called for the first time. <br/></td></tr>
+<tr class="separator:a1626ebbdd89bce82f8218cc58e462589"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1383bedd12eb162729677de6e7917c8f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1383bedd12eb162729677de6e7917c8f"></a>
+static unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a1383bedd12eb162729677de6e7917c8f">alphaPassIndex</a> = 0</td></tr>
+<tr class="memdesc:a1383bedd12eb162729677de6e7917c8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index for alpha pass. Initialized once <a class="el" href="class_urho3_d_1_1_technique.html#a1ccb22ef2367381c00c4564b2d4b9995" title="Return a pass type index by name. Allocate new if not used yet.">GetPassIndex()</a> has been called for the first time. <br/></td></tr>
+<tr class="separator:a1383bedd12eb162729677de6e7917c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f02e7667abe200d5d4cba11bfd95a26"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f02e7667abe200d5d4cba11bfd95a26"></a>
+static unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a5f02e7667abe200d5d4cba11bfd95a26">materialPassIndex</a> = 0</td></tr>
+<tr class="memdesc:a5f02e7667abe200d5d4cba11bfd95a26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index for prepass material pass. Initialized once <a class="el" href="class_urho3_d_1_1_technique.html#a1ccb22ef2367381c00c4564b2d4b9995" title="Return a pass type index by name. Allocate new if not used yet.">GetPassIndex()</a> has been called for the first time. <br/></td></tr>
+<tr class="separator:a5f02e7667abe200d5d4cba11bfd95a26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa905b3fe4408f8635592c9d567273e2b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa905b3fe4408f8635592c9d567273e2b"></a>
+static unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#aa905b3fe4408f8635592c9d567273e2b">deferredPassIndex</a> = 0</td></tr>
+<tr class="memdesc:aa905b3fe4408f8635592c9d567273e2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index for deferred G-buffer pass. Initialized once <a class="el" href="class_urho3_d_1_1_technique.html#a1ccb22ef2367381c00c4564b2d4b9995" title="Return a pass type index by name. Allocate new if not used yet.">GetPassIndex()</a> has been called for the first time. <br/></td></tr>
+<tr class="separator:aa905b3fe4408f8635592c9d567273e2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a541ef35543b75dd4984cd9b4fa394f42"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a541ef35543b75dd4984cd9b4fa394f42"></a>
+static unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a541ef35543b75dd4984cd9b4fa394f42">lightPassIndex</a> = 0</td></tr>
+<tr class="memdesc:a541ef35543b75dd4984cd9b4fa394f42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index for per-pixel light pass. Initialized once <a class="el" href="class_urho3_d_1_1_technique.html#a1ccb22ef2367381c00c4564b2d4b9995" title="Return a pass type index by name. Allocate new if not used yet.">GetPassIndex()</a> has been called for the first time. <br/></td></tr>
+<tr class="separator:a541ef35543b75dd4984cd9b4fa394f42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0829d66dc0b907d7627807055df5380"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0829d66dc0b907d7627807055df5380"></a>
+static unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#ac0829d66dc0b907d7627807055df5380">litBasePassIndex</a> = 0</td></tr>
+<tr class="memdesc:ac0829d66dc0b907d7627807055df5380"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index for lit base pass. Initialized once <a class="el" href="class_urho3_d_1_1_technique.html#a1ccb22ef2367381c00c4564b2d4b9995" title="Return a pass type index by name. Allocate new if not used yet.">GetPassIndex()</a> has been called for the first time. <br/></td></tr>
+<tr class="separator:ac0829d66dc0b907d7627807055df5380"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaf08cbf1bdc3b0b48dc33fb6943efcb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeaf08cbf1bdc3b0b48dc33fb6943efcb"></a>
+static unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#aeaf08cbf1bdc3b0b48dc33fb6943efcb">litAlphaPassIndex</a> = 0</td></tr>
+<tr class="memdesc:aeaf08cbf1bdc3b0b48dc33fb6943efcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index for lit alpha pass. Initialized once <a class="el" href="class_urho3_d_1_1_technique.html#a1ccb22ef2367381c00c4564b2d4b9995" title="Return a pass type index by name. Allocate new if not used yet.">GetPassIndex()</a> has been called for the first time. <br/></td></tr>
+<tr class="separator:aeaf08cbf1bdc3b0b48dc33fb6943efcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a66b3bb74c56512df1da09c9f025fb7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a66b3bb74c56512df1da09c9f025fb7"></a>
+static unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a4a66b3bb74c56512df1da09c9f025fb7">shadowPassIndex</a> = 0</td></tr>
+<tr class="memdesc:a4a66b3bb74c56512df1da09c9f025fb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index for shadow pass. Initialized once <a class="el" href="class_urho3_d_1_1_technique.html#a1ccb22ef2367381c00c4564b2d4b9995" title="Return a pass type index by name. Allocate new if not used yet.">GetPassIndex()</a> has been called for the first time. <br/></td></tr>
+<tr class="separator:a4a66b3bb74c56512df1da09c9f025fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -322,14 +367,6 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a5aa3809696583d454bf411e8ec41d106"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5aa3809696583d454bf411e8ec41d106"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a5aa3809696583d454bf411e8ec41d106">isSM3_</a></td></tr>
-<tr class="memdesc:a5aa3809696583d454bf411e8ec41d106"><td class="mdescLeft">&#160;</td><td class="mdescRight">Require Shader Model 3 flag. <br/></td></tr>
-<tr class="separator:a5aa3809696583d454bf411e8ec41d106"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bb82b081bee02fa5e80b4cc1f1d347f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0bb82b081bee02fa5e80b4cc1f1d347f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a0bb82b081bee02fa5e80b4cc1f1d347f">sm3Support_</a></td></tr>
-<tr class="memdesc:a0bb82b081bee02fa5e80b4cc1f1d347f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cached Shader Model 3 support flag. <br/></td></tr>
-<tr class="separator:a0bb82b081bee02fa5e80b4cc1f1d347f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8723319320fdb9f1a1146fcdf8a3217e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8723319320fdb9f1a1146fcdf8a3217e"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a8723319320fdb9f1a1146fcdf8a3217e">isDesktop_</a></td></tr>
 <tr class="memdesc:a8723319320fdb9f1a1146fcdf8a3217e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Require desktop GPU flag. <br/></td></tr>
@@ -338,14 +375,17 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a63c5838361341744eff51bf1c0ea4ebf">desktopSupport_</a></td></tr>
 <tr class="memdesc:a63c5838361341744eff51bf1c0ea4ebf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cached desktop GPU support flag. <br/></td></tr>
 <tr class="separator:a63c5838361341744eff51bf1c0ea4ebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9a9a237aaf0d6d760b22d07cc510d02"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab9a9a237aaf0d6d760b22d07cc510d02"></a>
-<a class="el" href="class_urho3_d_1_1_hash_table.html">HashTable</a>&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_pass.html">Pass</a> &gt;, 16 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#ab9a9a237aaf0d6d760b22d07cc510d02">passes_</a></td></tr>
-<tr class="memdesc:ab9a9a237aaf0d6d760b22d07cc510d02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes. <br/></td></tr>
-<tr class="separator:ab9a9a237aaf0d6d760b22d07cc510d02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72596c6d1c982d3b4d215165f91b60c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a72596c6d1c982d3b4d215165f91b60c8"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a72596c6d1c982d3b4d215165f91b60c8">numPasses_</a></td></tr>
-<tr class="memdesc:a72596c6d1c982d3b4d215165f91b60c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of passes. <br/></td></tr>
-<tr class="separator:a72596c6d1c982d3b4d215165f91b60c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a127aed81b662cea37b0b4a95606c0834"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a127aed81b662cea37b0b4a95606c0834"></a>
+<a class="el" href="class_urho3_d_1_1_vector.html">Vector</a>&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_pass.html">Pass</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a127aed81b662cea37b0b4a95606c0834">passes_</a></td></tr>
+<tr class="memdesc:a127aed81b662cea37b0b4a95606c0834"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes. <br/></td></tr>
+<tr class="separator:a127aed81b662cea37b0b4a95606c0834"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a67cb52fc357f00832d146a57171aabe4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a67cb52fc357f00832d146a57171aabe4"></a>
+static <a class="el" href="class_urho3_d_1_1_hash_map.html">HashMap</a>&lt; <a class="el" href="class_urho3_d_1_1_string.html">String</a>, unsigned &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a67cb52fc357f00832d146a57171aabe4">passIndices</a></td></tr>
+<tr class="memdesc:a67cb52fc357f00832d146a57171aabe4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_pass.html" title="Material rendering pass, which defines shaders and render state.">Pass</a> index assignments. <br/></td></tr>
+<tr class="separator:a67cb52fc357f00832d146a57171aabe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>

@@ -1963,6 +1963,7 @@ Classes</h2>
 <li>bool IsInitialized() const</li>
 <li>void* GetExternalWindow() const</li>
 <li>const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> GetWindowTitle() const</li>
+<li>const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> GetApiName() const</li>
 <li><a class="el" href="class_urho3_d_1_1_int_vector2.html" title="Two-dimensional vector with integer values.">IntVector2</a> GetWindowPosition() const</li>
 <li>int GetWidth() const</li>
 <li>int GetHeight() const</li>
@@ -1981,13 +1982,11 @@ Classes</h2>
 <li>unsigned GetDummyColorFormat() const</li>
 <li>unsigned GetShadowMapFormat() const</li>
 <li>unsigned GetHiresShadowMapFormat() const</li>
-<li>bool GetSM3Support() const</li>
 <li>bool GetInstancingSupport() const</li>
 <li>bool GetLightPrepassSupport() const</li>
 <li>bool GetDeferredSupport() const</li>
 <li>bool GetHardwareShadowSupport() const</li>
 <li>bool GetReadableDepthSupport() const</li>
-<li>bool GetStreamOffsetSupport() const</li>
 <li>bool GetSRGBSupport() const</li>
 <li>bool GetSRGBWriteSupport() const</li>
 <li><a class="el" href="class_urho3_d_1_1_int_vector2.html" title="Two-dimensional vector with integer values.">IntVector2</a> GetDesktopResolution() const</li>
@@ -2008,11 +2007,13 @@ Classes</h2>
 <li>unsigned GetDepthStencilFormat()</li>
 <li>unsigned GetReadableDepthFormat()</li>
 <li>unsigned GetFormat(const String formatName)</li>
+<li>unsigned GetMaxBones()</li>
 </ul>
 <p>Properties:</p>
 <ul>
 <li>bool initialized (readonly)</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> windowTitle</li>
+<li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> apiName (readonly)</li>
 <li><a class="el" href="class_urho3_d_1_1_int_vector2.html" title="Two-dimensional vector with integer values.">IntVector2</a> windowPosition</li>
 <li>int width (readonly)</li>
 <li>int height (readonly)</li>
@@ -2031,13 +2032,11 @@ Classes</h2>
 <li>unsigned dummyColorFormat (readonly)</li>
 <li>unsigned shadowMapFormat (readonly)</li>
 <li>unsigned hiresShadowMapFormat (readonly)</li>
-<li>bool SM3Support (readonly)</li>
 <li>bool instancingSupport (readonly)</li>
 <li>bool lightPrepassSupport (readonly)</li>
 <li>bool deferredSupport (readonly)</li>
 <li>bool hardwareShadowSupport (readonly)</li>
 <li>bool readableDepthSupport (readonly)</li>
-<li>bool streamOffsetSupport (readonly)</li>
 <li>bool sRGBSupport (readonly)</li>
 <li>bool sRGBWriteSupport (readonly)</li>
 <li><a class="el" href="class_urho3_d_1_1_int_vector2.html" title="Two-dimensional vector with integer values.">IntVector2</a> desktopResolution (readonly)</li>
@@ -2616,8 +2615,7 @@ Classes</h2>
 <li>void MarkForAuxView(unsigned frameNumber)</li>
 <li>unsigned GetNumTechniques() const</li>
 <li>Technique* GetTechnique(unsigned index) const</li>
-<li>Pass* GetPass(unsigned index, StringHash passType) const</li>
-<li>Pass* GetPass(unsigned index, const String passType) const</li>
+<li>Pass* GetPass(unsigned index, const String passName) const</li>
 <li>Texture* GetTexture(TextureUnit unit) const</li>
 <li>ValueAnimation* GetShaderParameterAnimation(const String name) const</li>
 <li>WrapMode GetShaderParameterAnimationWrapMode(const String name) const</li>
@@ -2625,8 +2623,6 @@ Classes</h2>
 <li>CullMode GetCullMode() const</li>
 <li>CullMode GetShadowCullMode() const</li>
 <li>const <a class="el" href="struct_urho3_d_1_1_bias_parameters.html" title="Shadow depth bias parameters.">BiasParameters</a>&amp; GetDepthBias() const</li>
-<li>unsigned GetAuxViewFrameNumber() const</li>
-<li>unsigned GetNumUsedTextureUnits() const</li>
 <li>bool GetOcclusion() const</li>
 <li>bool GetSpecular() const</li>
 <li>Scene* GetScene() const</li>
@@ -2635,8 +2631,6 @@ Classes</h2>
 <ul>
 <li>CullMode cullMode (readonly)</li>
 <li>CullMode shadowCullMode (readonly)</li>
-<li>unsigned auxViewFrameNumber (readonly)</li>
-<li>unsigned numUsedTextureUnits (readonly)</li>
 <li>bool occlusion (readonly)</li>
 <li>bool specular (readonly)</li>
 <li>Scene* scene</li>
@@ -3472,14 +3466,12 @@ Classes</h2>
 <h4><a class="el" href="class_urho3_d_1_1_pass.html" title="Material rendering pass, which defines shaders and render state.">Pass</a> : <a class="el" href="class_urho3_d_1_1_ref_counted.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable.">RefCounted</a></h4>
 <p>Methods:</p>
 <ul>
-<li>bool IsSM3() const</li>
 <li>bool IsDesktop() const</li>
 <li>const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> GetVertexShader() const</li>
 <li>const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> GetPixelShader() const</li>
 </ul>
 <p>Properties:</p>
 <ul>
-<li>bool SM3 (readonly)</li>
 <li>bool desktop (readonly)</li>
 <li>const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> vertexShader (readonly)</li>
 <li>const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> pixelShader (readonly)</li>
@@ -3967,7 +3959,6 @@ Classes</h2>
 <li>void SetMaxShadowMaps(int shadowMaps)</li>
 <li>void SetDynamicInstancing(bool enable)</li>
 <li>void SetMinInstances(int instances)</li>
-<li>void SetMaxInstanceTriangles(int triangles)</li>
 <li>void SetMaxSortedInstances(int instances)</li>
 <li>void SetMaxOccluderTriangles(int triangles)</li>
 <li>void SetOcclusionBufferSize(int size)</li>
@@ -3991,7 +3982,6 @@ Classes</h2>
 <li>int GetMaxShadowMaps() const</li>
 <li>bool GetDynamicInstancing() const</li>
 <li>int GetMinInstances() const</li>
-<li>int GetMaxInstanceTriangles() const</li>
 <li>int GetMaxSortedInstances() const</li>
 <li>int GetMaxOccluderTriangles() const</li>
 <li>int GetOcclusionBufferSize() const</li>
@@ -4028,7 +4018,6 @@ Classes</h2>
 <li>int maxShadowMaps</li>
 <li>bool dynamicInstancing</li>
 <li>int minInstances</li>
-<li>int maxInstanceTriangles</li>
 <li>int maxSortedInstances</li>
 <li>int maxOccluderTriangles</li>
 <li>int occlusionBufferSize</li>
@@ -4916,20 +4905,18 @@ Classes</h2>
 <h4><a class="el" href="class_urho3_d_1_1_technique.html" title="Material technique. Consists of several passes.">Technique</a> : <a class="el" href="class_urho3_d_1_1_resource.html" title="Base class for resources.">Resource</a></h4>
 <p>Methods:</p>
 <ul>
-<li>bool HasPass(const StringHash type) const</li>
-<li>Pass* GetPass(const StringHash type) const</li>
-<li>Pass* GetSupportedPass(const StringHash type) const</li>
+<li>bool HasPass(const String type) const</li>
+<li>Pass* GetPass(const String type) const</li>
+<li>Pass* GetSupportedPass(const String type) const</li>
 <li>bool IsSupported() const</li>
-<li>bool IsSM3() const</li>
 <li>bool IsDesktop() const</li>
 <li>unsigned GetNumPasses() const</li>
-<li>const Vector&lt;StringHash&gt;&amp; GetPassTypes() const</li>
+<li>const Vector&lt;String&gt;&amp; GetPassTypes() const</li>
 <li>const PODVector&lt;Pass*&gt;&amp; GetPasses() const</li>
 </ul>
 <p>Properties:</p>
 <ul>
 <li>bool supported (readonly)</li>
-<li>bool SM3 (readonly)</li>
 <li>bool desktop (readonly)</li>
 <li>unsigned numPasses (readonly)</li>
 </ul>
@@ -6654,18 +6641,6 @@ Enumerations</h2>
 <li>int SURFACE_UPDATEVISIBLE</li>
 <li>int SURFACE_UPDATEALWAYS</li>
 </ul>
-<h4>ShaderParameterGroup</h4>
-<ul>
-<li>int SP_FRAME</li>
-<li>int SP_CAMERA</li>
-<li>int SP_VIEWPORT</li>
-<li>int SP_ZONE</li>
-<li>int SP_LIGHT</li>
-<li>int SP_VERTEXLIGHTS</li>
-<li>int SP_MATERIAL</li>
-<li>int SP_OBJECTTRANSFORM</li>
-<li>int MAX_SHADER_PARAMETER_GROUPS</li>
-</ul>
 <h4>ShaderType</h4>
 <ul>
 <li>int VS</li>
@@ -6730,18 +6705,6 @@ Enumerations</h2>
 <li>int TU_SPECULAR</li>
 <li>int TU_EMISSIVE</li>
 <li>int TU_ENVIRONMENT</li>
-<li>int MAX_MATERIAL_TEXTURE_UNITS</li>
-<li>int TU_LIGHTRAMP</li>
-<li>int TU_LIGHTSHAPE</li>
-<li>int TU_SHADOWMAP</li>
-<li>int TU_FACESELECT</li>
-<li>int TU_INDIRECTION</li>
-<li>int TU_DEPTHBUFFER</li>
-<li>int TU_LIGHTBUFFER</li>
-<li>int TU_VOLUMEMAP</li>
-<li>int TU_ZONE</li>
-<li>int MAX_NAMED_TEXTURE_UNITS</li>
-<li>int MAX_TEXTURE_UNITS</li>
 </ul>
 <h4>TextureUsage</h4>
 <ul>

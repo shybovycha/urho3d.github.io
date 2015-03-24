@@ -72,7 +72,7 @@ group: HEAD
 , <a class="el" href="class_urho3_d_1_1_billboard_set.html#a80e0bb3db6584e50498e3e6754072a21">Urho3D::BillboardSet</a>
 </li>
 <li>faceMemoryUse_
-: <a class="el" href="class_urho3_d_1_1_texture_cube.html#a92a629eabe7529231c9829e3713b3ac5">Urho3D::TextureCube</a>
+: <a class="el" href="class_urho3_d_1_1_texture_cube.html#a1d919008e38842c29d47ea970f76e8bd">Urho3D::TextureCube</a>
 </li>
 <li>faces_
 : <a class="el" href="class_urho3_d_1_1_polyhedron.html#a90cc9f90101ae4ef6211511d3f227f86">Urho3D::Polyhedron</a>
@@ -183,6 +183,12 @@ group: HEAD
 : <a class="el" href="class_urho3_d_1_1_hash_map_1_1_key_value.html#ac8b5513590cf29e58ec32fc62ea188a4">Urho3D::HashMap&lt; T, U &gt;::KeyValue</a>
 , <a class="el" href="class_urho3_d_1_1_pair.html#a5e19d6ed47a4d5787b23d07d48a4c9b8">Urho3D::Pair&lt; T, U &gt;</a>
 </li>
+<li>firstDirtyTexture_
+: <a class="el" href="class_urho3_d_1_1_graphics.html#a6775c048a1be92d9e6ee4562b82f7b21">Urho3D::Graphics</a>
+</li>
+<li>firstDirtyVB_
+: <a class="el" href="class_urho3_d_1_1_graphics.html#aad68f4e4617eeeb86749ade7c1364d47">Urho3D::Graphics</a>
+</li>
 <li>firstLight_
 : <a class="el" href="class_urho3_d_1_1_drawable.html#a147b1459051ad28a7c3583fc30d6765d">Urho3D::Drawable</a>
 </li>
@@ -209,6 +215,9 @@ group: HEAD
 </li>
 <li>floatPosition_
 : <a class="el" href="class_urho3_d_1_1_sprite.html#a6c4be3e3361ba2c3cdcfb888f5de29ea">Urho3D::Sprite</a>
+</li>
+<li>flushGPU_
+: <a class="el" href="class_urho3_d_1_1_graphics.html#a039f48042e3219d91d826a2ee2967449">Urho3D::Graphics</a>
 </li>
 <li>focus_
 : <a class="el" href="struct_urho3_d_1_1_focus_parameters.html#a068c61efa9d5910c2b1ce3c105508890">Urho3D::FocusParameters</a>
@@ -262,6 +271,9 @@ group: HEAD
 <li>forceAutoHint_
 : <a class="el" href="class_urho3_d_1_1_u_i.html#ae4f5f5a5e2e1b624acfb7ac060f97d60">Urho3D::UI</a>
 </li>
+<li>forceGL2_
+: <a class="el" href="class_urho3_d_1_1_graphics.html#a3dfda09e046539ae12c238595754838d">Urho3D::Graphics</a>
+</li>
 <li>forceUpdate_
 : <a class="el" href="class_urho3_d_1_1_billboard_set.html#a83ebd5d97ac222888a4e5c18999ec627">Urho3D::BillboardSet</a>
 </li>
@@ -293,9 +305,9 @@ group: HEAD
 : <a class="el" href="class_urho3_d_1_1_audio.html#a44906a6a9ab1c7dacc9268a0365097ef">Urho3D::Audio</a>
 </li>
 <li>frame_
-: <a class="el" href="class_urho3_d_1_1_renderer.html#af3a17617912bd09668caa7deb78ea43a">Urho3D::Renderer</a>
-, <a class="el" href="class_urho3_d_1_1_renderer2_d.html#a2b0152ad150882b1a1520d0a96f7f074">Urho3D::Renderer2D</a>
+: <a class="el" href="class_urho3_d_1_1_renderer2_d.html#a2b0152ad150882b1a1520d0a96f7f074">Urho3D::Renderer2D</a>
 , <a class="el" href="class_urho3_d_1_1_view.html#a890941632aa201778e64e09c22fb227e">Urho3D::View</a>
+, <a class="el" href="class_urho3_d_1_1_renderer.html#af3a17617912bd09668caa7deb78ea43a">Urho3D::Renderer</a>
 </li>
 <li>frameBuffers_
 : <a class="el" href="class_urho3_d_1_1_graphics_impl.html#a94a65920103f9d6fe4c0ad2353d5be45">Urho3D::GraphicsImpl</a>
@@ -307,8 +319,9 @@ group: HEAD
 : <a class="el" href="class_urho3_d_1_1_profiler_block.html#a9d36f8c52079288631105899c37e8685">Urho3D::ProfilerBlock</a>
 </li>
 <li>frameNumber_
-: <a class="el" href="struct_urho3_d_1_1_frame_info.html#afcd8002822f1cb69e41a72eb59dae5c5">Urho3D::FrameInfo</a>
+: <a class="el" href="class_urho3_d_1_1_shader_program.html#a8dc35bb441d5166058d399bbf0e4550a">Urho3D::ShaderProgram</a>
 , <a class="el" href="class_urho3_d_1_1_time.html#ab4401a63bced091ae256d16a571d7fae">Urho3D::Time</a>
+, <a class="el" href="struct_urho3_d_1_1_frame_info.html#afcd8002822f1cb69e41a72eb59dae5c5">Urho3D::FrameInfo</a>
 </li>
 <li>framesDirty_
 : <a class="el" href="class_urho3_d_1_1_constraint.html#a76b001a7cb7ba20c812ade784babfd51">Urho3D::Constraint</a>
@@ -337,9 +350,9 @@ group: HEAD
 , <a class="el" href="class_urho3_d_1_1_sound.html#af3895ed2b4199a1b786035ad5b6ce34b">Urho3D::Sound</a>
 </li>
 <li>frustum_
-: <a class="el" href="class_urho3_d_1_1_camera.html#ac3138ffc6cfb8becc72510c474ce16a8">Urho3D::Camera</a>
+: <a class="el" href="class_urho3_d_1_1_frustum_octree_query.html#a96ed6e2ad30ad0c8f1a572917a6f67b3">Urho3D::FrustumOctreeQuery</a>
+, <a class="el" href="class_urho3_d_1_1_camera.html#ac3138ffc6cfb8becc72510c474ce16a8">Urho3D::Camera</a>
 , <a class="el" href="class_urho3_d_1_1_renderer2_d.html#a385b9494302f9f318a28bf49bb4422b8">Urho3D::Renderer2D</a>
-, <a class="el" href="class_urho3_d_1_1_frustum_octree_query.html#a96ed6e2ad30ad0c8f1a572917a6f67b3">Urho3D::FrustumOctreeQuery</a>
 , <a class="el" href="class_urho3_d_1_1_debug_renderer.html#a2301dd350a4487a6dda90f0458af6275">Urho3D::DebugRenderer</a>
 </li>
 <li>frustumBoundingBox_

@@ -278,6 +278,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#a9fa4e0593945674a5ab2b52ac89e785a">GetBatches</a> ()</td></tr>
 <tr class="memdesc:a9fa4e0593945674a5ab2b52ac89e785a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct batches from the drawable objects. <br/></td></tr>
 <tr class="separator:a9fa4e0593945674a5ab2b52ac89e785a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49cfd1582143c962759518468fc61b93"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a49cfd1582143c962759518468fc61b93"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#a49cfd1582143c962759518468fc61b93">ProcessLights</a> ()</td></tr>
+<tr class="memdesc:a49cfd1582143c962759518468fc61b93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get lit geometries and shadowcasters for visible lights. <br/></td></tr>
+<tr class="separator:a49cfd1582143c962759518468fc61b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22d0ec09958510be31cf7e42a9d7f88f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a22d0ec09958510be31cf7e42a9d7f88f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#a22d0ec09958510be31cf7e42a9d7f88f">GetLightBatches</a> ()</td></tr>
+<tr class="memdesc:a22d0ec09958510be31cf7e42a9d7f88f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get batches from lit geometries and shadowcasters. <br/></td></tr>
+<tr class="separator:a22d0ec09958510be31cf7e42a9d7f88f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cfdc47a4fe4ee32bbe53e06d25e912a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5cfdc47a4fe4ee32bbe53e06d25e912a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#a5cfdc47a4fe4ee32bbe53e06d25e912a">GetBaseBatches</a> ()</td></tr>
+<tr class="memdesc:a5cfdc47a4fe4ee32bbe53e06d25e912a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get unlit batches. <br/></td></tr>
+<tr class="separator:a5cfdc47a4fe4ee32bbe53e06d25e912a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6763218b236464bca5d9c32f482d96af"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6763218b236464bca5d9c32f482d96af"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#a6763218b236464bca5d9c32f482d96af">UpdateGeometries</a> ()</td></tr>
 <tr class="memdesc:a6763218b236464bca5d9c32f482d96af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update geometries and sort batches. <br/></td></tr>
@@ -614,34 +626,34 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="struct_urho3_d_1_1_light_batch_queue.html">LightBatchQueue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#a69d2eae3cf7914df08ea99e29644109f">vertexLightQueues_</a></td></tr>
 <tr class="memdesc:a69d2eae3cf7914df08ea99e29644109f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Per-vertex light queues. <br/></td></tr>
 <tr class="separator:a69d2eae3cf7914df08ea99e29644109f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80af0319b53d893ce1ddeb3703b9c682"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80af0319b53d893ce1ddeb3703b9c682"></a>
-<a class="el" href="class_urho3_d_1_1_hash_map.html">HashMap</a>&lt; <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>, <a class="el" href="struct_urho3_d_1_1_batch_queue.html">BatchQueue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#a80af0319b53d893ce1ddeb3703b9c682">batchQueues_</a></td></tr>
-<tr class="memdesc:a80af0319b53d893ce1ddeb3703b9c682"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_urho3_d_1_1_batch.html" title="Queued 3D geometry draw call.">Batch</a> queues. <br/></td></tr>
-<tr class="separator:a80af0319b53d893ce1ddeb3703b9c682"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a409bf19d494e0708bf7def0d7dab6218"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a409bf19d494e0708bf7def0d7dab6218"></a>
-<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#a409bf19d494e0708bf7def0d7dab6218">gBufferPassName_</a></td></tr>
-<tr class="memdesc:a409bf19d494e0708bf7def0d7dab6218"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hash of the GBuffer pass, or null if none. <br/></td></tr>
-<tr class="separator:a409bf19d494e0708bf7def0d7dab6218"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff4e1cd49a85c2501fecf4b4152d3f4d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff4e1cd49a85c2501fecf4b4152d3f4d"></a>
-<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#aff4e1cd49a85c2501fecf4b4152d3f4d">basePassName_</a></td></tr>
-<tr class="memdesc:aff4e1cd49a85c2501fecf4b4152d3f4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hash of the opaque forward base pass. <br/></td></tr>
-<tr class="separator:aff4e1cd49a85c2501fecf4b4152d3f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67646b1c1f14c0e38899dc17b0c6ff90"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a67646b1c1f14c0e38899dc17b0c6ff90"></a>
-<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#a67646b1c1f14c0e38899dc17b0c6ff90">alphaPassName_</a></td></tr>
-<tr class="memdesc:a67646b1c1f14c0e38899dc17b0c6ff90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hash of the alpha pass. <br/></td></tr>
-<tr class="separator:a67646b1c1f14c0e38899dc17b0c6ff90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a670979a2d8852ecbd1a3883e61b22de4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a670979a2d8852ecbd1a3883e61b22de4"></a>
-<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#a670979a2d8852ecbd1a3883e61b22de4">lightPassName_</a></td></tr>
-<tr class="memdesc:a670979a2d8852ecbd1a3883e61b22de4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hash of the forward light pass. <br/></td></tr>
-<tr class="separator:a670979a2d8852ecbd1a3883e61b22de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3be2b66b1aa47ccd7d4e8948137b0d57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3be2b66b1aa47ccd7d4e8948137b0d57"></a>
-<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#a3be2b66b1aa47ccd7d4e8948137b0d57">litBasePassName_</a></td></tr>
-<tr class="memdesc:a3be2b66b1aa47ccd7d4e8948137b0d57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hash of the litbase pass. <br/></td></tr>
-<tr class="separator:a3be2b66b1aa47ccd7d4e8948137b0d57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67fe25d20537687c4ccacc71f88d9cfa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a67fe25d20537687c4ccacc71f88d9cfa"></a>
-<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#a67fe25d20537687c4ccacc71f88d9cfa">litAlphaPassName_</a></td></tr>
-<tr class="memdesc:a67fe25d20537687c4ccacc71f88d9cfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hash of the litalpha pass. <br/></td></tr>
-<tr class="separator:a67fe25d20537687c4ccacc71f88d9cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0bd1c76092b12ad6f1b1517d0865c8a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0bd1c76092b12ad6f1b1517d0865c8a"></a>
+<a class="el" href="class_urho3_d_1_1_hash_map.html">HashMap</a>&lt; unsigned, <a class="el" href="struct_urho3_d_1_1_batch_queue.html">BatchQueue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#af0bd1c76092b12ad6f1b1517d0865c8a">batchQueues_</a></td></tr>
+<tr class="memdesc:af0bd1c76092b12ad6f1b1517d0865c8a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_urho3_d_1_1_batch.html" title="Queued 3D geometry draw call.">Batch</a> queues by pass index. <br/></td></tr>
+<tr class="separator:af0bd1c76092b12ad6f1b1517d0865c8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12cc5bc7f399b35ced6011e4541aa58e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12cc5bc7f399b35ced6011e4541aa58e"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#a12cc5bc7f399b35ced6011e4541aa58e">gBufferPassIndex_</a></td></tr>
+<tr class="memdesc:a12cc5bc7f399b35ced6011e4541aa58e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the GBuffer pass. <br/></td></tr>
+<tr class="separator:a12cc5bc7f399b35ced6011e4541aa58e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adebeeb0e37ab256346e0673ecd066ed0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adebeeb0e37ab256346e0673ecd066ed0"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#adebeeb0e37ab256346e0673ecd066ed0">basePassIndex_</a></td></tr>
+<tr class="memdesc:adebeeb0e37ab256346e0673ecd066ed0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the opaque forward base pass. <br/></td></tr>
+<tr class="separator:adebeeb0e37ab256346e0673ecd066ed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecdffa06cfea028512415dbd5e57c919"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aecdffa06cfea028512415dbd5e57c919"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#aecdffa06cfea028512415dbd5e57c919">alphaPassIndex_</a></td></tr>
+<tr class="memdesc:aecdffa06cfea028512415dbd5e57c919"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the alpha pass. <br/></td></tr>
+<tr class="separator:aecdffa06cfea028512415dbd5e57c919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b699af190dc0a6a6c2b94be435954f3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b699af190dc0a6a6c2b94be435954f3"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#a0b699af190dc0a6a6c2b94be435954f3">lightPassIndex_</a></td></tr>
+<tr class="memdesc:a0b699af190dc0a6a6c2b94be435954f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the forward light pass. <br/></td></tr>
+<tr class="separator:a0b699af190dc0a6a6c2b94be435954f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1536fa735e99655a729efc2b0c1e7cb4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1536fa735e99655a729efc2b0c1e7cb4"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#a1536fa735e99655a729efc2b0c1e7cb4">litBasePassIndex_</a></td></tr>
+<tr class="memdesc:a1536fa735e99655a729efc2b0c1e7cb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the litbase pass. <br/></td></tr>
+<tr class="separator:a1536fa735e99655a729efc2b0c1e7cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69223b684e218a0e0b5dd8ac25b1bbf3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a69223b684e218a0e0b5dd8ac25b1bbf3"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#a69223b684e218a0e0b5dd8ac25b1bbf3">litAlphaPassIndex_</a></td></tr>
+<tr class="memdesc:a69223b684e218a0e0b5dd8ac25b1bbf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the litalpha pass. <br/></td></tr>
+<tr class="separator:a69223b684e218a0e0b5dd8ac25b1bbf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4ab688c249ffc5c9dd45ffac0f8b52f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae4ab688c249ffc5c9dd45ffac0f8b52f"></a>
 const <a class="el" href="struct_urho3_d_1_1_render_path_command.html">RenderPathCommand</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_view.html#ae4ab688c249ffc5c9dd45ffac0f8b52f">lightVolumeCommand_</a></td></tr>
 <tr class="memdesc:ae4ab688c249ffc5c9dd45ffac0f8b52f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the light volume command if any. <br/></td></tr>

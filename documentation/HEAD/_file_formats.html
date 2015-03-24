@@ -119,11 +119,11 @@ uint       Number of tracks
     Vector3    Scale (if included in data)
 </pre><p>Note: animations are stored using absolute bone transformations. Therefore only lerp-blending between animations is supported; additive pose modification is not.</p>
 <h2><a class="anchor" id="FileFormats_Shader"></a>
-Direct3D9 binary shader format (.vs2, .ps2, .vs3, .ps3)</h2>
+Direct3D11 binary shader format (.vs4, .ps4)</h2>
 <pre class="fragment">byte[4]    Identifier "USHD"
 
 short      Shader type (0 = vertex, 1 = pixel)
-short      Shader model (2 or 3)
+short      Shader model (3)
 
 uint       Number of constant parameters
 
@@ -131,6 +131,30 @@ uint       Number of constant parameters
     cstring    Parameter name
     byte       Register index
     byte       Number of registers
+
+uint       Number of texture units
+
+    For each texture unit:
+    cstring    Texture unit name
+    byte       Sampler index
+
+uint       Bytecode size
+byte[]     Bytecode
+</pre><h2><a class="anchor" id="FileFormats_Shader"></a>
+Direct3D11 binary shader format (.vs4, .ps4)</h2>
+<pre class="fragment">byte[4]    Identifier "USHD"
+
+short      Shader type (0 = vertex, 1 = pixel)
+short      Shader model (4)
+uint       Vertex element mask (0 for pixel shaders)
+
+uint       Number of constant parameters
+
+    For each constant parameter:
+    cstring    Parameter name
+    byte       CBuffer index
+    uint       Start byte offset in CBuffer
+    uint       Byte size
 
 uint       Number of texture units
 

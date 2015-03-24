@@ -45,6 +45,7 @@ Options:
 -ns         Do not create subdirectories for resources
 -nz         Do not create a zone and a directional light (scene mode only)
 -nf         Do not fix infacing normals
+-mb &lt;x&gt;     Maximum number of bones per submesh. Default 64
 -p &lt;path&gt;   Set path for scene resources. Default is output file path
 -r &lt;name&gt;   Use the named scene node as root node\n"
 -f &lt;freq&gt;   Animation tick frequency to use if unspecified. Default 4800
@@ -75,6 +76,7 @@ Options:
 -r      Output only rotations from animations
 -s      Split each submesh into own vertex buffer
 -t      Generate tangents
+-mb &lt;x&gt; Maximum number of bones per submesh, default 64
 </pre><p>Note: outputting only bone rotations may help when using an animation in a different model, but if bone position changes have been used for effect, the animation may become less lively. Unpredictable mutilations might result from using an animation in a model not originally intended for, as Urho3D does not specifically attempt to retarget animations.</p>
 <h2><a class="anchor" id="Tools_PackageTool"></a>
 PackageTool</h2>

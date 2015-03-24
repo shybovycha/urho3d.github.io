@@ -3632,6 +3632,7 @@ Classes</h2>
 </ul>
 <p>Properties:</p>
 <ul>
+<li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> apiName // readonly</li>
 <li><a class="el" href="class_urho3_d_1_1_string_hash.html" title="32-bit hash value for a string.">StringHash</a> baseType // readonly</li>
 <li>bool borderless // readonly</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> category // readonly</li>
@@ -3639,7 +3640,6 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_int_vector2.html" title="Two-dimensional vector with integer values.">IntVector2</a> desktopResolution // readonly</li>
 <li>bool deviceLost // readonly</li>
 <li>bool flushGPU</li>
-<li>bool forceSM2</li>
 <li>bool fullscreen // readonly</li>
 <li>bool hardwareShadowSupport // readonly</li>
 <li>int height // readonly</li>
@@ -3658,7 +3658,6 @@ Classes</h2>
 <li>bool sRGB</li>
 <li>bool sRGBSupport // readonly</li>
 <li>bool sRGBWriteSupport // readonly</li>
-<li>bool sm3Support // readonly</li>
 <li>bool tripleBuffer // readonly</li>
 <li><a class="el" href="class_urho3_d_1_1_string_hash.html" title="32-bit hash value for a string.">StringHash</a> type // readonly</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> typeName // readonly</li>
@@ -4481,6 +4480,7 @@ Classes</h2>
 <p>Methods:</p>
 <ul>
 <li><a class="el" href="class_urho3_d_1_1_material.html" title="Describes how to render 3D geometries.">Material</a>@ Clone(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp; = <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> ( )) const</li>
+<li><a class="el" href="class_urho3_d_1_1_pass.html" title="Material rendering pass, which defines shaders and render state.">Pass</a>@ GetPass(uint, const String&amp;)</li>
 <li><a class="el" href="class_urho3_d_1_1_value_animation.html" title="Value animation class.">ValueAnimation</a>@ GetShaderParameterAnimation(const String&amp;) const</li>
 <li>float GetShaderParameterAnimationSpeed(const String&amp;) const</li>
 <li>WrapMode GetShaderParameterAnimationWrapMode(const String&amp;) const</li>
@@ -4509,7 +4509,6 @@ Classes</h2>
 <li>uint memoryUse // readonly</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> name</li>
 <li>uint numTechniques</li>
-<li>uint numUsedTextureUnits // readonly</li>
 <li>bool occlusion // readonly</li>
 <li>int refs // readonly</li>
 <li><a class="el" href="class_urho3_d_1_1_scene.html" title="Root scene node, represents the whole scene.">Scene</a>@ scene</li>
@@ -5636,7 +5635,6 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> pixelShader</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> pixelShaderDefines</li>
 <li>int refs // readonly</li>
-<li>bool sm3</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> vertexShader</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> vertexShaderDefines</li>
 <li>int weakRefs // readonly</li>
@@ -6062,7 +6060,6 @@ Classes</h2>
 <li>bool dynamicInstancing</li>
 <li>bool hdrRendering</li>
 <li>int materialQuality</li>
-<li>int maxInstanceTriangles</li>
 <li>int maxOccluderTriangles</li>
 <li>int maxShadowMaps</li>
 <li>int maxSortedInstances</li>
@@ -8090,13 +8087,13 @@ Classes</h2>
 <h4><a class="el" href="class_urho3_d_1_1_technique.html" title="Material technique. Consists of several passes.">Technique</a></h4>
 <p>Methods:</p>
 <ul>
-<li><a class="el" href="class_urho3_d_1_1_pass.html" title="Material rendering pass, which defines shaders and render state.">Pass</a>@ CreatePass(StringHash)</li>
-<li><a class="el" href="class_urho3_d_1_1_pass.html" title="Material rendering pass, which defines shaders and render state.">Pass</a>@ GetPass(StringHash)</li>
-<li><a class="el" href="class_urho3_d_1_1_pass.html" title="Material rendering pass, which defines shaders and render state.">Pass</a>@ GetSupportedPass(StringHash)</li>
-<li>bool HasPass(StringHash) const</li>
+<li><a class="el" href="class_urho3_d_1_1_pass.html" title="Material rendering pass, which defines shaders and render state.">Pass</a>@ CreatePass(const String&amp;)</li>
+<li><a class="el" href="class_urho3_d_1_1_pass.html" title="Material rendering pass, which defines shaders and render state.">Pass</a>@ GetPass(const String&amp;)</li>
+<li><a class="el" href="class_urho3_d_1_1_pass.html" title="Material rendering pass, which defines shaders and render state.">Pass</a>@ GetSupportedPass(const String&amp;)</li>
+<li>bool HasPass(const String&amp;) const</li>
 <li>bool Load(<a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>@)</li>
 <li>bool Load(VectorBuffer&amp;)</li>
-<li>void RemovePass(StringHash)</li>
+<li>void RemovePass(const String&amp;)</li>
 <li>bool Save(<a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
 <li>bool Save(VectorBuffer&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
@@ -8109,10 +8106,9 @@ Classes</h2>
 <li>uint memoryUse // readonly</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> name</li>
 <li>uint numPasses // readonly</li>
-<li><a class="el" href="class_urho3_d_1_1_string_hash.html" title="32-bit hash value for a string.">StringHash</a>[]@ passTypes // readonly</li>
+<li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>[]@ passNames // readonly</li>
 <li><a class="el" href="class_urho3_d_1_1_pass.html" title="Material rendering pass, which defines shaders and render state.">Pass</a>@[]@ passes // readonly</li>
 <li>int refs // readonly</li>
-<li>bool sm3</li>
 <li>bool supported // readonly</li>
 <li><a class="el" href="class_urho3_d_1_1_string_hash.html" title="32-bit hash value for a string.">StringHash</a> type // readonly</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> typeName // readonly</li>
@@ -10379,23 +10375,24 @@ Enumerations</h2>
 <h4>TextureUnit</h4>
 <ul>
 <li>TU_DIFFUSE</li>
+<li>TU_ALBEDOBUFFER</li>
 <li>TU_NORMAL</li>
+<li>TU_NORMALBUFFER</li>
 <li>TU_SPECULAR</li>
 <li>TU_EMISSIVE</li>
 <li>TU_ENVIRONMENT</li>
 <li>TU_LIGHTRAMP</li>
 <li>TU_LIGHTSHAPE</li>
 <li>TU_SHADOWMAP</li>
+<li>TU_CUSTOM1</li>
+<li>TU_CUSTOM2</li>
+<li>TU_VOLUMEMAP</li>
 <li>TU_FACESELECT</li>
 <li>TU_INDIRECTION</li>
-<li>TU_ALBEDOBUFFER</li>
-<li>TU_NORMALBUFFER</li>
 <li>TU_DEPTHBUFFER</li>
 <li>TU_LIGHTBUFFER</li>
-<li>TU_VOLUMEMAP</li>
 <li>TU_ZONE</li>
 <li>MAX_MATERIAL_TEXTURE_UNITS</li>
-<li>MAX_NAMED_TEXTURE_UNITS</li>
 <li>MAX_TEXTURE_UNITS</li>
 </ul>
 <h4>TextureUsage</h4>
@@ -10502,8 +10499,10 @@ Global functions</h2>
 <li>uint GetFloat32Format()</li>
 <li>uint GetFormat(const String&amp;)</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> GetInternalPath(const String&amp;)</li>
+<li>uint GetLinearDepthFormat()</li>
 <li>uint GetLuminanceAlphaFormat()</li>
 <li>uint GetLuminanceFormat()</li>
+<li>uint GetMaxBones()</li>
 <li>uint GetNumLogicalCPUs()</li>
 <li>uint GetNumPhysicalCPUs()</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>[]@ GetObjectCategories()</li>

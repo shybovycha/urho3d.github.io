@@ -30,7 +30,6 @@ group: HEAD
 <li>ResourcePaths (string) A semicolon-separated list of resource paths to use. If corresponding packages (ie. Data.pak for Data directory) exist they will be used instead. Default "Data;CoreData".</li>
 <li>ResourcePackages (string) A semicolon-separated list of resource packages to use. Default empty.</li>
 <li>AutoloadPaths (string) A semicolon-separated list of autoload paths to use. Any resource packages and subdirectories inside an autoload path will be added to the resource system. Default "Autoload".</li>
-<li>ForceSM2 (bool) Whether to force Shader Model 2, effective in Direct3D9 mode only. Default false.</li>
 <li>ExternalWindow (void ptr) External window handle to use instead of creating an application window. Default null.</li>
 <li>WindowIcon (string) Window icon image resource name. Default empty (use application default icon.)</li>
 <li>WindowTitle (string) Window title. Default "Urho3D".</li>
@@ -43,7 +42,8 @@ group: HEAD
 <li>Borderless (bool) Whether to create the window as borderless. Default false.</li>
 <li>TripleBuffer (bool) Whether to use triple-buffering. Default false.</li>
 <li>VSync (bool) Whether to wait for vertical sync when presenting rendering window contents. Default false.</li>
-<li>FlushGPU (bool) Whether to flush GPU command buffer each frame for less input latency. Effective only on Direct3D9. Default false.</li>
+<li>FlushGPU (bool) Whether to flush GPU command buffer each frame (Direct3D9) or limit the amount of buffered frames (Direct3D11) for less input latency. Ineffective on OpenGL. Default false.</li>
+<li>ForceGL2 (bool) When true, forces OpenGL 2 use even if OpenGL 3 is available. No effect on Direct3D or mobile builds. Default false.</li>
 <li>Multisample (int) Hardware multisampling level. Default 1 (no multisampling.)</li>
 <li>Orientations (string) Space-separated list of allowed orientations. Effective only on iOS. All possible values are "LandscapeLeft", "LandscapeRight", "Portrait" and "PortraitUpsideDown". Default "LandscapeLeft LandscapeRight".</li>
 <li>DumpShaders (string) Filename to dump used shader variations to for precaching.</li>

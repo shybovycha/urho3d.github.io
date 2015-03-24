@@ -33,18 +33,10 @@ Graphics</h2>
 <p>Screen resolution, fullscreen/windowed, vertical sync and hardware multisampling level are all set at once by calling <a class="el" href="class_urho3_d_1_1_graphics.html" title="Graphics subsystem. Manages the application window, rendering state and GPU resources.">Graphics</a>'s <a class="el" href="class_urho3_d_1_1_graphics.html#adc16c8a19af1584c902fe29e3d21d6eb">SetMode()</a> function. There is also an experimental option of rendering to an existing window by passing its OS-specific handle to <a class="el" href="class_urho3_d_1_1_graphics.html#abb1c387ef3e39d11a19066f12c420cc6">SetExternalWindow()</a> before setting the initial screen mode.</p>
 <p>When setting the initial screen mode, <a class="el" href="class_urho3_d_1_1_graphics.html" title="Graphics subsystem. Manages the application window, rendering state and GPU resources.">Graphics</a> does a few checks:</p>
 <ul>
-<li>For Direct3D9, the supported shader model is checked. 2 is minimum, but 3 will be used if available. For testing, SM2 can be forced by calling <a class="el" href="class_urho3_d_1_1_graphics.html#a88b8eb411b824937171647ea4d74d4c6">SetForceSM2()</a> before setting the initial screen mode.</li>
-<li>For OpenGL, version 2.0 with EXT_framebuffer_object, EXT_packed_depth_stencil and EXT_texture_filter_anisotropic extensions is checked for.</li>
-<li>Is hardware instancing supported? This requires Shader Model 3 on Direct3D9 and the ARB_instanced_arrays extension on OpenGL.</li>
+<li>For Direct3D9, shader model 3.0 support is checked.</li>
+<li>For OpenGL, version 3.2 support is checked for first and used if available. As a fallback, version 2.0 with EXT_framebuffer_object, EXT_packed_depth_stencil and EXT_texture_filter_anisotropic extensions is checked for. The ARB_instanced_arrays extension is also checked for but not required; it will enable hardware instancing support when present.</li>
 <li>Are hardware shadow maps supported? Both AMD &amp; NVIDIA style shadow maps can be used. If neither are available, no shadows will be rendered.</li>
 <li>Are light pre-pass and deferred rendering modes supported? These require sufficient multiple rendertarget support, and R32F texture format support.</li>
-</ul>
-<p>Shader model 2 has the following limitations due to limited pixel shader instruction count:</p>
-<ul>
-<li>Directional light shadows support a maximum of 3 cascade splits instead of 4.</li>
-<li>Shadowed point lights do not support specular calculations in forward rendering.</li>
-<li>Complex materials do not combine the ambient pass with the first forward light (lit base pass optimization.)</li>
-<li>Complex forward rendered materials (eg. normal + specular map + alpha masking) combined with shadow mapping or height fog may not work.</li>
 </ul>
 <h2><a class="anchor" id="Rendering_Renderer"></a>
 Renderer</h2>
@@ -100,7 +92,7 @@ Optimizations</h2>
 <li>Software rasterized occlusion: after the octree has been queried for visible objects, the objects that are marked as occluders are rendered on the CPU to a small hierarchical-depth buffer, and it will be used to test the non-occluders for visibility. Use <a class="el" href="class_urho3_d_1_1_renderer.html#a6f8f74b8fdee7f55b1ecc128141eb176">SetMaxOccluderTriangles()</a> and <a class="el" href="class_urho3_d_1_1_renderer.html#a3fcccde75cf5c79fcc05180a60eb44d8">SetOccluderSizeThreshold()</a> to configure the occlusion rendering.</li>
 </ul>
 <ul>
-<li>Hardware instancing: rendering operations with the same geometry, material and light will be grouped together and performed as one draw call. Objects with a large amount of triangles will not be rendered as instanced, as that could actually be detrimental to performance. Use <a class="el" href="class_urho3_d_1_1_renderer.html#a24957792f7933a93d47f3b63a1b69db7">SetMaxInstanceTriangles()</a> to set the threshold. Note that even when instancing is not available, or the triangle count of objects is too large, they still benefit from the grouping, as render state only needs to be set once before rendering each group, reducing the CPU cost.</li>
+<li>Hardware instancing: rendering operations with the same geometry, material and light will be grouped together and performed as one draw call. Objects with a large amount of triangles will not be rendered as instanced, as that could actually be detrimental to performance. Use SetMaxInstanceTriangles() to set the threshold. Note that even when instancing is not available, or the triangle count of objects is too large, they still benefit from the grouping, as render state only needs to be set once before rendering each group, reducing the CPU cost.</li>
 </ul>
 <ul>
 <li>Light stencil masking: in forward rendering, before objects lit by a spot or point light are re-rendered additively, the light's bounding shape is rendered to the stencil buffer to ensure pixels outside the light range are not processed.</li>
@@ -115,5 +107,5 @@ Handling GPU resource loss</h2>
 Further details</h2>
 <p>See also <a class="el" href="_materials.html">Materials</a>, <a class="el" href="_shaders.html">Shaders</a>, <a class="el" href="_lights.html">Lights and shadows</a>, <a class="el" href="_render_paths.html">Render path</a>, <a class="el" href="_skeletal_animation.html">Skeletal animation</a>, <a class="el" href="_particles.html">Particle systems</a>, <a class="el" href="_zones.html">Zones</a>, and <a class="el" href="_auxiliary_views.html">Auxiliary views</a>.</p>
 <p>See <a class="el" href="_rendering_modes.html">Rendering modes</a> for detailed discussion on the forward, light pre-pass and deferred rendering modes.</p>
-<p>See <a class="el" href="_a_p_i_differences.html">Differences between Direct3D9 and OpenGL</a> for what to watch out for when using the low-level rendering functionality directly. </p>
+<p>See <a class="el" href="_a_p_i_differences.html">Differences between Direct3D and OpenGL</a> for what to watch out for when using the low-level rendering functionality directly. </p>
 </div></div><!-- contents -->
