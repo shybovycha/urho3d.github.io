@@ -24,8 +24,8 @@ Module.expectedDataFileDownloads++;
     var REMOTE_PACKAGE_NAME = typeof Module['locateFile'] === 'function' ?
                               Module['locateFile'](REMOTE_PACKAGE_BASE) :
                               ((Module['filePackagePrefixURL'] || '') + REMOTE_PACKAGE_BASE);
-    var REMOTE_PACKAGE_SIZE = 11365511;
-    var PACKAGE_UUID = 'a053b9be-03b7-4859-98a9-a815d8819b72';
+    var REMOTE_PACKAGE_SIZE = 11365521;
+    var PACKAGE_UUID = '69f41f54-caf1-4680-bdcf-36c6edd78eec';
   
     function fetchRemotePackage(packageName, packageSize, callback, errback) {
       var xhr = new XMLHttpRequest();
@@ -112,8 +112,8 @@ function assert(check, msg) {
         this.requests[this.name] = null;
       },
     };
-      new DataRequest(0, 121423, 0, 0).open('GET', '/CoreData.pak');
-    new DataRequest(121423, 11365511, 0, 0).open('GET', '/Data.pak');
+      new DataRequest(0, 121433, 0, 0).open('GET', '/CoreData.pak');
+    new DataRequest(121433, 11365521, 0, 0).open('GET', '/Data.pak');
 
       var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
       var IDB_RO = "readonly";
