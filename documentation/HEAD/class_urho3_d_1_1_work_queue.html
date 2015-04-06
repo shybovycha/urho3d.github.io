@@ -74,6 +74,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_work_queue.html#a582329d5f6712ee3963315a82e95b40e">AddWorkItem</a> (<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="struct_urho3_d_1_1_work_item.html">WorkItem</a> &gt; item)</td></tr>
 <tr class="memdesc:a582329d5f6712ee3963315a82e95b40e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a work item and resume worker threads. <br/></td></tr>
 <tr class="separator:a582329d5f6712ee3963315a82e95b40e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3c746e348650f444fe222ee391fbe41"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af3c746e348650f444fe222ee391fbe41"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_work_queue.html#af3c746e348650f444fe222ee391fbe41">RemoveWorkItem</a> (<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="struct_urho3_d_1_1_work_item.html">WorkItem</a> &gt; item)</td></tr>
+<tr class="memdesc:af3c746e348650f444fe222ee391fbe41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a work item before it has started executing. Return true if successfully removed. <br/></td></tr>
+<tr class="separator:af3c746e348650f444fe222ee391fbe41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a003fb2f4ea8657be0fe3063b13e6fe29"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a003fb2f4ea8657be0fe3063b13e6fe29"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_work_queue.html#a003fb2f4ea8657be0fe3063b13e6fe29">RemoveWorkItems</a> (const <a class="el" href="class_urho3_d_1_1_vector.html">Vector</a>&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="struct_urho3_d_1_1_work_item.html">WorkItem</a> &gt; &gt; &amp;items)</td></tr>
+<tr class="memdesc:a003fb2f4ea8657be0fe3063b13e6fe29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a number of work items before they have started executing. Return the number of items successfully removed. <br/></td></tr>
+<tr class="separator:a003fb2f4ea8657be0fe3063b13e6fe29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9494a512578eeb36ed2a2cd3369af30"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa9494a512578eeb36ed2a2cd3369af30"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_work_queue.html#aa9494a512578eeb36ed2a2cd3369af30">Pause</a> ()</td></tr>
 <tr class="memdesc:aa9494a512578eeb36ed2a2cd3369af30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pause worker threads. <br/></td></tr>
@@ -258,6 +266,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_work_queue.html#a2ab2c89afff9530e6e5f1767fb7d7d21">PurgePool</a> ()</td></tr>
 <tr class="memdesc:a2ab2c89afff9530e6e5f1767fb7d7d21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Purge the pool to reduce allocation where its unneeded. <br/></td></tr>
 <tr class="separator:a2ab2c89afff9530e6e5f1767fb7d7d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a779fffc8eac54d4a9d86b92d4060d67a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a779fffc8eac54d4a9d86b92d4060d67a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_work_queue.html#a779fffc8eac54d4a9d86b92d4060d67a">ReturnToPool</a> (<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="struct_urho3_d_1_1_work_item.html">WorkItem</a> &gt; &amp;item)</td></tr>
+<tr class="memdesc:a779fffc8eac54d4a9d86b92d4060d67a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a work item to the pool. <br/></td></tr>
+<tr class="separator:a779fffc8eac54d4a9d86b92d4060d67a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa30c10bef2ab469916043c7d4d089a00"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa30c10bef2ab469916043c7d4d089a00"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_work_queue.html#aa30c10bef2ab469916043c7d4d089a00">HandleBeginFrame</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="class_urho3_d_1_1_hash_map.html">VariantMap</a> &amp;eventData)</td></tr>
 <tr class="memdesc:aa30c10bef2ab469916043c7d4d089a00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle frame start event. Purge completed work from the main thread queue, and perform work if no threads at all. <br/></td></tr>
