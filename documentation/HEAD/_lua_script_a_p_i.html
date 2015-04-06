@@ -3326,6 +3326,9 @@ Classes</h2>
 <h4><a class="el" href="class_urho3_d_1_1_particle_effect.html" title="Particle effect definition.">ParticleEffect</a> : <a class="el" href="class_urho3_d_1_1_resource.html" title="Base class for resources.">Resource</a></h4>
 <p>Methods:</p>
 <ul>
+<li>ParticleEffect() (GC)</li>
+<li>ParticleEffect* new()</li>
+<li>void delete()</li>
 <li>void SetMaterial(Material* material)</li>
 <li>void SetNumParticles(unsigned num)</li>
 <li>void SetUpdateInvisible(bool enable)</li>
@@ -3355,8 +3358,18 @@ Classes</h2>
 <li>void SetMaxRotationSpeed(float speed)</li>
 <li>void SetSizeAdd(float sizeAdd)</li>
 <li>void SetSizeMul(float sizeMul)</li>
+<li>void AddColorTime(const Color&amp; color, const float time)</li>
+<li>void AddColorFrame(const ColorFrame&amp; colorFrame)</li>
+<li>void RemoveColorFrame(unsigned index)</li>
 <li>void SetColorFrame(unsigned index, const ColorFrame&amp; colorFrame)</li>
+<li>void SetNumColorFrames(unsigned number)</li>
+<li>void SortColorFrames()</li>
+<li>void AddTextureTime(const Rect&amp; uv, const float time)</li>
+<li>void AddTextureFrame(const TextureFrame&amp; textureFrame)</li>
+<li>void RemoveTextureFrame(unsigned index)</li>
 <li>void SetTextureFrame(unsigned index, const TextureFrame&amp; textureFrame)</li>
+<li>void SetNumTextureFrames(unsigned number)</li>
+<li>void SortTextureFrames()</li>
 <li>Material* GetMaterial() const</li>
 <li>unsigned GetNumParticles() const</li>
 <li>bool GetUpdateInvisible() const</li>
