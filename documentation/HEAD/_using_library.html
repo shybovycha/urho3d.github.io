@@ -17,6 +17,11 @@ group: HEAD
 <div class="title">Using Urho3D as external library </div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="toc"><h4>Table of Contents</h4>
+<ul><li class="level1"><a href="#FromSDKWithPkgConfig">Using pkg-config instead of CMake</a></li>
+<li class="level1"><a href="#Scaffolding">Project scaffolding</a></li>
+</ul>
+</div>
 <div class="textblock"><p>This page shows how to create a new C++ project linking against Urho3D library as external library. There are two approaches to do this. The first approach uses Urho3D library directly from the Urho3D project build tree. The second approach uses Urho3D SDK installation. It is imperative to clean the CMake cache when changing from one approach to the other. You should also clean the cache when you change the path in the URHO3D_HOME environment variable.</p>
 <p>First of all, structure your project similar to Urho3D project as below. Although this is not mandatory, it should increase the chance the CMake modules designed for Urho3D project also works out of the box for your project too. CMake and our CMake modules are case-sensitive. It is recommended that your project adheres to the same naming convention as Urho3D project uses, even when the filesystem in your host system is not case-sensitive.</p>
 <div class="fragment"><div class="line">&lt;PROJECT_ROOT&gt;/</div>
