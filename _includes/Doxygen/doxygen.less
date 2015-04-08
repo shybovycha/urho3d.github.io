@@ -3,6 +3,7 @@
 
 // Urho3D
 @import (less) "../../documentation/HEAD/tabs.css";
+@import "../../assets/themes/minimal/_less/vendor/bootstrap/variables.less";
 
 /* Urho3D
 body, table, div, p, dl {
@@ -1104,6 +1105,13 @@ div.toc {
         height: auto;
         margin: 0 20px 10px 10px;
         width: 200px;
+
+        // On really really small viewport (e.g. iPhone in portrait mode) - unfloat the toc and make it takes the whole width
+        @media print, screen and (max-width: (@screen-xs-min - 1)) {
+            float: none;
+            margin: 0 0 10px 0;
+            width: 100%;
+        }
 }
 
 div.toc li {
