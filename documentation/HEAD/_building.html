@@ -323,5 +323,6 @@ Compiling Direct3D shaders</h2>
 Using ccache</h2>
 <p>ccache is a compiler cache software available on Linux and Mac OS X host systems. It speeds up the build by bypassing the actual compilation and reusing the result from previous compilation when the cache is hit. In order for this to work correctly when building/using Urho3D library with GCC/Clang precompiled header enabled, the following environment variable must be set: </p>
 <pre class="fragment">CCACHE_SLOPPINESS=pch_defines,time_macros
-</pre><p>Failure to do so would cause the precompiled header cannot be used by ccache. When ccache is setup correctly and with more hits than misses then even clean build can be done as fast as incremental build. </p>
+</pre><p>Failure to do so would cause the precompiled header cannot be used by ccache. When ccache is setup correctly and with more hits than misses then even clean build can be done as fast as incremental build.</p>
+<p>You may also want to set 'USE_CCACHE' and 'CCACHE_COMPRESS' environment variable to 1 to enable ccache support when cross-compiling using MinGW, Raspberry-Pi, and Android compiler toolchains; and to enable the compression of the cache objects, respectively. </p>
 </div></div><!-- contents -->
