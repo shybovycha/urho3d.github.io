@@ -97,6 +97,7 @@ Though Urho3D already contains several useful features and implements a framewor
 - Firegorilla
 - Magic.Lixin
 - Mike3D
+- Modanung
 - OvermindDL1
 - andmar1x
 - amadeus_osa
@@ -104,9 +105,11 @@ Though Urho3D already contains several useful features and implements a framewor
 - att
 - celeron55
 - hdunderscore
+- marynate
 - mightyCelu
 - nemerle
 - ninjastone
+- raould
 - rasteron
 - reattiva
 - rifai
