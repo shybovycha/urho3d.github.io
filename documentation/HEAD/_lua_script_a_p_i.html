@@ -1598,19 +1598,13 @@ Classes</h2>
 <ul>
 <li>void SetLayer(int layer)</li>
 <li>void SetOrderInLayer(int orderInLayer)</li>
-<li>void SetTexture(Texture2D* texture)</li>
-<li>void SetBlendMode(BlendMode mode)</li>
 <li>int GetLayer() const</li>
 <li>int GetOrderInLayer() const</li>
-<li>Texture2D* GetTexture() const</li>
-<li>BlendMode GetBlendMode() const</li>
 </ul>
 <p>Properties:</p>
 <ul>
 <li>int layer</li>
 <li>int orderInLayer</li>
-<li>Texture2D* texture</li>
-<li>BlendMode blendMode</li>
 </ul>
 <p><a class="anchor" id="Class_DropDownList"></a> </p>
 <h4><a class="el" href="class_urho3_d_1_1_drop_down_list.html" title="Menu UI element that displays a popup list view.">DropDownList</a> : <a class="el" href="class_urho3_d_1_1_menu.html" title="Menu UI element that optionally shows a popup.">Menu</a></h4>
@@ -3469,14 +3463,17 @@ Classes</h2>
 <p>Methods:</p>
 <ul>
 <li>void SetEffect(ParticleEffect2D* effect)</li>
-<li>ParticleEffect2D* GetEffect() const</li>
 <li>void SetSprite(Sprite2D* sprite)</li>
+<li>void SetBlendMode(BlendMode blendMode)</li>
+<li>ParticleEffect2D* GetEffect() const</li>
 <li>Sprite2D* GetSprite() const</li>
+<li>BlendMode GetBlendMode() const</li>
 </ul>
 <p>Properties:</p>
 <ul>
 <li>ParticleEffect2D* effect</li>
 <li>Sprite2D* sprite</li>
+<li>BlendMode blendMode</li>
 </ul>
 <p><a class="anchor" id="Class_Pass"></a> </p>
 <h4><a class="el" href="class_urho3_d_1_1_pass.html" title="Material rendering pass, which defines shaders and render state.">Pass</a> : <a class="el" href="class_urho3_d_1_1_ref_counted.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable.">RefCounted</a></h4>
@@ -4865,6 +4862,7 @@ Classes</h2>
 <p>Methods:</p>
 <ul>
 <li>void SetSprite(Sprite2D* sprite)</li>
+<li>void SetBlendMode(BlendMode mode)</li>
 <li>void SetFlip(bool flipX, bool flipY)</li>
 <li>void SetFlipX(bool flipX)</li>
 <li>void SetFlipY(bool flipY)</li>
@@ -4872,23 +4870,28 @@ Classes</h2>
 <li>void SetAlpha(float alpha)</li>
 <li>void SetUseHotSpot(bool useHotSpot)</li>
 <li>void SetHotSpot(const Vector2&amp; hotspot)</li>
+<li>void SetCustomMaterial(Material* customMaterial)</li>
 <li>Sprite2D* GetSprite() const</li>
+<li>BlendMode GetBlendMode() const</li>
 <li>bool GetFlipX() const</li>
 <li>bool GetFlipY() const</li>
 <li>const <a class="el" href="class_urho3_d_1_1_color.html" title="RGBA color.">Color</a>&amp; GetColor() const</li>
 <li>float GetAlpha() const</li>
 <li>bool GetUseHotSpot() const</li>
 <li>const <a class="el" href="class_urho3_d_1_1_vector2.html" title="Two-dimensional vector.">Vector2</a>&amp; GetHotSpot() const</li>
+<li>Material* GetCustomMaterial() const</li>
 </ul>
 <p>Properties:</p>
 <ul>
 <li>Sprite2D* sprite</li>
+<li>BlendMode blendMode</li>
 <li>bool flipX</li>
 <li>bool flipY</li>
 <li><a class="el" href="class_urho3_d_1_1_color.html" title="RGBA color.">Color</a>&amp; color</li>
 <li>float alpha</li>
 <li>bool useHotSpot</li>
 <li><a class="el" href="class_urho3_d_1_1_vector2.html" title="Two-dimensional vector.">Vector2</a> hotSpot</li>
+<li>Material* customMaterial</li>
 </ul>
 <p><a class="anchor" id="Class_StringHash"></a> </p>
 <h4><a class="el" href="class_urho3_d_1_1_string_hash.html" title="32-bit hash value for a string.">StringHash</a></h4>

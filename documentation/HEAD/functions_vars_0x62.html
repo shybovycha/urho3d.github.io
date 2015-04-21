@@ -109,6 +109,9 @@ group: HEAD
 <li>baseType_
 : <a class="el" href="class_urho3_d_1_1_object_factory.html#a71d2cc98be57679586ed8271510c38a6">Urho3D::ObjectFactory</a>
 </li>
+<li>batchCount_
+: <a class="el" href="struct_urho3_d_1_1_view_batch_info2_d.html#a01f3dd2b1d85be90c652f27fb3dd8145">Urho3D::ViewBatchInfo2D</a>
+</li>
 <li>batchedParameterUpdate_
 : <a class="el" href="class_urho3_d_1_1_material.html#a84692836e387233e1f42196997b7764c">Urho3D::Material</a>
 </li>
@@ -125,6 +128,9 @@ group: HEAD
 </li>
 <li>batchQueues_
 : <a class="el" href="class_urho3_d_1_1_view.html#af0bd1c76092b12ad6f1b1517d0865c8a">Urho3D::View</a>
+</li>
+<li>batchUpdatedFrameNumber_
+: <a class="el" href="struct_urho3_d_1_1_view_batch_info2_d.html#a150adc266bc05ad73dcfddcf8d447e8f">Urho3D::ViewBatchInfo2D</a>
 </li>
 <li>beginContactInfos_
 : <a class="el" href="class_urho3_d_1_1_physics_world2_d.html#aa45646b3393a22175925ce0a478c6671">Urho3D::PhysicsWorld2D</a>
@@ -159,8 +165,9 @@ group: HEAD
 , <a class="el" href="class_urho3_d_1_1_border_image.html#a916a4522c5005d22400a0eba007fc642">Urho3D::BorderImage</a>
 , <a class="el" href="class_urho3_d_1_1_sprite.html#aeee90364ffaa68ccf5e71a585ef6a99d">Urho3D::Sprite</a>
 , <a class="el" href="class_urho3_d_1_1_u_i_batch.html#a2a64e2da2e5a1177e1b282cfe7dd345c">Urho3D::UIBatch</a>
-, <a class="el" href="class_urho3_d_1_1_drawable2_d.html#a65617b717e70b15c81a8da9536e72f4b">Urho3D::Drawable2D</a>
 , <a class="el" href="class_urho3_d_1_1_particle_effect2_d.html#a3c28db6f9b23a35d1ac0cb2c0996eeec">Urho3D::ParticleEffect2D</a>
+, <a class="el" href="class_urho3_d_1_1_particle_emitter2_d.html#a9aecb3ad18fe64f625c8360decf8d11a">Urho3D::ParticleEmitter2D</a>
+, <a class="el" href="class_urho3_d_1_1_static_sprite2_d.html#a8ff7f003bf9e16cbcb6a554b95cd3efb">Urho3D::StaticSprite2D</a>
 </li>
 <li>blendStateDirty_
 : <a class="el" href="class_urho3_d_1_1_graphics.html#a68557136a60f9dd5d05c5f06bd44460e">Urho3D::Graphics</a>
@@ -224,12 +231,12 @@ group: HEAD
 : <a class="el" href="class_urho3_d_1_1_graphics_impl.html#a0bd08f2cf45b70c951b215c2c081fd5e">Urho3D::GraphicsImpl</a>
 </li>
 <li>boundingBox_
-: <a class="el" href="struct_urho3_d_1_1_decal.html#a30ed15c3e2e8df0bbb68ce69eb85a3bb">Urho3D::Decal</a>
-, <a class="el" href="class_urho3_d_1_1_drawable.html#abfead28f2b8293a8699d6ac84b8476c9">Urho3D::Drawable</a>
+: <a class="el" href="class_urho3_d_1_1_navigation_mesh.html#a34ee58aa96b6be19b6fd2eb2bdb2a404">Urho3D::NavigationMesh</a>
+, <a class="el" href="struct_urho3_d_1_1_decal.html#a30ed15c3e2e8df0bbb68ce69eb85a3bb">Urho3D::Decal</a>
 , <a class="el" href="class_urho3_d_1_1_model.html#a3d0f59cd0ad5ef60a343e4fa2cbeab57">Urho3D::Model</a>
 , <a class="el" href="struct_urho3_d_1_1_bone.html#a79cab97bf6f6d8d44ee9bf26237c540f">Urho3D::Bone</a>
-, <a class="el" href="class_urho3_d_1_1_navigation_mesh.html#a34ee58aa96b6be19b6fd2eb2bdb2a404">Urho3D::NavigationMesh</a>
 , <a class="el" href="struct_urho3_d_1_1_navigation_geometry_info.html#ae268c39f11a4082c07787f7cd6f83e2e">Urho3D::NavigationGeometryInfo</a>
+, <a class="el" href="class_urho3_d_1_1_drawable.html#abfead28f2b8293a8699d6ac84b8476c9">Urho3D::Drawable</a>
 </li>
 <li>boundingBoxDirty_
 : <a class="el" href="class_urho3_d_1_1_decal_set.html#a1122947a1e1e1028aebfd5236c3a32af">Urho3D::DecalSet</a>
@@ -265,17 +272,17 @@ group: HEAD
 : <a class="el" href="class_urho3_d_1_1_physics_world.html#a606df8e9e483563ee2f83830fc95f1be">Urho3D::PhysicsWorld</a>
 </li>
 <li>buffer_
-: <a class="el" href="struct_urho3_d_1_1_shader_parameter.html#acbf924c93efcc845daaf0e669aaddc3a">Urho3D::ShaderParameter</a>
-, <a class="el" href="class_urho3_d_1_1_string.html#a15c18f1e34a835ee10b3d23c76cedb37">Urho3D::String</a>
+: <a class="el" href="class_urho3_d_1_1_memory_buffer.html#adc1cfc2cd1acec7322c4f345c2ad0e7e">Urho3D::MemoryBuffer</a>
 , <a class="el" href="class_urho3_d_1_1_occlusion_buffer.html#aa793c14c2344ac1f75b6de9b079620b0">Urho3D::OcclusionBuffer</a>
-, <a class="el" href="class_urho3_d_1_1_w_string.html#a8277c19de4211562b343c79aabe5ee23">Urho3D::WString</a>
-, <a class="el" href="class_urho3_d_1_1_vector_buffer.html#a006c9cf1b3a9ef4ad618c21d64951d46">Urho3D::VectorBuffer</a>
-, <a class="el" href="class_urho3_d_1_1_memory_buffer.html#adc1cfc2cd1acec7322c4f345c2ad0e7e">Urho3D::MemoryBuffer</a>
 , <a class="el" href="class_urho3_d_1_1_vector_base.html#ad2b0ea7304bbdfb42865c28ab6e573b4">Urho3D::VectorBase</a>
+, <a class="el" href="struct_urho3_d_1_1_shader_parameter.html#acbf924c93efcc845daaf0e669aaddc3a">Urho3D::ShaderParameter</a>
+, <a class="el" href="class_urho3_d_1_1_w_string.html#a8277c19de4211562b343c79aabe5ee23">Urho3D::WString</a>
+, <a class="el" href="class_urho3_d_1_1_string.html#a15c18f1e34a835ee10b3d23c76cedb37">Urho3D::String</a>
+, <a class="el" href="class_urho3_d_1_1_vector_buffer.html#a006c9cf1b3a9ef4ad618c21d64951d46">Urho3D::VectorBuffer</a>
 </li>
 <li>bufferDirty_
-: <a class="el" href="class_urho3_d_1_1_decal_set.html#a01d07d350ed5213ffb2b2ad78fff0bd8">Urho3D::DecalSet</a>
-, <a class="el" href="class_urho3_d_1_1_billboard_set.html#a168ef951efaa78e43c142f2e735d635c">Urho3D::BillboardSet</a>
+: <a class="el" href="class_urho3_d_1_1_billboard_set.html#a168ef951efaa78e43c142f2e735d635c">Urho3D::BillboardSet</a>
+, <a class="el" href="class_urho3_d_1_1_decal_set.html#a01d07d350ed5213ffb2b2ad78fff0bd8">Urho3D::DecalSet</a>
 </li>
 <li>bufferMutex_
 : <a class="el" href="class_urho3_d_1_1_buffered_sound_stream.html#a1de3dded7a05c8f16bbfe2d46c88a80e">Urho3D::BufferedSoundStream</a>
@@ -284,12 +291,12 @@ group: HEAD
 : <a class="el" href="struct_urho3_d_1_1_shader_parameter.html#a6252dafd2eaf46a43c3191b0a7edbcb0">Urho3D::ShaderParameter</a>
 </li>
 <li>buffers_
-: <a class="el" href="struct_urho3_d_1_1_model_morph.html#a09848a3fb9dc6f3b7ea4de8cfcd204f5">Urho3D::ModelMorph</a>
-, <a class="el" href="class_urho3_d_1_1_buffered_sound_stream.html#ac9a266ffe338178382e0e280e7f2ab2d">Urho3D::BufferedSoundStream</a>
+: <a class="el" href="class_urho3_d_1_1_buffered_sound_stream.html#ac9a266ffe338178382e0e280e7f2ab2d">Urho3D::BufferedSoundStream</a>
+, <a class="el" href="struct_urho3_d_1_1_model_morph.html#a09848a3fb9dc6f3b7ea4de8cfcd204f5">Urho3D::ModelMorph</a>
 </li>
 <li>bufferSizeDirty_
-: <a class="el" href="class_urho3_d_1_1_decal_set.html#a331d1437026f0ca061ff3c7398cbcba5">Urho3D::DecalSet</a>
-, <a class="el" href="class_urho3_d_1_1_billboard_set.html#a5e9484ce9e34353760f5676420860a95">Urho3D::BillboardSet</a>
+: <a class="el" href="class_urho3_d_1_1_billboard_set.html#a5e9484ce9e34353760f5676420860a95">Urho3D::BillboardSet</a>
+, <a class="el" href="class_urho3_d_1_1_decal_set.html#a331d1437026f0ca061ff3c7398cbcba5">Urho3D::DecalSet</a>
 </li>
 <li>buttonLayout_
 : <a class="el" href="class_urho3_d_1_1_file_selector.html#ab2663a9cb453b43a030ca04651178cfd">Urho3D::FileSelector</a>
