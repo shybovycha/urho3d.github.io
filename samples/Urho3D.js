@@ -11,9 +11,11 @@ Module.expectedDataFileDownloads++;
     var PACKAGE_PATH;
     if (typeof window === 'object') {
       PACKAGE_PATH = window['encodeURIComponent'](window.location.pathname.toString().substring(0, window.location.pathname.toString().lastIndexOf('/')) + '/');
-    } else {
+    } else if (typeof location !== 'undefined') {
       // worker
       PACKAGE_PATH = encodeURIComponent(location.pathname.toString().substring(0, location.pathname.toString().lastIndexOf('/')) + '/');
+    } else {
+      throw 'using preloaded data can only be done on a web page or in a web worker';
     }
     var PACKAGE_NAME = '/Users/travis/build/urho3d/Build/bin/Urho3D.js.data';
     var REMOTE_PACKAGE_BASE = 'Urho3D.js.data';
@@ -25,7 +27,7 @@ Module.expectedDataFileDownloads++;
                               Module['locateFile'](REMOTE_PACKAGE_BASE) :
                               ((Module['filePackagePrefixURL'] || '') + REMOTE_PACKAGE_BASE);
     var REMOTE_PACKAGE_SIZE = 11365725;
-    var PACKAGE_UUID = 'e32a270b-cac8-463b-b180-1c438abd4538';
+    var PACKAGE_UUID = '93b2434b-b906-4760-99da-2f0955598082';
   
     function fetchRemotePackage(packageName, packageSize, callback, errback) {
       var xhr = new XMLHttpRequest();
