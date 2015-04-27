@@ -2898,6 +2898,9 @@ Classes</h2>
 <h4><a class="el" href="class_urho3_d_1_1_model.html" title="3D model resource.">Model</a> : <a class="el" href="class_urho3_d_1_1_resource.html" title="Base class for resources.">Resource</a></h4>
 <p>Methods:</p>
 <ul>
+<li>Model() (GC)</li>
+<li>Model* new()</li>
+<li>void delete()</li>
 <li>Model* Clone(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> cloneName = <a class="el" href="class_urho3_d_1_1_string.html#ac4b764c2af370a120fb9e3470329c96e" title="Empty string.">String::EMPTY</a>) const</li>
 <li>void SetBoundingBox(const BoundingBox&amp; box)</li>
 <li>void SetNumGeometries(unsigned num)</li>
@@ -2921,7 +2924,7 @@ Classes</h2>
 <ul>
 <li><a class="el" href="class_urho3_d_1_1_bounding_box.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a>&amp; boundingBox</li>
 <li><a class="el" href="class_urho3_d_1_1_skeleton.html" title="Hierarchical collection of bones.">Skeleton</a> skeleton (readonly)</li>
-<li>unsigned numGeometries (readonly)</li>
+<li>unsigned numGeometries</li>
 <li>unsigned numMorphs (readonly)</li>
 </ul>
 <p><a class="anchor" id="Class_Navigable"></a> </p>
@@ -7218,6 +7221,21 @@ Global constants</h2>
 <li>int LOG_INFO</li>
 <li>int LOG_NONE</li>
 <li>int LOG_WARNING</li>
+<li>unsigned MASK_BLENDINDICES</li>
+<li>unsigned MASK_BLENDWEIGHTS</li>
+<li>unsigned MASK_COLOR</li>
+<li>unsigned MASK_CUBETEXCOORD1</li>
+<li>unsigned MASK_CUBETEXCOORD2</li>
+<li>unsigned MASK_DEFAULT</li>
+<li>unsigned MASK_INSTANCEMATRIX1</li>
+<li>unsigned MASK_INSTANCEMATRIX2</li>
+<li>unsigned MASK_INSTANCEMATRIX3</li>
+<li>unsigned MASK_NONE</li>
+<li>unsigned MASK_NORMAL</li>
+<li>unsigned MASK_POSITION</li>
+<li>unsigned MASK_TANGENT</li>
+<li>unsigned MASK_TEXCOORD1</li>
+<li>unsigned MASK_TEXCOORD2</li>
 <li>int MAX_VERTEX_LIGHTS</li>
 <li>int MOUSEB_LEFT</li>
 <li>int MOUSEB_MIDDLE</li>
