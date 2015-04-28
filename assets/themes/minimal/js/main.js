@@ -48,6 +48,6 @@ $(document).ready(function() {
   // Bust Travis CI build status image cache
   $('.build-status img').each(function() {
     var $this = $(this);
-    $this.attr('src', $this.attr('src') + '&v=' + Math.random());
+    $this.attr('src', $this.attr('src') + '?v=' + Math.random());
   });
 });
