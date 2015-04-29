@@ -77,10 +77,13 @@
       <footer role="contentinfo">
         <div class="row">
           <div class="col-xs-6">
-            <small class="feed">
+            <a href="https://scan.coverity.com/projects/4954" target="_blank"-->
+              <div><img src="https://img.shields.io/coverity/scan/4954.svg" title="Coverity scan" alt="Coverity Scan" /></div>
+            </a>
+            <div class="feed"><small>
               <a href="{{ BASE_PATH }}{{ site.JB.atom_path }}"><i class="fa fa-rss fa-lg"></i>ATOM</a>&nbsp;
               <a href="{{ BASE_PATH }}{{ site.JB.rss_path }}"><i class="fa fa-rss fa-lg"></i>RSS</a>
-            </small>
+            </small></div>
             <div class="info">
               <a title="hits counter" href="http://statcounter.com/" target="_blank"><img src="http://c.statcounter.com/9450146/0/54b7eae5/0/" alt="hits counter" style="border:none;"></a>
             </div>
@@ -88,18 +91,13 @@
             <div><small>Code is licensed under <a href="https://raw.githubusercontent.com/urho3d/Urho3D/master/License.txt" target="_blank">MIT</a></small></div>
           </div>
           <div class="col-xs-6 build-status">
-            <div class="pull-right">
-              <a href="https://scan.coverity.com/projects/4954" target="_blank"-->
-                <div><img src="https://img.shields.io/coverity/scan/4954.svg" title="Coverity scan" alt="Coverity Scan" /></div>
-              </a>
-              <a href="https://travis-ci.org/{{ site.organization.name }}/{{ site.organization.project }}/builds" target="_blank"-->
-                <div><img src="https://img.shields.io/travis/{{ site.organization.name }}/{{ site.organization.project }}/master.svg" title="Windows/Linux" alt="Windows/Linux" />&nbsp;<i class="fa fa-windows fa-lg"></i>&nbsp;<i class="fa fa-linux fa-lg"></i></div>
-                <div><img src="https://img.shields.io/travis/{{ site.organization.name }}/{{ site.organization.project }}/OSX-CI.svg" title="OSX/iOS" alt="OSX/iOS" />&nbsp;<i class="fa fa-apple fa-lg"></i>&nbsp;<i class="icon-mobile-device fm-lg"></i></div>
-                <div><img src="https://img.shields.io/travis/{{ site.organization.name }}/{{ site.organization.project }}/Android-CI.svg" title="Android" alt="Android" />&nbsp;<i class="fa fa-android fa-lg"></i></div>
-                <div><img src="https://img.shields.io/travis/{{ site.organization.name }}/{{ site.organization.project }}/RPI-CI.svg" title="Raspberry-Pi" alt="RPI" />&nbsp;<i class="icon-raspberrypi fm-lg"></i></div>
-                <div><img src="https://img.shields.io/travis/{{ site.organization.name }}/{{ site.organization.project }}/Emscripten-CI.svg" title="HTML5" alt="HTML5" />&nbsp;<i class="fa fa-html5 fa-lg"></i></div>
-              </a>
-            </div>
+            <a class="pull-right" href="https://travis-ci.org/{{ site.organization.name }}/{{ site.organization.project }}/builds" target="_blank"-->
+              <div><img src="https://img.shields.io/travis/{{ site.organization.name }}/{{ site.organization.project }}/master.svg" title="Windows/Linux" alt="Windows/Linux" />&nbsp;<i class="fa fa-windows fa-lg"></i>&nbsp;<i class="fa fa-linux fa-lg"></i></div>
+              <div><img src="https://img.shields.io/travis/{{ site.organization.name }}/{{ site.organization.project }}/OSX-CI.svg" title="OSX/iOS" alt="OSX/iOS" />&nbsp;<i class="fa fa-apple fa-lg"></i>&nbsp;<i class="icon-mobile-device fm-lg"></i></div>
+              <div><img src="https://img.shields.io/travis/{{ site.organization.name }}/{{ site.organization.project }}/Android-CI.svg" title="Android" alt="Android" />&nbsp;<i class="fa fa-android fa-lg"></i></div>
+              <div><img src="https://img.shields.io/travis/{{ site.organization.name }}/{{ site.organization.project }}/RPI-CI.svg" title="Raspberry-Pi" alt="RPI" />&nbsp;<i class="icon-raspberrypi fm-lg"></i></div>
+              <div><img src="https://img.shields.io/travis/{{ site.organization.name }}/{{ site.organization.project }}/Emscripten-CI.svg" title="HTML5" alt="HTML5" />&nbsp;<i class="fa fa-html5 fa-lg"></i></div>
+            </a>
           </div>
         </div>
       </footer>
