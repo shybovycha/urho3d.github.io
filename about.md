@@ -88,6 +88,7 @@ Though Urho3D already contains several useful features and implements a framewor
 - Jordan Patterson
 - Vladimir Pobedinsky
 - Nick Royer
+- Jonathan Sandusky
 - Miika Santala
 - Joshua Tippetts
 - Daniel Wiberg

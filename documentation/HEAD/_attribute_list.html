@@ -426,6 +426,16 @@ group: HEAD
 <li>Damping Ratio : float</li>
 <li>Collide Connected : bool</li>
 </ul>
+<h4><a class="el" href="class_urho3_d_1_1_crowd_agent.html">CrowdAgent</a></h4>
+<ul>
+<li>Max Accel : float</li>
+<li>Max Speed : float</li>
+<li>Radius : float</li>
+<li>Height : float</li>
+<li>Navigation Filter : int</li>
+<li>Navigation Pushiness : int</li>
+<li>Navigation Quality : int</li>
+</ul>
 <h4><a class="el" href="class_urho3_d_1_1_cursor.html" title="Mouse cursor UI element.">Cursor</a></h4>
 <ul>
 <li>Name : <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a></li>
@@ -501,6 +511,10 @@ group: HEAD
 <li>Shadow Mask : int</li>
 <li>Zone Mask : int</li>
 </ul>
+<h4><a class="el" href="class_urho3_d_1_1_detour_crowd_manager.html">DetourCrowdManager</a></h4>
+<ul>
+<li>Max Agents : int</li>
+</ul>
 <h4><a class="el" href="class_urho3_d_1_1_drop_down_list.html" title="Menu UI element that displays a popup list view.">DropDownList</a></h4>
 <ul>
 <li>Name : <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a></li>
@@ -549,6 +563,25 @@ group: HEAD
 <li>Popup Offset : <a class="el" href="class_urho3_d_1_1_int_vector2.html" title="Two-dimensional vector with integer values.">IntVector2</a></li>
 <li>Selection : int</li>
 <li>Resize Popup : bool</li>
+</ul>
+<h4><a class="el" href="class_urho3_d_1_1_dynamic_navigation_mesh.html">DynamicNavigationMesh</a></h4>
+<ul>
+<li>Tile Size : int</li>
+<li>Cell Size : float</li>
+<li>Cell Height : float</li>
+<li>Agent Height : float</li>
+<li>Agent Radius : float</li>
+<li>Agent Max Climb : float</li>
+<li>Agent Max Slope : float</li>
+<li>Region Min Size : float</li>
+<li>Region Merge Size : float</li>
+<li>Edge Max Length : float</li>
+<li>Edge Max Error : float</li>
+<li>Detail Sample Distance : float</li>
+<li>Detail Sample Max Error : float</li>
+<li>Bounding Box Padding : <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a></li>
+<li>Partition Type : int</li>
+<li>Max Obstacles : int</li>
 </ul>
 <h4><a class="el" href="class_urho3_d_1_1_light.html" title="Light component.">Light</a></h4>
 <ul>
@@ -735,6 +768,12 @@ group: HEAD
 <li>Repeat Rate : float</li>
 <li>Popup Offset : <a class="el" href="class_urho3_d_1_1_int_vector2.html" title="Two-dimensional vector with integer values.">IntVector2</a></li>
 </ul>
+<h4><a class="el" href="class_urho3_d_1_1_nav_area.html">NavArea</a></h4>
+<ul>
+<li>Bounding Box Min : <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a></li>
+<li>Bounding Box Max : <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a></li>
+<li>Area Type : int</li>
+</ul>
 <h4><a class="el" href="class_urho3_d_1_1_navigable.html" title="Component which tags geometry for inclusion in the navigation mesh. Optionally auto-includes geometry...">Navigable</a></h4>
 <ul>
 <li>Is Enabled : bool</li>
@@ -756,6 +795,7 @@ group: HEAD
 <li>Detail Sample Distance : float</li>
 <li>Detail Sample Max Error : float</li>
 <li>Bounding Box Padding : <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a></li>
+<li>Partition Type : int</li>
 </ul>
 <h4><a class="el" href="class_urho3_d_1_1_network_priority.html" title="Network interest management settings component.">NetworkPriority</a></h4>
 <ul>
@@ -773,6 +813,11 @@ group: HEAD
 <li>Scale : <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a></li>
 <li>Variables : VariantMap</li>
 </ul>
+<h4><a class="el" href="class_urho3_d_1_1_obstacle.html">Obstacle</a></h4>
+<ul>
+<li>Radius : float</li>
+<li>Height : float</li>
+</ul>
 <h4><a class="el" href="class_urho3_d_1_1_octree.html" title="Octree component. Should be added only to the root scene node">Octree</a></h4>
 <ul>
 <li>Bounding Box Min : <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a></li>
@@ -785,6 +830,8 @@ group: HEAD
 <li>Endpoint NodeID : int</li>
 <li>Radius : float</li>
 <li>Bidirectional : bool</li>
+<li>Flags Mask : int</li>
+<li>Area Type : int</li>
 </ul>
 <h4><a class="el" href="class_urho3_d_1_1_particle_emitter.html" title="Particle emitter component.">ParticleEmitter</a></h4>
 <ul>

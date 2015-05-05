@@ -265,6 +265,42 @@ group: HEAD
 <li>Mode : MouseMode</li>
 </ul>
 <h4>ExitRequested</h4>
+<h3>Navigation events</h3>
+<h4>NavigationMeshRebuilt</h4>
+<ul>
+<li>Node : <a class="el" href="class_urho3_d_1_1_node.html" title="Scene node that may contain components and child nodes.">Node</a> pointer</li>
+<li>Mesh : <a class="el" href="class_urho3_d_1_1_navigation_mesh.html" title="Navigation mesh component. Collects the navigation geometry from child nodes with the Navigable compo...">NavigationMesh</a> pointer</li>
+</ul>
+<h4>NavigationAreaRebuilt</h4>
+<ul>
+<li>BoundsMin : <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a></li>
+<li>BoundsMax : <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a></li>
+</ul>
+<h4>CrowdAgentReposition</h4>
+<ul>
+<li>Position : <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a></li>
+<li>Velocity : <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a></li>
+</ul>
+<h4>CrowdAgentStateChanged</h4>
+<ul>
+<li>Position : <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a></li>
+<li>Velocity : <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a></li>
+<li>State : int</li>
+</ul>
+<h4>NavigationObstacleAdded</h4>
+<ul>
+<li>Node : <a class="el" href="class_urho3_d_1_1_node.html" title="Scene node that may contain components and child nodes.">Node</a> pointer</li>
+<li>Position : <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a></li>
+<li>Radius : float</li>
+<li>Height : float</li>
+</ul>
+<h4>NavigationObstacleRemoved</h4>
+<ul>
+<li>Node : <a class="el" href="class_urho3_d_1_1_node.html" title="Scene node that may contain components and child nodes.">Node</a> pointer</li>
+<li>Position : <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a></li>
+<li>Radius : float</li>
+<li>Height : float</li>
+</ul>
 <h3>Network events</h3>
 <h4>ServerConnected</h4>
 <h4>ServerDisconnected</h4>
