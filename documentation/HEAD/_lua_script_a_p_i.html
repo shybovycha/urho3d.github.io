@@ -1347,6 +1347,8 @@ Classes</h2>
 <li>void SetMaxSpeed(float val)</li>
 <li>void SetNavigationQuality(NavigationQuality val)</li>
 <li>void SetNavigationPushiness(NavigationPushiness val)</li>
+<li>void SetRadius(float radius)</li>
+<li>void SetHeight(float height)</li>
 <li>unsigned GetNavigationFilterType() const</li>
 <li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> GetDesiredVelocity() const</li>
 <li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> GetActualVelocity() const</li>
@@ -1354,10 +1356,12 @@ Classes</h2>
 <li>CrowdAgentState GetAgentState() const</li>
 <li>CrowdTargetState GetTargetState() const</li>
 <li>bool GetUpdateNodePosition()</li>
-<li>float GetMaxSpeed()</li>
-<li>float GetMaxAccel()</li>
+<li>float GetMaxSpeed() const</li>
+<li>float GetMaxAccel() const</li>
 <li>NavigationQuality GetNavigationQuality() const</li>
 <li>NavigationPushiness GetNavigationPushiness() const</li>
+<li>float GetRadius() const</li>
+<li>float GetHeight() const</li>
 <li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> GetPosition() const</li>
 <li>void DrawDebugGeometry(bool depthTest)</li>
 </ul>
@@ -1368,6 +1372,15 @@ Classes</h2>
 <li>NavigationPushiness navigationPushiness</li>
 <li>float maxSpeed</li>
 <li>float maxAccel</li>
+<li>float radius</li>
+<li>float height</li>
+<li>unsigned navigationFilterType</li>
+<li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> desiredVelocity (readonly)</li>
+<li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> actualVelocity (readonly)</li>
+<li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> targetPosition (readonly)</li>
+<li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> position (readonly)</li>
+<li>CrowdAgentState agentState (readonly)</li>
+<li>CrowdTargetState targetState (readonly)</li>
 </ul>
 <p><a class="anchor" id="Class_Cursor"></a> </p>
 <h4><a class="el" href="class_urho3_d_1_1_cursor.html" title="Mouse cursor UI element.">Cursor</a> : <a class="el" href="class_urho3_d_1_1_border_image.html" title="Image UI element with optional border.">BorderImage</a></h4>
