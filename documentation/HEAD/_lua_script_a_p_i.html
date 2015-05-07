@@ -1336,7 +1336,7 @@ Classes</h2>
 <li>VariantMap extraData</li>
 </ul>
 <p><a class="anchor" id="Class_CrowdAgent"></a> </p>
-<h4><a class="el" href="class_urho3_d_1_1_crowd_agent.html">CrowdAgent</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h4>
+<h4><a class="el" href="class_urho3_d_1_1_crowd_agent.html" title="DetourCrowd Agent, requires a DetourCrowdManager in the scene. Agent&#39;s radius and height is set throu...">CrowdAgent</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h4>
 <p>Methods:</p>
 <ul>
 <li>void SetNavigationFilterType(unsigned filterID)</li>
@@ -1355,7 +1355,7 @@ Classes</h2>
 <li>const <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>&amp; GetTargetPosition() const</li>
 <li>CrowdAgentState GetAgentState() const</li>
 <li>CrowdTargetState GetTargetState() const</li>
-<li>bool GetUpdateNodePosition()</li>
+<li>bool GetUpdateNodePosition() const</li>
 <li>float GetMaxSpeed() const</li>
 <li>float GetMaxAccel() const</li>
 <li>NavigationQuality GetNavigationQuality() const</li>
@@ -1588,7 +1588,7 @@ Classes</h2>
 <li>bool eof (readonly)</li>
 </ul>
 <p><a class="anchor" id="Class_DetourCrowdManager"></a> </p>
-<h4><a class="el" href="class_urho3_d_1_1_detour_crowd_manager.html">DetourCrowdManager</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h4>
+<h4><a class="el" href="class_urho3_d_1_1_detour_crowd_manager.html" title="Detour Crowd Simulation Scene Component. Should be added only to the root scene node. Agent&#39;s radius and height is set through the navigation mesh.">DetourCrowdManager</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h4>
 <p>Methods:</p>
 <ul>
 <li>bool CreateCrowd()</li>
@@ -3381,7 +3381,7 @@ Classes</h2>
 <li>float GetAttributeAnimationSpeed(const String name) const</li>
 </ul>
 <p><a class="anchor" id="Class_Obstacle"></a> </p>
-<h4><a class="el" href="class_urho3_d_1_1_obstacle.html">Obstacle</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h4>
+<h4><a class="el" href="class_urho3_d_1_1_obstacle.html" title="Obstacle for dynamic navigation mesh.">Obstacle</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h4>
 <p>Methods:</p>
 <ul>
 <li>void DrawDebugGeometry(bool depthTest)</li>
