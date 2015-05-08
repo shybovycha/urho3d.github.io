@@ -6338,6 +6338,7 @@ Classes</h2>
 <p>Methods:</p>
 <ul>
 <li>void RemoveShaderParameter(const String&amp;)</li>
+<li>void SetOutput(uint, const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, CubeMapFace = FACE_POSITIVE_X)</li>
 </ul>
 <p>Properties:</p>
 <ul>
@@ -6350,6 +6351,7 @@ Classes</h2>
 <li>bool markToStencil</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> metadata</li>
 <li>uint numOutputs</li>
+<li>CubeMapFace[] outputFaces</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>[] outputNames</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> pass</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> pixelShaderDefines</li>
@@ -6387,6 +6389,7 @@ Classes</h2>
 <h4><a class="el" href="struct_urho3_d_1_1_render_target_info.html" title="Rendertarget definition.">RenderTargetInfo</a></h4>
 <p>Properties:</p>
 <ul>
+<li>bool cubemap</li>
 <li>bool enabled</li>
 <li>bool filtered</li>
 <li>uint format</li>
@@ -6480,6 +6483,8 @@ Classes</h2>
 <li>bool AddResourceDir(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, uint = M_MAX_UNSIGNED)</li>
 <li>bool BackgroundLoadResource(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, bool = true)</li>
 <li>bool Exists(const String&amp;) const</li>
+<li><a class="el" href="class_urho3_d_1_1_resource.html" title="Base class for resources.">Resource</a>@ GetExistingResource(StringHash, const String&amp;)</li>
+<li><a class="el" href="class_urho3_d_1_1_resource.html" title="Base class for resources.">Resource</a>@ GetExistingResource(const String&amp;, const String&amp;)</li>
 <li><a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>@ GetFile(const String&amp;)</li>
 <li><a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> GetPreferredResourceDir(const String&amp;) const</li>
 <li><a class="el" href="class_urho3_d_1_1_resource.html" title="Base class for resources.">Resource</a>@ GetResource(<a class="el" href="class_urho3_d_1_1_string_hash.html" title="32-bit hash value for a string.">StringHash</a>, const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, bool = true)</li>
@@ -11026,6 +11031,9 @@ Global constants</h2>
 <li>uint AM_NOEDIT</li>
 <li><a class="el" href="class_urho3_d_1_1_color.html" title="RGBA color.">Color</a> BLACK</li>
 <li><a class="el" href="class_urho3_d_1_1_color.html" title="RGBA color.">Color</a> BLUE</li>
+<li>uint CLEAR_COLOR</li>
+<li>uint CLEAR_DEPTH</li>
+<li>uint CLEAR_STENCIL</li>
 <li>int CONTROLLER_AXIS_LEFTX</li>
 <li>int CONTROLLER_AXIS_LEFTY</li>
 <li>int CONTROLLER_AXIS_RIGHTX</li>
