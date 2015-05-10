@@ -331,5 +331,13 @@ CCACHE_SLOPPINESS=pch_defines,time_macros
 </blockquote>
 <p>You may also want to set 'CCACHE_COMPRESS' environment variable to 1 to enable the compression of the cached objects. It is a trade-off between cache size and build time.</p>
 <p>Ensure the ccache symlinks directory is being added as the first entry in the 'PATH' environment variable so the symlinks of the compiler toolchain is being found first by CMake rather than the actual compiler toolchain. This is especially important for native build. Usually the 'PATH' environment variable has been set correctly for ccache in RedHat-based host system such as Fedora, but it is not the case in Debian-based host system such as Ubuntu nor in Mac OS X host system with homebrew's ccache installation. For the latter case, use "whereis -b ccache" or "brew info ccache" to find out where your ccache symlinks directory is and adjust the 'PATH' environment variable accordingly.</p>
-<p>Note that these environment variables are used by ccache itself and not by our CMake build rules, so they must remain set in the host system not only while generating the initial project file using CMake but also while building the project later. </p>
-</div></div><!-- contents -->
+<p>Note that these environment variables are used by ccache itself and not by our CMake build rules, so they must remain set in the host system not only while generating the initial project file using CMake but also while building the project later.</p>
+<p>Xcode IDE and its CLI version, xcodebuild, do not work with ccache out of the box. They probably don't need it because internally they already cache the derived build data. However, if you are performing a lot of switching between different checked out versions of the project source tree or performing a lot of clean build similar to continuous integration build then probably it is more beneficial to hack Xcode/xcodebuild to use ccache. As it is a hack, do the following at your own risk.</p>
+<p>On Xcode 5: </p>
+<pre class="fragment">cd $(dirname $(xcodebuild -find-executable clang))
+for compiler in clang clang++; do mv $compiler{,.orig} &amp;&amp; ln -sf $(which ccache) $compiler; done
+</pre><p>On Xcode 6: </p>
+<pre class="fragment">cd $(dirname $(xcodebuild -find-executable clang))
+cp -p $(which ccache) .
+for compiler in clang clang++; do mv $compiler{,.orig} &amp;&amp; sudo mv /usr/bin/$compiler{,.orig} &amp;&amp; sudo ln -sf $(pwd)/$compiler.orig /usr/bin/$compiler &amp;&amp; ln -sf ccache $compiler; done
+</pre> </div></div><!-- contents -->
