@@ -67,6 +67,8 @@ $(document).ready(function() {
 
   // Inject responsive behaviour to tables and embedded SVGs
   $('.contents table').wrap('<div class="table-responsive"></div>');
+  // Use medium version for build options
+  if (/_building\.html$/.test(window.location.href)) $('.table-responsive').removeClass('table-responsive').addClass('table-responsive-md');
   // Use large version for graphical class hierarchy list and class member list
   if (/(inherits|-members)\.html$/.test(window.location.href)) $('.table-responsive').removeClass('table-responsive').addClass('table-responsive-lg');
   $('.zoom').addClass('embed-responsive embed-responsive-16by9');
