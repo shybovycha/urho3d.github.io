@@ -273,23 +273,40 @@ group: HEAD
 </ul>
 <h4>NavigationAreaRebuilt</h4>
 <ul>
+<li>Node : <a class="el" href="class_urho3_d_1_1_node.html" title="Scene node that may contain components and child nodes.">Node</a> pointer</li>
+<li>Mesh : <a class="el" href="class_urho3_d_1_1_navigation_mesh.html" title="Navigation mesh component. Collects the navigation geometry from child nodes with the Navigable compo...">NavigationMesh</a> pointer</li>
 <li>BoundsMin : <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a></li>
 <li>BoundsMax : <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a></li>
 </ul>
 <h4>CrowdAgentReposition</h4>
 <ul>
+<li>Node : <a class="el" href="class_urho3_d_1_1_node.html" title="Scene node that may contain components and child nodes.">Node</a> pointer</li>
+<li>CrowdAgent : <a class="el" href="class_urho3_d_1_1_crowd_agent.html" title="DetourCrowd Agent, requires a DetourCrowdManager in the scene. Agent&#39;s radius and height is set throu...">CrowdAgent</a> pointer</li>
 <li>Position : <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a></li>
 <li>Velocity : <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a></li>
 </ul>
-<h4>CrowdAgentStateChanged</h4>
+<h4>CrowdAgentFailure</h4>
 <ul>
+<li>Node : <a class="el" href="class_urho3_d_1_1_node.html" title="Scene node that may contain components and child nodes.">Node</a> pointer</li>
+<li>CrowdAgent : <a class="el" href="class_urho3_d_1_1_crowd_agent.html" title="DetourCrowd Agent, requires a DetourCrowdManager in the scene. Agent&#39;s radius and height is set throu...">CrowdAgent</a> pointer</li>
 <li>Position : <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a></li>
 <li>Velocity : <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a></li>
-<li>State : int</li>
+<li>CrowdAgentState : int</li>
+<li>CrowdTargetState : int</li>
+</ul>
+<h4>CrowdAgentStateChanged</h4>
+<ul>
+<li>Node : <a class="el" href="class_urho3_d_1_1_node.html" title="Scene node that may contain components and child nodes.">Node</a> pointer</li>
+<li>CrowdAgent : <a class="el" href="class_urho3_d_1_1_crowd_agent.html" title="DetourCrowd Agent, requires a DetourCrowdManager in the scene. Agent&#39;s radius and height is set throu...">CrowdAgent</a> pointer</li>
+<li>Position : <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a></li>
+<li>Velocity : <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a></li>
+<li>CrowdAgentState : int</li>
+<li>CrowdTargetState : int</li>
 </ul>
 <h4>NavigationObstacleAdded</h4>
 <ul>
 <li>Node : <a class="el" href="class_urho3_d_1_1_node.html" title="Scene node that may contain components and child nodes.">Node</a> pointer</li>
+<li>Obstacle : <a class="el" href="class_urho3_d_1_1_obstacle.html" title="Obstacle for dynamic navigation mesh.">Obstacle</a> pointer</li>
 <li>Position : <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a></li>
 <li>Radius : float</li>
 <li>Height : float</li>
@@ -297,6 +314,7 @@ group: HEAD
 <h4>NavigationObstacleRemoved</h4>
 <ul>
 <li>Node : <a class="el" href="class_urho3_d_1_1_node.html" title="Scene node that may contain components and child nodes.">Node</a> pointer</li>
+<li>Obstacle : <a class="el" href="class_urho3_d_1_1_obstacle.html" title="Obstacle for dynamic navigation mesh.">Obstacle</a> pointer</li>
 <li>Position : <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a></li>
 <li>Radius : float</li>
 <li>Height : float</li>

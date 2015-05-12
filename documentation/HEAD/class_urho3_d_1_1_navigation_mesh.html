@@ -124,6 +124,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_navigation_mesh.html#ab9c8e31bdb27f2001102eb1297e744ae">SetPadding</a> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;padding)</td></tr>
 <tr class="memdesc:ab9c8e31bdb27f2001102eb1297e744ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set padding of the navigation mesh bounding box. Having enough padding allows to add geometry on the extremities of the navigation mesh when doing partial rebuilds. <br/></td></tr>
 <tr class="separator:ab9c8e31bdb27f2001102eb1297e744ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9731e0bf1cfa39e2a80de0c4ecf18968"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9731e0bf1cfa39e2a80de0c4ecf18968"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_navigation_mesh.html#a9731e0bf1cfa39e2a80de0c4ecf18968">SetAreaCost</a> (unsigned areaID, float cost)</td></tr>
+<tr class="memdesc:a9731e0bf1cfa39e2a80de0c4ecf18968"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the cost of an area. <br/></td></tr>
+<tr class="separator:a9731e0bf1cfa39e2a80de0c4ecf18968"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38f762e87f10300096e08666fbafb443"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38f762e87f10300096e08666fbafb443"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_navigation_mesh.html#a38f762e87f10300096e08666fbafb443">Build</a> ()</td></tr>
 <tr class="memdesc:a38f762e87f10300096e08666fbafb443"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rebuild the navigation mesh. Return true if successful. <br/></td></tr>
@@ -164,10 +168,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_navigation_mesh.html#a250c94d8ee843a6219679daccf951a1f">DrawDebugGeometry</a> (bool depthTest)</td></tr>
 <tr class="memdesc:a250c94d8ee843a6219679daccf951a1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add debug geometry to the debug renderer. <br/></td></tr>
 <tr class="separator:a250c94d8ee843a6219679daccf951a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66de1bdf73e8499668992911f8c5459d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66de1bdf73e8499668992911f8c5459d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_navigation_mesh.html#a66de1bdf73e8499668992911f8c5459d">SetAreaTypeCost</a> (unsigned areaType, float cost)</td></tr>
-<tr class="memdesc:a66de1bdf73e8499668992911f8c5459d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the cost of an area. <br/></td></tr>
-<tr class="separator:a66de1bdf73e8499668992911f8c5459d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2e942b1179aad8b9f3d5d876ccc5f5c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa2e942b1179aad8b9f3d5d876ccc5f5c"></a>
 <a class="el" href="class_urho3_d_1_1_string.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_navigation_mesh.html#aa2e942b1179aad8b9f3d5d876ccc5f5c">GetMeshName</a> () const </td></tr>
 <tr class="memdesc:aa2e942b1179aad8b9f3d5d876ccc5f5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the given name of this navigation mesh. <br/></td></tr>
@@ -232,6 +232,10 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_navigation_mesh.html#a26aded99d7a9c5db54108f673e90b794">GetPadding</a> () const </td></tr>
 <tr class="memdesc:a26aded99d7a9c5db54108f673e90b794"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return navigation mesh bounding box padding. <br/></td></tr>
 <tr class="separator:a26aded99d7a9c5db54108f673e90b794"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab981a72c8fceefd8b47a600ca4ae4c14"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab981a72c8fceefd8b47a600ca4ae4c14"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_navigation_mesh.html#ab981a72c8fceefd8b47a600ca4ae4c14">GetAreaCost</a> (unsigned areaID) const </td></tr>
+<tr class="memdesc:ab981a72c8fceefd8b47a600ca4ae4c14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current cost of an area. <br/></td></tr>
+<tr class="separator:ab981a72c8fceefd8b47a600ca4ae4c14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4f774e018b78368d46beb982e53fdf2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af4f774e018b78368d46beb982e53fdf2"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_navigation_mesh.html#af4f774e018b78368d46beb982e53fdf2">IsInitialized</a> () const </td></tr>
 <tr class="memdesc:af4f774e018b78368d46beb982e53fdf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether has been initialized with valid navigation data. <br/></td></tr>
@@ -928,9 +932,6 @@ Friends</h2></td></tr>
 <tr class="memitem:aaca05b021b5dd5b7163b06d5d4d6e354"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaca05b021b5dd5b7163b06d5d4d6e354"></a>
 class&#160;</td><td class="memItemRight" valign="bottom"><b>DetourCrowdManager</b></td></tr>
 <tr class="separator:aaca05b021b5dd5b7163b06d5d4d6e354"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae47e96880abd1aacb277b46a81d791cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae47e96880abd1aacb277b46a81d791cc"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>AnnotationBuilder</b></td></tr>
-<tr class="separator:ae47e96880abd1aacb277b46a81d791cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Navigation mesh component. Collects the navigation geometry from child nodes with the <a class="el" href="class_urho3_d_1_1_navigable.html" title="Component which tags geometry for inclusion in the navigation mesh. Optionally auto-includes geometry...">Navigable</a> component and responds to path queries. </p>

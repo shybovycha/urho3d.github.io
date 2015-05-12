@@ -3102,7 +3102,7 @@ Classes</h2>
 <li>void CreateCrowd()</li>
 <li>void DrawDebugGeometry(<a class="el" href="class_urho3_d_1_1_debug_renderer.html" title="Debug geometry rendering component. Should be added only to the root scene node.">DebugRenderer</a>@, bool)</li>
 <li><a class="el" href="class_urho3_d_1_1_crowd_agent.html" title="DetourCrowd Agent, requires a DetourCrowdManager in the scene. Agent&#39;s radius and height is set throu...">CrowdAgent</a>@[]@ GetActiveAgents()</li>
-<li>float GetAreaTypeCost(uint, uint)</li>
+<li>float GetAreaCost(uint, uint)</li>
 <li><a class="el" href="class_urho3_d_1_1_variant.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttribute(const String&amp;) const</li>
 <li><a class="el" href="class_urho3_d_1_1_value_animation.html" title="Value animation class.">ValueAnimation</a>@ GetAttributeAnimation(const String&amp;) const</li>
 <li>float GetAttributeAnimationSpeed(const String&amp;) const</li>
@@ -3120,7 +3120,7 @@ Classes</h2>
 <li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
-<li>void SetAreaTypeCost(uint, uint, float)</li>
+<li>void SetAreaCost(uint, uint, float)</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
 <li>void SetAttributeAnimation(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, <a class="el" href="class_urho3_d_1_1_value_animation.html" title="Value animation class.">ValueAnimation</a>@, WrapMode = WM_LOOP, float = 1.0f)</li>
 <li>void SetAttributeAnimationSpeed(const String&amp;, float)</li>
@@ -3497,6 +3497,7 @@ Classes</h2>
 <li>void DrawDebugGeometry(bool)</li>
 <li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> FindNearestPoint(const <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>&amp; = <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> ( 1.0 , 1.0 , 1.0 ))</li>
 <li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>[]@ FindPath(const <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>&amp; = <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> ( 1.0 , 1.0 , 1.0 ))</li>
+<li>float GetAreaCost(uint) const</li>
 <li><a class="el" href="class_urho3_d_1_1_variant.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttribute(const String&amp;) const</li>
 <li><a class="el" href="class_urho3_d_1_1_value_animation.html" title="Value animation class.">ValueAnimation</a>@ GetAttributeAnimation(const String&amp;) const</li>
 <li>float GetAttributeAnimationSpeed(const String&amp;) const</li>
@@ -3519,7 +3520,7 @@ Classes</h2>
 <li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
-<li>void SetAreaTypeCost(uint, float)</li>
+<li>void SetAreaCost(uint, float)</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
 <li>void SetAttributeAnimation(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, <a class="el" href="class_urho3_d_1_1_value_animation.html" title="Value animation class.">ValueAnimation</a>@, WrapMode = WM_LOOP, float = 1.0f)</li>
 <li>void SetAttributeAnimationSpeed(const String&amp;, float)</li>
@@ -5125,7 +5126,7 @@ Classes</h2>
 <p>Properties:</p>
 <ul>
 <li>bool animationEnabled</li>
-<li>uint areaType</li>
+<li>uint areaID</li>
 <li><a class="el" href="class_urho3_d_1_1_variant.html" title="Variable that supports a fixed set of types.">Variant</a>[] attributeDefaults // readonly</li>
 <li><a class="el" href="struct_urho3_d_1_1_attribute_info.html" title="Description of an automatically serializable variable.">AttributeInfo</a>[] attributeInfos // readonly</li>
 <li><a class="el" href="class_urho3_d_1_1_variant.html" title="Variable that supports a fixed set of types.">Variant</a>[] attributes</li>
@@ -5206,6 +5207,7 @@ Classes</h2>
 <li>void DrawDebugGeometry(bool)</li>
 <li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> FindNearestPoint(const <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>&amp; = <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> ( 1.0 , 1.0 , 1.0 ))</li>
 <li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>[]@ FindPath(const <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>&amp;, const <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>&amp; = <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> ( 1.0 , 1.0 , 1.0 ))</li>
+<li>float GetAreaCost(uint) const</li>
 <li><a class="el" href="class_urho3_d_1_1_variant.html" title="Variable that supports a fixed set of types.">Variant</a> GetAttribute(const String&amp;) const</li>
 <li><a class="el" href="class_urho3_d_1_1_value_animation.html" title="Value animation class.">ValueAnimation</a>@ GetAttributeAnimation(const String&amp;) const</li>
 <li>float GetAttributeAnimationSpeed(const String&amp;) const</li>
@@ -5228,7 +5230,7 @@ Classes</h2>
 <li>bool Save(VectorBuffer&amp;) const</li>
 <li>bool SaveXML(XMLElement&amp;) const</li>
 <li>void SendEvent(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, VariantMap&amp; = VariantMap ( ))</li>
-<li>void SetAreaTypeCost(uint, float)</li>
+<li>void SetAreaCost(uint, float)</li>
 <li>bool SetAttribute(const String&amp;, const Variant&amp;)</li>
 <li>void SetAttributeAnimation(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, <a class="el" href="class_urho3_d_1_1_value_animation.html" title="Value animation class.">ValueAnimation</a>@, WrapMode = WM_LOOP, float = 1.0f)</li>
 <li>void SetAttributeAnimationSpeed(const String&amp;, float)</li>
@@ -10522,9 +10524,9 @@ Enumerations</h2>
 </ul>
 <h4>CrowdAgentState</h4>
 <ul>
-<li>NAV_AGENT_INVALID</li>
-<li>NAV_AGENT_READY</li>
-<li>NAV_AGENT_TRAVERSINGLINK</li>
+<li>CROWD_AGENT_INVALID</li>
+<li>CROWD_AGENT_READY</li>
+<li>CROWD_AGENT_TRAVERSINGLINK</li>
 </ul>
 <h4>CrowdTargetState</h4>
 <ul>

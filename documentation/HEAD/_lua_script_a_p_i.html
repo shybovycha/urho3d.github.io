@@ -1594,10 +1594,10 @@ Classes</h2>
 <li>bool CreateCrowd()</li>
 <li>void SetNavigationMesh(NavigationMesh* navMesh)</li>
 <li>void SetMaxAgents(unsigned agentCt)</li>
-<li>void SetAreaTypeCost(unsigned filterID, unsigned areaType, float cost)</li>
+<li>void SetAreaCost(unsigned filterID, unsigned areaID, float cost)</li>
 <li>NavigationMesh* GetNavigationMesh()</li>
 <li>unsigned GetMaxAgents() const</li>
-<li>float GetAreaTypeCost(unsigned filterID, unsigned areaType) const</li>
+<li>float GetAreaCost(unsigned filterID, unsigned areaID) const</li>
 <li>unsigned GetAgentCount() const</li>
 </ul>
 <p>Properties:</p>
@@ -2998,15 +2998,15 @@ Classes</h2>
 <h4><a class="el" href="class_urho3_d_1_1_nav_area.html">NavArea</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h4>
 <p>Methods:</p>
 <ul>
-<li>unsigned GetAreaType() const</li>
-<li>void SetAreaType(unsigned tolua_var_3)</li>
+<li>unsigned GetAreaID() const</li>
+<li>void SetAreaID(unsigned tolua_var_3)</li>
 <li><a class="el" href="class_urho3_d_1_1_bounding_box.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a> GetBoundingBox()</li>
 <li>void SetBoundingBox(const BoundingBox&amp; bnds)</li>
 <li><a class="el" href="class_urho3_d_1_1_bounding_box.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a> GetWorldBoundingBox() const</li>
 </ul>
 <p>Properties:</p>
 <ul>
-<li>unsigned areaType</li>
+<li>unsigned areaID</li>
 <li><a class="el" href="class_urho3_d_1_1_bounding_box.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a> boundingBox</li>
 <li><a class="el" href="class_urho3_d_1_1_bounding_box.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a> worldBoundingBox (readonly)</li>
 </ul>
@@ -3048,6 +3048,7 @@ Classes</h2>
 <li>void SetDetailSampleDistance(float distance)</li>
 <li>void SetDetailSampleMaxError(float error)</li>
 <li>void SetPadding(const Vector3&amp; padding)</li>
+<li>void SetAreaCost(unsigned areaID, float cost)</li>
 <li>bool Build()</li>
 <li>bool Build(const BoundingBox&amp; boundingBox)</li>
 <li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> FindNearestPoint(const Vector3&amp; point)</li>
@@ -3078,6 +3079,7 @@ Classes</h2>
 <li>float GetDetailSampleDistance() const</li>
 <li>float GetDetailSampleMaxError() const</li>
 <li>const <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>&amp; GetPadding() const</li>
+<li>float GetAreaCost(unsigned areaID) const</li>
 <li>bool IsInitialized() const</li>
 <li>const <a class="el" href="class_urho3_d_1_1_bounding_box.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a>&amp; GetBoundingBox() const</li>
 <li><a class="el" href="class_urho3_d_1_1_bounding_box.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a> GetWorldBoundingBox() const</li>
