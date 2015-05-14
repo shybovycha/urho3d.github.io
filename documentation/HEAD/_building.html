@@ -340,4 +340,5 @@ for compiler in clang clang++; do mv $compiler{,.orig} &amp;&amp; ln -sf $(which
 <pre class="fragment">cd $(dirname $(xcodebuild -find-executable clang))
 cp -p $(which ccache) .
 for compiler in clang clang++; do mv $compiler{,.orig} &amp;&amp; sudo mv /usr/bin/$compiler{,.orig} &amp;&amp; sudo ln -sf $(pwd)/$compiler.orig /usr/bin/$compiler &amp;&amp; ln -sf ccache $compiler; done
-</pre> </div></div><!-- contents -->
+</pre><p>Xcode 6 has done something funky internally. It won't build unless the symlink resolves to an executable within its own rooted-'/usr/bin' in Xcode.app package. The 'ccache' executable is physically copied to this location for this reason. But as the result, you have to manually keep this copy up to date when upgrading 'ccache'. </p>
+</div></div><!-- contents -->
