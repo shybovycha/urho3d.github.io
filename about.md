@@ -7,7 +7,7 @@ title: About
 **Urho3D** is a free lightweight, cross-platform 2D and 3D game engine implemented in C++ and released under the MIT license. Greatly inspired by [OGRE](http://www.ogre3d.org/) and [Horde3D](http://www.horde3d.org/).
 
 ## Features
-- Direct3D9, Direct3D11<font color="green"><sup>new</sup></font>, OpenGL 2.0 or 3.2<font color="green"><sup>new</sup></font>, OpenGL ES 2.0 or WebGL<font color="green"><sup>new</sup></font> rendering
+- Direct3D9, Direct3D11<font color="green"><sup>v1.4</sup></font>, OpenGL 2.0 or 3.2<font color="green"><sup>v1.4</sup></font>, OpenGL ES 2.0 or WebGL<font color="green"><sup>v1.4</sup></font> rendering
 - HLSL or GLSL shaders + caching of HLSL bytecode
 - Configurable rendering pipeline. Default implementations for forward, light pre-pass and deferred rendering
 - Component based scene model
@@ -30,7 +30,7 @@ title: About
 - Keyframe animation of object attributes<font color="olive"><sup>v1.32</sup></font>
 - Background loading of resources<font color="olive"><sup>v1.32</sup></font>
 - Keyboard, mouse, joystick and touch input (if available)
-- Cross-platform support using [SDL 2.0](http://www.libsdl.org/) (currently runs on Windows, Linux, Mac OS X, Android, iOS, [Raspberry Pi](http://www.raspberrypi.org/)<font color="olive"><sup>v1.3</sup></font>, and HTML5<font color="green"><sup>new</sup></font> with [Emscripten](http://kripken.github.io/emscripten-site/) toolchain)
+- Cross-platform support using [SDL 2.0](http://www.libsdl.org/) (currently runs on Windows, Linux, Mac OS X, Android, iOS, [Raspberry Pi](http://www.raspberrypi.org/)<font color="olive"><sup>v1.3</sup></font>, and HTML5<font color="green"><sup>v1.4</sup></font> with [Emscripten](http://kripken.github.io/emscripten-site/) toolchain)
 - Physics using [Bullet](http://www.bulletphysics.org/)
 - 2D physics using [Box2D](http://box2d.org/)<font color="olive"><sup>v1.32</sup></font>
 - Scripting using [AngelScript](http://www.angelcode.com/angelscript/)
