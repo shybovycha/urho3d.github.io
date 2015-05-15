@@ -53,7 +53,7 @@ Building prerequisites</h2>
 <li>For Android, the Android SDK and Android NDK (minimum API level 12) need to be installed.</li>
 </ul>
 <ul>
-<li>For Emscripten, the Emscripten SDK need to be installed.</li>
+<li>For Emscripten, the Emscripten SDK need to be installed (on Windows also MinGW toolchain is required.)</li>
 </ul>
 <p>To run Urho3D, the minimum system requirements are:</p>
 <ul>
@@ -297,6 +297,8 @@ Emscripten build process (EXPERIMENTAL)</h2>
 <p>For example, to double the limit (which normally defaults to 256 on OS X): </p>
 <pre class="fragment">ulimit -Sn 512
 </pre><p>After the commands finish successfully, the HTMLs and its correspondng data files should have been generated in the build tree's "bin" subdirectory, from where it can be launched in a browser.</p>
+<p>On Windows building with Emscripten requires a MinGW toolchain. The one that can be installed through emsdk may not work correctly, but for example <a href="http://sourceforge.net/projects/mingw-w64/">http://sourceforge.net/projects/mingw-w64/</a> with the default install settings has been known to work.</p>
+<p>If CMake complains that emcc is not able to compile a test program, try reactivating your current Emscripten cross-compiler tools with 'emsdk activate &lt;your-tools-version&gt;', clear all generated *.cmake files as well as the CMake cache, and retry running CMake.</p>
 <h2><a class="anchor" id="Building_64bit"></a>
 Native 64bit build</h2>
 <p>When using MSVC compiler, Urho3D common CMake module configures the build tree to target a 32-bit platform by default. When using other non-MSVC compilers (like GCC or Clang), the module sets the default to 32-bit or 64-bit based on the chosen toolchain in the build tree. You can, however, use the "URHO3D_64BIT" build option to override the default, i.e. by setting the option to '0' (for 32-bit) and '1' (for 64-bit) explicitly.</p>
