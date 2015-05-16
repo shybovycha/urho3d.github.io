@@ -1592,6 +1592,7 @@ Classes</h2>
 <p>Methods:</p>
 <ul>
 <li>bool CreateCrowd()</li>
+<li>void DrawDebugGeometry(bool depthTest)</li>
 <li>void SetNavigationMesh(NavigationMesh* navMesh)</li>
 <li>void SetMaxAgents(unsigned agentCt)</li>
 <li>void SetAreaCost(unsigned filterID, unsigned areaID, float cost)</li>
@@ -1708,6 +1709,15 @@ Classes</h2>
 </ul>
 <p><a class="anchor" id="Class_DynamicNavigationMesh"></a> </p>
 <h4><a class="el" href="class_urho3_d_1_1_dynamic_navigation_mesh.html">DynamicNavigationMesh</a> : <a class="el" href="class_urho3_d_1_1_navigation_mesh.html" title="Navigation mesh component. Collects the navigation geometry from child nodes with the Navigable compo...">NavigationMesh</a></h4>
+<p>Methods:</p>
+<ul>
+<li>void SetDrawObstacles(bool enable)</li>
+<li>bool GetDrawObstacles() const</li>
+</ul>
+<p>Properties:</p>
+<ul>
+<li>bool drawObstacles</li>
+</ul>
 <p><a class="anchor" id="Class_Engine"></a> </p>
 <h4><a class="el" href="class_urho3_d_1_1_engine.html" title="Urho3D engine. Creates the other subsystems.">Engine</a> : <a class="el" href="class_urho3_d_1_1_object.html" title="Base class for objects with type identification, subsystem access and event sending/receiving capabil...">Object</a></h4>
 <p>Methods:</p>
@@ -3051,6 +3061,7 @@ Classes</h2>
 <li>void SetAreaCost(unsigned areaID, float cost)</li>
 <li>bool Build()</li>
 <li>bool Build(const BoundingBox&amp; boundingBox)</li>
+<li>void SetPartitionType(NavmeshPartitionType aType)</li>
 <li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> FindNearestPoint(const Vector3&amp; point)</li>
 <li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> FindNearestPoint(const Vector3&amp; point, const Vector3&amp; extents)</li>
 <li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> MoveAlongSurface(const Vector3&amp; start, const Vector3&amp; end)</li>
@@ -3084,6 +3095,7 @@ Classes</h2>
 <li>const <a class="el" href="class_urho3_d_1_1_bounding_box.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a>&amp; GetBoundingBox() const</li>
 <li><a class="el" href="class_urho3_d_1_1_bounding_box.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a> GetWorldBoundingBox() const</li>
 <li><a class="el" href="class_urho3_d_1_1_int_vector2.html" title="Two-dimensional vector with integer values.">IntVector2</a> GetNumTiles() const</li>
+<li>NavmeshPartitionType GetPartitionType()</li>
 </ul>
 <p>Properties:</p>
 <ul>
@@ -3101,6 +3113,7 @@ Classes</h2>
 <li>float detailSampleDistance</li>
 <li>float detailSampleMaxError</li>
 <li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>&amp; padding</li>
+<li>NavmeshPartitionType partitionType</li>
 <li>bool initialized (readonly)</li>
 <li><a class="el" href="class_urho3_d_1_1_bounding_box.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a>&amp; boundingBox (readonly)</li>
 <li><a class="el" href="class_urho3_d_1_1_bounding_box.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a> worldBoundingBox (readonly)</li>
@@ -6861,6 +6874,11 @@ Enumerations</h2>
 <li>int NAVIGATIONQUALITY_LOW</li>
 <li>int NAVIGATIONQUALITY_MEDIUM</li>
 <li>int NAVIGATIONQUALITY_HIGH</li>
+</ul>
+<h4>NavmeshPartitionType</h4>
+<ul>
+<li>int NAVMESH_PARTITION_WATERSHED</li>
+<li>int NAVMESH_PARTITION_MONOTONE</li>
 </ul>
 <h4>Orientation</h4>
 <ul>
