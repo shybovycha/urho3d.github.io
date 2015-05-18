@@ -885,6 +885,7 @@ Classes</h2>
 <ul>
 <li>void SetEnabled(bool enable)</li>
 <li>void Remove()</li>
+<li>void DrawDebugGeometry(DebugRenderer* debug, bool depthTest)</li>
 <li>unsigned GetID() const</li>
 <li>Node* GetNode() const</li>
 <li>Scene* GetScene() const</li>
@@ -1614,6 +1615,7 @@ Classes</h2>
 <ul>
 <li>NavigationMesh* navigationMesh</li>
 <li>int maxAgents</li>
+<li>unsigned agentCount (readonly)</li>
 </ul>
 <p><a class="anchor" id="Class_Drawable"></a> </p>
 <h4><a class="el" href="class_urho3_d_1_1_drawable.html" title="Base class for visible components.">Drawable</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h4>
@@ -3071,6 +3073,8 @@ Classes</h2>
 <li>bool Build()</li>
 <li>bool Build(const BoundingBox&amp; boundingBox)</li>
 <li>void SetPartitionType(NavmeshPartitionType aType)</li>
+<li>void SetDrawOffMeshConnections(bool enable)</li>
+<li>void SetDrawNavAreas(bool enable)</li>
 <li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> FindNearestPoint(const Vector3&amp; point)</li>
 <li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> FindNearestPoint(const Vector3&amp; point, const Vector3&amp; extents)</li>
 <li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> MoveAlongSurface(const Vector3&amp; start, const Vector3&amp; end)</li>
@@ -3105,6 +3109,8 @@ Classes</h2>
 <li><a class="el" href="class_urho3_d_1_1_bounding_box.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a> GetWorldBoundingBox() const</li>
 <li><a class="el" href="class_urho3_d_1_1_int_vector2.html" title="Two-dimensional vector with integer values.">IntVector2</a> GetNumTiles() const</li>
 <li>NavmeshPartitionType GetPartitionType()</li>
+<li>bool GetDrawOffMeshConnections() const</li>
+<li>bool GetDrawNavAreas() const</li>
 </ul>
 <p>Properties:</p>
 <ul>
@@ -3123,6 +3129,8 @@ Classes</h2>
 <li>float detailSampleMaxError</li>
 <li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>&amp; padding</li>
 <li>NavmeshPartitionType partitionType</li>
+<li>bool drawOffMeshConnections</li>
+<li>bool drawNavAreas</li>
 <li>bool initialized (readonly)</li>
 <li><a class="el" href="class_urho3_d_1_1_bounding_box.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a>&amp; boundingBox (readonly)</li>
 <li><a class="el" href="class_urho3_d_1_1_bounding_box.html" title="Three-dimensional axis-aligned bounding box.">BoundingBox</a> worldBoundingBox (readonly)</li>
@@ -3458,15 +3466,21 @@ Classes</h2>
 <li>void SetEndPoint(Node* node)</li>
 <li>void SetRadius(float radius)</li>
 <li>void SetBidirectional(bool enabled)</li>
+<li>void SetMask(unsigned newMask)</li>
+<li>void SetAreaID(unsigned newAreaID)</li>
 <li>Node* GetEndPoint() const</li>
 <li>float GetRadius() const</li>
 <li>bool IsBidirectional() const</li>
+<li>unsigned GetMask() const</li>
+<li>unsigned GetAreaID() const</li>
 </ul>
 <p>Properties:</p>
 <ul>
 <li>Node* endPoint</li>
 <li>float radius</li>
 <li>bool bidirectional</li>
+<li>unsigned mask</li>
+<li>unsigned areaID</li>
 </ul>
 <p><a class="anchor" id="Class_PackageEntry"></a> </p>
 <h4><a class="el" href="struct_urho3_d_1_1_package_entry.html" title="File entry within the package file.">PackageEntry</a></h4>
@@ -5483,7 +5497,6 @@ Classes</h2>
 <h4><a class="el" href="class_urho3_d_1_1_tile_map2_d.html" title="Tile map component.">TileMap2D</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h4>
 <p>Methods:</p>
 <ul>
-<li>void DrawDebugGeometry(DebugRenderer* debug, bool depthTest)</li>
 <li>void SetTmxFile(TmxFile2D* tmxFile)</li>
 <li>TmxFile2D* GetTmxFile() const</li>
 <li>const <a class="el" href="struct_urho3_d_1_1_tile_map_info2_d.html" title="Tile map infomation.">TileMapInfo2D</a>&amp; GetInfo() const</li>
@@ -5519,7 +5532,6 @@ Classes</h2>
 <h4><a class="el" href="class_urho3_d_1_1_tile_map_layer2_d.html" title="Tile map component.">TileMapLayer2D</a> : <a class="el" href="class_urho3_d_1_1_component.html" title="Base class for components. Components can be created to scene nodes.">Component</a></h4>
 <p>Methods:</p>
 <ul>
-<li>void DrawDebugGeometry(DebugRenderer* debug, bool depthTest)</li>
 <li>void SetDrawOrder(int drawOrder)</li>
 <li>void SetVisible(bool visible)</li>
 <li>int GetDrawOrder() const</li>
