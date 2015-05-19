@@ -33,7 +33,8 @@ Calling a function from a script file</h2>
 <div class="line">VariantVector parameters;</div>
 <div class="line">parameters.<a class="code" href="class_urho3_d_1_1_vector.html#a083b39861b996df82f811a9a4ebff109" title="Add an element at the end.">Push</a>(Variant(100)); <span class="comment">// Add an int parameter</span></div>
 <div class="line">file-&gt;Execute(<span class="stringliteral">&quot;void MyFunction(int)&quot;</span>, parameters); <span class="comment">// Execute</span></div>
-</div><!-- fragment --><p><a class="el" href="class_urho3_d_1_1_script_file.html#a544fbd974ea8581ac3691fc9923bceba">Execute()</a> also has an overload which takes a function pointer instead of querying by declaration. Using a pointer is naturally faster than a query, but also more risky: in case the <a class="el" href="class_urho3_d_1_1_script_file.html" title="Script file resource.">ScriptFile</a> resource is unloaded or reloaded, any function pointers will be invalidated.</p>
+</div><!-- fragment --><p>If the function being called has void return type and no parameters, its name can alternatively be given instead of the full declaration.</p>
+<p><a class="el" href="class_urho3_d_1_1_script_file.html#a544fbd974ea8581ac3691fc9923bceba">Execute()</a> also has an overload which takes a function pointer instead of querying by declaration. Using a pointer is naturally faster than a query, but also more risky: in case the <a class="el" href="class_urho3_d_1_1_script_file.html" title="Script file resource.">ScriptFile</a> resource is unloaded or reloaded, any function pointers will be invalidated.</p>
 <h2><a class="anchor" id="Scripting_Object"></a>
 Instantiating a script object</h2>
 <p>The component <a class="el" href="class_urho3_d_1_1_script_instance.html" title="Script object component.">ScriptInstance</a> can be used to instantiate a specific class from within a script file. After instantiation, the the script object can respond to scene updates, <a class="el" href="_events.html">events</a> and <a class="el" href="_serialization.html">serialization</a> much like a component written in C++ would do, if it has the appropriate methods implemented. For example:</p>
@@ -87,8 +88,9 @@ Delayed method calls</h2>
 <div class="line">        Print(<span class="stringliteral">&quot;Delayed function triggered with parameter &quot;</span> + parameter);</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-</div><!-- fragment --><p>Delayed method calls can be removed by full declaration using the ClearDelayedExecute() function. If an empty declaration (default) is given as parameter, all delayed calls are removed.</p>
-<p>When a scene is saved/loaded, any pending delayed calls are also saved and restored properly.</p>
+</div><!-- fragment --><p>Delayed method calls can be removed by declaration using the ClearDelayedExecute() function. If an empty declaration (default) is given as parameter, all delayed calls are removed.</p>
+<p>If the method being called has void return type and no parameters, its name can alternatively be given instead of the full declaration.</p>
+<p>When a scene is saved/loaded, any pending delayed calls are also saved and restored.</p>
 <h2><a class="anchor" id="Script_ScriptAPI"></a>
 The script API</h2>
 <p>Much of the Urho3D classes are exposed to scripts, however things that require low-level access or high performance (like direct low level rendering) are not. Also for scripting convenience some things have been changed from the C++ API:</p>
