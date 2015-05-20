@@ -1103,10 +1103,10 @@ div.toc {
         border-radius: 7px 7px 7px 7px;
         float: right;
         height: auto;
-        margin: 0 20px 10px 10px;
+        margin: 0 0 10px 10px;  // Urho3D: Remove the right margin
         width: 200px;
 
-        // On really really small viewport (e.g. iPhone in portrait mode) - unfloat the toc and make it takes the whole width
+        // Urho3D: On really really small viewport (e.g. iPhone in portrait mode) - unfloat TOC and make it takes the whole width
         @media print, screen and (max-width: (@screen-xs-min - 1)) {
             float: none;
             margin: 0 0 10px 0;
