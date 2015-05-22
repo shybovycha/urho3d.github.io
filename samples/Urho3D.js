@@ -1,12 +1,15 @@
 
 var Module;
+
 if (typeof Module === 'undefined') Module = eval('(function() { try { return Module || {} } catch(e) { return {} } })()');
+
 if (!Module.expectedDataFileDownloads) {
   Module.expectedDataFileDownloads = 0;
   Module.finishedDataFileDownloads = 0;
 }
 Module.expectedDataFileDownloads++;
 (function() {
+ var loadPackage = function(metadata) {
 
     var PACKAGE_PATH;
     if (typeof window === 'object') {
@@ -17,7 +20,7 @@ Module.expectedDataFileDownloads++;
     } else {
       throw 'using preloaded data can only be done on a web page or in a web worker';
     }
-    var PACKAGE_NAME = '/Users/travis/build/urho3d/Build/bin/Urho3D.js.data';
+    var PACKAGE_NAME = '/home/travis/build/urho3d/Build/bin/Urho3D.js.data';
     var REMOTE_PACKAGE_BASE = 'Urho3D.js.data';
     if (typeof Module['locateFilePackage'] === 'function' && !Module['locateFile']) {
       Module['locateFile'] = Module['locateFilePackage'];
@@ -26,9 +29,10 @@ Module.expectedDataFileDownloads++;
     var REMOTE_PACKAGE_NAME = typeof Module['locateFile'] === 'function' ?
                               Module['locateFile'](REMOTE_PACKAGE_BASE) :
                               ((Module['filePackagePrefixURL'] || '') + REMOTE_PACKAGE_BASE);
-    var REMOTE_PACKAGE_SIZE = 11362551;
-    var PACKAGE_UUID = '38290ad9-f077-4740-8cbd-ed51e59757a4';
   
+      var REMOTE_PACKAGE_SIZE = 11363688;
+      var PACKAGE_UUID = '08c50068-9c63-4688-8f34-23d2c7496ccb';
+    
     function fetchRemotePackage(packageName, packageSize, callback, errback) {
       var xhr = new XMLHttpRequest();
       xhr.open('GET', packageName, true);
@@ -76,9 +80,9 @@ Module.expectedDataFileDownloads++;
   
   function runWithFS() {
 
-function assert(check, msg) {
-  if (!check) throw msg + new Error().stack;
-}
+    function assert(check, msg) {
+      if (!check) throw msg + new Error().stack;
+    }
 
     function DataRequest(start, end, crunched, audio) {
       this.start = start;
@@ -114,8 +118,9 @@ function assert(check, msg) {
         this.requests[this.name] = null;
       },
     };
+
       new DataRequest(0, 120928, 0, 0).open('GET', '/CoreData.pak');
-    new DataRequest(120928, 11362551, 0, 0).open('GET', '/Data.pak');
+    new DataRequest(120928, 11363688, 0, 0).open('GET', '/Data.pak');
 
       var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
       var IDB_RO = "readonly";
@@ -217,10 +222,10 @@ function assert(check, msg) {
       DataRequest.prototype.byteArray = Module['HEAPU8'].subarray(ptr, ptr+byteArray.length);
           DataRequest.prototype.requests["/CoreData.pak"].onload();
           DataRequest.prototype.requests["/Data.pak"].onload();
-          Module['removeRunDependency']('datafile_/Users/travis/build/urho3d/Build/bin/Urho3D.js.data');
+          Module['removeRunDependency']('datafile_/home/travis/build/urho3d/Build/bin/Urho3D.js.data');
 
     };
-    Module['addRunDependency']('datafile_/Users/travis/build/urho3d/Build/bin/Urho3D.js.data');
+    Module['addRunDependency']('datafile_/home/travis/build/urho3d/Build/bin/Urho3D.js.data');
   
     if (!Module.preloadResults) Module.preloadResults = {};
   
@@ -264,5 +269,8 @@ function assert(check, msg) {
     if (!Module['preRun']) Module['preRun'] = [];
     Module["preRun"].push(runWithFS); // FS is not initialized yet, wait for it
   }
+
+ }
+ loadPackage();
 
 })();
