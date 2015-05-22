@@ -3342,6 +3342,9 @@ Classes</h2>
 <li>const <a class="el" href="class_urho3_d_1_1_variant.html" title="Variable that supports a fixed set of types.">Variant</a>&amp; GetVar(StringHash key) const</li>
 <li>const VariantMap&amp; GetVars() const</li>
 <li>Component* GetComponent(const String type) const</li>
+<li>const PODVector&lt;Component*&gt;&amp; GetComponents(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> type, bool recursive = false)</li>
+<li>const PODVector&lt;Node*&gt;&amp; GetChildren(bool recursive = false)</li>
+<li>const PODVector&lt;Node*&gt;&amp; GetChildrenWithComponent(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a> type, bool recursive = false)</li>
 <li>bool Load(<a class="el" href="class_urho3_d_1_1_deserializer.html" title="Abstract stream for reading.">Deserializer</a>&amp; source, <a class="el" href="class_urho3_d_1_1_scene_resolver.html" title="Utility class that resolves node &amp; component IDs after a scene or partial scene load.">SceneResolver</a>&amp; resolver, bool loadChildren = true, bool rewriteIDs = false, CreateMode mode = REPLICATED)</li>
 <li>bool LoadXML(const <a class="el" href="class_urho3_d_1_1_x_m_l_element.html" title="Element in an XML file.">XMLElement</a>&amp; source, <a class="el" href="class_urho3_d_1_1_scene_resolver.html" title="Utility class that resolves node &amp; component IDs after a scene or partial scene load.">SceneResolver</a>&amp; resolver, bool loadChildren = true, bool rewriteIDs = false, CreateMode mode = REPLICATED)</li>
 <li>Node* CreateChild(unsigned id, CreateMode mode)</li>
