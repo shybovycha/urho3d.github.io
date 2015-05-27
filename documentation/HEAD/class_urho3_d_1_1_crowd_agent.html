@@ -80,14 +80,18 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#aaf6121325950945f6ae2032bd35001b0">SetNavigationFilterType</a> (unsigned filterTypeID)</td></tr>
 <tr class="memdesc:aaf6121325950945f6ae2032bd35001b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the navigation filter type the agent will use. <br/></td></tr>
 <tr class="separator:aaf6121325950945f6ae2032bd35001b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5844bc750e1c519b2042054e687482b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5844bc750e1c519b2042054e687482b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#ab5844bc750e1c519b2042054e687482b">SetMoveTarget</a> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;position)</td></tr>
-<tr class="memdesc:ab5844bc750e1c519b2042054e687482b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Submit a new move request for this agent. <br/></td></tr>
-<tr class="separator:ab5844bc750e1c519b2042054e687482b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fdd99f0c514e8824fb4e9292397f2c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1fdd99f0c514e8824fb4e9292397f2c1"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#a1fdd99f0c514e8824fb4e9292397f2c1">SetMoveVelocity</a> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;velocity)</td></tr>
-<tr class="memdesc:a1fdd99f0c514e8824fb4e9292397f2c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Submit a new move velocity request for this agent. <br/></td></tr>
-<tr class="separator:a1fdd99f0c514e8824fb4e9292397f2c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a078bd5121dd294728e99d5ba64371e9f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a078bd5121dd294728e99d5ba64371e9f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#a078bd5121dd294728e99d5ba64371e9f">SetMoveTarget</a> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;position)</td></tr>
+<tr class="memdesc:a078bd5121dd294728e99d5ba64371e9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Submit a new move request for this agent. <br/></td></tr>
+<tr class="separator:a078bd5121dd294728e99d5ba64371e9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5843a46af0f130c221ca0363a98e53e3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5843a46af0f130c221ca0363a98e53e3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#a5843a46af0f130c221ca0363a98e53e3">ResetMoveTarget</a> ()</td></tr>
+<tr class="memdesc:a5843a46af0f130c221ca0363a98e53e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset any request for the specified agent. <br/></td></tr>
+<tr class="separator:a5843a46af0f130c221ca0363a98e53e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb6b4699617ec755e3c9787979428598"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb6b4699617ec755e3c9787979428598"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#abb6b4699617ec755e3c9787979428598">SetMoveVelocity</a> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;velocity)</td></tr>
+<tr class="memdesc:abb6b4699617ec755e3c9787979428598"><td class="mdescLeft">&#160;</td><td class="mdescRight">Submit a new move velocity request for this agent. <br/></td></tr>
+<tr class="separator:abb6b4699617ec755e3c9787979428598"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5975f317bdc1d689a945408e3e049083"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5975f317bdc1d689a945408e3e049083"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#a5975f317bdc1d689a945408e3e049083">SetUpdateNodePosition</a> (bool unodepos)</td></tr>
 <tr class="memdesc:a5975f317bdc1d689a945408e3e049083"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the node position. When set to false, the node position should be updated by other means (e.g. using Physics) in response to the E_CROWD_AGENT_REPOSITION event. <br/></td></tr>
@@ -176,6 +180,10 @@ NavigationQuality&#160;</td><td class="memItemRight" valign="bottom"><a class="e
 NavigationPushiness&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#af0bda91dfa5c3add31d4667c4ce5a682">GetNavigationPushiness</a> () const </td></tr>
 <tr class="memdesc:af0bda91dfa5c3add31d4667c4ce5a682"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the agent's navigation pushiness. <br/></td></tr>
 <tr class="separator:af0bda91dfa5c3add31d4667c4ce5a682"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6781544044d3de1bbf0551a673172804"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6781544044d3de1bbf0551a673172804"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#a6781544044d3de1bbf0551a673172804">HasArrived</a> () const </td></tr>
+<tr class="memdesc:a6781544044d3de1bbf0551a673172804"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true when the agent has arrived at its target. <br/></td></tr>
+<tr class="separator:a6781544044d3de1bbf0551a673172804"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac87590bcfcfafb45f6f1e54620d73829"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac87590bcfcfafb45f6f1e54620d73829"></a>
 <a class="el" href="class_urho3_d_1_1_p_o_d_vector.html">PODVector</a>&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#ac87590bcfcfafb45f6f1e54620d73829">GetAgentDataAttr</a> () const </td></tr>
 <tr class="memdesc:ac87590bcfcfafb45f6f1e54620d73829"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get serialized data of internal state. <br/></td></tr>
@@ -591,10 +599,10 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a52fe99f855de35c509064a8c7af07152"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52fe99f855de35c509064a8c7af07152"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#a52fe99f855de35c509064a8c7af07152">OnCrowdAgentReposition</a> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;newPos, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;newDirection)</td></tr>
-<tr class="memdesc:a52fe99f855de35c509064a8c7af07152"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the nodes position if updateNodePosition is set. Is called in <a class="el" href="class_urho3_d_1_1_detour_crowd_manager.html#a40f8c9efe2fa6409539d188d8ff13722" title="Update the crowd simulation.">DetourCrowdManager::Update()</a>. <br/></td></tr>
-<tr class="separator:a52fe99f855de35c509064a8c7af07152"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab96c4672a4715f55932de8197fb571ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab96c4672a4715f55932de8197fb571ad"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#ab96c4672a4715f55932de8197fb571ad">OnCrowdAgentReposition</a> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;newPos, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;newVel)</td></tr>
+<tr class="memdesc:ab96c4672a4715f55932de8197fb571ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the nodes position if updateNodePosition is set. Is called in <a class="el" href="class_urho3_d_1_1_detour_crowd_manager.html#a40f8c9efe2fa6409539d188d8ff13722" title="Update the crowd simulation.">DetourCrowdManager::Update()</a>. <br/></td></tr>
+<tr class="separator:ab96c4672a4715f55932de8197fb571ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5af71ef5825bb9a3e4f64cecc3904558"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5af71ef5825bb9a3e4f64cecc3904558"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#a5af71ef5825bb9a3e4f64cecc3904558">OnNodeSet</a> (<a class="el" href="class_urho3_d_1_1_node.html">Node</a> *node)</td></tr>
 <tr class="memdesc:a5af71ef5825bb9a3e4f64cecc3904558"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle node being assigned. <br/></td></tr>
@@ -728,6 +736,10 @@ NavigationQuality&#160;</td><td class="memItemRight" valign="bottom"><a class="e
 NavigationPushiness&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#ac51c21b648e07f94e9e3fe7bc8f5d825">navPushiness_</a></td></tr>
 <tr class="memdesc:ac51c21b648e07f94e9e3fe7bc8f5d825"><td class="mdescLeft">&#160;</td><td class="mdescRight">Agent's Navigation Pushiness. <br/></td></tr>
 <tr class="separator:ac51c21b648e07f94e9e3fe7bc8f5d825"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fa9d6673733efa5c8c0f260e7a54c19"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9fa9d6673733efa5c8c0f260e7a54c19"></a>
+<a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#a9fa9d6673733efa5c8c0f260e7a54c19">previousPosition_</a></td></tr>
+<tr class="memdesc:a9fa9d6673733efa5c8c0f260e7a54c19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Agent's previous position used to check for position changes. <br/></td></tr>
+<tr class="separator:a9fa9d6673733efa5c8c0f260e7a54c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f060948cce392cbc29fed15102c4b45"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f060948cce392cbc29fed15102c4b45"></a>
 CrowdTargetState&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#a9f060948cce392cbc29fed15102c4b45">previousTargetState_</a></td></tr>
 <tr class="memdesc:a9f060948cce392cbc29fed15102c4b45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Agent's previous target state used to check for state changes. <br/></td></tr>
@@ -738,7 +750,7 @@ CrowdAgentState&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
 <tr class="separator:a16ce5a7f5a5f9e76dab68f4507af42bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25956990e09ab457549604042c9a101d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25956990e09ab457549604042c9a101d"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#a25956990e09ab457549604042c9a101d">ignoreTransformChanges_</a></td></tr>
-<tr class="memdesc:a25956990e09ab457549604042c9a101d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal flag to ignore transform changes because it came from us, used in <a class="el" href="class_urho3_d_1_1_crowd_agent.html#a52fe99f855de35c509064a8c7af07152" title="Update the nodes position if updateNodePosition is set. Is called in DetourCrowdManager::Update().">OnCrowdAgentReposition()</a>. <br/></td></tr>
+<tr class="memdesc:a25956990e09ab457549604042c9a101d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal flag to ignore transform changes because it came from us, used in <a class="el" href="class_urho3_d_1_1_crowd_agent.html#ab96c4672a4715f55932de8197fb571ad" title="Update the nodes position if updateNodePosition is set. Is called in DetourCrowdManager::Update().">OnCrowdAgentReposition()</a>. <br/></td></tr>
 <tr class="separator:a25956990e09ab457549604042c9a101d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>

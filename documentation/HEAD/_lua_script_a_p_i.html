@@ -1349,8 +1349,8 @@ Classes</h2>
 <p>Methods:</p>
 <ul>
 <li>void SetNavigationFilterType(unsigned filterID)</li>
-<li>bool SetMoveTarget(const Vector3&amp; position)</li>
-<li>bool SetMoveVelocity(const Vector3&amp; velocity)</li>
+<li>void SetMoveTarget(const Vector3&amp; position)</li>
+<li>void SetMoveVelocity(const Vector3&amp; velocity)</li>
 <li>void SetUpdateNodePosition(bool unodepos)</li>
 <li>void SetMaxAccel(float val)</li>
 <li>void SetMaxSpeed(float val)</li>
@@ -1369,6 +1369,7 @@ Classes</h2>
 <li>float GetMaxAccel() const</li>
 <li>NavigationQuality GetNavigationQuality() const</li>
 <li>NavigationPushiness GetNavigationPushiness() const</li>
+<li>bool HasArrived() const</li>
 <li>float GetRadius() const</li>
 <li>float GetHeight() const</li>
 <li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> GetPosition() const</li>
@@ -1603,13 +1604,16 @@ Classes</h2>
 <li>bool CreateCrowd()</li>
 <li>void DrawDebugGeometry(bool depthTest)</li>
 <li>void SetNavigationMesh(NavigationMesh* navMesh)</li>
-<li>void SetMaxAgents(unsigned agentCt)</li>
 <li>void SetAreaCost(unsigned filterID, unsigned areaID, float cost)</li>
-<li>NavigationMesh* GetNavigationMesh()</li>
+<li>void SetMaxAgents(unsigned agentCt)</li>
+<li>void SetCrowdTarget(const <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>&amp; position, int startId = 0, int endId = M_MAX_INT)</li>
+<li>void ResetCrowdTarget(int startId = 0, int endId = M_MAX_INT)</li>
+<li>void SetCrowdVelocity(const <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>&amp; velocity, int startId = 0, int endId = M_MAX_INT)</li>
+<li>NavigationMesh* GetNavigationMesh() const</li>
 <li>unsigned GetMaxAgents() const</li>
 <li>float GetAreaCost(unsigned filterID, unsigned areaID) const</li>
 <li>unsigned GetAgentCount() const</li>
-<li>const PODVector&lt;CrowdAgent*&gt;&amp; GetActiveAgents()</li>
+<li>const PODVector&lt;CrowdAgent*&gt;&amp; GetActiveAgents() const</li>
 </ul>
 <p>Properties:</p>
 <ul>
@@ -6709,10 +6713,9 @@ Enumerations</h2>
 <li>int CROWD_AGENT_TARGET_FAILED</li>
 <li>int CROWD_AGENT_TARGET_VALID</li>
 <li>int CROWD_AGENT_TARGET_REQUESTING</li>
-<li>int CROWD_AGENT_TARGET_WAITINGFORPATH</li>
 <li>int CROWD_AGENT_TARGET_WAITINGFORQUEUE</li>
+<li>int CROWD_AGENT_TARGET_WAITINGFORPATH</li>
 <li>int CROWD_AGENT_TARGET_VELOCITY</li>
-<li>int CROWD_AGENT_TARGET_ARRIVED</li>
 </ul>
 <h4>CubeMapFace</h4>
 <ul>

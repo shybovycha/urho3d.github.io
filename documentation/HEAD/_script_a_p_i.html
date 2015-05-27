@@ -2597,14 +2597,15 @@ Classes</h2>
 <li>void SetAttributeAnimationSpeed(const String&amp;, float)</li>
 <li>void SetAttributeAnimationWrapMode(const String&amp;, WrapMode)</li>
 <li>void SetInterceptNetworkUpdate(const String&amp;, bool)</li>
-<li>bool SetMoveTarget(const Vector3&amp;)</li>
-<li>bool SetMoveVelocity(const Vector3&amp;)</li>
+<li>void SetMoveTarget(const Vector3&amp;)</li>
+<li>void SetMoveVelocity(const Vector3&amp;)</li>
 </ul>
 <p>Properties:</p>
 <ul>
 <li><a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> actualVelocity // readonly</li>
 <li>CrowdAgentState agentState // readonly</li>
 <li>bool animationEnabled</li>
+<li>bool arrived // readonly</li>
 <li><a class="el" href="class_urho3_d_1_1_variant.html" title="Variable that supports a fixed set of types.">Variant</a>[] attributeDefaults // readonly</li>
 <li><a class="el" href="struct_urho3_d_1_1_attribute_info.html" title="Description of an automatically serializable variable.">AttributeInfo</a>[] attributeInfos // readonly</li>
 <li><a class="el" href="class_urho3_d_1_1_variant.html" title="Variable that supports a fixed set of types.">Variant</a>[] attributes</li>
@@ -3116,6 +3117,7 @@ Classes</h2>
 <li>void MarkNetworkUpdate() const</li>
 <li>void Remove()</li>
 <li>void RemoveInstanceDefault()</li>
+<li>void ResetCrowdTarget(int = 0, int = M_MAX_INT)</li>
 <li>void ResetToDefault()</li>
 <li>bool Save(<a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a>@) const</li>
 <li>bool Save(VectorBuffer&amp;) const</li>
@@ -3126,6 +3128,8 @@ Classes</h2>
 <li>void SetAttributeAnimation(const <a class="el" href="class_urho3_d_1_1_string.html" title="String class.">String</a>&amp;, <a class="el" href="class_urho3_d_1_1_value_animation.html" title="Value animation class.">ValueAnimation</a>@, WrapMode = WM_LOOP, float = 1.0f)</li>
 <li>void SetAttributeAnimationSpeed(const String&amp;, float)</li>
 <li>void SetAttributeAnimationWrapMode(const String&amp;, WrapMode)</li>
+<li>void SetCrowdTarget(const <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>&amp;, int = 0, int = M_MAX_INT)</li>
+<li>void SetCrowdVelocity(const <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>&amp;, int = 0, int = M_MAX_INT)</li>
 <li>void SetInterceptNetworkUpdate(const String&amp;, bool)</li>
 </ul>
 <p>Properties:</p>
@@ -10549,7 +10553,6 @@ Enumerations</h2>
 <li>CROWD_AGENT_TARGET_WAITINGFORPATH</li>
 <li>CROWD_AGENT_TARGET_WAITINGFORQUEUE</li>
 <li>CROWD_AGENT_TARGET_VELOCITY</li>
-<li>CROWD_AGENT_TARGET_ARRIVED</li>
 </ul>
 <h4>CubeMapFace</h4>
 <ul>
