@@ -125,11 +125,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a26010dd032250bfe7b7e525f71f4aa72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ae79e48a4111a65e8a22f821df4f03c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ae79e48a4111a65e8a22f821df4f03c"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animation_controller.html#a8ae79e48a4111a65e8a22f821df4f03c">SetAutoFade</a> (const <a class="el" href="class_urho3_d_1_1_string.html">String</a> &amp;name, float fadeOutTime)</td></tr>
-<tr class="memdesc:a8ae79e48a4111a65e8a22f821df4f03c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set animation autofade on stop (non-looped animations only.) Zero time disables. Return true on success. <br/></td></tr>
+<tr class="memdesc:a8ae79e48a4111a65e8a22f821df4f03c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set animation autofade at end (non-looped animations only.) Zero time disables. Return true on success. <br/></td></tr>
 <tr class="separator:a8ae79e48a4111a65e8a22f821df4f03c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5539464434f6d77aa899b6ab0c9e6ec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af5539464434f6d77aa899b6ab0c9e6ec"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animation_controller.html#af5539464434f6d77aa899b6ab0c9e6ec">IsPlaying</a> (const <a class="el" href="class_urho3_d_1_1_string.html">String</a> &amp;name) const </td></tr>
-<tr class="memdesc:af5539464434f6d77aa899b6ab0c9e6ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether an animation is active. <br/></td></tr>
+<tr class="memdesc:af5539464434f6d77aa899b6ab0c9e6ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether an animation is active. Note that non-looping animations that are being clamped at the end also return true. <br/></td></tr>
 <tr class="separator:af5539464434f6d77aa899b6ab0c9e6ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3420a18939fad96cd97cf1cd830e3f12"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3420a18939fad96cd97cf1cd830e3f12"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animation_controller.html#a3420a18939fad96cd97cf1cd830e3f12">IsFadingIn</a> (const <a class="el" href="class_urho3_d_1_1_string.html">String</a> &amp;name) const </td></tr>
@@ -139,6 +139,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animation_controller.html#a864fdbaf0fd095f7e5e9bf0d06e416eb">IsFadingOut</a> (const <a class="el" href="class_urho3_d_1_1_string.html">String</a> &amp;name) const </td></tr>
 <tr class="memdesc:a864fdbaf0fd095f7e5e9bf0d06e416eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether an animation is fading out. <br/></td></tr>
 <tr class="separator:a864fdbaf0fd095f7e5e9bf0d06e416eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa511479eb3cd10c5dcf01e3cd9cf7e12"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa511479eb3cd10c5dcf01e3cd9cf7e12"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animation_controller.html#aa511479eb3cd10c5dcf01e3cd9cf7e12">IsAtEnd</a> (const <a class="el" href="class_urho3_d_1_1_string.html">String</a> &amp;name) const </td></tr>
+<tr class="memdesc:aa511479eb3cd10c5dcf01e3cd9cf7e12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether an animation is at its end. Will return false if the animation is not active at all. <br/></td></tr>
+<tr class="separator:aa511479eb3cd10c5dcf01e3cd9cf7e12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a048bb855bcfa3e0b2a8b4d2b8928adfa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a048bb855bcfa3e0b2a8b4d2b8928adfa"></a>
 unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animation_controller.html#a048bb855bcfa3e0b2a8b4d2b8928adfa">GetLayer</a> (const <a class="el" href="class_urho3_d_1_1_string.html">String</a> &amp;name) const </td></tr>
 <tr class="memdesc:a048bb855bcfa3e0b2a8b4d2b8928adfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return animation blending layer. <br/></td></tr>
